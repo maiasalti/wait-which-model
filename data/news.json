@@ -1,5 +1,16 @@
 [
   {
+    "id": "2026-07-16-kimi-k3",
+    "date": "2026-07-16",
+    "title": "Moonshot AI launches Kimi K3",
+    "summary": "Moonshot AI released Kimi K3, a 2.8-trillion-parameter open-weight MoE model with a 1M-token context window and native visual understanding, priced at $3/$15 per million input/output tokens; full weights are due July 27, 2026.",
+    "category": "release",
+    "companies": ["moonshot"],
+    "modelIds": ["kimi-k3"],
+    "sourceName": "VentureBeat",
+    "sourceUrl": "https://venturebeat.com/technology/chinas-moonshot-ai-releases-kimi-k3-the-largest-open-source-model-ever-rivaling-top-u-s-systems"
+  },
+  {
     "id": "2026-07-13-soofi-s-30b-a3b",
     "date": "2026-07-13",
     "title": "German SOOFI consortium releases Soofi S, a sovereign open-weight MoE model",

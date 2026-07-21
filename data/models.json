@@ -8,7 +8,10 @@
     "modality": "multimodal",
     "contextWindow": 32768,
     "maxOutput": 8192,
-    "pricing": { "inputPerMTok": 30, "outputPerMTok": 60 },
+    "pricing": {
+      "inputPerMTok": 30,
+      "outputPerMTok": 60
+    },
     "openWeights": false,
     "knowledgeCutoff": "2021-09",
     "benchmarks": {
@@ -20,8 +23,16 @@
       "lmarenaElo": 1163,
       "arcAgi2": null
     },
-    "strengths": ["First broadly available frontier-class model", "Strong general reasoning for its era", "Kicked off the modern LLM product wave"],
-    "weaknesses": ["Small context window", "Expensive by modern standards", "No native reasoning mode"],
+    "strengths": [
+      "First broadly available frontier-class model",
+      "Strong general reasoning for its era",
+      "Kicked off the modern LLM product wave"
+    ],
+    "weaknesses": [
+      "Small context window",
+      "Expensive by modern standards",
+      "No native reasoning mode"
+    ],
     "notes": "The model that defined the 2023 frontier."
   },
   {
@@ -33,20 +44,30 @@
     "modality": "multimodal",
     "contextWindow": 128000,
     "maxOutput": 4096,
-    "pricing": { "inputPerMTok": 10, "outputPerMTok": 30 },
+    "pricing": {
+      "inputPerMTok": 10,
+      "outputPerMTok": 30
+    },
     "openWeights": false,
     "knowledgeCutoff": "2023-12",
     "benchmarks": {
       "mmluPro": 63.7,
-      "gpqaDiamond": 48.0,
+      "gpqaDiamond": 48,
       "sweBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1256,
       "arcAgi2": null
     },
-    "strengths": ["128K context at launch", "3x cheaper than GPT-4", "Vision support"],
-    "weaknesses": ["Noticeably lazier on long completions", "Superseded quickly by GPT-4o"],
+    "strengths": [
+      "128K context at launch",
+      "3x cheaper than GPT-4",
+      "Vision support"
+    ],
+    "weaknesses": [
+      "Noticeably lazier on long completions",
+      "Superseded quickly by GPT-4o"
+    ],
     "notes": "Announced at OpenAI's first DevDay."
   },
   {
@@ -58,7 +79,10 @@
     "modality": "multimodal",
     "contextWindow": 128000,
     "maxOutput": 16384,
-    "pricing": { "inputPerMTok": 2.5, "outputPerMTok": 10 },
+    "pricing": {
+      "inputPerMTok": 2.5,
+      "outputPerMTok": 10
+    },
     "openWeights": false,
     "knowledgeCutoff": "2023-10",
     "benchmarks": {
@@ -70,8 +94,15 @@
       "lmarenaElo": 1318,
       "arcAgi2": null
     },
-    "strengths": ["Native omni-modality (voice, vision, text)", "Fast and cheap for its capability", "Defined the mainstream chat experience of 2024"],
-    "weaknesses": ["Weak at competition math and hard science", "No extended reasoning"],
+    "strengths": [
+      "Native omni-modality (voice, vision, text)",
+      "Fast and cheap for its capability",
+      "Defined the mainstream chat experience of 2024"
+    ],
+    "weaknesses": [
+      "Weak at competition math and hard science",
+      "No extended reasoning"
+    ],
     "notes": "OpenAI's first natively multimodal flagship."
   },
   {
@@ -83,20 +114,30 @@
     "modality": "multimodal",
     "contextWindow": 200000,
     "maxOutput": 100000,
-    "pricing": { "inputPerMTok": 15, "outputPerMTok": 60 },
+    "pricing": {
+      "inputPerMTok": 15,
+      "outputPerMTok": 60
+    },
     "openWeights": false,
     "knowledgeCutoff": "2023-10",
     "benchmarks": {
       "mmluPro": null,
-      "gpqaDiamond": 78.0,
+      "gpqaDiamond": 78,
       "sweBench": 48.9,
       "aime": 79.2,
       "hle": 9.1,
       "lmarenaElo": 1352,
       "arcAgi2": null
     },
-    "strengths": ["First production reasoning model", "Large jump on math and science benchmarks", "Chain-of-thought at inference time"],
-    "weaknesses": ["Slow and expensive", "Reasoning tokens billed but hidden"],
+    "strengths": [
+      "First production reasoning model",
+      "Large jump on math and science benchmarks",
+      "Chain-of-thought at inference time"
+    ],
+    "weaknesses": [
+      "Slow and expensive",
+      "Reasoning tokens billed but hidden"
+    ],
     "notes": "Full release of the o1 series (previewed September 2024)."
   },
   {
@@ -108,7 +149,10 @@
     "modality": "multimodal",
     "contextWindow": 1000000,
     "maxOutput": 32768,
-    "pricing": { "inputPerMTok": 2, "outputPerMTok": 8 },
+    "pricing": {
+      "inputPerMTok": 2,
+      "outputPerMTok": 8
+    },
     "openWeights": false,
     "knowledgeCutoff": "2024-06",
     "benchmarks": {
@@ -120,8 +164,15 @@
       "lmarenaElo": 1366,
       "arcAgi2": null
     },
-    "strengths": ["1M-token context window", "Strong instruction following", "Good coding at low price"],
-    "weaknesses": ["API-only at launch", "Not a reasoning model"],
+    "strengths": [
+      "1M-token context window",
+      "Strong instruction following",
+      "Good coding at low price"
+    ],
+    "weaknesses": [
+      "API-only at launch",
+      "Not a reasoning model"
+    ],
     "notes": "Workhorse non-reasoning line before GPT-5 unified the stack."
   },
   {
@@ -133,7 +184,10 @@
     "modality": "multimodal",
     "contextWindow": 200000,
     "maxOutput": 100000,
-    "pricing": { "inputPerMTok": 2, "outputPerMTok": 8 },
+    "pricing": {
+      "inputPerMTok": 2,
+      "outputPerMTok": 8
+    },
     "openWeights": false,
     "knowledgeCutoff": "2024-06",
     "benchmarks": {
@@ -145,8 +199,15 @@
       "lmarenaElo": 1418,
       "arcAgi2": 6.5
     },
-    "strengths": ["Agentic tool use during reasoning", "State-of-the-art math/science at release", "80% price cut in June 2025 made it a bargain"],
-    "weaknesses": ["Higher hallucination rate than o1 on some evals", "Slow at high reasoning effort"],
+    "strengths": [
+      "Agentic tool use during reasoning",
+      "State-of-the-art math/science at release",
+      "80% price cut in June 2025 made it a bargain"
+    ],
+    "weaknesses": [
+      "Higher hallucination rate than o1 on some evals",
+      "Slow at high reasoning effort"
+    ],
     "notes": "Pricing reflects the June 2025 cut from $10/$40."
   },
   {
@@ -158,11 +219,14 @@
     "modality": "multimodal",
     "contextWindow": 400000,
     "maxOutput": 128000,
-    "pricing": { "inputPerMTok": 1.25, "outputPerMTok": 10 },
+    "pricing": {
+      "inputPerMTok": 1.25,
+      "outputPerMTok": 10
+    },
     "openWeights": false,
     "knowledgeCutoff": "2024-10",
     "benchmarks": {
-      "mmluPro": 87.0,
+      "mmluPro": 87,
       "gpqaDiamond": 85.7,
       "sweBench": 74.9,
       "aime": 94.6,
@@ -170,8 +234,15 @@
       "lmarenaElo": 1442,
       "arcAgi2": 9.9
     },
-    "strengths": ["Unified router across fast and reasoning modes", "Excellent price-performance", "Big drop in hallucination rate vs o3"],
-    "weaknesses": ["Rocky launch (router issues, 4o removal backlash)", "Personality seen as colder than 4o"],
+    "strengths": [
+      "Unified router across fast and reasoning modes",
+      "Excellent price-performance",
+      "Big drop in hallucination rate vs o3"
+    ],
+    "weaknesses": [
+      "Rocky launch (router issues, 4o removal backlash)",
+      "Personality seen as colder than 4o"
+    ],
     "notes": "Scores shown for GPT-5 (thinking, high)."
   },
   {
@@ -183,7 +254,10 @@
     "modality": "multimodal",
     "contextWindow": 400000,
     "maxOutput": 128000,
-    "pricing": { "inputPerMTok": 1.25, "outputPerMTok": 10 },
+    "pricing": {
+      "inputPerMTok": 1.25,
+      "outputPerMTok": 10
+    },
     "openWeights": false,
     "knowledgeCutoff": "2024-10",
     "benchmarks": {
@@ -195,8 +269,14 @@
       "lmarenaElo": 1465,
       "arcAgi2": null
     },
-    "strengths": ["Adaptive reasoning (spends thinking only when needed)", "Warmer default personality", "Improved coding and long-context use"],
-    "weaknesses": ["Incremental gains over GPT-5 on hard benchmarks"],
+    "strengths": [
+      "Adaptive reasoning (spends thinking only when needed)",
+      "Warmer default personality",
+      "Improved coding and long-context use"
+    ],
+    "weaknesses": [
+      "Incremental gains over GPT-5 on hard benchmarks"
+    ],
     "notes": "Shipped as Instant and Thinking variants."
   },
   {
@@ -208,7 +288,10 @@
     "modality": "multimodal",
     "contextWindow": 200000,
     "maxOutput": 4096,
-    "pricing": { "inputPerMTok": 15, "outputPerMTok": 75 },
+    "pricing": {
+      "inputPerMTok": 15,
+      "outputPerMTok": 75
+    },
     "openWeights": false,
     "knowledgeCutoff": "2023-08",
     "benchmarks": {
@@ -220,8 +303,15 @@
       "lmarenaElo": 1263,
       "arcAgi2": null
     },
-    "strengths": ["First model to beat GPT-4 on major benchmarks", "Nuanced writing and analysis", "200K context standard"],
-    "weaknesses": ["Very expensive", "Slow"],
+    "strengths": [
+      "First model to beat GPT-4 on major benchmarks",
+      "Nuanced writing and analysis",
+      "200K context standard"
+    ],
+    "weaknesses": [
+      "Very expensive",
+      "Slow"
+    ],
     "notes": "Flagship of the Claude 3 generation."
   },
   {
@@ -233,20 +323,30 @@
     "modality": "multimodal",
     "contextWindow": 200000,
     "maxOutput": 8192,
-    "pricing": { "inputPerMTok": 3, "outputPerMTok": 15 },
+    "pricing": {
+      "inputPerMTok": 3,
+      "outputPerMTok": 15
+    },
     "openWeights": false,
     "knowledgeCutoff": "2024-04",
     "benchmarks": {
       "mmluPro": 76.1,
       "gpqaDiamond": 59.4,
-      "sweBench": 49.0,
-      "aime": 16.0,
+      "sweBench": 49,
+      "aime": 16,
       "hle": 4.8,
       "lmarenaElo": 1300,
       "arcAgi2": null
     },
-    "strengths": ["Beloved for coding — powered the first agentic coding wave", "Computer use (beta) pioneer", "Mid-tier price, top-tier capability"],
-    "weaknesses": ["Weak competition math", "8K max output limiting for large diffs"],
+    "strengths": [
+      "Beloved for coding — powered the first agentic coding wave",
+      "Computer use (beta) pioneer",
+      "Mid-tier price, top-tier capability"
+    ],
+    "weaknesses": [
+      "Weak competition math",
+      "8K max output limiting for large diffs"
+    ],
     "notes": "Scores reflect the upgraded October 2024 snapshot."
   },
   {
@@ -258,7 +358,10 @@
     "modality": "multimodal",
     "contextWindow": 200000,
     "maxOutput": 128000,
-    "pricing": { "inputPerMTok": 3, "outputPerMTok": 15 },
+    "pricing": {
+      "inputPerMTok": 3,
+      "outputPerMTok": 15
+    },
     "openWeights": false,
     "knowledgeCutoff": "2024-10",
     "benchmarks": {
@@ -270,8 +373,14 @@
       "lmarenaElo": 1350,
       "arcAgi2": null
     },
-    "strengths": ["First hybrid reasoning model (instant or extended thinking)", "Huge SWE-bench jump", "Launched alongside Claude Code"],
-    "weaknesses": ["Extended-thinking scores require high token budgets"],
+    "strengths": [
+      "First hybrid reasoning model (instant or extended thinking)",
+      "Huge SWE-bench jump",
+      "Launched alongside Claude Code"
+    ],
+    "weaknesses": [
+      "Extended-thinking scores require high token budgets"
+    ],
     "notes": "GPQA/SWE-bench figures use extended thinking."
   },
   {
@@ -283,7 +392,10 @@
     "modality": "multimodal",
     "contextWindow": 200000,
     "maxOutput": 32000,
-    "pricing": { "inputPerMTok": 15, "outputPerMTok": 75 },
+    "pricing": {
+      "inputPerMTok": 15,
+      "outputPerMTok": 75
+    },
     "openWeights": false,
     "knowledgeCutoff": "2025-03",
     "benchmarks": {
@@ -295,8 +407,15 @@
       "lmarenaElo": 1420,
       "arcAgi2": 8.6
     },
-    "strengths": ["Best coding model in the world at launch", "Sustained multi-hour agentic tasks", "Memory files for long-running work"],
-    "weaknesses": ["Premium pricing", "ASL-3 deployment safeguards added friction"],
+    "strengths": [
+      "Best coding model in the world at launch",
+      "Sustained multi-hour agentic tasks",
+      "Memory files for long-running work"
+    ],
+    "weaknesses": [
+      "Premium pricing",
+      "ASL-3 deployment safeguards added friction"
+    ],
     "notes": "Released with Claude Sonnet 4 at the first Code with Claude conference."
   },
   {
@@ -308,7 +427,10 @@
     "modality": "multimodal",
     "contextWindow": 200000,
     "maxOutput": 64000,
-    "pricing": { "inputPerMTok": 3, "outputPerMTok": 15 },
+    "pricing": {
+      "inputPerMTok": 3,
+      "outputPerMTok": 15
+    },
     "openWeights": false,
     "knowledgeCutoff": "2025-03",
     "benchmarks": {
@@ -320,8 +442,14 @@
       "lmarenaElo": 1386,
       "arcAgi2": null
     },
-    "strengths": ["Matched Opus 4 on SWE-bench at 1/5 the price", "Later gained a 1M-token context beta", "Default free-tier model on Claude.ai"],
-    "weaknesses": ["Trails Opus on long-horizon agentic work"],
+    "strengths": [
+      "Matched Opus 4 on SWE-bench at 1/5 the price",
+      "Later gained a 1M-token context beta",
+      "Default free-tier model on Claude.ai"
+    ],
+    "weaknesses": [
+      "Trails Opus on long-horizon agentic work"
+    ],
     "notes": ""
   },
   {
@@ -333,20 +461,28 @@
     "modality": "multimodal",
     "contextWindow": 200000,
     "maxOutput": 32000,
-    "pricing": { "inputPerMTok": 15, "outputPerMTok": 75 },
+    "pricing": {
+      "inputPerMTok": 15,
+      "outputPerMTok": 75
+    },
     "openWeights": false,
     "knowledgeCutoff": "2025-03",
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 80.9,
       "sweBench": 74.5,
-      "aime": 78.0,
+      "aime": 78,
       "hle": null,
       "lmarenaElo": 1430,
       "arcAgi2": null
     },
-    "strengths": ["Sharper multi-file refactoring", "Drop-in upgrade over Opus 4"],
-    "weaknesses": ["Incremental release two days before GPT-5 stole the news cycle"],
+    "strengths": [
+      "Sharper multi-file refactoring",
+      "Drop-in upgrade over Opus 4"
+    ],
+    "weaknesses": [
+      "Incremental release two days before GPT-5 stole the news cycle"
+    ],
     "notes": ""
   },
   {
@@ -358,20 +494,29 @@
     "modality": "multimodal",
     "contextWindow": 200000,
     "maxOutput": 64000,
-    "pricing": { "inputPerMTok": 3, "outputPerMTok": 15 },
+    "pricing": {
+      "inputPerMTok": 3,
+      "outputPerMTok": 15
+    },
     "openWeights": false,
     "knowledgeCutoff": "2025-07",
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 83.4,
       "sweBench": 77.2,
-      "aime": 87.0,
+      "aime": 87,
       "hle": 17.3,
       "lmarenaElo": 1449,
       "arcAgi2": 13.6
     },
-    "strengths": ["Best coding model in the world at launch", "30+ hour autonomous coding runs", "Big computer-use gains (OSWorld)"],
-    "weaknesses": ["Mid-tier reasoning ceiling vs contemporaneous Opus-class models"],
+    "strengths": [
+      "Best coding model in the world at launch",
+      "30+ hour autonomous coding runs",
+      "Big computer-use gains (OSWorld)"
+    ],
+    "weaknesses": [
+      "Mid-tier reasoning ceiling vs contemporaneous Opus-class models"
+    ],
     "notes": ""
   },
   {
@@ -383,20 +528,29 @@
     "modality": "multimodal",
     "contextWindow": 200000,
     "maxOutput": 64000,
-    "pricing": { "inputPerMTok": 1, "outputPerMTok": 5 },
+    "pricing": {
+      "inputPerMTok": 1,
+      "outputPerMTok": 5
+    },
     "openWeights": false,
     "knowledgeCutoff": "2025-02",
     "benchmarks": {
       "mmluPro": null,
-      "gpqaDiamond": 73.0,
+      "gpqaDiamond": 73,
       "sweBench": 73.3,
-      "aime": 83.0,
+      "aime": 83,
       "hle": null,
       "lmarenaElo": 1405,
       "arcAgi2": null
     },
-    "strengths": ["Near-Sonnet-4.5 coding at a third of the price", "2x+ faster — ideal for sub-agents", "Small model with extended thinking"],
-    "weaknesses": ["Trails flagships on deep reasoning and long-horizon tasks"],
+    "strengths": [
+      "Near-Sonnet-4.5 coding at a third of the price",
+      "2x+ faster — ideal for sub-agents",
+      "Small model with extended thinking"
+    ],
+    "weaknesses": [
+      "Trails flagships on deep reasoning and long-horizon tasks"
+    ],
     "notes": "Anthropic's current small model."
   },
   {
@@ -408,20 +562,29 @@
     "modality": "multimodal",
     "contextWindow": 200000,
     "maxOutput": 64000,
-    "pricing": { "inputPerMTok": 5, "outputPerMTok": 25 },
+    "pricing": {
+      "inputPerMTok": 5,
+      "outputPerMTok": 25
+    },
     "openWeights": false,
     "knowledgeCutoff": "2025-08",
     "benchmarks": {
       "mmluPro": null,
-      "gpqaDiamond": 87.0,
+      "gpqaDiamond": 87,
       "sweBench": 80.9,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1470,
       "arcAgi2": 37.6
     },
-    "strengths": ["First model past 80% on SWE-bench Verified", "3x price cut vs Opus 4.1", "Standout ARC-AGI-2 result"],
-    "weaknesses": ["200K context trailed rivals' 1M windows"],
+    "strengths": [
+      "First model past 80% on SWE-bench Verified",
+      "3x price cut vs Opus 4.1",
+      "Standout ARC-AGI-2 result"
+    ],
+    "weaknesses": [
+      "200K context trailed rivals' 1M windows"
+    ],
     "notes": ""
   },
   {
@@ -433,11 +596,14 @@
     "modality": "multimodal",
     "contextWindow": 2000000,
     "maxOutput": 8192,
-    "pricing": { "inputPerMTok": 1.25, "outputPerMTok": 5 },
+    "pricing": {
+      "inputPerMTok": 1.25,
+      "outputPerMTok": 5
+    },
     "openWeights": false,
     "knowledgeCutoff": "2023-11",
     "benchmarks": {
-      "mmluPro": 69.0,
+      "mmluPro": 69,
       "gpqaDiamond": 46.2,
       "sweBench": null,
       "aime": null,
@@ -445,8 +611,15 @@
       "lmarenaElo": 1302,
       "arcAgi2": null
     },
-    "strengths": ["Pioneered million-token (then 2M) context", "Strong video and audio understanding", "Cheap for its class"],
-    "weaknesses": ["Mid-pack reasoning", "Trailing coding performance"],
+    "strengths": [
+      "Pioneered million-token (then 2M) context",
+      "Strong video and audio understanding",
+      "Cheap for its class"
+    ],
+    "weaknesses": [
+      "Mid-pack reasoning",
+      "Trailing coding performance"
+    ],
     "notes": ""
   },
   {
@@ -458,7 +631,10 @@
     "modality": "multimodal",
     "contextWindow": 1000000,
     "maxOutput": 8192,
-    "pricing": { "inputPerMTok": 0.1, "outputPerMTok": 0.4 },
+    "pricing": {
+      "inputPerMTok": 0.1,
+      "outputPerMTok": 0.4
+    },
     "openWeights": false,
     "knowledgeCutoff": "2024-08",
     "benchmarks": {
@@ -470,8 +646,14 @@
       "lmarenaElo": 1356,
       "arcAgi2": null
     },
-    "strengths": ["Absurd price-performance", "Native tool use and image generation", "Fast"],
-    "weaknesses": ["Not frontier-level on hard reasoning"],
+    "strengths": [
+      "Absurd price-performance",
+      "Native tool use and image generation",
+      "Fast"
+    ],
+    "weaknesses": [
+      "Not frontier-level on hard reasoning"
+    ],
     "notes": "Included as the price-performance outlier of its generation. SWE-bench Verified 51.8 is Google-reported using an agentic code-execution harness."
   },
   {
@@ -483,20 +665,30 @@
     "modality": "multimodal",
     "contextWindow": 1000000,
     "maxOutput": 65536,
-    "pricing": { "inputPerMTok": 1.25, "outputPerMTok": 10 },
+    "pricing": {
+      "inputPerMTok": 1.25,
+      "outputPerMTok": 10
+    },
     "openWeights": false,
     "knowledgeCutoff": "2025-01",
     "benchmarks": {
       "mmluPro": 86.2,
-      "gpqaDiamond": 84.0,
+      "gpqaDiamond": 84,
       "sweBench": 63.8,
       "aime": 86.7,
       "hle": 18.8,
       "lmarenaElo": 1446,
       "arcAgi2": 4.9
     },
-    "strengths": ["Thinking built in by default", "1M context plus strong multimodality", "Long run at #1 on LMArena"],
-    "weaknesses": ["Agentic coding trailed Claude", "Occasional instruction-following lapses"],
+    "strengths": [
+      "Thinking built in by default",
+      "1M context plus strong multimodality",
+      "Long run at #1 on LMArena"
+    ],
+    "weaknesses": [
+      "Agentic coding trailed Claude",
+      "Occasional instruction-following lapses"
+    ],
     "notes": ""
   },
   {
@@ -508,20 +700,30 @@
     "modality": "multimodal",
     "contextWindow": 1000000,
     "maxOutput": 65536,
-    "pricing": { "inputPerMTok": 2, "outputPerMTok": 12 },
+    "pricing": {
+      "inputPerMTok": 2,
+      "outputPerMTok": 12
+    },
     "openWeights": false,
     "knowledgeCutoff": "2025-01",
     "benchmarks": {
       "mmluPro": 89.8,
       "gpqaDiamond": 91.9,
       "sweBench": 76.2,
-      "aime": 95.0,
+      "aime": 95,
       "hle": 37.5,
       "lmarenaElo": 1501,
       "arcAgi2": 31.1
     },
-    "strengths": ["Record HLE and GPQA scores at launch", "First past 1500 Elo on LMArena", "Deep Think mode for hardest problems"],
-    "weaknesses": ["Premium long-context pricing tier", "Deep Think gated behind Ultra subscription"],
+    "strengths": [
+      "Record HLE and GPQA scores at launch",
+      "First past 1500 Elo on LMArena",
+      "Deep Think mode for hardest problems"
+    ],
+    "weaknesses": [
+      "Premium long-context pricing tier",
+      "Deep Think gated behind Ultra subscription"
+    ],
     "notes": ""
   },
   {
@@ -533,7 +735,10 @@
     "modality": "text",
     "contextWindow": 128000,
     "maxOutput": 4096,
-    "pricing": { "inputPerMTok": 3.5, "outputPerMTok": 3.5 },
+    "pricing": {
+      "inputPerMTok": 3.5,
+      "outputPerMTok": 3.5
+    },
     "openWeights": true,
     "knowledgeCutoff": "2023-12",
     "benchmarks": {
@@ -545,8 +750,15 @@
       "lmarenaElo": 1269,
       "arcAgi2": null
     },
-    "strengths": ["First open-weights model at GPT-4 level", "Permissive license changed the ecosystem", "Strong multilingual support"],
-    "weaknesses": ["Huge to serve", "Text-only"],
+    "strengths": [
+      "First open-weights model at GPT-4 level",
+      "Permissive license changed the ecosystem",
+      "Strong multilingual support"
+    ],
+    "weaknesses": [
+      "Huge to serve",
+      "Text-only"
+    ],
     "notes": "Pricing shown is typical hosted-inference cost."
   },
   {
@@ -558,7 +770,10 @@
     "modality": "multimodal",
     "contextWindow": 1000000,
     "maxOutput": 8192,
-    "pricing": { "inputPerMTok": 0.27, "outputPerMTok": 0.85 },
+    "pricing": {
+      "inputPerMTok": 0.27,
+      "outputPerMTok": 0.85
+    },
     "openWeights": true,
     "knowledgeCutoff": "2024-08",
     "benchmarks": {
@@ -570,8 +785,15 @@
       "lmarenaElo": 1330,
       "arcAgi2": null
     },
-    "strengths": ["Open-weights MoE with native multimodality", "Very cheap to serve per token"],
-    "weaknesses": ["Launch marred by LMArena benchmark controversy", "Behemoth flagship repeatedly delayed", "Fell behind Chinese open models within months"],
+    "strengths": [
+      "Open-weights MoE with native multimodality",
+      "Very cheap to serve per token"
+    ],
+    "weaknesses": [
+      "Launch marred by LMArena benchmark controversy",
+      "Behemoth flagship repeatedly delayed",
+      "Fell behind Chinese open models within months"
+    ],
     "notes": "Meta's last major open release before its superintelligence-lab reorg."
   },
   {
@@ -583,7 +805,10 @@
     "modality": "multimodal",
     "contextWindow": 131072,
     "maxOutput": 16384,
-    "pricing": { "inputPerMTok": 3, "outputPerMTok": 15 },
+    "pricing": {
+      "inputPerMTok": 3,
+      "outputPerMTok": 15
+    },
     "openWeights": false,
     "knowledgeCutoff": "2024-11",
     "benchmarks": {
@@ -595,8 +820,15 @@
       "lmarenaElo": 1402,
       "arcAgi2": null
     },
-    "strengths": ["Trained on the 200K-GPU Colossus cluster", "Strong math with Big Brain reasoning mode", "Real-time X data integration"],
-    "weaknesses": ["Benchmark presentation drew methodology criticism", "Limited availability at launch"],
+    "strengths": [
+      "Trained on the 200K-GPU Colossus cluster",
+      "Strong math with Big Brain reasoning mode",
+      "Real-time X data integration"
+    ],
+    "weaknesses": [
+      "Benchmark presentation drew methodology criticism",
+      "Limited availability at launch"
+    ],
     "notes": "Reasoning-mode (beta) scores shown."
   },
   {
@@ -608,20 +840,30 @@
     "modality": "multimodal",
     "contextWindow": 256000,
     "maxOutput": 64000,
-    "pricing": { "inputPerMTok": 3, "outputPerMTok": 15 },
+    "pricing": {
+      "inputPerMTok": 3,
+      "outputPerMTok": 15
+    },
     "openWeights": false,
     "knowledgeCutoff": "2024-11",
     "benchmarks": {
       "mmluPro": 86.6,
       "gpqaDiamond": 87.5,
-      "sweBench": 72.0,
+      "sweBench": 72,
       "aime": 91.7,
       "hle": 25.4,
       "lmarenaElo": 1435,
       "arcAgi2": 15.9
     },
-    "strengths": ["Led HLE and ARC-AGI-2 at launch", "Heavy multi-agent variant for hardest problems", "Native tool use in reasoning"],
-    "weaknesses": ["Launch overshadowed by Grok chatbot safety incidents", "SWE-bench claims lacked independent verification at first"],
+    "strengths": [
+      "Led HLE and ARC-AGI-2 at launch",
+      "Heavy multi-agent variant for hardest problems",
+      "Native tool use in reasoning"
+    ],
+    "weaknesses": [
+      "Launch overshadowed by Grok chatbot safety incidents",
+      "SWE-bench claims lacked independent verification at first"
+    ],
     "notes": ""
   },
   {
@@ -633,20 +875,29 @@
     "modality": "multimodal",
     "contextWindow": 256000,
     "maxOutput": 64000,
-    "pricing": { "inputPerMTok": 3, "outputPerMTok": 15 },
+    "pricing": {
+      "inputPerMTok": 3,
+      "outputPerMTok": 15
+    },
     "openWeights": false,
     "knowledgeCutoff": "2024-11",
     "benchmarks": {
       "mmluPro": null,
-      "gpqaDiamond": 88.0,
+      "gpqaDiamond": 88,
       "sweBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1483,
       "arcAgi2": null
     },
-    "strengths": ["Topped LMArena at release", "Much lower hallucination rate than Grok 4", "Improved emotional intelligence and writing"],
-    "weaknesses": ["Fewer published benchmark details than peers"],
+    "strengths": [
+      "Topped LMArena at release",
+      "Much lower hallucination rate than Grok 4",
+      "Improved emotional intelligence and writing"
+    ],
+    "weaknesses": [
+      "Fewer published benchmark details than peers"
+    ],
     "notes": ""
   },
   {
@@ -658,7 +909,10 @@
     "modality": "text",
     "contextWindow": 128000,
     "maxOutput": 8192,
-    "pricing": { "inputPerMTok": 2, "outputPerMTok": 6 },
+    "pricing": {
+      "inputPerMTok": 2,
+      "outputPerMTok": 6
+    },
     "openWeights": true,
     "knowledgeCutoff": "2024-06",
     "benchmarks": {
@@ -670,8 +924,15 @@
       "lmarenaElo": 1250,
       "arcAgi2": null
     },
-    "strengths": ["Europe's strongest model of 2024", "123B dense — efficient for its class", "Excellent multilingual performance"],
-    "weaknesses": ["Research-only license for the weights", "Behind US/China frontier on reasoning"],
+    "strengths": [
+      "Europe's strongest model of 2024",
+      "123B dense — efficient for its class",
+      "Excellent multilingual performance"
+    ],
+    "weaknesses": [
+      "Research-only license for the weights",
+      "Behind US/China frontier on reasoning"
+    ],
     "notes": ""
   },
   {
@@ -683,7 +944,10 @@
     "modality": "multimodal",
     "contextWindow": 131072,
     "maxOutput": 8192,
-    "pricing": { "inputPerMTok": 0.4, "outputPerMTok": 2 },
+    "pricing": {
+      "inputPerMTok": 0.4,
+      "outputPerMTok": 2
+    },
     "openWeights": false,
     "knowledgeCutoff": "2025-01",
     "benchmarks": {
@@ -695,8 +959,14 @@
       "lmarenaElo": 1330,
       "arcAgi2": null
     },
-    "strengths": ["90% of Claude-Sonnet-class performance at 1/8 the price", "Enterprise on-prem deployability"],
-    "weaknesses": ["Not open weights, breaking Mistral tradition", "No frontier reasoning mode"],
+    "strengths": [
+      "90% of Claude-Sonnet-class performance at 1/8 the price",
+      "Enterprise on-prem deployability"
+    ],
+    "weaknesses": [
+      "Not open weights, breaking Mistral tradition",
+      "No frontier reasoning mode"
+    ],
     "notes": ""
   },
   {
@@ -708,20 +978,30 @@
     "modality": "text",
     "contextWindow": 128000,
     "maxOutput": 8192,
-    "pricing": { "inputPerMTok": 0.27, "outputPerMTok": 1.1 },
+    "pricing": {
+      "inputPerMTok": 0.27,
+      "outputPerMTok": 1.1
+    },
     "openWeights": true,
     "knowledgeCutoff": "2024-07",
     "benchmarks": {
       "mmluPro": 75.9,
       "gpqaDiamond": 59.1,
-      "sweBench": 42.0,
+      "sweBench": 42,
       "aime": 39.2,
       "hle": null,
       "lmarenaElo": 1318,
       "arcAgi2": null
     },
-    "strengths": ["GPT-4o-class open weights trained for ~$5.6M", "671B MoE with 37B active — cheap inference", "Proved efficient training at scale"],
-    "weaknesses": ["Text-only", "English polish behind US flagships"],
+    "strengths": [
+      "GPT-4o-class open weights trained for ~$5.6M",
+      "671B MoE with 37B active — cheap inference",
+      "Proved efficient training at scale"
+    ],
+    "weaknesses": [
+      "Text-only",
+      "English polish behind US flagships"
+    ],
     "notes": ""
   },
   {
@@ -733,11 +1013,14 @@
     "modality": "text",
     "contextWindow": 128000,
     "maxOutput": 32768,
-    "pricing": { "inputPerMTok": 0.55, "outputPerMTok": 2.19 },
+    "pricing": {
+      "inputPerMTok": 0.55,
+      "outputPerMTok": 2.19
+    },
     "openWeights": true,
     "knowledgeCutoff": "2024-07",
     "benchmarks": {
-      "mmluPro": 84.0,
+      "mmluPro": 84,
       "gpqaDiamond": 71.5,
       "sweBench": 49.2,
       "aime": 79.8,
@@ -745,8 +1028,15 @@
       "lmarenaElo": 1358,
       "arcAgi2": 1.3
     },
-    "strengths": ["o1-class reasoning, fully open weights, MIT license", "Triggered a $1T market repricing of AI costs", "Visible chain-of-thought"],
-    "weaknesses": ["Verbose reasoning traces", "Heavy censorship on China-sensitive topics"],
+    "strengths": [
+      "o1-class reasoning, fully open weights, MIT license",
+      "Triggered a $1T market repricing of AI costs",
+      "Visible chain-of-thought"
+    ],
+    "weaknesses": [
+      "Verbose reasoning traces",
+      "Heavy censorship on China-sensitive topics"
+    ],
     "notes": "The 'DeepSeek moment' of January 2025."
   },
   {
@@ -758,11 +1048,14 @@
     "modality": "text",
     "contextWindow": 128000,
     "maxOutput": 65536,
-    "pricing": { "inputPerMTok": 0.28, "outputPerMTok": 0.42 },
+    "pricing": {
+      "inputPerMTok": 0.28,
+      "outputPerMTok": 0.42
+    },
     "openWeights": true,
     "knowledgeCutoff": "2025-07",
     "benchmarks": {
-      "mmluPro": 85.0,
+      "mmluPro": 85,
       "gpqaDiamond": 79.9,
       "sweBench": 67.8,
       "aime": 89.3,
@@ -770,8 +1063,14 @@
       "lmarenaElo": 1420,
       "arcAgi2": null
     },
-    "strengths": ["Sparse attention slashed long-context costs ~50%", "Cheapest capable reasoning API on the market", "Open weights"],
-    "weaknesses": ["Slightly behind V3.1-Terminus on a few evals at launch"],
+    "strengths": [
+      "Sparse attention slashed long-context costs ~50%",
+      "Cheapest capable reasoning API on the market",
+      "Open weights"
+    ],
+    "weaknesses": [
+      "Slightly behind V3.1-Terminus on a few evals at launch"
+    ],
     "notes": "Listed as V3.2-Exp at release."
   },
   {
@@ -783,7 +1082,10 @@
     "modality": "text",
     "contextWindow": 131072,
     "maxOutput": 32768,
-    "pricing": { "inputPerMTok": 0.2, "outputPerMTok": 0.6 },
+    "pricing": {
+      "inputPerMTok": 0.2,
+      "outputPerMTok": 0.6
+    },
     "openWeights": true,
     "knowledgeCutoff": "2024-10",
     "benchmarks": {
@@ -795,8 +1097,14 @@
       "lmarenaElo": 1373,
       "arcAgi2": null
     },
-    "strengths": ["Hybrid thinking/non-thinking open model", "Apache 2.0 license", "119-language coverage"],
-    "weaknesses": ["Agentic coding behind frontier closed models"],
+    "strengths": [
+      "Hybrid thinking/non-thinking open model",
+      "Apache 2.0 license",
+      "119-language coverage"
+    ],
+    "weaknesses": [
+      "Agentic coding behind frontier closed models"
+    ],
     "notes": "Scores for the July 2025 updated (2507) checkpoints where applicable."
   },
   {
@@ -808,7 +1116,10 @@
     "modality": "multimodal",
     "contextWindow": 262144,
     "maxOutput": 65536,
-    "pricing": { "inputPerMTok": 1.2, "outputPerMTok": 6 },
+    "pricing": {
+      "inputPerMTok": 1.2,
+      "outputPerMTok": 6
+    },
     "openWeights": false,
     "knowledgeCutoff": "2025-06",
     "benchmarks": {
@@ -820,8 +1131,14 @@
       "lmarenaElo": 1428,
       "arcAgi2": null
     },
-    "strengths": ["Alibaba's first trillion-parameter flagship", "Strong agentic tool use (Tau2-Bench)", "Competitive coding at mid-tier price"],
-    "weaknesses": ["Closed weights, unlike the rest of the Qwen line"],
+    "strengths": [
+      "Alibaba's first trillion-parameter flagship",
+      "Strong agentic tool use (Tau2-Bench)",
+      "Competitive coding at mid-tier price"
+    ],
+    "weaknesses": [
+      "Closed weights, unlike the rest of the Qwen line"
+    ],
     "notes": ""
   },
   {
@@ -833,7 +1150,10 @@
     "modality": "text",
     "contextWindow": 131072,
     "maxOutput": 16384,
-    "pricing": { "inputPerMTok": 0.6, "outputPerMTok": 2.5 },
+    "pricing": {
+      "inputPerMTok": 0.6,
+      "outputPerMTok": 2.5
+    },
     "openWeights": true,
     "knowledgeCutoff": "2025-04",
     "benchmarks": {
@@ -845,8 +1165,15 @@
       "lmarenaElo": 1385,
       "arcAgi2": null
     },
-    "strengths": ["1T-parameter open MoE built for agentic tool use", "Best open non-reasoning model at release", "Distinctive, well-liked writing style"],
-    "weaknesses": ["No reasoning mode at launch", "Non-thinking AIME/HLE scores are low"],
+    "strengths": [
+      "1T-parameter open MoE built for agentic tool use",
+      "Best open non-reasoning model at release",
+      "Distinctive, well-liked writing style"
+    ],
+    "weaknesses": [
+      "No reasoning mode at launch",
+      "Non-thinking AIME/HLE scores are low"
+    ],
     "notes": ""
   },
   {
@@ -854,11 +1181,14 @@
     "name": "Kimi K2 Thinking",
     "company": "moonshot",
     "releaseDate": "2025-11-06",
-    "status": "frontier",
+    "status": "superseded",
     "modality": "text",
     "contextWindow": 262144,
     "maxOutput": 65536,
-    "pricing": { "inputPerMTok": 0.6, "outputPerMTok": 2.5 },
+    "pricing": {
+      "inputPerMTok": 0.6,
+      "outputPerMTok": 2.5
+    },
     "openWeights": true,
     "knowledgeCutoff": "2025-04",
     "benchmarks": {
@@ -870,9 +1200,52 @@
       "lmarenaElo": 1417,
       "arcAgi2": null
     },
-    "strengths": ["Open-weights HLE record at release — beat GPT-5 on agentic HLE", "200-300 sequential tool calls without drift", "Trained for ~$4.6M (reported)"],
-    "weaknesses": ["Slow generation at high thinking budgets", "INT4 serving needed for practical speed"],
+    "strengths": [
+      "Open-weights HLE record at release — beat GPT-5 on agentic HLE",
+      "200-300 sequential tool calls without drift",
+      "Trained for ~$4.6M (reported)"
+    ],
+    "weaknesses": [
+      "Slow generation at high thinking budgets",
+      "INT4 serving needed for practical speed"
+    ],
     "notes": "The strongest open reasoning model as of late 2025."
+  },
+  {
+    "id": "kimi-k3",
+    "name": "Kimi K3",
+    "company": "moonshot",
+    "releaseDate": "2026-07-16",
+    "status": "frontier",
+    "modality": "multimodal",
+    "contextWindow": 1048576,
+    "maxOutput": 131072,
+    "pricing": {
+      "inputPerMTok": 3,
+      "outputPerMTok": 15
+    },
+    "openWeights": true,
+    "knowledgeCutoff": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 93.5,
+      "sweBench": null,
+      "aime": null,
+      "hle": 43.5,
+      "lmarenaElo": 1486,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Largest open-weight model at launch (2.8T total params, 16 of 896 experts active per token)",
+      "1M-token context window with native visual understanding",
+      "Leads open models on Moonshot's coding/agentic suite (Terminal-Bench 2.1 88.3, SWE Marathon 42.0) and tops LMArena's Frontend Code Arena at 1,679 Elo"
+    ],
+    "weaknesses": [
+      "Trails Claude Fable 5 and GPT-5.6 Sol on Moonshot's own evaluation suite",
+      "Only one reasoning-effort tier at launch, with reasoning token usage notably higher than K2.6",
+      "Full open-weight download delayed to July 27, 2026, about 11 days after API launch"
+    ],
+    "notes": "MMLU-Pro, AIME 2025, and SWE-bench Verified are unconfirmed or conflicting in third-party coverage (AIME cited as both 88% and 96.1%) so left null; Moonshot's own suite reports Terminal-Bench 2.1 at 88.3 and SWE Marathon at 42.0 instead. HLE is 43.5% no tools / 56.0% with tools; full open weights due 2026-07-27."
   },
   {
     "id": "mistral-large-3",
@@ -883,7 +1256,10 @@
     "modality": "text",
     "contextWindow": 262144,
     "maxOutput": 65536,
-    "pricing": { "inputPerMTok": 0.5, "outputPerMTok": 1.5 },
+    "pricing": {
+      "inputPerMTok": 0.5,
+      "outputPerMTok": 1.5
+    },
     "openWeights": true,
     "knowledgeCutoff": null,
     "benchmarks": {
@@ -895,8 +1271,15 @@
       "lmarenaElo": null,
       "arcAgi2": null
     },
-    "strengths": ["Strongest Apache-2.0 open model from Europe", "675B MoE with 41B active — cheap official API", "Trained on just 3,000 H200s"],
-    "weaknesses": ["Behind US/Chinese frontier flagships on raw capability", "262K context trails 1M-class rivals"],
+    "strengths": [
+      "Strongest Apache-2.0 open model from Europe",
+      "675B MoE with 41B active — cheap official API",
+      "Trained on just 3,000 H200s"
+    ],
+    "weaknesses": [
+      "Behind US/Chinese frontier flagships on raw capability",
+      "262K context trails 1M-class rivals"
+    ],
     "notes": "Official pricing $0.50/$1.50; some trackers list hosted rates of $2/$6. GPQA Diamond 67.17 per Mistral's HF model card; not a dedicated reasoning model, so most 2026 reasoning benchmarks are unreported."
   },
   {
@@ -908,7 +1291,10 @@
     "modality": "multimodal",
     "contextWindow": 1000000,
     "maxOutput": 65536,
-    "pricing": { "inputPerMTok": 2, "outputPerMTok": 12 },
+    "pricing": {
+      "inputPerMTok": 2,
+      "outputPerMTok": 12
+    },
     "openWeights": false,
     "knowledgeCutoff": "2025-01",
     "benchmarks": {
@@ -920,8 +1306,15 @@
       "lmarenaElo": 1486,
       "arcAgi2": 77.1
     },
-    "strengths": ["ARC-AGI-2 and GPQA Diamond leader at release", "2x+ reasoning gain over Gemini 3 Pro at unchanged pricing", "Strong multi-tool coordination (MCP Atlas)"],
-    "weaknesses": ["Trails Claude on agentic coding and creative writing", "Long-context pricing doubles above 200K tokens"],
+    "strengths": [
+      "ARC-AGI-2 and GPQA Diamond leader at release",
+      "2x+ reasoning gain over Gemini 3 Pro at unchanged pricing",
+      "Strong multi-tool coordination (MCP Atlas)"
+    ],
+    "weaknesses": [
+      "Trails Claude on agentic coding and creative writing",
+      "Long-context pricing doubles above 200K tokens"
+    ],
     "notes": "Preview Feb 11, 2026; ARC-AGI-2 reported as 77.1 (76.5 in some sources). Knowledge cutoff Jan 2025 per DeepMind model page. AIME 98.1 is vals.ai-measured (third-party); MMLU-Pro not publicly reported."
   },
   {
@@ -933,7 +1326,10 @@
     "modality": "text",
     "contextWindow": 262144,
     "maxOutput": 65536,
-    "pricing": { "inputPerMTok": 0.54, "outputPerMTok": 3.4 },
+    "pricing": {
+      "inputPerMTok": 0.54,
+      "outputPerMTok": 3.4
+    },
     "openWeights": true,
     "knowledgeCutoff": null,
     "benchmarks": {
@@ -945,8 +1341,13 @@
       "lmarenaElo": null,
       "arcAgi2": null
     },
-    "strengths": ["397B MoE with only 17B active — very cheap to serve", "Open weights"],
-    "weaknesses": ["Superseded within a quarter by Qwen3.6 and Qwen3.7 Max"],
+    "strengths": [
+      "397B MoE with only 17B active — very cheap to serve",
+      "Open weights"
+    ],
+    "weaknesses": [
+      "Superseded within a quarter by Qwen3.6 and Qwen3.7 Max"
+    ],
     "notes": "Figures are for the Qwen3.5-397B-A17B open release. MMLU-Pro 87.8 / GPQA 88.4 / SWE-bench 76.4 third-party (LLM-Stats/DeepInfra). Pricing is the DeepInfra hosted FP8 rate — no first-party API for the open weights."
   },
   {
@@ -958,11 +1359,14 @@
     "modality": "multimodal",
     "contextWindow": 262144,
     "maxOutput": null,
-    "pricing": { "inputPerMTok": 0.15, "outputPerMTok": 0.6 },
+    "pricing": {
+      "inputPerMTok": 0.15,
+      "outputPerMTok": 0.6
+    },
     "openWeights": true,
     "knowledgeCutoff": null,
     "benchmarks": {
-      "mmluPro": 78.0,
+      "mmluPro": 78,
       "gpqaDiamond": 71.2,
       "sweBench": null,
       "aime": null,
@@ -970,8 +1374,14 @@
       "lmarenaElo": 1358,
       "arcAgi2": null
     },
-    "strengths": ["Unifies reasoning, vision and coding lines in one 119B/6.5B-active model", "Among the cheapest multimodal reasoning models", "Apache 2.0 open weights"],
-    "weaknesses": ["Small-tier ceiling; not a frontier flagship"],
+    "strengths": [
+      "Unifies reasoning, vision and coding lines in one 119B/6.5B-active model",
+      "Among the cheapest multimodal reasoning models",
+      "Apache 2.0 open weights"
+    ],
+    "weaknesses": [
+      "Small-tier ceiling; not a frontier flagship"
+    ],
     "notes": "256k context and $0.15/$0.60 pricing per Mistral's announcement (earlier trackers listed 128k). MMLU-Pro 78.0 / GPQA 71.2 third-party-reported; LMArena Elo 1358 via BenchLM's Arena tracking."
   },
   {
@@ -983,7 +1393,10 @@
     "modality": "multimodal",
     "contextWindow": 5000000,
     "maxOutput": null,
-    "pricing": { "inputPerMTok": null, "outputPerMTok": null },
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
     "openWeights": true,
     "knowledgeCutoff": null,
     "benchmarks": {
@@ -995,8 +1408,15 @@
       "lmarenaElo": null,
       "arcAgi2": null
     },
-    "strengths": ["Open weights at frontier scale (600B+, trained on 500K+ B200s)", "5M-token context — longest of any 2026 release", "Recursive self-improvement synthetic-data pipeline"],
-    "weaknesses": ["Overshadowed by Meta's own closed Muse Spark, launched the same day", "Sparse public benchmark documentation"],
+    "strengths": [
+      "Open weights at frontier scale (600B+, trained on 500K+ B200s)",
+      "5M-token context — longest of any 2026 release",
+      "Recursive self-improvement synthetic-data pipeline"
+    ],
+    "weaknesses": [
+      "Overshadowed by Meta's own closed Muse Spark, launched the same day",
+      "Sparse public benchmark documentation"
+    ],
     "notes": "Meta published no standard benchmark table at launch and trackers had not evaluated it as of July 2026; open weights, so no first-party API pricing."
   },
   {
@@ -1008,7 +1428,10 @@
     "modality": "multimodal",
     "contextWindow": 262144,
     "maxOutput": null,
-    "pricing": { "inputPerMTok": null, "outputPerMTok": null },
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
     "openWeights": false,
     "knowledgeCutoff": null,
     "benchmarks": {
@@ -1020,8 +1443,15 @@
       "lmarenaElo": 1487,
       "arcAgi2": 42.5
     },
-    "strengths": ["First closed frontier model from Meta Superintelligence Labs", "Best-in-class health reasoning (HealthBench Hard ~3x Gemini)", "Free to consumers via the Meta AI app"],
-    "weaknesses": ["Weak ARC-AGI-2 vs Gemini 3.1 Pro (42.5 vs 77.1)", "No public API or pricing yet"],
+    "strengths": [
+      "First closed frontier model from Meta Superintelligence Labs",
+      "Best-in-class health reasoning (HealthBench Hard ~3x Gemini)",
+      "Free to consumers via the Meta AI app"
+    ],
+    "weaknesses": [
+      "Weak ARC-AGI-2 vs Gemini 3.1 Pro (42.5 vs 77.1)",
+      "No public API or pricing yet"
+    ],
     "notes": "Replaced Llama as Meta's flagship line. Closed hosted model — no public API pricing or max-output figure. SWE-bench 77.4 lab-reported; HLE 58.4 is third-party (LLM-Stats), with tools in Contemplating mode; ARC-AGI-2 42.5 in Contemplating mode."
   },
   {
@@ -1033,7 +1463,10 @@
     "modality": "multimodal",
     "contextWindow": 1000000,
     "maxOutput": 128000,
-    "pricing": { "inputPerMTok": 5, "outputPerMTok": 30 },
+    "pricing": {
+      "inputPerMTok": 5,
+      "outputPerMTok": 30
+    },
     "openWeights": false,
     "knowledgeCutoff": "2025-12",
     "benchmarks": {
@@ -1043,10 +1476,17 @@
       "aime": null,
       "hle": 41.4,
       "lmarenaElo": 1481,
-      "arcAgi2": 85.0
+      "arcAgi2": 85
     },
-    "strengths": ["ARC-AGI-2 85% — best novel-pattern reasoning score reported", "Terminal-Bench 2.0 state of the art at release", "Leads FrontierMath and long-context retrieval"],
-    "weaknesses": ["Trails Claude Opus on SWE-bench Pro and HLE without tools", "Price doubled vs GPT-5.1"],
+    "strengths": [
+      "ARC-AGI-2 85% — best novel-pattern reasoning score reported",
+      "Terminal-Bench 2.0 state of the art at release",
+      "Leads FrontierMath and long-context retrieval"
+    ],
+    "weaknesses": [
+      "Trails Claude Opus on SWE-bench Pro and HLE without tools",
+      "Price doubled vs GPT-5.1"
+    ],
     "notes": "GPT-5.5 Pro variant ($30/$180) sits #2 on LMArena. Context reported as 1M API / 1.1M by some trackers. Knowledge cutoff Dec 2025. SWE-bench Verified 88.7 lab-reported; LMArena Elo 1481 is the GPT-5.5 (high) listing."
   },
   {
@@ -1058,7 +1498,10 @@
     "modality": "text",
     "contextWindow": 1000000,
     "maxOutput": 384000,
-    "pricing": { "inputPerMTok": 0.435, "outputPerMTok": 0.87 },
+    "pricing": {
+      "inputPerMTok": 0.435,
+      "outputPerMTok": 0.87
+    },
     "openWeights": true,
     "knowledgeCutoff": null,
     "benchmarks": {
@@ -1070,8 +1513,15 @@
       "lmarenaElo": null,
       "arcAgi2": null
     },
-    "strengths": ["Best open-weights coding model — SWE-bench Verified 80.6% (V4-Pro-Max)", "~29x cheaper per output token than Claude Opus 4.8", "1M context with 384K max output, MIT license"],
-    "weaknesses": ["Serving capacity constrained by Huawei Ascend supply", "No dedicated R2 reasoning release"],
+    "strengths": [
+      "Best open-weights coding model — SWE-bench Verified 80.6% (V4-Pro-Max)",
+      "~29x cheaper per output token than Claude Opus 4.8",
+      "1M context with 384K max output, MIT license"
+    ],
+    "weaknesses": [
+      "Serving capacity constrained by Huawei Ascend supply",
+      "No dedicated R2 reasoning release"
+    ],
     "notes": "V4-Pro is a 1.6T/49B-active MoE; V4-Flash costs $0.14/$0.28. MMLU-Pro 87.5 / GPQA 90.1 are DeepSeek-reported for V4-Pro in Max reasoning mode; HLE 48.2 is third-party (LLM-Stats), same mode."
   },
   {
@@ -1083,7 +1533,10 @@
     "modality": "multimodal",
     "contextWindow": 1000000,
     "maxOutput": null,
-    "pricing": { "inputPerMTok": 1.25, "outputPerMTok": 2.5 },
+    "pricing": {
+      "inputPerMTok": 1.25,
+      "outputPerMTok": 2.5
+    },
     "openWeights": false,
     "knowledgeCutoff": null,
     "benchmarks": {
@@ -1095,8 +1548,15 @@
       "lmarenaElo": null,
       "arcAgi2": null
     },
-    "strengths": ["Cheapest near-frontier flagship after a ~40% price cut", "First xAI model with native video input", "Fast output (~117 tok/s)"],
-    "weaknesses": ["Intelligence-index tier below the frontier leaders", "Grok 5 (6T MoE) repeatedly delayed"],
+    "strengths": [
+      "Cheapest near-frontier flagship after a ~40% price cut",
+      "First xAI model with native video input",
+      "Fast output (~117 tok/s)"
+    ],
+    "weaknesses": [
+      "Intelligence-index tier below the frontier leaders",
+      "Grok 5 (6T MoE) repeatedly delayed"
+    ],
     "notes": "Requests above 200K tokens are billed at 2x. GPQA Diamond 90.1 per Artificial Analysis (third-party). xAI documents no fixed max-output cap; xAI published agentic (tau2-Bench, IFBench) rather than academic benchmarks at launch."
   },
   {
@@ -1108,20 +1568,29 @@
     "modality": "multimodal",
     "contextWindow": 1048576,
     "maxOutput": 65536,
-    "pricing": { "inputPerMTok": 1.5, "outputPerMTok": 9 },
+    "pricing": {
+      "inputPerMTok": 1.5,
+      "outputPerMTok": 9
+    },
     "openWeights": false,
     "knowledgeCutoff": "2025-01",
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": null,
-      "sweBench": 81.0,
+      "sweBench": 81,
       "aime": null,
       "hle": 40.2,
       "lmarenaElo": 1481,
       "arcAgi2": 72.1
     },
-    "strengths": ["Beats Gemini 3.1 Pro on coding/agentic suites at ~25% lower cost", "Up to 4x faster than comparable frontier models"],
-    "weaknesses": ["Flash-tier depth limits on hardest reasoning benchmarks", "65K output cap"],
+    "strengths": [
+      "Beats Gemini 3.1 Pro on coding/agentic suites at ~25% lower cost",
+      "Up to 4x faster than comparable frontier models"
+    ],
+    "weaknesses": [
+      "Flash-tier depth limits on hardest reasoning benchmarks",
+      "65K output cap"
+    ],
     "notes": "Announced at Google I/O 2026; Terminal-Bench 2.1 76.2%. SWE-bench Verified 81.0 from I/O reporting; HLE 40.2 is third-party (LLM-Stats); ARC-AGI-2 72.1; LMArena Elo 1481 at launch window."
   },
   {
@@ -1133,7 +1602,10 @@
     "modality": "text",
     "contextWindow": 1000000,
     "maxOutput": 65536,
-    "pricing": { "inputPerMTok": 2.5, "outputPerMTok": 7.5 },
+    "pricing": {
+      "inputPerMTok": 2.5,
+      "outputPerMTok": 7.5
+    },
     "openWeights": false,
     "knowledgeCutoff": null,
     "benchmarks": {
@@ -1145,8 +1617,14 @@
       "lmarenaElo": null,
       "arcAgi2": null
     },
-    "strengths": ["Highest-ranked Chinese model ever on the Artificial Analysis index at launch", "Built for long-horizon agent workflows with thousands of tool calls", "90% cached-input discount favors agentic loops"],
-    "weaknesses": ["Closed weights — a break from Qwen's open-source tradition"],
+    "strengths": [
+      "Highest-ranked Chinese model ever on the Artificial Analysis index at launch",
+      "Built for long-horizon agent workflows with thousands of tool calls",
+      "90% cached-input discount favors agentic loops"
+    ],
+    "weaknesses": [
+      "Closed weights — a break from Qwen's open-source tradition"
+    ],
     "notes": "SWE-bench Pro 60.6; Terminal-Bench 2.0 69.7. SWE-bench Verified 80.4 and HLE 41.4 lab/W&B-reported; MMLU-Pro 89.6 is third-party (LLM-Stats). Alibaba reports HMMT 97.1 instead of AIME."
   },
   {
@@ -1158,7 +1636,10 @@
     "modality": "multimodal",
     "contextWindow": 1000000,
     "maxOutput": 128000,
-    "pricing": { "inputPerMTok": 5, "outputPerMTok": 25 },
+    "pricing": {
+      "inputPerMTok": 5,
+      "outputPerMTok": 25
+    },
     "openWeights": false,
     "knowledgeCutoff": "2026-01",
     "benchmarks": {
@@ -1170,8 +1651,16 @@
       "lmarenaElo": 1484,
       "arcAgi2": null
     },
-    "strengths": ["#1 on LMArena overall and coding at release", "Huge math gains (USAMO 69.3% → 96.7%)", "Proactively flags uncertainty about its own work", "Optional fast mode at $10/$50"],
-    "weaknesses": ["GPQA slightly below Opus 4.7 and Gemini 3.1 Pro", "Reviewed as a modest step, not a leap"],
+    "strengths": [
+      "#1 on LMArena overall and coding at release",
+      "Huge math gains (USAMO 69.3% → 96.7%)",
+      "Proactively flags uncertainty about its own work",
+      "Optional fast mode at $10/$50"
+    ],
+    "weaknesses": [
+      "GPQA slightly below Opus 4.7 and Gemini 3.1 Pro",
+      "Reviewed as a modest step, not a leap"
+    ],
     "notes": "HLE 49.8% no tools / 57.9% with tools. LMArena Elo corrected to 1484 (current Opus 4.8 Thinking listing, July 2026); an earlier 1510 figure did not match the live leaderboard."
   },
   {
@@ -1183,20 +1672,32 @@
     "modality": "multimodal",
     "contextWindow": 1000000,
     "maxOutput": 128000,
-    "pricing": { "inputPerMTok": 10, "outputPerMTok": 50 },
+    "pricing": {
+      "inputPerMTok": 10,
+      "outputPerMTok": 50
+    },
     "openWeights": false,
     "knowledgeCutoff": "2026-01",
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 92.6,
-      "sweBench": 95.0,
+      "sweBench": 95,
       "aime": null,
       "hle": 64.5,
       "lmarenaElo": 1509,
       "arcAgi2": null
     },
-    "strengths": ["First generally available Mythos-class model — state of the art on nearly every tested benchmark", "Days-long agentic autonomy (Stripe: 50M-line migration in one day)", "State-of-the-art vision; rebuilds web apps from screenshots", "Reported ~10x acceleration of protein-design workflows"],
-    "weaknesses": ["Expensive at $10/$50 vs Opus 4.8's $5/$25", "Safety classifiers reroute a small share of cyber/bio sessions to Opus 4.8", "Launch controversy over silent throttling of suspected distillation"],
+    "strengths": [
+      "First generally available Mythos-class model — state of the art on nearly every tested benchmark",
+      "Days-long agentic autonomy (Stripe: 50M-line migration in one day)",
+      "State-of-the-art vision; rebuilds web apps from screenshots",
+      "Reported ~10x acceleration of protein-design workflows"
+    ],
+    "weaknesses": [
+      "Expensive at $10/$50 vs Opus 4.8's $5/$25",
+      "Safety classifiers reroute a small share of cyber/bio sessions to Opus 4.8",
+      "Launch controversy over silent throttling of suspected distillation"
+    ],
     "notes": "Shares weights with the restricted Claude Mythos 5 (vetted partners only). HLE 64.5% is with tools; GPQA/SWE figures are third-party — Anthropic retired saturated benchmarks from official reporting."
   },
   {
@@ -1208,7 +1709,10 @@
     "modality": "multimodal",
     "contextWindow": 262144,
     "maxOutput": null,
-    "pricing": { "inputPerMTok": null, "outputPerMTok": null },
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
     "openWeights": true,
     "knowledgeCutoff": null,
     "benchmarks": {
@@ -1220,8 +1724,17 @@
       "lmarenaElo": 1452,
       "arcAgi2": null
     },
-    "strengths": ["31B dense flagship beats open models 10-20x its size on a meaningful share of published benchmarks", "#3 open model on the LMArena text leaderboard at release", "Native image, video and (on the E2B/E4B tiers) audio input across the whole family", "Apache 2.0 license across all five sizes (E2B, E4B, 12B, 26B-A4B, 31B)"],
-    "weaknesses": ["No SWE-bench or agentic-coding figures published at launch", "256K context trails 1M-class open rivals like DeepSeek-V4 and Kimi K2 Thinking", "No first-party hosted API pricing — open weights only"],
+    "strengths": [
+      "31B dense flagship beats open models 10-20x its size on a meaningful share of published benchmarks",
+      "#3 open model on the LMArena text leaderboard at release",
+      "Native image, video and (on the E2B/E4B tiers) audio input across the whole family",
+      "Apache 2.0 license across all five sizes (E2B, E4B, 12B, 26B-A4B, 31B)"
+    ],
+    "weaknesses": [
+      "No SWE-bench or agentic-coding figures published at launch",
+      "256K context trails 1M-class open rivals like DeepSeek-V4 and Kimi K2 Thinking",
+      "No first-party hosted API pricing — open weights only"
+    ],
     "notes": "Benchmarks shown are for the 31B Dense variant. LMArena Elo (~1452) and the MMLU-Pro/GPQA/AIME/HLE figures are third-party community-reported, not an official Google table. Weights were quietly published March 31, 2026; the formal Google blog announcement followed April 2, 2026."
   },
   {
@@ -1233,7 +1746,10 @@
     "modality": "text",
     "contextWindow": 1000000,
     "maxOutput": 128000,
-    "pricing": { "inputPerMTok": 1.4, "outputPerMTok": 4.4 },
+    "pricing": {
+      "inputPerMTok": 1.4,
+      "outputPerMTok": 4.4
+    },
     "openWeights": true,
     "knowledgeCutoff": "2026-03",
     "benchmarks": {
@@ -1245,8 +1761,17 @@
       "lmarenaElo": null,
       "arcAgi2": 22.8
     },
-    "strengths": ["Leading open-weights model on Artificial Analysis's Intelligence Index at release", "Beat GPT-5.5 on SWE-bench Pro (62.1 vs 58.6) at roughly 1/6th the token cost", "1M-token context via a new IndexShare sparse-attention scheme, cutting per-token FLOPs ~2.9x", "MIT license with no regional restrictions"],
-    "weaknesses": ["Text-only — no vision, unlike closed rivals", "Shipped with no official benchmark suite; early scores were self-reported for six days before a verified table followed", "ARC-AGI-2 22.8% — best of the open models but far behind closed frontier leaders"],
+    "strengths": [
+      "Leading open-weights model on Artificial Analysis's Intelligence Index at release",
+      "Beat GPT-5.5 on SWE-bench Pro (62.1 vs 58.6) at roughly 1/6th the token cost",
+      "1M-token context via a new IndexShare sparse-attention scheme, cutting per-token FLOPs ~2.9x",
+      "MIT license with no regional restrictions"
+    ],
+    "weaknesses": [
+      "Text-only — no vision, unlike closed rivals",
+      "Shipped with no official benchmark suite; early scores were self-reported for six days before a verified table followed",
+      "ARC-AGI-2 22.8% — best of the open models but far behind closed frontier leaders"
+    ],
     "notes": "SWE-bench Pro 62.1 reported; no SWE-bench Verified figure has been published. GPQA Diamond sources conflict (91.2 per the official Hugging Face model card vs ~80.3 in some third-party trackers) — official figure used. HLE 40.5% no tools / 54.7% with tools. Max output listed as 128K in most reporting; some sources cite up to 163,840 for extended reasoning."
   },
   {
@@ -1258,7 +1783,10 @@
     "modality": "multimodal",
     "contextWindow": 1050000,
     "maxOutput": 128000,
-    "pricing": { "inputPerMTok": 5, "outputPerMTok": 30 },
+    "pricing": {
+      "inputPerMTok": 5,
+      "outputPerMTok": 30
+    },
     "openWeights": false,
     "knowledgeCutoff": "2026-02",
     "benchmarks": {
@@ -1270,8 +1798,17 @@
       "lmarenaElo": null,
       "arcAgi2": 92.5
     },
-    "strengths": ["Record GPQA Diamond (94.6%) and ARC-AGI-2 (92.5% at max reasoning effort) at release", "OpenAI's strongest cybersecurity model yet — threat modeling, code review, blue-teaming", "54% more token-efficient on coding tasks than GPT-5.5", "Beats Claude Fable 5 on the Artificial Analysis Coding Agent Index at under half the output tokens"],
-    "weaknesses": ["No SWE-bench Verified or AIME figures published at launch", "Public rollout briefly delayed by a government review before the July 9 release", "Sol's $5/$30 pricing sits above the mid-tier Terra and budget Luna variants"],
+    "strengths": [
+      "Record GPQA Diamond (94.6%) and ARC-AGI-2 (92.5% at max reasoning effort) at release",
+      "OpenAI's strongest cybersecurity model yet — threat modeling, code review, blue-teaming",
+      "54% more token-efficient on coding tasks than GPT-5.5",
+      "Beats Claude Fable 5 on the Artificial Analysis Coding Agent Index at under half the output tokens"
+    ],
+    "weaknesses": [
+      "No SWE-bench Verified or AIME figures published at launch",
+      "Public rollout briefly delayed by a government review before the July 9 release",
+      "Sol's $5/$30 pricing sits above the mid-tier Terra and budget Luna variants"
+    ],
     "notes": "Figures shown are for the Sol (frontier) tier of the three-model GPT-5.6 family; Terra ($2.50/$15) and Luna ($1/$6) are cheaper variants with lower Intelligence Index scores (55 and 51 vs Sol's 59). Context window and max output confirmed via OpenAI's developer docs. GPQA Diamond 94.6 and HLE 47.2 are OpenAI/Artificial Analysis-reported; MMLU-Pro 89.1 and ARC-AGI-2 92.5 (Max effort, per ARC Prize) are third-party. SWE-bench Verified and AIME were not published for this family."
   },
   {
@@ -1283,7 +1820,10 @@
     "modality": "text",
     "contextWindow": null,
     "maxOutput": null,
-    "pricing": { "inputPerMTok": null, "outputPerMTok": null },
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
     "openWeights": true,
     "knowledgeCutoff": null,
     "benchmarks": {
@@ -1295,8 +1835,17 @@
       "lmarenaElo": null,
       "arcAgi2": null
     },
-    "strengths": ["First model from Germany's sovereign SOOFI consortium (Fraunhofer IAIS/IIS, DFKI, TU Darmstadt and others)", "Hybrid Mamba-2/MoE design activates only ~3.2B of 31.6B parameters per token, giving roughly 8x the throughput of dense 14-24B models at long context", "Best open-model code aggregate in both English and German among 17 open base models tested", "Trained end-to-end on Deutsche Telekom's sovereign Industrial AI Cloud in Munich"],
-    "weaknesses": ["Released as a 'preview / internal checkpoint' — an unaligned base model, not intended for direct deployment", "Matches dense 14-27B open models on aggregate benchmarks rather than pushing the open-weights frontier", "License unfinalized at release; context window and standard reasoning benchmarks (MMLU-Pro, GPQA, SWE-bench, etc.) unpublished"],
+    "strengths": [
+      "First model from Germany's sovereign SOOFI consortium (Fraunhofer IAIS/IIS, DFKI, TU Darmstadt and others)",
+      "Hybrid Mamba-2/MoE design activates only ~3.2B of 31.6B parameters per token, giving roughly 8x the throughput of dense 14-24B models at long context",
+      "Best open-model code aggregate in both English and German among 17 open base models tested",
+      "Trained end-to-end on Deutsche Telekom's sovereign Industrial AI Cloud in Munich"
+    ],
+    "weaknesses": [
+      "Released as a 'preview / internal checkpoint' — an unaligned base model, not intended for direct deployment",
+      "Matches dense 14-27B open models on aggregate benchmarks rather than pushing the open-weights frontier",
+      "License unfinalized at release; context window and standard reasoning benchmarks (MMLU-Pro, GPQA, SWE-bench, etc.) unpublished"
+    ],
     "notes": "No MMLU-Pro/GPQA Diamond/SWE-bench/AIME/HLE/LMArena/ARC-AGI-2 scores have been published; reported metrics instead cover HumanEval (73.8%), MBPP (70.2%, 84.2% for the German variant) and aggregate English/German scores. Coordinated by the KI Bundesverband and funded under Germany's IPCEI-CIS program; arXiv preprint posted 2026-07-10, press release and Hugging Face weights 2026-07-13."
   }
 ]
