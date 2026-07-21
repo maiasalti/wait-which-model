@@ -1,0 +1,58 @@
+[
+  {
+    "key": "mmluPro",
+    "name": "MMLU-Pro",
+    "description": "Harder multi-task knowledge and reasoning benchmark (10-choice questions across 14 domains).",
+    "unit": "%",
+    "higherIsBetter": true,
+    "max": 100
+  },
+  {
+    "key": "gpqaDiamond",
+    "name": "GPQA Diamond",
+    "description": "Graduate-level, Google-proof science questions (hardest split). PhD experts score ~65%.",
+    "unit": "%",
+    "higherIsBetter": true,
+    "max": 100
+  },
+  {
+    "key": "sweBench",
+    "name": "SWE-bench Verified",
+    "description": "Real GitHub issues resolved end-to-end in real repositories; the standard agentic coding benchmark.",
+    "unit": "%",
+    "higherIsBetter": true,
+    "max": 100
+  },
+  {
+    "key": "aime",
+    "name": "AIME (latest)",
+    "description": "American Invitational Mathematics Examination — competition math, no tools unless noted.",
+    "unit": "%",
+    "higherIsBetter": true,
+    "max": 100
+  },
+  {
+    "key": "hle",
+    "name": "Humanity's Last Exam",
+    "description": "2,500 expert-written frontier questions across dozens of fields; designed to resist saturation.",
+    "unit": "%",
+    "higherIsBetter": true,
+    "max": 100
+  },
+  {
+    "key": "lmarenaElo",
+    "name": "LMArena Elo",
+    "description": "Crowd-sourced head-to-head preference rating from LMArena (formerly Chatbot Arena).",
+    "unit": "Elo",
+    "higherIsBetter": true,
+    "max": null
+  },
+  {
+    "key": "arcAgi2",
+    "name": "ARC-AGI-2",
+    "description": "Abstraction-and-reasoning puzzles that are easy for humans and hard for models.",
+    "unit": "%",
+    "higherIsBetter": true,
+    "max": 100
+  }
+]

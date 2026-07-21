@@ -1,0 +1,101 @@
+[
+  {
+    "id": "xai",
+    "name": "xAI",
+    "country": "United States",
+    "founded": 2023,
+    "website": "https://x.ai",
+    "color": "#6383D1",
+    "order": 1
+  },
+  {
+    "id": "anthropic",
+    "name": "Anthropic",
+    "country": "United States",
+    "founded": 2021,
+    "website": "https://www.anthropic.com",
+    "color": "#C96A42",
+    "order": 2
+  },
+  {
+    "id": "google",
+    "name": "Google DeepMind",
+    "country": "United States / United Kingdom",
+    "founded": 2010,
+    "website": "https://deepmind.google",
+    "color": "#5B8DEF",
+    "order": 3
+  },
+  {
+    "id": "openai",
+    "name": "OpenAI",
+    "country": "United States",
+    "founded": 2015,
+    "website": "https://openai.com",
+    "color": "#189E77",
+    "order": 4
+  },
+  {
+    "id": "meta",
+    "name": "Meta AI",
+    "country": "United States",
+    "founded": 2013,
+    "website": "https://ai.meta.com",
+    "color": "#1B86B8",
+    "order": 5
+  },
+  {
+    "id": "mistral",
+    "name": "Mistral AI",
+    "country": "France",
+    "founded": 2023,
+    "website": "https://mistral.ai",
+    "color": "#C27C0A",
+    "order": 6
+  },
+  {
+    "id": "deepseek",
+    "name": "DeepSeek",
+    "country": "China",
+    "founded": 2023,
+    "website": "https://www.deepseek.com",
+    "color": "#7168E8",
+    "order": 7
+  },
+  {
+    "id": "moonshot",
+    "name": "Moonshot AI",
+    "country": "China",
+    "founded": 2023,
+    "website": "https://www.moonshot.ai",
+    "color": "#7E9C26",
+    "order": 8
+  },
+  {
+    "id": "alibaba",
+    "name": "Alibaba (Qwen)",
+    "country": "China",
+    "founded": 2023,
+    "website": "https://qwen.ai",
+    "color": "#C955A9",
+    "order": 9
+  },
+  {
+    "id": "zhipu",
+    "name": "Zhipu AI",
+    "country": "China",
+    "founded": 2019,
+    "website": "https://z.ai",
+    "color": "#0EA0A8",
+    "order": 10
+  },
+  {
+    "id": "soofi",
+    "name": "Soofi",
+    "country": "Germany",
+    "founded": 2026,
+    "website": "https://www.soofi.info",
+    "color": "#9C8A16",
+    "order": 11
+  }
+]
