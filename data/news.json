@@ -1,5 +1,16 @@
 [
   {
+    "id": "2026-07-20-fable-5-jacobian-conjecture",
+    "date": "2026-07-20",
+    "title": "Claude Fable 5 helps disprove the 87-year-old Jacobian conjecture",
+    "summary": "Anthropic mathematician Levent Alpöge used Claude Fable 5 to construct a concrete polynomial counterexample disproving the Jacobian conjecture for n=3 — a constant-Jacobian-determinant map whose distinct inputs collide to the same output, breaking global invertibility. The result was independently verified by outside mathematicians within a day; the conjecture remains open for n=2.",
+    "category": "research",
+    "companies": ["anthropic"],
+    "modelIds": ["claude-fable-5"],
+    "sourceName": "The Next Web",
+    "sourceUrl": "https://thenextweb.com/news/jacobian-conjecture-disproved-ai-fable-5"
+  },
+  {
     "id": "2026-07-16-kimi-k3",
     "date": "2026-07-16",
     "title": "Moonshot AI launches Kimi K3",
