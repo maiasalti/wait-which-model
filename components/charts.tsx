@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import {
   Bar,
   BarChart,
@@ -20,6 +21,24 @@ import type { BenchmarkKey, Highlight, Model } from "@/lib/types";
 
 const DIM = 0.14;
 const MARK = 15; // logo mark size in px
+const CHART_HEIGHT = 340;
+
+/** Measures a container's rendered width so labels can be clamped to it — the
+ * ResponsiveContainer chart fills this width but doesn't expose it to children. */
+function useContainerWidth() {
+  const ref = useRef<HTMLDivElement>(null);
+  const [width, setWidth] = useState(0);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const update = () => setWidth(el.getBoundingClientRect().width);
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+  return [ref, width] as const;
+}
 
 interface LabelBox {
   x1: number;
@@ -41,8 +60,24 @@ for (const radius of [11, 17, 24, 32, 42, 54]) {
   }
 }
 
-function boxesOverlap(a: LabelBox, b: LabelBox): boolean {
-  return !(a.x2 < b.x1 || a.x1 > b.x2 || a.y2 < b.y1 || a.y1 > b.y2);
+function overlapArea(a: LabelBox, b: LabelBox): number {
+  const w = Math.max(0, Math.min(a.x2, b.x2) - Math.max(a.x1, b.x1));
+  const h = Math.max(0, Math.min(a.y2, b.y2) - Math.max(a.y1, b.y1));
+  return w * h;
+}
+
+/** Shifts a label box back inside the chart's pixel bounds so corner/edge labels
+ * don't render partly off-canvas and get clipped by the container. */
+function clampBox(box: LabelBox, bounds: { width: number; height: number }): LabelBox {
+  const PAD = 4;
+  let dx = 0;
+  let dy = 0;
+  if (box.x1 < PAD) dx = PAD - box.x1;
+  else if (box.x2 > bounds.width - PAD) dx = bounds.width - PAD - box.x2;
+  if (box.y1 < PAD) dy = PAD - box.y1;
+  else if (box.y2 > bounds.height - PAD) dy = bounds.height - PAD - box.y2;
+  if (dx === 0 && dy === 0) return box;
+  return { x1: box.x1 + dx, y1: box.y1 + dy, x2: box.x2 + dx, y2: box.y2 + dy };
 }
 
 function labelBox(cx: number, cy: number, dx: number, dy: number, anchor: string, width: number): LabelBox {
@@ -55,19 +90,37 @@ function labelBox(cx: number, cy: number, dx: number, dy: number, anchor: string
 }
 
 /** Finds a label position near (cx, cy) that doesn't overlap already-placed labels.
- * Returns null if every candidate in the search rings collides — better to drop a
- * label in a dense cluster than render overlapping, unreadable text. */
-function placeLabel(cx: number, cy: number, text: string, placed: LabelBox[]) {
+ * Every label always gets placed — in a very dense cluster where no candidate is
+ * fully clear, picks whichever candidate overlaps the least rather than dropping
+ * the label (a missing label reads as a bug; a little overlap in an extreme
+ * cluster still reads as data). */
+function placeLabel(
+  cx: number,
+  cy: number,
+  text: string,
+  placed: LabelBox[],
+  bounds: { width: number; height: number }
+) {
   const width = text.length * 5.4 + 6;
+  let best = LABEL_CANDIDATES[0];
+  let bestBox = labelBox(cx, cy, best.dx, best.dy, best.anchor, width);
+  let bestOverlap = Infinity;
   for (const c of LABEL_CANDIDATES) {
-    const box = labelBox(cx, cy, c.dx, c.dy, c.anchor, width);
-    if (!placed.some((p) => boxesOverlap(p, box))) {
-      placed.push(box);
-      const textX = c.anchor === "start" ? box.x1 : c.anchor === "end" ? box.x2 : cx + c.dx;
-      return { x: textX, y: cy + c.dy, anchor: c.anchor, box };
+    const box = clampBox(labelBox(cx, cy, c.dx, c.dy, c.anchor, width), bounds);
+    const overlap = placed.reduce((sum, p) => sum + overlapArea(p, box), 0);
+    if (overlap < bestOverlap) {
+      best = c;
+      bestBox = box;
+      bestOverlap = overlap;
+      if (overlap === 0) break;
     }
   }
-  return null;
+  placed.push(bestBox);
+  // bestBox may have shifted from clamping, so derive the text anchor position from
+  // the final box rather than the original (unclamped) candidate offset.
+  const textX = best.anchor === "start" ? bestBox.x1 : best.anchor === "end" ? bestBox.x2 : (bestBox.x1 + bestBox.x2) / 2;
+  const textY = (bestBox.y1 + bestBox.y2) / 2;
+  return { x: textX, y: textY, anchor: best.anchor, box: bestBox };
 }
 
 /** Scatter mark: the company logo, tinted in the company color, dimmed when not highlighted; optional collision-avoided label. */
@@ -76,7 +129,8 @@ function logoShape(
   path: string | undefined,
   dimming: boolean,
   showLabels: boolean,
-  placed: LabelBox[]
+  placed: LabelBox[],
+  bounds: { width: number; height: number }
 ) {
   return function LogoMark(props: unknown) {
     const { cx, cy, payload } = props as { cx?: number; cy?: number; payload?: Point };
@@ -93,8 +147,7 @@ function logoShape(
       </g>
     );
     if (!showLabels || !payload) return mark;
-    const label = placeLabel(cx, cy, payload.model.name, placed);
-    if (!label) return mark;
+    const label = placeLabel(cx, cy, payload.model.name, placed, bounds);
     return (
       <g opacity={opacity}>
         {mark}
@@ -226,6 +279,8 @@ export function TimelineScatter({
   showLabels?: boolean;
 }) {
   const meta = benchmarkByKey.get(benchmark);
+  const [containerRef, containerWidth] = useContainerWidth();
+  const bounds = { width: containerWidth || 9999, height: CHART_HEIGHT };
   const placed: LabelBox[] = [];
   const series = buildSeries(
     shown,
@@ -246,47 +301,49 @@ export function TimelineScatter({
         {meta?.name} over time
         <span className="ml-2 font-normal text-ink-3">release date × score</span>
       </figcaption>
-      <ResponsiveContainer width="100%" height={340}>
-        <ScatterChart margin={{ top: 12, right: 16, bottom: 4, left: -8 }}>
-          <CartesianGrid strokeDasharray="2 4" vertical={false} />
-          <XAxis
-            type="number"
-            dataKey="x"
-            domain={[minX - YEAR_MS / 24, maxX + YEAR_MS / 24]}
-            ticks={dateTicks(minX, maxX)}
-            tickFormatter={(t) => {
-              const d = new Date(t);
-              return d.getMonth() === 0
-                ? String(d.getFullYear())
-                : `Jul '${String(d.getFullYear()).slice(2)}`;
-            }}
-            tickLine={false}
-            axisLine={{ stroke: "var(--line-strong)" }}
-          />
-          <YAxis
-            type="number"
-            dataKey="y"
-            unit={meta?.unit === "%" ? "%" : undefined}
-            domain={meta?.key === "lmarenaElo" ? ["auto", "auto"] : [0, 100]}
-            tickLine={false}
-            axisLine={false}
-            width={52}
-          />
-          <Tooltip
-            cursor={{ strokeDasharray: "3 3", stroke: "var(--line-strong)" }}
-            content={<ChartTooltip benchmark={benchmark} xLabel="date" />}
-          />
-          {series.map((s) => (
-            <Scatter
-              key={s.company.id}
-              name={s.company.name}
-              data={s.points}
-              isAnimationActive={false}
-              shape={logoShape(s.company.color, LOGO_PATHS[s.company.id]?.path, dimming, showLabels, placed)}
+      <div ref={containerRef}>
+        <ResponsiveContainer width="100%" height={340}>
+          <ScatterChart margin={{ top: 12, right: 16, bottom: 4, left: -8 }}>
+            <CartesianGrid strokeDasharray="2 4" vertical={false} />
+            <XAxis
+              type="number"
+              dataKey="x"
+              domain={[minX - YEAR_MS / 24, maxX + YEAR_MS / 24]}
+              ticks={dateTicks(minX, maxX)}
+              tickFormatter={(t) => {
+                const d = new Date(t);
+                return d.getMonth() === 0
+                  ? String(d.getFullYear())
+                  : `Jul '${String(d.getFullYear()).slice(2)}`;
+              }}
+              tickLine={false}
+              axisLine={{ stroke: "var(--line-strong)" }}
             />
-          ))}
-        </ScatterChart>
-      </ResponsiveContainer>
+            <YAxis
+              type="number"
+              dataKey="y"
+              unit={meta?.unit === "%" ? "%" : undefined}
+              domain={meta?.key === "lmarenaElo" ? ["auto", "auto"] : [0, 100]}
+              tickLine={false}
+              axisLine={false}
+              width={52}
+            />
+            <Tooltip
+              cursor={{ strokeDasharray: "3 3", stroke: "var(--line-strong)" }}
+              content={<ChartTooltip benchmark={benchmark} xLabel="date" />}
+            />
+            {series.map((s) => (
+              <Scatter
+                key={s.company.id}
+                name={s.company.name}
+                data={s.points}
+                isAnimationActive={false}
+                shape={logoShape(s.company.color, LOGO_PATHS[s.company.id]?.path, dimming, showLabels, placed, bounds)}
+              />
+            ))}
+          </ScatterChart>
+        </ResponsiveContainer>
+      </div>
       <CompanyLegend shown={shown} />
     </figure>
   );
@@ -304,6 +361,8 @@ export function CostPerfScatter({
   showLabels?: boolean;
 }) {
   const meta = benchmarkByKey.get(benchmark);
+  const [containerRef, containerWidth] = useContainerWidth();
+  const bounds = { width: containerWidth || 9999, height: CHART_HEIGHT };
   const placed: LabelBox[] = [];
   const series = buildSeries(
     shown,
@@ -326,43 +385,45 @@ export function CostPerfScatter({
           input $/MTok (log) × score — up and left is the frontier
         </span>
       </figcaption>
-      <ResponsiveContainer width="100%" height={340}>
-        <ScatterChart margin={{ top: 12, right: 16, bottom: 4, left: -8 }}>
-          <CartesianGrid strokeDasharray="2 4" vertical={false} />
-          <XAxis
-            type="number"
-            dataKey="x"
-            scale="log"
-            domain={["auto", "auto"]}
-            ticks={[0.1, 0.3, 1, 3, 10, 30]}
-            tickFormatter={(v) => `$${v}`}
-            tickLine={false}
-            axisLine={{ stroke: "var(--line-strong)" }}
-          />
-          <YAxis
-            type="number"
-            dataKey="y"
-            unit={meta?.unit === "%" ? "%" : undefined}
-            domain={meta?.key === "lmarenaElo" ? ["auto", "auto"] : [0, 100]}
-            tickLine={false}
-            axisLine={false}
-            width={52}
-          />
-          <Tooltip
-            cursor={{ strokeDasharray: "3 3", stroke: "var(--line-strong)" }}
-            content={<ChartTooltip benchmark={benchmark} xLabel="price" />}
-          />
-          {series.map((s) => (
-            <Scatter
-              key={s.company.id}
-              name={s.company.name}
-              data={s.points}
-              isAnimationActive={false}
-              shape={logoShape(s.company.color, LOGO_PATHS[s.company.id]?.path, dimming, showLabels, placed)}
+      <div ref={containerRef}>
+        <ResponsiveContainer width="100%" height={340}>
+          <ScatterChart margin={{ top: 12, right: 16, bottom: 4, left: -8 }}>
+            <CartesianGrid strokeDasharray="2 4" vertical={false} />
+            <XAxis
+              type="number"
+              dataKey="x"
+              scale="log"
+              domain={["auto", "auto"]}
+              ticks={[0.1, 0.3, 1, 3, 10, 30]}
+              tickFormatter={(v) => `$${v}`}
+              tickLine={false}
+              axisLine={{ stroke: "var(--line-strong)" }}
             />
-          ))}
-        </ScatterChart>
-      </ResponsiveContainer>
+            <YAxis
+              type="number"
+              dataKey="y"
+              unit={meta?.unit === "%" ? "%" : undefined}
+              domain={meta?.key === "lmarenaElo" ? ["auto", "auto"] : [0, 100]}
+              tickLine={false}
+              axisLine={false}
+              width={52}
+            />
+            <Tooltip
+              cursor={{ strokeDasharray: "3 3", stroke: "var(--line-strong)" }}
+              content={<ChartTooltip benchmark={benchmark} xLabel="price" />}
+            />
+            {series.map((s) => (
+              <Scatter
+                key={s.company.id}
+                name={s.company.name}
+                data={s.points}
+                isAnimationActive={false}
+                shape={logoShape(s.company.color, LOGO_PATHS[s.company.id]?.path, dimming, showLabels, placed, bounds)}
+              />
+            ))}
+          </ScatterChart>
+        </ResponsiveContainer>
+      </div>
       <CompanyLegend shown={shown} />
     </figure>
   );
