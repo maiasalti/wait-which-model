@@ -72,6 +72,15 @@ export function ModelDrawer({ model, onClose }: { model: Model | null; onClose: 
       ? darken(companyColor(compareModel.company), 0.4)
       : companyColor(compareModel.company)
     : undefined;
+  const sortedBenchmarks = benchmarks
+    .map((b, i) => ({ b, i }))
+    .sort((a, z) => {
+      const aHas = model.benchmarks[a.b.key] != null;
+      const zHas = model.benchmarks[z.b.key] != null;
+      if (aHas === zHas) return a.i - z.i;
+      return aHas ? -1 : 1;
+    })
+    .map(({ b }) => b);
 
   return (
     <div className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label={model.name}>
@@ -186,7 +195,7 @@ export function ModelDrawer({ model, onClose }: { model: Model | null; onClose: 
         </div>
 
         <div className="mono mt-3">
-          {benchmarks.map((b) => {
+          {sortedBenchmarks.map((b) => {
             const v1 = model.benchmarks[b.key];
             const v2 = compareModel?.benchmarks[b.key];
             const isElo = b.key === "lmarenaElo";
