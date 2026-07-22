@@ -189,9 +189,9 @@ export function ModelDrawer({ model, onClose }: { model: Model | null; onClose: 
                 <p className="text-xs text-ink-2" title={b.description}>
                   {b.name}
                 </p>
-                <div className="mt-1 flex gap-1.5">
+                <div className="mt-1 space-y-1">
                   {entries.map((e, i) => (
-                    <div key={i} className="min-w-0 flex-1">
+                    <div key={i}>
                       <div className="text-right text-[10px] text-ink">
                         {e.v != null ? `${e.v}${unit}` : "—"}
                       </div>
