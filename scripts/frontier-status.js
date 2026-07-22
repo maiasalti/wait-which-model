@@ -33,7 +33,7 @@ const fs = require("fs");
 const path = require("path");
 
 const RECENCY_MONTHS = 9;
-const CAPABILITY_THRESHOLD = 0.9; // must be within 10% of the tier's top composite score
+const CAPABILITY_THRESHOLD = 0.85; // must be within 15% of the tier's top composite score
 const MIN_BENCHMARKS = 3; // non-null benchmarks required to be rankable
 const MAJOR_LABS = ["openai", "anthropic", "google", "meta"];
 const MAJOR_LAB_RECENCY_MONTHS = 3;

@@ -17,7 +17,7 @@ If the model is from OpenAI, Anthropic, Google, or Meta, and is the single most 
 Within its `tier` (`flagship` / `balanced` / `fast`):
 
 1. **Recency** — released within the last 9 months. Older models age out automatically, even with no successor.
-2. **Capability bar** — its composite benchmark score is within 10% of the best composite score among other recent, rankable models in the same tier (models covered by the override in A are excluded from this comparison pool). Being newest isn't sufficient; a new release with weaker benchmarks than the current leader doesn't qualify.
+2. **Capability bar** — its composite benchmark score is within 15% of the best composite score among other recent, rankable models in the same tier (models covered by the override in A are excluded from this comparison pool). Being newest isn't sufficient; a new release with weaker benchmarks than the current leader doesn't qualify.
 3. **Verified data** — has at least 3 non-null benchmark scores. Models below that threshold are left at their current status and flagged as "needs benchmark data" instead of being guessed — run the stats-filler protocol on them first, then re-run this one.
 
 Everything that doesn't meet the bar under A or B becomes `"superseded"`. `"deprecated"` is never touched by this — it's a manual signal set only when a lab officially retires a model (e.g. pulls it from their API).
@@ -43,4 +43,4 @@ The composite score normalizes each benchmark key (0–1) across the tier's rank
 
 ## Tuning
 
-`RECENCY_MONTHS` (9), `CAPABILITY_THRESHOLD` (0.9), `MAJOR_LABS` (`openai`, `anthropic`, `google`, `meta`), and `MAJOR_LAB_RECENCY_MONTHS` (3) are constants at the top of `scripts/frontier-status.js`. If Maia asks to loosen/tighten the definition or change which labs get the recency override, change them there — this file and the script are the single source of truth for the rule; don't hand-edit `status` values outside of this process (except `"deprecated"`, which stays manual).
+`RECENCY_MONTHS` (9), `CAPABILITY_THRESHOLD` (0.85), `MAJOR_LABS` (`openai`, `anthropic`, `google`, `meta`), and `MAJOR_LAB_RECENCY_MONTHS` (3) are constants at the top of `scripts/frontier-status.js`. If Maia asks to loosen/tighten the definition or change which labs get the recency override, change them there — this file and the script are the single source of truth for the rule; don't hand-edit `status` values outside of this process (except `"deprecated"`, which stays manual).
