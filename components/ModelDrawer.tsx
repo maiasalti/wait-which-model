@@ -35,7 +35,6 @@ export function ModelDrawer({ model, onClose }: { model: Model | null; onClose: 
               <CompanyLogo companyId={model.company} size={15} />
               <span className="mono text-xs uppercase tracking-wider text-ink-2">
                 {companyName(model.company)}
-                {company ? ` · ${company.country}` : ""}
               </span>
             </div>
             <h2 className="mt-1 text-2xl font-semibold">{model.name}</h2>
@@ -56,6 +55,7 @@ export function ModelDrawer({ model, onClose }: { model: Model | null; onClose: 
         <dl className="mono mt-6 grid grid-cols-2 gap-3 text-sm">
           {[
             ["Status", model.status],
+            ["Location", company?.country ?? "Unknown"],
             ["Modality", model.modality],
             ["Context window", formatContext(model.contextWindow)],
             ["Max output", formatContext(model.maxOutput)],

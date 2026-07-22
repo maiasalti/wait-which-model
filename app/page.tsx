@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { companies, models } from "@/lib/data";
+import { companies, companyById, models } from "@/lib/data";
 import type { Model, ModelStatus } from "@/lib/types";
 import { ModelCard } from "@/components/ModelCard";
 import { ModelDrawer } from "@/components/ModelDrawer";
@@ -26,10 +26,13 @@ const SORTS: { key: SortKey; label: string }[] = [
   { key: "hle", label: "Best HLE" },
 ];
 
+const LOCATIONS = Array.from(new Set(companies.map((c) => c.country))).sort();
+
 export default function DirectoryPage() {
   const [search, setSearch] = useState("");
   const [companyIds, setCompanyIds] = useState<string[]>([]);
   const [status, setStatus] = useState<ModelStatus | "all">("all");
+  const [location, setLocation] = useState<string>("all");
   const [openOnly, setOpenOnly] = useState(false);
   const [sort, setSort] = useState<SortKey>("newest");
   const [selected, setSelected] = useState<Model | null>(null);
@@ -39,6 +42,7 @@ export default function DirectoryPage() {
     const filtered = models.filter((m) => {
       if (companyIds.length > 0 && !companyIds.includes(m.company)) return false;
       if (status !== "all" && m.status !== status) return false;
+      if (location !== "all" && companyById.get(m.company)?.country !== location) return false;
       if (openOnly && !m.openWeights) return false;
       if (q && !m.name.toLowerCase().includes(q)) return false;
       return true;
@@ -59,7 +63,7 @@ export default function DirectoryPage() {
           return bench(b, sort) - bench(a, sort);
       }
     });
-  }, [search, companyIds, status, openOnly, sort]);
+  }, [search, companyIds, status, location, openOnly, sort]);
 
   const toggleCompany = (id: string) =>
     setCompanyIds((prev) =>
@@ -78,7 +82,7 @@ export default function DirectoryPage() {
           Models Directory
         </p>
         <h1 className="mt-2 max-w-2xl text-3xl font-semibold leading-tight sm:text-4xl">
-          Every frontier model, on the record.
+          AI Model Directory
         </h1>
         <p className="mt-3 max-w-2xl text-sm text-ink-2">
           {models.length} models from {companies.length} labs, {startYear} to today —{" "}
@@ -145,6 +149,19 @@ export default function DirectoryPage() {
           <option value="frontier">Frontier</option>
           <option value="superseded">Superseded</option>
           <option value="deprecated">Deprecated</option>
+        </select>
+        <select
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
+          className="rounded border border-line bg-surface px-2 py-1.5 text-sm"
+          aria-label="Filter by location"
+        >
+          <option value="all">Any location</option>
+          {LOCATIONS.map((loc) => (
+            <option key={loc} value={loc}>
+              {loc}
+            </option>
+          ))}
         </select>
         <label className="flex items-center gap-1.5 text-sm text-ink-2">
           <input

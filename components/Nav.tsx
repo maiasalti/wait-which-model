@@ -17,10 +17,7 @@ export function Nav() {
       <div className="mx-auto flex w-full max-w-7xl items-center gap-6 px-4 sm:px-6">
         <Link href="/" className="flex items-baseline gap-2 py-4">
           <span className="text-lg font-semibold tracking-tight">
-            Frontier
-          </span>
-          <span className="mono text-xs uppercase tracking-[0.2em] text-ink-3">
-            Observatory
+            Wait Which Model?
           </span>
         </Link>
         <nav className="flex gap-1" aria-label="Sections">

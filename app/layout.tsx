@@ -16,7 +16,7 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Frontier Observatory",
+  title: "Wait Which Model?",
   description:
     "A directory, comparison instrument, and news log for frontier AI models.",
 };
@@ -51,7 +51,7 @@ gtag('config', 'G-GJFVT58K8P');`}
         </main>
         <footer className="mono flex flex-col items-center gap-1.5 border-t border-line px-4 py-6 text-center text-xs text-ink-3">
           <p>
-            Frontier Observatory · data curated via the release &amp; news-scan
+            Wait Which Model? · data curated via the release &amp; news-scan
             protocols · figures are launch-time reported scores
           </p>
           <p>
