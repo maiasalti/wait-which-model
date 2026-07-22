@@ -2,12 +2,23 @@
 /**
  * Recomputes "frontier" status per protocols/FRONTIER_STATUS_PROTOCOL.md.
  *
- * A model is "frontier" only if, within its tier (flagship / balanced / fast):
- *   1. It released within RECENCY_MONTHS of today, AND
- *   2. It has at least MIN_BENCHMARKS non-null benchmark scores (else it's
- *      "unrankable" and left untouched — needs a stats-filler pass first), AND
- *   3. Its composite score is within CAPABILITY_THRESHOLD of the best
- *      composite score among rankable candidates in its tier.
+ * Two ways a model qualifies as "frontier":
+ *
+ *   A. Major-lab recency override: if the model is from a lab in MAJOR_LABS
+ *      and is the single most recent release in its (company, tier) group,
+ *      released within MAJOR_LAB_RECENCY_MONTHS, it's automatically
+ *      "frontier" — no benchmark data required. These labs' newest flagship
+ *      releases are trusted to be near-SOTA even before benchmarks are
+ *      published, and a model must never lose frontier status just because
+ *      data isn't published yet.
+ *
+ *   B. General rule, for everyone else, within its tier (flagship / balanced
+ *      / fast):
+ *      1. Released within RECENCY_MONTHS of today, AND
+ *      2. Has at least MIN_BENCHMARKS non-null benchmark scores (else it's
+ *         "unrankable" and left untouched — needs a stats-filler pass), AND
+ *      3. Composite score is within CAPABILITY_THRESHOLD of the best
+ *         composite score among rankable candidates in its tier.
  *
  * Everything else becomes "superseded". Models already "deprecated" are
  * never touched — that status is a manual signal (lab retired the model)
@@ -24,6 +35,8 @@ const path = require("path");
 const RECENCY_MONTHS = 9;
 const CAPABILITY_THRESHOLD = 0.9; // must be within 10% of the tier's top composite score
 const MIN_BENCHMARKS = 3; // non-null benchmarks required to be rankable
+const MAJOR_LABS = ["openai", "anthropic", "google", "meta"];
+const MAJOR_LAB_RECENCY_MONTHS = 3;
 
 const MODELS_PATH = path.join(__dirname, "..", "data", "models.json");
 const BENCHMARK_KEYS = [
@@ -55,8 +68,35 @@ function main() {
   const changes = []; // { id, from, to, reason }
   const unrankable = []; // { id, tier, reason }
   const nextStatus = new Map(); // id -> status (only for models this script decides)
+  const overridden = new Set(); // ids decided by the major-lab override, skip general rule
 
-  for (const [tier, group] of byTier) {
+  // A. Major-lab recency override, computed per (company, tier).
+  const byCompanyTier = new Map();
+  for (const m of models) {
+    if (!MAJOR_LABS.includes(m.company)) continue;
+    const key = `${m.company}::${m.tier}`;
+    if (!byCompanyTier.has(key)) byCompanyTier.set(key, []);
+    byCompanyTier.get(key).push(m);
+  }
+  for (const group of byCompanyTier.values()) {
+    const newest = group.reduce((a, b) => (a.releaseDate > b.releaseDate ? a : b));
+    if (newest.status === "deprecated") continue;
+    if (monthsAgo(newest.releaseDate, now) > MAJOR_LAB_RECENCY_MONTHS) continue;
+    overridden.add(newest.id);
+    nextStatus.set(newest.id, "frontier");
+    if (newest.status !== "frontier") {
+      changes.push({
+        id: newest.id,
+        from: newest.status,
+        to: "frontier",
+        reason: `most recent ${newest.company} release in its tier, within ${MAJOR_LAB_RECENCY_MONTHS}mo (major-lab override)`,
+      });
+    }
+  }
+
+  // B. General rule for everything not covered by the override above.
+  for (const [tier, fullGroup] of byTier) {
+    const group = fullGroup.filter((m) => !overridden.has(m.id));
     const candidates = group.filter((m) => monthsAgo(m.releaseDate, now) <= RECENCY_MONTHS);
     const rankable = candidates.filter(
       (m) => BENCHMARK_KEYS.filter((k) => m.benchmarks[k] != null).length >= MIN_BENCHMARKS

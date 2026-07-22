@@ -1465,7 +1465,7 @@
     "name": "Muse Spark",
     "company": "meta",
     "releaseDate": "2026-04-08",
-    "status": "superseded",
+    "status": "frontier",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 262144,
@@ -1501,7 +1501,7 @@
     "name": "GPT-5.5",
     "company": "openai",
     "releaseDate": "2026-04-23",
-    "status": "superseded",
+    "status": "frontier",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 1000000,
@@ -1679,7 +1679,7 @@
     "name": "Claude Opus 4.8",
     "company": "anthropic",
     "releaseDate": "2026-05-28",
-    "status": "superseded",
+    "status": "frontier",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 1000000,
@@ -1754,7 +1754,7 @@
     "name": "Gemma 4",
     "company": "google",
     "releaseDate": "2026-04-02",
-    "status": "superseded",
+    "status": "frontier",
     "tier": "fast",
     "modality": "multimodal",
     "contextWindow": 262144,
@@ -1764,7 +1764,7 @@
       "outputPerMTok": null
     },
     "openWeights": true,
-    "knowledgeCutoff": null,
+    "knowledgeCutoff": "2025-01",
     "benchmarks": {
       "mmluPro": 85.2,
       "gpqaDiamond": 84.3,
@@ -1785,7 +1785,7 @@
       "256K context trails 1M-class open rivals like DeepSeek-V4 and Kimi K2 Thinking",
       "No first-party hosted API pricing — open weights only"
     ],
-    "notes": "Benchmarks shown are for the 31B Dense variant. LMArena Elo (~1452) and the MMLU-Pro/GPQA/AIME/HLE figures are third-party community-reported, not an official Google table. Weights were quietly published March 31, 2026; the formal Google blog announcement followed April 2, 2026."
+    "notes": "Benchmarks shown are for the 31B Dense variant. LMArena Elo (~1452) and the MMLU-Pro/GPQA/AIME/HLE figures are third-party community-reported, not an official Google table. Weights were quietly published March 31, 2026; the formal Google blog announcement followed April 2, 2026. Knowledge cutoff (January 2025) confirmed via Google's official Gemma 4 model card (ai.google.dev)."
   },
   {
     "id": "glm-5-2",
@@ -1809,7 +1809,7 @@
       "sweBench": null,
       "aime": 99.2,
       "hle": 40.5,
-      "lmarenaElo": null,
+      "lmarenaElo": 1469,
       "arcAgi2": 22.8
     },
     "strengths": [
@@ -1823,7 +1823,7 @@
       "Shipped with no official benchmark suite; early scores were self-reported for six days before a verified table followed",
       "ARC-AGI-2 22.8% — best of the open models but far behind closed frontier leaders"
     ],
-    "notes": "SWE-bench Pro 62.1 reported; no SWE-bench Verified figure has been published. GPQA Diamond sources conflict (91.2 per the official Hugging Face model card vs ~80.3 in some third-party trackers) — official figure used. HLE 40.5% no tools / 54.7% with tools. Max output listed as 128K in most reporting; some sources cite up to 163,840 for extended reasoning."
+    "notes": "SWE-bench Pro 62.1 reported; no SWE-bench Verified figure has been published. GPQA Diamond sources conflict (91.2 per the official Hugging Face model card vs ~80.3 in some third-party trackers) — official figure used. HLE 40.5% no tools / 54.7% with tools. Max output listed as 128K in most reporting; some sources cite up to 163,840 for extended reasoning. LMArena Elo 1469 is the \"GLM-5.2 (max)\" text-arena listing (arena.ai), the only GLM-5.2 variant on the board."
   },
   {
     "id": "gpt-5-6",
@@ -1847,7 +1847,7 @@
       "sweBench": null,
       "aime": null,
       "hle": 47.2,
-      "lmarenaElo": null,
+      "lmarenaElo": 1485,
       "arcAgi2": 92.5
     },
     "strengths": [
@@ -1861,7 +1861,7 @@
       "Public rollout briefly delayed by a government review before the July 9 release",
       "Sol's $5/$30 pricing sits above the mid-tier Terra and budget Luna variants"
     ],
-    "notes": "Figures shown are for the Sol (frontier) tier of the three-model GPT-5.6 family; Terra ($2.50/$15) and Luna ($1/$6) are cheaper variants with lower Intelligence Index scores (55 and 51 vs Sol's 59). Context window and max output confirmed via OpenAI's developer docs. GPQA Diamond 94.6 and HLE 47.2 are OpenAI/Artificial Analysis-reported; MMLU-Pro 89.1 and ARC-AGI-2 92.5 (Max effort, per ARC Prize) are third-party. SWE-bench Verified and AIME were not published for this family."
+    "notes": "Figures shown are for the Sol (frontier) tier of the three-model GPT-5.6 family; Terra ($2.50/$15) and Luna ($1/$6) are cheaper variants with lower Intelligence Index scores (55 and 51 vs Sol's 59). Context window and max output confirmed via OpenAI's developer docs. GPQA Diamond 94.6 and HLE 47.2 are OpenAI/Artificial Analysis-reported; MMLU-Pro 89.1 and ARC-AGI-2 92.5 (Max effort, per ARC Prize) are third-party. SWE-bench Verified and AIME were not published for this family. LMArena Elo 1485 is the \"gpt-5.6-sol-xhigh\" text-arena listing (arena.ai)."
   },
   {
     "id": "soofi-s-30b-a3b",
@@ -1880,8 +1880,8 @@
     "openWeights": true,
     "knowledgeCutoff": null,
     "benchmarks": {
-      "mmluPro": null,
-      "gpqaDiamond": null,
+      "mmluPro": 51.4,
+      "gpqaDiamond": 43.4,
       "sweBench": null,
       "aime": null,
       "hle": null,
@@ -1897,8 +1897,8 @@
     "weaknesses": [
       "Released as a 'preview / internal checkpoint' — an unaligned base model, not intended for direct deployment",
       "Matches dense 14-27B open models on aggregate benchmarks rather than pushing the open-weights frontier",
-      "License unfinalized at release; context window and standard reasoning benchmarks (MMLU-Pro, GPQA, SWE-bench, etc.) unpublished"
+      "License unfinalized at release; context window and SWE-bench/AIME/HLE/LMArena/ARC-AGI-2 figures unpublished"
     ],
-    "notes": "No MMLU-Pro/GPQA Diamond/SWE-bench/AIME/HLE/LMArena/ARC-AGI-2 scores have been published; reported metrics instead cover HumanEval (73.8%), MBPP (70.2%, 84.2% for the German variant) and aggregate English/German scores. Coordinated by the KI Bundesverband and funded under Germany's IPCEI-CIS program; arXiv preprint posted 2026-07-10, press release and Hugging Face weights 2026-07-13."
+    "notes": "No SWE-bench/AIME/HLE/LMArena/ARC-AGI-2 scores have been published; reported metrics instead cover HumanEval (73.8%), MBPP (70.2%, 84.2% for the German variant) and aggregate English/German scores. Coordinated by the KI Bundesverband and funded under Germany's IPCEI-CIS program; arXiv preprint posted 2026-07-10, press release and Hugging Face weights 2026-07-13. MMLU-Pro 51.4 and GPQA Diamond 43.4 corrected/added from the SOOFI consortium's own technical report (arXiv:2607.09424, Tables 4-5 and Figure 7), for the released base checkpoint iter_1056000 — not published in initial press coverage. The paper's Phase 3 training extends usable context to 1M tokens, but a separate long-context checkpoint is evaluated apart from the base-model benchmark table, so a single released context-window figure could not be confirmed."
   }
 ]

@@ -1,11 +1,12 @@
 {
   "frontierDefinition": {
-    "summary": "A model is labeled \"frontier\" only if it's genuinely competitive with the best currently available in its class — not just the newest thing a given lab has shipped.",
+    "summary": "A model is labeled \"frontier\" one of two ways: it's the newest flagship-caliber release from one of a handful of labs whose releases are trusted to be near state-of-the-art, or it's genuinely competitive with the best currently available in its class by the numbers.",
     "criteria": [
-      "Recency: it must have been released within the last 9 months. Older models automatically lose frontier status even if nothing has replaced them yet.",
-      "Tier: models are grouped into Flagship, Balanced, and Fast tiers (see below) so a small, cheap model is judged against other small, cheap models — not against a lab's biggest release.",
-      "Capability bar: within its tier, a model's benchmark scores must land within about 10% of the best score any recent model in that tier has posted. Being newest isn't enough on its own — a fresh release with weaker benchmarks than the current leader doesn't qualify.",
-      "Verified data required: a model needs scores on at least 3 of the tracked benchmarks to be evaluated at all. Freshly announced models without enough published benchmark data yet keep their prior status until that data is confirmed, rather than being guessed into a category."
+      "Major-lab recency: the newest release from OpenAI, Anthropic, Google, or Meta in a given tier is frontier automatically, as long as it shipped within the last 3 months — no benchmark data required. These labs' flagship releases are trusted on reputation, since official benchmark figures are often published weeks after launch and a model shouldn't lose frontier status just because that data isn't out yet.",
+      "Everyone else — recency: it must have been released within the last 9 months. Older models automatically lose frontier status even if nothing has replaced them yet.",
+      "Everyone else — tier: models are grouped into Flagship, Balanced, and Fast tiers (see below) so a small, cheap model is judged against other small, cheap models — not against a lab's biggest release.",
+      "Everyone else — capability bar: within its tier, a model's benchmark scores must land within about 10% of the best score any recent model in that tier has posted. Being newest isn't enough on its own — a fresh release with weaker benchmarks than the current leader doesn't qualify.",
+      "Everyone else — verified data required: a model needs scores on at least 3 of the tracked benchmarks to be evaluated at all. Freshly announced models without enough published benchmark data yet keep their prior status until that data is confirmed, rather than being guessed into a category."
     ],
     "lastReviewed": "2026-07-22"
   },
