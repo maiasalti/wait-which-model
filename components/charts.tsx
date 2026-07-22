@@ -21,20 +21,102 @@ import type { BenchmarkKey, Highlight, Model } from "@/lib/types";
 const DIM = 0.14;
 const MARK = 15; // logo mark size in px
 
-/** Scatter mark: the company logo, tinted in the company color, dimmed when not highlighted. */
-function logoShape(color: string, path: string | undefined, dimming: boolean) {
+interface LabelBox {
+  x1: number;
+  y1: number;
+  x2: number;
+  y2: number;
+}
+
+/** Candidate label offsets: rings of increasing radius around the mark, so a dense
+ * cluster still has somewhere to search before giving up on that label entirely. */
+const LABEL_CANDIDATES: { dx: number; dy: number; anchor: "start" | "middle" | "end" }[] = [];
+for (const radius of [11, 17, 24, 32, 42, 54]) {
+  for (const angleDeg of [0, 45, 90, 135, 180, 225, 270, 315]) {
+    const rad = (angleDeg * Math.PI) / 180;
+    const dx = Math.round(Math.cos(rad) * radius);
+    const dy = Math.round(Math.sin(rad) * radius);
+    const anchor = dx > 3 ? "start" : dx < -3 ? "end" : "middle";
+    LABEL_CANDIDATES.push({ dx, dy, anchor });
+  }
+}
+
+function boxesOverlap(a: LabelBox, b: LabelBox): boolean {
+  return !(a.x2 < b.x1 || a.x1 > b.x2 || a.y2 < b.y1 || a.y1 > b.y2);
+}
+
+function labelBox(cx: number, cy: number, dx: number, dy: number, anchor: string, width: number): LabelBox {
+  const height = 13;
+  let x1: number;
+  if (anchor === "start") x1 = cx + dx;
+  else if (anchor === "end") x1 = cx + dx - width;
+  else x1 = cx + dx - width / 2;
+  return { x1, y1: cy + dy - height / 2, x2: x1 + width, y2: cy + dy + height / 2 };
+}
+
+/** Finds a label position near (cx, cy) that doesn't overlap already-placed labels.
+ * Returns null if every candidate in the search rings collides — better to drop a
+ * label in a dense cluster than render overlapping, unreadable text. */
+function placeLabel(cx: number, cy: number, text: string, placed: LabelBox[]) {
+  const width = text.length * 5.4 + 6;
+  for (const c of LABEL_CANDIDATES) {
+    const box = labelBox(cx, cy, c.dx, c.dy, c.anchor, width);
+    if (!placed.some((p) => boxesOverlap(p, box))) {
+      placed.push(box);
+      const textX = c.anchor === "start" ? box.x1 : c.anchor === "end" ? box.x2 : cx + c.dx;
+      return { x: textX, y: cy + c.dy, anchor: c.anchor, box };
+    }
+  }
+  return null;
+}
+
+/** Scatter mark: the company logo, tinted in the company color, dimmed when not highlighted; optional collision-avoided label. */
+function logoShape(
+  color: string,
+  path: string | undefined,
+  dimming: boolean,
+  showLabels: boolean,
+  placed: LabelBox[]
+) {
   return function LogoMark(props: unknown) {
     const { cx, cy, payload } = props as { cx?: number; cy?: number; payload?: Point };
     if (cx == null || cy == null) return <g />;
     const opacity = dimming && payload && !payload.hi ? DIM : 0.95;
-    if (!path)
-      return <circle cx={cx} cy={cy} r={5} fill={color} fillOpacity={opacity} />;
-    return (
+    const mark = !path ? (
+      <circle cx={cx} cy={cy} r={5} fill={color} fillOpacity={opacity} />
+    ) : (
       <g
         transform={`translate(${cx - MARK / 2}, ${cy - MARK / 2}) scale(${MARK / 24})`}
         opacity={opacity}
       >
         <path d={path} fill={color} />
+      </g>
+    );
+    if (!showLabels || !payload) return mark;
+    const label = placeLabel(cx, cy, payload.model.name, placed);
+    if (!label) return mark;
+    return (
+      <g opacity={opacity}>
+        {mark}
+        <rect
+          x={label.box.x1 - 2}
+          y={label.box.y1}
+          width={label.box.x2 - label.box.x1 + 4}
+          height={label.box.y2 - label.box.y1}
+          fill="var(--surface)"
+          fillOpacity={0.8}
+          rx={2}
+        />
+        <text
+          x={label.x}
+          y={label.y + 3}
+          textAnchor={label.anchor}
+          fontSize={10}
+          fontFamily="var(--font-plex-mono), ui-monospace, monospace"
+          fill="var(--ink-2)"
+        >
+          {payload.model.name}
+        </text>
       </g>
     );
   };
@@ -136,12 +218,15 @@ export function TimelineScatter({
   shown,
   benchmark,
   highlight,
+  showLabels = false,
 }: {
   shown: Model[];
   benchmark: BenchmarkKey;
   highlight: Highlight;
+  showLabels?: boolean;
 }) {
   const meta = benchmarkByKey.get(benchmark);
+  const placed: LabelBox[] = [];
   const series = buildSeries(
     shown,
     highlight,
@@ -197,7 +282,7 @@ export function TimelineScatter({
               name={s.company.name}
               data={s.points}
               isAnimationActive={false}
-              shape={logoShape(s.company.color, LOGO_PATHS[s.company.id]?.path, dimming)}
+              shape={logoShape(s.company.color, LOGO_PATHS[s.company.id]?.path, dimming, showLabels, placed)}
             />
           ))}
         </ScatterChart>
@@ -211,12 +296,15 @@ export function CostPerfScatter({
   shown,
   benchmark,
   highlight,
+  showLabels = false,
 }: {
   shown: Model[];
   benchmark: BenchmarkKey;
   highlight: Highlight;
+  showLabels?: boolean;
 }) {
   const meta = benchmarkByKey.get(benchmark);
+  const placed: LabelBox[] = [];
   const series = buildSeries(
     shown,
     highlight,
@@ -270,7 +358,7 @@ export function CostPerfScatter({
               name={s.company.name}
               data={s.points}
               isAnimationActive={false}
-              shape={logoShape(s.company.color, LOGO_PATHS[s.company.id]?.path, dimming)}
+              shape={logoShape(s.company.color, LOGO_PATHS[s.company.id]?.path, dimming, showLabels, placed)}
             />
           ))}
         </ScatterChart>

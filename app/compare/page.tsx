@@ -18,6 +18,7 @@ export default function ComparePage() {
     "gpt-5-5",
     "gemini-3-1-pro",
   ]);
+  const [showLabels, setShowLabels] = useState(false);
   const [now] = useState(() => new Date());
 
   const shown = useMemo(
@@ -61,8 +62,29 @@ export default function ComparePage() {
         />
 
         <div className="flex min-w-0 flex-1 flex-col gap-10">
-          <TimelineScatter shown={shown} benchmark={filters.benchmark} highlight={highlight} />
-          <CostPerfScatter shown={shown} benchmark={filters.benchmark} highlight={highlight} />
+          <button
+            onClick={() => setShowLabels((v) => !v)}
+            aria-pressed={showLabels}
+            className={`mono self-start rounded border px-2.5 py-1.5 text-xs uppercase tracking-wider transition-colors ${
+              showLabels
+                ? "border-accent/60 bg-accent/15 text-ink"
+                : "border-line text-ink-2 hover:text-ink"
+            }`}
+          >
+            {showLabels ? "Labels on" : "Turn on labels"}
+          </button>
+          <TimelineScatter
+            shown={shown}
+            benchmark={filters.benchmark}
+            highlight={highlight}
+            showLabels={showLabels}
+          />
+          <CostPerfScatter
+            shown={shown}
+            benchmark={filters.benchmark}
+            highlight={highlight}
+            showLabels={showLabels}
+          />
 
           <section>
             <h3 className="mono text-[10px] uppercase tracking-widest text-ink-3">
