@@ -28,6 +28,23 @@ const SORTS: { key: SortKey; label: string }[] = [
 
 const LOCATIONS = Array.from(new Set(companies.map((c) => c.country))).sort();
 
+const bench = (m: Model, k: "sweBench" | "gpqaDiamond" | "hle") => m.benchmarks[k] ?? -1;
+
+function compareBy(a: Model, b: Model, key: SortKey): number {
+  switch (key) {
+    case "newest":
+      return b.releaseDate.localeCompare(a.releaseDate);
+    case "oldest":
+      return a.releaseDate.localeCompare(b.releaseDate);
+    case "priceAsc":
+      return (a.pricing.inputPerMTok ?? Infinity) - (b.pricing.inputPerMTok ?? Infinity);
+    case "priceOutputAsc":
+      return (a.pricing.outputPerMTok ?? Infinity) - (b.pricing.outputPerMTok ?? Infinity);
+    default:
+      return bench(b, key) - bench(a, key);
+  }
+}
+
 export default function DirectoryPage() {
   const [search, setSearch] = useState("");
   const [companyIds, setCompanyIds] = useState<string[]>([]);
@@ -35,6 +52,7 @@ export default function DirectoryPage() {
   const [location, setLocation] = useState<string>("all");
   const [openOnly, setOpenOnly] = useState(false);
   const [sort, setSort] = useState<SortKey>("newest");
+  const [sort2, setSort2] = useState<SortKey | "none">("none");
   const [selected, setSelected] = useState<Model | null>(null);
 
   const shown = useMemo(() => {
@@ -47,23 +65,12 @@ export default function DirectoryPage() {
       if (q && !m.name.toLowerCase().includes(q)) return false;
       return true;
     });
-    const bench = (m: Model, k: "sweBench" | "gpqaDiamond" | "hle") =>
-      m.benchmarks[k] ?? -1;
     return filtered.sort((a, b) => {
-      switch (sort) {
-        case "newest":
-          return b.releaseDate.localeCompare(a.releaseDate);
-        case "oldest":
-          return a.releaseDate.localeCompare(b.releaseDate);
-        case "priceAsc":
-          return (a.pricing.inputPerMTok ?? Infinity) - (b.pricing.inputPerMTok ?? Infinity);
-        case "priceOutputAsc":
-          return (a.pricing.outputPerMTok ?? Infinity) - (b.pricing.outputPerMTok ?? Infinity);
-        default:
-          return bench(b, sort) - bench(a, sort);
-      }
+      const primary = compareBy(a, b, sort);
+      if (primary !== 0 || sort2 === "none") return primary;
+      return compareBy(a, b, sort2);
     });
-  }, [search, companyIds, status, location, openOnly, sort]);
+  }, [search, companyIds, status, location, openOnly, sort, sort2]);
 
   const toggleCompany = (id: string) =>
     setCompanyIds((prev) =>
@@ -173,11 +180,28 @@ export default function DirectoryPage() {
         </label>
         <select
           value={sort}
-          onChange={(e) => setSort(e.target.value as SortKey)}
+          onChange={(e) => {
+            const next = e.target.value as SortKey;
+            setSort(next);
+            if (sort2 === next) setSort2("none");
+          }}
           className="ml-auto rounded border border-line bg-surface px-2 py-1.5 text-sm"
           aria-label="Sort models"
         >
           {SORTS.map((s) => (
+            <option key={s.key} value={s.key}>
+              {s.label}
+            </option>
+          ))}
+        </select>
+        <select
+          value={sort2}
+          onChange={(e) => setSort2(e.target.value as SortKey | "none")}
+          className="rounded border border-line bg-surface px-2 py-1.5 text-sm"
+          aria-label="Then sort by (tiebreaker)"
+        >
+          <option value="none">Then by…</option>
+          {SORTS.filter((s) => s.key !== sort).map((s) => (
             <option key={s.key} value={s.key}>
               {s.label}
             </option>
