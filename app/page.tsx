@@ -7,12 +7,20 @@ import { ModelCard } from "@/components/ModelCard";
 import { ModelDrawer } from "@/components/ModelDrawer";
 import { CompanyLogo } from "@/components/CompanyLogo";
 
-type SortKey = "newest" | "oldest" | "priceAsc" | "sweBench" | "gpqaDiamond" | "hle";
+type SortKey =
+  | "newest"
+  | "oldest"
+  | "priceAsc"
+  | "priceOutputAsc"
+  | "sweBench"
+  | "gpqaDiamond"
+  | "hle";
 
 const SORTS: { key: SortKey; label: string }[] = [
   { key: "newest", label: "Newest first" },
   { key: "oldest", label: "Oldest first" },
   { key: "priceAsc", label: "Cheapest input $" },
+  { key: "priceOutputAsc", label: "Cheapest output $" },
   { key: "sweBench", label: "Best SWE-bench" },
   { key: "gpqaDiamond", label: "Best GPQA" },
   { key: "hle", label: "Best HLE" },
@@ -45,6 +53,8 @@ export default function DirectoryPage() {
           return a.releaseDate.localeCompare(b.releaseDate);
         case "priceAsc":
           return (a.pricing.inputPerMTok ?? Infinity) - (b.pricing.inputPerMTok ?? Infinity);
+        case "priceOutputAsc":
+          return (a.pricing.outputPerMTok ?? Infinity) - (b.pricing.outputPerMTok ?? Infinity);
         default:
           return bench(b, sort) - bench(a, sort);
       }
@@ -57,6 +67,9 @@ export default function DirectoryPage() {
     );
 
   const frontierCount = models.filter((m) => m.status === "frontier").length;
+  const startYear = Math.min(
+    ...models.map((m) => new Date(m.releaseDate).getFullYear())
+  );
 
   return (
     <div>
@@ -68,7 +81,7 @@ export default function DirectoryPage() {
           Every frontier model, on the record.
         </h1>
         <p className="mt-3 max-w-2xl text-sm text-ink-2">
-          {models.length} models from {companies.length} labs, 2023 to today —{" "}
+          {models.length} models from {companies.length} labs, {startYear} to today —{" "}
           {frontierCount} currently at the frontier. Click a card for full
           stats, strengths and weaknesses, and related news.
         </p>
@@ -87,23 +100,30 @@ export default function DirectoryPage() {
           {companies.map((c) => {
             const active = companyIds.includes(c.id);
             return (
-              <button
-                key={c.id}
-                onClick={() => toggleCompany(c.id)}
-                aria-pressed={active}
-                title={c.name}
-                className={`flex h-9 w-9 items-center justify-center rounded-md border transition-all ${
-                  active
-                    ? "scale-105 border-transparent"
-                    : "border-line opacity-80 hover:opacity-100"
-                }`}
-                style={{
-                  background: `${c.color}${active ? "3D" : "14"}`,
-                  borderColor: active ? c.color : undefined,
-                }}
-              >
-                <CompanyLogo companyId={c.id} size={17} />
-              </button>
+              <div key={c.id} className="group relative">
+                <button
+                  onClick={() => toggleCompany(c.id)}
+                  aria-pressed={active}
+                  aria-label={c.name}
+                  className={`flex h-9 w-9 items-center justify-center rounded-md border transition-all ${
+                    active
+                      ? "scale-105 border-transparent"
+                      : "border-line opacity-80 hover:opacity-100"
+                  }`}
+                  style={{
+                    background: `${c.color}${active ? "3D" : "14"}`,
+                    borderColor: active ? c.color : undefined,
+                  }}
+                >
+                  <CompanyLogo companyId={c.id} size={17} />
+                </button>
+                <span
+                  role="tooltip"
+                  className="mono pointer-events-none absolute left-1/2 top-full z-10 mt-2 -translate-x-1/2 whitespace-nowrap rounded border border-line-strong bg-surface-2 px-2 py-1 text-[11px] text-ink opacity-0 shadow-xl transition-opacity delay-150 group-hover:opacity-100"
+                >
+                  {c.name}
+                </span>
+              </div>
             );
           })}
           {companyIds.length > 0 && (

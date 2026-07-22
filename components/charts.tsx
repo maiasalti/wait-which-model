@@ -280,14 +280,9 @@ export function CostPerfScatter({
   );
 }
 
-const PCT_KEYS: BenchmarkKey[] = [
-  "mmluPro",
-  "gpqaDiamond",
-  "sweBench",
-  "aime",
-  "hle",
-  "arcAgi2",
-];
+const PCT_KEYS: BenchmarkKey[] = [...benchmarkByKey.values()]
+  .filter((b) => b.unit === "%")
+  .map((b) => b.key);
 
 export function HeadToHead({ picked }: { picked: Model[] }) {
   if (picked.length < 2)

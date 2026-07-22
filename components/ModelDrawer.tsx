@@ -127,9 +127,16 @@ export function ModelDrawer({ model, onClose }: { model: Model | null; onClose: 
             </h3>
             <ul className="mt-2 space-y-2">
               {related.map((n) => (
-                <li key={n.id} className="rounded border border-line p-2 text-sm">
-                  <span className="mono text-[10px] text-ink-3">{formatDate(n.date)}</span>
-                  <p className="text-ink-2">{n.title}</p>
+                <li key={n.id}>
+                  <a
+                    href={n.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block rounded border border-line p-2 text-sm transition-colors hover:border-ink-3 hover:bg-white/5"
+                  >
+                    <span className="mono text-[10px] text-ink-3">{formatDate(n.date)}</span>
+                    <p className="text-ink-2">{n.title}</p>
+                  </a>
                 </li>
               ))}
             </ul>
