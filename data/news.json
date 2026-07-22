@@ -18,8 +18,8 @@
     "category": "research",
     "companies": ["anthropic"],
     "modelIds": ["claude-fable-5"],
-    "sourceName": "The Next Web",
-    "sourceUrl": "https://thenextweb.com/news/jacobian-conjecture-disproved-ai-fable-5"
+    "sourceName": "CoinDesk",
+    "sourceUrl": "https://www.coindesk.com/tech/2026/07/21/claude-s-fable-5-just-solved-an-87-year-old-math-problem-and-it-matters-for-bitcoin"
   },
   {
     "id": "2026-07-16-kimi-k3",
