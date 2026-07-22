@@ -1,25 +1,58 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Model } from "@/lib/types";
 import { CompanyLogo } from "./CompanyLogo";
 import {
   benchmarks,
   companyById,
+  companyColor,
   companyName,
   formatContext,
   formatDate,
   formatPrice,
+  models,
   news,
 } from "@/lib/data";
 
+const ELO_VALUES = models
+  .map((m) => m.benchmarks.lmarenaElo)
+  .filter((v): v is number => v != null);
+const ELO_MIN = Math.floor(Math.min(...ELO_VALUES) / 50) * 50;
+const ELO_MAX = Math.ceil(Math.max(...ELO_VALUES) / 50) * 50;
+
+function barPct(value: number | null | undefined, domainMin: number, domainMax: number): number {
+  if (value == null) return 0;
+  const pct = ((value - domainMin) / (domainMax - domainMin)) * 100;
+  return Math.max(2, Math.min(100, pct));
+}
+
 export function ModelDrawer({ model, onClose }: { model: Model | null; onClose: () => void }) {
+  const [compareQuery, setCompareQuery] = useState("");
+  const [compareId, setCompareId] = useState<string | null>(null);
+
   useEffect(() => {
     if (!model) return;
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [model, onClose]);
+
+  useEffect(() => {
+    setCompareQuery("");
+    setCompareId(null);
+  }, [model?.id]);
+
+  const compareModel = useMemo(
+    () => models.find((m) => m.id === compareId) ?? null,
+    [compareId]
+  );
+
+  const suggestions = useMemo(() => {
+    if (!model || !compareQuery.trim() || compareModel) return [];
+    const q = compareQuery.trim().toLowerCase();
+    return models.filter((m) => m.id !== model.id && m.name.toLowerCase().includes(q)).slice(0, 6);
+  }, [model, compareQuery, compareModel]);
 
   if (!model) return null;
   const company = companyById.get(model.company);
@@ -72,26 +105,104 @@ export function ModelDrawer({ model, onClose }: { model: Model | null; onClose: 
           ))}
         </dl>
 
-        <h3 className="mt-6 text-xs font-semibold uppercase tracking-wider text-ink-2">
-          Benchmarks (launch-time reported)
-        </h3>
-        <table className="mono mt-2 w-full text-sm">
-          <tbody>
-            {benchmarks.map((b) => {
-              const v = model.benchmarks[b.key];
-              return (
-                <tr key={b.key} className="border-b border-line last:border-0">
-                  <td className="py-1.5 pr-2 text-ink-2" title={b.description}>
+        <div className="mt-6 flex items-center justify-between gap-2">
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-ink-2">
+            Benchmarks (launch-time reported)
+          </h3>
+        </div>
+
+        <div className="mt-2">
+          {compareModel ? (
+            <div className="flex items-center justify-between rounded border border-line bg-surface-2 px-2 py-1.5 text-xs">
+              <span className="flex items-center gap-1.5">
+                <CompanyLogo companyId={compareModel.company} size={12} />
+                <span className="text-ink-2">
+                  Comparing with <span className="text-ink">{compareModel.name}</span>
+                </span>
+              </span>
+              <button
+                onClick={() => setCompareId(null)}
+                aria-label="Clear comparison"
+                className="text-ink-3 hover:text-ink"
+              >
+                ×
+              </button>
+            </div>
+          ) : (
+            <div className="relative">
+              <input
+                type="search"
+                value={compareQuery}
+                onChange={(e) => setCompareQuery(e.target.value)}
+                placeholder="Quick compare — search a model…"
+                className="w-full rounded border border-line bg-surface px-2 py-1.5 text-xs placeholder:text-ink-3"
+                aria-label="Quick compare with another model"
+              />
+              {suggestions.length > 0 && (
+                <ul className="absolute z-10 mt-1 w-full overflow-hidden rounded border border-line-strong bg-surface-2 shadow-xl">
+                  {suggestions.map((m) => (
+                    <li key={m.id}>
+                      <button
+                        onClick={() => {
+                          setCompareId(m.id);
+                          setCompareQuery("");
+                        }}
+                        className="flex w-full items-center gap-1.5 px-2 py-1.5 text-left text-xs text-ink-2 hover:bg-white/5 hover:text-ink"
+                      >
+                        <CompanyLogo companyId={m.company} size={12} />
+                        {m.name}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          )}
+        </div>
+
+        <div className="mono mt-3">
+          {benchmarks.map((b) => {
+            const v1 = model.benchmarks[b.key];
+            const v2 = compareModel?.benchmarks[b.key];
+            const isElo = b.key === "lmarenaElo";
+            const domainMin = isElo ? ELO_MIN : 0;
+            const domainMax = isElo ? ELO_MAX : b.max ?? 100;
+            const unit = b.unit === "%" ? "%" : "";
+            return (
+              <div key={b.key} className="border-b border-line py-2 last:border-0">
+                <div className="flex items-center justify-between text-xs">
+                  <span className="text-ink-2" title={b.description}>
                     {b.name}
-                  </td>
-                  <td className="py-1.5 text-right">
-                    {v != null ? `${v}${b.unit === "%" ? "%" : ""}` : "—"}
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+                  </span>
+                  <span className="text-ink">{v1 != null ? `${v1}${unit}` : "—"}</span>
+                </div>
+                <div className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-white/5">
+                  <div
+                    className="h-full rounded-full transition-[width]"
+                    style={{ width: `${barPct(v1, domainMin, domainMax)}%`, background: companyColor(model.company) }}
+                  />
+                </div>
+                {compareModel && (
+                  <>
+                    <div className="mt-1.5 flex items-center justify-between text-xs">
+                      <span className="text-ink-3">{compareModel.name}</span>
+                      <span className="text-ink-3">{v2 != null ? `${v2}${unit}` : "—"}</span>
+                    </div>
+                    <div className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-white/5">
+                      <div
+                        className="h-full rounded-full transition-[width]"
+                        style={{
+                          width: `${barPct(v2, domainMin, domainMax)}%`,
+                          background: companyColor(compareModel.company),
+                        }}
+                      />
+                    </div>
+                  </>
+                )}
+              </div>
+            );
+          })}
+        </div>
 
         {model.strengths.length > 0 && (
           <>
