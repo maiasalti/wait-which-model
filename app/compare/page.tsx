@@ -42,11 +42,12 @@ export default function ComparePage() {
           Visual comparison
         </p>
         <h1 className="mt-2 max-w-2xl text-3xl font-semibold leading-tight sm:text-4xl">
-          The frontier, plotted.
+          Model Analytics
         </h1>
         <p className="mt-3 max-w-2xl text-sm text-ink-2">
-          Filter by time, company, price and score; highlight a model, a group,
-          or a whole lab. Every chart reads from the same filter rail.
+          Customizable model analytics. Filter by time, company, price and
+          score; highlight a model, a group, or a whole lab. Every chart
+          reads from the same filter rail.
         </p>
       </section>
 

@@ -4,9 +4,9 @@
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 
-# Frontier Observatory
+# Wait Which Model?
 
-A Next.js site tracking frontier AI models: **Models Directory** (`/`), **Compare** (`/compare`, interactive Recharts visualizations with a shared filter rail), and **News** (`/news`). All content is driven by the JSON files in `data/` — no backend.
+A Next.js site tracking frontier AI models: **Models Directory** (`/`), **Compare** (`/compare`, interactive Recharts visualizations with a shared filter rail), **News** (`/news`), and **Info** (`/info`, public methodology page). All content is driven by the JSON files in `data/` — no backend.
 
 ## Commands
 
@@ -20,15 +20,17 @@ A Next.js site tracking frontier AI models: **Models Directory** (`/`), **Compar
 | "execute new model release protocol" | `protocols/NEW_MODEL_RELEASE_PROTOCOL.md` (entry formatting: `protocols/MODEL_ENTRY_STYLE_GUIDE.md`) | `.claude/agents/model-release.md` |
 | "execute news scan protocol" / "news sweep" | `protocols/NEWS_SCAN_PROTOCOL.md` — **interview Maia first** (companies, period, categories, depth) via AskUserQuestion, then scan | `.claude/agents/news-scan.md` |
 | "execute stats filler protocol" | `protocols/STATS_FILLER_PROTOCOL.md` | `.claude/agents/stats-filler.md` |
+| "recompute frontier status" / run automatically after the two protocols above | `protocols/FRONTIER_STATUS_PROTOCOL.md` — `node scripts/frontier-status.js` (then `--apply`); **`status` is computed, never hand-assigned** except `deprecated` | — |
 
-Both require **web research — never add figures from memory**; unverified values are `null`. The news scan covers ALL frontier-lab news (funding, policy, research…), not just releases.
+Model-release and news-scan require **web research — never add figures from memory**; unverified values are `null`. The news scan covers ALL frontier-lab news (funding, policy, research…), not just releases.
 
 ## Data files (`data/`)
 
-- **models.json** — `{ id, name, company (companies.json id), releaseDate "YYYY-MM-DD", status: frontier|superseded|deprecated, modality: text|multimodal, contextWindow, maxOutput, pricing: {inputPerMTok, outputPerMTok}, openWeights, knowledgeCutoff, benchmarks: {mmluPro, gpqaDiamond, sweBench, aime, hle, lmarenaElo, arcAgi2}, strengths[], weaknesses[], notes }`. Numbers are launch-time reported scores; null = unpublished/unverified.
+- **models.json** — `{ id, name, company (companies.json id), releaseDate "YYYY-MM-DD", status: frontier|superseded|deprecated, tier: flagship|balanced|fast, modality: text|multimodal, contextWindow, maxOutput, pricing: {inputPerMTok, outputPerMTok}, openWeights, knowledgeCutoff, benchmarks: {mmluPro, gpqaDiamond, sweBench, aime, hle, lmarenaElo, arcAgi2}, strengths[], weaknesses[], notes }`. Numbers are launch-time reported scores; null = unpublished/unverified. `status` is computed by `scripts/frontier-status.js` (see `protocols/FRONTIER_STATUS_PROTOCOL.md`), not hand-assigned — except `deprecated`, which stays manual.
 - **companies.json** — `{ id, name, country, founded, website, color, order }`. Colors are a CVD-validated categorical palette for dark surface `#0B0E1A` in `order` sequence — don't change casually; new colors must pass the dataviz palette validator (OKLCH L 0.48–0.67, chroma ≥ 0.1).
 - **benchmarks.json** — chart/tooltip metadata per benchmark key. Adding a key here is all the site needs to chart it (plus scores in models.json; the head-to-head bar chart lists % keys in `PCT_KEYS` in `components/charts.tsx`).
 - **news.json** — `{ id "YYYY-MM-DD-slug", date, title, summary, category: release|benchmark|company|research|policy, companies[] (ids or plain names), modelIds[], sourceName, sourceUrl }`. Permanent record — append/correct, never delete.
+- **methodology.json** — content for the public `/info` page (frontier definition, tiers, status meanings, benchmark notes, data-currency blurb). Edit this, not the page component, when the definition or wording changes; keep `frontierDefinition.lastReviewed` current.
 - **stats-gaps.md** — ledger of model stat cells researched but unverifiable (kept by the stats-filler protocol so re-runs skip them).
 
 Integrity check after any data edit (also in the protocols):

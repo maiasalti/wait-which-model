@@ -1,5 +1,7 @@
 export type ModelStatus = "frontier" | "superseded" | "deprecated";
 
+export type ModelTier = "flagship" | "balanced" | "fast";
+
 export type BenchmarkKey =
   | "mmluPro"
   | "gpqaDiamond"
@@ -20,6 +22,7 @@ export interface Model {
   company: string;
   releaseDate: string; // YYYY-MM-DD
   status: ModelStatus;
+  tier: ModelTier;
   modality: "text" | "multimodal";
   contextWindow: number | null;
   maxOutput: number | null;
@@ -76,6 +79,19 @@ export interface Filters {
   minScore: number | null;
   maxInputPrice: number | null;
   search: string;
+}
+
+export interface Methodology {
+  frontierDefinition: {
+    summary: string;
+    criteria: string[];
+    lastReviewed: string;
+  };
+  tiers: { key: ModelTier; label: string; description: string }[];
+  statusMeanings: { key: ModelStatus; label: string; description: string }[];
+  dataGaps: { summary: string };
+  sourcing: { summary: string };
+  currency: { summary: string };
 }
 
 export type Highlight =

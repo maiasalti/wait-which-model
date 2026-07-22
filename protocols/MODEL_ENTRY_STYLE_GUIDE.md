@@ -11,6 +11,7 @@ How every record in `data/models.json` is written, so new models added by the re
   "company": "anthropic",
   "releaseDate": "2026-05-28",
   "status": "frontier",
+  "tier": "flagship",
   "modality": "multimodal",
   "contextWindow": 1000000,
   "maxOutput": 128000,
@@ -40,7 +41,8 @@ How every record in `data/models.json` is written, so new models added by the re
 | `name` | The lab's exact marketing name, original capitalization, no company prefix unless part of the name | `GPT-5.5`, `Claude Fable 5`, `DeepSeek-V4`, `o3` (lowercase is correct) |
 | `company` | An `id` from `companies.json` | `anthropic`, `google` (not "Google DeepMind") |
 | `releaseDate` | `YYYY-MM-DD`, the **announcement** date | preview date if that's when it became usable (see Gemini 3.1 Pro) |
-| `status` | `frontier` while current in its tier; `superseded` once the same company ships its replacement; `deprecated` when retired/irrelevant | a company can hold several `frontier` slots across tiers (flagship / small / open line) |
+| `status` | Set by the [Frontier Status Protocol](./FRONTIER_STATUS_PROTOCOL.md) script, not by hand — use `"superseded"` as a placeholder on new entries, then run `node scripts/frontier-status.js --apply` | `"deprecated"` remains manual, for models a lab officially retires |
+| `tier` | `flagship` (top-of-line), `balanced` (mid cost/capability, e.g. a "Sonnet"/"Medium"-class model), or `fast` (small/cheap/low-latency, e.g. "Haiku"/"Flash"/"Mini"-class) | drives which models it's compared against when computing `status` |
 | `modality` | `multimodal` if it accepts images (or more); `text` otherwise | UI capitalizes it |
 | `contextWindow` / `maxOutput` | raw token integers, `null` if unpublished | `1000000`, `200000`, `65536` — never strings like "1M" (the UI formats) |
 | `pricing` | USD per million tokens, **base API tier**; numbers not strings; `null` if no public API | surcharges (long-context 2x, fast mode) go in `notes` |

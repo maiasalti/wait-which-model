@@ -8,6 +8,7 @@ const TABS = [
   { href: "/", label: "Models Directory" },
   { href: "/compare", label: "Compare" },
   { href: "/news", label: "News" },
+  { href: "/info", label: "Info" },
 ];
 
 export function Nav() {

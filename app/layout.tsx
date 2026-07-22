@@ -61,6 +61,10 @@ gtag('config', 'G-GJFVT58K8P');`}
               className="text-accent hover:underline"
             >
               Contact me
+            </a>{" "}
+            ·{" "}
+            <a href="/privacy" className="text-accent hover:underline">
+              Privacy policy
             </a>
           </p>
         </footer>

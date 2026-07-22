@@ -2,7 +2,8 @@ import modelsJson from "@/data/models.json";
 import companiesJson from "@/data/companies.json";
 import benchmarksJson from "@/data/benchmarks.json";
 import newsJson from "@/data/news.json";
-import type { BenchmarkMeta, Company, Model, NewsItem } from "./types";
+import methodologyJson from "@/data/methodology.json";
+import type { BenchmarkMeta, Company, Methodology, Model, NewsItem } from "./types";
 
 export const models = (modelsJson as Model[]).slice().sort(
   (a, b) => b.releaseDate.localeCompare(a.releaseDate)
@@ -13,6 +14,8 @@ export const companies = (companiesJson as Company[]).slice().sort(
 );
 
 export const benchmarks = benchmarksJson as BenchmarkMeta[];
+
+export const methodology = methodologyJson as Methodology;
 
 export const news = (newsJson as NewsItem[]).slice().sort(
   (a, b) => b.date.localeCompare(a.date)
