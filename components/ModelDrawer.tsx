@@ -113,17 +113,27 @@ export function ModelDrawer({ model, onClose }: { model: Model | null; onClose: 
 
         <div className="mt-2">
           {compareModel ? (
-            <div className="flex items-center justify-between rounded border border-line bg-surface-2 px-2 py-1.5 text-xs">
-              <span className="flex items-center gap-1.5">
-                <CompanyLogo companyId={compareModel.company} size={12} />
-                <span className="text-ink-2">
-                  Comparing with <span className="text-ink">{compareModel.name}</span>
+            <div className="flex items-center justify-between gap-2 rounded border border-line bg-surface-2 px-2 py-1.5 text-xs">
+              <div className="flex items-center gap-3">
+                <span className="flex items-center gap-1.5">
+                  <span
+                    className="h-2 w-2 shrink-0 rounded-full"
+                    style={{ background: companyColor(model.company) }}
+                  />
+                  <span className="text-ink">{model.name}</span>
                 </span>
-              </span>
+                <span className="flex items-center gap-1.5">
+                  <span
+                    className="h-2 w-2 shrink-0 rounded-full"
+                    style={{ background: companyColor(compareModel.company) }}
+                  />
+                  <span className="text-ink-2">{compareModel.name}</span>
+                </span>
+              </div>
               <button
                 onClick={() => setCompareId(null)}
                 aria-label="Clear comparison"
-                className="text-ink-3 hover:text-ink"
+                className="shrink-0 text-ink-3 hover:text-ink"
               >
                 ×
               </button>
@@ -168,37 +178,32 @@ export function ModelDrawer({ model, onClose }: { model: Model | null; onClose: 
             const domainMin = isElo ? ELO_MIN : 0;
             const domainMax = isElo ? ELO_MAX : b.max ?? 100;
             const unit = b.unit === "%" ? "%" : "";
+            const entries = compareModel
+              ? [
+                  { v: v1, color: companyColor(model.company) },
+                  { v: v2, color: companyColor(compareModel.company) },
+                ]
+              : [{ v: v1, color: companyColor(model.company) }];
             return (
               <div key={b.key} className="border-b border-line py-2 last:border-0">
-                <div className="flex items-center justify-between text-xs">
-                  <span className="text-ink-2" title={b.description}>
-                    {b.name}
-                  </span>
-                  <span className="text-ink">{v1 != null ? `${v1}${unit}` : "—"}</span>
-                </div>
-                <div className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-white/5">
-                  <div
-                    className="h-full rounded-full transition-[width]"
-                    style={{ width: `${barPct(v1, domainMin, domainMax)}%`, background: companyColor(model.company) }}
-                  />
-                </div>
-                {compareModel && (
-                  <>
-                    <div className="mt-1.5 flex items-center justify-between text-xs">
-                      <span className="text-ink-3">{compareModel.name}</span>
-                      <span className="text-ink-3">{v2 != null ? `${v2}${unit}` : "—"}</span>
+                <p className="text-xs text-ink-2" title={b.description}>
+                  {b.name}
+                </p>
+                <div className="mt-1 flex gap-1.5">
+                  {entries.map((e, i) => (
+                    <div key={i} className="min-w-0 flex-1">
+                      <div className="text-right text-[10px] text-ink">
+                        {e.v != null ? `${e.v}${unit}` : "—"}
+                      </div>
+                      <div className="mt-0.5 h-1.5 w-full overflow-hidden rounded-full bg-white/5">
+                        <div
+                          className="h-full rounded-full transition-[width]"
+                          style={{ width: `${barPct(e.v, domainMin, domainMax)}%`, background: e.color }}
+                        />
+                      </div>
                     </div>
-                    <div className="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-white/5">
-                      <div
-                        className="h-full rounded-full transition-[width]"
-                        style={{
-                          width: `${barPct(v2, domainMin, domainMax)}%`,
-                          background: companyColor(compareModel.company),
-                        }}
-                      />
-                    </div>
-                  </>
-                )}
+                  ))}
+                </div>
               </div>
             );
           })}
