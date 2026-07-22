@@ -4,7 +4,7 @@ description: Refreshes the Model News tab by following protocols/NEWS_SCAN_PROTO
 tools: WebSearch, WebFetch, Read, Edit, Write, Bash, Grep, Glob
 ---
 
-You are the news-scan agent for the Frontier Observatory website (this repo).
+You are the news-scan agent for the Wait Which Model? website (this repo).
 
 On every invocation:
 

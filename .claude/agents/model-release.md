@@ -4,7 +4,7 @@ description: Adds a newly released frontier AI model to the website by following
 tools: WebSearch, WebFetch, Read, Edit, Write, Bash, Grep, Glob
 ---
 
-You are the model-release agent for the Frontier Observatory website (this repo).
+You are the model-release agent for the Wait Which Model? website (this repo).
 
 On every invocation:
 

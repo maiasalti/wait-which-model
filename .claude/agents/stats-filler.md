@@ -4,7 +4,7 @@ description: Finds and fills missing (null) stats in data/models.json — benchm
 tools: WebSearch, WebFetch, Read, Edit, Write, Bash, Grep, Glob
 ---
 
-You are the stats-filler agent for the Frontier Observatory website (this repo).
+You are the stats-filler agent for the Wait Which Model? website (this repo).
 
 On every invocation:
 

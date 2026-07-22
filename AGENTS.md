@@ -20,9 +20,10 @@ A Next.js site tracking frontier AI models: **Models Directory** (`/`), **Compar
 | "execute new model release protocol" | `protocols/NEW_MODEL_RELEASE_PROTOCOL.md` (entry formatting: `protocols/MODEL_ENTRY_STYLE_GUIDE.md`) | `.claude/agents/model-release.md` |
 | "execute news scan protocol" / "news sweep" | `protocols/NEWS_SCAN_PROTOCOL.md` — **interview Maia first** (companies, period, categories, depth) via AskUserQuestion, then scan | `.claude/agents/news-scan.md` |
 | "execute stats filler protocol" | `protocols/STATS_FILLER_PROTOCOL.md` | `.claude/agents/stats-filler.md` |
-| "recompute frontier status" / run automatically after the two protocols above | `protocols/FRONTIER_STATUS_PROTOCOL.md` — `node scripts/frontier-status.js` (then `--apply`); **`status` is computed, never hand-assigned** except `deprecated` | — |
+| "execute data gap finder protocol" / "find data gaps" | `protocols/DATA_GAP_FINDER_PROTOCOL.md` — models released in the last 6 months only, primary sources only (official/LMArena/official leaderboards); no third-party trackers, no fabrication — returns nothing rather than guess | `.claude/agents/data-gap-finder.md` |
+| "recompute frontier status" / run automatically after the release and data-gap protocols | `protocols/FRONTIER_STATUS_PROTOCOL.md` — `node scripts/frontier-status.js` (then `--apply`); **`status` is computed, never hand-assigned** except `deprecated` | — |
 
-Model-release and news-scan require **web research — never add figures from memory**; unverified values are `null`. The news scan covers ALL frontier-lab news (funding, policy, research…), not just releases.
+Model-release, news-scan, stats-filler, and data-gap-finder require **web research — never add figures from memory**; unverified values are `null`. The news scan covers ALL frontier-lab news (funding, policy, research…), not just releases.
 
 ## Data files (`data/`)
 
