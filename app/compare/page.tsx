@@ -52,14 +52,16 @@ export default function ComparePage() {
         </p>
       </section>
 
-      <div className="flex flex-col gap-8 lg:flex-row">
-        <FilterRail
-          filters={filters}
-          setFilters={setFilters}
-          highlight={highlight}
-          setHighlight={setHighlight}
-          shownCount={shown.length}
-        />
+      <div className="flex flex-col gap-8 lg:flex-row lg:items-start">
+        <div className="lg:sticky lg:top-20 lg:max-h-[calc(100vh-5.5rem)] lg:overflow-y-auto lg:pb-4">
+          <FilterRail
+            filters={filters}
+            setFilters={setFilters}
+            highlight={highlight}
+            setHighlight={setHighlight}
+            shownCount={shown.length}
+          />
+        </div>
 
         <div className="flex min-w-0 flex-1 flex-col gap-10">
           <button
