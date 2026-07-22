@@ -18,7 +18,7 @@ export default function ComparePage() {
     "gpt-5-5",
     "gemini-3-1-pro",
   ]);
-  const [showLabels, setShowLabels] = useState(false);
+  const [showLabels, setShowLabels] = useState(true);
   const [now] = useState(() => new Date());
 
   const shown = useMemo(
@@ -71,7 +71,7 @@ export default function ComparePage() {
                 : "border-line text-ink-2 hover:text-ink"
             }`}
           >
-            {showLabels ? "Labels on" : "Turn on labels"}
+            {showLabels ? "Turn off labels" : "Turn on labels"}
           </button>
           <TimelineScatter
             shown={shown}
