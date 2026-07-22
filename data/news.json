@@ -1,5 +1,16 @@
 [
   {
+    "id": "2026-07-19-qwen3-8-max",
+    "date": "2026-07-19",
+    "title": "Alibaba previews Qwen3.8 Max, a 2.4-trillion-parameter multimodal model",
+    "summary": "Alibaba unveiled Qwen3.8 Max at WAIC Shanghai as a preview-only endpoint (qwen3.8-max-preview) — the first Qwen model above 1T parameters to handle text, image, video, and document input, with open weights promised \"soon.\" No benchmark table, model card, or per-token pricing was published, and Alibaba's claim that it ranks \"second only to Claude Fable 5\" remains unverified.",
+    "category": "release",
+    "companies": ["alibaba"],
+    "modelIds": ["qwen3-8-max"],
+    "sourceName": "MarkTechPost",
+    "sourceUrl": "https://www.marktechpost.com/2026/07/19/alibaba-previews-qwen3-8-max-a-2-4-trillion-parameter-multimodal-model-days-after-moonshots-kimi-k3-open-weight-launch/"
+  },
+  {
     "id": "2026-07-20-fable-5-jacobian-conjecture",
     "date": "2026-07-20",
     "title": "Claude Fable 5 helps disprove the 87-year-old Jacobian conjecture",

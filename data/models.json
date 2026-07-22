@@ -1640,6 +1640,43 @@
     "notes": "Announced at Google I/O 2026; Terminal-Bench 2.1 76.2%. SWE-bench Verified 81.0 from I/O reporting; HLE 40.2 is third-party (LLM-Stats); ARC-AGI-2 72.1; LMArena Elo 1481 at launch window."
   },
   {
+    "id": "qwen3-8-max",
+    "name": "Qwen3.8 Max",
+    "company": "alibaba",
+    "releaseDate": "2026-07-19",
+    "status": "superseded",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 983616,
+    "maxOutput": 131072,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "openWeights": false,
+    "knowledgeCutoff": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "First Qwen model above 1 trillion parameters to handle text, image, video, and document input in one system",
+      "2.4T-parameter sparse MoE, up from Qwen3.7 Max's dense-focused design",
+      "Live preview endpoint (qwen3.8-max-preview) shipped same-day via Token Plan, Qoder, and QoderWork"
+    ],
+    "weaknesses": [
+      "No benchmark table, model card, or license published at preview",
+      "Open weights promised \"soon\" with no date or license confirmed",
+      "Per-token API pricing not published — only discounted Token Plan subscription tiers"
+    ],
+    "notes": "Announced 2026-07-19 at WAIC Shanghai as a preview only, two days after Moonshot's Kimi K3 open-weight launch. Alibaba's own claim that it is \"second only to Claude Fable 5\" is unsubstantiated — no independent or third-party benchmark numbers exist as of this writing. Context window (983,616) and max output (131,072) come from Qwen Cloud API integration metadata, not an official spec sheet; some coverage rounds this to \"1M tokens.\""
+  },
+  {
     "id": "qwen3-7-max",
     "name": "Qwen3.7 Max",
     "company": "alibaba",
