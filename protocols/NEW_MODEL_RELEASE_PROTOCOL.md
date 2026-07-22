@@ -30,7 +30,7 @@ Search for and read, in order of preference: the lab's official announcement/mod
 Add one record following **`protocols/MODEL_ENTRY_STYLE_GUIDE.md`** — it defines the exact field formats, naming, and the voice for strengths/weaknesses/notes so the new entry is indistinguishable in style from existing ones. Then:
 
 - `id`: kebab-case of the name (e.g. `grok-5`)
-- Set `status: "superseded"` as a placeholder — the [Frontier Status Protocol](./FRONTIER_STATUS_PROTOCOL.md) (step 5 below) computes the real value from `tier`, recency, and benchmarks, so don't hand-assign `"frontier"` here
+- Set `status: "unknown"` as a placeholder — the [Frontier Status Protocol](./FRONTIER_STATUS_PROTOCOL.md) (step 5 below) computes the real value from `tier`, recency, and benchmarks, so don't hand-assign `"frontier"` here
 - Update stale facts on existing models discovered during research (price cuts, context bumps) in the same pass
 
 ### 3. Update `data/news.json`

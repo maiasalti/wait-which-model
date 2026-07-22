@@ -148,6 +148,7 @@ export default function DirectoryPage() {
           <option value="all">Any status</option>
           <option value="frontier">Frontier</option>
           <option value="superseded">Superseded</option>
+          <option value="unknown">Unknown</option>
           <option value="deprecated">Deprecated</option>
         </select>
         <select

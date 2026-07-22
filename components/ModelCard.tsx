@@ -7,6 +7,7 @@ import { CompanyLogo } from "./CompanyLogo";
 const STATUS_LABEL: Record<Model["status"], string> = {
   frontier: "Frontier",
   superseded: "Superseded",
+  unknown: "Unknown",
   deprecated: "Deprecated",
 };
 
@@ -31,7 +32,9 @@ export function ModelCard({ model, onOpen }: { model: Model; onOpen: (m: Model) 
             className={`mono rounded px-1.5 py-0.5 text-[10px] uppercase tracking-wider ${
               model.status === "frontier"
                 ? "bg-accent/15 text-accent"
-                : "bg-white/5 text-ink-3"
+                : model.status === "unknown"
+                  ? "bg-amber-400/15 text-amber-400"
+                  : "bg-white/5 text-ink-3"
             }`}
           >
             {STATUS_LABEL[model.status]}

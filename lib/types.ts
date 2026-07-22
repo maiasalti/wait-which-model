@@ -1,4 +1,4 @@
-export type ModelStatus = "frontier" | "superseded" | "deprecated";
+export type ModelStatus = "frontier" | "superseded" | "unknown" | "deprecated";
 
 export type ModelTier = "flagship" | "balanced" | "fast";
 

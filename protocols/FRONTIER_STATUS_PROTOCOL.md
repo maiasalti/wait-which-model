@@ -18,9 +18,11 @@ Within its `tier` (`flagship` / `balanced` / `fast`):
 
 1. **Recency** — released within the last 9 months. Older models age out automatically, even with no successor.
 2. **Capability bar** — its composite benchmark score is within 15% of the best composite score among other recent, rankable models in the same tier (models covered by the override in A are excluded from this comparison pool). Being newest isn't sufficient; a new release with weaker benchmarks than the current leader doesn't qualify.
-3. **Verified data** — has at least 3 non-null benchmark scores. Models below that threshold are left at their current status and flagged as "needs benchmark data" instead of being guessed — run the stats-filler protocol on them first, then re-run this one.
+3. **Verified data** — has at least 3 non-null benchmark scores. A recent model below that threshold becomes `"unknown"` rather than being guessed into `"frontier"` or `"superseded"` — it genuinely can't be judged yet. Run the stats-filler or data-gap-finder protocol on it, then re-run this script.
 
-Everything that doesn't meet the bar under A or B becomes `"superseded"`. `"deprecated"` is never touched by this — it's a manual signal set only when a lab officially retires a model (e.g. pulls it from their API).
+Everything within the recency window that clears the data bar but not the capability bar becomes `"superseded"`. Everything outside the recency window becomes `"superseded"` regardless of data completeness — age alone is disqualifying, so an old model with no benchmarks doesn't get `"unknown"`, it's just old. `"deprecated"` is never touched by this — it's a manual signal set only when a lab officially retires a model (e.g. pulls it from their API).
+
+**`"unknown"` vs `"superseded"`:** `unknown` means "too new/undercovered to judge" — it's an honest admission of missing data, not a verdict. `superseded` means "we have enough to judge, and it doesn't clear the bar" (or it's simply aged out). Don't conflate them: a brand-new model with zero benchmarks is `unknown`, not `superseded`, even though both render outside the "Frontier" filter.
 
 The composite score normalizes each benchmark key (0–1) across the tier's rankable candidate set for that run (excluding override-qualified models), then averages whichever keys a model has non-null values for. This keeps the comparison relative to the current field rather than all of history.
 
@@ -37,7 +39,7 @@ The composite score normalizes each benchmark key (0–1) across the tier's rank
    ```bash
    node scripts/frontier-status.js --apply
    ```
-4. For anything printed under "insufficient benchmark data to rank," run the stats-filler protocol on those model IDs, then re-run this script.
+4. For anything that moved to `"unknown"`, run the stats-filler or data-gap-finder protocol on those model IDs, then re-run this script.
 5. Re-run the data integrity check and `npm run build` (per the release protocol's validate step).
 6. Report to Maia: what changed status and why, and what's still blocked on missing benchmark data.
 

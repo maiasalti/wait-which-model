@@ -24,9 +24,10 @@ Then read `data/stats-gaps.md` and **skip cells already marked confirmed-unavail
 ### 2. Prioritize
 
 1. Spec fields (pricing, context, max output, cutoff) — cheap to verify, high display value
-2. Benchmark gaps on `frontier`-status models — they drive the Compare charts
-3. Benchmark gaps on `superseded` models
-4. `deprecated` models last — many genuinely predate the benchmarks
+2. Benchmark gaps on `unknown`-status models — they can't be classified as frontier or not until this is resolved; run `node scripts/frontier-status.js --apply` after filling
+3. Benchmark gaps on `frontier`-status models — they drive the Compare charts
+4. Benchmark gaps on `superseded` models
+5. `deprecated` models last — many genuinely predate the benchmarks
 
 ### 3. Research (web, always)
 

@@ -15,13 +15,16 @@
  *   B. General rule, for everyone else, within its tier (flagship / balanced
  *      / fast):
  *      1. Released within RECENCY_MONTHS of today, AND
- *      2. Has at least MIN_BENCHMARKS non-null benchmark scores (else it's
- *         "unrankable" and left untouched — needs a stats-filler pass), AND
+ *      2. Has at least MIN_BENCHMARKS non-null benchmark scores — a recent
+ *         model below that threshold becomes "unknown" rather than guessed
+ *         into frontier or superseded; it needs a stats-filler pass before it
+ *         can be judged at all, AND
  *      3. Composite score is within CAPABILITY_THRESHOLD of the best
  *         composite score among rankable candidates in its tier.
  *
- * Everything else becomes "superseded". Models already "deprecated" are
- * never touched — that status is a manual signal (lab retired the model)
+ * Everything outside the recency window becomes "superseded" — age alone is
+ * disqualifying regardless of data completeness. Models already "deprecated"
+ * are never touched — that status is a manual signal (lab retired the model)
  * this script has no way to infer.
  *
  * Usage:
@@ -66,7 +69,6 @@ function main() {
   }
 
   const changes = []; // { id, from, to, reason }
-  const unrankable = []; // { id, tier, reason }
   const nextStatus = new Map(); // id -> status (only for models this script decides)
   const overridden = new Set(); // ids decided by the major-lab override, skip general rule
 
@@ -130,32 +132,22 @@ function main() {
       const inWindow = monthsAgo(m.releaseDate, now) <= RECENCY_MONTHS;
       const isRankable = rankable.includes(m);
 
-      if (inWindow && !isRankable) {
-        unrankable.push({
-          id: m.id,
-          tier,
-          reason: `only ${BENCHMARK_KEYS.filter((k) => m.benchmarks[k] != null).length}/${MIN_BENCHMARKS} required benchmarks — needs stats-filler pass`,
-        });
-        continue; // leave status untouched, don't factor into other decisions
-      }
-
       let decided;
+      let reason;
       if (!inWindow) {
         decided = "superseded";
+        reason = `released ${monthsAgo(m.releaseDate, now)}mo ago (> ${RECENCY_MONTHS}mo recency window)`;
+      } else if (!isRankable) {
+        decided = "unknown";
+        reason = `only ${BENCHMARK_KEYS.filter((k) => m.benchmarks[k] != null).length}/${MIN_BENCHMARKS} required benchmarks — needs stats-filler pass before it can be ranked`;
       } else {
         decided = composite.get(m.id) >= topScore * CAPABILITY_THRESHOLD ? "frontier" : "superseded";
+        reason = `composite ${composite.get(m.id).toFixed(2)} vs tier top ${topScore.toFixed(2)} (need >= ${(CAPABILITY_THRESHOLD * topScore).toFixed(2)})`;
       }
 
       nextStatus.set(m.id, decided);
       if (decided !== m.status) {
-        changes.push({
-          id: m.id,
-          from: m.status,
-          to: decided,
-          reason: !inWindow
-            ? `released ${monthsAgo(m.releaseDate, now)}mo ago (> ${RECENCY_MONTHS}mo recency window)`
-            : `composite ${composite.get(m.id).toFixed(2)} vs tier top ${topScore.toFixed(2)} (need >= ${(CAPABILITY_THRESHOLD * topScore).toFixed(2)})`,
-        });
+        changes.push({ id: m.id, from: m.status, to: decided, reason });
       }
     }
   }
@@ -166,13 +158,6 @@ function main() {
     console.log(`Proposed status changes (${changes.length}):`);
     for (const c of changes) {
       console.log(`  ${c.id.padEnd(24)} ${c.from} -> ${c.to}   (${c.reason})`);
-    }
-  }
-
-  if (unrankable.length > 0) {
-    console.log(`\nSkipped — insufficient benchmark data to rank (${unrankable.length}):`);
-    for (const u of unrankable) {
-      console.log(`  ${u.id.padEnd(24)} [${u.tier}] ${u.reason}`);
     }
   }
 
