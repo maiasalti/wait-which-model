@@ -27,6 +27,16 @@ function barPct(value: number | null | undefined, domainMin: number, domainMax: 
   return Math.max(2, Math.min(100, pct));
 }
 
+/** Darkens a hex color so a same-company compare bar stays visually distinct
+ * from the primary model's bar instead of rendering as an identical color. */
+function darken(hex: string, amount: number): string {
+  const n = parseInt(hex.replace("#", ""), 16);
+  const r = Math.round(((n >> 16) & 255) * (1 - amount));
+  const g = Math.round(((n >> 8) & 255) * (1 - amount));
+  const b = Math.round((n & 255) * (1 - amount));
+  return `#${[r, g, b].map((c) => c.toString(16).padStart(2, "0")).join("")}`;
+}
+
 export function ModelDrawer({ model, onClose }: { model: Model | null; onClose: () => void }) {
   const [compareQuery, setCompareQuery] = useState("");
   const [compareId, setCompareId] = useState<string | null>(null);
@@ -57,6 +67,11 @@ export function ModelDrawer({ model, onClose }: { model: Model | null; onClose: 
   if (!model) return null;
   const company = companyById.get(model.company);
   const related = news.filter((n) => n.modelIds.includes(model.id));
+  const compareColor = compareModel
+    ? compareModel.company === model.company
+      ? darken(companyColor(compareModel.company), 0.4)
+      : companyColor(compareModel.company)
+    : undefined;
 
   return (
     <div className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label={model.name}>
@@ -125,7 +140,7 @@ export function ModelDrawer({ model, onClose }: { model: Model | null; onClose: 
                 <span className="flex items-center gap-1.5">
                   <span
                     className="h-2 w-2 shrink-0 rounded-full"
-                    style={{ background: companyColor(compareModel.company) }}
+                    style={{ background: compareColor }}
                   />
                   <span className="text-ink-2">{compareModel.name}</span>
                 </span>
@@ -181,7 +196,7 @@ export function ModelDrawer({ model, onClose }: { model: Model | null; onClose: 
             const entries = compareModel
               ? [
                   { v: v1, color: companyColor(model.company) },
-                  { v: v2, color: companyColor(compareModel.company) },
+                  { v: v2, color: compareColor! },
                 ]
               : [{ v: v1, color: companyColor(model.company) }];
             return (
