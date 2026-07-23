@@ -26,7 +26,12 @@ const SORTS: { key: SortKey; label: string }[] = [
   { key: "hle", label: "Best HLE" },
 ];
 
-const LOCATIONS = Array.from(new Set(companies.map((c) => c.country))).sort();
+// A company can span countries ("United States / United Kingdom") — filter on each part.
+const countriesOf = (country: string) => country.split("/").map((s) => s.trim());
+
+const LOCATIONS = Array.from(
+  new Set(companies.flatMap((c) => countriesOf(c.country)))
+).sort();
 
 export default function DirectoryPage() {
   const [search, setSearch] = useState("");
@@ -42,7 +47,11 @@ export default function DirectoryPage() {
     const filtered = models.filter((m) => {
       if (companyIds.length > 0 && !companyIds.includes(m.company)) return false;
       if (status !== "all" && m.status !== status) return false;
-      if (location !== "all" && companyById.get(m.company)?.country !== location) return false;
+      if (
+        location !== "all" &&
+        !countriesOf(companyById.get(m.company)?.country ?? "").includes(location)
+      )
+        return false;
       if (openOnly && !m.openWeights) return false;
       if (q && !m.name.toLowerCase().includes(q)) return false;
       return true;
