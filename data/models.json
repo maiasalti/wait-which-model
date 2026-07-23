@@ -1429,7 +1429,7 @@
     "name": "Llama 5",
     "company": "meta",
     "releaseDate": "2026-04-08",
-    "status": "unknown",
+    "status": "frontier",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 5000000,
@@ -1791,7 +1791,7 @@
     "name": "Gemma 4",
     "company": "google",
     "releaseDate": "2026-04-02",
-    "status": "frontier",
+    "status": "superseded",
     "tier": "fast",
     "modality": "multimodal",
     "contextWindow": 262144,
@@ -1937,5 +1937,77 @@
       "License unfinalized at release; context window and SWE-bench/AIME/HLE/LMArena/ARC-AGI-2 figures unpublished"
     ],
     "notes": "No SWE-bench/AIME/HLE/LMArena/ARC-AGI-2 scores have been published; reported metrics instead cover HumanEval (73.8%), MBPP (70.2%, 84.2% for the German variant) and aggregate English/German scores. Coordinated by the KI Bundesverband and funded under Germany's IPCEI-CIS program; arXiv preprint posted 2026-07-10, press release and Hugging Face weights 2026-07-13. MMLU-Pro 51.4 and GPQA Diamond 43.4 corrected/added from the SOOFI consortium's own technical report (arXiv:2607.09424, Tables 4-5 and Figure 7), for the released base checkpoint iter_1056000 — not published in initial press coverage. The paper's Phase 3 training extends usable context to 1M tokens, but a separate long-context checkpoint is evaluated apart from the base-model benchmark table, so a single released context-window figure could not be confirmed."
+  },
+  {
+    "id": "gemini-3-6-flash",
+    "name": "Gemini 3.6 Flash",
+    "company": "google",
+    "releaseDate": "2026-07-21",
+    "status": "frontier",
+    "tier": "fast",
+    "modality": "multimodal",
+    "contextWindow": 1048576,
+    "maxOutput": 65536,
+    "pricing": {
+      "inputPerMTok": 1.5,
+      "outputPerMTok": 7.5
+    },
+    "openWeights": false,
+    "knowledgeCutoff": "2026-03",
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Cuts output token usage by up to 17% vs Gemini 3.5 Flash while lowering output price ($9 → $7.50/MTok)",
+      "Ahead of 3.5 Flash across Google's agentic suite at launch (Terminal-Bench 2.1 78.0%, OSWorld-Verified 83.0%, MLE-Bench 63.9% vs 49.7%)",
+      "Immediately available across Gemini API, Antigravity, Gemini Enterprise, and the Gemini app"
+    ],
+    "weaknesses": [
+      "Launch numbers are Google's agentic suites only — no GPQA, SWE-bench Verified, HLE, AIME, or arena figures published",
+      "Shipped while flagship Gemini 3.5 Pro remained delayed past its promised June window (reportedly missing internal coding targets)"
+    ],
+    "notes": "Model card reports SWE-Bench Pro 58.7%, DeepSWE v1.1 49%, GDPval-AA v2 Elo 1421, and GDM-MRCR v2 91.8% at 128k; none of the site's tracked benchmarks were published at launch. Artificial Analysis Intelligence Index 50 (third-party). Announced 2026-07-21 alongside Gemini 3.5 Flash-Lite and the limited-access Gemini 3.5 Flash Cyber."
+  },
+  {
+    "id": "gemini-3-5-flash-lite",
+    "name": "Gemini 3.5 Flash-Lite",
+    "company": "google",
+    "releaseDate": "2026-07-21",
+    "status": "frontier",
+    "tier": "fast",
+    "modality": "multimodal",
+    "contextWindow": 1048576,
+    "maxOutput": 65536,
+    "pricing": {
+      "inputPerMTok": 0.3,
+      "outputPerMTok": 2.5
+    },
+    "openWeights": false,
+    "knowledgeCutoff": "2026-03",
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Cheapest model in its class at launch ($0.30/$2.50 per MTok) at ~350 output tokens/sec",
+      "Large generational jump on agentic suites vs 3.1 Flash-Lite (Terminal-Bench 2.1 31% → 54%, GDPval-AA v2 Elo 642 → 1140)",
+      "Beats GPT-5.4 mini and Claude Haiku 4.5 on OSWorld-Verified (74.0%) and long-context GDM-MRCR v2 (72.2% at 128k)"
+    ],
+    "weaknesses": [
+      "Trails GPT-5.4 mini on SWE-Bench Pro (54.2 vs 54.4) and Terminal-Bench 2.1 (54.0 vs 59.2)",
+      "No standard academic benchmarks (GPQA, SWE-bench Verified, HLE, AIME) or arena figures published at launch"
+    ],
+    "notes": "Model card reports SWE-Bench Pro 54.2%, OSWorld-Verified 74.0%, MLE-Bench 39.2%, CharXiv 74.5% no tools / 76.5% with tools; tracked benchmark keys unpublished at launch. Also rolling out inside Google Search."
   }
 ]

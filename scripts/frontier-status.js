@@ -5,7 +5,8 @@
  * Two ways a model qualifies as "frontier":
  *
  *   A. Major-lab recency override: if the model is from a lab in MAJOR_LABS
- *      and is the single most recent release in its (company, tier) group,
+ *      and is the most recent release in its (company, tier) group (same-day
+ *      releases all count),
  *      released within MAJOR_LAB_RECENCY_MONTHS, it's automatically
  *      "frontier" — no benchmark data required. These labs' newest flagship
  *      releases are trusted to be near-SOTA even before benchmarks are
@@ -81,18 +82,21 @@ function main() {
     byCompanyTier.get(key).push(m);
   }
   for (const group of byCompanyTier.values()) {
-    const newest = group.reduce((a, b) => (a.releaseDate > b.releaseDate ? a : b));
-    if (newest.status === "deprecated") continue;
-    if (monthsAgo(newest.releaseDate, now) > MAJOR_LAB_RECENCY_MONTHS) continue;
-    overridden.add(newest.id);
-    nextStatus.set(newest.id, "frontier");
-    if (newest.status !== "frontier") {
-      changes.push({
-        id: newest.id,
-        from: newest.status,
-        to: "frontier",
-        reason: `most recent ${newest.company} release in its tier, within ${MAJOR_LAB_RECENCY_MONTHS}mo (major-lab override)`,
-      });
+    const newestDate = group.reduce((a, b) => (a.releaseDate > b.releaseDate ? a : b)).releaseDate;
+    // Same-day releases (e.g. a Flash + Flash-Lite pair) all share the override.
+    for (const newest of group.filter((m) => m.releaseDate === newestDate)) {
+      if (newest.status === "deprecated") continue;
+      if (monthsAgo(newest.releaseDate, now) > MAJOR_LAB_RECENCY_MONTHS) continue;
+      overridden.add(newest.id);
+      nextStatus.set(newest.id, "frontier");
+      if (newest.status !== "frontier") {
+        changes.push({
+          id: newest.id,
+          from: newest.status,
+          to: "frontier",
+          reason: `most recent ${newest.company} release in its tier, within ${MAJOR_LAB_RECENCY_MONTHS}mo (major-lab override)`,
+        });
+      }
     }
   }
 

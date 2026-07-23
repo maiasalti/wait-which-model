@@ -1,5 +1,16 @@
 [
   {
+    "id": "2026-07-21-gemini-3-6-flash",
+    "date": "2026-07-21",
+    "title": "Google releases Gemini 3.6 Flash and Gemini 3.5 Flash-Lite — but no 3.5 Pro",
+    "summary": "Google DeepMind shipped Gemini 3.6 Flash ($1.50/$7.50 per MTok, cutting output token usage by up to 17% vs 3.5 Flash) and the $0.30/$2.50 Gemini 3.5 Flash-Lite, alongside a government-and-partners-only Gemini 3.5 Flash Cyber security model. Launch benchmarks cover only Google's agentic suites (SWE-Bench Pro, Terminal-Bench, OSWorld), and the flagship Gemini 3.5 Pro promised for June at I/O remains delayed.",
+    "category": "release",
+    "companies": ["google"],
+    "modelIds": ["gemini-3-6-flash", "gemini-3-5-flash-lite"],
+    "sourceName": "Google Blog",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"
+  },
+  {
     "id": "2026-07-19-qwen3-8-max",
     "date": "2026-07-19",
     "title": "Alibaba previews Qwen3.8 Max, a 2.4-trillion-parameter multimodal model",
