@@ -1,5 +1,16 @@
 [
   {
+    "id": "2026-07-21-laguna-s-2-1",
+    "date": "2026-07-21",
+    "title": "Poolside releases Laguna S 2.1, an open-weight coding model punching above its size class",
+    "summary": "San Francisco startup Poolside launched Laguna S 2.1, a 118B-total/8B-active MoE coding model with a 1M-token context window, open-weighted under the OpenMDW-1.1 license and priced at $0.10/$0.20 per million input/output tokens. It topped the published SWE-bench Multilingual table (78.5%) at release, though none of this site's tracked benchmarks (GPQA, SWE-bench Verified, HLE, LMArena, ARC-AGI-2) have been published.",
+    "category": "release",
+    "companies": ["poolside"],
+    "modelIds": ["laguna-s-2-1"],
+    "sourceName": "Poolside",
+    "sourceUrl": "https://poolside.ai/blog/introducing-laguna-s-2-1"
+  },
+  {
     "id": "2026-07-21-gemini-3-6-flash",
     "date": "2026-07-21",
     "title": "Google releases Gemini 3.6 Flash and Gemini 3.5 Flash-Lite — but no 3.5 Pro",
