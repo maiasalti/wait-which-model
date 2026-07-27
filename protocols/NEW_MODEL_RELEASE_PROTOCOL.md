@@ -39,7 +39,7 @@ Prepend a `release`-category entry: `id` = `YYYY-MM-DD-<model-id>`, 1–2 senten
 
 ### 4. Update registries if needed
 
-- New company → add to `data/companies.json` with `order` = next integer and a `color` that **passes the dataviz palette validator** against surface `#0B0E1A` in the fixed order (OKLCH L 0.48–0.67, chroma ≥ 0.1, adjacent-pair CVD ≥ 12 or ≥ 8 with the site's labels/tooltips)
+- New company → add to `data/companies.json` with `order` = next integer and a `color`, then run **`node scripts/palette-check.js`** (add `--all` to see the full pairwise picture) until it exits 0. It enforces, against surface `#0B0E1A` in the fixed `order` sequence: OKLCH L 0.48–0.67, chroma ≥ 0.1, adjacent-pair CVD ΔE ≥ 8, adjacent normal-vision ΔE ≥ 15, contrast ≥ 3:1. Only *adjacent* pairs are gated — that many categorical hues can't all be mutually separable under CVD, so everywhere color appears it's backed by secondary encoding (brand logos on the directory buttons, labels and tooltips in the charts). Pick the smallest shift off the brand hue that clears the bar rather than the largest margin
 - New benchmark everyone now reports → add to `data/benchmarks.json` (key, name, description, unit, higherIsBetter, max), and optionally backfill top models
 
 ### 5. Recompute frontier status
