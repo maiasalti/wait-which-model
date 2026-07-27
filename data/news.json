@@ -94,7 +94,7 @@
     "summary": "poolside published Laguna S 2.1, a 118B-parameter MoE (about 8B active) with a 1M-token context under the OpenMDW-1.1 licence, with weights on Hugging Face at launch. It reports 70.2% on Terminal-Bench 2.1, 78.5% on SWE-Bench Multilingual and 59.4% on SWE-Bench Pro, matching or beating models several times its size, and is small enough to run on a single NVIDIA DGX Spark.",
     "category": "release",
     "companies": ["poolside"],
-    "modelIds": [],
+    "modelIds": ["laguna-s-2-1"],
     "sourceName": "poolside (GlobeNewswire)",
     "sourceUrl": "https://www.globenewswire.com/news-release/2026/07/21/3330818/0/en/Poolside-releases-Laguna-S-2-1-the-West-s-most-capable-open-weight-model.html"
   },
@@ -137,8 +137,8 @@
     "title": "Thinking Machines Lab releases Inkling, a 975B open-weights multimodal MoE",
     "summary": "Mira Murati's lab published Inkling — 975B total parameters with 41B active, a 1M-token context, native text/image/audio reasoning and controllable thinking effort — under Apache 2.0, with weights on Hugging Face and hosting on its Tinker platform. A 276B/12B-active sibling, Inkling-Small, shipped in preview. It is the lab's first frontier-scale model, pretrained on 45 trillion tokens.",
     "category": "release",
-    "companies": ["Thinking Machines Lab"],
-    "modelIds": [],
+    "companies": ["thinking-machines"],
+    "modelIds": ["inkling"],
     "sourceName": "Thinking Machines Lab",
     "sourceUrl": "https://thinkingmachines.ai/model-card/inkling/"
   },
@@ -456,7 +456,7 @@
     "title": "Thinking Machines Lab previews near-realtime voice-and-video 'interaction models'",
     "summary": "Mira Murati's lab unveils TML-Interaction-Small (276B MoE, 12B active) with 0.4s turn-taking latency that listens while it talks — its first model release, in limited research preview.",
     "category": "release",
-    "companies": [],
+    "companies": ["thinking-machines"],
     "modelIds": [],
     "sourceName": "TechCrunch",
     "sourceUrl": "https://techcrunch.com/2026/05/11/thinking-machines-wants-to-build-an-ai-that-actually-listens-while-it-talks/"

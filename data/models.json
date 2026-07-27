@@ -1281,7 +1281,7 @@
       "Only one reasoning-effort tier at launch, with reasoning token usage notably higher than K2.6",
       "Full open-weight download delayed to July 27, 2026, about 11 days after API launch"
     ],
-    "notes": "MMLU-Pro, AIME 2025, and SWE-bench Verified are unconfirmed or conflicting in third-party coverage (AIME cited as both 88% and 96.1%) so left null; Moonshot's own suite reports Terminal-Bench 2.1 at 88.3 and SWE Marathon at 42.0 instead. HLE is 43.5% no tools / 56.0% with tools; full open weights due 2026-07-27."
+    "notes": "MMLU-Pro, AIME 2025, and SWE-bench Verified are unconfirmed or conflicting in third-party coverage (AIME cited as both 88% and 96.1%) so left null; Moonshot's own suite reports Terminal-Bench 2.1 at 88.3 and SWE Marathon at 42.0 instead. HLE is 43.5% no tools / 56.0% with tools. Artificial Analysis ranks K3 #3 on its Intelligence Index at 57, with GDPval-AA v2 Elo 1668 (K2.6: 1190), AA-Omniscience +18 on 46% accuracy, and $0.94 per index task at $3.00/$15.00 per MTok — but its hallucination rate regressed to 51% from K2.6's 39%; none of these map to a tracked benchmark key. Open weights were promised for 2026-07-27, but as of 02:40 UTC that day the Hugging Face repo still showed a countdown (to 15:00 UTC) with no weight files."
   },
   {
     "id": "mistral-large-3",
@@ -2160,5 +2160,81 @@
       "LMArena Elo not yet published at launch — needs 1-2 weeks of voting to stabilize"
     ],
     "notes": "HLE 56.3% no tools / 64.7% with tools. SWE-bench Verified 96.0% is Anthropic's own system-card figure (five-trial average); a third-party aggregator (vals.ai) cites 97.0%. GPQA Diamond varies 93.4-93.7% across trackers; 93.7% used. ARC-AGI-2 90.4% (max effort) and ARC-AGI-3 30.2% (high effort, a separate untracked scale) per ARC Prize (arcprize.org). Max output is 128K on the synchronous API, up to 300K via the Message Batches API. AIME not published — Anthropic appears to be moving to newer evals (IMO 2026, Frontier-Bench v0.1) instead."
+  },
+  {
+    "id": "inkling",
+    "name": "Inkling",
+    "company": "thinking-machines",
+    "releaseDate": "2026-07-15",
+    "status": "superseded",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 1048576,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 1.87,
+      "outputPerMTok": 4.68
+    },
+    "openWeights": true,
+    "knowledgeCutoff": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 87.2,
+      "sweBench": 77.6,
+      "aime": 97.1,
+      "hle": 29.7,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Largest US open-weights model at release (975B total, 41B active) and the leading US open model on Artificial Analysis's Intelligence Index at 41",
+      "Apache 2.0 with no regional restrictions, plus same-day fine-tuning on the lab's own Tinker platform",
+      "Natively multimodal input — text, images and audio up to 20 minutes — with a 1M-token context",
+      "AIME 2026 97.1% — ahead of Kimi K2.6 (96.4%) and DeepSeek V4 Pro (96.7%) on the lab's table, behind only GLM-5.2 (99.2%) among open models"
+    ],
+    "weaknesses": [
+      "Weak factuality — AA-Omniscience +2.1 on 40% accuracy with a 63% hallucination rate",
+      "Trails the leading Chinese open models GLM-5.2 and DeepSeek V4 Pro on most rows of its own benchmark table",
+      "Presented by the lab as a customizable base for fine-tuning rather than a capability leader"
+    ],
+    "notes": "Thinking Machines Lab's first production model, released 2026-07-15. All benchmarks are the lab's own model-card figures at effort=0.99; HLE is 29.7% text-only / 46.0% with tools, and the model card reports Global-MMLU-Lite 88.7% rather than MMLU-Pro, so MMLU-Pro, LMArena Elo and ARC-AGI-2 are left null. Pricing is Tinker's 64K-context tier under a limited-time 50% discount ($1.87/$4.68 per MTok, $0.374 cached); the 256K tier is $3.74/$9.36, and OpenRouter hosts list about $1.00/$4.05. Context is 1M with the open weights but capped at 256K on the Tinker API; no max output figure is published. Also reported: SWE-Bench Pro Public 54.3%, Terminal-Bench 2.1 63.8%, GDPval-AA v2 Elo 1238, MMMU Pro 73.5%."
+  },
+  {
+    "id": "laguna-s-2-1",
+    "name": "Laguna S 2.1",
+    "company": "poolside",
+    "releaseDate": "2026-07-21",
+    "status": "unknown",
+    "tier": "balanced",
+    "modality": "text",
+    "contextWindow": 1048576,
+    "maxOutput": 131072,
+    "pricing": {
+      "inputPerMTok": 0.1,
+      "outputPerMTok": 0.2
+    },
+    "openWeights": true,
+    "knowledgeCutoff": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Tops SWE-bench Multilingual at 78.5% among the models poolside published, ahead of Qwen3.7 Max (78.3%) and DeepSeek-V4-Pro (76.2%)",
+      "118B-A8B MoE with a 1M-token context, small enough to serve on a single NVIDIA DGX Spark",
+      "OpenMDW-1.1 license permits commercial use and modification, with full evaluation trajectories published alongside the scores",
+      "Went from start of pre-training (4,096 NVIDIA H200s, 2026-05-22) to launch in under nine weeks"
+    ],
+    "weaknesses": [
+      "Text-only coding specialist — no vision, and no knowledge, math or reasoning benchmarks published at launch",
+      "Terminal-Bench 2.1 70.2% and SWE-Bench Pro 59.4% trail Claude Sonnet 5 (80.4% / 63.2%) and Claude Fable 5 (88.0% / 80.3%)",
+      "poolside documents harness overfitting and invalid JSON on nested tool calls in third-party agent scaffolds"
+    ],
+    "notes": "None of the site's tracked benchmarks were reported: poolside published only agentic coding evals, all with thinking enabled — Terminal-Bench 2.1 70.2%, SWE-bench Multilingual 78.5%, SWE-Bench Pro public 59.4%, DeepSWE v1.1 40.4%, SWE Atlas 46.2%, Toolathlon Verified 49.7% (pass@1 over 3-4 attempts). Without thinking, Terminal-Bench 2.1 drops to 60.4% and DeepSWE to 16.5%. Pricing is the OpenRouter listing served by poolside ($0.10/$0.20 per MTok, $0.01 cached read); poolside publishes no separate per-token price sheet and also offers a free 256K-context tier. Knowledge cutoff not published; max output 131,072 tokens per the OpenRouter endpoint spec."
   }
 ]

@@ -97,5 +97,23 @@
     "website": "https://www.soofi.info",
     "color": "#9C8A16",
     "order": 11
+  },
+  {
+    "id": "poolside",
+    "name": "poolside",
+    "country": "United States",
+    "founded": 2023,
+    "website": "https://poolside.ai",
+    "color": "#BD67E0",
+    "order": 12
+  },
+  {
+    "id": "thinking-machines",
+    "name": "Thinking Machines Lab",
+    "country": "United States",
+    "founded": 2025,
+    "website": "https://thinkingmachines.ai",
+    "color": "#D5455D",
+    "order": 13
   }
 ]
