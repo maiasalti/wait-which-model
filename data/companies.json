@@ -97,5 +97,14 @@
     "website": "https://www.soofi.info",
     "color": "#9C8A16",
     "order": 11
+  },
+  {
+    "id": "poolside",
+    "name": "Poolside",
+    "country": "United States",
+    "founded": 2023,
+    "website": "https://poolside.ai",
+    "color": "#5A4FCF",
+    "order": 12
   }
 ]

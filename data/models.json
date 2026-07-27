@@ -2009,5 +2009,42 @@
       "No standard academic benchmarks (GPQA, SWE-bench Verified, HLE, AIME) or arena figures published at launch"
     ],
     "notes": "Model card reports SWE-Bench Pro 54.2%, OSWorld-Verified 74.0%, MLE-Bench 39.2%, CharXiv 74.5% no tools / 76.5% with tools; tracked benchmark keys unpublished at launch. Also rolling out inside Google Search."
+  },
+  {
+    "id": "laguna-s-2-1",
+    "name": "Laguna S 2.1",
+    "company": "poolside",
+    "releaseDate": "2026-07-21",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "text",
+    "contextWindow": 1048576,
+    "maxOutput": 131072,
+    "pricing": {
+      "inputPerMTok": 0.1,
+      "outputPerMTok": 0.2
+    },
+    "openWeights": true,
+    "knowledgeCutoff": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "First release from Poolside, a San Francisco coding-focused foundation model lab founded in 2023",
+      "Tops the published SWE-bench Multilingual table (78.5%) at release, beating open models several times its size",
+      "MoE design activates only 8B of 118B total parameters, letting it run on a single desktop or DGX Spark",
+      "Native 1M-token context in both thinking and no-thinking modes"
+    ],
+    "weaknesses": [
+      "Specialized for agentic coding rather than general-purpose chat; no vision support published",
+      "None of the site's tracked benchmarks (MMLU-Pro, GPQA Diamond, SWE-bench Verified, AIME, HLE, LMArena Elo, ARC-AGI-2) published at launch"
+    ],
+    "notes": "Reported benchmarks are Terminal-Bench 2.1 (70.2%), SWE-bench Multilingual (78.5%) and DeepSWE (40.4%), which don't map to this site's tracked SWE-bench Verified figure, so sweBench is left null. Open-weight under the OpenMDW-1.1 license on Hugging Face; API pricing also includes a $0.01/MTok cache-read rate not reflected above. Knowledge cutoff unpublished."
   }
 ]
