@@ -42,7 +42,6 @@ Sweep sources checked on 2026-07-04: LMArena (arena.ai) leaderboard, llm-stats.c
 | claude-opus-4-5 | hle | 2026-07-04 | not on checked HLE leaderboards (Opus 4.6+ figures only) |
 | claude-opus-4-8 | mmluPro | 2026-07-04 | Anthropic retired saturated benchmarks from official reporting |
 | claude-opus-4-8 | aime | 2026-07-04 | not reported (Anthropic dropped AIME); no verifiable third-party figure |
-| claude-opus-4-8 | arcAgi2 | 2026-07-04 | not on ARC-AGI-2 leaderboards (4.6/4.7 tested, 4.8 not) |
 | claude-fable-5 | mmluPro | 2026-07-04 | Anthropic retired saturated benchmarks; BenchLM hides non-public rows |
 | claude-fable-5 | aime | 2026-07-04 | not reported; no verifiable third-party figure |
 | claude-fable-5 | arcAgi2 | 2026-07-04 | not on ARC-AGI-2 leaderboards as of July 2026 |
@@ -162,3 +161,45 @@ Data-gap-finder sweep on 2026-07-22 (models released within the last 6 months, p
 | soofi-s-30b-a3b | inputPrice | 2026-07-22 | no public API — open-weights research preview only |
 | soofi-s-30b-a3b | outputPrice | 2026-07-22 | no public API — open-weights research preview only |
 | soofi-s-30b-a3b | knowledgeCutoff | 2026-07-22 | not stated in arXiv:2607.09424 or Hugging Face org page |
+
+Stats-filler sweep on 2026-07-27. Sources checked: arena.ai text leaderboard, Artificial Analysis (model pages + gpqa-diamond / humanitys-last-exam / mmlu-pro evaluation leaderboards), BenchLM model + benchmark leaderboards (arcAgi2, mmluPro), ARC Prize verified-results pages, llm-stats ARC-AGI-v2, vals.ai MMLU-Pro, OpenRouter, official lab material (blog.google Gemini 3.6 Flash / 3.5 Flash-Lite post, anthropic.com/news/claude-opus-5, ai.meta.com Muse Spark 1.1 evaluation report, docs.x.ai Grok 4.5).
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| claude-opus-5 | mmluPro | 2026-07-27 | not in Anthropic's announcement or system card; absent from AA's and BenchLM's MMLU-Pro leaderboards (both stop at Opus 4.5/4.6). A "91.59%" figure appears only in a search snippet attributed to vals.ai and could not be reproduced on the vals.ai page — rejected |
+| claude-opus-5 | aime | 2026-07-27 | not published; Anthropic leads with Frontier-Bench v0.1 (43.3%), GDPval-AA v2 and ARC-AGI-3 instead |
+| claude-opus-5 | lmarenaElo | 2026-07-27 | no Claude Opus 5 listing on arena.ai's text leaderboard as of 2026-07-27 (three days post-launch); BenchLM also shows Arena Elo "Not listed" |
+| claude-sonnet-5 | mmluPro | 2026-07-27 | not in Anthropic's system card; not on AA or BenchLM MMLU-Pro leaderboards |
+| claude-sonnet-5 | aime | 2026-07-27 | Anthropic did not publish AIME for Sonnet 5; no third-party figure found |
+| claude-sonnet-5 | arcAgi2 | 2026-07-27 | not on ARC Prize, BenchLM (19 models) or llm-stats ARC-AGI-2 leaderboards |
+| claude-fable-5 | mmluPro | 2026-07-27 | re-checked: a "91.50%" vals.ai figure surfaced in search snippets but the vals.ai MMLU-Pro page could not be made to show it, and AA/BenchLM MMLU-Pro leaderboards omit Fable 5 — unverifiable, still null |
+| gemini-3-6-flash | mmluPro | 2026-07-27 | Google published no academic table; BenchLM lists only MMMU-Pro 83.2 (a different, multimodal benchmark) |
+| gemini-3-6-flash | sweBench | 2026-07-27 | Google reports SWE-Bench Pro 58.7% and DeepSWE v1.1 49% instead; no SWE-bench Verified figure |
+| gemini-3-6-flash | aime | 2026-07-27 | not reported at launch; not on any tracker |
+| gemini-3-6-flash | arcAgi2 | 2026-07-27 | not on ARC Prize, BenchLM or llm-stats ARC-AGI-2 leaderboards |
+| gemini-3-5-flash-lite | mmluPro | 2026-07-27 | not reported; BenchLM lists only MMMU-Pro 79.0 (different benchmark) |
+| gemini-3-5-flash-lite | sweBench | 2026-07-27 | Google reports SWE-Bench Pro 54.2%; no SWE-bench Verified figure |
+| gemini-3-5-flash-lite | aime | 2026-07-27 | not reported at launch; not on any tracker |
+| gemini-3-5-flash-lite | arcAgi2 | 2026-07-27 | not on ARC-AGI-2 leaderboards |
+| qwen3-8-max | mmluPro | 2026-07-27 | preview announcement with no technical report, model card or AA entry; every number circulating "for" Qwen3.8 traces back to Qwen3.7-Max |
+| qwen3-8-max | gpqaDiamond | 2026-07-27 | same — no published benchmark of any kind |
+| qwen3-8-max | sweBench | 2026-07-27 | same — no published benchmark of any kind |
+| qwen3-8-max | aime | 2026-07-27 | same — no published benchmark of any kind |
+| qwen3-8-max | hle | 2026-07-27 | same — no published benchmark of any kind |
+| qwen3-8-max | arcAgi2 | 2026-07-27 | not on ARC-AGI-2 leaderboards |
+| qwen3-8-max | lmarenaElo | 2026-07-27 | not present on arena.ai's text leaderboard (only qwen3.7-max-preview and older Qwen entries) |
+| qwen3-8-max | inputPrice | 2026-07-27 | no standard per-token price — preview is credit/subscription access only (Token Plan, Qoder). Reseller AIHubMix lists a $0.17/1M "launch offer" at 10% of an undisclosed standard rate, so no stable list price exists |
+| qwen3-8-max | outputPrice | 2026-07-27 | same — AIHubMix's $0.51/1M is the same promotional 10%-of-standard launch offer |
+| qwen3-8-max | knowledgeCutoff | 2026-07-27 | not disclosed by Alibaba |
+| muse-spark-1-1 | mmluPro | 2026-07-27 | Meta's Muse Spark 1.1 Evaluation Report is a safety/preparedness document with no MMLU/GPQA/AIME/ARC table; not on MMLU-Pro leaderboards |
+| muse-spark-1-1 | sweBench | 2026-07-27 | Meta reports SWE-Bench Pro 61.5% and "24 of 42 SWE-Bench Verified Hard tasks resolved at least once" — neither is a SWE-bench Verified score |
+| muse-spark-1-1 | aime | 2026-07-27 | not in Meta's evaluation report or on trackers |
+| muse-spark-1-1 | arcAgi2 | 2026-07-27 | only the original Muse Spark (42.5%) is on the ARC-AGI-2 leaderboards; 1.1 has not been tested |
+| muse-spark-1-1 | knowledgeCutoff | 2026-07-27 | not stated in Meta's evaluation report or Meta Model API docs |
+| grok-4-5 | mmluPro | 2026-07-27 | xAI published no classic academic benchmarks at launch; not on MMLU-Pro leaderboards |
+| grok-4-5 | sweBench | 2026-07-27 | xAI leads with SWE-Bench Pro 64.7% / SWE Marathon 29.0%; no SWE-bench Verified figure |
+| grok-4-5 | aime | 2026-07-27 | not published by xAI; no third-party figure |
+| grok-4-5 | maxOutput | 2026-07-27 | xAI's docs (docs.x.ai/developers/models/grok-4.5) document the 500K context and tiered pricing but state no output cap; a "30K" figure appears only on secondary blogs |
+| gemma-4 | sweBench | 2026-07-27 | Google published no coding table; only SWE-Rebench 41.6% (a different split) is available via BenchLM |
+| gemma-4 | arcAgi2 | 2026-07-27 | not on ARC Prize, BenchLM or llm-stats ARC-AGI-2 leaderboards |
+| gemma-4 | maxOutput | 2026-07-27 | not specified on OpenRouter, Artificial Analysis or BenchLM for the 31B variant; a "262,144" figure seen in one search snippet just echoes the context window |

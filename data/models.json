@@ -1251,7 +1251,7 @@
     "name": "Kimi K3",
     "company": "moonshot",
     "releaseDate": "2026-07-16",
-    "status": "frontier",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 1048576,
@@ -1324,7 +1324,7 @@
     "name": "Gemini 3.1 Pro",
     "company": "google",
     "releaseDate": "2026-02-11",
-    "status": "frontier",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 1000000,
@@ -1429,7 +1429,7 @@
     "name": "Llama 5",
     "company": "meta",
     "releaseDate": "2026-04-08",
-    "status": "frontier",
+    "status": "unknown",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 5000000,
@@ -1465,7 +1465,7 @@
     "name": "Muse Spark",
     "company": "meta",
     "releaseDate": "2026-04-08",
-    "status": "frontier",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 262144,
@@ -1501,7 +1501,7 @@
     "name": "GPT-5.5",
     "company": "openai",
     "releaseDate": "2026-04-23",
-    "status": "frontier",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 1000000,
@@ -1716,7 +1716,7 @@
     "name": "Claude Opus 4.8",
     "company": "anthropic",
     "releaseDate": "2026-05-28",
-    "status": "frontier",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 1000000,
@@ -1734,7 +1734,7 @@
       "aime": null,
       "hle": 49.8,
       "lmarenaElo": 1484,
-      "arcAgi2": null
+      "arcAgi2": 72.1
     },
     "strengths": [
       "#1 on LMArena overall and coding at release",
@@ -1746,7 +1746,7 @@
       "GPQA slightly below Opus 4.7 and Gemini 3.1 Pro",
       "Reviewed as a modest step, not a leap"
     ],
-    "notes": "HLE 49.8% no tools / 57.9% with tools. LMArena Elo corrected to 1484 (current Opus 4.8 Thinking listing, July 2026); an earlier 1510 figure did not match the live leaderboard."
+    "notes": "HLE 49.8% no tools / 57.9% with tools. LMArena Elo corrected to 1484 (current Opus 4.8 Thinking listing, July 2026); an earlier 1510 figure did not match the live leaderboard. ARC-AGI-2 72.1% added July 2026 once ARC Prize published verified results: 72.08% at high effort (71.67% medium, 62.22% low)."
   },
   {
     "id": "claude-fable-5",
@@ -1797,8 +1797,8 @@
     "contextWindow": 262144,
     "maxOutput": null,
     "pricing": {
-      "inputPerMTok": null,
-      "outputPerMTok": null
+      "inputPerMTok": 0.1,
+      "outputPerMTok": 0.34
     },
     "openWeights": true,
     "knowledgeCutoff": "2025-01",
@@ -1822,7 +1822,7 @@
       "256K context trails 1M-class open rivals like DeepSeek-V4 and Kimi K2 Thinking",
       "No first-party hosted API pricing — open weights only"
     ],
-    "notes": "Benchmarks shown are for the 31B Dense variant. LMArena Elo (~1452) and the MMLU-Pro/GPQA/AIME/HLE figures are third-party community-reported, not an official Google table. Weights were quietly published March 31, 2026; the formal Google blog announcement followed April 2, 2026. Knowledge cutoff (January 2025) confirmed via Google's official Gemma 4 model card (ai.google.dev)."
+    "notes": "Benchmarks shown are for the 31B Dense variant. LMArena Elo (~1452) and the MMLU-Pro/GPQA/AIME/HLE figures are third-party community-reported, not an official Google table (BenchLM lists GPQA Diamond as 85.7% and HLE as 26.5%, so treat these as approximate). Pricing $0.10/$0.34 per MTok is OpenRouter's listing for google/gemma-4-31b-it — there is no first-party Google API price (Gemma 4 is not on Vertex AI), and other hosts differ (CoreWeave $0.12/$0.35, DeepInfra $0.13/$0.38 per Artificial Analysis). Weights were quietly published March 31, 2026; the formal Google blog announcement followed April 2, 2026. Knowledge cutoff (January 2025) confirmed via Google's official Gemma 4 model card (ai.google.dev)."
   },
   {
     "id": "glm-5-2",
@@ -1956,11 +1956,11 @@
     "knowledgeCutoff": "2026-03",
     "benchmarks": {
       "mmluPro": null,
-      "gpqaDiamond": null,
+      "gpqaDiamond": 92.8,
       "sweBench": null,
       "aime": null,
-      "hle": null,
-      "lmarenaElo": null,
+      "hle": 38.3,
+      "lmarenaElo": 1485,
       "arcAgi2": null
     },
     "strengths": [
@@ -1972,7 +1972,7 @@
       "Launch numbers are Google's agentic suites only — no GPQA, SWE-bench Verified, HLE, AIME, or arena figures published",
       "Shipped while flagship Gemini 3.5 Pro remained delayed past its promised June window (reportedly missing internal coding targets)"
     ],
-    "notes": "Model card reports SWE-Bench Pro 58.7%, DeepSWE v1.1 49%, GDPval-AA v2 Elo 1421, and GDM-MRCR v2 91.8% at 128k; none of the site's tracked benchmarks were published at launch. Artificial Analysis Intelligence Index 50 (third-party). Announced 2026-07-21 alongside Gemini 3.5 Flash-Lite and the limited-access Gemini 3.5 Flash Cyber."
+    "notes": "Model card reports SWE-Bench Pro 58.7%, DeepSWE v1.1 49%, GDPval-AA v2 Elo 1421, and GDM-MRCR v2 91.8% at 128k; Google published none of the site's tracked benchmarks at launch. Artificial Analysis Intelligence Index 50 (third-party). GPQA Diamond 92.8% and HLE 38.3% are Artificial Analysis-measured, not Google-reported. LMArena Elo 1485 is the 'gemini-3.6-flash' text-arena listing (rank 12, arena.ai); it also sits #12 in the Frontend Code Arena at 1537. Announced 2026-07-21 alongside Gemini 3.5 Flash-Lite and the limited-access Gemini 3.5 Flash Cyber."
   },
   {
     "id": "gemini-3-5-flash-lite",
@@ -1992,11 +1992,11 @@
     "knowledgeCutoff": "2026-03",
     "benchmarks": {
       "mmluPro": null,
-      "gpqaDiamond": null,
+      "gpqaDiamond": 83.8,
       "sweBench": null,
       "aime": null,
-      "hle": null,
-      "lmarenaElo": null,
+      "hle": 17.5,
+      "lmarenaElo": 1459,
       "arcAgi2": null
     },
     "strengths": [
@@ -2008,6 +2008,157 @@
       "Trails GPT-5.4 mini on SWE-Bench Pro (54.2 vs 54.4) and Terminal-Bench 2.1 (54.0 vs 59.2)",
       "No standard academic benchmarks (GPQA, SWE-bench Verified, HLE, AIME) or arena figures published at launch"
     ],
-    "notes": "Model card reports SWE-Bench Pro 54.2%, OSWorld-Verified 74.0%, MLE-Bench 39.2%, CharXiv 74.5% no tools / 76.5% with tools; tracked benchmark keys unpublished at launch. Also rolling out inside Google Search."
+    "notes": "Model card reports SWE-Bench Pro 54.2%, OSWorld-Verified 74.0%, MLE-Bench 39.2%, CharXiv 74.5% no tools / 76.5% with tools; Google published none of the tracked benchmark keys at launch. GPQA Diamond 83.8% and HLE 17.5% are Artificial Analysis-measured figures relayed by BenchLM — AA's own model page publishes only the composite Intelligence Index (36) — so treat both as third-party. LMArena Elo 1459 is the 'gemini-3.5-flash-lite' text-arena listing (rank 43, arena.ai). Also rolling out inside Google Search."
+  },
+  {
+    "id": "claude-sonnet-5",
+    "name": "Claude Sonnet 5",
+    "company": "anthropic",
+    "releaseDate": "2026-06-30",
+    "status": "frontier",
+    "tier": "balanced",
+    "modality": "multimodal",
+    "contextWindow": 1000000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 2,
+      "outputPerMTok": 10
+    },
+    "openWeights": false,
+    "knowledgeCutoff": "2026-01",
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 91.1,
+      "sweBench": 85.2,
+      "aime": null,
+      "hle": 43.2,
+      "lmarenaElo": 1461,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Largest Sonnet-to-Sonnet HLE jump Anthropic has published (34.6% → 43.2% no tools; 46.8% → 57.4% with tools)",
+      "Approaches Opus 4.8 on knowledge work (GDPval-AA v2 Elo 1618 vs 1615) at well under half the price",
+      "Big gains over Sonnet 4.6 on Terminal-Bench 2.1 (67.0% → 80.4%) and SWE-bench Pro (58.1% → 63.2%)",
+      "Introductory pricing ($2/$10 per MTok) undercuts Opus 4.8 by more than half"
+    ],
+    "weaknesses": [
+      "Substantially weaker than Opus models on offensive cybersecurity — 0% success building a working Firefox exploit in testing",
+      "SWE-bench Pro (63.2%) still trails Opus 4.8 (69.2%) by a wide margin",
+      "GPQA Diamond, MMLU-Pro, and AIME not disclosed in Anthropic's system card, unlike prior Sonnet releases"
+    ],
+    "notes": "Introductory pricing $2/$10 per MTok through Aug 31 2026, rising to standard $3/$15 on Sept 1. HLE 43.2% no tools / 57.4% with tools per Anthropic's system card. LMArena Elo 1461 is the 'Claude Sonnet 5 High' text-arena listing (arena.ai). SWE-bench Verified 85.2% is widely cited by third-party trackers (OpenRouter, Requesty, EdenAI), but Anthropic's own system card reports SWE-bench Pro (63.2%) instead — no official Verified figure confirmed. GPQA Diamond 91.1% is Artificial Analysis' own measurement (its gpqa-diamond leaderboard, relayed by BenchLM), not an Anthropic figure — a 96.2% number circulating on some trackers is unsourced and was rejected. ARC-AGI-2 and AIME remain unpublished: Anthropic did not report AIME for Sonnet 5 and ARC Prize has not tested it."
+  },
+  {
+    "id": "grok-4-5",
+    "name": "Grok 4.5",
+    "company": "xai",
+    "releaseDate": "2026-07-09",
+    "status": "superseded",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 500000,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 2,
+      "outputPerMTok": 6
+    },
+    "openWeights": false,
+    "knowledgeCutoff": "2026-02",
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 93.1,
+      "sweBench": null,
+      "aime": null,
+      "hle": 40.3,
+      "lmarenaElo": 1468,
+      "arcAgi2": 52.6
+    },
+    "strengths": [
+      "SWE Marathon 29.0% resolution rate beats Claude Opus 4.8 (26.0%) and Fable 5 (24.0%) at launch",
+      "Strong intelligence-per-dollar at $2/$6 per MTok — xAI says it uses about half the tokens of comparable systems by finishing tasks in fewer steps",
+      "First xAI model built on the 1.5T-parameter V9 foundation, trained in part on real Cursor developer session data for coding/agentic work"
+    ],
+    "weaknesses": [
+      "Context window nearly halved vs Grok 4.3 (1M → 500K tokens) with no public explanation",
+      "xAI's own launch page emphasized coding/agentic benchmarks and omitted SWE-bench Verified and AIME",
+      "Launched with less public detail on safety/governance layers than rival labs; some early testing found higher hallucination rates"
+    ],
+    "notes": "Announced July 8, public release July 9, 2026. GPQA Diamond 93.1%, HLE 40.3%, ARC-AGI-2 52.6%, and LMArena Elo 1468 are third-party (BenchLM/arena.ai) — xAI did not publish these itself, leading with SWE-bench Pro (64.7%) and SWE Marathon (29.0%) instead, so sweBench (Verified) is left null. Max output tokens unconfirmed — xAI's own model page documents the 500K context window and tiered pricing but no output cap; a ~30K figure appears only on secondary blogs, so left null. Knowledge cutoff confirmed as February 1, 2026 in xAI's official docs (docs.x.ai)."
+  },
+  {
+    "id": "muse-spark-1-1",
+    "name": "Muse Spark 1.1",
+    "company": "meta",
+    "releaseDate": "2026-07-09",
+    "status": "frontier",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 1048576,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 1.25,
+      "outputPerMTok": 4.25
+    },
+    "openWeights": false,
+    "knowledgeCutoff": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 89.8,
+      "sweBench": null,
+      "aime": null,
+      "hle": 62.1,
+      "lmarenaElo": 1495,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "First paid Meta Model API — Meta's first time charging developers per token — alongside a 1M-token context window",
+      "+8 points on Artificial Analysis's Intelligence Index in three months (43 → 51), a fast quarter-over-quarter gain for Meta",
+      "Strong tool-use/computer-use gains (MCP Atlas 88.1, OSWorld-Verified 80.8) over the original Muse Spark",
+      "Natively multimodal input: text, image, video, PDF, and audio"
+    ],
+    "weaknesses": [
+      "Long-horizon agentic work still trails GPT-5.5 and Opus 4.8",
+      "ARC-AGI-2 not disclosed for this release (predecessor scored 42.5%, itself far behind Gemini 3.1 Pro's 77.1%)",
+      "Closed, metered API only — no open weights, unlike Meta's Llama line"
+    ],
+    "notes": "Second Meta Superintelligence Labs release, an upgrade to the original Muse Spark (April 2026) and Meta's first paid API model. HLE 62.1% (with tools) per Meta/BenchLM; Artificial Analysis separately reports a 40% → 45% no-tools HLE gain over the original Muse Spark. SWE-bench Pro 61.5% reported; no SWE-bench Verified figure published. GPQA Diamond 89.8% and LMArena Elo 1495 ('Muse Spark 1.1' text-arena listing, arena.ai) are third-party. ARC-AGI-2, MMLU-Pro, and AIME not published for this release. Knowledge cutoff not disclosed."
+  },
+  {
+    "id": "claude-opus-5",
+    "name": "Claude Opus 5",
+    "company": "anthropic",
+    "releaseDate": "2026-07-24",
+    "status": "frontier",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 1000000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 5,
+      "outputPerMTok": 25
+    },
+    "openWeights": false,
+    "knowledgeCutoff": "2026-05",
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 93.7,
+      "sweBench": 96,
+      "aime": null,
+      "hle": 56.3,
+      "lmarenaElo": null,
+      "arcAgi2": 90.4
+    },
+    "strengths": [
+      "New SOTA on ARC-AGI-2 (90.4% at max effort) and first model to beat several previously-unsolved ARC-AGI-3 Public Demo environments",
+      "Matches or beats Fable 5 on several evals at a fraction of the cost (within 0.5% on CursorBench 3.2 at half price; beats it on OSWorld 2.0 at about a third of the cost)",
+      "Perfect score on all IMO 2026 problems",
+      "Most aligned Claude model to date per Anthropic's automated behavioral audits"
+    ],
+    "weaknesses": [
+      "GPQA Diamond essentially flat vs Opus 4.8 (93.7% vs 93.6%) — read by reviewers as a cost/efficiency release, not a capability leap",
+      "Still trails Mythos 5 on offensive cybersecurity tasks and long-horizon autonomous biology research",
+      "LMArena Elo not yet published at launch — needs 1-2 weeks of voting to stabilize"
+    ],
+    "notes": "HLE 56.3% no tools / 64.7% with tools. SWE-bench Verified 96.0% is Anthropic's own system-card figure (five-trial average); a third-party aggregator (vals.ai) cites 97.0%. GPQA Diamond varies 93.4-93.7% across trackers; 93.7% used. ARC-AGI-2 90.4% (max effort) and ARC-AGI-3 30.2% (high effort, a separate untracked scale) per ARC Prize (arcprize.org). Max output is 128K on the synchronous API, up to 300K via the Message Batches API. AIME not published — Anthropic appears to be moving to newer evals (IMO 2026, Frontier-Bench v0.1) instead."
   }
 ]
