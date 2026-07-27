@@ -6,6 +6,7 @@ import type { Model, ModelStatus } from "@/lib/types";
 import { ModelCard } from "@/components/ModelCard";
 import { ModelDrawer } from "@/components/ModelDrawer";
 import { CompanyLogo } from "@/components/CompanyLogo";
+import { CompanySelect } from "@/components/CompanySelect";
 
 type SortKey =
   | "newest"
@@ -148,6 +149,11 @@ export default function DirectoryPage() {
             </button>
           )}
         </div>
+        <CompanySelect
+          selected={companyIds}
+          onToggle={toggleCompany}
+          onClear={() => setCompanyIds([])}
+        />
         <select
           value={status}
           onChange={(e) => setStatus(e.target.value as ModelStatus | "all")}

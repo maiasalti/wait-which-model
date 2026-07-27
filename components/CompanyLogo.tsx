@@ -34,12 +34,23 @@ export function CompanyLogo({
     <svg
       width={size}
       height={size}
-      viewBox="0 0 24 24"
+      viewBox={logo.viewBox ?? "0 0 24 24"}
       role="img"
       aria-label={companyName(companyId)}
       className={className}
     >
-      <path d={logo.path} fill={fill} />
+      {logo.stroke ? (
+        <path
+          d={logo.path}
+          fill="none"
+          stroke={fill}
+          strokeWidth={logo.stroke}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      ) : (
+        <path d={logo.path} fill={fill} />
+      )}
     </svg>
   );
 }
