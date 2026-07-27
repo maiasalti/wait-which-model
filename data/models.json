@@ -1260,7 +1260,7 @@
       "inputPerMTok": 3,
       "outputPerMTok": 15
     },
-    "openWeights": true,
+    "openWeights": false,
     "knowledgeCutoff": null,
     "benchmarks": {
       "mmluPro": null,
@@ -1281,7 +1281,7 @@
       "Only one reasoning-effort tier at launch, with reasoning token usage notably higher than K2.6",
       "Full open-weight download delayed to July 27, 2026, about 11 days after API launch"
     ],
-    "notes": "MMLU-Pro, AIME 2025, and SWE-bench Verified are unconfirmed or conflicting in third-party coverage (AIME cited as both 88% and 96.1%) so left null; Moonshot's own suite reports Terminal-Bench 2.1 at 88.3 and SWE Marathon at 42.0 instead. HLE is 43.5% no tools / 56.0% with tools. Artificial Analysis ranks K3 #3 on its Intelligence Index at 57, with GDPval-AA v2 Elo 1668 (K2.6: 1190), AA-Omniscience +18 on 46% accuracy, and $0.94 per index task at $3.00/$15.00 per MTok — but its hallucination rate regressed to 51% from K2.6's 39%; none of these map to a tracked benchmark key. Open weights were promised for 2026-07-27, but as of 02:40 UTC that day the Hugging Face repo still showed a countdown (to 15:00 UTC) with no weight files."
+    "notes": "MMLU-Pro, AIME 2025, and SWE-bench Verified are unconfirmed or conflicting in third-party coverage (AIME cited as both 88% and 96.1%) so left null; Moonshot's own suite reports Terminal-Bench 2.1 at 88.3 and SWE Marathon at 42.0 instead. HLE is 43.5% no tools / 56.0% with tools. Artificial Analysis ranks K3 #3 on its Intelligence Index at 57, with GDPval-AA v2 Elo 1668 (K2.6: 1190), AA-Omniscience +18 on 46% accuracy, and $0.94 per index task at $3.00/$15.00 per MTok — but its hallucination rate regressed to 51% from K2.6's 39%; none of these map to a tracked benchmark key. Open weights are announced but not yet released: as of 02:40 UTC on 2026-07-27 the Hugging Face repo returned 401 behind a countdown to 15:00 UTC that day, with no weight files, so openWeights stays false until the drop is verifiable."
   },
   {
     "id": "mistral-large-3",
