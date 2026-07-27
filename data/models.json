@@ -2205,7 +2205,7 @@
     "company": "poolside",
     "releaseDate": "2026-07-21",
     "status": "unknown",
-    "tier": "balanced",
+    "tier": "fast",
     "modality": "text",
     "contextWindow": 1048576,
     "maxOutput": 131072,

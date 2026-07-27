@@ -88,15 +88,15 @@
     "sourceUrl": "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
   },
   {
-    "id": "2026-07-21-poolside-laguna-s-2-1",
+    "id": "2026-07-21-laguna-s-2-1",
     "date": "2026-07-21",
     "title": "poolside releases Laguna S 2.1, an open-weight agentic coding model",
     "summary": "poolside published Laguna S 2.1, a 118B-parameter MoE (about 8B active) with a 1M-token context under the OpenMDW-1.1 licence, with weights on Hugging Face at launch. It reports 70.2% on Terminal-Bench 2.1, 78.5% on SWE-Bench Multilingual and 59.4% on SWE-Bench Pro, matching or beating models several times its size, and is small enough to run on a single NVIDIA DGX Spark.",
     "category": "release",
     "companies": ["poolside"],
     "modelIds": ["laguna-s-2-1"],
-    "sourceName": "poolside (GlobeNewswire)",
-    "sourceUrl": "https://www.globenewswire.com/news-release/2026/07/21/3330818/0/en/Poolside-releases-Laguna-S-2-1-the-West-s-most-capable-open-weight-model.html"
+    "sourceName": "poolside",
+    "sourceUrl": "https://poolside.ai/blog/introducing-laguna-s-2-1"
   },
   {
     "id": "2026-07-21-china-ai-export-controls",
