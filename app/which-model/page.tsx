@@ -25,6 +25,22 @@ export default function WhichModelPage() {
 
   const busy = status === "submitted" || status === "streaming";
 
+  // True once the in-flight assistant turn has produced something worth
+  // showing (text with content, or a recommendModels tool part — the only
+  // part shapes that render visible output below). Until then — including
+  // the entire window before the assistant message even exists in state,
+  // and the moment right after it appears but only holds a `step-start`
+  // part — the pending indicator below covers the gap.
+  const lastMessage = messages[messages.length - 1];
+  const lastAssistantHasVisibleContent =
+    lastMessage?.role === "assistant" &&
+    lastMessage.parts.some(
+      (part) =>
+        (part.type === "text" && part.text.trim().length > 0) ||
+        part.type === "tool-recommendModels"
+    );
+  const showPendingIndicator = busy && !lastAssistantHasVisibleContent;
+
   const submit = () => {
     const text = input.trim();
     if (busy) return;
@@ -129,6 +145,18 @@ export default function WhichModelPage() {
             })}
           </div>
         ))}
+
+        {showPendingIndicator && (
+          <div className="flex flex-col gap-2" role="status" aria-live="polite">
+            <p className="mono text-[10px] uppercase tracking-widest text-ink-3">
+              Recommendation
+            </p>
+            <p className="mono flex items-center gap-2 text-xs text-ink-3">
+              <span className="pending-dot inline-block h-1.5 w-1.5 rounded-full bg-ink-3" />
+              Reading the model directory…
+            </p>
+          </div>
+        )}
 
         {error && (
           <div className="flex flex-col items-start gap-2 rounded-lg border border-line bg-surface p-4">

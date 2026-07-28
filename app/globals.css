@@ -74,3 +74,26 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Pending-response indicator (which-model page): pulsing dot while the
+   assistant turn is in flight but has not yet produced visible output. */
+@keyframes pending-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.pending-dot {
+  animation: pending-pulse 1.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pending-dot {
+    animation: none;
+    opacity: 1;
+  }
+}
