@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { groq } from "@ai-sdk/groq";
 import {
   convertToModelMessages,
   createUIMessageStreamResponse,
@@ -9,7 +10,7 @@ import {
   type UIDataTypes,
   type UIMessage,
 } from "ai";
-import { benchmarks, models, modelById } from "@/lib/data";
+import { benchmarks, models } from "@/lib/data";
 import type { Model } from "@/lib/types";
 
 export const runtime = "nodejs";
@@ -31,26 +32,33 @@ function isRateLimited(ip: string): boolean {
   return false;
 }
 
-const DIRECTORY = models
-  .filter((m) => m.status !== "deprecated")
-  .map((m) => ({
-    id: m.id,
-    name: m.name,
-    company: m.company,
-    releaseDate: m.releaseDate,
-    status: m.status,
-    tier: m.tier,
-    modality: m.modality,
-    contextWindow: m.contextWindow,
-    maxOutput: m.maxOutput,
-    pricing: m.pricing,
-    openWeights: m.openWeights,
-    knowledgeCutoff: m.knowledgeCutoff,
-    benchmarks: m.benchmarks,
-    strengths: m.strengths,
-    weaknesses: m.weaknesses,
-    notes: m.notes,
-  }));
+const RECOMMENDABLE_MODELS = models.filter((m) => m.status !== "deprecated");
+
+// Single source of truth for "recommendable models": the same filtered set backs
+// both what the LLM sees in the prompt (DIRECTORY) and what execute() is allowed
+// to resolve ids against. This ensures a hallucinated OR deprecated id (e.g. one
+// the model recalls from training data, like "gpt-4" or "claude-3-opus") can never
+// reach the user, even though those ids do exist in the full lib/data.ts modelById map.
+const recommendableById = new Map(RECOMMENDABLE_MODELS.map((m) => [m.id, m]));
+
+const DIRECTORY = RECOMMENDABLE_MODELS.map((m) => ({
+  id: m.id,
+  name: m.name,
+  company: m.company,
+  releaseDate: m.releaseDate,
+  status: m.status,
+  tier: m.tier,
+  modality: m.modality,
+  contextWindow: m.contextWindow,
+  maxOutput: m.maxOutput,
+  pricing: m.pricing,
+  openWeights: m.openWeights,
+  knowledgeCutoff: m.knowledgeCutoff,
+  benchmarks: m.benchmarks,
+  strengths: m.strengths,
+  weaknesses: m.weaknesses,
+  notes: m.notes,
+}));
 
 const BENCHMARK_LEGEND = benchmarks.map((b) => ({
   key: b.key,
@@ -92,7 +100,7 @@ const recommendModels = tool({
   }),
   execute: async ({ recommendations }) => {
     return recommendations
-      .map((r) => ({ model: modelById.get(r.modelId) ?? null, reasoning: r.reasoning }))
+      .map((r) => ({ model: recommendableById.get(r.modelId) ?? null, reasoning: r.reasoning }))
       .filter((r): r is { model: Model; reasoning: string } => r.model != null);
   },
 });
@@ -110,12 +118,21 @@ export async function POST(req: Request) {
     );
   }
 
-  const { messages }: { messages: WhichModelUIMessage[] } = await req.json();
+  let modelMessages;
+  try {
+    const { messages }: { messages: WhichModelUIMessage[] } = await req.json();
+    modelMessages = await convertToModelMessages(messages);
+  } catch {
+    return new Response(
+      "That request didn't look right — try sending your message again.",
+      { status: 400 },
+    );
+  }
 
   const result = streamText({
-    model: "deepseek/deepseek-v3.2",
+    model: groq("openai/gpt-oss-120b"),
     system: SYSTEM_PROMPT,
-    messages: await convertToModelMessages(messages),
+    messages: modelMessages,
     tools,
   });
 
