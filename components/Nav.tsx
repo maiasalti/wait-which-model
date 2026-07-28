@@ -6,6 +6,7 @@ import { FrontierSparkline } from "./FrontierSparkline";
 
 const TABS = [
   { href: "/", label: "Models Directory" },
+  { href: "/which-model", label: "Which Model Tool" },
   { href: "/compare", label: "Compare" },
   { href: "/news", label: "News" },
   { href: "/info", label: "Info" },
