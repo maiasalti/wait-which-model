@@ -141,26 +141,82 @@ type ProviderAttempt =
   | { ok: true; stream: ReadableStream<TextStreamPart<typeof tools>> }
   | { ok: false; error: unknown };
 
+// Extracts just enough to debug a both-providers-failed report server-side —
+// the error's constructor name and, if present, its HTTP status code (either
+// an APICallError-style `statusCode`, or the numeric/string `code` OpenRouter
+// puts on its in-band SSE error objects). Deliberately never touches
+// `.message`, never logs the error object itself, and never touches the
+// prompt or any key material.
+function describeError(error: unknown): string {
+  if (error && typeof error === "object") {
+    const e = error as { name?: unknown; statusCode?: unknown; code?: unknown };
+    const name = typeof e.name === "string" ? e.name : "UnknownError";
+    const status =
+      typeof e.statusCode === "number"
+        ? e.statusCode
+        : typeof e.code === "number" || typeof e.code === "string"
+          ? e.code
+          : undefined;
+    return status !== undefined ? `${name} (status ${status})` : name;
+  }
+  return "UnknownError";
+}
+
+type Peek =
+  | { kind: "error"; error: unknown }
+  | { kind: "ended"; parts: TextStreamPart<typeof tools>[] }
+  | { kind: "content"; parts: TextStreamPart<typeof tools>[] };
+
 // streamText() never throws for provider-side failures (bad key, 429, 402, 5xx,
 // timeout) — it swallows them and emits a `{ type: "error" }` part into the
 // stream instead, so the request can still resolve gracefully. Its very first
 // part is unconditionally `{ type: "start" }`, emitted synchronously before the
-// provider is even called, so peeking only the first chunk can never tell us
-// whether the call is going to fail.
+// provider is even called (stream-text.ts), so peeking only the first chunk
+// can never tell us whether the call is going to fail.
 //
-// The chunk immediately after "start" is where success and failure diverge:
-// on failure that's the (only) "error" part and the stream then closes; on
-// success it's the first real content part ("start-step", "text-start", etc.).
-// So we read exactly those first two chunks here, before any of it is handed
-// to the client, decide pass/fail from them, and — on success — splice them
-// back onto the front of a fresh stream built from the same underlying
-// reader. This is what lets us fail over to Gemini without ever having
-// streamed a byte of a failed OpenRouter attempt to the browser.
+// A fixed second-chunk check isn't enough either: an error that a provider
+// *throws* (non-2xx, connection failure, retries exhausted) produces
+// `[start, error]`, but OpenRouter's `:free` endpoints often return HTTP 200
+// with the failure inside the SSE body instead — the provider maps that to an
+// in-band `{ type: "error" }` part (verified in
+// node_modules/@openrouter/ai-sdk-provider/dist/index.js:4737-4742), and
+// stream-text.ts (~2156-2168) unconditionally injects a `start-step` part in
+// front of the first non-`model-call-start` chunk of every step, regardless
+// of whether that chunk turns out to be content or an error. So that failure
+// mode actually produces `[start, start-step, error]` — a second-chunk-only
+// check would misread `start-step` as "content began" and stream the failed
+// OpenRouter response straight to the user.
+//
+// So instead we keep reading and buffering while the part type is one of the
+// two non-committal control parts (`start`, `start-step`). The first part
+// that isn't one of those settles it: `error` means the primary failed and we
+// fail over; anything else (`text-start`, `tool-input-start`, `tool-call`,
+// `finish-step`, `finish`, ...; part-type names verified against
+// node_modules/ai/src/generate-text/stream-text-result.ts) means real output
+// has begun and we commit to this provider.
+async function peekUntilContentOrError(
+  reader: ReadableStreamDefaultReader<TextStreamPart<typeof tools>>,
+): Promise<Peek> {
+  const parts: TextStreamPart<typeof tools>[] = [];
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) return { kind: "ended", parts };
+    parts.push(value);
+    if (value.type === "error") return { kind: "error", error: value.error };
+    if (value.type !== "start" && value.type !== "start-step") {
+      return { kind: "content", parts };
+    }
+  }
+}
+
 async function attemptProvider(
   model: LanguageModel,
   label: string,
   system: string,
   messages: Awaited<ReturnType<typeof convertToModelMessages>>,
+  // The primary should fail fast so there's time left for a fallback attempt;
+  // the fallback has nothing after it, so it keeps the SDK's default retries.
+  maxRetries?: number,
 ): Promise<ProviderAttempt> {
   try {
     const result = streamText({
@@ -168,6 +224,7 @@ async function attemptProvider(
       system,
       messages,
       tools,
+      maxRetries,
       // Allow one extra step so the model can see an ok: false tool result and
       // retry with a valid id instead of the turn silently ending on an empty
       // recommendation.
@@ -175,24 +232,24 @@ async function attemptProvider(
     });
 
     const reader = result.stream.getReader();
+    const peek = await peekUntilContentOrError(reader);
 
-    const first = await reader.read();
-    if (first.done) {
-      return { ok: false, error: new Error(`${label}: stream ended with no parts`) };
-    }
-
-    const second = await reader.read();
-    if (!second.done && second.value.type === "error") {
+    if (peek.kind === "error") {
       await reader.cancel().catch(() => {});
-      return { ok: false, error: second.value.error };
+      return { ok: false, error: peek.error };
     }
 
-    const leadingParts = second.done ? [first.value] : [first.value, second.value];
+    const leadingParts = peek.parts;
+    const streamEnded = peek.kind === "ended";
 
+    // Splice the peeked parts back onto the front of a fresh stream drawn
+    // from the same underlying reader — none of this has been handed to the
+    // client's response yet, so a failed peek above never leaks partial
+    // bytes; a successful peek is replayed here in original order.
     const stream = new ReadableStream<TextStreamPart<typeof tools>>({
       async start(controller) {
         for (const part of leadingParts) controller.enqueue(part);
-        if (second.done) {
+        if (streamEnded) {
           controller.close();
           return;
         }
@@ -248,10 +305,17 @@ export async function POST(req: Request) {
         "openrouter",
         SYSTEM_PROMPT,
         modelMessages,
+        // Fail fast on the primary — there's a fallback to try, and the free
+        // tier's 429/402s are exactly the errors default retries would waste
+        // several seconds retrying before we ever reach Gemini.
+        0,
       );
       if (!attempt.ok) {
-        // Never log key material or full prompts — just that the primary failed.
-        console.info("[which-model] openrouter attempt failed, falling back to gemini");
+        // Never log key material, full prompts, or the error object/message —
+        // just enough (name + status) to see how often this fires and why.
+        console.info(
+          `[which-model] openrouter attempt failed (${describeError(attempt.error)}), falling back to gemini`,
+        );
       }
     }
 
@@ -265,6 +329,9 @@ export async function POST(req: Request) {
     }
 
     if (!attempt || !attempt.ok) {
+      // Same rule as above: name + status only, never the message/object/prompt/key.
+      const detail = attempt ? describeError(attempt.error) : "no provider configured";
+      console.info(`[which-model] request failed — ${detail}`);
       return new Response(
         "The recommender hit a snag — try again in a bit.",
         { status: 502 },
