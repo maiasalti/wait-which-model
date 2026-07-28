@@ -35,7 +35,7 @@ Client component (`"use client"`, matches `FilterRail`/`ModelDrawer` pattern), c
 1. Load `models.json`, `companies.json`, `benchmarks.json` the same way `lib/data.ts` does today.
 2. Filter out `status: "deprecated"` models — never recommend a dead model.
 3. Build a system prompt: instructions to handle both qualitative and technical input, the filtered JSON serialized as context, and the constraint "only recommend by `id` from the provided list; never invent an id." Explicitly instruct the model to ask a clarifying question instead of guessing when the request is too vague to differentiate models, and to revise its recommendation when the user adds/changes a requirement rather than repeating itself.
-4. Call `streamText` (AI SDK, `ai` package) with `model: 'deepseek/deepseek-v3'` (routes through Vercel AI Gateway via existing `VERCEL_OIDC_TOKEN` — no new API key) and the full message history. Give it one tool, `recommendModels`, with a zod schema:
+4. Call `streamText` (AI SDK, `ai` package) with Groq's `openai/gpt-oss-120b` (Apache-2.0 open weights, 131K context, strong tool-calling) via `@ai-sdk/groq`, authenticated by `GROQ_API_KEY` in `.env.local`, and the full message history. Give it one tool, `recommendModels`, with a zod schema:
    ```ts
    z.object({
      recommendations: z.array(z.object({
@@ -50,7 +50,7 @@ Client component (`"use client"`, matches `FilterRail`/`ModelDrawer` pattern), c
 
 ## Rate limiting
 
-Simple per-IP limiter inside the API route (e.g. a small in-memory counter keyed by request IP, a few requests/minute) to protect the AI Gateway's $5/month free credit from bot/scraper abuse. In-memory is acceptable for this scale (no multi-region consistency requirement) — if traffic patterns later show it's insufficient, upgrade to a KV-backed counter, but not in v1.
+Simple per-IP limiter inside the API route (e.g. a small in-memory counter keyed by request IP, a few requests/minute) to protect the Groq free-tier quota from bot/scraper abuse. In-memory is acceptable for this scale (no multi-region consistency requirement) — note this makes it a per-instance, fixed-window, best-effort cap rather than a global guarantee. If traffic patterns later show that's insufficient, upgrade to a KV-backed counter, but not in v1.
 
 ## Error handling
 
