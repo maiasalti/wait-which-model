@@ -1,5 +1,6 @@
 import { z } from "zod";
-import { groq } from "@ai-sdk/groq";
+import { openrouter } from "@openrouter/ai-sdk-provider";
+import { google } from "@ai-sdk/google";
 import {
   convertToModelMessages,
   createUIMessageStreamResponse,
@@ -8,6 +9,8 @@ import {
   tool,
   toUIMessageStream,
   type InferUITools,
+  type LanguageModel,
+  type TextStreamPart,
   type UIDataTypes,
   type UIMessage,
 } from "ai";
@@ -128,6 +131,94 @@ const tools = { recommendModels };
 
 export type WhichModelUIMessage = UIMessage<never, UIDataTypes, InferUITools<typeof tools>>;
 
+// Primary: OpenRouter's free open-weight tier (keeps this feature's original
+// "free, open-source LLM" intent). Fallback: Google's Gemini free tier, which
+// survives OpenRouter's tight 50-requests/day free ceiling.
+const OPENROUTER_MODEL_ID = "nvidia/nemotron-3-super-120b-a12b:free";
+const GEMINI_MODEL_ID = "gemini-3.5-flash-lite";
+
+type ProviderAttempt =
+  | { ok: true; stream: ReadableStream<TextStreamPart<typeof tools>> }
+  | { ok: false; error: unknown };
+
+// streamText() never throws for provider-side failures (bad key, 429, 402, 5xx,
+// timeout) — it swallows them and emits a `{ type: "error" }` part into the
+// stream instead, so the request can still resolve gracefully. Its very first
+// part is unconditionally `{ type: "start" }`, emitted synchronously before the
+// provider is even called, so peeking only the first chunk can never tell us
+// whether the call is going to fail.
+//
+// The chunk immediately after "start" is where success and failure diverge:
+// on failure that's the (only) "error" part and the stream then closes; on
+// success it's the first real content part ("start-step", "text-start", etc.).
+// So we read exactly those first two chunks here, before any of it is handed
+// to the client, decide pass/fail from them, and — on success — splice them
+// back onto the front of a fresh stream built from the same underlying
+// reader. This is what lets us fail over to Gemini without ever having
+// streamed a byte of a failed OpenRouter attempt to the browser.
+async function attemptProvider(
+  model: LanguageModel,
+  label: string,
+  system: string,
+  messages: Awaited<ReturnType<typeof convertToModelMessages>>,
+): Promise<ProviderAttempt> {
+  try {
+    const result = streamText({
+      model,
+      system,
+      messages,
+      tools,
+      // Allow one extra step so the model can see an ok: false tool result and
+      // retry with a valid id instead of the turn silently ending on an empty
+      // recommendation.
+      stopWhen: stepCountIs(2),
+    });
+
+    const reader = result.stream.getReader();
+
+    const first = await reader.read();
+    if (first.done) {
+      return { ok: false, error: new Error(`${label}: stream ended with no parts`) };
+    }
+
+    const second = await reader.read();
+    if (!second.done && second.value.type === "error") {
+      await reader.cancel().catch(() => {});
+      return { ok: false, error: second.value.error };
+    }
+
+    const leadingParts = second.done ? [first.value] : [first.value, second.value];
+
+    const stream = new ReadableStream<TextStreamPart<typeof tools>>({
+      async start(controller) {
+        for (const part of leadingParts) controller.enqueue(part);
+        if (second.done) {
+          controller.close();
+          return;
+        }
+        try {
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            controller.enqueue(value);
+          }
+          controller.close();
+        } catch (error) {
+          controller.error(error);
+        }
+      },
+      cancel(reason) {
+        return reader.cancel(reason);
+      },
+    });
+
+    console.info(`[which-model] serving via ${label}`);
+    return { ok: true, stream };
+  } catch (error) {
+    return { ok: false, error };
+  }
+}
+
 export async function POST(req: Request) {
   const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
   if (isRateLimited(ip)) {
@@ -146,19 +237,43 @@ export async function POST(req: Request) {
       ignoreIncompleteToolCalls: true,
     });
 
-    const result = streamText({
-      model: groq("openai/gpt-oss-120b"),
-      system: SYSTEM_PROMPT,
-      messages: modelMessages,
-      tools,
-      // Allow one extra step so the model can see an ok: false tool result and retry
-      // with a valid id instead of the turn silently ending on an empty recommendation.
-      stopWhen: stepCountIs(2),
-    });
+    const hasOpenRouter = !!process.env.OPENROUTER_API_KEY;
+    const hasGoogle = !!process.env.GOOGLE_GENERATIVE_AI_API_KEY;
+
+    let attempt: ProviderAttempt | undefined;
+
+    if (hasOpenRouter) {
+      attempt = await attemptProvider(
+        openrouter(OPENROUTER_MODEL_ID),
+        "openrouter",
+        SYSTEM_PROMPT,
+        modelMessages,
+      );
+      if (!attempt.ok) {
+        // Never log key material or full prompts — just that the primary failed.
+        console.info("[which-model] openrouter attempt failed, falling back to gemini");
+      }
+    }
+
+    if ((!attempt || !attempt.ok) && hasGoogle) {
+      attempt = await attemptProvider(
+        google(GEMINI_MODEL_ID),
+        "gemini",
+        SYSTEM_PROMPT,
+        modelMessages,
+      );
+    }
+
+    if (!attempt || !attempt.ok) {
+      return new Response(
+        "The recommender hit a snag — try again in a bit.",
+        { status: 502 },
+      );
+    }
 
     return createUIMessageStreamResponse({
       stream: toUIMessageStream({
-        stream: result.stream,
+        stream: attempt.stream,
         sendReasoning: false,
         onError: () => "The recommender hit a snag — try again in a bit.",
       }),
