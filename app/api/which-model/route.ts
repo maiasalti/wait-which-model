@@ -99,9 +99,11 @@ const recommendModels = tool({
       .max(3),
   }),
   execute: async ({ recommendations }) => {
+    const seen = new Set<string>();
     return recommendations
       .map((r) => ({ model: recommendableById.get(r.modelId) ?? null, reasoning: r.reasoning }))
-      .filter((r): r is { model: Model; reasoning: string } => r.model != null);
+      .filter((r): r is { model: Model; reasoning: string } => r.model != null)
+      .filter((r) => (seen.has(r.model.id) ? false : (seen.add(r.model.id), true)));
   },
 });
 

@@ -99,6 +99,15 @@ export default function WhichModelPage() {
                         Couldn&apos;t put a recommendation together that time.
                       </p>
                     );
+                  default:
+                    // approval-requested / approval-responded / output-denied are part of the
+                    // SDK's ToolUIPart union but unreachable here — recommendModels never sets
+                    // needsApproval. Rendered anyway so a fallthrough is visible, not silent.
+                    return (
+                      <p key={index} className="mono text-xs text-ink-3">
+                        Still working on that recommendation…
+                      </p>
+                    );
                 }
               }
               return null;
@@ -136,6 +145,7 @@ export default function WhichModelPage() {
             }
           }}
           placeholder="Tell me what you need…"
+          aria-label="Describe what you need a model for"
           rows={3}
           className="rounded-lg border border-line bg-surface p-3 text-sm text-ink placeholder:text-ink-3 focus:border-line-strong focus:outline-none"
         />
