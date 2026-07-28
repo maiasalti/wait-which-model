@@ -3,6 +3,7 @@ import { groq } from "@ai-sdk/groq";
 import {
   convertToModelMessages,
   createUIMessageStreamResponse,
+  stepCountIs,
   streamText,
   tool,
   toUIMessageStream,
@@ -76,6 +77,7 @@ Rules:
 - If the request is too vague to meaningfully differentiate between models (e.g. "what's a good model"), do not call the tool yet — ask a short clarifying question in plain text instead.
 - If a later message adds or changes a requirement (e.g. "actually, open weights only"), call the tool again with a recommendation that reflects the full, updated requirements — don't just repeat your previous answer.
 - If the user asks about your reasoning or wants more detail on a prior recommendation, answer in plain text — don't call the tool again unless the actual recommendation should change.
+- The tool only accepts ids that appear in DIRECTORY; anything else is silently dropped. If the tool result comes back with ok: false (no valid ids resolved), immediately call it again with different ids taken directly from DIRECTORY — do not repeat the same ids and do not give up silently.
 
 BENCHMARKS (what each score means):
 ${JSON.stringify(BENCHMARK_LEGEND)}
@@ -83,8 +85,15 @@ ${JSON.stringify(BENCHMARK_LEGEND)}
 DIRECTORY:
 ${JSON.stringify(DIRECTORY)}`;
 
+export type RecommendModelsResult =
+  | { ok: true; recommendations: { model: Model; reasoning: string }[] }
+  | { ok: false; reason: string };
+
 const recommendModels = tool({
-  description: "Recommend 1-3 models from the directory for the user's stated needs.",
+  description:
+    "Recommend 1-3 models from the directory for the user's stated needs. Ids not found in " +
+    "DIRECTORY are silently dropped from the result — if that drops everything, the result " +
+    "comes back with ok: false and you must call this tool again with valid ids from DIRECTORY.",
   inputSchema: z.object({
     recommendations: z
       .array(
@@ -98,12 +107,20 @@ const recommendModels = tool({
       .min(1)
       .max(3),
   }),
-  execute: async ({ recommendations }) => {
+  execute: async ({ recommendations }): Promise<RecommendModelsResult> => {
     const seen = new Set<string>();
-    return recommendations
+    const resolved = recommendations
       .map((r) => ({ model: recommendableById.get(r.modelId) ?? null, reasoning: r.reasoning }))
       .filter((r): r is { model: Model; reasoning: string } => r.model != null)
       .filter((r) => (seen.has(r.model.id) ? false : (seen.add(r.model.id), true)));
+
+    if (resolved.length === 0) {
+      return {
+        ok: false,
+        reason: "None of the given ids matched DIRECTORY — retry with valid ids from DIRECTORY.",
+      };
+    }
+    return { ok: true, recommendations: resolved };
   },
 });
 
@@ -120,28 +137,36 @@ export async function POST(req: Request) {
     );
   }
 
-  let modelMessages;
   try {
     const { messages }: { messages: WhichModelUIMessage[] } = await req.json();
-    modelMessages = await convertToModelMessages(messages);
+    // ignoreIncompleteToolCalls drops any assistant tool call left without a matching
+    // result (stream cut off mid-turn, maxDuration hit, dropped connection) instead of
+    // shipping a provider-invalid history that would 400 on every later turn.
+    const modelMessages = await convertToModelMessages(messages, {
+      ignoreIncompleteToolCalls: true,
+    });
+
+    const result = streamText({
+      model: groq("openai/gpt-oss-120b"),
+      system: SYSTEM_PROMPT,
+      messages: modelMessages,
+      tools,
+      // Allow one extra step so the model can see an ok: false tool result and retry
+      // with a valid id instead of the turn silently ending on an empty recommendation.
+      stopWhen: stepCountIs(2),
+    });
+
+    return createUIMessageStreamResponse({
+      stream: toUIMessageStream({
+        stream: result.stream,
+        sendReasoning: false,
+        onError: () => "The recommender hit a snag — try again in a bit.",
+      }),
+    });
   } catch {
     return new Response(
       "That request didn't look right — try sending your message again.",
       { status: 400 },
     );
   }
-
-  const result = streamText({
-    model: groq("openai/gpt-oss-120b"),
-    system: SYSTEM_PROMPT,
-    messages: modelMessages,
-    tools,
-  });
-
-  return createUIMessageStreamResponse({
-    stream: toUIMessageStream({
-      stream: result.stream,
-      onError: () => "The recommender hit a snag — try again in a bit.",
-    }),
-  });
 }

@@ -21,12 +21,18 @@ export default function WhichModelPage() {
   });
   const [input, setInput] = useState("");
   const [selected, setSelected] = useState<Model | null>(null);
+  const [tooShort, setTooShort] = useState(false);
 
   const busy = status === "submitted" || status === "streaming";
 
   const submit = () => {
     const text = input.trim();
-    if (text.length < 5 || busy) return;
+    if (busy) return;
+    if (text.length < 5) {
+      setTooShort(true);
+      return;
+    }
+    setTooShort(false);
     sendMessage({ text });
     setInput("");
   };
@@ -43,8 +49,9 @@ export default function WhichModelPage() {
         <p className="mt-3 max-w-2xl text-sm text-ink-2">
           Describe what you need, in whatever terms you naturally think in
           — plain language or precise technical requirements. It reads
-          straight off this site&apos;s own directory, so it only ever
-          recommends real, current models.
+          straight off this site&apos;s own directory, so recommendations
+          come from what&apos;s actually tracked here — not the model&apos;s
+          own memory.
         </p>
       </section>
 
@@ -83,9 +90,17 @@ export default function WhichModelPage() {
                       </p>
                     );
                   case "output-available":
+                    if (!part.output.ok || part.output.recommendations.length === 0) {
+                      return (
+                        <p key={index} className="text-xs text-ink-3">
+                          Couldn&apos;t match that to a model in the directory — try
+                          rephrasing what you need.
+                        </p>
+                      );
+                    }
                     return (
                       <div key={index} className="grid gap-3 sm:grid-cols-2">
-                        {part.output.map(({ model, reasoning }) => (
+                        {part.output.recommendations.map(({ model, reasoning }) => (
                           <div key={model.id} className="flex flex-col gap-2">
                             <ModelCard model={model} onOpen={setSelected} />
                             <p className="text-xs text-ink-2">{reasoning}</p>
@@ -117,7 +132,9 @@ export default function WhichModelPage() {
 
         {error && (
           <div className="flex flex-col items-start gap-2 rounded-lg border border-line bg-surface p-4">
-            <p className="text-sm text-ink-2">{error.message}</p>
+            <p className="text-sm text-ink-2">
+              Something went wrong talking to the recommender — try again in a bit.
+            </p>
             <button
               onClick={() => regenerate()}
               className="mono rounded border border-line px-2.5 py-1.5 text-xs uppercase tracking-wider text-ink-2 hover:text-ink"
@@ -137,7 +154,10 @@ export default function WhichModelPage() {
       >
         <textarea
           value={input}
-          onChange={(e) => setInput(e.target.value)}
+          onChange={(e) => {
+            setInput(e.target.value);
+            if (tooShort) setTooShort(false);
+          }}
           onKeyDown={(e) => {
             if (e.key === "Enter" && !e.shiftKey) {
               e.preventDefault();
@@ -149,6 +169,11 @@ export default function WhichModelPage() {
           rows={3}
           className="rounded-lg border border-line bg-surface p-3 text-sm text-ink placeholder:text-ink-3 focus:border-line-strong focus:outline-none"
         />
+        {tooShort && (
+          <p className="mono text-xs text-ink-3">
+            A little more detail would help — a few words about what you need.
+          </p>
+        )}
         <button
           type="submit"
           disabled={busy || input.trim().length < 5}
