@@ -48,6 +48,15 @@ const PRIORITY_TAGS = [
   { id: "volume", label: "Heavy use", phrase: "using it constantly, at high volume" },
 ] as const;
 
+/** Priorities are the axis the recommender trades off against itself, so
+ *  picking four of them ("cheap and quick and best quality and private")
+ *  describes nothing and forces a wishy-washy answer. Two is the most that
+ *  still reads as a genuine preference. Tasks stay uncapped — wanting a model
+ *  for three different jobs is a real request. */
+const PRIORITY_LIMIT = 2;
+
+const PRIORITY_IDS = new Set<string>(PRIORITY_TAGS.map((t) => t.id));
+
 const TAG_BY_ID = new Map<string, { label: string; phrase: string }>(
   [...TASK_TAGS, ...PRIORITY_TAGS].map((t) => [t.id, t]),
 );
@@ -98,35 +107,44 @@ function TagPicker({
       </p>
 
       {[
-        { heading: "What for", tags: TASK_TAGS },
-        { heading: "What matters", tags: PRIORITY_TAGS },
-      ].map(({ heading, tags }) => (
-        <div key={heading} className="mt-4">
-          <p className="mono text-[10px] uppercase tracking-widest text-ink-3">
-            {heading}
-          </p>
-          <div className="mt-2 flex flex-wrap gap-2">
-            {tags.map((tag) => {
-              const on = picked.includes(tag.id);
-              return (
-                <button
-                  key={tag.id}
-                  type="button"
-                  aria-pressed={on}
-                  onClick={() => onToggle(tag.id)}
-                  className={`rounded-md border px-3 py-1.5 text-sm transition-colors ${
-                    on
-                      ? "border-accent bg-accent/20 text-ink"
-                      : "border-line-strong bg-surface-2 text-ink-2 hover:border-accent/50 hover:text-ink"
-                  }`}
-                >
-                  {tag.label}
-                </button>
-              );
-            })}
+        { heading: "What for", tags: TASK_TAGS, limit: null },
+        { heading: "What matters", tags: PRIORITY_TAGS, limit: PRIORITY_LIMIT },
+      ].map(({ heading, tags, limit }) => {
+        const atLimit =
+          limit != null && tags.filter((t) => picked.includes(t.id)).length >= limit;
+        return (
+          <div key={heading} className="mt-4">
+            <p className="mono text-[10px] uppercase tracking-widest text-ink-3">
+              {heading}
+              {limit != null && <span className="ml-1.5 normal-case">(max {limit})</span>}
+            </p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {tags.map((tag) => {
+                const on = picked.includes(tag.id);
+                const locked = !on && atLimit;
+                return (
+                  <button
+                    key={tag.id}
+                    type="button"
+                    aria-pressed={on}
+                    disabled={locked}
+                    onClick={() => onToggle(tag.id)}
+                    className={`rounded-md border px-3 py-1.5 text-sm transition-colors ${
+                      on
+                        ? "border-accent bg-accent/20 text-ink"
+                        : locked
+                          ? "cursor-not-allowed border-line bg-surface-2 text-ink-3 opacity-50"
+                          : "border-line-strong bg-surface-2 text-ink-2 hover:border-accent/50 hover:text-ink"
+                    }`}
+                  >
+                    {tag.label}
+                  </button>
+                );
+              })}
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
 
       {picked.length > 0 && (
         <p className="mt-4 border-l-2 border-accent/40 pl-3 text-sm italic text-ink-2">
@@ -194,7 +212,18 @@ export default function WhichModelPage() {
   };
 
   const togglePick = (id: string) =>
-    setPicked((prev) => (prev.includes(id) ? prev.filter((p) => p !== id) : [...prev, id]));
+    setPicked((prev) => {
+      if (prev.includes(id)) return prev.filter((p) => p !== id);
+      // Guard the cap here as well as in the UI, so it holds even if a
+      // disabled button is somehow activated (keyboard, assistive tech).
+      if (
+        PRIORITY_IDS.has(id) &&
+        prev.filter((p) => PRIORITY_IDS.has(p)).length >= PRIORITY_LIMIT
+      ) {
+        return prev;
+      }
+      return [...prev, id];
+    });
 
   const askPicked = () => {
     if (busy || picked.length === 0) return;

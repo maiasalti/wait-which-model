@@ -112,7 +112,11 @@ export interface Methodology {
   };
   tiers: { key: ModelTier; label: string; description: string }[];
   statusMeanings: { key: ModelStatus; label: string; description: string }[];
-  costPerTask: { summary: string; notes: string[] };
+  costPerTask: {
+    summary: string;
+    notes: string[];
+    furtherReading: { title: string; author: string; url: string; blurb: string };
+  };
   dataGaps: { summary: string };
   sourcing: { summary: string };
   currency: { summary: string };

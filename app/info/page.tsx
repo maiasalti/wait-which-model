@@ -97,6 +97,25 @@ export default function InfoPage() {
             </li>
           ))}
         </ul>
+        <a
+          href={methodology.costPerTask.furtherReading.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 block rounded border border-line p-3 transition-colors hover:border-ink-3 hover:bg-white/5"
+        >
+          <span className="mono text-[10px] uppercase tracking-wider text-ink-3">
+            Further reading
+          </span>
+          <p className="mt-1 text-sm font-semibold text-ink">
+            {methodology.costPerTask.furtherReading.title}{" "}
+            <span className="font-normal text-ink-3">
+              — {methodology.costPerTask.furtherReading.author}
+            </span>
+          </p>
+          <p className="mt-1 text-sm text-ink-2">
+            {methodology.costPerTask.furtherReading.blurb}
+          </p>
+        </a>
       </section>
 
       <section className="mb-10">

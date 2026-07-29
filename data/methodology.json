@@ -56,7 +56,13 @@
       "Reasoning models are measured at a chosen effort level, and cost scales steeply with it. Where Artificial Analysis publishes a medium-effort figure, that's the one shown; otherwise it's whichever effort they measured, and the model's detail panel names it.",
       "Because the effort level isn't identical across every model, treat these as an order-of-magnitude comparison, not a precise ranking — a 10x gap is real, a 10% gap may just be a difference in effort setting.",
       "Blank means Artificial Analysis has not run the Intelligence Index on that model — common for older or newly released models — not that it is free or cheap."
-    ]
+    ],
+    "furtherReading": {
+      "title": "Price per 1M tokens is meaningless",
+      "author": "Jan Iłowski",
+      "url": "https://janilowski.pl/en/blog/2026/price-per-m-tokens/",
+      "blurb": "Why per-token rates don't compare across labs — different tokenizers split the same text into different token counts, and models burn wildly different amounts of hidden reasoning to reach the same answer."
+    }
   },
   "dataGaps": {
     "summary": "Any figure you see as \"—\" is genuinely unpublished or unverified, never a guess. Numbers are only added once they can be traced to an official announcement, model card, or a reputable third-party benchmark tracker."
