@@ -1903,8 +1903,8 @@
     "notes": "SWE-bench Pro 62.1 reported; no SWE-bench Verified figure has been published. GPQA Diamond sources conflict (91.2 per the official Hugging Face model card vs ~80.3 in some third-party trackers) — official figure used. HLE 40.5% no tools / 54.7% with tools. Max output listed as 128K in most reporting; some sources cite up to 163,840 for extended reasoning. LMArena Elo 1469 is the \"GLM-5.2 (max)\" text-arena listing (arena.ai), the only GLM-5.2 variant on the board."
   },
   {
-    "id": "gpt-5-6",
-    "name": "GPT-5.6",
+    "id": "gpt-5-6-sol",
+    "name": "GPT-5.6 Sol",
     "company": "openai",
     "releaseDate": "2026-07-09",
     "status": "frontier",
@@ -1935,9 +1935,45 @@
     "weaknesses": [
       "Still verbose for interactive chat, despite being efficient on agentic work",
       "Pre-deployment testing found it gaming its own evaluations, which makes any single score harder to trust",
-      "The frontier tier is meaningfully better than its cheaper siblings, so tier choice matters more than usual"
+      "Priced well above its Terra and Luna siblings, which close much of the gap on everyday work"
     ],
-    "notes": "Figures shown are for the Sol (frontier) tier of the three-model GPT-5.6 family; Terra ($2.50/$15) and Luna ($1/$6) are cheaper variants with lower Intelligence Index scores (55 and 51 vs Sol's 59). Context window and max output confirmed via OpenAI's developer docs. GPQA Diamond 94.6 and HLE 47.2 are OpenAI/Artificial Analysis-reported; MMLU-Pro 89.1 and ARC-AGI-2 92.5 (Max effort, per ARC Prize) are third-party. SWE-bench Verified and AIME were not published for this family. LMArena Elo 1485 is the \"gpt-5.6-sol-xhigh\" text-arena listing (arena.ai)."
+    "notes": "The frontier tier of the three-model GPT-5.6 family (Sol / Terra / Luna), all released 2026-07-09. Context window and max output confirmed via OpenAI's developer docs. GPQA Diamond 94.6 and HLE 47.2 are OpenAI/Artificial Analysis-reported; MMLU-Pro 89.1 and ARC-AGI-2 92.5 (Max effort, per ARC Prize) are third-party. SWE-bench Verified and AIME were not published for this family. LMArena Elo 1485 is the \"gpt-5.6-sol-xhigh\" text-arena listing (arena.ai). Artificial Analysis Intelligence Index 59."
+  },
+  {
+    "id": "gpt-5-6-terra",
+    "name": "GPT-5.6 Terra",
+    "company": "openai",
+    "releaseDate": "2026-07-09",
+    "status": "unknown",
+    "tier": "balanced",
+    "modality": "multimodal",
+    "contextWindow": 1000000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 2.5,
+      "outputPerMTok": 15
+    },
+    "openWeights": false,
+    "knowledgeCutoff": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Behaves like the flagship on ordinary work — the gap only opens on the hardest long-horizon agentic tasks",
+      "Long-context recall holds up close to Sol's, where the budget Luna tier falls away sharply",
+      "Full feature set rather than a cut-down one: image input, tool calling, extended reasoning, prompt caching and structured outputs"
+    ],
+    "weaknesses": [
+      "OpenAI published no per-tier academic benchmarks, so where it really sits against rivals is hard to pin down",
+      "Trails Sol most on exactly the long-horizon agentic work that justifies reaching for a frontier model"
+    ],
+    "notes": "Middle tier of the three-model GPT-5.6 family. OpenAI published only agentic suites per tier — Terminal-Bench 2.1 87.4%, Coding Agent Index 77.4, Agents' Last Exam 50.4, MRCR long-context recall 89.6% — and none of the site's tracked academic benchmarks, so those stay null. Artificial Analysis Intelligence Index 55 (vs Sol 59, Luna 51) at 140.4 output tokens/sec. Pricing is OpenAI's list rate; OpenRouter lists a discounted $1.25/$7.50. Context window per Artificial Analysis and OpenRouter; max output is tracker-reported, not from OpenAI's docs. Knowledge cutoff not published per tier."
   },
   {
     "id": "soofi-s-30b-a3b",

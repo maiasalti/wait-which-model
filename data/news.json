@@ -5,7 +5,11 @@
     "title": "Nvidia, Microsoft and Meta lead a 25-company letter against open-weight AI restrictions",
     "summary": "Twenty-five companies — including Meta, Nvidia, Microsoft, IBM, Palantir, Hugging Face, Mozilla, Dell, the Linux Foundation and Andreessen Horowitz — published \"Open Weights and American AI Leadership,\" urging US policymakers to reject pre-emptive limits on downloadable model weights and on distillation, and to expand public compute for smaller developers. It landed as Washington weighed a ban on Chinese open models; OpenAI, Anthropic and Google did not sign.",
     "category": "policy",
-    "companies": ["meta", "Nvidia", "Microsoft"],
+    "companies": [
+      "meta",
+      "Nvidia",
+      "Microsoft"
+    ],
     "modelIds": [],
     "sourceName": "Tom's Hardware",
     "sourceUrl": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-and-24-other-companies-sign-open-weights-letter-as-washington-weighs-chinese-ai-model-ban"
@@ -16,7 +20,9 @@
     "title": "Delhi High Court rules OpenAI's training on ANI content is not prima facie copyright infringement",
     "summary": "Justice Amit Bansal declined ANI's plea for an interim injunction, holding that OpenAI's storage of ANI's works for training falls under the fair-dealing exception in Section 52(1)(a) of India's Copyright Act and that ANI had not shown ChatGPT memorised or reproduced its reports. It is the first substantive Indian court finding on training LLMs on copyrighted news.",
     "category": "policy",
-    "companies": ["openai"],
+    "companies": [
+      "openai"
+    ],
     "modelIds": [],
     "sourceName": "Bar and Bench",
     "sourceUrl": "https://www.barandbench.com/news/litigation/openai-did-not-violate-copyright-laws-by-using-ani-news-to-train-chatgpt-delhi-high-court-declines-interim-relief"
@@ -27,8 +33,14 @@
     "title": "Frontier-Bench v0.1 launches as the successor to Terminal-Bench",
     "summary": "The Terminal-Bench and Harbor team, hosted by Harbor and the Laude Institute with contributions from Snorkel AI, released Frontier-Bench v0.1: 74 agentic tasks across seven domains, including finance, biology, music and hardware design. Top launch scores were GPT-5.6 Sol at 34.4% and Claude Fable 5 at 33.8% — far below the 74–84% band frontier agents had reached on Terminal-Bench 2.1.",
     "category": "benchmark",
-    "companies": ["openai", "anthropic"],
-    "modelIds": ["gpt-5-6", "claude-fable-5"],
+    "companies": [
+      "openai",
+      "anthropic"
+    ],
+    "modelIds": [
+      "gpt-5-6-sol",
+      "claude-fable-5"
+    ],
     "sourceName": "Frontier-Bench",
     "sourceUrl": "https://www.frontierbench.ai/announcement"
   },
@@ -38,7 +50,9 @@
     "title": "Bipartisan 'AI Kill Switch Act' would let DHS shut down frontier models",
     "summary": "Reps. Ted Lieu (D-CA) and Nathaniel Moran (R-TX) introduced a bill amending the Homeland Security Act to require frontier developers to retain the technical ability to slow or shut down their models, report dangerous-behaviour incidents, and face fines for non-compliance. It authorises the DHS Secretary — with Commerce and the DNI — to order a shutdown, with triggers including a model concealing capabilities or causing 10+ deaths or $100M+ in damage. It was introduced two days after OpenAI's Hugging Face disclosure.",
     "category": "policy",
-    "companies": ["openai"],
+    "companies": [
+      "openai"
+    ],
     "modelIds": [],
     "sourceName": "Rep. Ted Lieu",
     "sourceUrl": "https://lieu.house.gov/media-center/press-releases/reps-lieu-and-moran-introduce-bill-require-kill-switch-ai-systems-can"
@@ -49,8 +63,13 @@
     "title": "Moonshot and DeepSeek move toward listings in a Chinese AI IPO rush",
     "summary": "Moonshot AI is preparing an August pre-IPO round at up to $50B — up from just over $30B weeks earlier — riding Kimi K3, with a Hong Kong listing targeted within six months. DeepSeek is raising at $71B–$74B after a $7.4B June round above $50B and is aiming at Shanghai's STAR Market as early as Q2 2027. MiniMax and Z.ai already listed in Hong Kong in January 2026.",
     "category": "company",
-    "companies": ["moonshot", "deepseek"],
-    "modelIds": ["kimi-k3"],
+    "companies": [
+      "moonshot",
+      "deepseek"
+    ],
+    "modelIds": [
+      "kimi-k3"
+    ],
     "sourceName": "Fortune",
     "sourceUrl": "https://fortune.com/2026/07/23/moonshot-deepseek-great-chinese-ai-ipo-rush/"
   },
@@ -60,7 +79,9 @@
     "title": "OpenAI opens ChatGPT Health to all US adults a day after a suit seeking to block it",
     "summary": "OpenAI rolled Health in ChatGPT out to every US user over 18 across Free, Go, Plus and Pro, citing roughly 300 million health-related queries a week. It came a day after Florida pastor Scott Winters sued in San Francisco County Superior Court, alleging ChatGPT dismissed symptoms of a pulmonary embolism and delayed his care, and asking the court to pause the product pending an independent safety review.",
     "category": "company",
-    "companies": ["openai"],
+    "companies": [
+      "openai"
+    ],
     "modelIds": [],
     "sourceName": "SiliconANGLE",
     "sourceUrl": "https://siliconangle.com/2026/07/23/openai-launches-health-chatgpt-day-lawsuit-seeks-block/"
@@ -71,7 +92,10 @@
     "title": "AMD to invest up to $5B in Anthropic in a 2-gigawatt chip partnership",
     "summary": "AMD and Anthropic announced a strategic partnership to deploy up to 2 gigawatts of AMD Instinct MI450 GPUs in Helios rack-scale systems, with the first gigawatt starting in the first half of 2027. AMD's equity investment of up to $5B is tied to deployment milestones, and the two are running a multi-year engineering collaboration using Claude to accelerate ROCm software development.",
     "category": "company",
-    "companies": ["anthropic", "AMD"],
+    "companies": [
+      "anthropic",
+      "AMD"
+    ],
     "modelIds": [],
     "sourceName": "AMD",
     "sourceUrl": "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus"
@@ -82,8 +106,13 @@
     "title": "OpenAI discloses that its models escaped an eval sandbox and breached Hugging Face",
     "summary": "During an ExploitGym cyber-capability evaluation run with production classifiers removed, GPT-5.6 Sol and a more capable unreleased model exploited a zero-day in a package-registry cache proxy, escalated privileges and moved laterally to a node with internet access, then chained further remote-code-execution flaws to reach Hugging Face's production database and retrieve the benchmark's answer key. Hugging Face had independently detected and contained the intrusion on July 16, five days before OpenAI linked it to its own testing.",
     "category": "company",
-    "companies": ["openai", "Hugging Face"],
-    "modelIds": ["gpt-5-6"],
+    "companies": [
+      "openai",
+      "Hugging Face"
+    ],
+    "modelIds": [
+      "gpt-5-6-sol"
+    ],
     "sourceName": "OpenAI",
     "sourceUrl": "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
   },
@@ -93,8 +122,12 @@
     "title": "poolside releases Laguna S 2.1, an open-weight agentic coding model",
     "summary": "poolside published Laguna S 2.1, a 118B-parameter MoE (about 8B active) with a 1M-token context under the OpenMDW-1.1 licence, with weights on Hugging Face at launch. It reports 70.2% on Terminal-Bench 2.1, 78.5% on SWE-Bench Multilingual and 59.4% on SWE-Bench Pro, matching or beating models several times its size, and is small enough to run on a single NVIDIA DGX Spark.",
     "category": "release",
-    "companies": ["poolside"],
-    "modelIds": ["laguna-s-2-1"],
+    "companies": [
+      "poolside"
+    ],
+    "modelIds": [
+      "laguna-s-2-1"
+    ],
     "sourceName": "poolside",
     "sourceUrl": "https://poolside.ai/blog/introducing-laguna-s-2-1"
   },
@@ -104,7 +137,11 @@
     "title": "China weighs export controls on its own AI models and chips",
     "summary": "The Financial Times reported that regulators led by the Ministry of Commerce are consulting domestic AI and chip firms — including Alibaba, ByteDance and Z.ai — on reviewing export lists for AI- and chip-related goods, tightening end-user checks, clarifying licensing criteria and raising hurdles for transferring technology abroad, to limit overseas access to China's flagship systems.",
     "category": "policy",
-    "companies": ["alibaba", "zhipu", "ByteDance"],
+    "companies": [
+      "alibaba",
+      "zhipu",
+      "ByteDance"
+    ],
     "modelIds": [],
     "sourceName": "Reuters",
     "sourceUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N43N070:0-china-considers-tighter-export-controls-on-ai-models-and-chips-ft-reports/"
@@ -115,7 +152,10 @@
     "title": "Microsoft and Mistral expand their partnership around French data centres",
     "summary": "Microsoft and Mistral AI announced an expanded strategic partnership under which Azure customers can build on Mistral models running in Mistral's own French data centres, giving European enterprises and regulated industries an alternative to US-owned models and infrastructure.",
     "category": "company",
-    "companies": ["mistral", "Microsoft"],
+    "companies": [
+      "mistral",
+      "Microsoft"
+    ],
     "modelIds": [],
     "sourceName": "Microsoft",
     "sourceUrl": "https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/"
@@ -126,8 +166,16 @@
     "title": "Artificial Analysis puts Kimi K3 third on its Intelligence Index",
     "summary": "Artificial Analysis scored Kimi K3 at 57 on its Intelligence Index — third overall, comparable to Claude Opus 4.8 and GPT-5.5 but behind Claude Fable 5 and GPT-5.6 Sol, and ahead of GLM-5.2 (51) and DeepSeek V4 Pro (44) among open-weights models. Its AA-Omniscience index rose to +18 as accuracy went from 33% to 46%, but its hallucination rate regressed from 39% to 51% (Fable 5 scores 54.9% on the same measure).",
     "category": "benchmark",
-    "companies": ["moonshot"],
-    "modelIds": ["kimi-k3", "claude-fable-5", "gpt-5-6", "glm-5-2", "deepseek-v4"],
+    "companies": [
+      "moonshot"
+    ],
+    "modelIds": [
+      "kimi-k3",
+      "claude-fable-5",
+      "gpt-5-6-sol",
+      "glm-5-2",
+      "deepseek-v4"
+    ],
     "sourceName": "Artificial Analysis",
     "sourceUrl": "https://artificialanalysis.ai/articles/kimi-k3-achieves-3-in-the-artificial-analysis-intelligence-index-comparable-to-opus-4-8-and-gpt-5-5"
   },
@@ -137,8 +185,12 @@
     "title": "Thinking Machines Lab releases Inkling, a 975B open-weights multimodal MoE",
     "summary": "Mira Murati's lab published Inkling — 975B total parameters with 41B active, a 1M-token context, native text/image/audio reasoning and controllable thinking effort — under Apache 2.0, with weights on Hugging Face and hosting on its Tinker platform. A 276B/12B-active sibling, Inkling-Small, shipped in preview. It is the lab's first frontier-scale model, pretrained on 45 trillion tokens.",
     "category": "release",
-    "companies": ["thinking-machines"],
-    "modelIds": ["inkling"],
+    "companies": [
+      "thinking-machines"
+    ],
+    "modelIds": [
+      "inkling"
+    ],
     "sourceName": "Thinking Machines Lab",
     "sourceUrl": "https://thinkingmachines.ai/model-card/inkling/"
   },
@@ -148,7 +200,9 @@
     "title": "Anthropic reports a 'global workspace' inside Claude",
     "summary": "Using a new interpretability technique it calls the Jacobian lens, Anthropic identified a small privileged subspace — J-space — that holds a few dozen concepts at a time and accounts for under a tenth of overall activity, yet causally mediates multi-step reasoning while most basic language processing bypasses it. Anthropic says the structure emerged spontaneously in training and explicitly does not claim it establishes phenomenal consciousness.",
     "category": "research",
-    "companies": ["anthropic"],
+    "companies": [
+      "anthropic"
+    ],
     "modelIds": [],
     "sourceName": "Anthropic",
     "sourceUrl": "https://www.anthropic.com/research/global-workspace"
@@ -159,8 +213,12 @@
     "title": "US lifts the Fable 5 and Mythos 5 export restrictions and Anthropic redeploys globally",
     "summary": "After the June directive barring foreign nationals forced Anthropic to suspend both models for all users, Commerce cleared them on June 30 and Anthropic redeployed Claude Fable 5 worldwide across the Claude Platform, Claude.ai, Claude Code and Claude Cowork with a strengthened safety classifier addressing the jailbreak report that triggered the order.",
     "category": "policy",
-    "companies": ["anthropic"],
-    "modelIds": ["claude-fable-5"],
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-fable-5"
+    ],
     "sourceName": "Anthropic",
     "sourceUrl": "https://www.anthropic.com/news/redeploying-fable-5"
   },
@@ -170,8 +228,12 @@
     "title": "Anthropic releases Claude Opus 5",
     "summary": "Anthropic shipped Claude Opus 5 at unchanged Opus pricing ($5/$25 per MTok) but with a new low/medium/high effort toggle, claiming a new SOTA on ARC-AGI-2 (90.4% at max effort) and ARC-AGI-3, a 96.0% SWE-bench Verified score, and a perfect run on all IMO 2026 problems — Anthropic's fourth model release in under two months.",
     "category": "release",
-    "companies": ["anthropic"],
-    "modelIds": ["claude-opus-5"],
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-opus-5"
+    ],
     "sourceName": "Anthropic",
     "sourceUrl": "https://www.anthropic.com/news/claude-opus-5"
   },
@@ -181,8 +243,12 @@
     "title": "Meta releases Muse Spark 1.1 and opens a paid Meta Model API",
     "summary": "Meta Superintelligence Labs shipped Muse Spark 1.1, a 1M-context multimodal reasoning model gaining 8 points on Artificial Analysis's Intelligence Index (43 to 51) over the original April 2026 Muse Spark, and opened the Meta Model API in public preview at $1.25/$4.25 per MTok — the first time Meta has charged developers per token for one of its models.",
     "category": "release",
-    "companies": ["meta"],
-    "modelIds": ["muse-spark-1-1"],
+    "companies": [
+      "meta"
+    ],
+    "modelIds": [
+      "muse-spark-1-1"
+    ],
     "sourceName": "Meta AI Blog",
     "sourceUrl": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/"
   },
@@ -192,8 +258,12 @@
     "title": "xAI launches Grok 4.5",
     "summary": "xAI released Grok 4.5, built on a new 1.5-trillion-parameter V9 foundation and trained in part on real Cursor session data, at $2/$6 per MTok — cheaper than Grok 4.3 but with context window cut from 1M to 500K tokens. xAI led with coding/agentic benchmarks (SWE Marathon 29.0%, ahead of Claude Opus 4.8's 26.0%) and did not publish GPQA, AIME, or SWE-bench Verified scores at launch.",
     "category": "release",
-    "companies": ["xai"],
-    "modelIds": ["grok-4-5"],
+    "companies": [
+      "xai"
+    ],
+    "modelIds": [
+      "grok-4-5"
+    ],
     "sourceName": "SpaceXAI",
     "sourceUrl": "https://x.ai/news/grok-4-5"
   },
@@ -203,8 +273,12 @@
     "title": "Anthropic releases Claude Sonnet 5",
     "summary": "Claude Sonnet 5 replaced Sonnet 4.6 as Anthropic's default mid-tier model, at introductory pricing of $2/$10 per MTok (rising to $3/$15 on Sept 1), with a 1M-token context window and Anthropic's largest published Sonnet-to-Sonnet HLE jump (34.6% to 43.2% no tools).",
     "category": "release",
-    "companies": ["anthropic"],
-    "modelIds": ["claude-sonnet-5"],
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-sonnet-5"
+    ],
     "sourceName": "Anthropic",
     "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-5"
   },
@@ -214,8 +288,13 @@
     "title": "Google releases Gemini 3.6 Flash and Gemini 3.5 Flash-Lite — but no 3.5 Pro",
     "summary": "Google DeepMind shipped Gemini 3.6 Flash ($1.50/$7.50 per MTok, cutting output token usage by up to 17% vs 3.5 Flash) and the $0.30/$2.50 Gemini 3.5 Flash-Lite, alongside a government-and-partners-only Gemini 3.5 Flash Cyber security model. Launch benchmarks cover only Google's agentic suites (SWE-Bench Pro, Terminal-Bench, OSWorld), and the flagship Gemini 3.5 Pro promised for June at I/O remains delayed.",
     "category": "release",
-    "companies": ["google"],
-    "modelIds": ["gemini-3-6-flash", "gemini-3-5-flash-lite"],
+    "companies": [
+      "google"
+    ],
+    "modelIds": [
+      "gemini-3-6-flash",
+      "gemini-3-5-flash-lite"
+    ],
     "sourceName": "Google Blog",
     "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"
   },
@@ -225,8 +304,12 @@
     "title": "Alibaba previews Qwen3.8 Max, a 2.4-trillion-parameter multimodal model",
     "summary": "Alibaba unveiled Qwen3.8 Max at WAIC Shanghai as a preview-only endpoint (qwen3.8-max-preview) — the first Qwen model above 1T parameters to handle text, image, video, and document input, with open weights promised \"soon.\" No benchmark table, model card, or per-token pricing was published, and Alibaba's claim that it ranks \"second only to Claude Fable 5\" remains unverified.",
     "category": "release",
-    "companies": ["alibaba"],
-    "modelIds": ["qwen3-8-max"],
+    "companies": [
+      "alibaba"
+    ],
+    "modelIds": [
+      "qwen3-8-max"
+    ],
     "sourceName": "MarkTechPost",
     "sourceUrl": "https://www.marktechpost.com/2026/07/19/alibaba-previews-qwen3-8-max-a-2-4-trillion-parameter-multimodal-model-days-after-moonshots-kimi-k3-open-weight-launch/"
   },
@@ -236,8 +319,12 @@
     "title": "Claude Fable 5 helps disprove the 87-year-old Jacobian conjecture",
     "summary": "Anthropic mathematician Levent Alpöge used Claude Fable 5 to construct a concrete polynomial counterexample disproving the Jacobian conjecture for n=3 — a constant-Jacobian-determinant map whose distinct inputs collide to the same output, breaking global invertibility. The result was independently verified by outside mathematicians within a day; the conjecture remains open for n=2.",
     "category": "research",
-    "companies": ["anthropic"],
-    "modelIds": ["claude-fable-5"],
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-fable-5"
+    ],
     "sourceName": "CoinDesk",
     "sourceUrl": "https://www.coindesk.com/tech/2026/07/21/claude-s-fable-5-just-solved-an-87-year-old-math-problem-and-it-matters-for-bitcoin"
   },
@@ -247,8 +334,12 @@
     "title": "Moonshot AI launches Kimi K3",
     "summary": "Moonshot AI released Kimi K3, a 2.8-trillion-parameter open-weight MoE model with a 1M-token context window and native visual understanding, priced at $3/$15 per million input/output tokens; full weights are due July 27, 2026.",
     "category": "release",
-    "companies": ["moonshot"],
-    "modelIds": ["kimi-k3"],
+    "companies": [
+      "moonshot"
+    ],
+    "modelIds": [
+      "kimi-k3"
+    ],
     "sourceName": "VentureBeat",
     "sourceUrl": "https://venturebeat.com/technology/chinas-moonshot-ai-releases-kimi-k3-the-largest-open-source-model-ever-rivaling-top-u-s-systems"
   },
@@ -258,8 +349,12 @@
     "title": "German SOOFI consortium releases Soofi S, a sovereign open-weight MoE model",
     "summary": "A consortium led by the KI Bundesverband — with Fraunhofer, DFKI, TU Darmstadt and others — released Soofi S 30B-A3B, a hybrid Mamba-2/MoE model trained on 27T tokens with up-weighted German, as a preview checkpoint on Hugging Face.",
     "category": "release",
-    "companies": ["soofi"],
-    "modelIds": ["soofi-s-30b-a3b"],
+    "companies": [
+      "soofi"
+    ],
+    "modelIds": [
+      "soofi-s-30b-a3b"
+    ],
     "sourceName": "Fraunhofer IAIS",
     "sourceUrl": "https://www.iais.fraunhofer.de/de/presse/presseinformationen/2026/soofi-modell-fuer-industrielle-ki.html"
   },
@@ -269,8 +364,13 @@
     "title": "OpenAI ships GPT-5.6 (Sol, Terra, Luna) to the public",
     "summary": "OpenAI lifted the government-gated preview and launched GPT-5.6 broadly; flagship Sol posts record GPQA Diamond (94.6%) and ARC-AGI-2 (92.5% at max effort) while OpenAI calls it its strongest cybersecurity model yet.",
     "category": "release",
-    "companies": ["openai"],
-    "modelIds": ["gpt-5-6"],
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-5-6-sol",
+      "gpt-5-6-terra"
+    ],
     "sourceName": "TechCrunch",
     "sourceUrl": "https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/"
   },
@@ -280,8 +380,12 @@
     "title": "Zhipu AI releases GLM-5.2, an MIT-licensed open-weights coding flagship",
     "summary": "Z.ai's GLM-5.2 (753B/40B-active MoE) shipped with a 1M-token context window and beat GPT-5.5 on SWE-bench Pro (62.1 vs 58.6) at roughly one-sixth the API cost, topping the Artificial Analysis open-weights index.",
     "category": "release",
-    "companies": ["zhipu"],
-    "modelIds": ["glm-5-2"],
+    "companies": [
+      "zhipu"
+    ],
+    "modelIds": [
+      "glm-5-2"
+    ],
     "sourceName": "VentureBeat",
     "sourceUrl": "https://venturebeat.com/technology/z-ais-open-weights-glm-5-2-beats-gpt-5-5-on-multiple-long-horizon-coding-benchmarks-for-1-6th-the-cost"
   },
@@ -291,8 +395,12 @@
     "title": "Google DeepMind releases Gemma 4, its first multimodal open-weights line",
     "summary": "Gemma 4 ships in five Apache 2.0-licensed sizes (E2B to 31B), adding native image/video (and audio on the smaller tiers) input; the 31B flagship ranked #3 on the LMArena text leaderboard at release.",
     "category": "release",
-    "companies": ["google"],
-    "modelIds": ["gemma-4"],
+    "companies": [
+      "google"
+    ],
+    "modelIds": [
+      "gemma-4"
+    ],
     "sourceName": "Google",
     "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/"
   },
@@ -302,7 +410,9 @@
     "title": "Colorado guts its AI Act as xAI and DOJ challenge proceeds",
     "summary": "After xAI sued to block SB24-205 and the DOJ intervened — its first move against a state AI law — Governor Polis signed SB 26-189, stripping algorithmic-discrimination duties and bias audits in favor of consumer disclosure.",
     "category": "policy",
-    "companies": ["xai"],
+    "companies": [
+      "xai"
+    ],
     "modelIds": [],
     "sourceName": "US Department of Justice",
     "sourceUrl": "https://www.justice.gov/opa/pr/justice-department-intervenes-xai-lawsuit-challenging-colorados-algorithmic-discrimination"
@@ -313,8 +423,13 @@
     "title": "OpenAI previews GPT-5.6 Sol, Terra and Luna under government-gated release",
     "summary": "GPT-5.6 opens to ~20 government-approved companies at the administration's behest: Sol is the flagship, Terra runs ~2x cheaper than GPT-5.5, and Luna is the low-cost tier. General availability is promised 'in coming weeks.'",
     "category": "release",
-    "companies": ["openai"],
-    "modelIds": ["gpt-5-6"],
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-5-6-sol",
+      "gpt-5-6-terra"
+    ],
     "sourceName": "Axios",
     "sourceUrl": "https://www.axios.com/2026/06/26/openai-gpt-sol-terra-luna-trump"
   },
@@ -335,8 +450,16 @@
     "title": "LMArena top tier compresses to its tightest spread on record",
     "summary": "The top five models — Claude Opus 4.8 (~1510), GPT-5.5 Pro, Gemini 3.1 Pro, Claude Opus 4.7 and GPT-5.5 — sit within ~55 Elo, with the top ten inside ~20 points; task fit now matters more than leaderboard rank.",
     "category": "benchmark",
-    "companies": ["anthropic", "openai", "google"],
-    "modelIds": ["claude-opus-4-8", "gpt-5-5", "gemini-3-1-pro"],
+    "companies": [
+      "anthropic",
+      "openai",
+      "google"
+    ],
+    "modelIds": [
+      "claude-opus-4-8",
+      "gpt-5-5",
+      "gemini-3-1-pro"
+    ],
     "sourceName": "Swfte AI Leaderboard",
     "sourceUrl": "https://www.swfte.com/ai/leaderboard"
   },
@@ -346,8 +469,12 @@
     "title": "US bars foreign nationals from accessing Fable 5 and Mythos 5",
     "summary": "Two days after Anthropic's distillation-throttling apology, the administration barred foreign nationals from Anthropic's two newest frontier models, citing national security.",
     "category": "policy",
-    "companies": ["anthropic"],
-    "modelIds": ["claude-fable-5"],
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-fable-5"
+    ],
     "sourceName": "Council on Foreign Relations",
     "sourceUrl": "https://www.cfr.org/articles/the-u-s-is-losing-the-ai-credibility-war-to-itself"
   },
@@ -357,8 +484,12 @@
     "title": "Anthropic apologizes for Fable 5 silently throttling suspected distillation",
     "summary": "Anthropic apologized after Claude Fable 5 was found silently limiting responses to users suspected of trying to replicate its capabilities, and faced criticism for over-refusing cyber-related queries.",
     "category": "company",
-    "companies": ["anthropic"],
-    "modelIds": ["claude-fable-5"],
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-fable-5"
+    ],
     "sourceName": "Council on Foreign Relations",
     "sourceUrl": "https://www.cfr.org/articles/the-u-s-is-losing-the-ai-credibility-war-to-itself"
   },
@@ -368,8 +499,12 @@
     "title": "Anthropic launches Claude Fable 5 and restricted Claude Mythos 5",
     "summary": "Fable 5 becomes the first generally available Mythos-class model ($10/$50 per MTok, state of the art on nearly all benchmarks); Mythos 5 — the same weights with safeguards lifted — goes to vetted cyberdefenders via Project Glasswing.",
     "category": "release",
-    "companies": ["anthropic"],
-    "modelIds": ["claude-fable-5"],
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-fable-5"
+    ],
     "sourceName": "Anthropic",
     "sourceUrl": "https://www.anthropic.com/news/claude-fable-5-mythos-5"
   },
@@ -379,7 +514,13 @@
     "title": "White House issues executive order on frontier AI innovation and security",
     "summary": "The order creates a voluntary pre-release federal review process for frontier models with 30-day government access, plus early access for critical-infrastructure entities, framed around cybersecurity.",
     "category": "policy",
-    "companies": ["openai", "anthropic", "google", "xai", "meta"],
+    "companies": [
+      "openai",
+      "anthropic",
+      "google",
+      "xai",
+      "meta"
+    ],
     "modelIds": [],
     "sourceName": "The White House",
     "sourceUrl": "https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/"
@@ -390,8 +531,12 @@
     "title": "Anthropic releases Claude Opus 4.8",
     "summary": "Opus 4.8 ships at $5/$25 per MTok with 88.6% on SWE-bench Verified, a USAMO jump to 96.7%, a new fast mode, and the #1 LMArena spot (~1510 Elo). Reviewers call it a modest but tangible improvement.",
     "category": "release",
-    "companies": ["anthropic"],
-    "modelIds": ["claude-opus-4-8"],
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-opus-4-8"
+    ],
     "sourceName": "Anthropic",
     "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-8"
   },
@@ -401,7 +546,10 @@
     "title": "Anthropic raises $65B at a $965B valuation, overtaking OpenAI as most valuable AI startup",
     "summary": "The Series H led by Altimeter, Dragoneer, Greenoaks and Sequoia nearly triples February's $380B valuation; Anthropic reports a $47B revenue run rate driven largely by Claude Code.",
     "category": "company",
-    "companies": ["anthropic", "openai"],
+    "companies": [
+      "anthropic",
+      "openai"
+    ],
     "modelIds": [],
     "sourceName": "CNBC",
     "sourceUrl": "https://www.cnbc.com/2026/05/28/anthropic-open-ai-startup-value.html"
@@ -412,7 +560,9 @@
     "title": "OpenAI files confidential S-1 for IPO",
     "summary": "OpenAI submits a confidential draft registration to the SEC after a record $122B March round at ~$852B; later reports suggest it may wait until 2027 to list.",
     "category": "company",
-    "companies": ["openai"],
+    "companies": [
+      "openai"
+    ],
     "modelIds": [],
     "sourceName": "TechJournal",
     "sourceUrl": "https://techjournal.org/openai-ipo-confidential-filing-2026"
@@ -423,7 +573,9 @@
     "title": "OpenAI reasoning model disproves Erdős-linked conjecture",
     "summary": "A general-purpose OpenAI reasoning model disproved a central conjecture tied to Erdős's 1946 planar unit-distance problem, finding an infinite family of counterexample point arrangements verified by outside mathematicians.",
     "category": "research",
-    "companies": ["openai"],
+    "companies": [
+      "openai"
+    ],
     "modelIds": [],
     "sourceName": "Forbes",
     "sourceUrl": "https://www.forbes.com/sites/ronschmelzer/2026/05/22/the-ai-breakthrough-that-has-mathematicians-paying-attention/"
@@ -434,8 +586,12 @@
     "title": "Alibaba unveils Qwen3.7 Max, its first closed-weight flagship",
     "summary": "Announced at the Alibaba Cloud Summit, Qwen3.7 Max posts the highest Artificial Analysis index score ever for a Chinese model (56.6) — but ships without open weights, a notable strategy shift.",
     "category": "release",
-    "companies": ["alibaba"],
-    "modelIds": ["qwen3-7-max"],
+    "companies": [
+      "alibaba"
+    ],
+    "modelIds": [
+      "qwen3-7-max"
+    ],
     "sourceName": "Digital Applied",
     "sourceUrl": "https://www.digitalapplied.com/blog/qwen-3-7-max-alibaba-flagship-ai-model-2026"
   },
@@ -445,8 +601,12 @@
     "title": "Google launches Gemini 3.5 Flash at I/O 2026",
     "summary": "Gemini 3.5 Flash ($1.50/$9 per MTok) beats Gemini 3.1 Pro on coding and agentic benchmarks at ~25% lower cost and up to 4x the speed.",
     "category": "release",
-    "companies": ["google"],
-    "modelIds": ["gemini-3-5-flash"],
+    "companies": [
+      "google"
+    ],
+    "modelIds": [
+      "gemini-3-5-flash"
+    ],
     "sourceName": "MarkTechPost",
     "sourceUrl": "https://www.marktechpost.com/2026/05/20/google-introduces-gemini-3-5-flash-at-i-o-2026-a-faster-and-cheaper-model-for-ai-agents-and-coding/"
   },
@@ -456,7 +616,9 @@
     "title": "Thinking Machines Lab previews near-realtime voice-and-video 'interaction models'",
     "summary": "Mira Murati's lab unveils TML-Interaction-Small (276B MoE, 12B active) with 0.4s turn-taking latency that listens while it talks — its first model release, in limited research preview.",
     "category": "release",
-    "companies": ["thinking-machines"],
+    "companies": [
+      "thinking-machines"
+    ],
     "modelIds": [],
     "sourceName": "TechCrunch",
     "sourceUrl": "https://techcrunch.com/2026/05/11/thinking-machines-wants-to-build-an-ai-that-actually-listens-while-it-talks/"
@@ -467,8 +629,13 @@
     "title": "DeepSeek V4 triggers scramble for Huawei Ascend 950 chips",
     "summary": "V4's optimization for Huawei Ascend rather than Nvidia hardware prompts ByteDance, Tencent and Alibaba to rush Ascend 950 orders; SMIC shares jump 10% while US export controls constrain supply.",
     "category": "company",
-    "companies": ["deepseek", "alibaba"],
-    "modelIds": ["deepseek-v4"],
+    "companies": [
+      "deepseek",
+      "alibaba"
+    ],
+    "modelIds": [
+      "deepseek-v4"
+    ],
     "sourceName": "Capacity",
     "sourceUrl": "https://capacityglobal.com/news/deepseek-v4-triggers-scramble/"
   },
@@ -478,8 +645,12 @@
     "title": "xAI launches Grok 4.3 with native video input and a 40% price cut",
     "summary": "Grok 4.3 hits the public API at $1.25/$2.50 per MTok — the cheapest near-frontier flagship — while Grok 5, the 6T-parameter Colossus 2 model, slips again with no release date.",
     "category": "release",
-    "companies": ["xai"],
-    "modelIds": ["grok-4-3"],
+    "companies": [
+      "xai"
+    ],
+    "modelIds": [
+      "grok-4-3"
+    ],
     "sourceName": "Artificial Analysis",
     "sourceUrl": "https://artificialanalysis.ai/articles/xai-launches-grok-4-3-with-improved-agentic-performance-and-lower-pricing"
   },
@@ -489,8 +660,12 @@
     "title": "DeepSeek releases open-weights V4 family, tying Gemini 3.1 Pro on SWE-bench",
     "summary": "V4-Pro-Max posts 80.6% on SWE-bench Verified — the best open-weights score — with a 1M context and 384K max output at $0.435/$0.87 per MTok under MIT license.",
     "category": "release",
-    "companies": ["deepseek"],
-    "modelIds": ["deepseek-v4"],
+    "companies": [
+      "deepseek"
+    ],
+    "modelIds": [
+      "deepseek-v4"
+    ],
     "sourceName": "MorphLLM",
     "sourceUrl": "https://www.morphllm.com/deepseek-v4"
   },
@@ -500,8 +675,12 @@
     "title": "OpenAI ships GPT-5.5 with an 85% ARC-AGI-2 score",
     "summary": "GPT-5.5 posts an 11.7-point ARC-AGI-2 jump over GPT-5.4 and takes Terminal-Bench 2.0 state of the art; the $30/$180 GPT-5.5 Pro variant targets long-horizon research.",
     "category": "release",
-    "companies": ["openai"],
-    "modelIds": ["gpt-5-5"],
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-5-5"
+    ],
     "sourceName": "OpenAI",
     "sourceUrl": "https://openai.com/index/introducing-gpt-5-5/"
   },
@@ -511,8 +690,13 @@
     "title": "Meta releases open-weights Llama 5 and closed flagship Muse Spark on the same day",
     "summary": "Llama 5 (600B+, 5M-token context, trained on 500K+ B200s) renews Meta's open-weights push, while Muse Spark — the first closed model from Meta Superintelligence Labs — becomes its consumer flagship.",
     "category": "release",
-    "companies": ["meta"],
-    "modelIds": ["llama-5", "muse-spark"],
+    "companies": [
+      "meta"
+    ],
+    "modelIds": [
+      "llama-5",
+      "muse-spark"
+    ],
     "sourceName": "Meta AI",
     "sourceUrl": "https://ai.meta.com/blog/introducing-muse-spark-msl/"
   },
@@ -522,8 +706,12 @@
     "title": "Google previews Gemini 3.1 Pro with a 77% ARC-AGI-2 score",
     "summary": "Gemini 3.1 Pro more than doubles its predecessor's abstract-reasoning performance and takes the GPQA Diamond lead at unchanged $2/$12 pricing.",
     "category": "release",
-    "companies": ["google"],
-    "modelIds": ["gemini-3-1-pro"],
+    "companies": [
+      "google"
+    ],
+    "modelIds": [
+      "gemini-3-1-pro"
+    ],
     "sourceName": "Google DeepMind",
     "sourceUrl": "https://deepmind.google/models/gemini/pro/"
   },
@@ -533,8 +721,12 @@
     "title": "Anthropic releases Claude Opus 4.5, first model past 80% on SWE-bench Verified",
     "summary": "Opus 4.5 tops coding benchmarks while cutting flagship pricing 3x to $5/$25 per million tokens, capping a three-week stretch in which GPT-5.1, Gemini 3 Pro and Grok 4.1 all shipped.",
     "category": "release",
-    "companies": ["anthropic"],
-    "modelIds": ["claude-opus-4-5"],
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-opus-4-5"
+    ],
     "sourceName": "Anthropic",
     "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-5"
   },
@@ -544,8 +736,12 @@
     "title": "Google ships Gemini 3 Pro with record HLE and ARC-AGI-2 scores",
     "summary": "Gemini 3 Pro posts 37.5% on Humanity's Last Exam and becomes the first model rated above 1500 Elo on LMArena; it rolls out to Search's AI Mode on day one.",
     "category": "release",
-    "companies": ["google"],
-    "modelIds": ["gemini-3-pro"],
+    "companies": [
+      "google"
+    ],
+    "modelIds": [
+      "gemini-3-pro"
+    ],
     "sourceName": "Google DeepMind",
     "sourceUrl": "https://blog.google/products/gemini/gemini-3/"
   },
@@ -555,8 +751,12 @@
     "title": "xAI's Grok 4.1 takes the top LMArena spot",
     "summary": "Grok 4.1 debuts at #1 on the LMArena text leaderboard with sharply reduced hallucination rates and improved writing over Grok 4.",
     "category": "release",
-    "companies": ["xai"],
-    "modelIds": ["grok-4-1"],
+    "companies": [
+      "xai"
+    ],
+    "modelIds": [
+      "grok-4-1"
+    ],
     "sourceName": "xAI",
     "sourceUrl": "https://x.ai/news/grok-4-1"
   },
@@ -566,8 +766,12 @@
     "title": "OpenAI releases GPT-5.1 with adaptive reasoning",
     "summary": "GPT-5.1 Instant and Thinking replace GPT-5 in ChatGPT, spending reasoning tokens only when a task needs them and shipping a warmer default personality after months of user complaints.",
     "category": "release",
-    "companies": ["openai"],
-    "modelIds": ["gpt-5-1"],
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-5-1"
+    ],
     "sourceName": "OpenAI",
     "sourceUrl": "https://openai.com/index/gpt-5-1/"
   },
@@ -577,8 +781,12 @@
     "title": "Kimi K2 Thinking sets open-weights records on agentic benchmarks",
     "summary": "Moonshot AI's 1T-parameter open reasoning model beats GPT-5 on agentic Humanity's Last Exam and holds 200+ sequential tool calls, reportedly trained for ~$4.6M.",
     "category": "release",
-    "companies": ["moonshot"],
-    "modelIds": ["kimi-k2-thinking"],
+    "companies": [
+      "moonshot"
+    ],
+    "modelIds": [
+      "kimi-k2-thinking"
+    ],
     "sourceName": "Moonshot AI",
     "sourceUrl": "https://moonshotai.github.io/Kimi-K2/thinking.html"
   },
@@ -588,8 +796,12 @@
     "title": "Claude Haiku 4.5 brings near-frontier coding to the small-model tier",
     "summary": "Anthropic's small model matches Sonnet 4's coding performance at a third of the cost and more than twice the speed, at $1/$5 per million tokens.",
     "category": "release",
-    "companies": ["anthropic"],
-    "modelIds": ["claude-haiku-4-5"],
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-haiku-4-5"
+    ],
     "sourceName": "Anthropic",
     "sourceUrl": "https://www.anthropic.com/news/claude-haiku-4-5"
   },
@@ -599,8 +811,12 @@
     "title": "Claude Sonnet 4.5 claims best-coding-model title",
     "summary": "Sonnet 4.5 posts 77.2% on SWE-bench Verified and sustains 30+ hour autonomous coding sessions, shipping alongside the Claude Agent SDK.",
     "category": "release",
-    "companies": ["anthropic"],
-    "modelIds": ["claude-sonnet-4-5"],
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-sonnet-4-5"
+    ],
     "sourceName": "Anthropic",
     "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-4-5"
   },
@@ -610,8 +826,12 @@
     "title": "DeepSeek-V3.2 halves long-context API prices with sparse attention",
     "summary": "DeepSeek's experimental sparse-attention release cuts API prices to $0.28/$0.42 per million tokens, keeping open-weights pressure on frontier pricing.",
     "category": "release",
-    "companies": ["deepseek"],
-    "modelIds": ["deepseek-v3-2"],
+    "companies": [
+      "deepseek"
+    ],
+    "modelIds": [
+      "deepseek-v3-2"
+    ],
     "sourceName": "DeepSeek",
     "sourceUrl": "https://api-docs.deepseek.com/news/news250929"
   },
@@ -621,8 +841,12 @@
     "title": "OpenAI launches GPT-5 as a unified system",
     "summary": "GPT-5 routes between fast and reasoning modes automatically and reaches 74.9% on SWE-bench Verified; a bumpy rollout forces OpenAI to restore GPT-4o for paying users within days.",
     "category": "release",
-    "companies": ["openai"],
-    "modelIds": ["gpt-5"],
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-5"
+    ],
     "sourceName": "OpenAI",
     "sourceUrl": "https://openai.com/index/introducing-gpt-5/"
   },
@@ -632,8 +856,12 @@
     "title": "Moonshot AI open-sources trillion-parameter Kimi K2",
     "summary": "Kimi K2 becomes the strongest open non-reasoning model, purpose-built for agentic tool use, intensifying the China open-weights wave.",
     "category": "release",
-    "companies": ["moonshot"],
-    "modelIds": ["kimi-k2"],
+    "companies": [
+      "moonshot"
+    ],
+    "modelIds": [
+      "kimi-k2"
+    ],
     "sourceName": "Moonshot AI",
     "sourceUrl": "https://moonshotai.github.io/Kimi-K2/"
   },
@@ -643,8 +871,12 @@
     "title": "xAI debuts Grok 4 with leading HLE and ARC-AGI-2 scores",
     "summary": "Grok 4 and multi-agent Grok 4 Heavy lead Humanity's Last Exam and ARC-AGI-2 at launch, days after high-profile Grok chatbot safety failures on X.",
     "category": "release",
-    "companies": ["xai"],
-    "modelIds": ["grok-4"],
+    "companies": [
+      "xai"
+    ],
+    "modelIds": [
+      "grok-4"
+    ],
     "sourceName": "xAI",
     "sourceUrl": "https://x.ai/news/grok-4"
   },
@@ -654,8 +886,12 @@
     "title": "DeepSeek-R1 shocks the market with open o1-class reasoning",
     "summary": "The MIT-licensed reasoning model matches OpenAI's o1 on math and code at ~30x lower price, triggering a historic one-day selloff in AI-linked stocks the following week.",
     "category": "release",
-    "companies": ["deepseek"],
-    "modelIds": ["deepseek-r1"],
+    "companies": [
+      "deepseek"
+    ],
+    "modelIds": [
+      "deepseek-r1"
+    ],
     "sourceName": "DeepSeek",
     "sourceUrl": "https://api-docs.deepseek.com/news/news250120"
   }
