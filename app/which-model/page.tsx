@@ -26,7 +26,17 @@ const TASK_TAGS = [
   { id: "chat", label: "Everyday chat", phrase: "day-to-day chat" },
   { id: "writing", label: "Writing", phrase: "drafting or editing prose" },
   { id: "analysis", label: "Data analysis", phrase: "analysing data to spot patterns" },
-  { id: "vision", label: "Images", phrase: "reading images, screenshots and charts" },
+  // Reading images, not making them: the directory's `modality` field records
+  // what a model accepts as *input*, so there's no image-generation data here
+  // to recommend on. The label has to say so, or people will pick it expecting
+  // the opposite.
+  {
+    id: "vision",
+    label: "Reading images",
+    // "or" not "and" — this tag sits late in the list, so it often lands last
+    // in the join, where a second "and" would read as a run-on.
+    phrase: "interpreting images, screenshots or charts",
+  },
   { id: "agents", label: "Automation", phrase: "running long automated tasks that use tools" },
 ] as const;
 
