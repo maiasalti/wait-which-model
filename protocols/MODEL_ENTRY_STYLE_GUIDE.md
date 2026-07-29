@@ -47,6 +47,7 @@ How every record in `data/models.json` is written, so new models added by the re
 | `contextWindow` / `maxOutput` | raw token integers, `null` if unpublished | `1000000`, `200000`, `65536` — never strings like "1M" (the UI formats) |
 | `pricing` | USD per million tokens, **base API tier**; numbers not strings; `null` if no public API | surcharges (long-context 2x, fast mode) go in `notes` |
 | `openWeights` | `true` only if weights are downloadable | license nuances (research-only) go in `notes` or weaknesses |
+| `availability` | `general` \| `restricted` \| `self-host` — **can a person actually go and use this today?** `general` = public API, consumer app, or a mainstream host (an OpenRouter/DeepInfra listing counts). `restricted` = preview, waitlist, vetted partners, subscription-only, or an app with no API to build on. `self-host` = weights only, no practical hosted option. Default `general`; justify anything else in `notes` | Never rendered in the UI — it exists so the Which Model Tool stops recommending models a visitor cannot obtain. Not the same as `openWeights`: an open-weights model that any host serves is `general` |
 | `knowledgeCutoff` | `"YYYY-MM"`, `null` if unpublished | never guess from behavior |
 | `benchmarks` | numbers with the precision the source reports (typically 1 decimal), `null` if unverified; include ALL seven keys explicitly | percentages as `88.6` not `0.886`; Elo as integer |
 | `strengths` | 2–4 items | see voice rules below |

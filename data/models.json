@@ -14,6 +14,7 @@
       "outputPerMTok": 60
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2021-09",
     "benchmarks": {
       "mmluPro": null,
@@ -51,6 +52,7 @@
       "outputPerMTok": 30
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2023-12",
     "benchmarks": {
       "mmluPro": 63.7,
@@ -88,6 +90,7 @@
       "outputPerMTok": 10
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2023-10",
     "benchmarks": {
       "mmluPro": 74.7,
@@ -125,6 +128,7 @@
       "outputPerMTok": 60
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2023-10",
     "benchmarks": {
       "mmluPro": null,
@@ -162,6 +166,7 @@
       "outputPerMTok": 8
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2024-06",
     "benchmarks": {
       "mmluPro": 80.5,
@@ -199,6 +204,7 @@
       "outputPerMTok": 8
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2024-06",
     "benchmarks": {
       "mmluPro": 85.6,
@@ -236,6 +242,7 @@
       "outputPerMTok": 10
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2024-10",
     "benchmarks": {
       "mmluPro": 87,
@@ -273,6 +280,7 @@
       "outputPerMTok": 10
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2024-10",
     "benchmarks": {
       "mmluPro": null,
@@ -309,6 +317,7 @@
       "outputPerMTok": 75
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2023-08",
     "benchmarks": {
       "mmluPro": 68.5,
@@ -346,6 +355,7 @@
       "outputPerMTok": 15
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2024-04",
     "benchmarks": {
       "mmluPro": 76.1,
@@ -383,6 +393,7 @@
       "outputPerMTok": 15
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2024-10",
     "benchmarks": {
       "mmluPro": 80.7,
@@ -419,6 +430,7 @@
       "outputPerMTok": 75
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2025-03",
     "benchmarks": {
       "mmluPro": 87.4,
@@ -455,6 +467,7 @@
       "outputPerMTok": 15
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2025-03",
     "benchmarks": {
       "mmluPro": 83.8,
@@ -491,6 +504,7 @@
       "outputPerMTok": 75
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2025-03",
     "benchmarks": {
       "mmluPro": null,
@@ -527,6 +541,7 @@
       "outputPerMTok": 15
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2025-07",
     "benchmarks": {
       "mmluPro": null,
@@ -563,6 +578,7 @@
       "outputPerMTok": 5
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2025-02",
     "benchmarks": {
       "mmluPro": null,
@@ -599,6 +615,7 @@
       "outputPerMTok": 25
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2025-08",
     "benchmarks": {
       "mmluPro": null,
@@ -635,6 +652,7 @@
       "outputPerMTok": 5
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2023-11",
     "benchmarks": {
       "mmluPro": 69,
@@ -672,6 +690,7 @@
       "outputPerMTok": 0.4
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2024-08",
     "benchmarks": {
       "mmluPro": 77.6,
@@ -708,6 +727,7 @@
       "outputPerMTok": 10
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2025-01",
     "benchmarks": {
       "mmluPro": 86.2,
@@ -745,6 +765,7 @@
       "outputPerMTok": 12
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2025-01",
     "benchmarks": {
       "mmluPro": 89.8,
@@ -782,6 +803,7 @@
       "outputPerMTok": 3.5
     },
     "openWeights": true,
+    "availability": "general",
     "knowledgeCutoff": "2023-12",
     "benchmarks": {
       "mmluPro": 73.3,
@@ -819,6 +841,7 @@
       "outputPerMTok": 0.85
     },
     "openWeights": true,
+    "availability": "general",
     "knowledgeCutoff": "2024-08",
     "benchmarks": {
       "mmluPro": 80.5,
@@ -856,6 +879,7 @@
       "outputPerMTok": 15
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2024-11",
     "benchmarks": {
       "mmluPro": 79.9,
@@ -893,6 +917,7 @@
       "outputPerMTok": 15
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2024-11",
     "benchmarks": {
       "mmluPro": 86.6,
@@ -930,6 +955,7 @@
       "outputPerMTok": 15
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2024-11",
     "benchmarks": {
       "mmluPro": null,
@@ -966,6 +992,7 @@
       "outputPerMTok": 6
     },
     "openWeights": true,
+    "availability": "general",
     "knowledgeCutoff": "2024-06",
     "benchmarks": {
       "mmluPro": 69.4,
@@ -1002,6 +1029,7 @@
       "outputPerMTok": 2
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2025-01",
     "benchmarks": {
       "mmluPro": 77.2,
@@ -1038,6 +1066,7 @@
       "outputPerMTok": 1.1
     },
     "openWeights": true,
+    "availability": "general",
     "knowledgeCutoff": "2024-07",
     "benchmarks": {
       "mmluPro": 75.9,
@@ -1075,6 +1104,7 @@
       "outputPerMTok": 2.19
     },
     "openWeights": true,
+    "availability": "general",
     "knowledgeCutoff": "2024-07",
     "benchmarks": {
       "mmluPro": 84,
@@ -1112,6 +1142,7 @@
       "outputPerMTok": 0.42
     },
     "openWeights": true,
+    "availability": "general",
     "knowledgeCutoff": "2025-07",
     "benchmarks": {
       "mmluPro": 85,
@@ -1148,6 +1179,7 @@
       "outputPerMTok": 0.6
     },
     "openWeights": true,
+    "availability": "general",
     "knowledgeCutoff": "2024-10",
     "benchmarks": {
       "mmluPro": 82.8,
@@ -1184,6 +1216,7 @@
       "outputPerMTok": 6
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2025-06",
     "benchmarks": {
       "mmluPro": 85.4,
@@ -1220,6 +1253,7 @@
       "outputPerMTok": 2.5
     },
     "openWeights": true,
+    "availability": "general",
     "knowledgeCutoff": "2025-04",
     "benchmarks": {
       "mmluPro": 81.1,
@@ -1256,6 +1290,7 @@
       "outputPerMTok": 2.5
     },
     "openWeights": true,
+    "availability": "general",
     "knowledgeCutoff": "2025-04",
     "benchmarks": {
       "mmluPro": 84.6,
@@ -1292,6 +1327,7 @@
       "outputPerMTok": 15
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": null,
     "benchmarks": {
       "mmluPro": null,
@@ -1329,6 +1365,7 @@
       "outputPerMTok": 1.5
     },
     "openWeights": true,
+    "availability": "general",
     "knowledgeCutoff": null,
     "benchmarks": {
       "mmluPro": null,
@@ -1365,6 +1402,7 @@
       "outputPerMTok": 12
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2025-01",
     "benchmarks": {
       "mmluPro": null,
@@ -1402,6 +1440,7 @@
       "outputPerMTok": 3.4
     },
     "openWeights": true,
+    "availability": "general",
     "knowledgeCutoff": null,
     "benchmarks": {
       "mmluPro": 87.8,
@@ -1438,6 +1477,7 @@
       "outputPerMTok": 0.6
     },
     "openWeights": true,
+    "availability": "general",
     "knowledgeCutoff": null,
     "benchmarks": {
       "mmluPro": 78,
@@ -1474,6 +1514,7 @@
       "outputPerMTok": null
     },
     "openWeights": true,
+    "availability": "self-host",
     "knowledgeCutoff": null,
     "benchmarks": {
       "mmluPro": null,
@@ -1511,6 +1552,7 @@
       "outputPerMTok": null
     },
     "openWeights": false,
+    "availability": "restricted",
     "knowledgeCutoff": null,
     "benchmarks": {
       "mmluPro": null,
@@ -1547,6 +1589,7 @@
       "outputPerMTok": 30
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2025-12",
     "benchmarks": {
       "mmluPro": null,
@@ -1584,6 +1627,7 @@
       "outputPerMTok": 0.87
     },
     "openWeights": true,
+    "availability": "general",
     "knowledgeCutoff": null,
     "benchmarks": {
       "mmluPro": 87.5,
@@ -1621,6 +1665,7 @@
       "outputPerMTok": 2.5
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": null,
     "benchmarks": {
       "mmluPro": null,
@@ -1657,6 +1702,7 @@
       "outputPerMTok": 9
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2025-01",
     "benchmarks": {
       "mmluPro": null,
@@ -1694,6 +1740,7 @@
       "outputPerMTok": null
     },
     "openWeights": false,
+    "availability": "restricted",
     "knowledgeCutoff": null,
     "benchmarks": {
       "mmluPro": null,
@@ -1730,6 +1777,7 @@
       "outputPerMTok": 7.5
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": null,
     "benchmarks": {
       "mmluPro": 89.6,
@@ -1767,6 +1815,7 @@
       "outputPerMTok": 25
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2026-01",
     "benchmarks": {
       "mmluPro": null,
@@ -1804,6 +1853,7 @@
       "outputPerMTok": 50
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2026-01",
     "benchmarks": {
       "mmluPro": null,
@@ -1842,6 +1892,7 @@
       "outputPerMTok": 0.34
     },
     "openWeights": true,
+    "availability": "general",
     "knowledgeCutoff": "2025-01",
     "benchmarks": {
       "mmluPro": 85.2,
@@ -1880,6 +1931,7 @@
       "outputPerMTok": 4.4
     },
     "openWeights": true,
+    "availability": "general",
     "knowledgeCutoff": "2026-03",
     "benchmarks": {
       "mmluPro": 80.6,
@@ -1917,6 +1969,7 @@
       "outputPerMTok": 30
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2026-02",
     "benchmarks": {
       "mmluPro": 89.1,
@@ -1954,6 +2007,7 @@
       "outputPerMTok": 15
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": null,
     "benchmarks": {
       "mmluPro": null,
@@ -1990,6 +2044,7 @@
       "outputPerMTok": null
     },
     "openWeights": true,
+    "availability": "self-host",
     "knowledgeCutoff": null,
     "benchmarks": {
       "mmluPro": 51.4,
@@ -2028,6 +2083,7 @@
       "outputPerMTok": 7.5
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2026-03",
     "benchmarks": {
       "mmluPro": null,
@@ -2064,6 +2120,7 @@
       "outputPerMTok": 2.5
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2026-03",
     "benchmarks": {
       "mmluPro": null,
@@ -2100,6 +2157,7 @@
       "outputPerMTok": 10
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2026-01",
     "benchmarks": {
       "mmluPro": null,
@@ -2137,6 +2195,7 @@
       "outputPerMTok": 6
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2026-02",
     "benchmarks": {
       "mmluPro": null,
@@ -2174,6 +2233,7 @@
       "outputPerMTok": 4.25
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": null,
     "benchmarks": {
       "mmluPro": null,
@@ -2210,6 +2270,7 @@
       "outputPerMTok": 25
     },
     "openWeights": false,
+    "availability": "general",
     "knowledgeCutoff": "2026-05",
     "benchmarks": {
       "mmluPro": null,
@@ -2248,6 +2309,7 @@
       "outputPerMTok": 4.68
     },
     "openWeights": true,
+    "availability": "general",
     "knowledgeCutoff": null,
     "benchmarks": {
       "mmluPro": null,
@@ -2285,6 +2347,7 @@
       "outputPerMTok": 0.2
     },
     "openWeights": true,
+    "availability": "general",
     "knowledgeCutoff": null,
     "benchmarks": {
       "mmluPro": null,

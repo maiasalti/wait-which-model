@@ -28,6 +28,14 @@ export interface Model {
   maxOutput: number | null;
   pricing: Pricing;
   openWeights: boolean;
+  /** Can a person actually obtain and use this model today?
+   *  - `general`   — yes: a public API, a consumer app, or a mainstream host
+   *  - `restricted` — gated: preview, waitlist, vetted partners, subscription-only,
+   *                   or an app with no API you can build on
+   *  - `self-host`  — only by running the weights on hardware you provide
+   *  Not rendered anywhere in the UI — it exists so the recommender stops
+   *  suggesting models a visitor could not go and use. */
+  availability: "general" | "restricted" | "self-host";
   knowledgeCutoff: string | null;
   benchmarks: Partial<Record<BenchmarkKey, number | null>>;
   strengths: string[];
