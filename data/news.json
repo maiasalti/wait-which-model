@@ -345,6 +345,30 @@
     "sourceUrl": "https://www.anthropic.com/research/global-workspace"
   },
   {
+    "id": "2026-07-05-price-per-m-tokens",
+    "date": "2026-07-05",
+    "title": "\"Price per 1M tokens is meaningless\" argues for comparing models on cost per task",
+    "summary": "Jan Iłowski argues that per-token pricing can't be compared across labs — tokenizers split text differently, and hidden reasoning tokens bill at output rates — so cost per completed task is the meaningful figure. His table shows the inversion: GPT-5.5 costs more per token than Claude Opus 4.8 ($5/$30 vs $5/$25) yet finishes tasks for about half as much ($0.99 vs $1.78), while DeepSeek V4 Pro lands near $0.04.",
+    "category": "benchmark",
+    "companies": [
+      "openai",
+      "anthropic",
+      "deepseek",
+      "zhipu",
+      "moonshot"
+    ],
+    "modelIds": [
+      "gpt-5-5",
+      "claude-opus-4-8",
+      "claude-sonnet-5",
+      "claude-fable-5",
+      "deepseek-v4",
+      "glm-5-2"
+    ],
+    "sourceName": "Jan Iłowski",
+    "sourceUrl": "https://janilowski.pl/en/blog/2026/price-per-m-tokens/"
+  },
+  {
     "id": "2026-07-01-fable-5-redeployed",
     "date": "2026-07-01",
     "title": "US lifts the Fable 5 and Mythos 5 export restrictions and Anthropic redeploys globally",

@@ -13,6 +13,7 @@ type SortKey =
   | "oldest"
   | "priceAsc"
   | "priceOutputAsc"
+  | "costPerTaskAsc"
   | "sweBench"
   | "gpqaDiamond"
   | "hle";
@@ -22,6 +23,7 @@ const SORTS: { key: SortKey; label: string }[] = [
   { key: "oldest", label: "Oldest first" },
   { key: "priceAsc", label: "Cheapest input $" },
   { key: "priceOutputAsc", label: "Cheapest output $" },
+  { key: "costPerTaskAsc", label: "Cheapest per task" },
   { key: "sweBench", label: "Best SWE-bench" },
   { key: "gpqaDiamond", label: "Best GPQA" },
   { key: "hle", label: "Best HLE" },
@@ -69,6 +71,11 @@ export default function DirectoryPage() {
           return (a.pricing.inputPerMTok ?? Infinity) - (b.pricing.inputPerMTok ?? Infinity);
         case "priceOutputAsc":
           return (a.pricing.outputPerMTok ?? Infinity) - (b.pricing.outputPerMTok ?? Infinity);
+        // What a task actually costs, rather than what a token costs — a verbose
+        // model can be cheap per token and expensive per finished result. Models
+        // AA hasn't measured sort last rather than pretending to be free.
+        case "costPerTaskAsc":
+          return (a.costPerTask.usd ?? Infinity) - (b.costPerTask.usd ?? Infinity);
         default:
           return bench(b, sort) - bench(a, sort);
       }
