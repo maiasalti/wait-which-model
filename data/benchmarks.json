@@ -24,6 +24,14 @@
     "max": 100
   },
   {
+    "key": "terminalBench",
+    "name": "Terminal-Bench 2.1",
+    "description": "Long-horizon agentic tasks executed in a real terminal; increasingly reported in place of SWE-bench Verified. Version 2.1 only — 2.0 scores are not comparable and are left unset.",
+    "unit": "%",
+    "higherIsBetter": true,
+    "max": 100
+  },
+  {
     "key": "aime",
     "name": "AIME (latest)",
     "description": "American Invitational Mathematics Examination — competition math, no tools unless noted.",

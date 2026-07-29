@@ -16,12 +16,14 @@ How every record in `data/models.json` is written, so new models added by the re
   "contextWindow": 1000000,
   "maxOutput": 128000,
   "pricing": { "inputPerMTok": 5, "outputPerMTok": 25 },
+  "costPerTask": { "usd": 1.7972, "effort": "max" },
   "openWeights": false,
   "knowledgeCutoff": "2026-01",
   "benchmarks": {
     "mmluPro": null,
     "gpqaDiamond": 93.6,
     "sweBench": 88.6,
+    "terminalBench": null,
     "aime": null,
     "hle": 49.8,
     "lmarenaElo": 1510,
@@ -46,10 +48,11 @@ How every record in `data/models.json` is written, so new models added by the re
 | `modality` | `multimodal` if it accepts images (or more); `text` otherwise | UI capitalizes it |
 | `contextWindow` / `maxOutput` | raw token integers, `null` if unpublished | `1000000`, `200000`, `65536` — never strings like "1M" (the UI formats) |
 | `pricing` | USD per million tokens, **base API tier**; numbers not strings; `null` if no public API | surcharges (long-context 2x, fast mode) go in `notes` |
+| `costPerTask` | `usd`: Artificial Analysis' "cost per Intelligence Index task" (the per-task USD figure on artificialanalysis.ai — the leaderboard payload carries it as `intelligenceIndexCostPerTask.cost.total`), 4 decimals, `null` if AA hasn't run the index on the model. `effort`: which reasoning setting the figure was measured at — **use AA's medium-effort variant whenever it has a cost, otherwise the variant that does**, and record `low`/`medium`/`high`/`xhigh`/`max`, or `null` when the model has no effort levels | This is the headline cost metric on the model card (it replaced $ in/out there); per-token `pricing` still shows in the drawer. Never derive it from token prices — it's an AA measurement or it's `null` |
 | `openWeights` | `true` only if weights are downloadable | license nuances (research-only) go in `notes` or weaknesses |
 | `availability` | `general` \| `restricted` \| `self-host` — **can a person actually go and use this today?** `general` = public API, consumer app, or a mainstream host (an OpenRouter/DeepInfra listing counts). `restricted` = preview, waitlist, vetted partners, subscription-only, or an app with no API to build on. `self-host` = weights only, no practical hosted option. Default `general`; justify anything else in `notes` | Never rendered in the UI — it exists so the Which Model Tool stops recommending models a visitor cannot obtain. Not the same as `openWeights`: an open-weights model that any host serves is `general` |
 | `knowledgeCutoff` | `"YYYY-MM"`, `null` if unpublished | never guess from behavior |
-| `benchmarks` | numbers with the precision the source reports (typically 1 decimal), `null` if unverified; include ALL seven keys explicitly | percentages as `88.6` not `0.886`; Elo as integer |
+| `benchmarks` | numbers with the precision the source reports (typically 1 decimal), `null` if unverified; include ALL eight keys explicitly | percentages as `88.6` not `0.886`; Elo as integer. `terminalBench` is **Terminal-Bench 2.1 only** — 2.0 scores are not comparable, so leave the cell null and put the 2.0 figure in `notes` |
 | `strengths` | 2–4 items | see voice rules below |
 | `weaknesses` | 1–3 items | see voice rules below |
 | `notes` | one short sentence or `""` — provenance, caveats, conflicts | `"HLE 64.5% is with tools; GPQA/SWE figures are third-party."` |

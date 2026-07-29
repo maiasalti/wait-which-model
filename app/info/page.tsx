@@ -87,6 +87,19 @@ export default function InfoPage() {
       </section>
 
       <section className="mb-10">
+        <h2 className="text-lg font-semibold">Cost per task</h2>
+        <p className="mt-2 text-sm text-ink-2">{methodology.costPerTask.summary}</p>
+        <ul className="mt-4 space-y-3">
+          {methodology.costPerTask.notes.map((n) => (
+            <li key={n} className="flex gap-3 rounded border border-line p-3 text-sm text-ink-2">
+              <span className="mono mt-0.5 shrink-0 text-ink-3">→</span>
+              <span>{n}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="mb-10">
         <h2 className="text-lg font-semibold">Why some numbers are missing</h2>
         <p className="mt-2 text-sm text-ink-2">{methodology.dataGaps.summary}</p>
       </section>

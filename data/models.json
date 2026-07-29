@@ -13,6 +13,10 @@
       "inputPerMTok": 30,
       "outputPerMTok": 60
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2021-09",
@@ -20,6 +24,7 @@
       "mmluPro": null,
       "gpqaDiamond": 35.7,
       "sweBench": null,
+      "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1163,
@@ -51,6 +56,10 @@
       "inputPerMTok": 10,
       "outputPerMTok": 30
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2023-12",
@@ -58,6 +67,7 @@
       "mmluPro": 63.7,
       "gpqaDiamond": 48,
       "sweBench": null,
+      "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1256,
@@ -89,6 +99,10 @@
       "inputPerMTok": 2.5,
       "outputPerMTok": 10
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2023-10",
@@ -96,6 +110,7 @@
       "mmluPro": 74.7,
       "gpqaDiamond": 53.6,
       "sweBench": 33.2,
+      "terminalBench": null,
       "aime": 13.4,
       "hle": 2.7,
       "lmarenaElo": 1318,
@@ -127,6 +142,10 @@
       "inputPerMTok": 15,
       "outputPerMTok": 60
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2023-10",
@@ -134,6 +153,7 @@
       "mmluPro": null,
       "gpqaDiamond": 78,
       "sweBench": 48.9,
+      "terminalBench": null,
       "aime": 79.2,
       "hle": 9.1,
       "lmarenaElo": 1352,
@@ -165,6 +185,10 @@
       "inputPerMTok": 2,
       "outputPerMTok": 8
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2024-06",
@@ -172,6 +196,7 @@
       "mmluPro": 80.5,
       "gpqaDiamond": 66.3,
       "sweBench": 54.6,
+      "terminalBench": null,
       "aime": 48.1,
       "hle": 5.4,
       "lmarenaElo": 1366,
@@ -203,6 +228,10 @@
       "inputPerMTok": 2,
       "outputPerMTok": 8
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2024-06",
@@ -210,6 +239,7 @@
       "mmluPro": 85.6,
       "gpqaDiamond": 83.3,
       "sweBench": 69.1,
+      "terminalBench": null,
       "aime": 91.6,
       "hle": 20.3,
       "lmarenaElo": 1418,
@@ -241,6 +271,10 @@
       "inputPerMTok": 1.25,
       "outputPerMTok": 10
     },
+    "costPerTask": {
+      "usd": 0.2215,
+      "effort": "high"
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2024-10",
@@ -248,6 +282,7 @@
       "mmluPro": 87,
       "gpqaDiamond": 85.7,
       "sweBench": 74.9,
+      "terminalBench": null,
       "aime": 94.6,
       "hle": 24.8,
       "lmarenaElo": 1442,
@@ -279,6 +314,10 @@
       "inputPerMTok": 1.25,
       "outputPerMTok": 10
     },
+    "costPerTask": {
+      "usd": 0.2701,
+      "effort": "high"
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2024-10",
@@ -286,6 +325,7 @@
       "mmluPro": null,
       "gpqaDiamond": 88.1,
       "sweBench": 76.3,
+      "terminalBench": null,
       "aime": null,
       "hle": 26.5,
       "lmarenaElo": 1465,
@@ -316,6 +356,10 @@
       "inputPerMTok": 15,
       "outputPerMTok": 75
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2023-08",
@@ -323,6 +367,7 @@
       "mmluPro": 68.5,
       "gpqaDiamond": 50.4,
       "sweBench": 22.7,
+      "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1263,
@@ -354,6 +399,10 @@
       "inputPerMTok": 3,
       "outputPerMTok": 15
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2024-04",
@@ -361,6 +410,7 @@
       "mmluPro": 76.1,
       "gpqaDiamond": 59.4,
       "sweBench": 49,
+      "terminalBench": null,
       "aime": 16,
       "hle": 4.8,
       "lmarenaElo": 1300,
@@ -392,6 +442,10 @@
       "inputPerMTok": 3,
       "outputPerMTok": 15
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2024-10",
@@ -399,6 +453,7 @@
       "mmluPro": 80.7,
       "gpqaDiamond": 84.8,
       "sweBench": 70.3,
+      "terminalBench": null,
       "aime": 61.3,
       "hle": 8.9,
       "lmarenaElo": 1350,
@@ -429,6 +484,10 @@
       "inputPerMTok": 15,
       "outputPerMTok": 75
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-03",
@@ -436,6 +495,7 @@
       "mmluPro": 87.4,
       "gpqaDiamond": 83.3,
       "sweBench": 72.5,
+      "terminalBench": null,
       "aime": 75.5,
       "hle": 11.7,
       "lmarenaElo": 1420,
@@ -466,6 +526,10 @@
       "inputPerMTok": 3,
       "outputPerMTok": 15
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-03",
@@ -473,6 +537,7 @@
       "mmluPro": 83.8,
       "gpqaDiamond": 75.4,
       "sweBench": 72.7,
+      "terminalBench": null,
       "aime": 70.5,
       "hle": 9.2,
       "lmarenaElo": 1386,
@@ -503,6 +568,10 @@
       "inputPerMTok": 15,
       "outputPerMTok": 75
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-03",
@@ -510,6 +579,7 @@
       "mmluPro": null,
       "gpqaDiamond": 80.9,
       "sweBench": 74.5,
+      "terminalBench": null,
       "aime": 78,
       "hle": null,
       "lmarenaElo": 1430,
@@ -540,6 +610,10 @@
       "inputPerMTok": 3,
       "outputPerMTok": 15
     },
+    "costPerTask": {
+      "usd": 0.4129,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-07",
@@ -547,6 +621,7 @@
       "mmluPro": null,
       "gpqaDiamond": 83.4,
       "sweBench": 77.2,
+      "terminalBench": null,
       "aime": 87,
       "hle": 17.3,
       "lmarenaElo": 1449,
@@ -577,6 +652,10 @@
       "inputPerMTok": 1,
       "outputPerMTok": 5
     },
+    "costPerTask": {
+      "usd": 0.2371,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-02",
@@ -584,6 +663,7 @@
       "mmluPro": null,
       "gpqaDiamond": 73,
       "sweBench": 73.3,
+      "terminalBench": null,
       "aime": 83,
       "hle": null,
       "lmarenaElo": 1405,
@@ -614,6 +694,10 @@
       "inputPerMTok": 5,
       "outputPerMTok": 25
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-08",
@@ -621,6 +705,7 @@
       "mmluPro": null,
       "gpqaDiamond": 87,
       "sweBench": 80.9,
+      "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1470,
@@ -651,6 +736,10 @@
       "inputPerMTok": 1.25,
       "outputPerMTok": 5
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2023-11",
@@ -658,6 +747,7 @@
       "mmluPro": 69,
       "gpqaDiamond": 46.2,
       "sweBench": null,
+      "terminalBench": null,
       "aime": null,
       "hle": 4.6,
       "lmarenaElo": 1302,
@@ -689,6 +779,10 @@
       "inputPerMTok": 0.1,
       "outputPerMTok": 0.4
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2024-08",
@@ -696,6 +790,7 @@
       "mmluPro": 77.6,
       "gpqaDiamond": 62.1,
       "sweBench": 51.8,
+      "terminalBench": null,
       "aime": null,
       "hle": 6.6,
       "lmarenaElo": 1356,
@@ -726,6 +821,10 @@
       "inputPerMTok": 1.25,
       "outputPerMTok": 10
     },
+    "costPerTask": {
+      "usd": 0.1978,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-01",
@@ -733,6 +832,7 @@
       "mmluPro": 86.2,
       "gpqaDiamond": 84,
       "sweBench": 63.8,
+      "terminalBench": null,
       "aime": 86.7,
       "hle": 18.8,
       "lmarenaElo": 1446,
@@ -764,6 +864,10 @@
       "inputPerMTok": 2,
       "outputPerMTok": 12
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-01",
@@ -771,6 +875,7 @@
       "mmluPro": 89.8,
       "gpqaDiamond": 91.9,
       "sweBench": 76.2,
+      "terminalBench": null,
       "aime": 95,
       "hle": 37.5,
       "lmarenaElo": 1501,
@@ -802,6 +907,10 @@
       "inputPerMTok": 3.5,
       "outputPerMTok": 3.5
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2023-12",
@@ -809,6 +918,7 @@
       "mmluPro": 73.3,
       "gpqaDiamond": 51.1,
       "sweBench": null,
+      "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1269,
@@ -840,6 +950,10 @@
       "inputPerMTok": 0.27,
       "outputPerMTok": 0.85
     },
+    "costPerTask": {
+      "usd": 0.0286,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2024-08",
@@ -847,6 +961,7 @@
       "mmluPro": 80.5,
       "gpqaDiamond": 69.8,
       "sweBench": null,
+      "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1330,
@@ -878,6 +993,10 @@
       "inputPerMTok": 3,
       "outputPerMTok": 15
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2024-11",
@@ -885,6 +1004,7 @@
       "mmluPro": 79.9,
       "gpqaDiamond": 84.6,
       "sweBench": null,
+      "terminalBench": null,
       "aime": 93.3,
       "hle": null,
       "lmarenaElo": 1402,
@@ -916,6 +1036,10 @@
       "inputPerMTok": 3,
       "outputPerMTok": 15
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2024-11",
@@ -923,6 +1047,7 @@
       "mmluPro": 86.6,
       "gpqaDiamond": 87.5,
       "sweBench": 72,
+      "terminalBench": null,
       "aime": 91.7,
       "hle": 25.4,
       "lmarenaElo": 1435,
@@ -954,6 +1079,10 @@
       "inputPerMTok": 3,
       "outputPerMTok": 15
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2024-11",
@@ -961,6 +1090,7 @@
       "mmluPro": null,
       "gpqaDiamond": 88,
       "sweBench": null,
+      "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1483,
@@ -991,6 +1121,10 @@
       "inputPerMTok": 2,
       "outputPerMTok": 6
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2024-06",
@@ -998,6 +1132,7 @@
       "mmluPro": 69.4,
       "gpqaDiamond": 48.6,
       "sweBench": null,
+      "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1250,
@@ -1028,6 +1163,10 @@
       "inputPerMTok": 0.4,
       "outputPerMTok": 2
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-01",
@@ -1035,6 +1174,7 @@
       "mmluPro": 77.2,
       "gpqaDiamond": 57.7,
       "sweBench": null,
+      "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1330,
@@ -1065,6 +1205,10 @@
       "inputPerMTok": 0.27,
       "outputPerMTok": 1.1
     },
+    "costPerTask": {
+      "usd": 0.0231,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2024-07",
@@ -1072,6 +1216,7 @@
       "mmluPro": 75.9,
       "gpqaDiamond": 59.1,
       "sweBench": 42,
+      "terminalBench": null,
       "aime": 39.2,
       "hle": null,
       "lmarenaElo": 1318,
@@ -1103,6 +1248,10 @@
       "inputPerMTok": 0.55,
       "outputPerMTok": 2.19
     },
+    "costPerTask": {
+      "usd": 0.2471,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2024-07",
@@ -1110,6 +1259,7 @@
       "mmluPro": 84,
       "gpqaDiamond": 71.5,
       "sweBench": 49.2,
+      "terminalBench": null,
       "aime": 79.8,
       "hle": 8.6,
       "lmarenaElo": 1358,
@@ -1141,6 +1291,10 @@
       "inputPerMTok": 0.28,
       "outputPerMTok": 0.42
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2025-07",
@@ -1148,6 +1302,7 @@
       "mmluPro": 85,
       "gpqaDiamond": 79.9,
       "sweBench": 67.8,
+      "terminalBench": null,
       "aime": 89.3,
       "hle": 19.8,
       "lmarenaElo": 1420,
@@ -1178,6 +1333,10 @@
       "inputPerMTok": 0.2,
       "outputPerMTok": 0.6
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2024-10",
@@ -1185,6 +1344,7 @@
       "mmluPro": 82.8,
       "gpqaDiamond": 71.1,
       "sweBench": null,
+      "terminalBench": null,
       "aime": 85.7,
       "hle": 11.8,
       "lmarenaElo": 1373,
@@ -1215,6 +1375,10 @@
       "inputPerMTok": 1.2,
       "outputPerMTok": 6
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-06",
@@ -1222,6 +1386,7 @@
       "mmluPro": 85.4,
       "gpqaDiamond": 85.4,
       "sweBench": 69.6,
+      "terminalBench": null,
       "aime": 92.3,
       "hle": null,
       "lmarenaElo": 1428,
@@ -1252,6 +1417,10 @@
       "inputPerMTok": 0.6,
       "outputPerMTok": 2.5
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2025-04",
@@ -1259,6 +1428,7 @@
       "mmluPro": 81.1,
       "gpqaDiamond": 75.1,
       "sweBench": 65.8,
+      "terminalBench": null,
       "aime": 49.5,
       "hle": 4.7,
       "lmarenaElo": 1385,
@@ -1289,6 +1459,10 @@
       "inputPerMTok": 0.6,
       "outputPerMTok": 2.5
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2025-04",
@@ -1296,6 +1470,7 @@
       "mmluPro": 84.6,
       "gpqaDiamond": 84.5,
       "sweBench": 71.3,
+      "terminalBench": null,
       "aime": 94.5,
       "hle": 23.9,
       "lmarenaElo": 1417,
@@ -1326,6 +1501,10 @@
       "inputPerMTok": 3,
       "outputPerMTok": 15
     },
+    "costPerTask": {
+      "usd": 0.7228,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": null,
@@ -1333,6 +1512,7 @@
       "mmluPro": null,
       "gpqaDiamond": 93.5,
       "sweBench": null,
+      "terminalBench": 88.3,
       "aime": null,
       "hle": 43.5,
       "lmarenaElo": 1486,
@@ -1364,6 +1544,10 @@
       "inputPerMTok": 0.5,
       "outputPerMTok": 1.5
     },
+    "costPerTask": {
+      "usd": 0.0599,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
@@ -1371,6 +1555,7 @@
       "mmluPro": null,
       "gpqaDiamond": 67.2,
       "sweBench": null,
+      "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
@@ -1401,6 +1586,10 @@
       "inputPerMTok": 2,
       "outputPerMTok": 12
     },
+    "costPerTask": {
+      "usd": 0.2911,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-01",
@@ -1408,6 +1597,7 @@
       "mmluPro": null,
       "gpqaDiamond": 94.3,
       "sweBench": 80.6,
+      "terminalBench": null,
       "aime": 98.1,
       "hle": 44.4,
       "lmarenaElo": 1486,
@@ -1439,6 +1629,10 @@
       "inputPerMTok": 0.54,
       "outputPerMTok": 3.4
     },
+    "costPerTask": {
+      "usd": 0.3331,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
@@ -1446,6 +1640,7 @@
       "mmluPro": 87.8,
       "gpqaDiamond": 88.4,
       "sweBench": 76.4,
+      "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
@@ -1476,6 +1671,10 @@
       "inputPerMTok": 0.15,
       "outputPerMTok": 0.6
     },
+    "costPerTask": {
+      "usd": 0.0976,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
@@ -1483,6 +1682,7 @@
       "mmluPro": 78,
       "gpqaDiamond": 71.2,
       "sweBench": null,
+      "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1358,
@@ -1513,6 +1713,10 @@
       "inputPerMTok": null,
       "outputPerMTok": null
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "self-host",
     "knowledgeCutoff": null,
@@ -1520,6 +1724,7 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": null,
+      "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
@@ -1551,6 +1756,10 @@
       "inputPerMTok": null,
       "outputPerMTok": null
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "restricted",
     "knowledgeCutoff": null,
@@ -1558,6 +1767,7 @@
       "mmluPro": null,
       "gpqaDiamond": 89.5,
       "sweBench": 77.4,
+      "terminalBench": null,
       "aime": null,
       "hle": 58.4,
       "lmarenaElo": 1487,
@@ -1588,6 +1798,10 @@
       "inputPerMTok": 5,
       "outputPerMTok": 30
     },
+    "costPerTask": {
+      "usd": 0.4061,
+      "effort": "medium"
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-12",
@@ -1595,6 +1809,7 @@
       "mmluPro": null,
       "gpqaDiamond": 93.5,
       "sweBench": 88.7,
+      "terminalBench": null,
       "aime": null,
       "hle": 41.4,
       "lmarenaElo": 1481,
@@ -1626,6 +1841,10 @@
       "inputPerMTok": 0.435,
       "outputPerMTok": 0.87
     },
+    "costPerTask": {
+      "usd": 0.0448,
+      "effort": "max"
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
@@ -1633,6 +1852,7 @@
       "mmluPro": 87.5,
       "gpqaDiamond": 90.1,
       "sweBench": 80.6,
+      "terminalBench": null,
       "aime": null,
       "hle": 48.2,
       "lmarenaElo": null,
@@ -1664,6 +1884,10 @@
       "inputPerMTok": 1.25,
       "outputPerMTok": 2.5
     },
+    "costPerTask": {
+      "usd": 0.1385,
+      "effort": "high"
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": null,
@@ -1671,6 +1895,7 @@
       "mmluPro": null,
       "gpqaDiamond": 90.1,
       "sweBench": null,
+      "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
@@ -1701,6 +1926,10 @@
       "inputPerMTok": 1.5,
       "outputPerMTok": 9
     },
+    "costPerTask": {
+      "usd": 0.5855,
+      "effort": "high"
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-01",
@@ -1708,6 +1937,7 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": 81,
+      "terminalBench": 76.2,
       "aime": null,
       "hle": 40.2,
       "lmarenaElo": 1481,
@@ -1739,6 +1969,10 @@
       "inputPerMTok": null,
       "outputPerMTok": null
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "restricted",
     "knowledgeCutoff": null,
@@ -1746,6 +1980,7 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": null,
+      "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
@@ -1776,6 +2011,10 @@
       "inputPerMTok": 2.5,
       "outputPerMTok": 7.5
     },
+    "costPerTask": {
+      "usd": 1.0325,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": null,
@@ -1783,6 +2022,7 @@
       "mmluPro": 89.6,
       "gpqaDiamond": 92.4,
       "sweBench": 80.4,
+      "terminalBench": null,
       "aime": null,
       "hle": 41.4,
       "lmarenaElo": null,
@@ -1814,6 +2054,10 @@
       "inputPerMTok": 5,
       "outputPerMTok": 25
     },
+    "costPerTask": {
+      "usd": 1.7972,
+      "effort": "max"
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2026-01",
@@ -1821,6 +2065,7 @@
       "mmluPro": null,
       "gpqaDiamond": 93.6,
       "sweBench": 88.6,
+      "terminalBench": null,
       "aime": null,
       "hle": 49.8,
       "lmarenaElo": 1484,
@@ -1852,6 +2097,10 @@
       "inputPerMTok": 10,
       "outputPerMTok": 50
     },
+    "costPerTask": {
+      "usd": 2.7498,
+      "effort": "max"
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2026-01",
@@ -1859,6 +2108,7 @@
       "mmluPro": null,
       "gpqaDiamond": 92.6,
       "sweBench": 95,
+      "terminalBench": 88.0,
       "aime": null,
       "hle": 64.5,
       "lmarenaElo": 1509,
@@ -1875,7 +2125,7 @@
       "Slow, and its depth of explanation is a cost when you wanted a quick scan",
       "Token spend and latency swing enormously between low and max effort, making budgeting hard"
     ],
-    "notes": "Shares weights with the restricted Claude Mythos 5 (vetted partners only). HLE 64.5% is with tools; GPQA/SWE figures are third-party — Anthropic retired saturated benchmarks from official reporting."
+    "notes": "Shares weights with the restricted Claude Mythos 5 (vetted partners only). HLE 64.5% is with tools; GPQA/SWE figures are third-party — Anthropic retired saturated benchmarks from official reporting. Terminal-Bench 2.1 88.0% as reported in poolside's Laguna S 2.1 comparison table."
   },
   {
     "id": "gemma-4",
@@ -1891,6 +2141,10 @@
       "inputPerMTok": 0.1,
       "outputPerMTok": 0.34
     },
+    "costPerTask": {
+      "usd": 0.0343,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2025-01",
@@ -1898,6 +2152,7 @@
       "mmluPro": 85.2,
       "gpqaDiamond": 84.3,
       "sweBench": null,
+      "terminalBench": null,
       "aime": 89.2,
       "hle": 19.5,
       "lmarenaElo": 1452,
@@ -1930,6 +2185,10 @@
       "inputPerMTok": 1.4,
       "outputPerMTok": 4.4
     },
+    "costPerTask": {
+      "usd": 0.2995,
+      "effort": "max"
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2026-03",
@@ -1937,6 +2196,7 @@
       "mmluPro": 80.6,
       "gpqaDiamond": 91.2,
       "sweBench": null,
+      "terminalBench": null,
       "aime": 99.2,
       "hle": 40.5,
       "lmarenaElo": 1469,
@@ -1968,6 +2228,10 @@
       "inputPerMTok": 5,
       "outputPerMTok": 30
     },
+    "costPerTask": {
+      "usd": 0.4066,
+      "effort": "medium"
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2026-02",
@@ -1975,6 +2239,7 @@
       "mmluPro": 89.1,
       "gpqaDiamond": 94.6,
       "sweBench": null,
+      "terminalBench": 88.8,
       "aime": null,
       "hle": 47.2,
       "lmarenaElo": 1485,
@@ -1990,7 +2255,7 @@
       "Pre-deployment testing found it gaming its own evaluations, which makes any single score harder to trust",
       "Priced well above its Terra and Luna siblings, which close much of the gap on everyday work"
     ],
-    "notes": "The frontier tier of the three-model GPT-5.6 family (Sol / Terra / Luna), all released 2026-07-09. Context window and max output confirmed via OpenAI's developer docs. GPQA Diamond 94.6 and HLE 47.2 are OpenAI/Artificial Analysis-reported; MMLU-Pro 89.1 and ARC-AGI-2 92.5 (Max effort, per ARC Prize) are third-party. SWE-bench Verified and AIME were not published for this family. LMArena Elo 1485 is the \"gpt-5.6-sol-xhigh\" text-arena listing (arena.ai). Artificial Analysis Intelligence Index 59."
+    "notes": "The frontier tier of the three-model GPT-5.6 family (Sol / Terra / Luna), all released 2026-07-09. Context window and max output confirmed via OpenAI's developer docs. GPQA Diamond 94.6 and HLE 47.2 are OpenAI/Artificial Analysis-reported; MMLU-Pro 89.1 and ARC-AGI-2 92.5 (Max effort, per ARC Prize) are third-party. SWE-bench Verified and AIME were not published for this family. LMArena Elo 1485 is the \"gpt-5.6-sol-xhigh\" text-arena listing (arena.ai). Artificial Analysis Intelligence Index 59. Terminal-Bench 2.1 88.8% from the GPT-5.6 launch comparison table (Sol 88.8 / Terra 87.4 / Luna 84.7)."
   },
   {
     "id": "gpt-5-6-terra",
@@ -2006,6 +2271,10 @@
       "inputPerMTok": 2.5,
       "outputPerMTok": 15
     },
+    "costPerTask": {
+      "usd": 0.1674,
+      "effort": "medium"
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": null,
@@ -2013,6 +2282,7 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": null,
+      "terminalBench": 87.4,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
@@ -2043,6 +2313,10 @@
       "inputPerMTok": null,
       "outputPerMTok": null
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "self-host",
     "knowledgeCutoff": null,
@@ -2050,6 +2324,7 @@
       "mmluPro": 51.4,
       "gpqaDiamond": 43.4,
       "sweBench": null,
+      "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
@@ -2082,6 +2357,10 @@
       "inputPerMTok": 1.5,
       "outputPerMTok": 7.5
     },
+    "costPerTask": {
+      "usd": 0.5013,
+      "effort": "high"
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2026-03",
@@ -2089,6 +2368,7 @@
       "mmluPro": null,
       "gpqaDiamond": 92.8,
       "sweBench": null,
+      "terminalBench": 78.0,
       "aime": null,
       "hle": 38.3,
       "lmarenaElo": 1485,
@@ -2119,6 +2399,10 @@
       "inputPerMTok": 0.3,
       "outputPerMTok": 2.5
     },
+    "costPerTask": {
+      "usd": 0.0858,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2026-03",
@@ -2126,6 +2410,7 @@
       "mmluPro": null,
       "gpqaDiamond": 83.8,
       "sweBench": null,
+      "terminalBench": 54.0,
       "aime": null,
       "hle": 17.5,
       "lmarenaElo": 1459,
@@ -2156,6 +2441,10 @@
       "inputPerMTok": 2,
       "outputPerMTok": 10
     },
+    "costPerTask": {
+      "usd": 1.5254,
+      "effort": "max"
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2026-01",
@@ -2163,6 +2452,7 @@
       "mmluPro": null,
       "gpqaDiamond": 91.1,
       "sweBench": 85.2,
+      "terminalBench": 80.4,
       "aime": null,
       "hle": 43.2,
       "lmarenaElo": 1461,
@@ -2194,6 +2484,10 @@
       "inputPerMTok": 2,
       "outputPerMTok": 6
     },
+    "costPerTask": {
+      "usd": 0.3497,
+      "effort": "high"
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2026-02",
@@ -2201,6 +2495,7 @@
       "mmluPro": null,
       "gpqaDiamond": 93.1,
       "sweBench": null,
+      "terminalBench": null,
       "aime": null,
       "hle": 40.3,
       "lmarenaElo": 1468,
@@ -2232,6 +2527,10 @@
       "inputPerMTok": 1.25,
       "outputPerMTok": 4.25
     },
+    "costPerTask": {
+      "usd": 0.261,
+      "effort": "xhigh"
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": null,
@@ -2239,6 +2538,7 @@
       "mmluPro": null,
       "gpqaDiamond": 89.8,
       "sweBench": null,
+      "terminalBench": null,
       "aime": null,
       "hle": 62.1,
       "lmarenaElo": 1495,
@@ -2269,6 +2569,10 @@
       "inputPerMTok": 5,
       "outputPerMTok": 25
     },
+    "costPerTask": {
+      "usd": 0.6184,
+      "effort": "medium"
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2026-05",
@@ -2276,6 +2580,7 @@
       "mmluPro": null,
       "gpqaDiamond": 93.7,
       "sweBench": 96,
+      "terminalBench": null,
       "aime": null,
       "hle": 56.3,
       "lmarenaElo": null,
@@ -2308,6 +2613,10 @@
       "inputPerMTok": 1.87,
       "outputPerMTok": 4.68
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
@@ -2315,6 +2624,7 @@
       "mmluPro": null,
       "gpqaDiamond": 87.2,
       "sweBench": 77.6,
+      "terminalBench": 63.8,
       "aime": 97.1,
       "hle": 29.7,
       "lmarenaElo": null,
@@ -2346,6 +2656,10 @@
       "inputPerMTok": 0.1,
       "outputPerMTok": 0.2
     },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
@@ -2353,6 +2667,7 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": null,
+      "terminalBench": 70.2,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
@@ -2385,6 +2700,10 @@
       "inputPerMTok": 0.1,
       "outputPerMTok": 0.5
     },
+    "costPerTask": {
+      "usd": 0.1989,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
@@ -2392,6 +2711,7 @@
       "mmluPro": 83.73,
       "gpqaDiamond": null,
       "sweBench": 60.47,
+      "terminalBench": null,
       "aime": 90.21,
       "hle": 18.26,
       "lmarenaElo": null,
@@ -2422,6 +2742,10 @@
       "inputPerMTok": 0.5,
       "outputPerMTok": 2.2
     },
+    "costPerTask": {
+      "usd": 0.2451,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
@@ -2429,6 +2753,7 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": null,
+      "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,

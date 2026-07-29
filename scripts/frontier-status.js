@@ -57,6 +57,7 @@ const BENCHMARK_KEYS = [
   "mmluPro",
   "gpqaDiamond",
   "sweBench",
+  "terminalBench",
   "aime",
   "hle",
   "lmarenaElo",

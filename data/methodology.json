@@ -49,6 +49,15 @@
       "description": "Officially retired or shut down by the lab that made it (e.g. removed from their API). This is set by hand when a lab announces it, not inferred automatically."
     }
   ],
+  "costPerTask": {
+    "summary": "Cost per task is what a model actually costs to do one unit of work, rather than what its tokens list for. The figure is Artificial Analysis' \"cost per Intelligence Index task\": they run every model through the same suite of evaluations and record the weighted average USD spent on a single task — input, cached reads and writes, reasoning tokens, and the answer itself. It's the number the model card leads with because a cheap per-token price stops meaning much once a model thinks for thirty thousand tokens before answering.",
+    "notes": [
+      "Sticker price and cost per task can rank models very differently. A model with low token prices that reasons at length can cost more per task than a pricier model that answers quickly — the per-million-token rates are still on every model's detail panel, they just aren't the headline any more.",
+      "Reasoning models are measured at a chosen effort level, and cost scales steeply with it. Where Artificial Analysis publishes a medium-effort figure, that's the one shown; otherwise it's whichever effort they measured, and the model's detail panel names it.",
+      "Because the effort level isn't identical across every model, treat these as an order-of-magnitude comparison, not a precise ranking — a 10x gap is real, a 10% gap may just be a difference in effort setting.",
+      "Blank means Artificial Analysis has not run the Intelligence Index on that model — common for older or newly released models — not that it is free or cheap."
+    ]
+  },
   "dataGaps": {
     "summary": "Any figure you see as \"—\" is genuinely unpublished or unverified, never a guess. Numbers are only added once they can be traced to an official announcement, model card, or a reputable third-party benchmark tracker."
   },

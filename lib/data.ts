@@ -47,6 +47,13 @@ export function formatPrice(v: number | null | undefined): string {
   return v < 1 ? `$${v.toFixed(2)}` : `$${v % 1 === 0 ? v : v.toFixed(2)}`;
 }
 
+/** Cost per task spans two orders of magnitude ($0.02 → $2.75), so sub-$0.10
+ *  figures keep a third decimal rather than all collapsing to "$0.02". */
+export function formatCostPerTask(v: number | null | undefined): string {
+  if (v == null) return "—";
+  return v < 0.1 ? `$${v.toFixed(3)}` : `$${v.toFixed(2)}`;
+}
+
 export function formatDate(iso: string): string {
   const [y, m, d] = iso.split("-").map(Number);
   const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];

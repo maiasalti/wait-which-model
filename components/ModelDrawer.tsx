@@ -9,6 +9,7 @@ import {
   companyColor,
   companyName,
   formatContext,
+  formatCostPerTask,
   formatDate,
   formatPrice,
   models,
@@ -119,6 +120,12 @@ export function ModelDrawer({ model, onClose }: { model: Model | null; onClose: 
             [
               "Price ($/MTok in / out)",
               `${formatPrice(model.pricing.inputPerMTok)} / ${formatPrice(model.pricing.outputPerMTok)}`,
+            ],
+            [
+              model.costPerTask.effort
+                ? `Cost per task (${model.costPerTask.effort} effort)`
+                : "Cost per task",
+              formatCostPerTask(model.costPerTask.usd),
             ],
             ["Open weights", model.openWeights ? "Yes" : "No"],
           ].map(([k, v]) => (

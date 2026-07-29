@@ -6,6 +6,7 @@ export type BenchmarkKey =
   | "mmluPro"
   | "gpqaDiamond"
   | "sweBench"
+  | "terminalBench"
   | "aime"
   | "hle"
   | "lmarenaElo"
@@ -14,6 +15,19 @@ export type BenchmarkKey =
 export interface Pricing {
   inputPerMTok: number | null;
   outputPerMTok: number | null;
+}
+
+export type ReasoningEffort = "low" | "medium" | "high" | "xhigh" | "max";
+
+/** Artificial Analysis' "cost per Intelligence Index task": the weighted average
+ *  USD a model burns on one task of the AA Intelligence Index, across input,
+ *  cache read/write, reasoning and answer tokens. `effort` records which
+ *  reasoning setting the figure was measured at — medium wherever AA publishes
+ *  one, otherwise whatever setting they measured; null when the model has no
+ *  effort levels. */
+export interface CostPerTask {
+  usd: number | null;
+  effort: ReasoningEffort | null;
 }
 
 export interface Model {
@@ -27,6 +41,7 @@ export interface Model {
   contextWindow: number | null;
   maxOutput: number | null;
   pricing: Pricing;
+  costPerTask: CostPerTask;
   openWeights: boolean;
   /** Can a person actually obtain and use this model today?
    *  - `general`   — yes: a public API, a consumer app, or a mainstream host
@@ -97,6 +112,7 @@ export interface Methodology {
   };
   tiers: { key: ModelTier; label: string; description: string }[];
   statusMeanings: { key: ModelStatus; label: string; description: string }[];
+  costPerTask: { summary: string; notes: string[] };
   dataGaps: { summary: string };
   sourcing: { summary: string };
   currency: { summary: string };

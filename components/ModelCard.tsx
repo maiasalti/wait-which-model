@@ -1,7 +1,7 @@
 "use client";
 
 import type { Model } from "@/lib/types";
-import { companyName, formatContext, formatDate, formatPrice } from "@/lib/data";
+import { companyName, formatContext, formatCostPerTask, formatDate } from "@/lib/data";
 import { CompanyLogo } from "./CompanyLogo";
 
 const STATUS_LABEL: Record<Model["status"], string> = {
@@ -57,10 +57,8 @@ export function ModelCard({ model, onOpen }: { model: Model; onOpen: (m: Model) 
           <dd className="text-ink-2">{formatContext(model.contextWindow)}</dd>
         </div>
         <div>
-          <dt className="text-[10px] uppercase tracking-wider text-ink-3">$ in / out</dt>
-          <dd className="text-ink-2">
-            {formatPrice(model.pricing.inputPerMTok)} / {formatPrice(model.pricing.outputPerMTok)}
-          </dd>
+          <dt className="text-[10px] uppercase tracking-wider text-ink-3">$ / task</dt>
+          <dd className="text-ink-2">{formatCostPerTask(model.costPerTask.usd)}</dd>
         </div>
       </dl>
 
