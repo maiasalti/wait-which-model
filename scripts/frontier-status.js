@@ -4,14 +4,16 @@
  *
  * Two ways a model qualifies as "frontier":
  *
- *   A. Major-lab recency override: if the model is from a lab in MAJOR_LABS
- *      and is the most recent release in its (company, tier) group (same-day
- *      releases all count),
- *      released within MAJOR_LAB_RECENCY_MONTHS, it's automatically
+ *   A. Major-lab recency override: if the model is from a lab in MAJOR_LABS,
+ *      sits in a tier listed in MAJOR_LAB_OVERRIDE_TIERS, and is the most
+ *      recent release in its (company, tier) group (same-day releases all
+ *      count), released within MAJOR_LAB_RECENCY_MONTHS, it's automatically
  *      "frontier" — no benchmark data required. These labs' newest flagship
  *      releases are trusted to be near-SOTA even before benchmarks are
  *      published, and a model must never lose frontier status just because
- *      data isn't published yet.
+ *      data isn't published yet. Non-flagship tiers are excluded: a cheap
+ *      fast-tier model is positioned on price and latency rather than
+ *      capability, so trusting it into "frontier" sight-unseen doesn't hold.
  *
  *   B. General rule, for everyone else, within its tier (flagship / balanced
  *      / fast):
@@ -41,6 +43,14 @@ const CAPABILITY_THRESHOLD = 0.85; // must be within 15% of the tier's top compo
 const MIN_BENCHMARKS = 3; // non-null benchmarks required to be rankable
 const MAJOR_LABS = ["openai", "anthropic", "google", "meta"];
 const MAJOR_LAB_RECENCY_MONTHS = 3;
+// Tiers the override applies to. Scoped to flagship because the reputational
+// argument behind it — "this lab's newest release is near-SOTA on trust alone"
+// — only holds for a lab's top-of-line model. A cheap fast-tier release is
+// positioned on price and latency, not capability, so it has to clear the
+// benchmark bar like anything else. (Narrowed 2026-07-29: the override was
+// promoting Gemini 3.5 Flash-Lite, which scores 0.46 against a 0.84 bar,
+// purely for shipping the same day as its stronger Flash sibling.)
+const MAJOR_LAB_OVERRIDE_TIERS = ["flagship"];
 
 const MODELS_PATH = path.join(__dirname, "..", "data", "models.json");
 const BENCHMARK_KEYS = [
@@ -77,6 +87,7 @@ function main() {
   const byCompanyTier = new Map();
   for (const m of models) {
     if (!MAJOR_LABS.includes(m.company)) continue;
+    if (!MAJOR_LAB_OVERRIDE_TIERS.includes(m.tier)) continue;
     const key = `${m.company}::${m.tier}`;
     if (!byCompanyTier.has(key)) byCompanyTier.set(key, []);
     byCompanyTier.get(key).push(m);

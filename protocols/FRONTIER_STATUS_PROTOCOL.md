@@ -8,9 +8,11 @@
 
 A model qualifies as `"frontier"` one of two ways:
 
-### A. Major-lab recency override
+### A. Major-lab recency override — **flagship tier only**
 
-If the model is from OpenAI, Anthropic, Google, or Meta, and is the single most recent release in its `(company, tier)` group, released within the last 3 months, it's automatically `"frontier"` — **no benchmark data required.** These labs' newest flagship releases are trusted to be near-SOTA the moment they ship, and a model must never lose frontier status just because benchmark numbers haven't been published yet (labs frequently delay SWE-bench/AIME figures by weeks). This is a deliberate trade-off: it accepts that a major lab's newest release might occasionally be a modest bump, in exchange for never wrongly demoting a genuinely frontier model for a data-availability gap.
+If the model is from OpenAI, Anthropic, Google, or Meta, **is `tier: flagship`**, and is the single most recent release in its `(company, tier)` group, released within the last 3 months, it's automatically `"frontier"` — **no benchmark data required.**
+
+The tier restriction is the point of the rule, not a detail: the argument for trusting a model into `frontier` sight-unseen is that a major lab's *top-of-line* release is reliably near-SOTA. A `balanced` or `fast` release is positioned on price and latency instead, so it has to clear the benchmark bar in Rule B like everything else. (Narrowed 2026-07-29 — before this, Gemini 3.5 Flash-Lite held `frontier` purely for shipping the same day as the stronger Gemini 3.6 Flash, while scoring 0.46 against a 0.84 bar.) These labs' newest flagship releases are trusted to be near-SOTA the moment they ship, and a model must never lose frontier status just because benchmark numbers haven't been published yet (labs frequently delay SWE-bench/AIME figures by weeks). This is a deliberate trade-off: it accepts that a major lab's newest release might occasionally be a modest bump, in exchange for never wrongly demoting a genuinely frontier model for a data-availability gap.
 
 ### B. General rule (everyone else, and major-lab models outside the window above)
 
@@ -45,4 +47,4 @@ The composite score normalizes each benchmark key (0–1) across the tier's rank
 
 ## Tuning
 
-`RECENCY_MONTHS` (9), `CAPABILITY_THRESHOLD` (0.85), `MAJOR_LABS` (`openai`, `anthropic`, `google`, `meta`), and `MAJOR_LAB_RECENCY_MONTHS` (3) are constants at the top of `scripts/frontier-status.js`. If Maia asks to loosen/tighten the definition or change which labs get the recency override, change them there — this file and the script are the single source of truth for the rule; don't hand-edit `status` values outside of this process (except `"deprecated"`, which stays manual).
+`RECENCY_MONTHS` (9), `CAPABILITY_THRESHOLD` (0.85), `MAJOR_LABS` (`openai`, `anthropic`, `google`, `meta`), `MAJOR_LAB_RECENCY_MONTHS` (3), and `MAJOR_LAB_OVERRIDE_TIERS` (`flagship`) are constants at the top of `scripts/frontier-status.js`. If Maia asks to loosen/tighten the definition or change which labs get the recency override, change them there — this file and the script are the single source of truth for the rule; don't hand-edit `status` values outside of this process (except `"deprecated"`, which stays manual).

@@ -1677,7 +1677,7 @@
       "Output cap low enough to truncate large generated files",
       "Default effort level shifted at launch, quietly changing behavior for existing prompts"
     ],
-    "notes": "Announced at Google I/O 2026; Terminal-Bench 2.1 76.2%. SWE-bench Verified 81.0 from I/O reporting; HLE 40.2 is third-party (LLM-Stats); ARC-AGI-2 72.1; LMArena Elo 1481 at launch window."
+    "notes": "Announced at Google I/O 2026; Terminal-Bench 2.1 76.2%. HLE 40.2 and ARC-AGI-2 72.1 are Google's own figures on the official Gemini 3.5 Flash model card (verified 2026-07-29). SWE-bench Verified 81.0 came from I/O reporting and is NOT on that model card, which reports SWE-Bench Pro (Public) 55.1% instead — treat 81.0 as unconfirmed. LMArena Elo 1481 at launch window."
   },
   {
     "id": "qwen3-8-max",
@@ -2018,7 +2018,7 @@
     "name": "Gemini 3.5 Flash-Lite",
     "company": "google",
     "releaseDate": "2026-07-21",
-    "status": "frontier",
+    "status": "superseded",
     "tier": "fast",
     "modality": "multimodal",
     "contextWindow": 1048576,

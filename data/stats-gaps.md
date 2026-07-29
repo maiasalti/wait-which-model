@@ -51,9 +51,9 @@ Sweep sources checked on 2026-07-04: LMArena (arena.ai) leaderboard, llm-stats.c
 | gemini-2-0-flash | aime | 2026-07-04 | Google reported MATH, not AIME; no public AIME figure |
 | gemini-2-0-flash | arcAgi2 | 2026-07-04 | not on ARC-AGI-2 leaderboards |
 | gemini-3-1-pro | mmluPro | 2026-07-04 | not reported by Google; not on MMLU-Pro trackers |
-| gemini-3-5-flash | mmluPro | 2026-07-04 | not reported; benchlm shows category composites only |
-| gemini-3-5-flash | gpqaDiamond | 2026-07-04 | only approximate "~92.2%" third-party claim; no exact verifiable figure |
-| gemini-3-5-flash | aime | 2026-07-04 | not reported at I/O 2026; no public figure |
+| gemini-3-5-flash | mmluPro | 2026-07-29 | absent from official DeepMind model card (card lists MMMU-Pro 83.6%, a different multimodal benchmark — do not conflate) |
+| gemini-3-5-flash | gpqaDiamond | 2026-07-29 | absent from official DeepMind model card; only an approximate "~92.2%" third-party claim exists |
+| gemini-3-5-flash | aime | 2026-07-29 | absent from official DeepMind model card; not reported at I/O 2026 |
 | llama-3-1-405b | sweBench | 2026-07-04 | Meta reported HumanEval, not SWE-bench; no public figure |
 | llama-3-1-405b | aime | 2026-07-04 | Meta reported MATH, not AIME; no public figure |
 | llama-3-1-405b | hle | 2026-07-04 | predates benchmark; not on official HLE leaderboard |
@@ -173,14 +173,14 @@ Stats-filler sweep on 2026-07-27. Sources checked: arena.ai text leaderboard, Ar
 | claude-sonnet-5 | aime | 2026-07-27 | Anthropic did not publish AIME for Sonnet 5; no third-party figure found |
 | claude-sonnet-5 | arcAgi2 | 2026-07-27 | not on ARC Prize, BenchLM (19 models) or llm-stats ARC-AGI-2 leaderboards |
 | claude-fable-5 | mmluPro | 2026-07-27 | re-checked: a "91.50%" vals.ai figure surfaced in search snippets but the vals.ai MMLU-Pro page could not be made to show it, and AA/BenchLM MMLU-Pro leaderboards omit Fable 5 — unverifiable, still null |
-| gemini-3-6-flash | mmluPro | 2026-07-27 | Google published no academic table; BenchLM lists only MMMU-Pro 83.2 (a different, multimodal benchmark) |
-| gemini-3-6-flash | sweBench | 2026-07-27 | Google reports SWE-Bench Pro 58.7% and DeepSWE v1.1 49% instead; no SWE-bench Verified figure |
-| gemini-3-6-flash | aime | 2026-07-27 | not reported at launch; not on any tracker |
-| gemini-3-6-flash | arcAgi2 | 2026-07-27 | not on ARC Prize, BenchLM or llm-stats ARC-AGI-2 leaderboards |
-| gemini-3-5-flash-lite | mmluPro | 2026-07-27 | not reported; BenchLM lists only MMMU-Pro 79.0 (different benchmark) |
-| gemini-3-5-flash-lite | sweBench | 2026-07-27 | Google reports SWE-Bench Pro 54.2%; no SWE-bench Verified figure |
-| gemini-3-5-flash-lite | aime | 2026-07-27 | not reported at launch; not on any tracker |
-| gemini-3-5-flash-lite | arcAgi2 | 2026-07-27 | not on ARC-AGI-2 leaderboards |
+| gemini-3-6-flash | mmluPro | 2026-07-29 | absent from official DeepMind model card; Google published no academic table; BenchLM lists only MMMU-Pro 83.2 (a different, multimodal benchmark) |
+| gemini-3-6-flash | sweBench | 2026-07-29 | Google reports SWE-Bench Pro 58.7% and DeepSWE v1.1 49% instead; no SWE-bench Verified figure |
+| gemini-3-6-flash | aime | 2026-07-29 | not reported at launch; not on any tracker |
+| gemini-3-6-flash | arcAgi2 | 2026-07-29 | not on ARC Prize, BenchLM or llm-stats ARC-AGI-2 leaderboards |
+| gemini-3-5-flash-lite | mmluPro | 2026-07-29 | absent from official DeepMind model card; BenchLM lists only MMMU-Pro 79.0 (different benchmark) |
+| gemini-3-5-flash-lite | sweBench | 2026-07-29 | Google reports SWE-Bench Pro 54.2%; no SWE-bench Verified figure |
+| gemini-3-5-flash-lite | aime | 2026-07-29 | not reported at launch; not on any tracker |
+| gemini-3-5-flash-lite | arcAgi2 | 2026-07-29 | not on ARC-AGI-2 leaderboards |
 | qwen3-8-max | mmluPro | 2026-07-27 | preview announcement with no technical report, model card or AA entry; every number circulating "for" Qwen3.8 traces back to Qwen3.7-Max |
 | qwen3-8-max | gpqaDiamond | 2026-07-27 | same — no published benchmark of any kind |
 | qwen3-8-max | sweBench | 2026-07-27 | same — no published benchmark of any kind |
