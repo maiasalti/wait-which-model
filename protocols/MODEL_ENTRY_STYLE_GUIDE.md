@@ -27,8 +27,8 @@ How every record in `data/models.json` is written, so new models added by the re
     "lmarenaElo": 1510,
     "arcAgi2": null
   },
-  "strengths": ["#1 on LMArena overall and coding at release", "Huge math gains (USAMO 69.3% → 96.7%)", "Proactively flags uncertainty about its own work"],
-  "weaknesses": ["GPQA slightly below Opus 4.7 and Gemini 3.1 Pro", "Reviewed as a modest step, not a leap"],
+  "strengths": ["Flags its own uncertainty and asks rather than guessing — far less confident nonsense", "The effort setting genuinely changes token spend, so quick and deep work share one model", "More expressive and varied on creative work than the 4.x releases before it"],
+  "weaknesses": ["The extra hedging is friction when you want a confident answer to a low-stakes question", "Can get caught in self-correction loops, re-checking work that was already right"],
   "notes": "HLE 49.8% no tools / 57.9% with tools."
 }
 ```
@@ -55,15 +55,35 @@ How every record in `data/models.json` is written, so new models added by the re
 
 ## Voice rules for strengths / weaknesses / notes
 
-These render as bullet lists in the model drawer; matching tone matters.
+These render as bullet lists in the model drawer, directly under the benchmark bars and the spec grid. **They exist to say what the numbers can't.**
+
+**The rule: no score, price, context length, or leaderboard rank belongs here.** All of that is already on screen a few pixels above, and repeating it wastes the only part of the entry that can describe what the model is actually *like*.
+
+Write about behavior and character — the things a person learns after a week of using it:
+
+| Axis | What to capture |
+|---|---|
+| Latency & pacing | Slow to first token, streams fast, feels instant, always-on reasoning |
+| Verbosity | Writes long even when told not to, terse by default, over-explains |
+| Steerability | Literal vs. infers intent, drops multi-part instructions, ignores format rules |
+| Long-context behavior | Whether the window is *usable* — recall in the middle, degradation before the limit |
+| Agentic stamina | Hours vs. minutes before drift; stops and asks vs. guesses; declares victory early |
+| Tool use | Well-formed calls, loops, malformed JSON, recovery after a failed call |
+| Failure modes | What it hallucinates, when it hedges, when it over-reaches or refuses |
+| Voice | Warm, clinical, blunt, flat creative prose, distinctive style |
+| Practicalities | What it takes to actually run (GPUs, quantization, mode selection, licence friction) |
+
+Mechanics:
 
 - **Sentence-case fragments, no ending period** on strengths/weaknesses; `notes` is a full sentence with a period
-- Each item is one concrete, specific claim — lead with the fact, keep numbers in: *"First model past 80% on SWE-bench Verified"*, not *"Very good at coding"*
-- Strengths state what it did **at launch** relative to its era; superlatives must be anchored ("at release", "at launch", "of 2024")
-- Weaknesses are factual reception/limitations, not editorializing: pricing position, missing modes, launch controversies, delayed variants
-- Parenthesize supporting detail: *"Huge math gains (USAMO 69.3% → 96.7%)"*
+- Each item is one concrete behavioral claim, specific enough to be falsifiable: *"Cuts long files off mid-function, forcing continuation prompts"*, not *"Sometimes struggles with long output"* and not *"8K max output"*
+- Weaknesses are factual observed limitations and reception, not editorializing — and not "scored lower than X"
+- An em-dash clause carrying the consequence is the house pattern: *"Keeps working until something stops it — agent loops need explicit stop rules or the cost runs away"*
 - No marketing adjectives ("groundbreaking", "revolutionary"); the register is a neutral analyst's logbook
-- Refer to rival models by name where useful — cross-references are welcome
+- Compare to the model's own predecessor where it explains the character ("more verbose than K2 did"); avoid rival-vs-rival scoreboarding, which the Compare page already does
+- Where a model is too new or too undocumented to characterise, say *that* — "behavior is a moving target, not a fixed release" is a real, useful weakness
+
+Sourcing: these claims need the same web research as the numbers. Hands-on reviews, model cards' limitations sections, prompting guides (they document the quirks you have to work around), and developer reception — never invent a behavioral trait from the benchmark shape.
 
 ## Presentation checks (how it will look)
 
