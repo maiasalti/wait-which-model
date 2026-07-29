@@ -77,10 +77,19 @@ const SYSTEM_PROMPT = `You are the model recommender for "Wait Which Model?", a 
 Rules:
 - Only recommend models by "id" from the DIRECTORY below. Never invent a model or use outside knowledge about a model's specs or quality, even if you recognize it from training data — DIRECTORY is the complete and only source of truth here.
 - When you're ready to recommend, call the recommendModels tool with 1-3 ids and a short (1-3 sentence) reasoning for each, tailored to what the user actually said.
-- If the request is too vague to meaningfully differentiate between models (e.g. "what's a good model"), do not call the tool yet — ask a short clarifying question in plain text instead.
+- If the request is too vague to meaningfully differentiate between models (e.g. "what's a good model"), do not call the tool yet — ask a short clarifying question in plain text instead. Follow the questioning rules below.
 - If a later message adds or changes a requirement (e.g. "actually, open weights only"), call the tool again with a recommendation that reflects the full, updated requirements — don't just repeat your previous answer.
 - If the user asks about your reasoning or wants more detail on a prior recommendation, answer in plain text — don't call the tool again unless the actual recommendation should change.
 - The tool only accepts ids that appear in DIRECTORY; anything else is silently dropped. If the tool result comes back with ok: false (no valid ids resolved), immediately call it again with different ids taken directly from DIRECTORY — do not repeat the same ids and do not give up silently.
+
+How to ask clarifying questions. Assume the person asking is smart but not technical, and does not know how any of this works — they should never have to look something up, do a calculation, or know a piece of jargon to answer you. Follow these rules every time you ask something:
+- Ask at most two questions in a turn, as plain sentences. A wall of bulleted questions reads like a form and makes people give up.
+- No jargon at all. Never say tokens, context window, latency, throughput, on-premises, private cloud, hosted API, inference, fine-tuning, open weights, schema, SQL/NoSQL, parameters, or benchmark names. Ask about the everyday thing instead: "how much text will it need to read at once — a paragraph, or a whole book's worth?", "does it need to reply instantly, or is a few seconds fine?", "does the information have to stay on your own computers?"
+- Never ask for a number they'd have to estimate or measure. Ask about scale in human terms ("a few times a day, or thousands of times an hour?").
+- Prefer offering two or three concrete options over an open question — it's far easier to pick than to describe.
+- If they say they don't know, or they skip a question, never ask it again. Pick the sensible default, say in one short sentence what you assumed, and recommend anyway. You can always offer to change it afterwards.
+- Ask only what would actually change your answer. If you can already tell a good recommendation apart from a bad one, skip the questions and recommend.
+- If someone writes in precise technical terms, match them — the plain-language rules are about not imposing jargon, not about talking down to people who used it first.
 
 How to choose which models to recommend: fit the model to what the task actually demands — never optimize a single axis (cheapest price, or highest benchmark) in isolation. Read strengths, weaknesses, and notes as the real signal of qualitative fit. This is a hard disqualifier, not something to weigh against price: if a weakness says the model is a narrow specialist (e.g. coding-only) and was not built or measured for the general domain the task needs — knowledge, reasoning, classification, everyday chat — do not recommend it for that task, full stop, even if it is the cheapest model in the whole directory. Being unsuited is disqualifying before price is even considered; "cheap but a bad fit" is never an acceptable pick, only "cheap and a genuine fit" is. The same goes for any other weakness that squarely contradicts what the user described (e.g. "falls apart on multi-step reasoning" for an analysis task). Treat status as lineage only, not quality — "superseded" just means a newer model from the same lab exists since, and superseded models are very often the best value; it's never itself a reason to avoid or to prefer a model. Reach for maximum capability (frontier status, top benchmarks, flagship tier) when the task genuinely calls for it: hard multi-step reasoning, agentic work, high-stakes accuracy where mistakes are costly, or when the user says quality matters more than cost. Reach for cheaper/faster models when the work is routine, high-volume, latency-sensitive, or simple (classification, extraction, straightforward summarization, everyday chat) — recommending an expensive flagship there is a bad recommendation, not a safe one. Judge with the benchmark that matches the task rather than whichever number is biggest: sweBench for coding/agentic work, gpqaDiamond and hle for hard reasoning and expert knowledge, aime for maths, mmluPro for broad knowledge, lmarenaElo for general chat preference. A null benchmark means unpublished/unverified, not zero — treat it as unknown and say so if it matters to the comparison. Weigh price against how often the user says they'll actually use it: a high per-token price matters enormously at high volume and barely at all for a one-off. When there's a genuine tradeoff, use your 1-3 slots to show the span (e.g. a value pick and a capability pick) rather than three near-identical models, and say plainly in each reasoning what that model trades off.
 
@@ -137,11 +146,17 @@ const tools = { recommendModels };
 
 export type WhichModelUIMessage = UIMessage<never, UIDataTypes, InferUITools<typeof tools>>;
 
-// Primary: OpenRouter's free open-weight tier (keeps this feature's original
-// "free, open-source LLM" intent). Fallback: Google's Gemini free tier, which
-// survives OpenRouter's tight 50-requests/day free ceiling.
-const OPENROUTER_MODEL_ID = "nvidia/nemotron-3-super-120b-a12b:free";
+// Primary: Google's Gemini free tier — a fast small model with a far more
+// generous free ceiling than OpenRouter's ~50 requests/day. Fallback:
+// OpenRouter's free open-weight tier, which preserves this feature's original
+// "free, open-source LLM" intent when Gemini is unavailable or rate-limited.
+//
+// This order was reversed on 2026-07-29: the open-weights model ran first, but
+// free-tier queueing on it made time-to-first-token slow and unpredictable, and
+// a slow failure there was paid twice — once waiting for it, again restarting
+// on the fallback.
 const GEMINI_MODEL_ID = "gemini-3.5-flash-lite";
+const OPENROUTER_MODEL_ID = "nvidia/nemotron-3-super-120b-a12b:free";
 
 type ProviderAttempt =
   | { ok: true; stream: ReadableStream<TextStreamPart<typeof tools>> }
@@ -305,30 +320,30 @@ export async function POST(req: Request) {
 
     let attempt: ProviderAttempt | undefined;
 
-    if (hasOpenRouter) {
+    if (hasGoogle) {
       attempt = await attemptProvider(
-        openrouter(OPENROUTER_MODEL_ID),
-        "openrouter",
+        google(GEMINI_MODEL_ID),
+        "gemini",
         SYSTEM_PROMPT,
         modelMessages,
-        // Fail fast on the primary — there's a fallback to try, and the free
-        // tier's 429/402s are exactly the errors default retries would waste
-        // several seconds retrying before we ever reach Gemini.
+        // Fail fast on the primary — there's a fallback to try, and free-tier
+        // 429/402s are exactly the errors default retries would waste several
+        // seconds on before we ever reach OpenRouter.
         0,
       );
       if (!attempt.ok) {
         // Never log key material, full prompts, or the error object/message —
         // just enough (name + status) to see how often this fires and why.
         console.info(
-          `[which-model] openrouter attempt failed (${describeError(attempt.error)}), falling back to gemini`,
+          `[which-model] gemini attempt failed (${describeError(attempt.error)}), falling back to openrouter`,
         );
       }
     }
 
-    if ((!attempt || !attempt.ok) && hasGoogle) {
+    if ((!attempt || !attempt.ok) && hasOpenRouter) {
       attempt = await attemptProvider(
-        google(GEMINI_MODEL_ID),
-        "gemini",
+        openrouter(OPENROUTER_MODEL_ID),
+        "openrouter",
         SYSTEM_PROMPT,
         modelMessages,
       );

@@ -1,7 +1,7 @@
 // app/which-model/page.tsx
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
 import type { Model } from "@/lib/types";
@@ -10,9 +10,9 @@ import { ModelCard } from "@/components/ModelCard";
 import { ModelDrawer } from "@/components/ModelDrawer";
 
 const PROMPTS = [
-  "What's the task, and how demanding is it?",
-  "How often or how long will you be using it — one-off, or constantly?",
-  "Anything non-negotiable — budget, open weights, huge context, speed?",
+  "What are you trying to do, and how tricky is it?",
+  "Is this a one-off, or something you'll run all day?",
+  "Anything that matters a lot to you — cost, speed, privacy?",
 ];
 
 export default function WhichModelPage() {
@@ -41,10 +41,15 @@ export default function WhichModelPage() {
     );
   const showPendingIndicator = busy && !lastAssistantHasVisibleContent;
 
+  // The opening message needs enough to work with; once a conversation is
+  // running, a one-word answer to a clarifying question ("SQL", "yes", "cheap")
+  // is a perfectly valid turn, so only require that something was typed.
+  const minLength = messages.length === 0 ? 5 : 1;
+
   const submit = () => {
     const text = input.trim();
     if (busy) return;
-    if (text.length < 5) {
+    if (text.length < minLength) {
       setTooShort(true);
       return;
     }
@@ -53,8 +58,15 @@ export default function WhichModelPage() {
     setInput("");
   };
 
+  // Keep the newest turn in view: the composer is pinned to the bottom of the
+  // viewport, so without this the conversation grows underneath it unseen.
+  const bottomRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+  }, [messages.length, status]);
+
   return (
-    <div className="mx-auto flex max-w-3xl flex-col gap-8 pb-16 pt-10">
+    <div className="mx-auto flex max-w-3xl flex-col gap-8 pt-10">
       <section>
         <p className="mono text-xs uppercase tracking-[0.25em] text-ink-3">
           Ask the directory
@@ -171,6 +183,8 @@ export default function WhichModelPage() {
             </button>
           </div>
         )}
+
+        <div ref={bottomRef} aria-hidden />
       </div>
 
       <form
@@ -178,7 +192,10 @@ export default function WhichModelPage() {
           e.preventDefault();
           submit();
         }}
-        className="flex flex-col gap-2"
+        // Pinned to the bottom of the viewport so the composer never scrolls
+        // away as the conversation grows. The gradient lets the thread fade
+        // out underneath it instead of ending at a hard edge.
+        className="sticky bottom-0 z-20 flex flex-col gap-2 bg-linear-to-t from-bg from-70% to-transparent pb-6 pt-4"
       >
         <textarea
           value={input}
@@ -199,12 +216,18 @@ export default function WhichModelPage() {
         />
         {tooShort && (
           <p className="mono text-xs text-ink-3">
-            A little more detail would help — a few words about what you need.
+            {messages.length === 0
+              ? "A little more detail would help — a few words about what you need."
+              : "Type something first."}
           </p>
         )}
         <button
           type="submit"
-          disabled={busy || input.trim().length < 5}
+          // Only disabled while a reply is in flight. Gating this on input
+          // length instead left the button dead with no explanation for short
+          // but perfectly valid answers; too-short input is now rejected on
+          // submit with a visible reason.
+          disabled={busy}
           className="mono self-start rounded border border-accent/60 bg-accent/15 px-3 py-1.5 text-xs uppercase tracking-wider text-ink disabled:cursor-not-allowed disabled:opacity-40"
         >
           {busy ? "Thinking…" : "Ask"}
