@@ -16,9 +16,21 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Wait Which Model?",
+  // Required for the relative `openGraph.url` / image paths in child segments to
+  // resolve into the absolute URLs that link unfurlers (LinkedIn, Slack, X) need.
+  metadataBase: new URL("https://www.waitwhichmodel.fyi"),
+  title: {
+    default: "Wait Which Model?",
+    template: "%s · Wait Which Model?",
+  },
   description:
     "A directory, comparison instrument, and news log for frontier AI models.",
+  openGraph: {
+    siteName: "Wait Which Model?",
+    type: "website",
+    locale: "en_GB",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({
