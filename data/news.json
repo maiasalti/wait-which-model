@@ -28,6 +28,21 @@
     "sourceUrl": "https://www.barandbench.com/news/litigation/openai-did-not-violate-copyright-laws-by-using-ani-news-to-train-chatgpt-delhi-high-court-declines-interim-relief"
   },
   {
+    "id": "2026-07-24-claude-opus-5",
+    "date": "2026-07-24",
+    "title": "Anthropic releases Claude Opus 5",
+    "summary": "Anthropic shipped Claude Opus 5 at unchanged Opus pricing ($5/$25 per MTok) but with a new low/medium/high effort toggle, claiming a new SOTA on ARC-AGI-2 (90.4% at max effort) and ARC-AGI-3, a 96.0% SWE-bench Verified score, and a perfect run on all IMO 2026 problems — Anthropic's fourth model release in under two months.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-opus-5"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/claude-opus-5"
+  },
+  {
     "id": "2026-07-23-frontier-bench-v0-1",
     "date": "2026-07-23",
     "title": "Frontier-Bench v0.1 launches as the successor to Terminal-Bench",
@@ -161,6 +176,52 @@
     "sourceUrl": "https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/"
   },
   {
+    "id": "2026-07-21-gemini-3-6-flash",
+    "date": "2026-07-21",
+    "title": "Google releases Gemini 3.6 Flash and Gemini 3.5 Flash-Lite — but no 3.5 Pro",
+    "summary": "Google DeepMind shipped Gemini 3.6 Flash ($1.50/$7.50 per MTok, cutting output token usage by up to 17% vs 3.5 Flash) and the $0.30/$2.50 Gemini 3.5 Flash-Lite, alongside a government-and-partners-only Gemini 3.5 Flash Cyber security model. Launch benchmarks cover only Google's agentic suites (SWE-Bench Pro, Terminal-Bench, OSWorld), and the flagship Gemini 3.5 Pro promised for June at I/O remains delayed.",
+    "category": "release",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [
+      "gemini-3-6-flash",
+      "gemini-3-5-flash-lite"
+    ],
+    "sourceName": "Google Blog",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"
+  },
+  {
+    "id": "2026-07-20-fable-5-jacobian-conjecture",
+    "date": "2026-07-20",
+    "title": "Claude Fable 5 helps disprove the 87-year-old Jacobian conjecture",
+    "summary": "Anthropic mathematician Levent Alpöge used Claude Fable 5 to construct a concrete polynomial counterexample disproving the Jacobian conjecture for n=3 — a constant-Jacobian-determinant map whose distinct inputs collide to the same output, breaking global invertibility. The result was independently verified by outside mathematicians within a day; the conjecture remains open for n=2.",
+    "category": "research",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-fable-5"
+    ],
+    "sourceName": "CoinDesk",
+    "sourceUrl": "https://www.coindesk.com/tech/2026/07/21/claude-s-fable-5-just-solved-an-87-year-old-math-problem-and-it-matters-for-bitcoin"
+  },
+  {
+    "id": "2026-07-19-qwen3-8-max",
+    "date": "2026-07-19",
+    "title": "Alibaba previews Qwen3.8 Max, a 2.4-trillion-parameter multimodal model",
+    "summary": "Alibaba unveiled Qwen3.8 Max at WAIC Shanghai as a preview-only endpoint (qwen3.8-max-preview) — the first Qwen model above 1T parameters to handle text, image, video, and document input, with open weights promised \"soon.\" No benchmark table, model card, or per-token pricing was published, and Alibaba's claim that it ranks \"second only to Claude Fable 5\" remains unverified.",
+    "category": "release",
+    "companies": [
+      "alibaba"
+    ],
+    "modelIds": [
+      "qwen3-8-max"
+    ],
+    "sourceName": "MarkTechPost",
+    "sourceUrl": "https://www.marktechpost.com/2026/07/19/alibaba-previews-qwen3-8-max-a-2-4-trillion-parameter-multimodal-model-days-after-moonshots-kimi-k3-open-weight-launch/"
+  },
+  {
     "id": "2026-07-17-kimi-k3-aa-index",
     "date": "2026-07-17",
     "title": "Artificial Analysis puts Kimi K3 third on its Intelligence Index",
@@ -180,6 +241,21 @@
     "sourceUrl": "https://artificialanalysis.ai/articles/kimi-k3-achieves-3-in-the-artificial-analysis-intelligence-index-comparable-to-opus-4-8-and-gpt-5-5"
   },
   {
+    "id": "2026-07-16-kimi-k3",
+    "date": "2026-07-16",
+    "title": "Moonshot AI launches Kimi K3",
+    "summary": "Moonshot AI released Kimi K3, a 2.8-trillion-parameter open-weight MoE model with a 1M-token context window and native visual understanding, priced at $3/$15 per million input/output tokens; full weights are due July 27, 2026.",
+    "category": "release",
+    "companies": [
+      "moonshot"
+    ],
+    "modelIds": [
+      "kimi-k3"
+    ],
+    "sourceName": "VentureBeat",
+    "sourceUrl": "https://venturebeat.com/technology/chinas-moonshot-ai-releases-kimi-k3-the-largest-open-source-model-ever-rivaling-top-u-s-systems"
+  },
+  {
     "id": "2026-07-15-tml-inkling",
     "date": "2026-07-15",
     "title": "Thinking Machines Lab releases Inkling, a 975B open-weights multimodal MoE",
@@ -195,47 +271,19 @@
     "sourceUrl": "https://thinkingmachines.ai/model-card/inkling/"
   },
   {
-    "id": "2026-07-06-anthropic-global-workspace",
-    "date": "2026-07-06",
-    "title": "Anthropic reports a 'global workspace' inside Claude",
-    "summary": "Using a new interpretability technique it calls the Jacobian lens, Anthropic identified a small privileged subspace — J-space — that holds a few dozen concepts at a time and accounts for under a tenth of overall activity, yet causally mediates multi-step reasoning while most basic language processing bypasses it. Anthropic says the structure emerged spontaneously in training and explicitly does not claim it establishes phenomenal consciousness.",
-    "category": "research",
-    "companies": [
-      "anthropic"
-    ],
-    "modelIds": [],
-    "sourceName": "Anthropic",
-    "sourceUrl": "https://www.anthropic.com/research/global-workspace"
-  },
-  {
-    "id": "2026-07-01-fable-5-redeployed",
-    "date": "2026-07-01",
-    "title": "US lifts the Fable 5 and Mythos 5 export restrictions and Anthropic redeploys globally",
-    "summary": "After the June directive barring foreign nationals forced Anthropic to suspend both models for all users, Commerce cleared them on June 30 and Anthropic redeployed Claude Fable 5 worldwide across the Claude Platform, Claude.ai, Claude Code and Claude Cowork with a strengthened safety classifier addressing the jailbreak report that triggered the order.",
-    "category": "policy",
-    "companies": [
-      "anthropic"
-    ],
-    "modelIds": [
-      "claude-fable-5"
-    ],
-    "sourceName": "Anthropic",
-    "sourceUrl": "https://www.anthropic.com/news/redeploying-fable-5"
-  },
-  {
-    "id": "2026-07-24-claude-opus-5",
-    "date": "2026-07-24",
-    "title": "Anthropic releases Claude Opus 5",
-    "summary": "Anthropic shipped Claude Opus 5 at unchanged Opus pricing ($5/$25 per MTok) but with a new low/medium/high effort toggle, claiming a new SOTA on ARC-AGI-2 (90.4% at max effort) and ARC-AGI-3, a 96.0% SWE-bench Verified score, and a perfect run on all IMO 2026 problems — Anthropic's fourth model release in under two months.",
+    "id": "2026-07-13-soofi-s-30b-a3b",
+    "date": "2026-07-13",
+    "title": "German SOOFI consortium releases Soofi S, a sovereign open-weight MoE model",
+    "summary": "A consortium led by the KI Bundesverband — with Fraunhofer, DFKI, TU Darmstadt and others — released Soofi S 30B-A3B, a hybrid Mamba-2/MoE model trained on 27T tokens with up-weighted German, as a preview checkpoint on Hugging Face.",
     "category": "release",
     "companies": [
-      "anthropic"
+      "soofi"
     ],
     "modelIds": [
-      "claude-opus-5"
+      "soofi-s-30b-a3b"
     ],
-    "sourceName": "Anthropic",
-    "sourceUrl": "https://www.anthropic.com/news/claude-opus-5"
+    "sourceName": "Fraunhofer IAIS",
+    "sourceUrl": "https://www.iais.fraunhofer.de/de/presse/presseinformationen/2026/soofi-modell-fuer-industrielle-ki.html"
   },
   {
     "id": "2026-07-09-muse-spark-1-1",
@@ -268,97 +316,6 @@
     "sourceUrl": "https://x.ai/news/grok-4-5"
   },
   {
-    "id": "2026-06-30-claude-sonnet-5",
-    "date": "2026-06-30",
-    "title": "Anthropic releases Claude Sonnet 5",
-    "summary": "Claude Sonnet 5 replaced Sonnet 4.6 as Anthropic's default mid-tier model, at introductory pricing of $2/$10 per MTok (rising to $3/$15 on Sept 1), with a 1M-token context window and Anthropic's largest published Sonnet-to-Sonnet HLE jump (34.6% to 43.2% no tools).",
-    "category": "release",
-    "companies": [
-      "anthropic"
-    ],
-    "modelIds": [
-      "claude-sonnet-5"
-    ],
-    "sourceName": "Anthropic",
-    "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-5"
-  },
-  {
-    "id": "2026-07-21-gemini-3-6-flash",
-    "date": "2026-07-21",
-    "title": "Google releases Gemini 3.6 Flash and Gemini 3.5 Flash-Lite — but no 3.5 Pro",
-    "summary": "Google DeepMind shipped Gemini 3.6 Flash ($1.50/$7.50 per MTok, cutting output token usage by up to 17% vs 3.5 Flash) and the $0.30/$2.50 Gemini 3.5 Flash-Lite, alongside a government-and-partners-only Gemini 3.5 Flash Cyber security model. Launch benchmarks cover only Google's agentic suites (SWE-Bench Pro, Terminal-Bench, OSWorld), and the flagship Gemini 3.5 Pro promised for June at I/O remains delayed.",
-    "category": "release",
-    "companies": [
-      "google"
-    ],
-    "modelIds": [
-      "gemini-3-6-flash",
-      "gemini-3-5-flash-lite"
-    ],
-    "sourceName": "Google Blog",
-    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"
-  },
-  {
-    "id": "2026-07-19-qwen3-8-max",
-    "date": "2026-07-19",
-    "title": "Alibaba previews Qwen3.8 Max, a 2.4-trillion-parameter multimodal model",
-    "summary": "Alibaba unveiled Qwen3.8 Max at WAIC Shanghai as a preview-only endpoint (qwen3.8-max-preview) — the first Qwen model above 1T parameters to handle text, image, video, and document input, with open weights promised \"soon.\" No benchmark table, model card, or per-token pricing was published, and Alibaba's claim that it ranks \"second only to Claude Fable 5\" remains unverified.",
-    "category": "release",
-    "companies": [
-      "alibaba"
-    ],
-    "modelIds": [
-      "qwen3-8-max"
-    ],
-    "sourceName": "MarkTechPost",
-    "sourceUrl": "https://www.marktechpost.com/2026/07/19/alibaba-previews-qwen3-8-max-a-2-4-trillion-parameter-multimodal-model-days-after-moonshots-kimi-k3-open-weight-launch/"
-  },
-  {
-    "id": "2026-07-20-fable-5-jacobian-conjecture",
-    "date": "2026-07-20",
-    "title": "Claude Fable 5 helps disprove the 87-year-old Jacobian conjecture",
-    "summary": "Anthropic mathematician Levent Alpöge used Claude Fable 5 to construct a concrete polynomial counterexample disproving the Jacobian conjecture for n=3 — a constant-Jacobian-determinant map whose distinct inputs collide to the same output, breaking global invertibility. The result was independently verified by outside mathematicians within a day; the conjecture remains open for n=2.",
-    "category": "research",
-    "companies": [
-      "anthropic"
-    ],
-    "modelIds": [
-      "claude-fable-5"
-    ],
-    "sourceName": "CoinDesk",
-    "sourceUrl": "https://www.coindesk.com/tech/2026/07/21/claude-s-fable-5-just-solved-an-87-year-old-math-problem-and-it-matters-for-bitcoin"
-  },
-  {
-    "id": "2026-07-16-kimi-k3",
-    "date": "2026-07-16",
-    "title": "Moonshot AI launches Kimi K3",
-    "summary": "Moonshot AI released Kimi K3, a 2.8-trillion-parameter open-weight MoE model with a 1M-token context window and native visual understanding, priced at $3/$15 per million input/output tokens; full weights are due July 27, 2026.",
-    "category": "release",
-    "companies": [
-      "moonshot"
-    ],
-    "modelIds": [
-      "kimi-k3"
-    ],
-    "sourceName": "VentureBeat",
-    "sourceUrl": "https://venturebeat.com/technology/chinas-moonshot-ai-releases-kimi-k3-the-largest-open-source-model-ever-rivaling-top-u-s-systems"
-  },
-  {
-    "id": "2026-07-13-soofi-s-30b-a3b",
-    "date": "2026-07-13",
-    "title": "German SOOFI consortium releases Soofi S, a sovereign open-weight MoE model",
-    "summary": "A consortium led by the KI Bundesverband — with Fraunhofer, DFKI, TU Darmstadt and others — released Soofi S 30B-A3B, a hybrid Mamba-2/MoE model trained on 27T tokens with up-weighted German, as a preview checkpoint on Hugging Face.",
-    "category": "release",
-    "companies": [
-      "soofi"
-    ],
-    "modelIds": [
-      "soofi-s-30b-a3b"
-    ],
-    "sourceName": "Fraunhofer IAIS",
-    "sourceUrl": "https://www.iais.fraunhofer.de/de/presse/presseinformationen/2026/soofi-modell-fuer-industrielle-ki.html"
-  },
-  {
     "id": "2026-07-09-gpt-5-6-ga",
     "date": "2026-07-09",
     "title": "OpenAI ships GPT-5.6 (Sol, Terra, Luna) to the public",
@@ -375,34 +332,32 @@
     "sourceUrl": "https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/"
   },
   {
-    "id": "2026-06-13-glm-5-2",
-    "date": "2026-06-13",
-    "title": "Zhipu AI releases GLM-5.2, an MIT-licensed open-weights coding flagship",
-    "summary": "Z.ai's GLM-5.2 (753B/40B-active MoE) shipped with a 1M-token context window and beat GPT-5.5 on SWE-bench Pro (62.1 vs 58.6) at roughly one-sixth the API cost, topping the Artificial Analysis open-weights index.",
-    "category": "release",
+    "id": "2026-07-06-anthropic-global-workspace",
+    "date": "2026-07-06",
+    "title": "Anthropic reports a 'global workspace' inside Claude",
+    "summary": "Using a new interpretability technique it calls the Jacobian lens, Anthropic identified a small privileged subspace — J-space — that holds a few dozen concepts at a time and accounts for under a tenth of overall activity, yet causally mediates multi-step reasoning while most basic language processing bypasses it. Anthropic says the structure emerged spontaneously in training and explicitly does not claim it establishes phenomenal consciousness.",
+    "category": "research",
     "companies": [
-      "zhipu"
+      "anthropic"
     ],
-    "modelIds": [
-      "glm-5-2"
-    ],
-    "sourceName": "VentureBeat",
-    "sourceUrl": "https://venturebeat.com/technology/z-ais-open-weights-glm-5-2-beats-gpt-5-5-on-multiple-long-horizon-coding-benchmarks-for-1-6th-the-cost"
+    "modelIds": [],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/research/global-workspace"
   },
   {
-    "id": "2026-04-02-gemma-4",
-    "date": "2026-04-02",
-    "title": "Google DeepMind releases Gemma 4, its first multimodal open-weights line",
-    "summary": "Gemma 4 ships in five Apache 2.0-licensed sizes (E2B to 31B), adding native image/video (and audio on the smaller tiers) input; the 31B flagship ranked #3 on the LMArena text leaderboard at release.",
-    "category": "release",
+    "id": "2026-07-01-fable-5-redeployed",
+    "date": "2026-07-01",
+    "title": "US lifts the Fable 5 and Mythos 5 export restrictions and Anthropic redeploys globally",
+    "summary": "After the June directive barring foreign nationals forced Anthropic to suspend both models for all users, Commerce cleared them on June 30 and Anthropic redeployed Claude Fable 5 worldwide across the Claude Platform, Claude.ai, Claude Code and Claude Cowork with a strengthened safety classifier addressing the jailbreak report that triggered the order.",
+    "category": "policy",
     "companies": [
-      "google"
+      "anthropic"
     ],
     "modelIds": [
-      "gemma-4"
+      "claude-fable-5"
     ],
-    "sourceName": "Google",
-    "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/"
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/redeploying-fable-5"
   },
   {
     "id": "2026-07-01-colorado-ai-act",
@@ -416,6 +371,21 @@
     "modelIds": [],
     "sourceName": "US Department of Justice",
     "sourceUrl": "https://www.justice.gov/opa/pr/justice-department-intervenes-xai-lawsuit-challenging-colorados-algorithmic-discrimination"
+  },
+  {
+    "id": "2026-06-30-claude-sonnet-5",
+    "date": "2026-06-30",
+    "title": "Anthropic releases Claude Sonnet 5",
+    "summary": "Claude Sonnet 5 replaced Sonnet 4.6 as Anthropic's default mid-tier model, at introductory pricing of $2/$10 per MTok (rising to $3/$15 on Sept 1), with a 1M-token context window and Anthropic's largest published Sonnet-to-Sonnet HLE jump (34.6% to 43.2% no tools).",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-sonnet-5"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-5"
   },
   {
     "id": "2026-06-26-gpt-5-6-preview",
@@ -464,6 +434,21 @@
     "sourceUrl": "https://www.swfte.com/ai/leaderboard"
   },
   {
+    "id": "2026-06-13-glm-5-2",
+    "date": "2026-06-13",
+    "title": "Zhipu AI releases GLM-5.2, an MIT-licensed open-weights coding flagship",
+    "summary": "Z.ai's GLM-5.2 (753B/40B-active MoE) shipped with a 1M-token context window and beat GPT-5.5 on SWE-bench Pro (62.1 vs 58.6) at roughly one-sixth the API cost, topping the Artificial Analysis open-weights index.",
+    "category": "release",
+    "companies": [
+      "zhipu"
+    ],
+    "modelIds": [
+      "glm-5-2"
+    ],
+    "sourceName": "VentureBeat",
+    "sourceUrl": "https://venturebeat.com/technology/z-ais-open-weights-glm-5-2-beats-gpt-5-5-on-multiple-long-horizon-coding-benchmarks-for-1-6th-the-cost"
+  },
+  {
     "id": "2026-06-13-foreign-nationals-bar",
     "date": "2026-06-13",
     "title": "US bars foreign nationals from accessing Fable 5 and Mythos 5",
@@ -507,6 +492,21 @@
     ],
     "sourceName": "Anthropic",
     "sourceUrl": "https://www.anthropic.com/news/claude-fable-5-mythos-5"
+  },
+  {
+    "id": "2026-06-04-nemotron-3-ultra",
+    "date": "2026-06-04",
+    "title": "NVIDIA releases Nemotron 3 Ultra, a 550B open-weights reasoning model",
+    "summary": "NVIDIA's largest Nemotron 3 model — 550B total, 55B active, hybrid Mamba-Transformer MoE — ships with open weights, training data and recipes, scoring 47.7 on Artificial Analysis' Intelligence Index at over 400 output tokens per second.",
+    "category": "release",
+    "companies": [
+      "nvidia"
+    ],
+    "modelIds": [
+      "nemotron-3-ultra"
+    ],
+    "sourceName": "Artificial Analysis",
+    "sourceUrl": "https://artificialanalysis.ai/articles/nvidia-nemotron-3-ultra-released"
   },
   {
     "id": "2026-06-02-frontier-ai-eo",
@@ -699,6 +699,36 @@
     ],
     "sourceName": "Meta AI",
     "sourceUrl": "https://ai.meta.com/blog/introducing-muse-spark-msl/"
+  },
+  {
+    "id": "2026-04-02-gemma-4",
+    "date": "2026-04-02",
+    "title": "Google DeepMind releases Gemma 4, its first multimodal open-weights line",
+    "summary": "Gemma 4 ships in five Apache 2.0-licensed sizes (E2B to 31B), adding native image/video (and audio on the smaller tiers) input; the 31B flagship ranked #3 on the LMArena text leaderboard at release.",
+    "category": "release",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [
+      "gemma-4"
+    ],
+    "sourceName": "Google",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/"
+  },
+  {
+    "id": "2026-03-11-nemotron-3-super",
+    "date": "2026-03-11",
+    "title": "NVIDIA ships Nemotron 3 Super, a 120B open-weights model built for throughput",
+    "summary": "The middle Nemotron 3 tier activates 12.7B of 120B parameters per token and serves around 450 output tokens per second over a 1M-token context, posting MMLU-Pro 83.73 and SWE-bench Verified 60.47.",
+    "category": "release",
+    "companies": [
+      "nvidia"
+    ],
+    "modelIds": [
+      "nemotron-3-super"
+    ],
+    "sourceName": "llm-stats",
+    "sourceUrl": "https://llm-stats.com/blog/research/nemotron-3-super-launch"
   },
   {
     "id": "2026-02-11-gemini-3-1-pro",

@@ -2370,5 +2370,81 @@
       "Tuned closely to its own harness; behavior shifts when moved to a different agent framework"
     ],
     "notes": "None of the site's tracked benchmarks were reported: poolside published only agentic coding evals, all with thinking enabled — Terminal-Bench 2.1 70.2%, SWE-bench Multilingual 78.5%, SWE-Bench Pro public 59.4%, DeepSWE v1.1 40.4%, SWE Atlas 46.2%, Toolathlon Verified 49.7% (pass@1 over 3-4 attempts). Without thinking, Terminal-Bench 2.1 drops to 60.4% and DeepSWE to 16.5%. Pricing is the OpenRouter listing served by poolside ($0.10/$0.20 per MTok, $0.01 cached read); poolside publishes no separate per-token price sheet and also offers a free 256K-context tier. Knowledge cutoff not published; max output 131,072 tokens per the OpenRouter endpoint spec."
+  },
+  {
+    "id": "nemotron-3-super",
+    "name": "Nemotron 3 Super",
+    "company": "nvidia",
+    "releaseDate": "2026-03-11",
+    "status": "superseded",
+    "tier": "balanced",
+    "modality": "text",
+    "contextWindow": 1000000,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 0.1,
+      "outputPerMTok": 0.5
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "benchmarks": {
+      "mmluPro": 83.73,
+      "gpqaDiamond": null,
+      "sweBench": 60.47,
+      "aime": 90.21,
+      "hle": 18.26,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Among the fastest open models at its capability — roughly 450 output tokens/sec on hosted endpoints",
+      "Activates about a tenth of its parameters per token, so it serves far cheaper than its size implies",
+      "Handles very long inputs without the slowdown dense models hit, thanks to the hybrid state-space design"
+    ],
+    "weaknesses": [
+      "Text-only, so no screenshots, diagrams or PDFs",
+      "Reasoning depth well short of frontier flagships — a fast workhorse rather than a hard-problem model"
+    ],
+    "notes": "Middle of the Nemotron 3 family; 120B total / 12.7B active MoE. MMLU-Pro 83.73, SWE-bench Verified 60.47, AIME 2025 90.21 and HLE 18.26 per llm-stats' launch analysis. GPQA Diamond left null deliberately: the reported 79.23 is labelled \"GPQA no tools\", which NVIDIA's own report treats as distinct from GPQA Diamond. Pricing is DeepInfra's rate; OpenRouter lists $0.085/$0.40 and the cross-provider median is about $0.30/$0.80. Artificial Analysis Intelligence Index 36.0."
+  },
+  {
+    "id": "nemotron-3-ultra",
+    "name": "Nemotron 3 Ultra",
+    "company": "nvidia",
+    "releaseDate": "2026-06-04",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "text",
+    "contextWindow": 1000000,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 0.5,
+      "outputPerMTok": 2.2
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Hybrid Mamba-Transformer routing holds throughput up as context grows, where dense attention models slow down",
+      "Serves faster than most open models near its size — over 400 tokens/sec on hosted endpoints",
+      "Ships training data and recipes alongside the weights, so it can be genuinely retrained rather than only run",
+      "Licence permits commercial deployment and self-hosting without negotiation"
+    ],
+    "weaknesses": [
+      "Text-only — no images, screenshots or documents",
+      "Trails the leading Chinese open-weights models on composite intelligence despite its size",
+      "NVIDIA published no standard academic benchmark table at launch, so it is hard to place precisely"
+    ],
+    "notes": "Largest of the three-model Nemotron 3 family (Nano, Super, Ultra); 550B total / 55B active MoE. Artificial Analysis Intelligence Index 47.7 — ahead of Gemma 4 31B (39.2) and Nemotron 3 Super (36.0), behind Kimi K2.6 (53.9). None of the site's tracked benchmarks could be attributed with confidence: NVIDIA's technical report contains many ablation and quantisation tables rather than a single headline model table, so they stay null rather than risk quoting an intermediate checkpoint. Pricing is OpenRouter's listing; NVIDIA publishes no first-party per-token price. Context is 1M per NVIDIA, though OpenRouter serves a 512K effective window."
   }
 ]

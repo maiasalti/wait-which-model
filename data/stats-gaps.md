@@ -211,3 +211,13 @@ Stats-filler sweep on 2026-07-27. Sources checked: arena.ai text leaderboard, Ar
 | gpt-5-6-terra | lmarenaElo | 2026-07-29 | no gpt-5.6-terra listing on arena.ai (only the Sol variants) |
 | gpt-5-6-terra | arcAgi2 | 2026-07-29 | ARC Prize published Sol only; Terra untested |
 | gpt-5-6-terra | knowledgeCutoff | 2026-07-29 | not disclosed per tier; Sol's 2026-02 not confirmed to apply to Terra |
+| nemotron-3-ultra | mmluPro | 2026-07-29 | NVIDIA's technical report has ablation/quantisation tables rather than one headline model table; could not attribute a final-model figure |
+| nemotron-3-ultra | gpqaDiamond | 2026-07-29 | same — report shows both 'GPQA Diamond' and 'GPQA no tools' rows across many configs; no unambiguous final figure |
+| nemotron-3-ultra | sweBench | 2026-07-29 | not reported for Ultra |
+| nemotron-3-ultra | aime | 2026-07-29 | not reported; report cites IMO AnswerBench instead |
+| nemotron-3-ultra | hle | 2026-07-29 | multiple HLE rows across ablations (no-tools and with-tools); no unambiguous final figure |
+| nemotron-3-ultra | lmarenaElo | 2026-07-29 | no Nemotron 3 Ultra listing on arena.ai |
+| nemotron-3-ultra | arcAgi2 | 2026-07-29 | not tested by ARC Prize |
+| nemotron-3-super | gpqaDiamond | 2026-07-29 | reported 79.23 is labelled 'GPQA no tools', which NVIDIA's report treats as distinct from GPQA Diamond |
+| nemotron-3-super | lmarenaElo | 2026-07-29 | no Nemotron 3 Super listing on arena.ai |
+| nemotron-3-super | arcAgi2 | 2026-07-29 | not tested by ARC Prize |

@@ -115,5 +115,14 @@
     "website": "https://thinkingmachines.ai",
     "color": "#D5455D",
     "order": 13
+  },
+  {
+    "id": "nvidia",
+    "name": "NVIDIA",
+    "country": "United States",
+    "founded": 1993,
+    "website": "https://www.nvidia.com",
+    "color": "#69A600",
+    "order": 14
   }
 ]
