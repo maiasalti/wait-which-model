@@ -203,7 +203,7 @@ export default function WhichModelPage() {
   }, [messages.length, status]);
 
   return (
-    <div className="mx-auto flex max-w-3xl flex-col gap-8 pt-10">
+    <div className="mx-auto flex max-w-4xl flex-col gap-8 pt-10">
       <section>
         <p className="mono text-xs uppercase tracking-[0.25em] text-ink-3">
           Ask the directory
@@ -342,10 +342,16 @@ export default function WhichModelPage() {
           submit();
         }}
         // Pinned to the bottom of the viewport so the composer never scrolls
-        // away as the conversation grows. The gradient lets the thread fade
-        // out underneath it instead of ending at a hard edge.
-        className="sticky bottom-0 z-20 flex flex-col gap-2 bg-linear-to-t from-bg from-70% to-transparent pb-6 pt-4"
+        // away as the conversation grows. The bar itself is opaque — an earlier
+        // version used a gradient background on the form, which left its top
+        // third transparent and let scrolling thread text show through the
+        // controls. The fade now lives in a strip above the bar instead.
+        className="sticky bottom-0 z-20 flex flex-col gap-2 bg-bg pb-6 pt-3"
       >
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 bottom-full h-10 bg-linear-to-t from-bg to-transparent"
+        />
         {messages.length > 0 && (
           <>
             {pickerOpen && (
