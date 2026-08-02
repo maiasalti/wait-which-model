@@ -2108,7 +2108,7 @@
       "mmluPro": null,
       "gpqaDiamond": 92.6,
       "sweBench": 95,
-      "terminalBench": 88.0,
+      "terminalBench": 88,
       "aime": null,
       "hle": 64.5,
       "lmarenaElo": 1509,
@@ -2368,7 +2368,7 @@
       "mmluPro": null,
       "gpqaDiamond": 92.8,
       "sweBench": null,
-      "terminalBench": 78.0,
+      "terminalBench": 78,
       "aime": null,
       "hle": 38.3,
       "lmarenaElo": 1485,
@@ -2410,7 +2410,7 @@
       "mmluPro": null,
       "gpqaDiamond": 83.8,
       "sweBench": null,
-      "terminalBench": 54.0,
+      "terminalBench": 54,
       "aime": null,
       "hle": 17.5,
       "lmarenaElo": 1459,
@@ -2771,5 +2771,48 @@
       "NVIDIA published no standard academic benchmark table at launch, so it is hard to place precisely"
     ],
     "notes": "Largest of the three-model Nemotron 3 family (Nano, Super, Ultra); 550B total / 55B active MoE. Artificial Analysis Intelligence Index 47.7 — ahead of Gemma 4 31B (39.2) and Nemotron 3 Super (36.0), behind Kimi K2.6 (53.9). None of the site's tracked benchmarks could be attributed with confidence: NVIDIA's technical report contains many ablation and quantisation tables rather than a single headline model table, so they stay null rather than risk quoting an intermediate checkpoint. Pricing is OpenRouter's listing; NVIDIA publishes no first-party per-token price. Context is 1M per NVIDIA, though OpenRouter serves a 512K effective window."
+  },
+  {
+    "id": "deepseek-v4-flash-0731",
+    "name": "DeepSeek-V4-Flash-0731",
+    "company": "deepseek",
+    "releaseDate": "2026-07-31",
+    "status": "frontier",
+    "tier": "fast",
+    "modality": "text",
+    "contextWindow": 1000000,
+    "maxOutput": 65536,
+    "pricing": {
+      "inputPerMTok": 0.14,
+      "outputPerMTok": 0.28
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 91,
+      "sweBench": null,
+      "terminalBench": 82.7,
+      "aime": null,
+      "hle": 37,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Re-post-training alone — same architecture as April's preview — was enough to leapfrog its own bigger V4-Pro sibling on agent and coding evals",
+      "Ships with native OpenAI Responses API support and is specifically tuned for Codex-style harnesses, easing drop-in swaps into existing agent pipelines",
+      "MIT-licensed weights on Hugging Face from day one, so self-hosting isn't a second-class option"
+    ],
+    "weaknesses": [
+      "Thinking mode is on by default and bills at the output rate even though the reasoning tokens never show up in the response — easy to rack up cost without noticing",
+      "Agent-benchmark gains are DeepSeek's own figures, run on an unreleased internal harness — independent reproduction hasn't caught up yet",
+      "Text-only — no image input, unlike multimodal rivals at the same price point"
+    ],
+    "notes": "Official production release superseding the April preview; same 284B-total/13B-active MoE architecture and unchanged $0.14/$0.28 pricing, gains come entirely from re-post-training. GPQA Diamond and HLE per Artificial Analysis; MMLU-Pro, SWE-bench, AIME, LMArena Elo and ARC-AGI-2 unpublished for this build; AA's cost-per-task figure (~$0.03 at max effort) is an approximation, not the precise measurement this field requires."
   }
 ]

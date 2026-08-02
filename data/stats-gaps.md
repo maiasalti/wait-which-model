@@ -221,3 +221,15 @@ Stats-filler sweep on 2026-07-27. Sources checked: arena.ai text leaderboard, Ar
 | nemotron-3-super | gpqaDiamond | 2026-07-29 | reported 79.23 is labelled 'GPQA no tools', which NVIDIA's report treats as distinct from GPQA Diamond |
 | nemotron-3-super | lmarenaElo | 2026-07-29 | no Nemotron 3 Super listing on arena.ai |
 | nemotron-3-super | arcAgi2 | 2026-07-29 | not tested by ARC Prize |
+
+Weekly release-scan sweep on 2026-08-02 (new model: DeepSeek-V4-Flash-0731, released 2026-07-31). Sources checked: DeepSeek API changelog coverage, Artificial Analysis model/comparison pages, Hugging Face model card, TechTimes, MarkTechPost, OfficeChai, XenoSpectrum. WebFetch was unavailable for primary-source pages this run (proxy returned 403 on all fetches, including non-target control URLs); findings rest on WebSearch-synthesized excerpts from the sources above, cross-checked across at least two independent outlets each.
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| deepseek-v4-flash-0731 | mmluPro | 2026-08-02 | not broken out for this build in any source found; only a vague "close to V4-Pro-Max" claim, no number |
+| deepseek-v4-flash-0731 | sweBench | 2026-08-02 | DeepSeek reports DeepSWE and DSBench-FullStack instead of SWE-bench Verified; no comparable figure |
+| deepseek-v4-flash-0731 | aime | 2026-08-02 | not reported by DeepSeek or Artificial Analysis for this build |
+| deepseek-v4-flash-0731 | lmarenaElo | 2026-08-02 | not listed on arena.ai as of 2026-08-02 |
+| deepseek-v4-flash-0731 | arcAgi2 | 2026-08-02 | not on ARC-AGI-2 leaderboards as of 2026-08-02 |
+| deepseek-v4-flash-0731 | knowledgeCutoff | 2026-08-02 | not disclosed for the 0731 build specifically; only an unverifiable inference that it matches the April preview's cutoff |
+| deepseek-v4-flash-0731 | costPerTask.usd | 2026-08-02 | Artificial Analysis states only an approximate "~$0.03 at max effort"; the precise `intelligenceIndexCostPerTask.cost.total` figure this field requires could not be retrieved (AA's model page returned 403 on direct fetch) |

@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-07-31-deepseek-v4-flash-0731",
+    "date": "2026-07-31",
+    "title": "DeepSeek releases DeepSeek-V4-Flash-0731",
+    "summary": "DeepSeek moved V4-Flash out of preview into official release as build 0731 — same 284B/13B MoE architecture and $0.14/$0.28 pricing as the April preview, but re-post-trained hard enough on agent and coding data to score 50 on Artificial Analysis' Intelligence Index (versus 40 for the preview) and pass its own larger V4-Pro on several agent benchmarks. Weights are MIT-licensed on Hugging Face.",
+    "category": "release",
+    "companies": [
+      "deepseek"
+    ],
+    "modelIds": [
+      "deepseek-v4-flash-0731"
+    ],
+    "sourceName": "Artificial Analysis",
+    "sourceUrl": "https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash"
+  },
+  {
     "id": "2026-07-24-open-weights-letter",
     "date": "2026-07-24",
     "title": "Nvidia, Microsoft and Meta lead a 25-company letter against open-weight AI restrictions",
