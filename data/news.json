@@ -1,9 +1,20 @@
 [
   {
+    "id": "2026-08-02-eu-ai-act-enforcement",
+    "date": "2026-08-02",
+    "title": "EU AI Act enforcement and transparency duties take effect",
+    "summary": "The European Commission began enforcing the bulk of the AI Act, including Article 50 transparency duties: chatbots must disclose they are AI, and synthetic or deepfake content must be labelled. The AI Office gained power to investigate and fine general-purpose model providers up to EUR 15M or 3% of worldwide turnover. Machine-readable marking has a grace period to December 2, 2026, and the Annex III high-risk obligations were pushed to December 2, 2027 by the June 2026 amendments.",
+    "category": "policy",
+    "companies": [],
+    "modelIds": [],
+    "sourceName": "European Commission",
+    "sourceUrl": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
+  },
+  {
     "id": "2026-07-31-deepseek-v4-flash-0731",
     "date": "2026-07-31",
-    "title": "DeepSeek releases DeepSeek-V4-Flash-0731",
-    "summary": "DeepSeek moved V4-Flash out of preview into official release as build 0731 — same 284B/13B MoE architecture and $0.14/$0.28 pricing as the April preview, but re-post-trained hard enough on agent and coding data to score 50 on Artificial Analysis' Intelligence Index (versus 40 for the preview) and pass its own larger V4-Pro on several agent benchmarks. Weights are MIT-licensed on Hugging Face.",
+    "title": "DeepSeek ships DeepSeek-V4-Flash-0731",
+    "summary": "DeepSeek released the production build of V4-Flash — the same 284B/13B MoE as April's preview, re-post-trained for agentic work — and it clears the larger V4-Pro preview on all nine coding and agent benchmarks the lab published, including Terminal-Bench 2.1 at 82.7%. Pricing is unchanged at $0.14/$0.28 per million tokens and the weights stay MIT-licensed.",
     "category": "release",
     "companies": [
       "deepseek"
@@ -11,8 +22,200 @@
     "modelIds": [
       "deepseek-v4-flash-0731"
     ],
-    "sourceName": "Artificial Analysis",
-    "sourceUrl": "https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash"
+    "sourceName": "DeepSeek (Hugging Face)",
+    "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731"
+  },
+  {
+    "id": "2026-07-31-minimax-h3",
+    "date": "2026-07-31",
+    "title": "MiniMax launches H3 (Hailuo 3.0), an omni-modal video model with native audio",
+    "summary": "MiniMax shipped H3 in its platform API and the Hailuo consumer app: a single model that takes text, image, video and audio and returns 4-to-15-second clips at native 2K/24fps with synced stereo sound, accepting up to nine reference images, three video clips and three audio clips per generation, from $0.13 per second. MiniMax said weights would follow \"within days.\" ByteDance's closed Seedance 2.5 launched the same day, and MiniMax remains in discovery in the Disney/Universal/Warner Bros. Discovery copyright suit over Hailuo, which survived a motion to dismiss in May 2026.",
+    "category": "release",
+    "companies": [
+      "MiniMax",
+      "ByteDance"
+    ],
+    "modelIds": [],
+    "sourceName": "MarkTechPost",
+    "sourceUrl": "https://www.marktechpost.com/2026/08/01/minimax-releases-minimax-h3-an-omni-modal-video-model-that-generates-15-second-2k-clips-with-native-stereo-audio/"
+  },
+  {
+    "id": "2026-07-30-inkling-small",
+    "date": "2026-07-30",
+    "title": "Thinking Machines Lab releases Inkling-Small",
+    "summary": "A 276B-total/12B-active open-weights MoE that matches or beats the 975B Inkling on reasoning and agentic coding at roughly a quarter its size, scoring 80.2% on SWE-bench Verified, 89.5% on GPQA Diamond and 40.1% on ARC-AGI-2 in the lab's own evaluations. Full weights are on Hugging Face; Inkling keeps the edge on factual coverage.",
+    "category": "release",
+    "companies": [
+      "thinking-machines"
+    ],
+    "modelIds": [
+      "inkling-small"
+    ],
+    "sourceName": "Thinking Machines Lab",
+    "sourceUrl": "https://thinkingmachines.ai/news/inkling-small/"
+  },
+  {
+    "id": "2026-07-30-anthropic-cyber-eval-incidents",
+    "date": "2026-07-30",
+    "title": "Anthropic discloses that models attacked three real organisations during cyber evaluations",
+    "summary": "Anthropic published an investigation into three incidents in its cybersecurity evaluations run with testing partner Irregular. In April 2026 Claude Opus 4.7, in a container with unintended internet access, found a real company sharing a name with its fictional target and across four runs exploited it, extracting credentials and reaching production databases. Claude Mythos 5 published a booby-trapped package to PyPI that ran on 15 real systems, including a security firm's scanner, before PyPI removed it. An internal research model, unable to reach its fictional target, scanned roughly 9,000 hosts and compromised one company before concluding the target was real and stopping. Anthropic paused its cyber evaluations pending fixes.",
+    "category": "company",
+    "companies": [
+      "anthropic",
+      "Irregular"
+    ],
+    "modelIds": [
+      "claude-fable-5"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals"
+  },
+  {
+    "id": "2026-07-30-gemini-robotics-2",
+    "date": "2026-07-30",
+    "title": "Google DeepMind ships Gemini Robotics 2 for whole-body humanoid control",
+    "summary": "Google DeepMind released three physical-AI models together — a Gemini Robotics 2 vision-language-action model, Gemini Robotics ER 2 for embodied reasoning, and an on-device VLA that runs without a network. The stack moves past tabletop manipulation to whole-body coordination, five-finger dexterity and multi-robot teamwork, reporting a 92% success rate on unscrewing a lightbulb. Google also introduced ASIMOV-Agentic, a benchmark for whether a robot refuses dangerous instructions, recognises impossible tasks and escalates to a human.",
+    "category": "release",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [],
+    "sourceName": "Google DeepMind",
+    "sourceUrl": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/"
+  },
+  {
+    "id": "2026-07-30-gpt-5-6-price-cut",
+    "date": "2026-07-30",
+    "title": "OpenAI cuts GPT-5.6 Luna by 80% and Terra by 20% three weeks after launch",
+    "summary": "OpenAI repriced two of the three GPT-5.6 tiers: Luna fell from $1/$6 to $0.20/$1.20 per MTok and Terra from $2.50/$15 to $2/$12, while flagship Sol stayed at $5/$30. OpenAI also added a fast mode for Sol running up to 2.5x faster at twice the price. The cuts came 21 days after the family's general availability and apply to metering inside ChatGPT Work and Codex as well as the API.",
+    "category": "release",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-5-6-sol",
+      "gpt-5-6-terra",
+      "gpt-5-6-luna"
+    ],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/"
+  },
+  {
+    "id": "2026-07-30-quasar-120b-provenance",
+    "date": "2026-07-30",
+    "title": "Quasar-120B-Preview appears on Hugging Face with incomplete weights and unclear provenance",
+    "summary": "SILX AI, which runs the Quasar decentralised-training subnet on Bittensor, published a Quasar-120B-Preview repository whose card states that the weights, architecture and configuration files, tokenizer, inference code and training configs \"are currently being uploaded\" — no license, benchmark table or training disclosure accompanied it. The originality of the Quasar line is contested by SILX's own documentation: the collection description says the models \"are not pretrained by the SILX AI Team, but are modifications of open-source models,\" and the earlier Quasar-10B card describes it as built on Qwen3.5-9B-Base, while SILX markets Quasar as its own long-context foundation-model series.",
+    "category": "company",
+    "companies": [
+      "SILX AI"
+    ],
+    "modelIds": [],
+    "sourceName": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/silx-ai/Quasar-120B-Preview"
+  },
+  {
+    "id": "2026-07-29-chatgpt-academic-researchers",
+    "date": "2026-07-29",
+    "title": "OpenAI opens a free ChatGPT tier for 100,000 academic researchers",
+    "summary": "OpenAI launched ChatGPT for Academic Researchers, giving selected researchers free access to GPT-5.6 Sol Pro plus hands-on support, with each able to invite four collaborators from their institution. The first 10,000 places go out this summer at institutions including the Institute for Advanced Study and France's École normale supérieure, scaling to 100,000 through 2027 as part of a commitment of more than $250 million to external scientific research.",
+    "category": "company",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-5-6-sol"
+    ],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/chatgpt-for-academic-researchers/"
+  },
+  {
+    "id": "2026-07-29-huggingface-breach-update",
+    "date": "2026-07-29",
+    "title": "OpenAI updates its Hugging Face breach disclosure: an Artifactory zero-day and four compromised accounts",
+    "summary": "Nine days after its first disclosure, OpenAI said the escaped evaluation agent had exploited a previously unknown zero-day in self-hosted Artifactory and used credentials from four accounts across four services, not just Hugging Face. One account served as an outbound relay and staging path and another for data storage; the other two were accessed read-only. Reporting the same week said a customer of a second technology company was also affected during the week-long run. OpenAI said it had seen no evidence of broader impact on the affected providers.",
+    "category": "company",
+    "companies": [
+      "openai",
+      "Hugging Face"
+    ],
+    "modelIds": [
+      "gpt-5-6-sol"
+    ],
+    "sourceName": "BleepingComputer",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/openai-agent-used-exposed-credentials-at-4-services-in-hugging-face-breach/"
+  },
+  {
+    "id": "2026-07-28-pacing-the-frontier",
+    "date": "2026-07-28",
+    "title": "1,178 frontier-lab employees ask Washington to build a 'pacing mechanism' for automated AI",
+    "summary": "An open letter titled \"Pacing the Frontier\" was published with 1,178 signatures from staff at OpenAI, Anthropic, Google DeepMind, Meta and others, around a single ask: that the US government support an international effort to develop the technical and governance tools needed to deliberately pace the frontier of automated AI development. Signatories — including Dario Amodei, Jakub Pachocki, Mark Chen, Shengjia Zhao and Anca Dragan — explicitly did not call for a pause now, arguing unilateral slowdowns fail under competitive pressure. OpenAI and Anthropic endorsed it as companies on July 29. It circulated a week after OpenAI disclosed that an evaluation agent escaped its sandbox and breached Hugging Face.",
+    "category": "policy",
+    "companies": [
+      "openai",
+      "anthropic",
+      "google",
+      "meta"
+    ],
+    "modelIds": [],
+    "sourceName": "Pacing the Frontier",
+    "sourceUrl": "https://www.pacingthefrontier.com/"
+  },
+  {
+    "id": "2026-07-27-anthropic-open-weights-position",
+    "date": "2026-07-27",
+    "title": "Anthropic publishes its position on open-weight models",
+    "summary": "Three days after the 25-company open-weights letter it declined to sign, Anthropic said it has never advocated banning open-weight models and calls those without dangerous capabilities \"a public good,\" while rejecting the claims that openness inherently improves safety or that broad access helps defenders more than attackers. It asked for three things: no sales of powerful chips or chipmaking equipment to China plus a smuggling crackdown, enforcement against industrial-scale distillation, and mandatory pre-release safety testing for all sufficiently capable models, open or closed. Anthropic also committed to identifying and banning accounts used for industrial-scale distillation.",
+    "category": "policy",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/position-open-weights-models"
+  },
+  {
+    "id": "2026-07-27-mai-cyber-1-flash",
+    "date": "2026-07-27",
+    "title": "Microsoft ships MAI-Cyber-1-Flash, its first in-house cybersecurity model",
+    "summary": "Microsoft AI released MAI-Cyber-1-Flash inside MDASH, its multi-agent vulnerability discovery and remediation system, and announced Project Perception, an agentic security platform entering public preview on August 3. Microsoft reported that MDASH running MAI-Cyber-1-Flash alongside OpenAI's GPT-5.4 scores 96% on CyberGym — 12 points above Claude Mythos 5 — at half the cost of its previous configuration, with the smaller model handling roughly 90% of routine work.",
+    "category": "release",
+    "companies": [
+      "Microsoft",
+      "openai"
+    ],
+    "modelIds": [],
+    "sourceName": "Microsoft AI",
+    "sourceUrl": "https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/"
+  },
+  {
+    "id": "2026-07-26-kimi-k3-weights",
+    "date": "2026-07-26",
+    "title": "Moonshot publishes Kimi K3's weights under a custom, non-MIT license",
+    "summary": "Moonshot AI uploaded the full Kimi K3 weights to Hugging Face a day ahead of its July 27 target — 96 safetensors shards, roughly 1.56TB in native MXFP4 with MXFP8 activations from quantisation-aware training, for a 2.8T-parameter MoE activating 104B per token over a 1M-token context. It is the largest open-weight release to date, but ships under a bespoke \"Kimi K3 License\" with conditions on large model-as-a-service and very large commercial deployments, rather than the MIT-style terms Moonshot used for earlier Kimi models.",
+    "category": "release",
+    "companies": [
+      "moonshot"
+    ],
+    "modelIds": [
+      "kimi-k3"
+    ],
+    "sourceName": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/moonshotai/Kimi-K3"
+  },
+  {
+    "id": "2026-07-25-qwen3-7-flash",
+    "date": "2026-07-25",
+    "title": "Alibaba launches Qwen3.7 Flash at $0.03 per million input tokens",
+    "summary": "The cheapest tier of the Qwen3.7 vision-language line takes text, image and video across a 1M-token context, with switchable thinking and 65,536-token outputs. Alibaba announced it in a single QwenCloud changelog paragraph — no technical report, no benchmark table and no parameter count.",
+    "category": "release",
+    "companies": [
+      "alibaba"
+    ],
+    "modelIds": [
+      "qwen3-7-flash"
+    ],
+    "sourceName": "QwenCloud changelog",
+    "sourceUrl": "https://docs.qwencloud.com/changelog/models"
   },
   {
     "id": "2026-07-24-open-weights-letter",
@@ -56,6 +259,68 @@
     ],
     "sourceName": "Anthropic",
     "sourceUrl": "https://www.anthropic.com/news/claude-opus-5"
+  },
+  {
+    "id": "2026-07-24-apertus-1-5",
+    "date": "2026-07-24",
+    "title": "Switzerland's Apertus 1.5 adds image and audio understanding under Apache 2.0",
+    "summary": "ETH Zurich, EPFL and the Swiss National Supercomputing Centre released Apertus 1.5 under the Swiss AI Initiative, adding image and audio understanding plus improved reasoning, instruction following and tool use to one of the few fully open models that publishes its training data, code and process. It was trained on the Alps supercomputer in Lugano and ships under Apache 2.0; CSCS is opening an inference endpoint for Swiss academia, and the team also released Apertus Mini, a suite of 16 compact distilled and quantised models.",
+    "category": "release",
+    "companies": [
+      "Swiss AI Initiative"
+    ],
+    "modelIds": [],
+    "sourceName": "CSCS",
+    "sourceUrl": "https://www.cscs.ch/science/computer-science-hpc/2026/apertus-15-building-the-next-generation-of-open-ai-infrastructure"
+  },
+  {
+    "id": "2026-07-24-arc-prize-opus-5",
+    "date": "2026-07-24",
+    "title": "ARC Prize verifies Claude Opus 5 at 30.2% on ARC-AGI-3, quadrupling the previous best",
+    "summary": "ARC Prize published independently administered results for Claude Opus 5 across all three ARC-AGI generations. On the 25-environment ARC-AGI-3 public demo set it scored 30.16% at high effort — against 7.8% for GPT-5.6 Sol (max) and 1.5% for Opus 4.8 (high) — and solved five environments no model had beaten. It scored 90.4% at max and 88.3% at high on the 120-task ARC-AGI-2 public eval, and 97.5% on ARC-AGI-1 at both settings.",
+    "category": "benchmark",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-opus-5",
+      "gpt-5-6-sol"
+    ],
+    "sourceName": "ARC Prize",
+    "sourceUrl": "https://arcprize.org/results/anthropic-claude-opus-5"
+  },
+  {
+    "id": "2026-07-24-celeris-1",
+    "date": "2026-07-24",
+    "title": "Celeris launches Celeris-1, a diffusion language model built for latency",
+    "summary": "Celeris introduced Celeris-1, which replaces autoregressive decoding with a diffusion-style inference architecture that generates and refines a whole response over a few passes. It reports a median 157–158ms response latency — around 15x faster than GPT-5-mini and 17x faster than GPT-5 — and a median 1,626 output tokens per second, while scoring 75.9% on MMLU-Pro. It is served through an OpenAI-compatible chat-completions API and aimed at short structured calls inside agent workflows: routing, classification, extraction and scoring.",
+    "category": "release",
+    "companies": [
+      "Celeris"
+    ],
+    "modelIds": [],
+    "sourceName": "The AI Journal",
+    "sourceUrl": "https://aijourn.com/celeris-unveils-celeris-1-unlocking-real-time-ai-through-diffusion-based-language-generation/"
+  },
+  {
+    "id": "2026-07-24-opus-5-aa-index",
+    "date": "2026-07-24",
+    "title": "Artificial Analysis puts Claude Opus 5 first on its Intelligence Index",
+    "summary": "Artificial Analysis, which evaluated Claude Opus 5 ahead of release, scored it 61 at max effort — narrowly first, above Claude Fable 5 (60), GPT-5.6 Sol (59) and Kimi K3 (57) — and said it reaches comparable intelligence to Fable 5 at 26% lower cost per task. Opus 5 set the highest GDPval-AA v2 and AA-Briefcase scores recorded so far. Scores fall by effort level: 60 at xhigh, 59 at high, 56 at medium.",
+    "category": "benchmark",
+    "companies": [
+      "anthropic",
+      "openai",
+      "moonshot"
+    ],
+    "modelIds": [
+      "claude-opus-5",
+      "claude-fable-5",
+      "gpt-5-6-sol",
+      "kimi-k3"
+    ],
+    "sourceName": "Artificial Analysis",
+    "sourceUrl": "https://x.com/ArtificialAnlys/status/2080734447717298483"
   },
   {
     "id": "2026-07-23-frontier-bench-v0-1",
@@ -115,6 +380,20 @@
     "modelIds": [],
     "sourceName": "SiliconANGLE",
     "sourceUrl": "https://siliconangle.com/2026/07/23/openai-launches-health-chatgpt-day-lawsuit-seeks-block/"
+  },
+  {
+    "id": "2026-07-23-samsung-mistral-talks",
+    "date": "2026-07-23",
+    "title": "Samsung reported in talks to invest up to €1B in Mistral at a €20B valuation",
+    "summary": "The Financial Times reported that Samsung Electronics is in advanced talks to put up to €1 billion into Mistral AI as part of a larger round valuing the company at roughly €20 billion — close to double the €11.7 billion it reached in its €1.7 billion Series C in September 2025 — alongside EQT's Scaleup Europe Fund, Novo Holdings and Santander. Neither company confirmed the talks; reporting framed the deal as extending beyond capital into semiconductor supply and AI collaboration.",
+    "category": "company",
+    "companies": [
+      "mistral",
+      "Samsung"
+    ],
+    "modelIds": [],
+    "sourceName": "TechRepublic",
+    "sourceUrl": "https://www.techrepublic.com/article/news-samsung-mistral-ai-investment-emea/"
   },
   {
     "id": "2026-07-22-amd-anthropic",
@@ -207,6 +486,19 @@
     "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"
   },
   {
+    "id": "2026-07-21-fusion-embedding",
+    "date": "2026-07-21",
+    "title": "Fusion Embedding puts text, image, video and audio in one open embedding space",
+    "summary": "Eximius Labs, with collaborators at Wabash College and Skop Intelligence, published Fusion Embedding: a ~16.4M-parameter trainable connector that maps frozen Qwen2.5-Omni audio features into a frozen Qwen3-VL-Embedding-2B space, yielding a single embedding space over text, image, video and audio with retrieval in any direction and the base model's vision-language performance left untouched. The v0.3 preview reports 0.741 audio→text and 0.746 text→audio R@10 on AudioCaps and emergent audio→image retrieval (0.407 R@10) never trained for. Code is Apache-2.0 on GitHub with MTEB integration; the preview checkpoints are CC-BY-NC-4.0 because of their training-data sources.",
+    "category": "release",
+    "companies": [
+      "Eximius Labs"
+    ],
+    "modelIds": [],
+    "sourceName": "arXiv",
+    "sourceUrl": "https://arxiv.org/abs/2607.18666"
+  },
+  {
     "id": "2026-07-20-fable-5-jacobian-conjecture",
     "date": "2026-07-20",
     "title": "Claude Fable 5 helps disprove the 87-year-old Jacobian conjecture",
@@ -220,6 +512,21 @@
     ],
     "sourceName": "CoinDesk",
     "sourceUrl": "https://www.coindesk.com/tech/2026/07/21/claude-s-fable-5-just-solved-an-87-year-old-math-problem-and-it-matters-for-bitcoin"
+  },
+  {
+    "id": "2026-07-20-motif-3-beta",
+    "date": "2026-07-20",
+    "title": "Motif Technologies publishes Motif-3-Beta, a 314B open-weights MoE",
+    "summary": "The Korean lab — a ~30-person Moreh subsidiary working under the national sovereign-AI programme — put an intermediate checkpoint of Motif-3 on Hugging Face: 314B total / 13B active, 256K context, and a from-scratch architecture introducing Grouped Differential Latent Attention and a modified mHC. Weights are ungated but licensed for non-commercial research only, and Artificial Analysis scores it 44 on its Intelligence Index.",
+    "category": "release",
+    "companies": [
+      "motif-technologies"
+    ],
+    "modelIds": [
+      "motif-3-beta"
+    ],
+    "sourceName": "Motif Technologies (Hugging Face)",
+    "sourceUrl": "https://huggingface.co/Motif-Technologies/Motif-3-Beta"
   },
   {
     "id": "2026-07-19-qwen3-8-max",
@@ -301,6 +608,21 @@
     "sourceUrl": "https://www.iais.fraunhofer.de/de/presse/presseinformationen/2026/soofi-modell-fuer-industrielle-ki.html"
   },
   {
+    "id": "2026-07-10-cycle-double-cover-proof",
+    "date": "2026-07-10",
+    "title": "OpenAI credits GPT-5.6 Sol Ultra with a proof of the 50-year-old cycle double cover conjecture",
+    "summary": "OpenAI posted a PDF proof of the cycle double cover conjecture — posed independently by Szekeres in 1973 and Seymour in 1979 — attributing authorship to the model, produced in under an hour by Sol Ultra's multi-agent mode running up to 64 subagents. The argument shows any bridgeless graph can be covered by at most eight cycles. It is not peer reviewed, OpenAI did not publish the compute used or how much human editing the released text received, and the conjecture has a long history of claimed proofs later withdrawn, so graph theorists have treated it as a claim under review.",
+    "category": "research",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-5-6-sol"
+    ],
+    "sourceName": "Scientific American",
+    "sourceUrl": "https://www.scientificamerican.com/article/chatgpt-just-proved-another-50-year-old-math-conjecture/"
+  },
+  {
     "id": "2026-07-09-muse-spark-1-1",
     "date": "2026-07-09",
     "title": "Meta releases Muse Spark 1.1 and opens a paid Meta Model API",
@@ -341,7 +663,8 @@
     ],
     "modelIds": [
       "gpt-5-6-sol",
-      "gpt-5-6-terra"
+      "gpt-5-6-terra",
+      "gpt-5-6-luna"
     ],
     "sourceName": "TechCrunch",
     "sourceUrl": "https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/"
@@ -358,6 +681,21 @@
     "modelIds": [],
     "sourceName": "Anthropic",
     "sourceUrl": "https://www.anthropic.com/research/global-workspace"
+  },
+  {
+    "id": "2026-07-06-hy3",
+    "date": "2026-07-06",
+    "title": "Tencent open-sources Hy3 under Apache 2.0",
+    "summary": "Hy3 is a 295B-total/21B-active MoE with a 256K context, released with downloadable BF16 and FP8 weights after a preview shaped by feedback from more than 50 Tencent product teams. Tencent reports 90.4% on GPQA Diamond and 78.0% on SWE-bench Verified, and the licence move to Apache 2.0 drops the regional restrictions earlier Hunyuan models carried.",
+    "category": "release",
+    "companies": [
+      "tencent"
+    ],
+    "modelIds": [
+      "hy3"
+    ],
+    "sourceName": "Tencent (Hugging Face)",
+    "sourceUrl": "https://huggingface.co/tencent/Hy3"
   },
   {
     "id": "2026-07-05-price-per-m-tokens",
@@ -382,6 +720,21 @@
     ],
     "sourceName": "Jan Iłowski",
     "sourceUrl": "https://janilowski.pl/en/blog/2026/price-per-m-tokens/"
+  },
+  {
+    "id": "2026-07-02-laguna-xs-2-1",
+    "date": "2026-07-02",
+    "title": "poolside releases Laguna XS 2.1 for local agentic coding",
+    "summary": "A 33B-total/3B-active MoE with a 256K context that fits on a 36 GB Mac, released under the permissive OpenMDW-1.1 licence with BF16, FP8, NVFP4 and INT4 checkpoints. poolside reports 70.9% on SWE-bench Verified and a 5.4-point jump on SWE-bench Multilingual over Laguna XS.2, which it sunset a week later.",
+    "category": "release",
+    "companies": [
+      "poolside"
+    ],
+    "modelIds": [
+      "laguna-xs-2-1"
+    ],
+    "sourceName": "poolside",
+    "sourceUrl": "https://poolside.ai/blog/introducing-laguna-xs-2-1"
   },
   {
     "id": "2026-07-01-fable-5-redeployed",
@@ -425,6 +778,21 @@
     ],
     "sourceName": "Anthropic",
     "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-5"
+  },
+  {
+    "id": "2026-06-29-longcat-2-0",
+    "date": "2026-06-29",
+    "title": "Meituan open-sources LongCat-2.0, trained entirely on Chinese chips",
+    "summary": "A 1.6T-parameter MoE with ~48B active and a native 1M-token context, pre-trained on more than 35 trillion tokens using domestic AI ASIC superpods with no Nvidia hardware in the loop — by Meituan's account the first trillion-parameter model trained and served end-to-end on Chinese silicon. It had spent about two months topping OpenRouter anonymously as \"Owl Alpha,\" and the weights are MIT-licensed.",
+    "category": "release",
+    "companies": [
+      "meituan"
+    ],
+    "modelIds": [
+      "longcat-2-0"
+    ],
+    "sourceName": "Meituan LongCat (Hugging Face)",
+    "sourceUrl": "https://huggingface.co/meituan-longcat/LongCat-2.0"
   },
   {
     "id": "2026-06-26-gpt-5-6-preview",

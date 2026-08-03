@@ -124,5 +124,32 @@
     "website": "https://www.nvidia.com",
     "color": "#69A600",
     "order": 14
+  },
+  {
+    "id": "tencent",
+    "name": "Tencent",
+    "country": "China",
+    "founded": 1998,
+    "website": "https://hunyuan.tencent.com",
+    "color": "#0F59E0",
+    "order": 15
+  },
+  {
+    "id": "meituan",
+    "name": "Meituan (LongCat)",
+    "country": "China",
+    "founded": 2010,
+    "website": "https://longcat.ai",
+    "color": "#B08E00",
+    "order": 16
+  },
+  {
+    "id": "motif-technologies",
+    "name": "Motif Technologies",
+    "country": "South Korea",
+    "founded": 2025,
+    "website": "https://motiftech.io",
+    "color": "#6690E9",
+    "order": 17
   }
 ]
