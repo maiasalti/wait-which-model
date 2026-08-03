@@ -35,8 +35,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
+  // Filled by app/@modal/(.)models/[id] when a model URL is intercepted from
+  // the directory; empty (app/@modal/default.tsx) everywhere else.
+  modal: React.ReactNode;
 }>) {
   return (
     <html
@@ -61,6 +65,7 @@ gtag('config', 'G-GJFVT58K8P');`}
         <main className="mx-auto w-full max-w-7xl flex-1 px-4 pb-24 sm:px-6">
           {children}
         </main>
+        {modal}
         <footer className="mono flex flex-col items-center gap-1.5 border-t border-line px-4 py-6 text-center text-xs text-ink-3">
           <p>
             Wait Which Model? · data curated via the release &amp; news-scan

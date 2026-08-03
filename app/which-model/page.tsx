@@ -4,10 +4,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
-import type { Model } from "@/lib/types";
 import type { WhichModelUIMessage } from "@/app/api/which-model/route";
 import { ModelCard } from "@/components/ModelCard";
-import { ModelDrawer } from "@/components/ModelDrawer";
 
 const PROMPTS = [
   "What are you trying to do, and how tricky is it?",
@@ -169,7 +167,6 @@ export default function WhichModelPage() {
     transport: new DefaultChatTransport({ api: "/api/which-model" }),
   });
   const [input, setInput] = useState("");
-  const [selected, setSelected] = useState<Model | null>(null);
   const [tooShort, setTooShort] = useState(false);
   const [picked, setPicked] = useState<string[]>([]);
   // Reopens the tag picker mid-conversation, so someone who wants the
@@ -318,7 +315,7 @@ export default function WhichModelPage() {
                       <div key={index} className="grid gap-3 sm:grid-cols-2">
                         {part.output.recommendations.map(({ model, reasoning }) => (
                           <div key={model.id} className="flex flex-col gap-2">
-                            <ModelCard model={model} onOpen={setSelected} />
+                            <ModelCard model={model} />
                             <p className="text-xs text-ink-2">{reasoning}</p>
                           </div>
                         ))}
@@ -447,8 +444,6 @@ export default function WhichModelPage() {
           {busy ? "Thinking…" : "Ask"}
         </button>
       </form>
-
-      <ModelDrawer model={selected} onClose={() => setSelected(null)} />
     </div>
   );
 }

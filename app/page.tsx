@@ -4,7 +4,6 @@ import { useMemo, useState } from "react";
 import { companies, companyById, models } from "@/lib/data";
 import type { Model, ModelStatus } from "@/lib/types";
 import { ModelCard } from "@/components/ModelCard";
-import { ModelDrawer } from "@/components/ModelDrawer";
 import { CompanyLogo } from "@/components/CompanyLogo";
 import { CompanySelect } from "@/components/CompanySelect";
 
@@ -43,7 +42,6 @@ export default function DirectoryPage() {
   const [location, setLocation] = useState<string>("all");
   const [openOnly, setOpenOnly] = useState(false);
   const [sort, setSort] = useState<SortKey>("newest");
-  const [selected, setSelected] = useState<Model | null>(null);
 
   const shown = useMemo(() => {
     const q = search.trim().toLowerCase();
@@ -215,12 +213,10 @@ export default function DirectoryPage() {
       ) : (
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {shown.map((m) => (
-            <ModelCard key={m.id} model={m} onOpen={setSelected} />
+            <ModelCard key={m.id} model={m} />
           ))}
         </div>
       )}
-
-      <ModelDrawer model={selected} onClose={() => setSelected(null)} />
     </div>
   );
 }

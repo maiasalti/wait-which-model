@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import type { Model } from "@/lib/types";
 import { companyName, formatContext, formatCostPerTask, formatDate } from "@/lib/data";
 import { CompanyLogo } from "./CompanyLogo";
@@ -11,10 +12,13 @@ const STATUS_LABEL: Record<Model["status"], string> = {
   deprecated: "Deprecated",
 };
 
-export function ModelCard({ model, onOpen }: { model: Model; onOpen: (m: Model) => void }) {
+// A real <Link> rather than a button: it gives the card its own URL, and makes
+// it right-clickable and open-in-new-tab-able. Navigating from the directory is
+// intercepted into the drawer; a cold load renders the full model page.
+export function ModelCard({ model }: { model: Model }) {
   return (
-    <button
-      onClick={() => onOpen(model)}
+    <Link
+      href={`/models/${model.id}`}
       className="group flex flex-col gap-3 rounded-lg border border-line bg-surface p-4 text-left transition-colors hover:border-line-strong hover:bg-surface-2"
     >
       <div className="flex items-start justify-between gap-2">
@@ -79,6 +83,6 @@ export function ModelCard({ model, onOpen }: { model: Model; onOpen: (m: Model) 
           </span>
         )}
       </div>
-    </button>
+    </Link>
   );
 }
