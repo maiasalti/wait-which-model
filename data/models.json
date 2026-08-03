@@ -2705,7 +2705,7 @@
     },
     "openWeights": true,
     "availability": "general",
-    "knowledgeCutoff": null,
+    "knowledgeCutoff": "2025-11",
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": null,
@@ -2727,7 +2727,7 @@
       "Emits invalid JSON on nested tool calls inside some third-party agent scaffolds",
       "Tuned closely to its own harness; behavior shifts when moved to a different agent framework"
     ],
-    "notes": "None of the site's tracked benchmarks were reported: poolside published only agentic coding evals, all with thinking enabled — Terminal-Bench 2.1 70.2%, SWE-bench Multilingual 78.5%, SWE-Bench Pro public 59.4%, DeepSWE v1.1 40.4%, SWE Atlas 46.2%, Toolathlon Verified 49.7% (pass@1 over 3-4 attempts). Without thinking, Terminal-Bench 2.1 drops to 60.4% and DeepSWE to 16.5%. Pricing is the OpenRouter listing served by poolside ($0.10/$0.20 per MTok, $0.01 cached read); poolside publishes no separate per-token price sheet and also offers a free 256K-context tier. Knowledge cutoff not published; max output 131,072 tokens per the OpenRouter endpoint spec."
+    "notes": "Terminal-Bench 2.1 is the only tracked benchmark reported: poolside published agentic coding evals only, all with thinking enabled — Terminal-Bench 2.1 70.2%, SWE-bench Multilingual 78.5%, SWE-Bench Pro public 59.4%, DeepSWE v1.1 40.4%, SWE Atlas 46.2%, Toolathlon Verified 49.7% (pass@1 over 3-4 attempts). Without thinking, Terminal-Bench 2.1 drops to 60.4% and DeepSWE to 16.5%. SWE-bench Verified is absent from poolside's blog and Hugging Face model card — the Multilingual and Pro figures are different splits and are not recorded as a Verified score. Pricing is the OpenRouter listing served by poolside ($0.10/$0.20 per MTok, $0.01 cached read); poolside publishes no separate per-token price sheet and also offers a free 256K-context tier. Knowledge cutoff of November 2025 is poolside's own, stated in the launch post while ruling out contamination on an Erdős-problem result; the model shares XS 2.1's pre-training data. Max output 131,072 tokens per the OpenRouter endpoint spec. Artificial Analysis does not cover poolside models, so there is no cost-per-task figure."
   },
   {
     "id": "nemotron-3-super",

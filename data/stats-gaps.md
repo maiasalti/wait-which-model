@@ -233,3 +233,17 @@ Weekly release-scan sweep on 2026-08-02 (new model: DeepSeek-V4-Flash-0731, rele
 | deepseek-v4-flash-0731 | arcAgi2 | 2026-08-02 | not on ARC-AGI-2 leaderboards as of 2026-08-02 |
 | deepseek-v4-flash-0731 | knowledgeCutoff | 2026-08-02 | not disclosed for the 0731 build specifically; only an unverifiable inference that it matches the April preview's cutoff |
 | deepseek-v4-flash-0731 | costPerTask.usd | 2026-08-02 | Artificial Analysis states only an approximate "~$0.03 at max effort"; the precise `intelligenceIndexCostPerTask.cost.total` figure this field requires could not be retrieved (AA's model page returned 403 on direct fetch) |
+
+Stats-filler sweep on 2026-08-03, scoped to `laguna-s-2-1`. Sources checked: poolside.ai/blog/introducing-laguna-s-2-1, Hugging Face model cards (poolside/Laguna-S-2.1 and Laguna-S-2.1-FP8), OpenRouter, Artificial Analysis (model slug 404, open-source model list, creator filter), arena.ai text leaderboard, BenchLM model page, ARC Prize leaderboard, llm-stats/pricepertoken HLE + MMLU-Pro leaderboards, The Decoder, VentureBeat, MarkTechPost.
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| laguna-s-2-1 | mmluPro | 2026-08-03 | never evaluated — poolside published agentic coding evals only; BenchLM shows "not listed" and the model is absent from MMLU-Pro leaderboards |
+| laguna-s-2-1 | gpqaDiamond | 2026-08-03 | never evaluated — no knowledge/science benchmark in poolside's blog or model card, and no third-party run found |
+| laguna-s-2-1 | sweBench | 2026-08-03 | poolside reports SWE-bench Multilingual (78.5) and SWE-Bench Pro public (59.4), not SWE-bench Verified; neither is a Verified score and no Verified figure exists for this model (its sibling XS 2.1 does have one — do not carry it across) |
+| laguna-s-2-1 | aime | 2026-08-03 | never evaluated — coding specialist, no maths benchmark published or run by any tracker |
+| laguna-s-2-1 | hle | 2026-08-03 | never evaluated — not on Artificial Analysis, llm-stats or pricepertoken HLE leaderboards |
+| laguna-s-2-1 | lmarenaElo | 2026-08-03 | no poolside/Laguna entry on arena.ai's text leaderboard (385 models) as of 2026-08-03 |
+| laguna-s-2-1 | arcAgi2 | 2026-08-03 | not on ARC Prize or BenchLM ARC-AGI-2 leaderboards; never tested |
+| laguna-s-2-1 | costPerTask.usd | 2026-08-03 | Artificial Analysis does not cover poolside at all — no model page (404), and poolside is absent from AA's open-source model list and creator filter, so there is no Intelligence Index cost-per-task figure at any effort level |
+| laguna-s-2-1 | costPerTask.effort | 2026-08-03 | same — no AA coverage, so no effort level to record |
