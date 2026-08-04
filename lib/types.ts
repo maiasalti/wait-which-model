@@ -30,6 +30,34 @@ export interface CostPerTask {
   effort: ReasoningEffort | null;
 }
 
+/** Artificial Analysis-measured serving speed, same source as costPerTask.
+ *  Null where AA publishes no measurement — retired models, and weights-only
+ *  releases with no hosted endpoint to measure. */
+export interface Speed {
+  outputTokensPerSec: number | null;
+  timeToFirstTokenSec: number | null;
+}
+
+export type LicenseKind = "permissive" | "copyleft" | "restricted" | "proprietary";
+
+/** Null for closed-weight models — the licence question only has a meaningful
+ *  answer when there are weights to license. `kind` is what the UI groups on;
+ *  `spdx` is null for bespoke licences like Llama's. */
+export interface License {
+  spdx: string | null;
+  name: string;
+  kind: LicenseKind;
+  url: string | null;
+  commercialUse: boolean | null;
+}
+
+/** The same model is served under different strings on the first-party API,
+ *  Bedrock and Vertex, so each id carries the provider it belongs to. */
+export interface ApiId {
+  provider: string;
+  id: string;
+}
+
 export interface Model {
   id: string;
   name: string;
@@ -52,6 +80,16 @@ export interface Model {
    *  suggesting models a visitor could not go and use. */
   availability: "general" | "restricted" | "self-host";
   knowledgeCutoff: string | null;
+  speed: Speed;
+  license: License | null;
+  apiIds: ApiId[];
+  /** Announced shutdown date, YYYY-MM-DD. Null when no retirement is announced. */
+  retirementDate: string | null;
+  /** The model this one replaces. Points BACKWARDS so a new model wires itself
+   *  into the lineage with one field and no existing entry is edited; successors
+   *  are derived by inverting the map. Also represents fan-out correctly — two
+   *  models may both name the same predecessor. */
+  predecessorId: string | null;
   benchmarks: Partial<Record<BenchmarkKey, number | null>>;
   strengths: string[];
   weaknesses: string[];

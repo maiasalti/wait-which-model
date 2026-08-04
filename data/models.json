@@ -20,6 +20,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2021-09",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 35.7,
@@ -63,6 +71,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2023-12",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 63.7,
       "gpqaDiamond": 48,
@@ -106,6 +122,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2023-10",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 74.7,
       "gpqaDiamond": 53.6,
@@ -149,6 +173,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2023-10",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 78,
@@ -192,6 +224,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2024-06",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 80.5,
       "gpqaDiamond": 66.3,
@@ -235,6 +275,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2024-06",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 85.6,
       "gpqaDiamond": 83.3,
@@ -278,6 +326,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2024-10",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 87,
       "gpqaDiamond": 85.7,
@@ -321,6 +377,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2024-10",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 88.1,
@@ -363,6 +427,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2023-08",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 68.5,
       "gpqaDiamond": 50.4,
@@ -406,6 +478,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2024-04",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 76.1,
       "gpqaDiamond": 59.4,
@@ -449,6 +529,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2024-10",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 80.7,
       "gpqaDiamond": 84.8,
@@ -491,6 +579,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-03",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 87.4,
       "gpqaDiamond": 83.3,
@@ -533,6 +629,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-03",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 83.8,
       "gpqaDiamond": 75.4,
@@ -575,6 +679,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-03",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 80.9,
@@ -617,6 +729,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-07",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 83.4,
@@ -659,6 +779,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-02",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 73,
@@ -701,6 +829,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-08",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 87,
@@ -743,6 +879,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2023-11",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 69,
       "gpqaDiamond": 46.2,
@@ -786,6 +930,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2024-08",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 77.6,
       "gpqaDiamond": 62.1,
@@ -828,6 +980,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-01",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 86.2,
       "gpqaDiamond": 84,
@@ -871,6 +1031,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-01",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 89.8,
       "gpqaDiamond": 91.9,
@@ -914,6 +1082,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2023-12",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 73.3,
       "gpqaDiamond": 51.1,
@@ -957,6 +1133,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2024-08",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 80.5,
       "gpqaDiamond": 69.8,
@@ -1000,6 +1184,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2024-11",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 79.9,
       "gpqaDiamond": 84.6,
@@ -1043,6 +1235,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2024-11",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 86.6,
       "gpqaDiamond": 87.5,
@@ -1086,6 +1286,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2024-11",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 88,
@@ -1128,6 +1336,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2024-06",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 69.4,
       "gpqaDiamond": 48.6,
@@ -1170,6 +1386,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-01",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 77.2,
       "gpqaDiamond": 57.7,
@@ -1212,6 +1436,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2024-07",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 75.9,
       "gpqaDiamond": 59.1,
@@ -1255,6 +1487,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2024-07",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 84,
       "gpqaDiamond": 71.5,
@@ -1298,6 +1538,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2025-07",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 85,
       "gpqaDiamond": 79.9,
@@ -1340,6 +1588,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2024-10",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 82.8,
       "gpqaDiamond": 71.1,
@@ -1382,6 +1638,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-06",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 85.4,
       "gpqaDiamond": 85.4,
@@ -1424,6 +1688,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2025-04",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 81.1,
       "gpqaDiamond": 75.1,
@@ -1466,6 +1738,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2025-04",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 84.6,
       "gpqaDiamond": 84.5,
@@ -1508,6 +1788,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 93.5,
@@ -1551,6 +1839,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 67.2,
@@ -1593,6 +1889,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-01",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 94.3,
@@ -1636,6 +1940,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 87.8,
       "gpqaDiamond": 88.4,
@@ -1678,6 +1990,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 78,
       "gpqaDiamond": 71.2,
@@ -1720,6 +2040,14 @@
     "openWeights": true,
     "availability": "self-host",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": null,
@@ -1763,6 +2091,14 @@
     "openWeights": false,
     "availability": "restricted",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 89.5,
@@ -1805,6 +2141,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-12",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 93.5,
@@ -1848,6 +2192,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 87.5,
       "gpqaDiamond": 90.1,
@@ -1891,6 +2243,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 90.1,
@@ -1933,6 +2293,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2025-01",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": null,
@@ -1976,6 +2344,14 @@
     "openWeights": false,
     "availability": "restricted",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": null,
@@ -2018,6 +2394,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 89.6,
       "gpqaDiamond": 92.4,
@@ -2061,6 +2445,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2026-01",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 93.6,
@@ -2104,6 +2496,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2026-01",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 92.6,
@@ -2148,6 +2548,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2025-01",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 85.2,
       "gpqaDiamond": 84.3,
@@ -2192,6 +2600,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2026-03",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 80.6,
       "gpqaDiamond": 91.2,
@@ -2235,6 +2651,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2026-02",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 89.1,
       "gpqaDiamond": 94.6,
@@ -2278,6 +2702,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": null,
@@ -2320,6 +2752,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2026-02",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 92.3,
@@ -2363,6 +2803,14 @@
     "openWeights": true,
     "availability": "self-host",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 51.4,
       "gpqaDiamond": 43.4,
@@ -2407,6 +2855,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2026-03",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 92.8,
@@ -2449,6 +2905,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2026-03",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 83.8,
@@ -2491,6 +2955,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2026-01",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 91.1,
@@ -2534,6 +3006,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2026-02",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 93.1,
@@ -2577,6 +3057,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 89.8,
@@ -2619,6 +3107,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2026-05",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 93.7,
@@ -2663,6 +3159,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 87.2,
@@ -2706,6 +3210,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2025-11",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": null,
@@ -2750,6 +3262,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": 83.73,
       "gpqaDiamond": null,
@@ -2792,6 +3312,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": null,
@@ -2836,6 +3364,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 90.4,
@@ -2880,6 +3416,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 88.9,
@@ -2924,6 +3468,14 @@
     "openWeights": true,
     "availability": "restricted",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 86.9,
@@ -2968,6 +3520,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": null,
@@ -3012,6 +3572,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 89.5,
@@ -3056,6 +3624,14 @@
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": null,
@@ -3099,6 +3675,14 @@
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 90.8,
