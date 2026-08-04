@@ -1,5 +1,33 @@
 [
   {
+    "id": "2026-08-03-qwen3-8-max-ga",
+    "date": "2026-08-03",
+    "title": "Alibaba ships Qwen3.8-Max, moving its 2.4-trillion-parameter flagship out of preview",
+    "summary": "Two weeks after previewing it at WAIC Shanghai, Alibaba made Qwen3.8-Max generally available through QwenCloud on OpenAI- and DashScope-compatible APIs at $2.00/$6.00 per million tokens ($0.25 cached input). The MoE model takes text, image and video and returns text, with a 1M-token context and 131K max output, and Alibaba published its first benchmark table for it: Terminal-Bench 2.1 86.6, GPQA Diamond 92.6, PaperBench 93.0 and OSWorld-Verified 86.1. Open weights for both Qwen3.8-Max and a smaller Qwen3.8-27B checkpoint are promised for the following week, which would be Alibaba’s first open release at this scale. Reports of the activated-parameter count conflict and Alibaba has not confirmed one.",
+    "category": "release",
+    "companies": [
+      "alibaba"
+    ],
+    "modelIds": [
+      "qwen3-8-max"
+    ],
+    "sourceName": "MarkTechPost",
+    "sourceUrl": "https://www.marktechpost.com/2026/08/03/alibaba-qwen-releases-qwen3-8-max/"
+  },
+  {
+    "id": "2026-08-03-minimax-h3-open-weights",
+    "date": "2026-08-03",
+    "title": "MiniMax publishes H3 weights, but holds back 2K upscaling and the instruction layer",
+    "summary": "Three days after launching H3 in its API and the Hailuo app, MiniMax posted the 33.1B omni transformer to Hugging Face as H3-Base plus two task checkpoints — FL2VA for first/last-frame conditioned text-to-video and Ref2VA for image, video and audio references — generating 768p video with native stereo audio. H3-Regenerate-2K, which lifts output to the 2K advertised at launch, and the H3-Context-IR instruction-refinement layer both stay API-only. The MiniMax H3 Community License allows free non-commercial use and commercial use below $20M annual revenue, but its territory clause excludes the US, EU, UK and South Korea — the opposite direction to Tencent, which dropped exactly those carve-outs for Hy3 a month earlier. ComfyUI merged native support the same day.",
+    "category": "release",
+    "companies": [
+      "MiniMax"
+    ],
+    "modelIds": [],
+    "sourceName": "ComfyUI Wiki",
+    "sourceUrl": "https://comfyui-wiki.com/en/news/2026-08-03-minimax-h3-open-weights-comfyui"
+  },
+  {
     "id": "2026-08-02-eu-ai-act-enforcement",
     "date": "2026-08-02",
     "title": "EU AI Act enforcement and transparency duties take effect",
