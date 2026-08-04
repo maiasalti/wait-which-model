@@ -58,10 +58,16 @@
 **Files:**
 - Modify: `package.json` (scripts block)
 - Modify: `lib/types.ts`
-- Create: `lib/types.test.ts`
 
 **Interfaces:**
-- Produces: `Speed`, `License`, `LicenseKind` interfaces; `Model` gains `speed`, `license`, `apiIds`, `retirementDate`, `predecessorId`.
+- Produces: `Speed`, `License`, `LicenseKind`, `ApiId` interfaces; `Model` gains `speed`, `license`, `apiIds`, `retirementDate`, `predecessorId`.
+
+> **This task ships no unit tests, deliberately.** Node's test runner *strips*
+> TypeScript types without checking them — verified 2026-08-04: a file with a
+> deliberate type error passes `node --test`. A "type test" here would therefore
+> pass even when the types are wrong, which is worse than no test. `npm run build`
+> runs `tsc` and is the real check for a types-only change. The first genuine unit
+> tests land in Task 3, against actual logic.
 
 - [ ] **Step 1: Add the test script**
 
@@ -71,38 +77,9 @@ In `package.json`, add to `"scripts"`:
 "test": "node --test \"lib/**/*.test.ts\" \"scripts/**/*.test.js\""
 ```
 
-- [ ] **Step 2: Write the failing test**
+Directory arguments do **not** work — Node treats them as test files and fails. Glob strings are required.
 
-Create `lib/types.test.ts`. This is a compile-shape test — it fails to *run* until the types exist.
-
-```ts
-import { test } from "node:test";
-import assert from "node:assert/strict";
-import type { License, Speed } from "./types.ts";
-
-test("Speed allows null on both measurements", () => {
-  const s: Speed = { outputTokensPerSec: null, timeToFirstTokenSec: null };
-  assert.equal(s.outputTokensPerSec, null);
-});
-
-test("License allows a bespoke licence with no SPDX id", () => {
-  const l: License = {
-    spdx: null,
-    name: "Llama 4 Community License",
-    kind: "restricted",
-    url: "https://example.invalid/license",
-    commercialUse: true,
-  };
-  assert.equal(l.kind, "restricted");
-});
-```
-
-- [ ] **Step 3: Run the test to verify it fails**
-
-Run: `npm test`
-Expected: FAIL — `Speed` and `License` are not exported from `./types.ts`.
-
-- [ ] **Step 4: Add the types**
+- [ ] **Step 2: Add the types**
 
 In `lib/types.ts`, add after the `CostPerTask` interface:
 
@@ -151,39 +128,16 @@ Then add to the `Model` interface, after `knowledgeCutoff`:
   predecessorId: string | null;
 ```
 
-- [ ] **Step 5: Run the test to verify it passes**
+- [ ] **Step 3: Write the one-shot data migration**
 
-Run: `npm test`
-Expected: PASS, 2 tests.
-
-- [ ] **Step 6: Commit**
-
-```bash
-git add package.json lib/types.ts lib/types.test.ts
-git commit -m "Add speed, license, apiIds, retirement and lineage types"
-```
-
----
-
-### Task 2: Backfill the new fields as null across all 73 models
-
-**Files:**
-- Create: `scripts/add-spec-fields.js` (one-shot migration, deleted in the final step)
-- Modify: `data/models.json`
-- Modify: `AGENTS.md` (integrity check + data-file description)
-
-**Interfaces:**
-- Consumes: types from Task 1.
-- Produces: every model in `models.json` has all five new keys present.
-
-- [ ] **Step 1: Write the migration script**
+The types and the data must land in the same commit — the new fields are non-optional, so types alone would leave `models.json` failing to type-check and the build broken.
 
 Create `scripts/add-spec-fields.js`:
 
 ```js
 #!/usr/bin/env node
 /** One-shot: adds the Phase 1 spec fields to every model as empty values.
- *  Field order is preserved by inserting after knowledgeCutoff. */
+ *  Inserted after knowledgeCutoff so field order stays readable in the diff. */
 const fs = require("fs");
 const path = require("path");
 
@@ -209,12 +163,12 @@ fs.writeFileSync(MODELS_PATH, JSON.stringify(updated, null, 2) + "\n");
 console.log(`Added spec fields to ${updated.length} models.`);
 ```
 
-- [ ] **Step 2: Run it**
+- [ ] **Step 4: Run the migration**
 
 Run: `node scripts/add-spec-fields.js`
 Expected: `Added spec fields to 73 models.`
 
-- [ ] **Step 3: Verify every model got the fields**
+- [ ] **Step 5: Verify every model got every field**
 
 Run:
 
@@ -224,7 +178,38 @@ node -e "const m=require('./data/models.json');const miss=m.filter(x=>!('speed'i
 
 Expected: `OK all 73`
 
-- [ ] **Step 4: Extend the integrity check in `AGENTS.md`**
+- [ ] **Step 6: Verify the build type-checks**
+
+Run: `npm run build`
+Expected: succeeds. This is the real check for this task — `next build` runs `tsc`, so a green build proves `models.json` satisfies the new `Model` shape.
+
+- [ ] **Step 7: Verify the test runner is wired up**
+
+Run: `npm test`
+Expected: the runner starts and reports 0 tests (no test files exist yet). It must not error on the glob itself.
+
+- [ ] **Step 8: Delete the one-shot script and commit**
+
+The migration is not reusable — it exists to produce one diff. Delete it before committing so it never becomes dead weight.
+
+```bash
+rm scripts/add-spec-fields.js
+git add package.json lib/types.ts data/models.json
+git commit -m "Add speed, license, apiIds, retirement and lineage fields"
+```
+
+---
+
+### Task 2: Integrity rules and documentation for the new fields
+
+**Files:**
+- Modify: `AGENTS.md` (integrity check + data-file description)
+
+**Interfaces:**
+- Consumes: the fields added in Task 1.
+- Produces: an integrity check that enforces the lineage and licence invariants.
+
+- [ ] **Step 1: Extend the integrity check in `AGENTS.md`**
 
 Replace the integrity-check code block with:
 
@@ -234,12 +219,35 @@ node -e "const m=require('./data/models.json'),n=require('./data/news.json'),c=r
 
 Note the `license`/`openWeights` rule is **one-directional**: a closed-weight model carrying a licence record is a contradiction and fails; an open-weight model with `license: null` is merely unresearched and must pass.
 
-- [ ] **Step 5: Run the integrity check**
+- [ ] **Step 2: Run the integrity check**
 
-Run the command from Step 4.
+Run the command from Step 1.
 Expected: `OK`
 
-- [ ] **Step 6: Document the new fields in `AGENTS.md`**
+- [ ] **Step 3: Prove each new rule actually fires**
+
+A validation rule nobody has seen fail is not known to work. Temporarily corrupt the data, confirm the check throws, then restore it. Run each of these and confirm the check reports the matching error, then `git checkout data/models.json` after each:
+
+```bash
+# self-predecessor
+node -e "const f='./data/models.json',m=require(f);m[0].predecessorId=m[0].id;require('fs').writeFileSync(f,JSON.stringify(m,null,2)+'\n')"
+# → integrity check must throw: self-predecessor <id>
+git checkout data/models.json
+
+# closed model carrying a licence
+node -e "const f='./data/models.json',m=require(f);const x=m.find(y=>!y.openWeights);x.license={spdx:'MIT',name:'MIT',kind:'permissive',url:null,commercialUse:true};require('fs').writeFileSync(f,JSON.stringify(m,null,2)+'\n')"
+# → integrity check must throw: closed model with license <id>
+git checkout data/models.json
+
+# retirement before release
+node -e "const f='./data/models.json',m=require(f);m[0].retirementDate='2000-01-01';require('fs').writeFileSync(f,JSON.stringify(m,null,2)+'\n')"
+# → integrity check must throw: retirement before release <id>
+git checkout data/models.json
+```
+
+Confirm `git status` is clean afterwards, then re-run the integrity check and confirm it prints `OK` again.
+
+- [ ] **Step 4: Document the new fields in `AGENTS.md`**
 
 In the `models.json` bullet under "Data files", extend the field list after `knowledgeCutoff` with:
 
@@ -247,18 +255,12 @@ In the `models.json` bullet under "Data files", extend the field list after `kno
 speed: {outputTokensPerSec, timeToFirstTokenSec} (Artificial Analysis), license: {spdx, name, kind, url, commercialUse} | null (open-weight models only), apiIds: [{provider, id}], retirementDate, predecessorId (points backwards; successors are derived)
 ```
 
-- [ ] **Step 7: Delete the one-shot script and commit**
+- [ ] **Step 5: Commit**
 
 ```bash
-rm scripts/add-spec-fields.js
-git add data/models.json AGENTS.md
-git commit -m "Backfill spec fields as null across all models"
+git add AGENTS.md
+git commit -m "Add integrity rules for lineage, licence and retirement fields"
 ```
-
-- [ ] **Step 8: Verify the build still passes**
-
-Run: `npm run build`
-Expected: build succeeds, all routes static.
 
 ---
 
@@ -1657,7 +1659,6 @@ Create `components/SpecDiff.tsx`:
 ```tsx
 "use client";
 
-import { useMemo } from "react";
 import type { Model } from "@/lib/types";
 import { models } from "@/lib/data";
 import { visibleFields, verdict } from "@/lib/spec-diff";
@@ -1688,13 +1689,15 @@ export function SpecDiff({
     .map((id) => models.find((m) => m.id === id))
     .filter((m): m is Model => m != null);
 
-  const selectable = useMemo(
-    () => models.filter((m) => m.status === "frontier" || m.id === baselineId || otherIds.includes(m.id)),
-    [baselineId, otherIds]
+  // No useMemo here: `shown` and `otherIds` are rebuilt every render, so a memo
+  // keyed on them would never hit while still costing a dependency comparison.
+  // Both computations are trivial — 18 fields across at most 5 models.
+  const selectable = models.filter(
+    (m) => m.status === "frontier" || m.id === baselineId || otherIds.includes(m.id)
   );
 
   const shown = baseline ? [baseline, ...others] : others;
-  const fields = useMemo(() => visibleFields(shown), [shown]);
+  const fields = visibleFields(shown);
 
   const toggleOther = (id: string) => {
     if (id === baselineId) return;
