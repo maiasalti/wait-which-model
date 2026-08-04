@@ -73,3 +73,14 @@ test("no days field is stored — it would go stale daily", () => {
   const reigns = computeReigns([mk("a", "2024-01-01", "flagship", THREE(50))]);
   assert.equal("days" in reigns[0], false);
 });
+
+test("a same-day pair crowns only the stronger — no phantom zero-day reign", () => {
+  const reigns = computeReigns([
+    mk("incumbent", "2024-01-01", "flagship", THREE(10)),
+    mk("aaa", "2024-06-01", "flagship", THREE(50)),
+    mk("zzz", "2024-06-01", "flagship", THREE(90)),
+  ]);
+  assert.deepEqual(reigns.map((r) => r.modelId), ["incumbent", "zzz"]);
+  assert.equal(reigns.find((r) => r.modelId === "incumbent").dethronedBy, "zzz");
+  for (const r of reigns) assert.notEqual(r.start, r.end);
+});

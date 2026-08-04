@@ -42,20 +42,32 @@ function computeReigns(models) {
       .slice()
       .sort((a, b) => a.releaseDate.localeCompare(b.releaseDate) || a.id.localeCompare(b.id));
 
-    let champion = null;
+    // Group by release date so a same-day cohort is judged as a unit: only the
+    // day's strongest contender can take the crown. Walking same-day models one
+    // at a time would crown a weaker sibling and dethrone it the same day,
+    // fabricating a zero-length reign it never actually held.
+    const byDate = new Map();
     for (const m of ordered) {
-      if (champion === null || scores.get(m.id) > scores.get(champion.modelId)) {
+      if (!byDate.has(m.releaseDate)) byDate.set(m.releaseDate, []);
+      byDate.get(m.releaseDate).push(m);
+    }
+
+    let champion = null;
+    for (const [releaseDate, cohort] of byDate) {
+      // Strict `>` keeps the lowest id on a score tie, matching `ordered`.
+      const best = cohort.reduce((a, b) => (scores.get(b.id) > scores.get(a.id) ? b : a));
+      if (champion === null || scores.get(best.id) > scores.get(champion.modelId)) {
         if (champion) {
-          champion.end = m.releaseDate;
-          champion.dethronedBy = m.id;
+          champion.end = releaseDate;
+          champion.dethronedBy = best.id;
         }
         champion = {
-          modelId: m.id,
+          modelId: best.id,
           tier,
-          start: m.releaseDate,
+          start: releaseDate,
           end: null,
           dethronedBy: null,
-          composite: Number(scores.get(m.id).toFixed(4)),
+          composite: Number(scores.get(best.id).toFixed(4)),
         };
         reigns.push(champion);
       }
