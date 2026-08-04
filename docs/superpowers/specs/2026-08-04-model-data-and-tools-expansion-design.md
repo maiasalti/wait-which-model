@@ -1,7 +1,7 @@
 # Model data and tools expansion
 
 **Date:** 2026-08-04
-**Status:** draft
+**Status:** approved
 
 ## Problem
 
@@ -254,14 +254,9 @@ Added **below** the existing head-to-head section, separated by a horizontal rul
 head-to-head bar chart stays exactly as it is.
 
 The diff carries its own model selection, independent of both the FilterRail (which drives
-the two scatters) and head-to-head's picks. Its picker sits inline above the diff table,
-mirroring how head-to-head's picker already works at `app/compare/page.tsx:88-110`.
-
-> **Assumption to confirm at review:** the separator and the diff's picker both live in
-> the main column. An earlier instruction described putting the new filters in the rail
-> below the existing ones; that was written when the diff was going to *replace*
-> head-to-head. Now that it is additive and below, the main column is the consistent
-> home. Say if the rail is still preferred.
+the two scatters) and head-to-head's picks. Its picker sits inline above the diff table in
+the main column — confirmed 2026-08-04 — mirroring how head-to-head's picker already works
+at `app/compare/page.tsx:88-110`. The FilterRail is not modified by this phase.
 
 ### Table
 
@@ -307,48 +302,74 @@ moves, no redirects, and `/which-model`'s OG image route is untouched.
 
 ### Calculator
 
-Asking a human for tokens-per-day is asking a question nobody can answer. The calculator
-instead asks what they are doing and how much of it:
+Asking a human for tokens-per-day is asking a question nobody can answer, so the original
+design was a workload builder with per-preset token profiles. **That design was rejected
+because the numbers do not exist.**
+
+A research pass (2026-08-04) established what is actually published. The OpenRouter
+100-trillion-token study — the only large-scale primary source found — reports an *overall*
+average of roughly 6K prompt and 400 completion tokens per request, and that programming
+requests routinely exceed 20K input tokens at 3–4× general prompt length. It publishes **no
+per-category completion figures for any workload**. Every other result was third-party
+content marketing, which the data protocols already exclude as a source.
+
+A "coding agent" preset therefore could not state an output-token figure without inventing
+one. Rather than ship invented numbers dressed as assumptions, the calculator uses the
+measured figure the project already tracks.
 
 ```
-WHAT ARE YOU DOING?
- [ Everyday chat ] [•Coding agent•] [ Summarising docs ]
- [ Classification ] [ Custom ]
+HOW MANY TASKS PER DAY?
+  [ 250 ] tasks/day
 
-HOW MUCH?
-  8  ▾ hours of coding per day
-  22 ▾ working days per month
-
-▾ ASSUMPTIONS (editable)
-  Input per session ......  40,000 tok
-  Output per session .....   8,000 tok
-  Sessions per hour ......       3
+  A "task" = one Artificial Analysis Intelligence
+  Index task: one self-contained question or job.
 
 ESTIMATED MONTHLY COST
-  Model A ........  $84 – $126
-  …
-  (range reflects ±25% on the assumptions above)
+  Model A ....... $547   ($0.073/task)
+  Model B ....... $912   ($0.122/task)
+  Model C ..... $2,340   ($0.312/task)
+
+  ⚠ 36 of 73 models have no measured cost-per-task
+    figure and are excluded — see Methodology.
 ```
 
-Each preset selects a token profile and a natural unit of volume. Cost is
-`(inputTok × inputPerMTok + outputTok × outputPerMTok) / 1e6`, ranked ascending, over
-models with pricing published; models without pricing are listed as excluded rather than
-silently dropped.
+Cost is `tasksPerDay × 30 × costPerTask.usd`, ranked ascending. Every figure is measured;
+nothing is estimated, so no uncertainty range is shown.
 
-**The presets are the one place this feature could quietly fabricate data.** A claim that a
-coding session consumes 40,000 input tokens is not a researched figure, and presenting it
-as one would violate the same rule the data protocols enforce. Three mitigations, all
-required:
+**Coverage** is 37 of 73 models overall, but **7 of 7 current frontier models** — the set a
+visitor is realistically choosing between. Excluded models are named explicitly beneath the
+results rather than silently dropped, so the gap reads as a known limitation rather than an
+absence.
 
-1. The assumptions panel is always present and every number in it is editable.
-2. Output is a **range**, not a point estimate — ±25%, labelled as reflecting assumption
-   uncertainty.
-3. `methodology.json` gains a calculator section stating the profiles are illustrative
-   starting points, not measurements.
+Per the "log all logic in the info tab" requirement, `methodology.json` gains a calculator
+section stating: what an AA Intelligence Index task is, the exact formula, the 30-day month,
+that `costPerTask` is taken at medium effort where AA publishes one, and why coverage is
+partial. The calculator links to it directly.
 
 State is URL-encoded, so a configured estimate is shareable like everything else.
 
+> **Open option, not part of this spec.** The OpenRouter overall average (6K in / 400 out)
+> is itself a citable measurement, and could power a second "requests per day" mode using
+> per-token pricing, which covers 68 of 73 models. It invents nothing. It is left out here
+> because it is a second input path that was not requested — worth revisiting once the
+> tasks mode is live.
+
 ---
+
+## Cross-cutting: every derivation is documented on `/info`
+
+Anything the site computes rather than reports must have its logic written out on the
+public methodology page, as content in `methodology.json` rather than component copy — the
+existing convention. This covers:
+
+| Derivation | What `/info` must state |
+|---|---|
+| Frontier reigns | The crowning rule, the `MIN_BENCHMARKS >= 3` gate, and that reigns are reconstructed from benchmark data rather than observed |
+| Benchmark coverage | That counts are over all tracked models, and that a dash means unreported, not zero |
+| Cost calculator | What an AA task is, the formula, the 30-day month, the medium-effort convention, and why coverage is partial |
+| Spec diff deltas | That "better" and "worse" follow each field's own direction — lower is better for price and latency, higher for benchmarks |
+
+`frontierDefinition.lastReviewed` is refreshed whenever this page changes.
 
 ## Validation
 
