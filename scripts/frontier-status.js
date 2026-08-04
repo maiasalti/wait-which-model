@@ -37,10 +37,16 @@
 
 const fs = require("fs");
 const path = require("path");
+const {
+  BENCHMARK_KEYS,
+  MIN_BENCHMARKS,
+  countBenchmarks,
+  isRankable,
+  compositeScores,
+} = require("./lib/composite.js");
 
 const RECENCY_MONTHS = 9;
 const CAPABILITY_THRESHOLD = 0.85; // must be within 15% of the tier's top composite score
-const MIN_BENCHMARKS = 3; // non-null benchmarks required to be rankable
 const MAJOR_LABS = ["openai", "anthropic", "google", "meta"];
 const MAJOR_LAB_RECENCY_MONTHS = 3;
 // Tiers the override applies to. Scoped to flagship because the reputational
@@ -53,16 +59,6 @@ const MAJOR_LAB_RECENCY_MONTHS = 3;
 const MAJOR_LAB_OVERRIDE_TIERS = ["flagship"];
 
 const MODELS_PATH = path.join(__dirname, "..", "data", "models.json");
-const BENCHMARK_KEYS = [
-  "mmluPro",
-  "gpqaDiamond",
-  "sweBench",
-  "terminalBench",
-  "aime",
-  "hle",
-  "lmarenaElo",
-  "arcAgi2",
-];
 
 function monthsAgo(dateStr, now) {
   const d = new Date(dateStr);
@@ -116,29 +112,9 @@ function main() {
   for (const [tier, fullGroup] of byTier) {
     const group = fullGroup.filter((m) => !overridden.has(m.id));
     const candidates = group.filter((m) => monthsAgo(m.releaseDate, now) <= RECENCY_MONTHS);
-    const rankable = candidates.filter(
-      (m) => BENCHMARK_KEYS.filter((k) => m.benchmarks[k] != null).length >= MIN_BENCHMARKS
-    );
+    const rankable = candidates.filter((m) => isRankable(m));
 
-    // Per-benchmark min/max across rankable candidates in this tier, for normalization.
-    const ranges = {};
-    for (const key of BENCHMARK_KEYS) {
-      const vals = rankable.map((m) => m.benchmarks[key]).filter((v) => v != null);
-      if (vals.length === 0) continue;
-      ranges[key] = { min: Math.min(...vals), max: Math.max(...vals) };
-    }
-
-    const composite = new Map(); // id -> score
-    for (const m of rankable) {
-      const scores = [];
-      for (const key of BENCHMARK_KEYS) {
-        const v = m.benchmarks[key];
-        if (v == null) continue;
-        const r = ranges[key];
-        scores.push(r.max === r.min ? 1 : (v - r.min) / (r.max - r.min));
-      }
-      composite.set(m.id, scores.reduce((a, b) => a + b, 0) / scores.length);
-    }
+    const composite = compositeScores(rankable);
 
     const topScore = rankable.length ? Math.max(...rankable.map((m) => composite.get(m.id))) : 0;
 
@@ -155,7 +131,7 @@ function main() {
         reason = `released ${monthsAgo(m.releaseDate, now)}mo ago (> ${RECENCY_MONTHS}mo recency window)`;
       } else if (!isRankable) {
         decided = "unknown";
-        reason = `only ${BENCHMARK_KEYS.filter((k) => m.benchmarks[k] != null).length}/${MIN_BENCHMARKS} required benchmarks — needs stats-filler pass before it can be ranked`;
+        reason = `only ${countBenchmarks(m)}/${MIN_BENCHMARKS} required benchmarks — needs stats-filler pass before it can be ranked`;
       } else {
         decided = composite.get(m.id) >= topScore * CAPABILITY_THRESHOLD ? "frontier" : "superseded";
         reason = `composite ${composite.get(m.id).toFixed(2)} vs tier top ${topScore.toFixed(2)} (need >= ${(CAPABILITY_THRESHOLD * topScore).toFixed(2)})`;
