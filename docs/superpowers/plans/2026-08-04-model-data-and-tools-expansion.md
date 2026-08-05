@@ -1775,6 +1775,7 @@ Create `components/SpecDiff.tsx`:
 ```tsx
 "use client";
 
+import { useState } from "react";
 import type { Model } from "@/lib/types";
 import { models } from "@/lib/data";
 import { comparable, visibleFields, verdict } from "@/lib/spec-diff";
@@ -1800,6 +1801,8 @@ export function SpecDiff({
   setBaselineId: (id: string | null) => void;
   setOtherIds: (ids: string[]) => void;
 }) {
+  const [copied, setCopied] = useState<"idle" | "ok" | "fail">("idle");
+
   const baseline = models.find((m) => m.id === baselineId) ?? null;
 
   // Sanitise the URL-seeded selection. Two things a hand-edited query can do:
@@ -2073,8 +2076,13 @@ const SCALE = 2;
 const PAD = 24;
 const ROW_H = 26;
 const HEAD_H = 40;
-const LABEL_W = 190;
-const COL_W = 150;
+// Sized to the longest text that actually occurs, not to a guess. The widest
+// label is "Time to first answer token" and the widest value is of the form
+// "202s to first answer token" — ~26 chars, which at 12px monospace is roughly
+// 190px. `fillText`'s maxWidth SQUASHES rather than truncates, so a column too
+// narrow does not clip, it renders visibly compressed. These leave headroom.
+const LABEL_W = 215;
+const COL_W = 230;
 
 const COLORS = {
   bg: "#0B0E1A",
@@ -2174,8 +2182,19 @@ Add inside the component, before the `return`:
     link.click();
   };
 
-  const copyLink = () => {
-    void navigator.clipboard.writeText(window.location.href);
+  /** `navigator.clipboard` is undefined in non-secure contexts and older
+   *  browsers, so an unguarded call throws synchronously; permission denial
+   *  rejects. Either way the user needs to be told, rather than clicking a
+   *  button that silently does nothing. */
+  const copyLink = async () => {
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error("clipboard unavailable");
+      await navigator.clipboard.writeText(window.location.href);
+      setCopied("ok");
+    } catch {
+      setCopied("fail");
+    }
+    window.setTimeout(() => setCopied("idle"), 2500);
   };
 ```
 
@@ -2185,9 +2204,14 @@ Then add, immediately after the closing `</table>`'s wrapping `</div>`:
           <div className="mt-3 flex gap-2">
             <button
               onClick={copyLink}
+              aria-live="polite"
               className="mono rounded border border-line px-2.5 py-1.5 text-xs uppercase tracking-wider text-ink-2 hover:text-ink"
             >
-              Copy link
+              {copied === "ok"
+                ? "Link copied"
+                : copied === "fail"
+                  ? "Copy failed — use the address bar"
+                  : "Copy link"}
             </button>
             <button
               onClick={downloadPng}
