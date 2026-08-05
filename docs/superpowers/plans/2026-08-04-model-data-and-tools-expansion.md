@@ -1282,12 +1282,26 @@ export interface CompareState {
   diffOthers: string[];
 }
 
+/** The Compare page opens with these four selected. They live here rather than
+ *  in the component so they are the CANONICAL default: `stateToQuery` can then
+ *  omit them, keeping an untouched Compare page on a clean bare URL instead of
+ *  rewriting the address bar to `?picks=...` the moment it mounts. */
+export const DEFAULT_PICKS = [
+  "claude-fable-5",
+  "claude-opus-4-8",
+  "gpt-5-5",
+  "gemini-3-1-pro",
+];
+
 export const DEFAULT_COMPARE_STATE: CompareState = {
   filters: DEFAULT_FILTERS,
-  picks: [],
+  picks: DEFAULT_PICKS,
   diffBaseline: null,
   diffOthers: [],
 };
+
+const sameList = (a: string[], b: string[]) =>
+  a.length === b.length && a.every((v, i) => v === b[i]);
 
 const WINDOWS: TimeWindow[] = ["3m", "6m", "1y", "2y", "3y", "all"];
 const BENCHMARKS: BenchmarkKey[] = [
@@ -1319,7 +1333,7 @@ export function stateToQuery(state: CompareState): string {
   if (f.minScore != null) p.set("min", String(f.minScore));
   if (f.maxInputPrice != null) p.set("max", String(f.maxInputPrice));
   if (f.search) p.set("q", f.search);
-  if (state.picks.length) p.set("picks", state.picks.join(","));
+  if (!sameList(state.picks, DEFAULT_PICKS)) p.set("picks", state.picks.join(","));
   if (state.diffBaseline) p.set("base", state.diffBaseline);
   if (state.diffOthers.length) p.set("vs", state.diffOthers.join(","));
 
@@ -1347,7 +1361,10 @@ export function queryToState(params: URLSearchParams): CompareState {
       maxInputPrice: num(params.get("max")),
       search: params.get("q") ?? "",
     },
-    picks: list(params.get("picks")),
+    // `has` not `get`: an absent param means "untouched, use defaults", while
+    // an explicitly empty `picks=` means the user deselected everything and
+    // wants that shared.
+    picks: params.has("picks") ? list(params.get("picks")) : DEFAULT_PICKS,
     diffBaseline: params.get("base"),
     diffOthers: list(params.get("vs")),
   };
@@ -1405,13 +1422,36 @@ Create `app/compare/page.tsx`:
 import { Suspense } from "react";
 import CompareClient from "./CompareClient";
 
+/** The fallback is what every visitor actually sees first: /compare is
+ *  statically prerendered, and search params do not exist at build time, so
+ *  Next bakes THIS into the static HTML and swaps in the real page on
+ *  hydration. A one-line "Loading…" would therefore collapse the layout on
+ *  every single load and pop it back — a guaranteed layout shift, not an edge
+ *  case. It has to reserve roughly the real page's height. */
+function ComparePlaceholder() {
+  return (
+    <div className="min-h-[80vh] pt-10" aria-hidden>
+      <div className="h-4 w-40 rounded bg-white/5" />
+      <div className="mt-3 h-9 w-72 rounded bg-white/5" />
+      <div className="mt-3 h-4 w-full max-w-2xl rounded bg-white/5" />
+      <div className="mt-8 flex flex-col gap-8 lg:flex-row lg:items-start">
+        <div className="h-96 w-full rounded border border-line lg:w-64 lg:shrink-0" />
+        <div className="flex min-w-0 flex-1 flex-col gap-10">
+          <div className="h-72 rounded border border-line" />
+          <div className="h-72 rounded border border-line" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /** Server shell. CompareClient reads search params, which in Next 16 forces a
  *  Suspense boundary — without one the production build fails with "Missing
  *  Suspense boundary with useSearchParams". It builds fine in dev, so this
  *  must be verified with `npm run build`, not the dev server. */
 export default function ComparePage() {
   return (
-    <Suspense fallback={<div className="pt-10 text-sm text-ink-3">Loading comparison…</div>}>
+    <Suspense fallback={<ComparePlaceholder />}>
       <CompareClient />
     </Suspense>
   );
@@ -1441,11 +1481,9 @@ Replace the `filters` and `picks` `useState` initialisers so they seed from the 
   );
 
   const [filters, setFilters] = useState<Filters>(initial.filters);
-  const [picks, setPicks] = useState<string[]>(
-    initial.picks.length
-      ? initial.picks
-      : ["claude-fable-5", "claude-opus-4-8", "gpt-5-5", "gemini-3-1-pro"]
-  );
+  // No fallback here — DEFAULT_PICKS in lib/compare-url.ts is the single
+  // source of truth, so an untouched page serialises to a bare URL.
+  const [picks, setPicks] = useState<string[]>(initial.picks);
 ```
 
 - [ ] **Step 5: Push state changes back to the URL**
