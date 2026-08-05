@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-02-17-claude-sonnet-4-6",
+    "date": "2026-02-17",
+    "title": "Anthropic releases Claude Sonnet 4.6 with a 1M-token context window",
+    "summary": "Anthropic shipped Claude Sonnet 4.6 as a full upgrade of its mid-tier model, becoming the default for Free and Pro plans, with improved coding, computer use, long-context reasoning and agent planning at unchanged $3/$15 per million token pricing. It scored 79.6% on SWE-bench Verified and 89.9% on GPQA Diamond, and Anthropic said performance that previously required an Opus-class model is now available in Sonnet 4.6 for many real-world office tasks.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-sonnet-4-6"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-4-6"
+  },
+  {
     "id": "2026-08-03-qwen3-8-max-ga",
     "date": "2026-08-03",
     "title": "Alibaba ships Qwen3.8-Max, moving its 2.4-trillion-parameter flagship out of preview",

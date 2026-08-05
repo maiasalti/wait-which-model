@@ -247,3 +247,10 @@ Stats-filler sweep on 2026-08-03, scoped to `laguna-s-2-1`. Sources checked: poo
 | laguna-s-2-1 | arcAgi2 | 2026-08-03 | not on ARC Prize or BenchLM ARC-AGI-2 leaderboards; never tested |
 | laguna-s-2-1 | costPerTask.usd | 2026-08-03 | Artificial Analysis does not cover poolside at all — no model page (404), and poolside is absent from AA's open-source model list and creator filter, so there is no Intelligence Index cost-per-task figure at any effort level |
 | laguna-s-2-1 | costPerTask.effort | 2026-08-03 | same — no AA coverage, so no effort level to record |
+
+New-model-release research on 2026-08-05, scoped to `claude-sonnet-4-6`. Sources checked: anthropic.com/news/claude-sonnet-4-6, Claude Sonnet 4.6 system card (www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf), platform.claude.com/docs/en/about-claude/models/overview, platform.claude.com/docs/en/about-claude/model-deprecations, docs.aws.amazon.com Bedrock model card, arena.ai text leaderboard, artificialanalysis.ai model pages (claude-sonnet-4-6 and claude-sonnet-4-6-adaptive).
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| claude-sonnet-4-6 | mmluPro | 2026-08-05 | not reported — the system card's capability table reports MMMLU (89.3%) and MMMU-Pro (multimodal), neither of which is MMLU-Pro; not found on any MMLU-Pro leaderboard |
+| claude-sonnet-4-6 | terminalBench | 2026-08-05 | system card reports Terminal-Bench **2.0** only (59.1%, default thinking); per house style 2.0 scores aren't comparable to the tracked 2.1 metric, so left null and the 2.0 figure recorded in notes instead |

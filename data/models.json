@@ -3049,7 +3049,7 @@
       }
     ],
     "retirementDate": null,
-    "predecessorId": null,
+    "predecessorId": "claude-sonnet-4-6",
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 91.1,
@@ -3831,5 +3831,70 @@
       "Ships without a Jinja chat template — messages go through DeepSeek's own Python encoding scripts instead"
     ],
     "notes": "The production release of DeepSeek-V4-Flash, superseding April's preview: same 284B/13B MoE and DSpark speculative-decoding module, with all gains from re-post-training. Terminal-Bench 2.1 82.7 is DeepSeek's own figure at max reasoning effort in its minimal-mode harness; Artificial Analysis measures 78.7 on the same benchmark. GPQA Diamond 90.8 and HLE 36.8% (no tools) are Artificial Analysis' measurements — DeepSeek published neither. Also reported by DeepSeek: NL2Repo 54.2, Cybergym 76.7, DeepSWE 54.4, Toolathlon-Verified 70.3, Agents' Last Exam 25.2. MMLU-Pro, SWE-bench Verified, AIME, LMArena and ARC-AGI-2 are unpublished. Artificial Analysis scores it 50 on its Intelligence Index, 10 points above the April preview’s 40. Max output is the 384K DeepSeek recommends for high and max effort; the OpenRouter endpoint caps completions at 65,536."
+  },
+  {
+    "id": "claude-sonnet-4-6",
+    "name": "Claude Sonnet 4.6",
+    "company": "anthropic",
+    "releaseDate": "2026-02-17",
+    "status": "superseded",
+    "tier": "balanced",
+    "modality": "multimodal",
+    "contextWindow": 1000000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 3,
+      "outputPerMTok": 15
+    },
+    "costPerTask": {
+      "usd": 1.219,
+      "effort": "max"
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-01",
+    "speed": {
+      "outputTokensPerSec": 55.6,
+      "timeToFirstTokenSec": 103.62,
+      "effort": "max"
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "anthropic",
+        "id": "claude-sonnet-4-6"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "anthropic.claude-sonnet-4-6"
+      },
+      {
+        "provider": "google-vertex",
+        "id": "claude-sonnet-4-6"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": "claude-sonnet-4-5",
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 89.9,
+      "sweBench": 79.6,
+      "terminalBench": null,
+      "aime": 95.6,
+      "hle": 33.2,
+      "lmarenaElo": 1472,
+      "arcAgi2": 60.4
+    },
+    "strengths": [
+      "Declares agentic tasks finished far less often when they aren't — false claims of task completion dropped noticeably from Sonnet 4.5",
+      "Holds up across the full 1M-token window rather than degrading well before the limit",
+      "Drives a desktop reliably enough for real office workflows — Anthropic reports Opus-class results on tasks that previously needed the bigger model"
+    ],
+    "weaknesses": [
+      "Terser and more emotionally flat in casual conversation than Sonnet 4.5 — reads as dry and abbreviated unless prompted otherwise",
+      "Takes unusually assertive initiative in agentic coding and turns ruthless when a system prompt tells it to optimize single-mindedly for an objective — needs explicit guardrails",
+      "Still trails top human performance on computer-use tasks; Anthropic continues to point to Opus 4.6 for the deepest reasoning work"
+    ],
+    "notes": "SWE-bench Verified 79.6% is the system card's 10-trial average (adaptive thinking, max effort); a specific prompt modification pushed it to 80.2%. Terminal-Bench 2.0 59.1% (default thinking) is not comparable to 2.1 scores elsewhere, so the terminalBench field is left null. ARC-AGI-2 60.4% is ARC Prize Foundation's own reported figure (120k thinking tokens, high effort); Anthropic's internal reproduction reports 58.3% (ARC-AGI-2 Verified). HLE 33.2% no tools / 49.0% with tools. AIME 95.6% (no tools) — Anthropic flags possible dataset contamination as a reason the score may be inflated. Max output is 128K per Anthropic's own models table; AWS Bedrock's model card lists 64K for the same model — Anthropic's own figure is used here."
   }
 ]

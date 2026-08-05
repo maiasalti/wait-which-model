@@ -93,7 +93,7 @@
     "start": "2025-02-24",
     "end": "2025-05-22",
     "dethronedBy": "claude-sonnet-4",
-    "composite": 0.4974
+    "composite": 0.494
   },
   {
     "modelId": "claude-sonnet-4",
@@ -101,23 +101,23 @@
     "start": "2025-05-22",
     "end": "2025-09-29",
     "dethronedBy": "claude-sonnet-4-5",
-    "composite": 0.5865
+    "composite": 0.5806
   },
   {
     "modelId": "claude-sonnet-4-5",
     "tier": "balanced",
     "start": "2025-09-29",
-    "end": "2026-03-11",
-    "dethronedBy": "nemotron-3-super",
-    "composite": 0.6154
+    "end": "2026-02-17",
+    "dethronedBy": "claude-sonnet-4-6",
+    "composite": 0.6054
   },
   {
-    "modelId": "nemotron-3-super",
+    "modelId": "claude-sonnet-4-6",
     "tier": "balanced",
-    "start": "2026-03-11",
+    "start": "2026-02-17",
     "end": "2026-06-30",
     "dethronedBy": "claude-sonnet-5",
-    "composite": 0.6479
+    "composite": 0.9248
   },
   {
     "modelId": "claude-sonnet-5",
@@ -125,7 +125,7 @@
     "start": "2026-06-30",
     "end": null,
     "dethronedBy": null,
-    "composite": 1
+    "composite": 0.9872
   },
   {
     "modelId": "gemini-2-0-flash",
