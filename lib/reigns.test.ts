@@ -21,3 +21,13 @@ test("a same-day dethroning is zero, not negative", () => {
 test("a future-dated reign clamps to zero rather than going negative", () => {
   assert.equal(reignDays(mk("2026-06-01", null), new Date("2026-01-01")), 0);
 });
+
+test("an open reign never counts a day it has not finished", () => {
+  // Every other test passes a date-only string, which JS parses as exact UTC
+  // midnight — so none of them can catch rounding. A live clock is never at
+  // midnight, which is precisely when this matters.
+  assert.equal(reignDays(mk("2026-08-05", null), new Date("2026-08-05T15:00:00Z")), 0);
+  assert.equal(reignDays(mk("2026-08-05", null), new Date("2026-08-05T23:59:59Z")), 0);
+  assert.equal(reignDays(mk("2026-08-05", null), new Date("2026-08-06T00:00:00Z")), 1);
+  assert.equal(reignDays(mk("2026-06-09", null), new Date("2026-08-05T15:00:00Z")), 57);
+});
