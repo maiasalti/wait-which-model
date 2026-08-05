@@ -170,7 +170,7 @@ export interface Methodology {
   dataGaps: { summary: string };
   sourcing: { summary: string };
   currency: { summary: string };
-  reigns: { summary: string; notes: string[] };
+  reigns: { summary: string; caveat: string; notes: string[] };
   coverage: { summary: string };
   costCalculator: { summary: string; notes: string[] };
   specDiff: { summary: string };

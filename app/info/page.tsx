@@ -142,7 +142,7 @@ export default function InfoPage() {
             straight to the bars would otherwise see only a neutral summary and
             take the timeline for a recorded history. */}
         <p className="mono mt-4 rounded border border-line bg-surface-2 p-3 text-xs text-ink-2">
-          Reconstructed, not observed — and incomplete before November 2023.
+          {methodology.reigns.caveat}
         </p>
         <div className="mt-6">
           <ReignChart />

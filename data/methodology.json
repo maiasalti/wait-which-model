@@ -75,6 +75,7 @@
   },
   "reigns": {
     "summary": "How long each model held the top of its tier — reconstructed from release dates and benchmark scores, not recorded as it happened. Read the notes below the chart before drawing conclusions from it: the timeline starts later than the real frontier did, because models that never reported three benchmarks are missing from it entirely.",
+    "caveat": "Reconstructed, not observed — and incomplete before November 2023.",
     "notes": [
       "This is a reconstruction, not an observed record. The site recomputes frontier status from scratch and keeps no history, so reigns are inferred after the fact.",
       "A model takes the crown on its release date if its composite score beats the incumbent's, and holds it until a later release scores higher.",
