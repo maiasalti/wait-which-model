@@ -71,14 +71,25 @@ export function SpecDiff({
     const rows: DiffPngRow[] = fields.map((f) => ({
       label: f.label,
       cells: shown.map((m) => {
+        const isBaseline = m.id === baselineId;
+        const bv = baseline ? f.value(baseline) : null;
+        const mv = f.value(m);
         // Mirror the on-screen suppression exactly: an effort-mismatched pair
         // must not be coloured better/worse in the image either, or the PNG
         // would assert a capability gap the table explicitly declines to show.
         const ok = baseline ? comparable(f, baseline, m) : false;
-        const v = baseline && ok ? verdict(f.value(baseline), f.value(m), f.direction) : "na";
+        const v = baseline && ok ? verdict(bv, mv, f.direction) : "na";
+        // The screen shows the effort tag and the not-comparable warning
+        // alongside the figure — the PNG is what gets pasted into Slack, so
+        // it needs the same caveat baked into the text, not just the colour.
+        const effort = f.effortSensitive ? (f.effortOf ?? ((mm) => mm.speed.effort))(m) : null;
+        const notComparable = !isBaseline && !ok && f.effortSensitive && bv != null && mv != null;
+        let text = f.display(m);
+        if (effort) text += ` (${effort})`;
+        if (notComparable) text += " ⚠ not comparable";
         return {
-          text: f.display(m),
-          tone: m.id === baselineId || v === "na" || v === "same" ? "plain" : v,
+          text,
+          tone: isBaseline || v === "na" || v === "same" ? "plain" : v,
         };
       }),
     }));
@@ -227,11 +238,12 @@ export function SpecDiff({
                             {delta}
                           </span>
                         )}
-                        {f.effortSensitive && m.speed.effort && (
-                          <span className="ml-1.5 text-[10px] text-ink-3">
-                            ({m.speed.effort})
-                          </span>
-                        )}
+                        {f.effortSensitive &&
+                          (f.effortOf ? f.effortOf(m) : m.speed.effort) && (
+                            <span className="ml-1.5 text-[10px] text-ink-3">
+                              ({f.effortOf ? f.effortOf(m) : m.speed.effort})
+                            </span>
+                          )}
                         {!isBaseline && !ok && f.effortSensitive && bv != null && mv != null && (
                           <span
                             role="img"

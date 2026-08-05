@@ -11,11 +11,13 @@ const ROW_H = 26;
 const HEAD_H = 40;
 // Sized to the longest text that actually occurs, not to a guess. The widest
 // label is "Time to first answer token" and the widest value is of the form
-// "202s to first answer token" — ~26 chars, which at 12px monospace is roughly
-// 190px. `fillText`'s maxWidth SQUASHES rather than truncates, so a column too
-// narrow does not clip, it renders visibly compressed. These leave headroom.
+// "202s to first answer token (max) ⚠ not comparable" once an effort-sensitive,
+// not-comparable cell carries its effort tag and warning suffix — ~51 chars,
+// which at 12px monospace is roughly 260px. `fillText`'s maxWidth SQUASHES
+// rather than truncates, so a column too narrow does not clip, it renders
+// visibly compressed. These leave headroom.
 const LABEL_W = 215;
-const COL_W = 230;
+const COL_W = 290;
 
 const COLORS = {
   bg: "#0B0E1A",
@@ -76,7 +78,11 @@ export function renderDiffPng(opts: {
 
   ctx.fillStyle = COLORS.muted;
   ctx.font = "11px ui-sans-serif, system-ui, sans-serif";
-  ctx.fillText("waitwhichmodel — deltas are measured against the baseline column", PAD, h - PAD + 6);
+  ctx.fillText(
+    "waitwhichmodel — green/red shows better/worse against the baseline column",
+    PAD,
+    h - PAD + 6
+  );
 
   return canvas;
 }
