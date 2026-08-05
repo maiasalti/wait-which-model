@@ -148,6 +148,35 @@ test("comparable: false when b's effort is null", () => {
   assert.equal(comparable(field("outputSpeed"), a, b), false);
 });
 
+// costPerTask is measured at a different effort setting than speed
+// (`costPerTask.effort`, not `speed.effort`) — a field that fell back to
+// speed's effort would wrongly call two cost figures comparable whenever
+// their speed efforts happened to match. This pins that a cost-per-task
+// delta is suppressed based on ITS OWN effort field.
+test("comparable: cost per task is not comparable across different measured efforts", () => {
+  const a = baseModel({
+    costPerTask: { usd: 0.01, effort: "medium" },
+    speed: { outputTokensPerSec: null, timeToFirstTokenSec: null, effort: "high" },
+  });
+  const b = baseModel({
+    costPerTask: { usd: 5, effort: "max" },
+    speed: { outputTokensPerSec: null, timeToFirstTokenSec: null, effort: "high" },
+  });
+  assert.equal(comparable(field("costPerTask"), a, b), false);
+});
+
+test("comparable: cost per task IS comparable at equal non-null effort, even if speed effort differs", () => {
+  const a = baseModel({
+    costPerTask: { usd: 0.01, effort: "medium" },
+    speed: { outputTokensPerSec: null, timeToFirstTokenSec: null, effort: "low" },
+  });
+  const b = baseModel({
+    costPerTask: { usd: 0.02, effort: "medium" },
+    speed: { outputTokensPerSec: null, timeToFirstTokenSec: null, effort: "high" },
+  });
+  assert.equal(comparable(field("costPerTask"), a, b), true);
+});
+
 test("visibleFields keeps a field when at least one model has a value", () => {
   const blank = baseModel({ id: "blank", contextWindow: null });
   const withValue = baseModel({ id: "has-value", contextWindow: 128000 });

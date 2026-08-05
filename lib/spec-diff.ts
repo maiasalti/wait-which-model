@@ -1,4 +1,4 @@
-import type { Model } from "./types";
+import type { Model, ReasoningEffort } from "./types";
 import { formatSpeed } from "./format.ts";
 
 export type DiffDirection = "higher-better" | "lower-better" | "neutral";
@@ -16,13 +16,25 @@ export interface DiffField {
    *  the setting dominates the number — so the diff must suppress the delta
    *  and say why rather than presenting effort noise as a capability gap. */
   effortSensitive?: boolean;
+  /** Which effort setting this field's figure was measured at. Different
+   *  effort-sensitive fields are measured under different settings — speed
+   *  figures under `speed.effort`, cost per task under `costPerTask.effort` —
+   *  so `comparable()` can't hardcode one field. Required whenever
+   *  `effortSensitive` is true; falls back to `speed.effort` when absent, for
+   *  fields that predate this. */
+  effortOf?: (m: Model) => ReasoningEffort | null;
 }
 
 /** Whether a delta between these two models is meaningful for this field.
- *  Effort-sensitive fields require both models measured at the same setting. */
+ *  Effort-sensitive fields require both models measured at the same setting,
+ *  read from the field's own `effortOf` — cost per task and speed are
+ *  measured at independent effort settings, so a field that assumed
+ *  `speed.effort` for everything would compare cost figures against the
+ *  wrong dial entirely. */
 export function comparable(field: DiffField, a: Model, b: Model): boolean {
   if (!field.effortSensitive) return true;
-  return a.speed.effort != null && a.speed.effort === b.speed.effort;
+  const effortOf = field.effortOf ?? ((m: Model) => m.speed.effort);
+  return effortOf(a) != null && effortOf(a) === effortOf(b);
 }
 
 /** "Better" follows each field's own direction — lower is better for price and
@@ -80,6 +92,8 @@ export const DIFF_FIELDS: DiffField[] = [
     key: "costPerTask",
     label: "Cost per task",
     direction: "lower-better",
+    effortSensitive: true,
+    effortOf: (m) => m.costPerTask.effort,
     value: (m) => m.costPerTask.usd,
     display: (m) => (m.costPerTask.usd == null ? "—" : `$${m.costPerTask.usd}`),
   },
@@ -88,6 +102,7 @@ export const DIFF_FIELDS: DiffField[] = [
     label: "Output speed",
     direction: "higher-better",
     effortSensitive: true,
+    effortOf: (m) => m.speed.effort,
     value: (m) => m.speed.outputTokensPerSec,
     display: (m) => formatSpeed(m.speed.outputTokensPerSec, null),
   },
@@ -96,6 +111,7 @@ export const DIFF_FIELDS: DiffField[] = [
     label: "Time to first answer token",
     direction: "lower-better",
     effortSensitive: true,
+    effortOf: (m) => m.speed.effort,
     value: (m) => m.speed.timeToFirstTokenSec,
     display: (m) => formatSpeed(null, m.speed.timeToFirstTokenSec),
   },
