@@ -32,10 +32,22 @@ export interface CostPerTask {
 
 /** Artificial Analysis-measured serving speed, same source as costPerTask.
  *  Null where AA publishes no measurement — retired models, and weights-only
- *  releases with no hosted endpoint to measure. */
+ *  releases with no hosted endpoint to measure.
+ *
+ *  `effort` mirrors CostPerTask's field of the same name, and for the same
+ *  reason: AA measures each model at a reasoning-effort setting, and the
+ *  setting dominates the result. Two models from the same lab measured at
+ *  different efforts differ by 30x on time-to-first-token — effort noise, not
+ *  speed. Without this field the UI would present that noise as capability.
+ *
+ *  `timeToFirstTokenSec` is time to first ANSWER token: for a model with a
+ *  thinking phase it is measured after reasoning completes, so at max effort
+ *  it can run to minutes. The UI must say "first answer token", never just
+ *  "first token", which would read as stalled inference. */
 export interface Speed {
   outputTokensPerSec: number | null;
   timeToFirstTokenSec: number | null;
+  effort: ReasoningEffort | null;
 }
 
 export type LicenseKind = "permissive" | "copyleft" | "restricted" | "proprietary";

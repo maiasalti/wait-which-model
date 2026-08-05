@@ -22,7 +22,8 @@
     "knowledgeCutoff": "2021-09",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -73,7 +74,8 @@
     "knowledgeCutoff": "2023-12",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -124,7 +126,8 @@
     "knowledgeCutoff": "2023-10",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -175,7 +178,8 @@
     "knowledgeCutoff": "2023-10",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -226,7 +230,8 @@
     "knowledgeCutoff": "2024-06",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -277,7 +282,8 @@
     "knowledgeCutoff": "2024-06",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -328,7 +334,8 @@
     "knowledgeCutoff": "2024-10",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -379,7 +386,8 @@
     "knowledgeCutoff": "2024-10",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -429,7 +437,8 @@
     "knowledgeCutoff": "2023-08",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -480,7 +489,8 @@
     "knowledgeCutoff": "2024-04",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -531,7 +541,8 @@
     "knowledgeCutoff": "2024-10",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -581,7 +592,8 @@
     "knowledgeCutoff": "2025-03",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -631,7 +643,8 @@
     "knowledgeCutoff": "2025-03",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -681,7 +694,8 @@
     "knowledgeCutoff": "2025-03",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -731,7 +745,8 @@
     "knowledgeCutoff": "2025-07",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -781,7 +796,8 @@
     "knowledgeCutoff": "2025-02",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -831,7 +847,8 @@
     "knowledgeCutoff": "2025-08",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -881,7 +898,8 @@
     "knowledgeCutoff": "2023-11",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -932,7 +950,8 @@
     "knowledgeCutoff": "2024-08",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -982,7 +1001,8 @@
     "knowledgeCutoff": "2025-01",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -1033,7 +1053,8 @@
     "knowledgeCutoff": "2025-01",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -1084,7 +1105,8 @@
     "knowledgeCutoff": "2023-12",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -1135,7 +1157,8 @@
     "knowledgeCutoff": "2024-08",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -1186,7 +1209,8 @@
     "knowledgeCutoff": "2024-11",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -1237,7 +1261,8 @@
     "knowledgeCutoff": "2024-11",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -1288,7 +1313,8 @@
     "knowledgeCutoff": "2024-11",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -1338,7 +1364,8 @@
     "knowledgeCutoff": "2024-06",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -1388,7 +1415,8 @@
     "knowledgeCutoff": "2025-01",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -1438,7 +1466,8 @@
     "knowledgeCutoff": "2024-07",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -1489,7 +1518,8 @@
     "knowledgeCutoff": "2024-07",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -1540,7 +1570,8 @@
     "knowledgeCutoff": "2025-07",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -1590,7 +1621,8 @@
     "knowledgeCutoff": "2024-10",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -1640,7 +1672,8 @@
     "knowledgeCutoff": "2025-06",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -1690,7 +1723,8 @@
     "knowledgeCutoff": "2025-04",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -1740,7 +1774,8 @@
     "knowledgeCutoff": "2025-04",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -1790,7 +1825,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -1841,7 +1877,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -1891,7 +1928,8 @@
     "knowledgeCutoff": "2025-01",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -1942,7 +1980,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -1992,7 +2031,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -2042,7 +2082,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -2093,7 +2134,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -2143,7 +2185,8 @@
     "knowledgeCutoff": "2025-12",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -2194,7 +2237,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -2245,7 +2289,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -2295,7 +2340,8 @@
     "knowledgeCutoff": "2025-01",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -2346,7 +2392,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -2396,7 +2443,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -2447,7 +2495,8 @@
     "knowledgeCutoff": "2026-01",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -2498,7 +2547,8 @@
     "knowledgeCutoff": "2026-01",
     "speed": {
       "outputTokensPerSec": 73.8,
-      "timeToFirstTokenSec": 107.36
+      "timeToFirstTokenSec": 107.36,
+      "effort": "max"
     },
     "license": null,
     "apiIds": [
@@ -2559,7 +2609,8 @@
     "knowledgeCutoff": "2025-01",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -2611,7 +2662,8 @@
     "knowledgeCutoff": "2026-03",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -2662,7 +2714,8 @@
     "knowledgeCutoff": "2026-02",
     "speed": {
       "outputTokensPerSec": 64.1,
-      "timeToFirstTokenSec": 6.09
+      "timeToFirstTokenSec": 6.09,
+      "effort": "medium"
     },
     "license": null,
     "apiIds": [
@@ -2718,7 +2771,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -2768,7 +2822,8 @@
     "knowledgeCutoff": "2026-02",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -2819,7 +2874,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -2871,7 +2927,8 @@
     "knowledgeCutoff": "2026-03",
     "speed": {
       "outputTokensPerSec": 213.5,
-      "timeToFirstTokenSec": 16.09
+      "timeToFirstTokenSec": 16.09,
+      "effort": "high"
     },
     "license": null,
     "apiIds": [
@@ -2926,7 +2983,8 @@
     "knowledgeCutoff": "2026-03",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -2976,7 +3034,8 @@
     "knowledgeCutoff": "2026-01",
     "speed": {
       "outputTokensPerSec": 83,
-      "timeToFirstTokenSec": 202.22
+      "timeToFirstTokenSec": 202.22,
+      "effort": "max"
     },
     "license": null,
     "apiIds": [
@@ -3036,7 +3095,8 @@
     "knowledgeCutoff": "2026-02",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -3087,7 +3147,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": 217.4,
-      "timeToFirstTokenSec": 2.89
+      "timeToFirstTokenSec": 2.89,
+      "effort": "xhigh"
     },
     "license": null,
     "apiIds": [
@@ -3142,7 +3203,8 @@
     "knowledgeCutoff": "2026-05",
     "speed": {
       "outputTokensPerSec": 53.7,
-      "timeToFirstTokenSec": 6.69
+      "timeToFirstTokenSec": 6.69,
+      "effort": "medium"
     },
     "license": null,
     "apiIds": [
@@ -3203,7 +3265,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -3254,7 +3317,8 @@
     "knowledgeCutoff": "2025-11",
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -3306,7 +3370,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -3356,7 +3421,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -3408,7 +3474,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -3460,7 +3527,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -3512,7 +3580,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -3564,7 +3633,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -3616,7 +3686,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -3668,7 +3739,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "timeToFirstTokenSec": null,
+      "effort": null
     },
     "license": null,
     "apiIds": [],
@@ -3719,7 +3791,8 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": 122.7,
-      "timeToFirstTokenSec": 1.34
+      "timeToFirstTokenSec": 1.34,
+      "effort": "max"
     },
     "license": {
       "spdx": "MIT",
