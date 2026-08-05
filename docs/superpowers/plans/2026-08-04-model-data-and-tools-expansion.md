@@ -2502,13 +2502,14 @@ In `data/methodology.json`, add the matching keys. The `reigns.notes` array **mu
 
 ```json
   "reigns": {
-    "summary": "How long each model held the top of its tier, derived from release dates and benchmark scores.",
+    "summary": "How long each model held the top of its tier — reconstructed from release dates and benchmark scores, not recorded as it happened. Read the notes below the chart before drawing conclusions from it: the timeline starts later than the real frontier did, because models that never reported three benchmarks are missing from it entirely.",
     "notes": [
       "This is a reconstruction, not an observed record. The site recomputes frontier status from scratch and keeps no history, so reigns are inferred after the fact.",
       "A model takes the crown on its release date if its composite score beats the incumbent's, and holds it until a later release scores higher.",
       "Only models reporting at least three benchmarks can be crowned — one lucky score is not enough to claim a reign.",
       "The composite is min-max normalised across each tier and averaged over whichever benchmarks a model reports, so two models reporting different benchmark sets are not compared on identical ground.",
-      "Deprecated models are included: a retired model still held the frontier while it was alive."
+      "Deprecated models are included: a retired model still held the frontier while it was alive.",
+      "A model that never reported three benchmarks is absent from the chart altogether, not merely denied a reign. The flagship timeline therefore begins in November 2023 with GPT-4 Turbo — not because nothing led the field before then, but because earlier models never published enough verified scores to be ranked here."
     ]
   },
   "coverage": {
@@ -2544,6 +2545,12 @@ Then add these three sections before the page's closing `</div>`, matching the e
       <section className="mb-10">
         <h2 className="text-lg font-semibold">How long models held the frontier</h2>
         <p className="mt-2 text-sm text-ink-2">{methodology.reigns.summary}</p>
+        {/* The caveat sits ABOVE the chart deliberately. A reader whose eye goes
+            straight to the bars would otherwise see only a neutral summary and
+            take the timeline for a recorded history. */}
+        <p className="mono mt-4 rounded border border-line bg-surface-2 p-3 text-xs text-ink-2">
+          Reconstructed, not observed — and incomplete before November 2023.
+        </p>
         <div className="mt-6">
           <ReignChart />
         </div>
