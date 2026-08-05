@@ -19,7 +19,7 @@ export function ModelDeveloperDetails({ model }: { model: Model }) {
       <section>
         <h4 className="text-[10px] uppercase tracking-wider text-ink-3">API model strings</h4>
         {model.apiIds.length === 0 ? (
-          <p className="mt-1 text-ink-3">Not published</p>
+          <p className="mt-1 text-ink-3">Not researched</p>
         ) : (
           <ul className="mt-1 space-y-1">
             {model.apiIds.map((a) => (
@@ -59,7 +59,14 @@ export function ModelDeveloperDetails({ model }: { model: Model }) {
       <section>
         <h4 className="text-[10px] uppercase tracking-wider text-ink-3">Retirement</h4>
         <p className="mt-1 text-ink">
-          {model.retirementDate ? formatDate(model.retirementDate) : (
+          {model.retirementDate ? (
+            formatDate(model.retirementDate)
+          ) : model.status === "deprecated" ? (
+            // A page saying "deprecated" at the top can't also say "no
+            // retirement announced" below — the model IS retired, we just
+            // haven't researched the date it happened.
+            <span className="text-ink-3">Retirement date not researched</span>
+          ) : (
             <span className="text-ink-3">No retirement announced</span>
           )}
         </p>
