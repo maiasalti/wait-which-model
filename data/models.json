@@ -3158,7 +3158,7 @@
       }
     ],
     "retirementDate": null,
-    "predecessorId": "muse-spark",
+    "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 89.8,
