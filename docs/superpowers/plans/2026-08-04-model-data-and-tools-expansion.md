@@ -2492,7 +2492,7 @@ export function BenchmarkCoverage() {
 In `lib/types.ts`, extend the `Methodology` interface:
 
 ```ts
-  reigns: { summary: string; notes: string[] };
+  reigns: { summary: string; caveat: string; notes: string[] };
   coverage: { summary: string };
   costCalculator: { summary: string; notes: string[] };
   specDiff: { summary: string };
@@ -2503,6 +2503,7 @@ In `data/methodology.json`, add the matching keys. The `reigns.notes` array **mu
 ```json
   "reigns": {
     "summary": "How long each model held the top of its tier — reconstructed from release dates and benchmark scores, not recorded as it happened. Read the notes below the chart before drawing conclusions from it: the timeline starts later than the real frontier did, because models that never reported three benchmarks are missing from it entirely.",
+    "caveat": "Reconstructed, not observed — and incomplete before November 2023.",
     "notes": [
       "This is a reconstruction, not an observed record. The site recomputes frontier status from scratch and keeps no history, so reigns are inferred after the fact.",
       "A model takes the crown on its release date if its composite score beats the incumbent's, and holds it until a later release scores higher.",
@@ -2549,7 +2550,7 @@ Then add these three sections before the page's closing `</div>`, matching the e
             straight to the bars would otherwise see only a neutral summary and
             take the timeline for a recorded history. */}
         <p className="mono mt-4 rounded border border-line bg-surface-2 p-3 text-xs text-ink-2">
-          Reconstructed, not observed — and incomplete before November 2023.
+          {methodology.reigns.caveat}
         </p>
         <div className="mt-6">
           <ReignChart />
