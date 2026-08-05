@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { companyColor, modelById, reigns } from "@/lib/data";
 import { reignDays } from "@/lib/reigns";
 
@@ -11,7 +11,25 @@ const TIER_LABEL: Record<string, string> = {
 };
 
 export function ReignChart() {
-  const now = useMemo(() => new Date(), []);
+  // /info is statically prerendered, so a `new Date()` computed during render
+  // bakes in the build day's date forever — from the next calendar day on,
+  // every open reign's day count would disagree between the prerendered HTML
+  // and the hydrating client, a text-content mismatch on every visit.
+  //
+  // The initial state below still reads `new Date()` at module-eval time (the
+  // same instant the server would compute it during prerendering), so the
+  // FIRST client render matches the prerendered HTML exactly — hydration
+  // succeeds. The effect then re-derives "now" a tick after mount, so a
+  // visitor loading the page on any day after the build sees correct counts
+  // rather than a frozen build-day snapshot. `suppressHydrationWarning` was
+  // the other option and would have been simpler, but it only silences the
+  // console error — the visitor would still see a wrong, stale day count
+  // (and briefly a flicker to the right one only on the days it happens to
+  // already match). Correct-after-a-tick beats silently wrong.
+  const [now, setNow] = useState(() => new Date());
+  useEffect(() => {
+    setNow(new Date());
+  }, []);
   const byTier = useMemo(() => {
     const groups = new Map<string, typeof reigns>();
     for (const r of reigns) {
