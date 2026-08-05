@@ -38,7 +38,6 @@
 const fs = require("fs");
 const path = require("path");
 const {
-  BENCHMARK_KEYS,
   MIN_BENCHMARKS,
   countBenchmarks,
   isRankable,
