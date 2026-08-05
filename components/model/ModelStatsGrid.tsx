@@ -19,10 +19,14 @@ export function ModelStatsGrid({
   className?: string;
 }) {
   const company = companyById.get(model.company);
+  // Capitalised at source, not via a CSS `capitalize` on every <dd>: that
+  // class also ran over Speed's "83 tok/s" and mangled it to "83 Tok/S".
+  // `status` and `modality` are the only cells this class existed for.
+  const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
   const cells: [string, string][] = [
-    ["Status", model.status],
+    ["Status", capitalize(model.status)],
     ["Location", company?.country ?? "Unknown"],
-    ["Modality", model.modality],
+    ["Modality", capitalize(model.modality)],
     ["Context window", formatContext(model.contextWindow)],
     ["Max output", formatContext(model.maxOutput)],
     [
@@ -49,7 +53,7 @@ export function ModelStatsGrid({
       {cells.map(([k, v]) => (
         <div key={k} className="rounded border border-line p-2">
           <dt className="text-[10px] uppercase tracking-wider text-ink-3">{k}</dt>
-          <dd className="mt-0.5 capitalize text-ink">{v}</dd>
+          <dd className="mt-0.5 text-ink">{v}</dd>
         </div>
       ))}
     </dl>
