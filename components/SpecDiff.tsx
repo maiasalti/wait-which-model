@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import type { Model } from "@/lib/types";
 import { models } from "@/lib/data";
 import { comparable, visibleFields, verdict } from "@/lib/spec-diff";
@@ -26,6 +27,8 @@ export function SpecDiff({
   setBaselineId: (id: string | null) => void;
   setOtherIds: (ids: string[]) => void;
 }) {
+  const [copied, setCopied] = useState<"idle" | "ok" | "fail">("idle");
+
   const baseline = models.find((m) => m.id === baselineId) ?? null;
 
   // Sanitise the URL-seeded selection. Two things a hand-edited query can do:
@@ -90,8 +93,19 @@ export function SpecDiff({
     link.click();
   };
 
-  const copyLink = () => {
-    void navigator.clipboard.writeText(window.location.href);
+  /** `navigator.clipboard` is undefined in non-secure contexts and older
+   *  browsers, so an unguarded call throws synchronously; permission denial
+   *  rejects. Either way the user needs to be told, rather than clicking a
+   *  button that silently does nothing. */
+  const copyLink = async () => {
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error("clipboard unavailable");
+      await navigator.clipboard.writeText(window.location.href);
+      setCopied("ok");
+    } catch {
+      setCopied("fail");
+    }
+    window.setTimeout(() => setCopied("idle"), 2500);
   };
 
   return (
@@ -238,9 +252,14 @@ export function SpecDiff({
           <div className="mt-3 flex gap-2">
             <button
               onClick={copyLink}
+              aria-live="polite"
               className="mono rounded border border-line px-2.5 py-1.5 text-xs uppercase tracking-wider text-ink-2 hover:text-ink"
             >
-              Copy link
+              {copied === "ok"
+                ? "Link copied"
+                : copied === "fail"
+                  ? "Copy failed — use the address bar"
+                  : "Copy link"}
             </button>
             <button
               onClick={downloadPng}

@@ -9,8 +9,13 @@ const SCALE = 2;
 const PAD = 24;
 const ROW_H = 26;
 const HEAD_H = 40;
-const LABEL_W = 190;
-const COL_W = 150;
+// Sized to the longest text that actually occurs, not to a guess. The widest
+// label is "Time to first answer token" and the widest value is of the form
+// "202s to first answer token" — ~26 chars, which at 12px monospace is roughly
+// 190px. `fillText`'s maxWidth SQUASHES rather than truncates, so a column too
+// narrow does not clip, it renders visibly compressed. These leave headroom.
+const LABEL_W = 215;
+const COL_W = 230;
 
 const COLORS = {
   bg: "#0B0E1A",
