@@ -5,11 +5,6 @@ import type { Model } from "@/lib/types";
 import { CompanyLogo } from "../CompanyLogo";
 import { benchmarks, companyColor, models } from "@/lib/data";
 
-// Re-exported for existing client-side importers (e.g. the drawer). Server
-// Components must import benchmarkCoverage from "./benchmarkCoverage"
-// directly — see that file's comment for why.
-export { benchmarkCoverage } from "./benchmarkCoverage";
-
 const ELO_VALUES = models
   .map((m) => m.benchmarks.lmarenaElo)
   .filter((v): v is number => v != null);
