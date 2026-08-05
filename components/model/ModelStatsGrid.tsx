@@ -4,6 +4,7 @@ import {
   formatContext,
   formatCostPerTask,
   formatPrice,
+  formatSpeed,
 } from "@/lib/data";
 
 /** The spec cells shared by the drawer and the standalone model page. `cols`
@@ -24,6 +25,7 @@ export function ModelStatsGrid({
     ["Modality", model.modality],
     ["Context window", formatContext(model.contextWindow)],
     ["Max output", formatContext(model.maxOutput)],
+    ["Speed", formatSpeed(model.speed.outputTokensPerSec, model.speed.timeToFirstTokenSec)],
     [
       "Price ($/MTok in / out)",
       `${formatPrice(model.pricing.inputPerMTok)} / ${formatPrice(model.pricing.outputPerMTok)}`,

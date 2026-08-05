@@ -27,6 +27,15 @@ function darken(hex: string, amount: number): string {
   return `#${[r, g, b].map((c) => c.toString(16).padStart(2, "0")).join("")}`;
 }
 
+/** Reported-vs-total count, surfaced in the collapsed summary so a visitor
+ *  knows data is missing before opening the section and finding dashes. */
+export function benchmarkCoverage(model: Model): { reported: number; total: number } {
+  return {
+    reported: benchmarks.filter((b) => model.benchmarks[b.key] != null).length,
+    total: benchmarks.length,
+  };
+}
+
 /** Benchmark bars plus the quick-compare picker. Compare state lives here rather
  *  than in the drawer so the drawer and the standalone page both get the feature
  *  without either having to own or thread it. */
@@ -70,10 +79,6 @@ export function ModelBenchmarks({ model }: { model: Model }) {
 
   return (
     <div>
-      <h3 className="text-xs font-semibold uppercase tracking-wider text-ink-2">
-        Benchmarks (launch-time reported)
-      </h3>
-
       <div className="mt-2">
         {compareModel ? (
           <div className="flex items-center justify-between gap-2 rounded border border-line bg-surface-2 px-2 py-1.5 text-xs">

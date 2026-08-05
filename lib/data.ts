@@ -59,3 +59,5 @@ export function formatDate(iso: string): string {
   const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   return d ? `${months[m - 1]} ${d}, ${y}` : `${months[m - 1] ?? ""} ${y}`;
 }
+
+export { formatSpeed } from "./format";
