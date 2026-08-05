@@ -2810,8 +2810,10 @@ export default function CostCalculatorPage() {
         {excluded.length > 0 && (
           <details className="mt-6">
             <summary className="cursor-pointer text-xs text-ink-3 hover:text-ink">
-              {excluded.length} of {candidates.length} models have no measured
-              cost-per-task figure and are excluded
+              {excluded.length} of {candidates.length} active models have no
+              measured cost-per-task figure and are excluded
+              {models.length - candidates.length > 0 &&
+                ` (${models.length - candidates.length} more are deprecated and not shown)`}
             </summary>
             <p className="mt-2 text-xs text-ink-3">
               {excluded.map((m) => m.name).join(", ")}
@@ -2844,10 +2846,43 @@ const TOOLS = [
 ];
 ```
 
-Then render a Tools group inside the `<nav>`, after the Models Directory link and before Compare, using native `<details>` so it needs no extra client state:
+`Nav` is already a client component (it calls `usePathname`), so add these two
+effects and a ref to it. Native `<details>` has no dismiss behaviour of its own:
+without the first effect the dropdown stays open after you click a link inside
+it, leaving the panel floating over the page you just navigated to. The second
+gives it the Escape and click-outside dismissal anyone expects of an open menu.
 
 ```tsx
-          <details className="group relative">
+import { useEffect, useRef } from "react";
+
+// …inside Nav(), after `const pathname = usePathname();`
+  const toolsRef = useRef<HTMLDetailsElement>(null);
+
+  useEffect(() => {
+    if (toolsRef.current) toolsRef.current.open = false;
+  }, [pathname]);
+
+  useEffect(() => {
+    const close = (e: Event) => {
+      const el = toolsRef.current;
+      if (!el?.open) return;
+      if (e instanceof KeyboardEvent && e.key !== "Escape") return;
+      if (e.type === "pointerdown" && el.contains(e.target as Node)) return;
+      el.open = false;
+    };
+    document.addEventListener("pointerdown", close);
+    document.addEventListener("keydown", close);
+    return () => {
+      document.removeEventListener("pointerdown", close);
+      document.removeEventListener("keydown", close);
+    };
+  }, []);
+```
+
+Then render a Tools group inside the `<nav>`, after the Models Directory link and before Compare:
+
+```tsx
+          <details ref={toolsRef} className="group relative">
             <summary
               className={`flex cursor-pointer list-none items-center gap-1 px-3 py-4 text-sm transition-colors ${
                 TOOLS.some((t) => pathname.startsWith(t.href))
