@@ -77,8 +77,10 @@ export default function CostCalculatorPage() {
         {excluded.length > 0 && (
           <details className="mt-6">
             <summary className="cursor-pointer text-xs text-ink-3 hover:text-ink">
-              {excluded.length} of {candidates.length} models have no measured
-              cost-per-task figure and are excluded
+              {excluded.length} of {candidates.length} active models have no
+              measured cost-per-task figure and are excluded
+              {models.length - candidates.length > 0 &&
+                ` (${models.length - candidates.length} more are deprecated and not shown)`}
             </summary>
             <p className="mt-2 text-xs text-ink-3">
               {excluded.map((m) => m.name).join(", ")}

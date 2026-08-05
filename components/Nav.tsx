@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Fragment } from "react";
+import { Fragment, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { FrontierSparkline } from "./FrontierSparkline";
 
@@ -21,6 +21,28 @@ const TOOLS = [
 
 export function Nav() {
   const pathname = usePathname();
+  const toolsRef = useRef<HTMLDetailsElement>(null);
+
+  useEffect(() => {
+    if (toolsRef.current) toolsRef.current.open = false;
+  }, [pathname]);
+
+  useEffect(() => {
+    const close = (e: Event) => {
+      const el = toolsRef.current;
+      if (!el?.open) return;
+      if (e instanceof KeyboardEvent && e.key !== "Escape") return;
+      if (e.type === "pointerdown" && el.contains(e.target as Node)) return;
+      el.open = false;
+    };
+    document.addEventListener("pointerdown", close);
+    document.addEventListener("keydown", close);
+    return () => {
+      document.removeEventListener("pointerdown", close);
+      document.removeEventListener("keydown", close);
+    };
+  }, []);
+
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-[color:var(--bg)]/85 backdrop-blur">
       <div className="mx-auto flex w-full max-w-7xl items-center gap-6 px-4 sm:px-6">
@@ -48,7 +70,7 @@ export function Nav() {
                   )}
                 </Link>
                 {i === 0 && (
-                  <details className="group relative">
+                  <details ref={toolsRef} className="group relative">
                     <summary
                       className={`flex cursor-pointer list-none items-center gap-1 px-3 py-4 text-sm transition-colors ${
                         TOOLS.some((t) => pathname.startsWith(t.href))
