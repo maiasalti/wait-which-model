@@ -14,6 +14,10 @@ const VERDICT_CLASS: Record<string, string> = {
   worse: "text-rose-400",
   same: "text-ink-3",
   na: "text-ink-3",
+  // Reserved for the baseline when it beats every model it is compared with.
+  // Deliberately not green: green answers "how does this compare to the
+  // baseline", blue answers "the baseline won".
+  best: "text-sky-400",
 };
 
 export function SpecDiff({
@@ -74,6 +78,21 @@ export function SpecDiff({
         const isBaseline = m.id === baselineId;
         const bv = baseline ? f.value(baseline) : null;
         const mv = f.value(m);
+        // Same "baseline beat everything" test the table runs, so the exported
+        // image cannot disagree with what the reader saw on screen.
+        const baselineBest =
+          baseline != null &&
+          f.direction !== "neutral" &&
+          bv != null &&
+          (() => {
+            const rivals = others.filter(
+              (o) => comparable(f, baseline, o) && f.value(o) != null
+            );
+            return (
+              rivals.length > 0 &&
+              rivals.every((o) => verdict(bv, f.value(o), f.direction) === "worse")
+            );
+          })();
         // Mirror the on-screen suppression exactly: an effort-mismatched pair
         // must not be coloured better/worse in the image either, or the PNG
         // would assert a capability gap the table explicitly declines to show.
@@ -89,7 +108,13 @@ export function SpecDiff({
         if (notComparable) text += " ⚠ not comparable";
         return {
           text,
-          tone: isBaseline || v === "na" || v === "same" ? "plain" : v,
+          tone: isBaseline
+            ? baselineBest
+              ? ("best" as const)
+              : ("plain" as const)
+            : v === "na" || v === "same"
+              ? ("plain" as const)
+              : v,
         };
       }),
     }));
@@ -125,8 +150,8 @@ export function SpecDiff({
         Spec comparison
       </h3>
       <p className="mt-1 text-xs text-ink-3">
-        Pick a baseline, then the models to measure against it. Every other column
-        shows the difference from the baseline.
+        Pick a baseline, then the models to measure against it. Each value is
+        coloured against the baseline.
       </p>
 
       <div className="mt-3">
@@ -211,7 +236,27 @@ export function SpecDiff({
               </tr>
             </thead>
             <tbody>
-              {fields.map((f) => (
+              {fields.map((f) => {
+                // Does the baseline win this row outright? Only counts rivals it
+                // can validly be compared against, and requires at least one —
+                // "best of one" is not a win. Strictly better, so a tie loses.
+                const baselineBest =
+                  baseline != null &&
+                  f.direction !== "neutral" &&
+                  f.value(baseline) != null &&
+                  (() => {
+                    const rivals = others.filter(
+                      (o) => comparable(f, baseline, o) && f.value(o) != null
+                    );
+                    return (
+                      rivals.length > 0 &&
+                      rivals.every(
+                        (o) => verdict(f.value(baseline), f.value(o), f.direction) === "worse"
+                      )
+                    );
+                  })();
+
+                return (
                 <tr key={f.key}>
                   <th scope="row" className="border-b border-line py-1.5 text-left font-normal text-ink-3">
                     {f.label}
@@ -222,22 +267,30 @@ export function SpecDiff({
                     const bv = baseline ? f.value(baseline) : null;
                     const mv = f.value(m);
                     // An effort-sensitive figure measured at a different
-                    // setting is not a comparison — showing a delta would sell
+                    // setting is not a comparison — colouring it would sell
                     // effort noise as a capability gap.
                     const ok = baseline ? comparable(f, baseline, m) : false;
-                    const delta =
-                      isBaseline || !ok || bv == null || mv == null || f.direction === "neutral"
-                        ? null
-                        : Math.round((mv - bv) * 100) / 100;
+                    // The VALUE carries the verdict, rather than a delta beside
+                    // it: the number people read is the number that is coloured.
+                    // Colour follows each field's own direction, so a cheaper or
+                    // faster figure is green even though it is the smaller one —
+                    // green means better, never merely bigger.
+                    const toned =
+                      !isBaseline && ok && (v === "better" || v === "worse");
+                    // Blue on the baseline is a different claim from green on a
+                    // rival — not "better than the baseline" but "the baseline
+                    // beat everything here" — so it gets its own hue.
+                    const wins = isBaseline && baselineBest;
                     return (
                       <td key={m.id} className="border-b border-line px-2 py-1.5">
-                        <span className="text-ink">{f.display(m)}</span>
-                        {delta != null && delta !== 0 && (
-                          <span className={`ml-1.5 ${VERDICT_CLASS[v]}`}>
-                            {delta > 0 ? "+" : ""}
-                            {delta}
-                          </span>
-                        )}
+                        <span
+                          className={
+                            wins ? VERDICT_CLASS.best : toned ? VERDICT_CLASS[v] : "text-ink"
+                          }
+                          title={wins ? "Best of the models being compared" : undefined}
+                        >
+                          {f.display(m)}
+                        </span>
                         {f.effortSensitive &&
                           (f.effortOf ? f.effortOf(m) : m.speed.effort) && (
                             <span className="ml-1.5 text-[10px] text-ink-3">
@@ -258,9 +311,26 @@ export function SpecDiff({
                     );
                   })}
                 </tr>
-              ))}
+                );
+              })}
             </tbody>
           </table>
+          {/* Three colours now carry meaning, and "green = better, not bigger"
+              is the non-obvious one — a cheaper model is green on price while
+              being the smaller number. Say so rather than making people infer it. */}
+          <p className="mono mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-[10px] text-ink-3">
+            <span>
+              <span className="text-emerald-400">green</span> better than baseline
+            </span>
+            <span>
+              <span className="text-rose-400">red</span> worse
+            </span>
+            <span>
+              <span className="text-sky-400">blue</span> baseline beat them all
+            </span>
+            <span>better, not bigger — a cheaper or faster figure is green</span>
+          </p>
+
           <div className="mt-3 flex gap-2">
             <button
               onClick={copyLink}

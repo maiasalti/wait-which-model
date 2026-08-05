@@ -2,7 +2,7 @@
  *  so the layout maths is readable and the component stays declarative. */
 export interface DiffPngRow {
   label: string;
-  cells: { text: string; tone: "plain" | "better" | "worse" }[];
+  cells: { text: string; tone: "plain" | "better" | "worse" | "best" }[];
 }
 
 const SCALE = 2;
@@ -26,6 +26,8 @@ const COLORS = {
   muted: "#8A93A6",
   better: "#34D399",
   worse: "#FB7185",
+  // The baseline when it beat every model compared against it.
+  best: "#38BDF8",
 };
 
 export function renderDiffPng(opts: {
@@ -71,7 +73,13 @@ export function renderDiffPng(opts: {
 
     row.cells.forEach((cell, i) => {
       ctx.fillStyle =
-        cell.tone === "better" ? COLORS.better : cell.tone === "worse" ? COLORS.worse : COLORS.ink;
+        cell.tone === "better"
+          ? COLORS.better
+          : cell.tone === "worse"
+            ? COLORS.worse
+            : cell.tone === "best"
+              ? COLORS.best
+              : COLORS.ink;
       ctx.fillText(cell.text, PAD + LABEL_W + i * COL_W, y + 17, COL_W - 10);
     });
   });
@@ -79,7 +87,7 @@ export function renderDiffPng(opts: {
   ctx.fillStyle = COLORS.muted;
   ctx.font = "11px ui-sans-serif, system-ui, sans-serif";
   ctx.fillText(
-    "waitwhichmodel — green/red shows better/worse against the baseline column",
+    "waitwhichmodel — green better / red worse than the baseline; blue = baseline beat them all",
     PAD,
     h - PAD + 6
   );
