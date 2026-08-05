@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { DEFAULT_COMPARE_STATE, stateToQuery, queryToState } from "./compare-url.ts";
+import { DEFAULT_COMPARE_STATE, DEFAULT_PICKS, stateToQuery, queryToState } from "./compare-url.ts";
 
 test("default state serialises to an empty query", () => {
   assert.equal(stateToQuery(DEFAULT_COMPARE_STATE), "");
@@ -43,5 +43,19 @@ test("ignores junk values rather than throwing", () => {
 
 test("a baseline with no comparison models still round-trips", () => {
   const state = { ...DEFAULT_COMPARE_STATE, diffBaseline: "gpt-4", diffOthers: [] };
+  assert.deepEqual(queryToState(new URLSearchParams(stateToQuery(state))), state);
+});
+
+test("the four default picks are omitted from the query", () => {
+  assert.equal(stateToQuery(DEFAULT_COMPARE_STATE), "");
+});
+
+test("an absent picks param yields the defaults, an empty one yields none", () => {
+  assert.deepEqual(queryToState(new URLSearchParams("")).picks, DEFAULT_PICKS);
+  assert.deepEqual(queryToState(new URLSearchParams("picks=")).picks, []);
+});
+
+test("a deselected-everything state round-trips", () => {
+  const state = { ...DEFAULT_COMPARE_STATE, picks: [] };
   assert.deepEqual(queryToState(new URLSearchParams(stateToQuery(state))), state);
 });

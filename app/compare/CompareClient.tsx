@@ -24,11 +24,9 @@ export default function CompareClient() {
 
   const [filters, setFilters] = useState<Filters>(initial.filters);
   const [highlight, setHighlight] = useState<Highlight>({ kind: "none" });
-  const [picks, setPicks] = useState<string[]>(
-    initial.picks.length
-      ? initial.picks
-      : ["claude-fable-5", "claude-opus-4-8", "gpt-5-5", "gemini-3-1-pro"]
-  );
+  // No fallback here — DEFAULT_PICKS in lib/compare-url.ts is the single
+  // source of truth, so an untouched page serialises to a bare URL.
+  const [picks, setPicks] = useState<string[]>(initial.picks);
   const [showLabels, setShowLabels] = useState(true);
   const [now] = useState(() => new Date());
 
