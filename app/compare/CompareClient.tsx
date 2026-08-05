@@ -8,6 +8,7 @@ import { DEFAULT_COMPARE_STATE, queryToState, stateToQuery } from "@/lib/compare
 import type { Filters, Highlight } from "@/lib/types";
 import { FilterRail } from "@/components/FilterRail";
 import { CostPerfScatter, HeadToHead, TimelineScatter } from "@/components/charts";
+import { SpecDiff } from "@/components/SpecDiff";
 
 const MAX_PICKS = 5;
 
@@ -29,6 +30,8 @@ export default function CompareClient() {
   const [picks, setPicks] = useState<string[]>(initial.picks);
   const [showLabels, setShowLabels] = useState(true);
   const [now] = useState(() => new Date());
+  const [diffBaseline, setDiffBaseline] = useState<string | null>(initial.diffBaseline);
+  const [diffOthers, setDiffOthers] = useState<string[]>(initial.diffOthers);
 
   const shown = useMemo(
     () => applyFilters(models, filters, now),
@@ -42,9 +45,9 @@ export default function CompareClient() {
   // `replace`, not `push`: filtering is not navigation, and every keystroke in
   // the search box would otherwise become a back-button entry.
   useEffect(() => {
-    const q = stateToQuery({ ...DEFAULT_COMPARE_STATE, filters, picks });
+    const q = stateToQuery({ ...DEFAULT_COMPARE_STATE, filters, picks, diffBaseline, diffOthers });
     router.replace(q ? `?${q}` : "/compare", { scroll: false });
-  }, [filters, picks, router]);
+  }, [filters, picks, diffBaseline, diffOthers, router]);
 
   const togglePick = (id: string) => {
     setPicks((p) =>
@@ -128,6 +131,15 @@ export default function CompareClient() {
             </div>
             <HeadToHead picked={picked} />
           </section>
+
+          <hr className="border-line-strong" />
+
+          <SpecDiff
+            baselineId={diffBaseline}
+            otherIds={diffOthers}
+            setBaselineId={setDiffBaseline}
+            setOtherIds={setDiffOthers}
+          />
         </div>
       </div>
     </div>
