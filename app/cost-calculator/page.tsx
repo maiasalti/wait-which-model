@@ -57,7 +57,7 @@ export default function CostCalculatorPage() {
 
       <div className="mt-8 max-w-2xl">
         <h2 className="mono text-[10px] uppercase tracking-widest text-ink-3">
-          Estimated monthly cost
+          Monthly cost
         </h2>
         <ul className="mono mt-3">
           {included.map((row) => (
@@ -68,11 +68,20 @@ export default function CostCalculatorPage() {
               </Link>
               <span className="text-[10px] text-ink-3">
                 ${row.model.costPerTask.usd}/task
+                {row.model.costPerTask.effort ? ` (${row.model.costPerTask.effort} effort)` : ""}
               </span>
               <span className="w-24 text-right text-sm text-ink">{usd(row.monthly)}</span>
             </li>
           ))}
         </ul>
+        <p className="mt-3 text-xs text-ink-3">
+          Figures measured at different reasoning efforts are not strictly
+          comparable — see{" "}
+          <Link href="/info" className="underline hover:text-ink">
+            Methodology
+          </Link>
+          .
+        </p>
 
         {excluded.length > 0 && (
           <details className="mt-6">

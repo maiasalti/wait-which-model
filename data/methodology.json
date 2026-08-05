@@ -92,7 +92,7 @@
     "summary": "Monthly cost is tasks per day x 30 x the model's measured cost per task.",
     "notes": [
       "A task is one Artificial Analysis Intelligence Index task — one self-contained question or job.",
-      "Cost per task is taken at medium reasoning effort wherever Artificial Analysis publishes one.",
+      "Cost per task is taken at whatever reasoning effort Artificial Analysis publishes for that model — the effort varies model to model, and is unrecorded for many of them. Figures measured at different efforts are not strictly comparable, even when they're shown side by side here.",
       "A 30-day month is used regardless of the calendar month.",
       "Models with no measured cost-per-task figure are excluded and named beneath the results rather than silently dropped.",
       "Every figure is measured. Nothing here is estimated, so no uncertainty range is shown."
