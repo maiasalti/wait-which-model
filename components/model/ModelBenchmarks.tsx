@@ -5,6 +5,11 @@ import type { Model } from "@/lib/types";
 import { CompanyLogo } from "../CompanyLogo";
 import { benchmarks, companyColor, models } from "@/lib/data";
 
+// Re-exported for existing client-side importers (e.g. the drawer). Server
+// Components must import benchmarkCoverage from "./benchmarkCoverage"
+// directly — see that file's comment for why.
+export { benchmarkCoverage } from "./benchmarkCoverage";
+
 const ELO_VALUES = models
   .map((m) => m.benchmarks.lmarenaElo)
   .filter((v): v is number => v != null);
@@ -25,15 +30,6 @@ function darken(hex: string, amount: number): string {
   const g = Math.round(((n >> 8) & 255) * (1 - amount));
   const b = Math.round((n & 255) * (1 - amount));
   return `#${[r, g, b].map((c) => c.toString(16).padStart(2, "0")).join("")}`;
-}
-
-/** Reported-vs-total count, surfaced in the collapsed summary so a visitor
- *  knows data is missing before opening the section and finding dashes. */
-export function benchmarkCoverage(model: Model): { reported: number; total: number } {
-  return {
-    reported: benchmarks.filter((b) => model.benchmarks[b.key] != null).length,
-    total: benchmarks.length,
-  };
 }
 
 /** Benchmark bars plus the quick-compare picker. Compare state lives here rather

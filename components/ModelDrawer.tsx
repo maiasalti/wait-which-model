@@ -9,6 +9,9 @@ import { ModelStatsGrid } from "./model/ModelStatsGrid";
 import { ModelBenchmarks } from "./model/ModelBenchmarks";
 import { ModelProsCons } from "./model/ModelProsCons";
 import { ModelNewsList } from "./model/ModelNewsList";
+import { Collapsible } from "./Collapsible";
+import { ModelDeveloperDetails } from "./model/ModelDeveloperDetails";
+import { benchmarkCoverage } from "./model/benchmarkCoverage";
 
 /** Rendered into the root layout's @modal slot by the intercepting route at
  *  app/@modal/(.)models/[id]. Closing pops the history entry the card's <Link>
@@ -50,9 +53,24 @@ export function ModelDrawer({ model }: { model: Model }) {
         </div>
 
         <ModelStatsGrid model={model} className="grid-cols-2" />
-        <ModelBenchmarks model={model} />
-        <ModelProsCons model={model} className="space-y-5" />
-        <ModelNewsList model={model} />
+
+        <div>
+          <Collapsible
+            title="Benchmarks"
+            meta={`${benchmarkCoverage(model).reported} of ${benchmarkCoverage(model).total} reported`}
+          >
+            <ModelBenchmarks model={model} />
+          </Collapsible>
+          <Collapsible title="Strengths & weaknesses">
+            <ModelProsCons model={model} className="space-y-5" />
+          </Collapsible>
+          <Collapsible title="For developers">
+            <ModelDeveloperDetails model={model} />
+          </Collapsible>
+          <Collapsible title="News">
+            <ModelNewsList model={model} />
+          </Collapsible>
+        </div>
       </aside>
     </div>
   );

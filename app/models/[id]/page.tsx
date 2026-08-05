@@ -4,8 +4,11 @@ import { notFound } from "next/navigation";
 import { CompanyLogo } from "@/components/CompanyLogo";
 import { ModelStatsGrid } from "@/components/model/ModelStatsGrid";
 import { ModelBenchmarks } from "@/components/model/ModelBenchmarks";
+import { benchmarkCoverage } from "@/components/model/benchmarkCoverage";
 import { ModelProsCons } from "@/components/model/ModelProsCons";
 import { ModelNewsList } from "@/components/model/ModelNewsList";
+import { Collapsible } from "@/components/Collapsible";
+import { ModelDeveloperDetails } from "@/components/model/ModelDeveloperDetails";
 import {
   companyName,
   formatContext,
@@ -84,17 +87,27 @@ export default async function ModelPage({
         </p>
       </header>
 
-      <div className="mt-8 grid gap-8 lg:grid-cols-2">
-        <ModelStatsGrid model={model} className="h-fit grid-cols-2" />
-        <ModelBenchmarks model={model} />
-      </div>
+      <div className="mt-8 max-w-3xl">
+        <ModelStatsGrid model={model} className="grid-cols-2 sm:grid-cols-3" />
 
-      <div className="mt-10">
-        <ModelProsCons model={model} className="grid gap-6 sm:grid-cols-2" />
-      </div>
-
-      <div className="mt-10 max-w-2xl">
-        <ModelNewsList model={model} />
+        <div className="mt-8">
+          <Collapsible
+            title="Benchmarks"
+            meta={`${benchmarkCoverage(model).reported} of ${benchmarkCoverage(model).total} reported`}
+            defaultOpen
+          >
+            <ModelBenchmarks model={model} />
+          </Collapsible>
+          <Collapsible title="Strengths & weaknesses" defaultOpen>
+            <ModelProsCons model={model} className="grid gap-6 sm:grid-cols-2" />
+          </Collapsible>
+          <Collapsible title="For developers">
+            <ModelDeveloperDetails model={model} />
+          </Collapsible>
+          <Collapsible title="News">
+            <ModelNewsList model={model} />
+          </Collapsible>
+        </div>
       </div>
     </div>
   );
