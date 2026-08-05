@@ -6,7 +6,7 @@ const BASE = "https://www.waitwhichmodel.fyi";
 /** Without this the per-model pages exist but nothing points a crawler at them,
  *  since they are only reachable by clicking a card. */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPages = ["", "/compare", "/news", "/info", "/which-model"].map((path) => ({
+  const staticPages = ["", "/compare", "/news", "/info", "/which-model", "/cost-calculator"].map((path) => ({
     url: `${BASE}${path}`,
     changeFrequency: "weekly" as const,
     priority: path === "" ? 1 : 0.8,
