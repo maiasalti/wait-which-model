@@ -3,6 +3,7 @@
 import type { Model } from "@/lib/types";
 import { models } from "@/lib/data";
 import { comparable, visibleFields, verdict } from "@/lib/spec-diff";
+import { renderDiffPng, type DiffPngRow } from "@/lib/diff-png";
 import { CompanyLogo } from "./CompanyLogo";
 
 const MAX_OTHERS = 4;
@@ -61,6 +62,36 @@ export function SpecDiff({
     // Write back the sanitised list, so any junk ids from a hand-edited URL
     // are flushed out of state (and therefore the URL) on first interaction.
     setOtherIds([...others.map((m) => m.id), id]);
+  };
+
+  const downloadPng = () => {
+    const rows: DiffPngRow[] = fields.map((f) => ({
+      label: f.label,
+      cells: shown.map((m) => {
+        // Mirror the on-screen suppression exactly: an effort-mismatched pair
+        // must not be coloured better/worse in the image either, or the PNG
+        // would assert a capability gap the table explicitly declines to show.
+        const ok = baseline ? comparable(f, baseline, m) : false;
+        const v = baseline && ok ? verdict(f.value(baseline), f.value(m), f.direction) : "na";
+        return {
+          text: f.display(m),
+          tone: m.id === baselineId || v === "na" || v === "same" ? "plain" : v,
+        };
+      }),
+    }));
+    const canvas = renderDiffPng({
+      title: baseline ? `Spec comparison — baseline ${baseline.name}` : "Spec comparison",
+      headers: shown.map((m) => m.name),
+      rows,
+    });
+    const link = document.createElement("a");
+    link.download = "spec-comparison.png";
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+  };
+
+  const copyLink = () => {
+    void navigator.clipboard.writeText(window.location.href);
   };
 
   return (
@@ -204,6 +235,20 @@ export function SpecDiff({
               ))}
             </tbody>
           </table>
+          <div className="mt-3 flex gap-2">
+            <button
+              onClick={copyLink}
+              className="mono rounded border border-line px-2.5 py-1.5 text-xs uppercase tracking-wider text-ink-2 hover:text-ink"
+            >
+              Copy link
+            </button>
+            <button
+              onClick={downloadPng}
+              className="mono rounded border border-line px-2.5 py-1.5 text-xs uppercase tracking-wider text-ink-2 hover:text-ink"
+            >
+              Download PNG
+            </button>
+          </div>
         </div>
       )}
     </section>
