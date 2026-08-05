@@ -3,7 +3,9 @@ import companiesJson from "@/data/companies.json";
 import benchmarksJson from "@/data/benchmarks.json";
 import newsJson from "@/data/news.json";
 import methodologyJson from "@/data/methodology.json";
+import reignsJson from "@/data/frontier-reigns.json";
 import type { BenchmarkMeta, Company, Methodology, Model, NewsItem } from "./types";
+import type { Reign } from "./reigns";
 
 export const models = (modelsJson as Model[]).slice().sort(
   (a, b) => b.releaseDate.localeCompare(a.releaseDate)
@@ -20,6 +22,8 @@ export const methodology = methodologyJson as Methodology;
 export const news = (newsJson as NewsItem[]).slice().sort(
   (a, b) => b.date.localeCompare(a.date)
 );
+
+export const reigns = reignsJson as Reign[];
 
 export const companyById = new Map(companies.map((c) => [c.id, c]));
 export const modelById = new Map(models.map((m) => [m.id, m]));
