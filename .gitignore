@@ -40,3 +40,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .playwright-mcp/
+
+# agent worktrees — these are full checkouts, node_modules and all. Left
+# tracked, a `git add -A` would commit a whole second copy of the project;
+# left visible to the bundler, Turbopack walks into the nested package.json
+# and panics with "Next.js package not found".
+.claude/worktrees/
+.superpowers/
