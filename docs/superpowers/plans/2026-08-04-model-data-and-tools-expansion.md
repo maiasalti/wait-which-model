@@ -86,10 +86,22 @@ In `lib/types.ts`, add after the `CostPerTask` interface:
 ```ts
 /** Artificial Analysis-measured serving speed, same source as costPerTask.
  *  Null where AA publishes no measurement — retired models, and weights-only
- *  releases with no hosted endpoint to measure. */
+ *  releases with no hosted endpoint to measure.
+ *
+ *  `effort` mirrors CostPerTask's field of the same name, and for the same
+ *  reason: AA measures each model at a reasoning-effort setting, and the
+ *  setting dominates the result. Two models from the same lab measured at
+ *  different efforts differ by 30x on time-to-first-token — effort noise, not
+ *  speed. Without this field the UI would present that noise as capability.
+ *
+ *  `timeToFirstTokenSec` is time to first ANSWER token: for a model with a
+ *  thinking phase it is measured after reasoning completes, so at max effort
+ *  it can run to minutes. The UI must say "first answer token", never just
+ *  "first token", which would read as stalled inference. */
 export interface Speed {
   outputTokensPerSec: number | null;
   timeToFirstTokenSec: number | null;
+  effort: ReasoningEffort | null;
 }
 
 export type LicenseKind = "permissive" | "copyleft" | "restricted" | "proprietary";
@@ -793,16 +805,24 @@ import assert from "node:assert/strict";
 import { formatSpeed } from "./format.ts";
 
 test("formats both figures when present", () => {
-  assert.equal(formatSpeed(120.4, 0.42), "120 tok/s · 0.42s to first token");
+  assert.equal(formatSpeed(120.4, 0.42), "120 tok/s · 0.42s to first answer token");
 });
 
 test("shows only what is known", () => {
   assert.equal(formatSpeed(120.4, null), "120 tok/s");
-  assert.equal(formatSpeed(null, 0.42), "0.42s to first token");
+  assert.equal(formatSpeed(null, 0.42), "0.42s to first answer token");
 });
 
 test("unmeasured speed renders as a dash, not a zero", () => {
   assert.equal(formatSpeed(null, null), "—");
+});
+
+test("drops false precision on long reasoning latencies", () => {
+  // Two decimals on a three-minute measurement claims accuracy that does not
+  // exist; below 10s, hundredths are still meaningful.
+  assert.equal(formatSpeed(83, 202.22), "83 tok/s · 202s to first answer token");
+  assert.equal(formatSpeed(null, 9.99), "9.99s to first answer token");
+  assert.equal(formatSpeed(null, 10.4), "10s to first answer token");
 });
 ```
 
@@ -819,13 +839,26 @@ Create `lib/format.ts`:
 /** Pure formatters with no data imports, so they are testable under
  *  `node --test` (which cannot resolve the `@/` path alias). */
 
+/** "first answer token", not "first token": for a model with a thinking phase
+ *  the measurement starts counting after reasoning completes, so at max effort
+ *  it reaches minutes. "202s to first token" would read as broken inference.
+ *
+ *  Precision scales with magnitude — hundredths below 10s, whole seconds above.
+ *  Two decimals on a three-minute measurement is false precision, since
+ *  server and network variance at that scale dwarfs a hundredth of a second. */
 export function formatSpeed(
   outputTokensPerSec: number | null,
   timeToFirstTokenSec: number | null
 ): string {
   const parts: string[] = [];
   if (outputTokensPerSec != null) parts.push(`${Math.round(outputTokensPerSec)} tok/s`);
-  if (timeToFirstTokenSec != null) parts.push(`${timeToFirstTokenSec.toFixed(2)}s to first token`);
+  if (timeToFirstTokenSec != null) {
+    const t =
+      timeToFirstTokenSec < 10
+        ? timeToFirstTokenSec.toFixed(2)
+        : String(Math.round(timeToFirstTokenSec));
+    parts.push(`${t}s to first answer token`);
+  }
   return parts.length ? parts.join(" · ") : "—";
 }
 ```
@@ -848,7 +881,12 @@ export { formatSpeed } from "./format";
 In `components/model/ModelStatsGrid.tsx`, add `formatSpeed` to the import from `@/lib/data`, then insert into `cells` immediately after the `Max output` entry:
 
 ```ts
-    ["Speed", formatSpeed(model.speed.outputTokensPerSec, model.speed.timeToFirstTokenSec)],
+    [
+      // Effort is disclosed in the label exactly as the Cost per task cell
+      // below already does, because the setting dominates the measurement.
+      model.speed.effort ? `Speed (${model.speed.effort} effort)` : "Speed",
+      formatSpeed(model.speed.outputTokensPerSec, model.speed.timeToFirstTokenSec),
+    ],
 ```
 
 Speed belongs in the always-visible grid — "how fast is it" is a question beginners actually ask, unlike API strings or licence terms.
@@ -1528,6 +1566,18 @@ export interface DiffField {
   value: (m: Model) => number | null;
   /** Human-readable cell text. */
   display: (m: Model) => string;
+  /** True for figures Artificial Analysis measures at a reasoning-effort
+   *  setting. Two models measured at different efforts are not comparable —
+   *  the setting dominates the number — so the diff must suppress the delta
+   *  and say why rather than presenting effort noise as a capability gap. */
+  effortSensitive?: boolean;
+}
+
+/** Whether a delta between these two models is meaningful for this field.
+ *  Effort-sensitive fields require both models measured at the same setting. */
+export function comparable(field: DiffField, a: Model, b: Model): boolean {
+  if (!field.effortSensitive) return true;
+  return a.speed.effort != null && a.speed.effort === b.speed.effort;
 }
 
 /** "Better" follows each field's own direction — lower is better for price and
@@ -1592,13 +1642,15 @@ export const DIFF_FIELDS: DiffField[] = [
     key: "outputSpeed",
     label: "Output speed",
     direction: "higher-better",
+    effortSensitive: true,
     value: (m) => m.speed.outputTokensPerSec,
     display: (m) => formatSpeed(m.speed.outputTokensPerSec, null),
   },
   {
     key: "ttft",
-    label: "Time to first token",
+    label: "Time to first answer token",
     direction: "lower-better",
+    effortSensitive: true,
     value: (m) => m.speed.timeToFirstTokenSec,
     display: (m) => formatSpeed(null, m.speed.timeToFirstTokenSec),
   },
@@ -1687,7 +1739,7 @@ Create `components/SpecDiff.tsx`:
 
 import type { Model } from "@/lib/types";
 import { models } from "@/lib/data";
-import { visibleFields, verdict } from "@/lib/spec-diff";
+import { comparable, visibleFields, verdict } from "@/lib/spec-diff";
 import { CompanyLogo } from "./CompanyLogo";
 
 const MAX_OTHERS = 4;
@@ -1821,8 +1873,12 @@ export function SpecDiff({
                     const v = baseline ? verdict(f.value(baseline), f.value(m), f.direction) : "na";
                     const bv = baseline ? f.value(baseline) : null;
                     const mv = f.value(m);
+                    // An effort-sensitive figure measured at a different
+                    // setting is not a comparison — showing a delta would sell
+                    // effort noise as a capability gap.
+                    const ok = baseline ? comparable(f, baseline, m) : false;
                     const delta =
-                      isBaseline || bv == null || mv == null || f.direction === "neutral"
+                      isBaseline || !ok || bv == null || mv == null || f.direction === "neutral"
                         ? null
                         : Math.round((mv - bv) * 100) / 100;
                     return (
@@ -1832,6 +1888,19 @@ export function SpecDiff({
                           <span className={`ml-1.5 ${VERDICT_CLASS[v]}`}>
                             {delta > 0 ? "+" : ""}
                             {delta}
+                          </span>
+                        )}
+                        {f.effortSensitive && m.speed.effort && (
+                          <span className="ml-1.5 text-[10px] text-ink-3">
+                            ({m.speed.effort})
+                          </span>
+                        )}
+                        {!isBaseline && !ok && f.effortSensitive && bv != null && mv != null && (
+                          <span
+                            className="ml-1 text-[10px] text-ink-3"
+                            title="Measured at a different reasoning effort — not comparable"
+                          >
+                            ⚠
                           </span>
                         )}
                       </td>
@@ -2346,7 +2415,7 @@ In `data/methodology.json`, add the matching keys. The `reigns.notes` array **mu
     ]
   },
   "specDiff": {
-    "summary": "In the spec comparison on the Compare page, green means better than the baseline and red means worse — following each field's own direction. Lower is better for price and time to first token; higher is better for benchmarks, context window and output speed. Fields with no meaningful ordering, such as licence, never show a colour."
+    "summary": "In the spec comparison on the Compare page, green means better than the baseline and red means worse — following each field's own direction. Lower is better for price and time to first answer token; higher is better for benchmarks, context window and output speed. Fields with no meaningful ordering, such as licence, never show a colour. Speed figures are measured at a reasoning-effort setting, and the setting dominates the result, so a delta is only shown when both models were measured at the same effort; otherwise the figures are shown side by side with a warning and no comparison."
   }
 ```
 
