@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { benchmarks, formatDate, methodology } from "@/lib/data";
+import { ReignChart } from "@/components/ReignChart";
+import { BenchmarkCoverage } from "@/components/BenchmarkCoverage";
 
 export const metadata: Metadata = {
   title: "Info · Wait Which Model?",
@@ -131,6 +133,44 @@ export default function InfoPage() {
       <section className="mb-10">
         <h2 className="text-lg font-semibold">How current this data is</h2>
         <p className="mt-2 text-sm text-ink-2">{methodology.currency.summary}</p>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-lg font-semibold">How long models held the frontier</h2>
+        <p className="mt-2 text-sm text-ink-2">{methodology.reigns.summary}</p>
+        <div className="mt-6">
+          <ReignChart />
+        </div>
+        <ul className="mt-6 space-y-3">
+          {methodology.reigns.notes.map((n) => (
+            <li key={n} className="flex gap-3 rounded border border-line p-3 text-sm text-ink-2">
+              <span className="mono mt-0.5 shrink-0 text-ink-3">→</span>
+              <span>{n}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-lg font-semibold">Benchmark coverage</h2>
+        <p className="mt-2 text-sm text-ink-2">{methodology.coverage.summary}</p>
+        <div className="mt-4">
+          <BenchmarkCoverage />
+        </div>
+      </section>
+
+      <section className="mb-10">
+        <h2 className="text-lg font-semibold">Cost calculator</h2>
+        <p className="mt-2 text-sm text-ink-2">{methodology.costCalculator.summary}</p>
+        <ul className="mt-4 space-y-3">
+          {methodology.costCalculator.notes.map((n) => (
+            <li key={n} className="flex gap-3 rounded border border-line p-3 text-sm text-ink-2">
+              <span className="mono mt-0.5 shrink-0 text-ink-3">→</span>
+              <span>{n}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-4 text-sm text-ink-2">{methodology.specDiff.summary}</p>
       </section>
     </div>
   );

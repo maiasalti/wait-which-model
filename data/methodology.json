@@ -8,7 +8,7 @@
       "Everyone else — capability bar: within its tier, a model's benchmark scores must land within about 15% of the best score any recent model in that tier has posted. Being newest isn't enough on its own — a fresh release with weaker benchmarks than the current leader doesn't qualify.",
       "Everyone else — verified data required: a model needs scores on at least 3 of the tracked benchmarks to be evaluated at all. A freshly announced model without enough published benchmark data yet is labeled \"Unknown\" rather than guessed into Frontier or Superseded."
     ],
-    "lastReviewed": "2026-07-22"
+    "lastReviewed": "2026-08-05"
   },
   "tiers": [
     {
@@ -72,5 +72,31 @@
   },
   "currency": {
     "summary": "This site has no backend — everything is static data, refreshed by periodic research passes rather than a live feed. Roughly weekly, and whenever a major lab ships something new, the model directory, news log, and \"frontier\" statuses get re-checked against current web sources and updated. There's no fixed daily schedule; treat the data as accurate as of its most recent update, not real-time."
+  },
+  "reigns": {
+    "summary": "How long each model held the top of its tier, derived from release dates and benchmark scores.",
+    "notes": [
+      "This is a reconstruction, not an observed record. The site recomputes frontier status from scratch and keeps no history, so reigns are inferred after the fact.",
+      "A model takes the crown on its release date if its composite score beats the incumbent's, and holds it until a later release scores higher.",
+      "Only models reporting at least three benchmarks can be crowned — one lucky score is not enough to claim a reign.",
+      "The composite is min-max normalised across each tier and averaged over whichever benchmarks a model reports, so two models reporting different benchmark sets are not compared on identical ground.",
+      "Deprecated models are included: a retired model still held the frontier while it was alive."
+    ]
+  },
+  "coverage": {
+    "summary": "Not every model reports every benchmark. A dash means the score was never published or could not be verified from a primary source — it does not mean zero."
+  },
+  "costCalculator": {
+    "summary": "Monthly cost is tasks per day x 30 x the model's measured cost per task.",
+    "notes": [
+      "A task is one Artificial Analysis Intelligence Index task — one self-contained question or job.",
+      "Cost per task is taken at medium reasoning effort wherever Artificial Analysis publishes one.",
+      "A 30-day month is used regardless of the calendar month.",
+      "Models with no measured cost-per-task figure are excluded and named beneath the results rather than silently dropped.",
+      "Every figure is measured. Nothing here is estimated, so no uncertainty range is shown."
+    ]
+  },
+  "specDiff": {
+    "summary": "In the spec comparison on the Compare page, green means better than the baseline and red means worse — following each field's own direction. Lower is better for price and time to first answer token; higher is better for benchmarks, context window and output speed. Fields with no meaningful ordering, such as licence, never show a colour. Speed figures are measured at a reasoning-effort setting, and the setting dominates the result, so a delta is only shown when both models were measured at the same effort; otherwise the figures are shown side by side with a warning and no comparison."
   }
 }
