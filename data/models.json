@@ -2497,11 +2497,20 @@
     "availability": "general",
     "knowledgeCutoff": "2026-01",
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "outputTokensPerSec": 73.8,
+      "timeToFirstTokenSec": 107.36
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "anthropic",
+        "id": "claude-fable-5"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "anthropic.claude-fable-5"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -2652,11 +2661,16 @@
     "availability": "general",
     "knowledgeCutoff": "2026-02",
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "outputTokensPerSec": 64.1,
+      "timeToFirstTokenSec": 6.09
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "gpt-5.6-sol"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -2856,11 +2870,16 @@
     "availability": "general",
     "knowledgeCutoff": "2026-03",
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "outputTokensPerSec": 213.5,
+      "timeToFirstTokenSec": 16.09
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "google",
+        "id": "gemini-3.6-flash"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -2956,11 +2975,20 @@
     "availability": "general",
     "knowledgeCutoff": "2026-01",
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "outputTokensPerSec": 83,
+      "timeToFirstTokenSec": 202.22
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "anthropic",
+        "id": "claude-sonnet-5"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "anthropic.claude-sonnet-5"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -3058,13 +3086,18 @@
     "availability": "general",
     "knowledgeCutoff": null,
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "outputTokensPerSec": 217.4,
+      "timeToFirstTokenSec": 2.89
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "meta",
+        "id": "muse-spark-1.1"
+      }
+    ],
     "retirementDate": null,
-    "predecessorId": null,
+    "predecessorId": "muse-spark",
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 89.8,
@@ -3108,13 +3141,22 @@
     "availability": "general",
     "knowledgeCutoff": "2026-05",
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "outputTokensPerSec": 53.7,
+      "timeToFirstTokenSec": 6.69
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "anthropic",
+        "id": "claude-opus-5"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "anthropic.claude-opus-5"
+      }
+    ],
     "retirementDate": null,
-    "predecessorId": null,
+    "predecessorId": "claude-opus-4-8",
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": 93.7,
@@ -3676,11 +3718,22 @@
     "availability": "general",
     "knowledgeCutoff": null,
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null
+      "outputTokensPerSec": 122.7,
+      "timeToFirstTokenSec": 1.34
     },
-    "license": null,
-    "apiIds": [],
+    "license": {
+      "spdx": "MIT",
+      "name": "MIT License",
+      "kind": "permissive",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "deepseek",
+        "id": "deepseek-v4-flash"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
