@@ -1807,7 +1807,7 @@
     "name": "Kimi K3",
     "company": "moonshot",
     "releaseDate": "2026-07-16",
-    "status": "superseded",
+    "status": "frontier",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 1048576,
@@ -2374,14 +2374,14 @@
     "name": "Qwen3.8 Max",
     "company": "alibaba",
     "releaseDate": "2026-07-19",
-    "status": "unknown",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 983616,
     "maxOutput": 131072,
     "pricing": {
-      "inputPerMTok": 2.00,
-      "outputPerMTok": 6.00
+      "inputPerMTok": 2,
+      "outputPerMTok": 6
     },
     "costPerTask": {
       "usd": null,
@@ -2397,7 +2397,10 @@
     },
     "license": null,
     "apiIds": [
-      { "provider": "Alibaba Cloud Model Studio", "id": "qwen3.8-max" }
+      {
+        "provider": "Alibaba Cloud Model Studio",
+        "id": "qwen3.8-max"
+      }
     ],
     "retirementDate": null,
     "predecessorId": null,
@@ -3962,7 +3965,7 @@
     "name": "Ling-2.6-1T",
     "company": "ant-group",
     "releaseDate": "2026-04-24",
-    "status": "unknown",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "text",
     "contextWindow": 262144,
