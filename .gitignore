@@ -47,3 +47,6 @@ next-env.d.ts
 # and panics with "Next.js package not found".
 .claude/worktrees/
 .superpowers/
+
+# scheduled sweep run log
+logs/
