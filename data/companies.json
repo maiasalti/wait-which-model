@@ -160,5 +160,14 @@
     "website": "https://withsyzygy.com",
     "color": "#3B9E7C",
     "order": 18
+  },
+  {
+    "id": "ant-group",
+    "name": "Ant Group (InclusionAI)",
+    "country": "China",
+    "founded": 2014,
+    "website": "https://www.antgroup.com",
+    "color": "#8A5FD9",
+    "order": 19
   }
 ]

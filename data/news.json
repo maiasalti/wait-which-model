@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-04-24-ling-2-6-1t",
+    "date": "2026-04-24",
+    "title": "Ant Group releases Ling-2.6-1T, a trillion-parameter \"fast thinking\" flagship",
+    "summary": "Ant Group's Bailing (InclusionAI) team announced Ling-2.6-1T, a ~1 trillion-parameter (63B active) MoE model that skips extended chain-of-thought for token-efficient \"fast thinking,\" reporting 72.2% on SWE-bench Verified with a 262K-token context; open weights (MIT licence) followed on Hugging Face and ModelScope on April 30.",
+    "category": "release",
+    "companies": [
+      "ant-group"
+    ],
+    "modelIds": [
+      "ling-2-6-1t"
+    ],
+    "sourceName": "InclusionAI (Hugging Face)",
+    "sourceUrl": "https://huggingface.co/inclusionAI/Ling-2.6-1T"
+  },
+  {
     "id": "2026-08-03-mach-1-additive-35b",
     "date": "2026-08-03",
     "title": "Syzygy launches Mach-1 Additive 35B, a multiplication-free compression of Qwen3.6-35B",

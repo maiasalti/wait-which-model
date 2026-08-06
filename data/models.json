@@ -3956,5 +3956,63 @@
       "No hosted API at launch — obtaining it means downloading multi-gigabyte weights or running the in-browser demo, not a quick sign-up"
     ],
     "notes": "Company and model both launched 2026-08-02/03; benchmark figures Syzygy has published are self-reported retention percentages against its teacher model (Qwen3.6-35B-A3B) across 12 evals (e.g. AIME26 99.5%, MATH-500 99.4%, IFBench 83.2% retention), not absolute scores on this site's tracked benchmarks, so all eight benchmark fields are left null. License (Apache-2.0) is inherited unmodified from the Qwen base weights (copyright notice in the repo's LICENSE file still reads Alibaba Cloud). Syzygy's own figures claim up to 120 output tokens/sec on consumer hardware; left out of the speed field since Artificial Analysis has not measured it."
+  },
+  {
+    "id": "ling-2-6-1t",
+    "name": "Ling-2.6-1T",
+    "company": "ant-group",
+    "releaseDate": "2026-04-24",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "text",
+    "contextWindow": 262144,
+    "maxOutput": 32768,
+    "pricing": {
+      "inputPerMTok": 0.3,
+      "outputPerMTok": 2.5
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "MIT",
+      "name": "MIT License",
+      "kind": "permissive",
+      "url": "https://huggingface.co/inclusionAI/Ling-2.6-1T/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 75.2,
+      "sweBench": 72.2,
+      "terminalBench": null,
+      "aime": 87.4,
+      "hle": 8.2,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Skips multi-step chain-of-thought in favor of a \"fast thinking\" mode, giving high-quality answers at roughly a quarter the token cost of comparable reasoning models",
+      "Hybrid MLA/linear-attention architecture keeps latency and VRAM use down at the full 256K context length",
+      "Open weights under a permissive licence, with drop-in compatibility for existing agent scaffolds (Claude Code, OpenCode, and others)"
+    ],
+    "weaknesses": [
+      "A non-reasoning model by design — not built for deep multi-step reasoning tasks, where its Ring-2.6 thinking sibling is the intended tool instead",
+      "Humanity's Last Exam score is low relative to its coding and agentic numbers, consistent with a model tuned for execution over broad expert knowledge",
+      "Too new for independent coverage on LMArena or Artificial Analysis' full benchmark suite at launch"
+    ],
+    "notes": "Ant Group's Bailing team announced Ling-2.6-1T on 2026-04-24 (weights open-sourced 2026-04-30 on Hugging Face/ModelScope); Maia's supplied link (ling-1t.ai/ling-2-6-1t) is not an official Ant Group/InclusionAI domain and was not used as a source. GPQA Diamond, HLE and AIME26 figures are third-party aggregator reports (aiflashreport.com, howaiworks.ai), not confirmed on an official Ant Group table or on Artificial Analysis directly — treat as secondary-sourced. Pricing is Artificial Analysis' median across API providers ($0.30/$2.50 per MTok); OpenRouter separately lists a lower $0.075/$0.625 rate, which may be promotional. Context window is 262,144 tokens via the public API; some coverage cites a 1M-token native/trained context. Total/active parameters are reported as roughly 1.03T/63B (MoE)."
   }
 ]

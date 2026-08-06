@@ -272,3 +272,17 @@ New-model-release research on 2026-08-06, scoped to `mach-1-additive-35b`. Sourc
 | mach-1-additive-35b | speed | 2026-08-06 | not covered by Artificial Analysis; Syzygy's own claim ("up to 120 tokens/sec" on consumer hardware) is vendor-reported, not an AA measurement, so left null per the required AA sourcing and quoted in notes instead |
 | mach-1-additive-35b | costPerTask | 2026-08-06 | no public API and no Artificial Analysis coverage |
 | mach-1-additive-35b | pricing | 2026-08-06 | no public API — weights-only / local inference, no per-token price exists |
+
+New-model-release research on 2026-08-06, scoped to `ling-2-6-1t`. Sources checked: huggingface.co/inclusionAI/Ling-2.6-1T (model page, raw README, raw config.json — no raw config found, benchmark table appears to be an embedded image not extractable via text fetch), github.com/inclusionAI/Ling-V2 (does not cover the 1T-scale checkpoints), arxiv.org/abs/2606.15079 (Ling and Ring 2.6 Technical Report — PDF not machine-readable via fetch tool), artificialanalysis.ai/models/ling-2-6-1t, openrouter.ai/inclusionai/ling-2.6-1t, ant-ling.com and developer.ant-ling.com/en/blogs, plus aggregator cross-checks (aiflashreport.com, howaiworks.ai, i-scoop.eu, phemex.com, ufukozen.com) and Chinese coverage (yicai.com, ithome.com, chinaz.com, sohu.com) for the announcement date.
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| ling-2-6-1t | mmluPro | 2026-08-06 | not reported in any source found (official or third-party) |
+| ling-2-6-1t | terminalBench | 2026-08-06 | aiflashreport.com reports "TerminalBench-Hard: 31.1%", a different variant from the tracked Terminal-Bench 2.1; not recorded per house style |
+| ling-2-6-1t | lmarenaElo | 2026-08-06 | no arena.ai listing found as of 2026-08-06 |
+| ling-2-6-1t | arcAgi2 | 2026-08-06 | not reported by Ant Group or on ARC Prize/tracker leaderboards |
+| ling-2-6-1t | knowledgeCutoff | 2026-08-06 | not disclosed in the HF model card, technical report abstract, or any secondary source found |
+| ling-2-6-1t | costPerTask | 2026-08-06 | Artificial Analysis' model page did not surface an Intelligence Index cost-per-task figure via available fetch; only a composite Intelligence Index score (~26, "estimated") was retrievable |
+| ling-2-6-1t | speed | 2026-08-06 | Artificial Analysis' page reported output speed as "N/A"/unmeasured at time of check |
+| ling-2-6-1t | releaseDate | 2026-08-06 | sources conflict: Chinese press (yicai.com, ithome.com, chinaz.com, sohu.com) converge on an April 24 announcement with April 30 open-source date; Artificial Analysis and aiflashreport.com both state April 23; phemex.com states April 27. Used the April 24 date (best-corroborated across independent outlets); April 30 open-source date noted separately in the model's `notes` |
+| ling-2-6-1t | predecessorId | 2026-08-06 | secondary sources name different predecessors inconsistently (phemex.com says Ling-1T; howaiworks.ai says Ling-2.5-1T/Ring-2.5-1T from 2026-02-15); no explicit primary-source replacement statement found, and neither candidate is tracked in this dataset regardless — left null |
