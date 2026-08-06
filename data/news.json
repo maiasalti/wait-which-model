@@ -1167,14 +1167,13 @@
   {
     "id": "2026-04-08-llama-5-muse-spark",
     "date": "2026-04-08",
-    "title": "Meta releases open-weights Llama 5 and closed flagship Muse Spark on the same day",
-    "summary": "Llama 5 (600B+, 5M-token context, trained on 500K+ B200s) renews Meta's open-weights push, while Muse Spark — the first closed model from Meta Superintelligence Labs — becomes its consumer flagship.",
+    "title": "Meta ships Muse Spark, its first closed flagship from Meta Superintelligence Labs",
+    "summary": "Muse Spark — a natively multimodal reasoning model with tool use, visual chain of thought and multi-agent orchestration — becomes Meta's consumer flagship, available through meta.ai and a private API preview. Corrected 2026-08-06: this entry previously also reported an open-weights \"Llama 5\" release on this date. No such model exists — Meta's linked announcement covers Muse Spark alone and never mentions Llama 5, and the claim traced to unsourced third-party articles rather than to Meta.",
     "category": "release",
     "companies": [
       "meta"
     ],
     "modelIds": [
-      "llama-5",
       "muse-spark"
     ],
     "sourceName": "Meta AI",

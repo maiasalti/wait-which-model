@@ -2060,58 +2060,6 @@
     "notes": "256k context and $0.15/$0.60 pricing per Mistral's announcement (earlier trackers listed 128k). MMLU-Pro 78.0 / GPQA 71.2 third-party-reported; LMArena Elo 1358 via BenchLM's Arena tracking."
   },
   {
-    "id": "llama-5",
-    "name": "Llama 5",
-    "company": "meta",
-    "releaseDate": "2026-04-08",
-    "status": "unknown",
-    "tier": "flagship",
-    "modality": "multimodal",
-    "contextWindow": 5000000,
-    "maxOutput": null,
-    "pricing": {
-      "inputPerMTok": null,
-      "outputPerMTok": null
-    },
-    "costPerTask": {
-      "usd": null,
-      "effort": null
-    },
-    "openWeights": true,
-    "availability": "self-host",
-    "knowledgeCutoff": null,
-    "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
-      "effort": null
-    },
-    "license": null,
-    "apiIds": [],
-    "retirementDate": null,
-    "predecessorId": null,
-    "benchmarks": {
-      "mmluPro": null,
-      "gpqaDiamond": null,
-      "sweBench": null,
-      "terminalBench": null,
-      "aime": null,
-      "hle": null,
-      "lmarenaElo": null,
-      "arcAgi2": null
-    },
-    "strengths": [
-      "Runs on your own infrastructure at frontier scale with no per-token cost",
-      "Context large enough that retrieval becomes optional for many whole corpora",
-      "Takes video and audio natively rather than through a preprocessing chain"
-    ],
-    "weaknesses": [
-      "Long-context quality degrades well before the advertised limit",
-      "Serving it needs a multi-GPU cluster, which puts it out of reach of most self-hosters",
-      "Meta published almost nothing about its behavior, so teams had to characterise it themselves"
-    ],
-    "notes": "Meta published no standard benchmark table at launch and trackers had not evaluated it as of July 2026; open weights, so no first-party API pricing."
-  },
-  {
     "id": "muse-spark",
     "name": "Muse Spark",
     "company": "meta",

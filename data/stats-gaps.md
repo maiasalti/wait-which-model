@@ -62,17 +62,6 @@ Sweep sources checked on 2026-07-04: LMArena (arena.ai) leaderboard, llm-stats.c
 | llama-4-maverick | aime | 2026-07-04 | Meta reported MATH-500, not AIME |
 | llama-4-maverick | hle | 2026-07-04 | not on HLE leaderboards |
 | llama-4-maverick | arcAgi2 | 2026-07-04 | not on ARC-AGI-2 leaderboards |
-| llama-5 | mmluPro | 2026-07-04 | Meta published no benchmark table; trackers had not evaluated it (July 2026) |
-| llama-5 | gpqaDiamond | 2026-07-04 | same — no public figure |
-| llama-5 | sweBench | 2026-07-04 | same — no public figure |
-| llama-5 | aime | 2026-07-04 | same — no public figure |
-| llama-5 | hle | 2026-07-04 | same — no public figure |
-| llama-5 | lmarenaElo | 2026-07-04 | not listed on LMArena as of July 2026 |
-| llama-5 | arcAgi2 | 2026-07-04 | not on ARC-AGI-2 leaderboards |
-| llama-5 | maxOutput | 2026-07-04 | open weights; no canonical max-output figure published |
-| llama-5 | inputPrice | 2026-07-04 | open weights; no first-party API pricing |
-| llama-5 | outputPrice | 2026-07-04 | open weights; no first-party API pricing |
-| llama-5 | knowledgeCutoff | 2026-07-04 | not disclosed by Meta |
 | muse-spark | mmluPro | 2026-07-04 | not reported (MMMU-Pro 80.5 is multimodal, a different benchmark) |
 | muse-spark | aime | 2026-07-04 | not reported by Meta or trackers |
 | muse-spark | maxOutput | 2026-07-04 | closed hosted model; not disclosed |
