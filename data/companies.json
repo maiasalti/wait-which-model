@@ -151,5 +151,14 @@
     "website": "https://motiftech.io",
     "color": "#6690E9",
     "order": 17
+  },
+  {
+    "id": "syzygy",
+    "name": "Syzygy",
+    "country": "United States",
+    "founded": 2026,
+    "website": "https://withsyzygy.com",
+    "color": "#3B9E7C",
+    "order": 18
   }
 ]

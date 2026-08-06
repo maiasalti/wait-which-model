@@ -3898,5 +3898,63 @@
       "Still trails top human performance on computer-use tasks; Anthropic continues to point to Opus 4.6 for the deepest reasoning work"
     ],
     "notes": "SWE-bench Verified 79.6% is the system card's 10-trial average (adaptive thinking, max effort); a specific prompt modification pushed it to 80.2%. Terminal-Bench 2.0 59.1% (default thinking) is not comparable to 2.1 scores elsewhere, so the terminalBench field is left null. ARC-AGI-2 60.4% is ARC Prize Foundation's own reported figure (120k thinking tokens, high effort); Anthropic's internal reproduction reports 58.3% (ARC-AGI-2 Verified). HLE 33.2% no tools / 49.0% with tools. AIME 95.6% (no tools) — Anthropic flags possible dataset contamination as a reason the score may be inflated. Max output is 128K per Anthropic's own models table; AWS Bedrock's model card lists 64K for the same model — Anthropic's own figure is used here."
+  },
+  {
+    "id": "mach-1-additive-35b",
+    "name": "Mach-1 Additive 35B",
+    "company": "syzygy",
+    "releaseDate": "2026-08-03",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "contextWindow": 262144,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "self-host",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/SyzygyResearch/Mach-1-Additive-35B/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Runs entirely offline on a single 16GB+ Apple Silicon Mac, or streamed straight into a browser tab via WebGPU — no account, API key, or cloud dependency",
+      "Compresses to roughly a tenth the footprint of its teacher through an additive, multiplication-free inference scheme at 1.7 bits per weight",
+      "Reached that compression with under 15 GPU-hours of retraining, far less than comparable extreme-quantization approaches"
+    ],
+    "weaknesses": [
+      "Debut release from a three-person team with no coverage yet on LMArena, Artificial Analysis, or any independent benchmark leaderboard — real-world behavior outside the vendor's own figures is unverified",
+      "Instruction-following degraded more than reasoning or math under compression in the vendor's own retention testing, the softest spot in an otherwise strong profile",
+      "No hosted API at launch — obtaining it means downloading multi-gigabyte weights or running the in-browser demo, not a quick sign-up"
+    ],
+    "notes": "Company and model both launched 2026-08-02/03; benchmark figures Syzygy has published are self-reported retention percentages against its teacher model (Qwen3.6-35B-A3B) across 12 evals (e.g. AIME26 99.5%, MATH-500 99.4%, IFBench 83.2% retention), not absolute scores on this site's tracked benchmarks, so all eight benchmark fields are left null. License (Apache-2.0) is inherited unmodified from the Qwen base weights (copyright notice in the repo's LICENSE file still reads Alibaba Cloud). Syzygy's own figures claim up to 120 output tokens/sec on consumer hardware; left out of the speed field since Artificial Analysis has not measured it."
   }
 ]

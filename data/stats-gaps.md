@@ -254,3 +254,21 @@ New-model-release research on 2026-08-05, scoped to `claude-sonnet-4-6`. Sources
 |---|---|---|---|
 | claude-sonnet-4-6 | mmluPro | 2026-08-05 | not reported — the system card's capability table reports MMMLU (89.3%) and MMMU-Pro (multimodal), neither of which is MMLU-Pro; not found on any MMLU-Pro leaderboard |
 | claude-sonnet-4-6 | terminalBench | 2026-08-05 | system card reports Terminal-Bench **2.0** only (59.1%, default thinking); per house style 2.0 scores aren't comparable to the tracked 2.1 metric, so left null and the 2.0 figure recorded in notes instead |
+
+New-model-release research on 2026-08-06, scoped to `mach-1-additive-35b`. Sources checked: withsyzygy.com/mach-1, withsyzygy.com/about, X/@syzygyeng announcement post, Hugging Face org and model page (SyzygyResearch/Mach-1-Additive-35B, incl. raw README/config.json/LICENSE), Hugging Face API metadata, GitHub org SyzygyResearch, search for Artificial Analysis/OpenRouter/LMArena coverage.
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| mach-1-additive-35b | mmluPro | 2026-08-06 | Syzygy publishes only retention % vs its teacher (Qwen3.6-35B-A3B) across 12 evals (MMLU-Redux, not MMLU-Pro, among them); no absolute score on any tracked benchmark |
+| mach-1-additive-35b | gpqaDiamond | 2026-08-06 | not evaluated/published anywhere found |
+| mach-1-additive-35b | sweBench | 2026-08-06 | not evaluated/published; closest reported evals are BFCL-v3 and τ²-bench, both as retention % |
+| mach-1-additive-35b | terminalBench | 2026-08-06 | not evaluated/published |
+| mach-1-additive-35b | aime | 2026-08-06 | only AIME25/AIME26 *retention* percentages (99.1%/99.5%) vs teacher published, not an absolute score |
+| mach-1-additive-35b | hle | 2026-08-06 | not evaluated/published |
+| mach-1-additive-35b | lmarenaElo | 2026-08-06 | no LMArena listing found; too new (released 2026-08-03) |
+| mach-1-additive-35b | arcAgi2 | 2026-08-06 | not evaluated/published |
+| mach-1-additive-35b | maxOutput | 2026-08-06 | not disclosed in model card, config.json, or landing page |
+| mach-1-additive-35b | knowledgeCutoff | 2026-08-06 | not disclosed by Syzygy; teacher model's cutoff not confirmed either |
+| mach-1-additive-35b | speed | 2026-08-06 | not covered by Artificial Analysis; Syzygy's own claim ("up to 120 tokens/sec" on consumer hardware) is vendor-reported, not an AA measurement, so left null per the required AA sourcing and quoted in notes instead |
+| mach-1-additive-35b | costPerTask | 2026-08-06 | no public API and no Artificial Analysis coverage |
+| mach-1-additive-35b | pricing | 2026-08-06 | no public API — weights-only / local inference, no per-token price exists |

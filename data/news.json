@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-08-03-mach-1-additive-35b",
+    "date": "2026-08-03",
+    "title": "Syzygy launches Mach-1 Additive 35B, a multiplication-free compression of Qwen3.6-35B",
+    "summary": "New startup Syzygy introduced Mach-1 Additive 35B, an open-weight (Apache-2.0) model that compresses Qwen3.6-35B-A3B to 1.7 bits per weight using a multiplication-free \"additive\" inference scheme, retaining a self-reported 95% mean capability across 12 benchmarks at roughly a tenth of the footprint (about 7GB), runnable locally on a 16GB+ Mac or in-browser via WebGPU.",
+    "category": "release",
+    "companies": [
+      "syzygy"
+    ],
+    "modelIds": [
+      "mach-1-additive-35b"
+    ],
+    "sourceName": "Syzygy",
+    "sourceUrl": "https://x.com/syzygyeng/status/2084350792841195992"
+  },
+  {
     "id": "2026-02-17-claude-sonnet-4-6",
     "date": "2026-02-17",
     "title": "Anthropic releases Claude Sonnet 4.6 with a 1M-token context window",
