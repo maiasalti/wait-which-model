@@ -39,7 +39,7 @@ export function FilterRail({
   return (
     <aside className="flex flex-col gap-5 lg:w-64 lg:shrink-0">
       <section>
-        <h3 className="mono text-[10px] uppercase tracking-widest text-ink-3">
+        <h3 className="mono text-xs font-semibold uppercase tracking-widest text-ink">
           Released within
         </h3>
         <div className="mt-2 flex flex-wrap gap-1" role="group" aria-label="Release window">
@@ -61,7 +61,7 @@ export function FilterRail({
       </section>
 
       <section>
-        <h3 className="mono text-[10px] uppercase tracking-widest text-ink-3">
+        <h3 className="mono text-xs font-semibold uppercase tracking-widest text-ink">
           Companies
         </h3>
         <div className="mt-2 flex flex-wrap gap-1" role="group" aria-label="Company filter">
@@ -96,7 +96,7 @@ export function FilterRail({
       </section>
 
       <section className="flex flex-col gap-2">
-        <h3 className="mono text-[10px] uppercase tracking-widest text-ink-3">
+        <h3 className="mono text-xs font-semibold uppercase tracking-widest text-ink">
           Scope
         </h3>
         <label className="flex items-center gap-2 text-sm text-ink-2">
@@ -122,7 +122,7 @@ export function FilterRail({
       </section>
 
       <section>
-        <h3 className="mono text-[10px] uppercase tracking-widest text-ink-3">
+        <h3 className="mono text-xs font-semibold uppercase tracking-widest text-ink">
           Benchmark
         </h3>
         <select
@@ -142,7 +142,7 @@ export function FilterRail({
       </section>
 
       <section className="flex flex-col gap-2">
-        <h3 className="mono text-[10px] uppercase tracking-widest text-ink-3">
+        <h3 className="mono text-xs font-semibold uppercase tracking-widest text-ink">
           Thresholds
         </h3>
         <label className="flex items-center justify-between gap-2 text-sm text-ink-2">
@@ -179,7 +179,7 @@ export function FilterRail({
       </section>
 
       <section>
-        <h3 className="mono text-[10px] uppercase tracking-widest text-ink-3">
+        <h3 className="mono text-xs font-semibold uppercase tracking-widest text-ink">
           Highlight
         </h3>
         <select

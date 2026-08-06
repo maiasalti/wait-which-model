@@ -108,7 +108,7 @@ export default function CompareClient() {
           />
 
           <section>
-            <h3 className="mono text-[10px] uppercase tracking-widest text-ink-3">
+            <h3 className="mono text-xs font-semibold uppercase tracking-widest text-ink">
               Head-to-head picks ({picked.length}/{MAX_PICKS})
             </h3>
             <div className="mt-2 mb-4 flex flex-wrap gap-1.5">

@@ -72,7 +72,7 @@ export default function CostCalculatorPage() {
       </p>
 
       <div className="mt-8 max-w-2xl rounded border border-line p-4">
-        <p className="mono text-[10px] uppercase tracking-wider text-ink-3">
+        <p className="mono text-xs font-semibold uppercase tracking-wider text-ink">
           How much will you use it?
         </p>
 
@@ -143,7 +143,7 @@ export default function CostCalculatorPage() {
 
       <div className="mt-8 max-w-2xl">
         <div className="flex flex-wrap items-baseline justify-between gap-2">
-          <h2 className="mono text-[10px] uppercase tracking-widest text-ink-3">
+          <h2 className="mono text-xs font-semibold uppercase tracking-widest text-ink">
             {pick ? "Cheaper than your pick" : "Monthly cost"}
           </h2>
           <select

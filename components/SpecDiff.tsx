@@ -105,7 +105,7 @@ export function SpecDiff({
         const notComparable = !isBaseline && !ok && f.effortSensitive && bv != null && mv != null;
         let text = f.display(m);
         if (effort) text += ` (${effort})`;
-        if (notComparable) text += " ⚠ not comparable";
+        if (notComparable) text += " — different effort, not comparable";
         return {
           text,
           tone: isBaseline
@@ -146,7 +146,7 @@ export function SpecDiff({
 
   return (
     <section>
-      <h3 className="mono text-[10px] uppercase tracking-widest text-ink-3">
+      <h3 className="mono text-xs font-semibold uppercase tracking-widest text-ink">
         Spec comparison
       </h3>
       <p className="mt-1 text-xs text-ink-3">
@@ -155,7 +155,7 @@ export function SpecDiff({
       </p>
 
       <div className="mt-3">
-        <p className="mono text-[10px] uppercase tracking-wider text-ink-3">Baseline</p>
+        <p className="mono text-xs font-semibold uppercase tracking-wider text-ink">Baseline</p>
         <div className="mt-1.5 flex flex-wrap gap-1.5">
           {selectable.map((m) => (
             <button
@@ -179,7 +179,7 @@ export function SpecDiff({
       </div>
 
       <div className="mt-3">
-        <p className="mono text-[10px] uppercase tracking-wider text-ink-3">
+        <p className="mono text-xs font-semibold uppercase tracking-wider text-ink">
           Compare against ({others.length}/{MAX_OTHERS})
         </p>
         <div className="mt-1.5 flex flex-wrap gap-1.5">
@@ -297,14 +297,13 @@ export function SpecDiff({
                               ({f.effortOf ? f.effortOf(m) : m.speed.effort})
                             </span>
                           )}
+                        {/* Spelled out, not a ⚠ glyph. These rows stay
+                            uncoloured on purpose, and an uncoloured row with a
+                            tiny symbol reads as broken rather than as a
+                            deliberate refusal to compare. */}
                         {!isBaseline && !ok && f.effortSensitive && bv != null && mv != null && (
-                          <span
-                            role="img"
-                            aria-label="Measured at a different reasoning effort — not comparable"
-                            className="ml-1 text-[10px] text-ink-3"
-                            title="Measured at a different reasoning effort — not comparable"
-                          >
-                            ⚠
+                          <span className="mt-0.5 block text-[10px] leading-tight text-amber-400/70">
+                            different effort — not comparable
                           </span>
                         )}
                       </td>
@@ -329,6 +328,9 @@ export function SpecDiff({
               <span className="text-sky-400">blue</span> baseline beat them all
             </span>
             <span>better, not bigger — a cheaper or faster figure is green</span>
+            <span className="text-amber-400/70">
+              uncoloured + noted = measured at different efforts, not comparable
+            </span>
           </p>
 
           <div className="mt-3 flex gap-2">
