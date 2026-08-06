@@ -2380,8 +2380,8 @@
     "contextWindow": 983616,
     "maxOutput": 131072,
     "pricing": {
-      "inputPerMTok": null,
-      "outputPerMTok": null
+      "inputPerMTok": 2.00,
+      "outputPerMTok": 6.00
     },
     "costPerTask": {
       "usd": null,
@@ -2396,17 +2396,19 @@
       "effort": null
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      { "provider": "Alibaba Cloud Model Studio", "id": "qwen3.8-max" }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
-      "gpqaDiamond": null,
+      "gpqaDiamond": 92.7,
       "sweBench": null,
-      "terminalBench": null,
+      "terminalBench": 81.3,
       "aime": null,
-      "hle": null,
-      "lmarenaElo": null,
+      "hle": 41.4,
+      "lmarenaElo": 1496,
       "arcAgi2": null
     },
     "strengths": [
@@ -2418,7 +2420,7 @@
       "No model card or active-parameter count published, so its real speed and cost profile are unknown",
       "Reachable only through subscription plans rather than a per-token endpoint"
     ],
-    "notes": "Announced 2026-07-19 at WAIC Shanghai as a preview only, two days after Moonshot's Kimi K3 open-weight launch. Alibaba's own claim that it is \"second only to Claude Fable 5\" is unsubstantiated — no independent or third-party benchmark numbers exist as of this writing. Context window (983,616) and max output (131,072) come from Qwen Cloud API integration metadata, not an official spec sheet; some coverage rounds this to \"1M tokens.\""
+    "notes": "Announced 2026-07-19 at WAIC Shanghai as a preview, then given a general-availability launch with standard API pricing on 2026-08-03 (Alibaba Cloud Model Studio blog: \"Qwen3.8-Max: A New Bar for Coding and Cowork\"). Alibaba's own release benchmark table (self-reported, published as an image and not independently re-derivable) claims GPQA Diamond 92.6, Terminal-Bench 2.1 86.6, HLE 43.6, and SWE-bench Pro 67.7 (not the SWE-bench Verified variant this site tracks, so left unset here) — relayed via MarkTechPost and OfficeChai coverage of the announcement. Artificial Analysis's own independent evaluation (artificialanalysis.ai/models/qwen3-8-max and its per-benchmark leaderboards) measured GPQA Diamond 92.7 (close to Alibaba's claim) but Terminal-Bench v2.1 81.3 and HLE 41.4 — both notably below Alibaba's self-reported figures — so the AA-measured numbers are recorded here as the more independently verifiable source, with the discrepancy noted. Pricing ($2.00/$6.00 per 1M input/output tokens) is Alibaba Cloud Model Studio's Singapore/international rate; the China Beijing, Frankfurt, Virginia, Tokyo and Hong Kong regions price lower at $1.65/$4.951. Open weights, promised \"next week\" as of the Aug 3 announcement, had not appeared on Hugging Face as of this update. Context window (983,616) and max output (131,072) match Alibaba Cloud Model Studio's official model-info page (context 1,000,000, max input 991,808 with 1,000,000 minus max-output overhead, max output 131,072); some coverage rounds context down to \"1M tokens.\""
   },
   {
     "id": "qwen3-7-max",

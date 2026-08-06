@@ -181,16 +181,16 @@ Stats-filler sweep on 2026-07-27. Sources checked: arena.ai text leaderboard, Ar
 | gemini-3-5-flash-lite | sweBench | 2026-07-29 | Google reports SWE-Bench Pro 54.2%; no SWE-bench Verified figure |
 | gemini-3-5-flash-lite | aime | 2026-07-29 | not reported at launch; not on any tracker |
 | gemini-3-5-flash-lite | arcAgi2 | 2026-07-29 | not on ARC-AGI-2 leaderboards |
-| qwen3-8-max | mmluPro | 2026-07-27 | preview announcement with no technical report, model card or AA entry; every number circulating "for" Qwen3.8 traces back to Qwen3.7-Max |
-| qwen3-8-max | gpqaDiamond | 2026-07-27 | same — no published benchmark of any kind |
-| qwen3-8-max | sweBench | 2026-07-27 | same — no published benchmark of any kind |
-| qwen3-8-max | aime | 2026-07-27 | same — no published benchmark of any kind |
-| qwen3-8-max | hle | 2026-07-27 | same — no published benchmark of any kind |
-| qwen3-8-max | arcAgi2 | 2026-07-27 | not on ARC-AGI-2 leaderboards |
-| qwen3-8-max | lmarenaElo | 2026-07-27 | not present on arena.ai's text leaderboard (only qwen3.7-max-preview and older Qwen entries) |
-| qwen3-8-max | inputPrice | 2026-07-27 | no standard per-token price — preview is credit/subscription access only (Token Plan, Qoder). Reseller AIHubMix lists a $0.17/1M "launch offer" at 10% of an undisclosed standard rate, so no stable list price exists |
-| qwen3-8-max | outputPrice | 2026-07-27 | same — AIHubMix's $0.51/1M is the same promotional 10%-of-standard launch offer |
-| qwen3-8-max | knowledgeCutoff | 2026-07-27 | not disclosed by Alibaba |
+| qwen3-8-max | mmluPro | 2026-08-06 | re-checked after 2026-08-03 GA launch. Not in Alibaba's own benchmark table (Aug 3 announcement) or on Artificial Analysis's mmlu-pro evaluation leaderboard (AA's Intelligence Index v4.1 no longer includes MMLU-Pro as a component) |
+| qwen3-8-max | sweBench | 2026-08-06 | Alibaba's own table reports SWE-bench Pro 67.7, not SWE-bench Verified (different benchmark, not the variant this field tracks); AA has no dedicated SWE-bench Verified leaderboard entry for this model either (dropped from Intelligence Index v4.1) |
+| qwen3-8-max | aime | 2026-08-06 | not in Alibaba's official benchmark table; absent from Artificial Analysis's aime-2025 evaluation leaderboard (not part of Intelligence Index v4.1) |
+| qwen3-8-max | arcAgi2 | 2026-08-06 | not in Alibaba's official benchmark table; not on ARC Prize's arcprize.org/leaderboard as of 2026-08-06 |
+| qwen3-8-max | costPerTask.usd | 2026-08-06 | Artificial Analysis's structured data does report a per-task figure (costPerIntelligenceIndexTask ≈ $3.26) but lists Qwen3.8 Max as a single, undifferentiated configuration with no disclosed reasoning-effort label (unlike sibling comparisons such as "GPT-5.6 Sol (high/xhigh/max)"); left unset per this run's mandatory usd/effort pairing rather than guess an effort tier |
+| qwen3-8-max | costPerTask.effort | 2026-08-06 | same — no effort tier disclosed by Artificial Analysis for this model |
+| qwen3-8-max | speed.outputTokensPerSec | 2026-08-06 | Artificial Analysis reports outputSpeed ≈ 61.8 t/s but, as above, discloses no effort tier for this model; left unset per the mandatory speed/effort pairing |
+| qwen3-8-max | speed.timeToFirstTokenSec | 2026-08-06 | same — AA reports TTFT ≈ 2.56s but with no disclosed effort tier |
+| qwen3-8-max | speed.effort | 2026-08-06 | same — no effort tier disclosed by Artificial Analysis for this model |
+| qwen3-8-max | knowledgeCutoff | 2026-08-06 | re-checked after GA launch; not disclosed on Alibaba's Aug 3 announcement, Alibaba Cloud Model Studio's model-info page, or Artificial Analysis's model page |
 | muse-spark-1-1 | mmluPro | 2026-07-27 | Meta's Muse Spark 1.1 Evaluation Report is a safety/preparedness document with no MMLU/GPQA/AIME/ARC table; not on MMLU-Pro leaderboards |
 | muse-spark-1-1 | sweBench | 2026-07-27 | Meta reports SWE-Bench Pro 61.5% and "24 of 42 SWE-Bench Verified Hard tasks resolved at least once" — neither is a SWE-bench Verified score |
 | muse-spark-1-1 | aime | 2026-07-27 | not in Meta's evaluation report or on trackers |
