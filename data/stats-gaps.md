@@ -332,3 +332,23 @@ New-model-release research on 2026-08-06, scoped to `ling-2-6-1t`. Sources check
 | ling-2-6-1t | speed | 2026-08-06 | Artificial Analysis' page reported output speed as "N/A"/unmeasured at time of check |
 | ling-2-6-1t | releaseDate | 2026-08-06 | sources conflict: Chinese press (yicai.com, ithome.com, chinaz.com, sohu.com) converge on an April 24 announcement with April 30 open-source date; Artificial Analysis and aiflashreport.com both state April 23; phemex.com states April 27. Used the April 24 date (best-corroborated across independent outlets); April 30 open-source date noted separately in the model's `notes` |
 | ling-2-6-1t | predecessorId | 2026-08-06 | secondary sources name different predecessors inconsistently (phemex.com says Ling-1T; howaiworks.ai says Ling-2.5-1T/Ring-2.5-1T from 2026-02-15); no explicit primary-source replacement statement found, and neither candidate is tracked in this dataset regardless — left null |
+
+New-model-release research on 2026-08-07, scoped to `ernie-5-0` and `ernie-5-1` (Baidu, new company). Sources checked: ernie.baidu.com/blog (5.0 launch post, 5.1 release post, LMArena-update posts for both preview builds), arxiv.org/abs/2602.04705 (ERNIE 5.0 Technical Report), arena.ai/leaderboard/text (official LMArena leaderboard), artificialanalysis.ai (searched, no ERNIE 5.0/5.1 model page found — only "ERNIE 5.0 Thinking Preview", a different variant), llmreference.com, apidog.com API guides, aigazine.com and felloai.com hands-on coverage, VentureBeat, the-decoder.com.
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| ernie-5-0 | sweBench | 2026-08-07 | not reported in the Technical Report (which covers LiveCodeBench/HumanEval+ instead) or any independent leaderboard found |
+| ernie-5-0 | terminalBench | 2026-08-07 | not reported anywhere found |
+| ernie-5-0 | arcAgi2 | 2026-08-07 | not on ARC Prize's official leaderboard or any tracker checked |
+| ernie-5-0 | knowledgeCutoff | 2026-08-07 | not disclosed by Baidu in the model card, technical report, or any secondary source |
+| ernie-5-0 | costPerTask | 2026-08-07 | Artificial Analysis has not indexed ERNIE 5.0 (only a separate "ERNIE 5.0 Thinking Preview" variant with $0 pricing shown, evidently a free-preview listing, not usable as this model's cost) |
+| ernie-5-0 | speed | 2026-08-07 | same — no AA measurement for this specific checkpoint |
+| ernie-5-1 | mmluPro | 2026-08-07 | Baidu's own release post says only "approaches leading closed-source models," no exact figure given; a third-party aggregator figure (85.6) could not be corroborated against a primary source, so left null rather than used |
+| ernie-5-1 | gpqaDiamond | 2026-08-07 | same as mmluPro — no exact official figure; an uncorroborated third-party figure (82.1) not used |
+| ernie-5-1 | sweBench | 2026-08-07 | not reported by Baidu or found on any independent leaderboard |
+| ernie-5-1 | terminalBench | 2026-08-07 | not reported anywhere found |
+| ernie-5-1 | hle | 2026-08-07 | not reported anywhere found |
+| ernie-5-1 | arcAgi2 | 2026-08-07 | not on ARC Prize's official leaderboard or any tracker checked |
+| ernie-5-1 | knowledgeCutoff | 2026-08-07 | not disclosed by Baidu anywhere found |
+| ernie-5-1 | costPerTask | 2026-08-07 | Artificial Analysis has not indexed ERNIE 5.1 as of this check |
+| ernie-5-1 | speed | 2026-08-07 | same — no AA measurement found |

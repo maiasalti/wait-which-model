@@ -1,5 +1,35 @@
 [
   {
+    "id": "2026-05-08-ernie-5-1",
+    "date": "2026-05-08",
+    "title": "Baidu releases ERNIE 5.1, claiming the top Chinese-model spot on LMArena at 6% of typical training cost",
+    "summary": "Baidu's ERNIE 5.1 is a text-only model distilled from ERNIE 5.0's sub-model matrix to roughly a third of its total parameters, reaching #1 among Chinese models (#4 globally) on LMArena's Search leaderboard and reporting 99.6% AIME 2026 accuracy with tools enabled.",
+    "category": "release",
+    "companies": [
+      "baidu"
+    ],
+    "modelIds": [
+      "ernie-5-1"
+    ],
+    "sourceName": "ERNIE Blog",
+    "sourceUrl": "https://ernie.baidu.com/blog/posts/ernie-5.1-0508-release/"
+  },
+  {
+    "id": "2026-01-22-ernie-5-0",
+    "date": "2026-01-22",
+    "title": "Baidu launches ERNIE 5.0, a 2.4-trillion-parameter native omni-modal model",
+    "summary": "Baidu officially launched ERNIE 5.0 at the Ernie Moment Conference 2026 in Shanghai, a unified text/image/audio/video model that became the first Chinese model to reach the LMArena Text leaderboard's global top 10, as monthly active users of Baidu's ERNIE assistant passed 200 million.",
+    "category": "release",
+    "companies": [
+      "baidu"
+    ],
+    "modelIds": [
+      "ernie-5-0"
+    ],
+    "sourceName": "ERNIE Blog",
+    "sourceUrl": "https://ernie.baidu.com/blog/posts/ernie5.0/"
+  },
+  {
     "id": "2026-06-23-seed-2-1-pro",
     "date": "2026-06-23",
     "title": "ByteDance launches Doubao Seed 2.1, pitched as an agent that closes out real tasks",

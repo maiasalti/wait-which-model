@@ -187,5 +187,14 @@
     "website": "https://seed.bytedance.com",
     "color": "#3C8CFF",
     "order": 21
+  },
+  {
+    "id": "baidu",
+    "name": "Baidu (ERNIE)",
+    "country": "China",
+    "founded": 2000,
+    "website": "https://ernie.baidu.com",
+    "color": "#7849E2",
+    "order": 22
   }
 ]
