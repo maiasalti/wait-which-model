@@ -4409,5 +4409,114 @@
       "Developers flagged tool-call loops and rough edges in agentic workflows at launch, echoing ERNIE 5.0's production reliability complaints"
     ],
     "notes": "Officially released 2026-05-08 (ernie.baidu.com/blog/posts/ernie-5.1-0508-release), with wider rollout at the Create 2026 developer conference May 13-14. AIME26-with-tools figure (99.6%) and the Arena Search leaderboard rank/score (4th globally, 1,223, #1 Chinese model) are Baidu's own self-reported figures — MMLU-Pro and GPQA Diamond claims ('approaches leading closed-source models') were not given as exact numbers in Baidu's release post, so left null rather than lifted from third-party trackers whose figures (e.g. one aggregator's MMLU-Pro 85.6/GPQA 82.1) could not be corroborated against an official source. lmarenaElo 1467 is the official arena.ai Text leaderboard score (independent measurement), ranked immediately above ERNIE-5.0-preview-1203 (1449) as the highest-scoring ERNIE model tracked there. SWE-bench, Terminal-Bench, HLE and ARC-AGI-2 were not reported by Baidu or found on any independent leaderboard/tracker. Third-party coverage frequently calls 5.1 a 'successor' to 5.0, but Baidu's own material positions ERNIE 5.0 as the continuing omni-modal flagship and 5.1 as a separate text specialist extracted from its sub-model matrix, not a stated replacement — predecessorId left null. Baidu discloses no knowledge-cutoff date. Closed weights; no license record."
+  },
+  {
+    "id": "nova-premier",
+    "name": "Nova Premier",
+    "company": "amazon",
+    "releaseDate": "2025-04-30",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 1000000,
+    "maxOutput": 25000,
+    "pricing": {
+      "inputPerMTok": 2.5,
+      "outputPerMTok": 12.5
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2024-10",
+    "speed": {
+      "outputTokensPerSec": 32.5,
+      "timeToFirstTokenSec": 2.85,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "aws-bedrock",
+        "id": "amazon.nova-premier-v1:0"
+      }
+    ],
+    "retirementDate": "2026-09-14",
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": 73.3,
+      "gpqaDiamond": 56.9,
+      "sweBench": 42.4,
+      "terminalBench": null,
+      "aime": 17.3,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Designed as a teacher model for Bedrock Model Distillation, so its main value for many customers is training cheaper Nova Lite/Micro students rather than being called directly",
+      "Strong at knowledge retrieval and visual understanding (SimpleQA, MMMU) and processes a genuinely usable 1M-token window across text, image and video in one request",
+      "Built-in Bedrock Guardrails and content moderation out of the box, which enterprise adopters flagged as a real time-saver over stitching in a third-party safety layer"
+    ],
+    "weaknesses": [
+      "Not a reasoning model — can't fact-check or deliberate step-by-step, so it falls behind reasoning-enabled peers on math and multi-step problems",
+      "Trails Gemini 2.5 Pro on SWE-bench Verified and lags on GPQA Diamond/AIME despite the 'most capable Nova' positioning at launch",
+      "One of the slower non-reasoning models Artificial Analysis measured at launch (32.5 output tok/s, TTFT 2.85s), both below the median for its class"
+    ],
+    "notes": "AWS's original launch announcement and TechCrunch coverage both date general availability to 2025-04-30; the official Bedrock model-card page lists 'Model launch date: Oct 31, 2025' instead, which may reflect a later model-card/reasoning update under the same amazon.nova-premier-v1:0 id (the card also lists 'Reasoning: Supported', at odds with contemporaneous reviews calling launch-day Premier a non-reasoning model) — used the earlier, better-corroborated April date as releaseDate and flagged the discrepancy here rather than guess which it refers to. Benchmark figures (MMLU-Pro 73.3, GPQA-Diamond 56.9, AIME 2025 17.3, SWE-Bench Verified 42.4) are Amazon's own numbers, republished as the 'Nova 1 Premier' comparison row in the later Nova 2 technical report (assets.amazon.science, Table in section 2.1/2.4). Terminal-Bench figure in the same table (11.3%) is version 1.0, not the tracked 2.1 metric, so left null per house style. HLE, ARC-AGI-2 and lmarenaElo were not found on any official or independent leaderboard. Speed and pricing are Artificial Analysis' measurements (artificialanalysis.ai/models/nova-premier); AWS's own pricing page does not publish per-token figures directly, only routing to Bedrock's console pricing. retirementDate (2026-09-14) and knowledgeCutoff (Oct 2024) are from the official Bedrock model-card page, which also lists the model's lifecycle as 'Legacy'. Closed weights; no license record."
+  },
+  {
+    "id": "nova-2-pro",
+    "name": "Nova 2 Pro",
+    "company": "amazon",
+    "releaseDate": "2025-12-02",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 1000000,
+    "maxOutput": 65536,
+    "pricing": {
+      "inputPerMTok": 1.25,
+      "outputPerMTok": 10
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "restricted",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": 119.1,
+      "timeToFirstTokenSec": 13.2,
+      "effort": "medium"
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": 81.6,
+      "gpqaDiamond": 81.4,
+      "sweBench": 61.5,
+      "terminalBench": null,
+      "aime": 92.3,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Native web grounding and a built-in code interpreter mean it can pull live information and validate its own output without external tool wiring",
+      "Configurable extended-thinking depth (low/medium/high) lets one model span quick replies and systematic multi-step reasoning rather than shipping separate fast/deep variants",
+      "Strong multi-document and video reasoning — Amazon's own comparison table shows it equal-or-better on 15 of 19 benchmarks against Gemini 2.5 Pro"
+    ],
+    "weaknesses": [
+      "Still preview-only eight months after announcement — early access is limited to Amazon Nova Forge customers, with no general Bedrock console/API listing or official model-card page as of this check",
+      "Trails GPT-5.1 on roughly half its benchmark comparisons (8 of 16) despite leading Gemini 2.5 Pro on most of the same set",
+      "SWE-bench Verified score depends heavily on scaffolding — 61.5% unassisted vs. 70.0% with Amazon's own inference-time scaling and agentic scaffolding, an 8.5-point gap that makes head-to-head reads of the headline number unreliable without knowing the setup"
+    ],
+    "notes": "Announced 2025-12-02 at AWS re:Invent alongside Nova 2 Lite, Nova 2 Sonic and Nova 2 Omni. Benchmark figures (MMLU-Pro 81.6, GPQA-Diamond 81.4, AIME 2025 92.3, SWE-Bench Verified 61.5/70.0) are Amazon's own, from the official Nova 2 Family technical report (assets.amazon.science/.../nova-2-0-technical-report2.pdf, Tables 1 and 4); the 70.0% SWE-bench figure uses 'inference time scaling and internal Agentic scaffolding' per the report's own footnote, so the unassisted 61.5% is used as the tracked value with the scaffolded figure noted here rather than in the field. Terminal-Bench in the same report (41.3%) is version 1.0, not the tracked 2.1 metric, so left null. HLE, ARC-AGI-2 and lmarenaElo were not found on any official report or independent leaderboard. Context window (1M) and max output (65,536) are from AWS's official Nova 2 user guide ('all models support up to 1 million tokens of context... generate up to 65,536 tokens'); Artificial Analysis separately lists a narrower 256K context window and $1.25/$10.00 pricing for its tracked preview build, which is the source used for pricing and speed here since AWS's own Bedrock pricing page and model-card system (which returns 404 for Nova 2 Pro specifically, unlike Nova 2 Lite/Premier) have not yet published either for this model — flagging the context-window conflict rather than picking one. availability is 'restricted': as of this check Nova 2 Pro has no Bedrock model-card page and remains preview/early-access-only for Nova Forge customers, absent from the official Nova 2 model list that does cover Lite, Sonic and Multimodal Embeddings. No official per-provider apiIds string exists yet, so left []. predecessorId left null: the Nova 2 technical report calls Nova Premier 'our former flagship' while comparing it to Nova 2 Lite specifically, not Pro, so it doesn't rise to an explicit statement that Nova 2 Pro replaces Nova Premier — logged to spec-gaps.md. Closed weights; no license record; no published knowledge cutoff."
   }
 ]

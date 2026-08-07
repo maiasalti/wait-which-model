@@ -196,5 +196,14 @@
     "website": "https://ernie.baidu.com",
     "color": "#7849E2",
     "order": 22
+  },
+  {
+    "id": "amazon",
+    "name": "Amazon (Nova)",
+    "country": "United States",
+    "founded": 1994,
+    "website": "https://aws.amazon.com/ai/generative-ai/nova/",
+    "color": "#C86A00",
+    "order": 23
   }
 ]

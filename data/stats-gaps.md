@@ -352,3 +352,19 @@ New-model-release research on 2026-08-07, scoped to `ernie-5-0` and `ernie-5-1` 
 | ernie-5-1 | knowledgeCutoff | 2026-08-07 | not disclosed by Baidu anywhere found |
 | ernie-5-1 | costPerTask | 2026-08-07 | Artificial Analysis has not indexed ERNIE 5.1 as of this check |
 | ernie-5-1 | speed | 2026-08-07 | same — no AA measurement found |
+
+New-model-release research on 2026-08-07, scoped to `nova-premier` and `nova-2-pro` (Amazon, new company). Sources checked: aws.amazon.com/blogs/aws (Nova Premier launch post), docs.aws.amazon.com/bedrock/latest/userguide (Nova Premier and Nova 2 Lite model-card pages — Nova 2 Pro's returns 404), docs.aws.amazon.com/nova/latest/nova2-userguide (What is Nova 2 / What's new in Nova 2), assets.amazon.science/.../nova-2-0-technical-report2.pdf (official Nova 2 Family Technical Report, PDF, rendered via pdftotext), artificialanalysis.ai/models/nova-premier and /nova-2-0-pro and /nova-2-0-pro-reasoning-medium, TechCrunch, aboutamazon.com re:Invent announcement.
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| nova-premier | terminalBench | 2026-08-07 | only a Terminal-Bench **1.0** figure (11.3%) found in the official technical report, not the tracked 2.1 metric; recorded in notes instead |
+| nova-premier | hle | 2026-08-07 | not reported by Amazon or found on any independent leaderboard |
+| nova-premier | arcAgi2 | 2026-08-07 | not reported by Amazon or found on any independent leaderboard |
+| nova-premier | lmarenaElo | 2026-08-07 | Nova Premier is not listed on arena.ai's Text leaderboard |
+| nova-premier | costPerTask | 2026-08-07 | Artificial Analysis' Nova Premier page shows only a composite Intelligence Index score (13), not a per-task USD figure |
+| nova-2-pro | terminalBench | 2026-08-07 | only a Terminal-Bench **1.0** figure (41.3%) found in the official technical report, not the tracked 2.1 metric; recorded in notes instead |
+| nova-2-pro | hle | 2026-08-07 | not reported by Amazon or found on any independent leaderboard |
+| nova-2-pro | arcAgi2 | 2026-08-07 | not reported by Amazon or found on any independent leaderboard |
+| nova-2-pro | lmarenaElo | 2026-08-07 | not listed on arena.ai's Text leaderboard as of this check |
+| nova-2-pro | costPerTask | 2026-08-07 | neither the non-reasoning nor medium-reasoning Artificial Analysis pages for Nova 2.0 Pro Preview publish a per-task USD figure |
+| nova-2-pro | knowledgeCutoff | 2026-08-07 | not disclosed by Amazon anywhere found (Nova 2 Lite's cutoff, Oct 2025, is published, but Pro's specifically is not) |

@@ -1,5 +1,35 @@
 [
   {
+    "id": "2025-12-02-nova-2-pro",
+    "date": "2025-12-02",
+    "title": "Amazon unveils the Nova 2 family, plus a service that lets customers train their own Nova variants",
+    "summary": "At AWS re:Invent 2025, Amazon introduced Nova 2 Pro (preview, its new flagship reasoning model), Nova 2 Lite (GA), Nova 2 Sonic and Nova 2 Omni (preview), alongside Nova Forge for organizations to build custom Nova-based models and Nova Act for browser-automation agents; Amazon says Nova 2 Lite already beats the former flagship Nova Premier at 7x lower cost.",
+    "category": "release",
+    "companies": [
+      "amazon"
+    ],
+    "modelIds": [
+      "nova-2-pro"
+    ],
+    "sourceName": "AWS News Blog",
+    "sourceUrl": "https://aws.amazon.com/about-aws/whats-new/2025/12/nova-2-foundation-models-amazon-bedrock"
+  },
+  {
+    "id": "2025-04-30-nova-premier",
+    "date": "2025-04-30",
+    "title": "Amazon launches Nova Premier, its most capable model and a teacher for distillation",
+    "summary": "AWS made Nova Premier generally available on Bedrock as its top-of-line multimodal model — a 1M-token-context text/image/video model designed to be both a strong standalone performer and the teacher model for distilling cheaper Nova Lite and Micro variants.",
+    "category": "release",
+    "companies": [
+      "amazon"
+    ],
+    "modelIds": [
+      "nova-premier"
+    ],
+    "sourceName": "AWS News Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/aws/amazon-nova-premier-our-most-capable-model-for-complex-tasks-and-teacher-for-model-distillation/"
+  },
+  {
     "id": "2026-05-08-ernie-5-1",
     "date": "2026-05-08",
     "title": "Baidu releases ERNIE 5.1, claiming the top Chinese-model spot on LMArena at 6% of typical training cost",
