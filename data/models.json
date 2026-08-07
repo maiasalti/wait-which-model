@@ -4518,5 +4518,132 @@
       "SWE-bench Verified score depends heavily on scaffolding — 61.5% unassisted vs. 70.0% with Amazon's own inference-time scaling and agentic scaffolding, an 8.5-point gap that makes head-to-head reads of the headline number unreliable without knowing the setup"
     ],
     "notes": "Announced 2025-12-02 at AWS re:Invent alongside Nova 2 Lite, Nova 2 Sonic and Nova 2 Omni. Benchmark figures (MMLU-Pro 81.6, GPQA-Diamond 81.4, AIME 2025 92.3, SWE-Bench Verified 61.5/70.0) are Amazon's own, from the official Nova 2 Family technical report (assets.amazon.science/.../nova-2-0-technical-report2.pdf, Tables 1 and 4); the 70.0% SWE-bench figure uses 'inference time scaling and internal Agentic scaffolding' per the report's own footnote, so the unassisted 61.5% is used as the tracked value with the scaffolded figure noted here rather than in the field. Terminal-Bench in the same report (41.3%) is version 1.0, not the tracked 2.1 metric, so left null. HLE, ARC-AGI-2 and lmarenaElo were not found on any official report or independent leaderboard. Context window (1M) and max output (65,536) are from AWS's official Nova 2 user guide ('all models support up to 1 million tokens of context... generate up to 65,536 tokens'); Artificial Analysis separately lists a narrower 256K context window and $1.25/$10.00 pricing for its tracked preview build, which is the source used for pricing and speed here since AWS's own Bedrock pricing page and model-card system (which returns 404 for Nova 2 Pro specifically, unlike Nova 2 Lite/Premier) have not yet published either for this model — flagging the context-window conflict rather than picking one. availability is 'restricted': as of this check Nova 2 Pro has no Bedrock model-card page and remains preview/early-access-only for Nova Forge customers, absent from the official Nova 2 model list that does cover Lite, Sonic and Multimodal Embeddings. No official per-provider apiIds string exists yet, so left []. predecessorId left null: the Nova 2 technical report calls Nova Premier 'our former flagship' while comparing it to Nova 2 Lite specifically, not Pro, so it doesn't rise to an explicit statement that Nova 2 Pro replaces Nova Premier — logged to spec-gaps.md. Closed weights; no license record; no published knowledge cutoff."
+  },
+  {
+    "id": "command-a",
+    "name": "Command A",
+    "company": "cohere",
+    "releaseDate": "2025-03-13",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "text",
+    "contextWindow": 256000,
+    "maxOutput": 8000,
+    "pricing": {
+      "inputPerMTok": 2.5,
+      "outputPerMTok": 10
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": "2024-08",
+    "speed": {
+      "outputTokensPerSec": 60.2,
+      "timeToFirstTokenSec": 1.71,
+      "effort": null
+    },
+    "license": {
+      "spdx": "CC-BY-NC-4.0",
+      "name": "CC-BY-NC 4.0 + Cohere Acceptable Use Policy",
+      "kind": "restricted",
+      "url": "https://huggingface.co/CohereLabs/c4ai-command-a-03-2025",
+      "commercialUse": false
+    },
+    "apiIds": [
+      {
+        "provider": "cohere",
+        "id": "command-a-03-2025"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Runs on two GPUs rather than the eight-plus a comparable 100B+-class model typically needs, making it one of the cheaper flagships to self-host at the 111B scale",
+      "Restrained tool-calling — Cohere's own docs specifically credit it with avoiding unnecessary tool calls, a common failure mode for agent-oriented models",
+      "Strong at attending over long financial/numerical inputs and RAG-style grounded generation across its 23 supported languages"
+    ],
+    "weaknesses": [
+      "Chatty by default — Cohere's own documentation warns it's verbose and markdown-heavy out of the box, and recommends system-prompt overrides for concise output",
+      "No published MMLU-Pro/GPQA/SWE-bench-class benchmark table at launch, unusual for a same-tier 2025 flagship — Cohere's headline comparisons (vs. GPT-4o, DeepSeek-V3) are qualitative rather than tabulated scores",
+      "Weights are CC-BY-NC only, so open-weight users can inspect and fine-tune but not deploy commercially without a separate Cohere licence"
+    ],
+    "notes": "Cohere's own docs (docs.cohere.com/docs/command-a) state '150% higher throughput compared to its predecessor, Command R+ 08-2024' — an explicit predecessor claim, but Command R+ isn't a tracked model in this dataset, so predecessorId stays null (logged to spec-gaps.md). No independent or official numeric benchmark table (MMLU-Pro/GPQA/SWE-bench/AIME/HLE/ARC-AGI-2) was found — Cohere's launch blog renders its comparison charts as images rather than text, and Command A isn't listed on arena.ai's Text leaderboard; all eight tracked fields left null rather than approximated from the qualitative 'on par with GPT-4o and DeepSeek-V3' claim. Pricing ($2.50/$10.00) and speed are corroborated across OpenRouter and Artificial Analysis (artificialanalysis.ai/models/command-a); Cohere's own pricing page did not list current Command A/A+ rates when checked, directing to the (paywalled/enterprise) sales channel instead. Knowledge cutoff (Aug 2024) is from OpenRouter's model listing, not confirmed on an official Cohere page — treat as third-party-sourced. License is CC-BY-NC-4.0 plus Cohere's Acceptable Use Policy per the Hugging Face model card (huggingface.co/CohereLabs/c4ai-command-a-03-2025); 111B total parameters."
+  },
+  {
+    "id": "command-a-plus",
+    "name": "Command A+",
+    "company": "cohere",
+    "releaseDate": "2026-05-20",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 128000,
+    "maxOutput": 64000,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": 193.4,
+      "timeToFirstTokenSec": 0.44,
+      "effort": null
+    },
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/CohereLabs/command-a-plus-05-2026",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "cohere",
+        "id": "command-a-plus-05-2026"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": "command-a",
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Cohere's first Mixture-of-Experts release (218B total / 25B active), fitting on a single B200 or two H100s despite consolidating the whole Command A generation into one model",
+      "Large jump on Cohere's own agentic-coding and telecom-agent suites versus its immediate predecessor — Terminal-Bench Hard 3% to 25% and tau-squared-Bench Telecom 37% to 85%",
+      "Adds vision input and expands language coverage from 23 to 48 languages while unifying what used to be four separate Command A variants (base, Reasoning, Vision, Translate) into one model",
+      "Apache 2.0 weights make it commercially self-hostable, unlike Command A's non-commercial CC-BY-NC licence"
+    ],
+    "weaknesses": [
+      "Released without a standard cross-lab benchmark table (no MMLU-Pro, GPQA, SWE-bench, AIME or ARC-AGI-2 figures published) — Cohere's own comparisons are against its prior Command A generation and Cohere-specific/multimodal suites (MMMU, MathVista, CharXiv), not external frontier baselines",
+      "Not listed on arena.ai's Text leaderboard or any independent tracker's benchmark suite as of this check, so head-to-head positioning against non-Cohere models is largely unverifiable",
+      "Too new for hands-on developer reception at time of research — behavior in production agent loops is not yet documented outside Cohere's own launch material"
+    ],
+    "notes": "Cohere's launch post (cohere.com/blog/command-a-plus) states it 'surpasses every previous generation in the Command series and unifies their capabilities into a single scalable model,' explicitly naming Command A among what it consolidates — read as an explicit supersession statement, so predecessorId is set to command-a. Reported figures (MMMU Pro 63%, MMMU 75.1%, MathVista 80.6%, CharXiv 52.7%, tau-squared-Bench Telecom 85%, Terminal-Bench Hard 25%, Artificial Analysis Intelligence Index 37) are Cohere's own and don't map onto this site's tracked eight benchmark keys, so all eight are left null; Terminal-Bench Hard is a different suite from the tracked Terminal-Bench 2.1. Pricing is unpublished as of this check — Cohere's pricing page and docs both defer newer Command A models to a sales-contact flow, and Artificial Analysis shows $0.00/$0.00 for its tracked build, which reads as a data placeholder rather than a real price and was not used. Context window conflict: Cohere's own blog and docs state 128K input / 64K max output; Artificial Analysis instead lists a 192K context window for its tracked variant — used Cohere's own figure and flagged the conflict rather than picking silently. Speed (193.4 tok/s, 0.44s TTFT) is from Artificial Analysis' page for what it labels the model's 'reasoning version'; Cohere describes reasoning as a supported mode without publishing distinct low/medium/high effort tiers, so effort is left null rather than guessed. Apache-2.0 licence and 218B-total/25B-active parameter count are from the Hugging Face model card. Knowledge cutoff not disclosed."
   }
 ]

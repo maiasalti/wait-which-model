@@ -368,3 +368,14 @@ New-model-release research on 2026-08-07, scoped to `nova-premier` and `nova-2-p
 | nova-2-pro | lmarenaElo | 2026-08-07 | not listed on arena.ai's Text leaderboard as of this check |
 | nova-2-pro | costPerTask | 2026-08-07 | neither the non-reasoning nor medium-reasoning Artificial Analysis pages for Nova 2.0 Pro Preview publish a per-task USD figure |
 | nova-2-pro | knowledgeCutoff | 2026-08-07 | not disclosed by Amazon anywhere found (Nova 2 Lite's cutoff, Oct 2025, is published, but Pro's specifically is not) |
+
+New-model-release research on 2026-08-07, scoped to `command-a` and `command-a-plus` (Cohere, new company). Sources checked: cohere.com/blog (Command A and Command A+ announcement posts), docs.cohere.com (command-a, command-a-plus, models list, pricing/rate-limits pages), huggingface.co/CohereLabs (c4ai-command-a-03-2025 and command-a-plus-05-2026 model cards), artificialanalysis.ai/models/command-a and /command-a-plus, openrouter.ai/cohere/command-a, arena.ai/leaderboard/text (no Cohere models present).
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| command-a | mmluPro / gpqaDiamond / sweBench / terminalBench / aime / hle / lmarenaElo / arcAgi2 | 2026-08-07 | Cohere's launch blog renders its comparison charts as images, not extractable text; not on arena.ai; Artificial Analysis' page gives only a composite Intelligence Index score (7), not isolable per-benchmark figures |
+| command-a | costPerTask | 2026-08-07 | Artificial Analysis' Command A page doesn't surface a per-task USD figure, only pricing and the composite index |
+| command-a-plus | mmluPro / gpqaDiamond / sweBench / terminalBench / aime / hle / lmarenaElo / arcAgi2 | 2026-08-07 | Cohere's own announcement reports only Cohere-specific/multimodal suites (MMMU, MathVista, CharXiv, τ²-Bench, Terminal-Bench Hard) and a composite AA Intelligence Index (37), none of which map onto the tracked eight keys; not on arena.ai |
+| command-a-plus | pricing (input/output) | 2026-08-07 | neither Cohere's pricing page nor docs list a rate for command-a-plus-05-2026 (both defer to a sales-contact flow); Artificial Analysis shows $0.00/$0.00, read as an unpopulated placeholder rather than a real price and not used |
+| command-a-plus | costPerTask | 2026-08-07 | same placeholder issue — AA shows $0.00 cost per task for this model, not used |
+| command-a-plus | knowledgeCutoff | 2026-08-07 | not disclosed by Cohere anywhere found |

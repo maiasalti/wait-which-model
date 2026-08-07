@@ -1,5 +1,35 @@
 [
   {
+    "id": "2026-05-20-command-a-plus",
+    "date": "2026-05-20",
+    "title": "Cohere ships Command A+, consolidating its whole Command A generation into one MoE model",
+    "summary": "Cohere released Command A+ (218B total / 25B active parameters, Apache 2.0 weights), its first Mixture-of-Experts model, folding the separate Command A, Command A Reasoning, Command A Vision and Command A Translate variants into a single model with vision input, agentic tool use and 48-language support, running on as little as one B200 GPU.",
+    "category": "release",
+    "companies": [
+      "cohere"
+    ],
+    "modelIds": [
+      "command-a-plus"
+    ],
+    "sourceName": "Cohere Blog",
+    "sourceUrl": "https://cohere.com/blog/command-a-plus"
+  },
+  {
+    "id": "2025-03-13-command-a",
+    "date": "2025-03-13",
+    "title": "Cohere launches Command A, claiming GPT-4o/DeepSeek-V3-level performance on two GPUs",
+    "summary": "Cohere released Command A, a 111B-parameter model the company positioned as on par with or better than GPT-4o and DeepSeek-V3 on agentic enterprise tasks, while running on just two GPUs versus the larger footprints typical of comparable open-weight flagships; weights were released under a non-commercial CC-BY-NC licence.",
+    "category": "release",
+    "companies": [
+      "cohere"
+    ],
+    "modelIds": [
+      "command-a"
+    ],
+    "sourceName": "Cohere Blog",
+    "sourceUrl": "https://cohere.com/blog/command-a"
+  },
+  {
     "id": "2025-12-02-nova-2-pro",
     "date": "2025-12-02",
     "title": "Amazon unveils the Nova 2 family, plus a service that lets customers train their own Nova variants",

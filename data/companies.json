@@ -205,5 +205,14 @@
     "website": "https://aws.amazon.com/ai/generative-ai/nova/",
     "color": "#C86A00",
     "order": 23
+  },
+  {
+    "id": "cohere",
+    "name": "Cohere",
+    "country": "Canada",
+    "founded": 2019,
+    "website": "https://cohere.com",
+    "color": "#DB4F8A",
+    "order": 24
   }
 ]
