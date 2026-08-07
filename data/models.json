@@ -3965,5 +3965,107 @@
       "Too new for independent coverage on LMArena or Artificial Analysis' full benchmark suite at launch"
     ],
     "notes": "Ant Group's Bailing team announced Ling-2.6-1T on 2026-04-24 (weights open-sourced 2026-04-30 on Hugging Face/ModelScope); Maia's supplied link (ling-1t.ai/ling-2-6-1t) is not an official Ant Group/InclusionAI domain and was not used as a source. GPQA Diamond, HLE and AIME26 figures are third-party aggregator reports (aiflashreport.com, howaiworks.ai), not confirmed on an official Ant Group table or on Artificial Analysis directly — treat as secondary-sourced. Pricing is Artificial Analysis' median across API providers ($0.30/$2.50 per MTok); OpenRouter separately lists a lower $0.075/$0.625 rate, which may be promotional. Context window is 262,144 tokens via the public API; some coverage cites a 1M-token native/trained context. Total/active parameters are reported as roughly 1.03T/63B (MoE)."
+  },
+  {
+    "id": "gpt-oss-120b",
+    "name": "gpt-oss-120b",
+    "company": "openai",
+    "releaseDate": "2025-08-05",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "text",
+    "contextWindow": 131072,
+    "maxOutput": 131072,
+    "pricing": { "inputPerMTok": 0.03, "outputPerMTok": 0.17 },
+    "costPerTask": { "usd": null, "effort": null },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": "2024-06",
+    "speed": { "outputTokensPerSec": 169.7, "timeToFirstTokenSec": 0.88, "effort": "high" },
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [
+      { "provider": "openai", "id": "gpt-oss-120b" },
+      { "provider": "aws-bedrock", "id": "openai.gpt-oss-120b-1:0" }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": 80.8,
+      "gpqaDiamond": 80.1,
+      "sweBench": 62.4,
+      "terminalBench": null,
+      "aime": 92.5,
+      "hle": 14.9,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Fits on a single 80GB datacenter GPU at native precision, so it's a genuinely self-hostable release rather than a paper-only open weights drop",
+      "Reasoning effort is a plain system-prompt string (low/medium/high), trading latency for depth without swapping checkpoints",
+      "Exposes its full chain-of-thought in the output rather than summarizing or hiding it, unlike OpenAI's closed reasoning models"
+    ],
+    "weaknesses": [
+      "Hallucinates markedly more than OpenAI's closed models on people and fact lookups — the expected trade-off of a smaller open weight store of world knowledge",
+      "Locked to OpenAI's bespoke Harmony response format; feeding it a generic chat template silently breaks tool calls and reasoning",
+      "Inherited safety training leans toward refusal, and self-hosters report it overcorrecting on benign prompts"
+    ],
+    "notes": "OpenAI's first open-weight release since GPT-2. GPQA Diamond 80.1%, HLE 14.9% and AIME 2025 92.5% are no-tools scores at high reasoning effort per OpenAI's model card (arXiv:2508.10925); with tools, GPQA rises to 80.9%, HLE to 19.0%, AIME to 97.9%. MMLU-Pro 80.8 is from the official Hugging Face model card. Terminal-Bench reported is 2.0 (18.7%), not the tracked 2.1 metric, so left null here. Pricing ($0.03/$0.17 per MTok) is a representative third-party hosted rate (OpenRouter/CoreWeave) — OpenAI's own API docs list the model with no attached price, and rates vary roughly 9x across hosts (e.g. AWS Bedrock charges $0.15/$0.60)."
+  },
+  {
+    "id": "gpt-oss-20b",
+    "name": "gpt-oss-20b",
+    "company": "openai",
+    "releaseDate": "2025-08-05",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "text",
+    "contextWindow": 131072,
+    "maxOutput": 131072,
+    "pricing": { "inputPerMTok": 0.03, "outputPerMTok": 0.13 },
+    "costPerTask": { "usd": null, "effort": null },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": "2024-06",
+    "speed": { "outputTokensPerSec": 151.1, "timeToFirstTokenSec": 0.88, "effort": "high" },
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [
+      { "provider": "openai", "id": "gpt-oss-20b" },
+      { "provider": "aws-bedrock", "id": "openai.gpt-oss-20b-1:0" }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": 73.6,
+      "gpqaDiamond": 71.5,
+      "sweBench": 60.7,
+      "terminalBench": null,
+      "aime": 91.7,
+      "hle": 10.9,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Runs in about 16GB of memory, putting it within reach of a single consumer GPU or a high-end laptop",
+      "Competition math performance keeps pace with its 120B sibling despite the much smaller footprint",
+      "Same effort-string reasoning control and exposed chain-of-thought as the 120B model"
+    ],
+    "weaknesses": [
+      "Hallucinates even more than the 120B on people and fact lookups, the cost of a smaller knowledge store",
+      "Also requires the Harmony response format — a generic chat template silently breaks tool calls",
+      "Agentic terminal/tool-use tasks lag well behind its math and coding strength — a narrow specialist rather than an all-rounder"
+    ],
+    "notes": "Released alongside gpt-oss-120b as the lower-latency, edge-deployable sibling. GPQA Diamond 71.5%, HLE 10.9% and AIME 2025 91.7% are no-tools scores at high reasoning effort per OpenAI's model card (arXiv:2508.10925); with tools, GPQA rises to 74.2%, HLE to 17.3%, AIME to 98.7% (edging past the 120B model). MMLU-Pro 73.6 is from the official Hugging Face model card. Terminal-Bench reported is 2.0 (roughly 3%, sources conflict between 3.1% and 3.4%), not the tracked 2.1 metric, so left null here. Pricing ($0.03/$0.13 per MTok) is a representative third-party hosted rate (OpenRouter) — OpenAI's own API docs list the model with no attached price, and rates vary across hosts (e.g. AWS Bedrock charges $0.07/$0.30)."
   }
 ]

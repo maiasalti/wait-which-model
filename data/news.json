@@ -1,5 +1,21 @@
 [
   {
+    "id": "2025-08-05-gpt-oss",
+    "date": "2025-08-05",
+    "title": "OpenAI releases gpt-oss-120b and gpt-oss-20b, its first open-weight models since GPT-2",
+    "summary": "OpenAI shipped two Apache 2.0-licensed reasoning models: gpt-oss-120b (117B total/5.1B active parameters, runs on a single 80GB GPU) and gpt-oss-20b (21B total/3.6B active, runs in ~16GB of memory), both with configurable low/medium/high reasoning effort and a 131K-token context window.",
+    "category": "release",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-oss-120b",
+      "gpt-oss-20b"
+    ],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-oss/"
+  },
+  {
     "id": "2026-04-24-ling-2-6-1t",
     "date": "2026-04-24",
     "title": "Ant Group releases Ling-2.6-1T, a trillion-parameter \"fast thinking\" flagship",

@@ -262,6 +262,21 @@ New-model-release research on 2026-08-06, scoped to `mach-1-additive-35b`. Sourc
 | mach-1-additive-35b | costPerTask | 2026-08-06 | no public API and no Artificial Analysis coverage |
 | mach-1-additive-35b | pricing | 2026-08-06 | no public API — weights-only / local inference, no per-token price exists |
 
+New-model-release research on 2026-08-07, scoped to `gpt-oss-120b` and `gpt-oss-20b`. Sources checked: openai.com/index/introducing-gpt-oss/ (403 on direct fetch, used via search cache), huggingface.co/openai/gpt-oss-120b and /gpt-oss-20b model cards, arxiv.org/html/2508.10925v1 (official model card, Table 3), developers.openai.com/api/docs/models/gpt-oss-120b and /gpt-oss-20b, docs.aws.amazon.com Bedrock model cards, artificialanalysis.ai model pages for both, openrouter.ai listings, vals.ai Terminal-Bench 2.1 leaderboard, Hacker News threads on real-world use.
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| gpt-oss-120b | terminalBench | 2026-08-07 | only a Terminal-Bench **2.0** figure (18.7±2.7%) found, not the tracked 2.1 metric; recorded in notes instead |
+| gpt-oss-120b | lmarenaElo | 2026-08-07 | not found on arena.ai's current leaderboard or in any tracker with an exact Elo number |
+| gpt-oss-120b | arcAgi2 | 2026-08-07 | not on ARC Prize's official leaderboard or any tracker checked |
+| gpt-oss-120b | costPerTask.usd | 2026-08-07 | Artificial Analysis' model page renders the per-task figure as a JS/SVG chart not extractable via static fetch; only the total cost to run the full Intelligence Index suite ($94.61–$96.28, not a per-task figure) was textually retrievable |
+| gpt-oss-120b | costPerTask.effort | 2026-08-07 | same — no per-task figure to attach an effort label to |
+| gpt-oss-20b | terminalBench | 2026-08-07 | only Terminal-Bench **2.0** figures found (conflicting: 3.1% vs 3.4%), not the tracked 2.1 metric; recorded in notes instead |
+| gpt-oss-20b | lmarenaElo | 2026-08-07 | not found on arena.ai's current leaderboard with an exact Elo number |
+| gpt-oss-20b | arcAgi2 | 2026-08-07 | not on ARC Prize's official leaderboard or any tracker checked |
+| gpt-oss-20b | costPerTask.usd | 2026-08-07 | same JS/SVG rendering issue as gpt-oss-120b; only total suite cost ($32.69) was textually retrievable |
+| gpt-oss-20b | costPerTask.effort | 2026-08-07 | same — no per-task figure to attach an effort label to |
+
 New-model-release research on 2026-08-06, scoped to `ling-2-6-1t`. Sources checked: huggingface.co/inclusionAI/Ling-2.6-1T (model page, raw README, raw config.json — no raw config found, benchmark table appears to be an embedded image not extractable via text fetch), github.com/inclusionAI/Ling-V2 (does not cover the 1T-scale checkpoints), arxiv.org/abs/2606.15079 (Ling and Ring 2.6 Technical Report — PDF not machine-readable via fetch tool), artificialanalysis.ai/models/ling-2-6-1t, openrouter.ai/inclusionai/ling-2.6-1t, ant-ling.com and developer.ant-ling.com/en/blogs, plus aggregator cross-checks (aiflashreport.com, howaiworks.ai, i-scoop.eu, phemex.com, ufukozen.com) and Chinese coverage (yicai.com, ithome.com, chinaz.com, sohu.com) for the announcement date.
 
 | model-id | field | checked | reason |
