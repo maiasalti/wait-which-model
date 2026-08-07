@@ -3971,17 +3971,27 @@
     "name": "gpt-oss-120b",
     "company": "openai",
     "releaseDate": "2025-08-05",
-    "status": "unknown",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "text",
     "contextWindow": 131072,
     "maxOutput": 131072,
-    "pricing": { "inputPerMTok": 0.03, "outputPerMTok": 0.17 },
-    "costPerTask": { "usd": null, "effort": null },
+    "pricing": {
+      "inputPerMTok": 0.03,
+      "outputPerMTok": 0.17
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2024-06",
-    "speed": { "outputTokensPerSec": 169.7, "timeToFirstTokenSec": 0.88, "effort": "high" },
+    "speed": {
+      "outputTokensPerSec": 169.7,
+      "timeToFirstTokenSec": 0.88,
+      "effort": "high"
+    },
     "license": {
       "spdx": "Apache-2.0",
       "name": "Apache License 2.0",
@@ -3990,8 +4000,14 @@
       "commercialUse": true
     },
     "apiIds": [
-      { "provider": "openai", "id": "gpt-oss-120b" },
-      { "provider": "aws-bedrock", "id": "openai.gpt-oss-120b-1:0" }
+      {
+        "provider": "openai",
+        "id": "gpt-oss-120b"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "openai.gpt-oss-120b-1:0"
+      }
     ],
     "retirementDate": null,
     "predecessorId": null,
@@ -4022,17 +4038,27 @@
     "name": "gpt-oss-20b",
     "company": "openai",
     "releaseDate": "2025-08-05",
-    "status": "unknown",
+    "status": "superseded",
     "tier": "fast",
     "modality": "text",
     "contextWindow": 131072,
     "maxOutput": 131072,
-    "pricing": { "inputPerMTok": 0.03, "outputPerMTok": 0.13 },
-    "costPerTask": { "usd": null, "effort": null },
+    "pricing": {
+      "inputPerMTok": 0.03,
+      "outputPerMTok": 0.13
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2024-06",
-    "speed": { "outputTokensPerSec": 151.1, "timeToFirstTokenSec": 0.88, "effort": "high" },
+    "speed": {
+      "outputTokensPerSec": 151.1,
+      "timeToFirstTokenSec": 0.88,
+      "effort": "high"
+    },
     "license": {
       "spdx": "Apache-2.0",
       "name": "Apache License 2.0",
@@ -4041,8 +4067,14 @@
       "commercialUse": true
     },
     "apiIds": [
-      { "provider": "openai", "id": "gpt-oss-20b" },
-      { "provider": "aws-bedrock", "id": "openai.gpt-oss-20b-1:0" }
+      {
+        "provider": "openai",
+        "id": "gpt-oss-20b"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "openai.gpt-oss-20b-1:0"
+      }
     ],
     "retirementDate": null,
     "predecessorId": null,
@@ -4073,17 +4105,27 @@
     "name": "MiniMax-M2",
     "company": "minimax",
     "releaseDate": "2025-10-27",
-    "status": "unknown",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "text",
     "contextWindow": 204800,
     "maxOutput": null,
-    "pricing": { "inputPerMTok": 0.3, "outputPerMTok": 1.2 },
-    "costPerTask": { "usd": null, "effort": null },
+    "pricing": {
+      "inputPerMTok": 0.3,
+      "outputPerMTok": 1.2
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
-    "speed": { "outputTokensPerSec": 94.9, "timeToFirstTokenSec": 1.69, "effort": null },
+    "speed": {
+      "outputTokensPerSec": 94.9,
+      "timeToFirstTokenSec": 1.69,
+      "effort": null
+    },
     "license": {
       "spdx": null,
       "name": "MiniMax Modified MIT License",
@@ -4091,7 +4133,12 @@
       "url": "https://github.com/MiniMax-AI/MiniMax-M2/blob/main/LICENSE",
       "commercialUse": true
     },
-    "apiIds": [{ "provider": "minimax", "id": "MiniMax-M2" }],
+    "apiIds": [
+      {
+        "provider": "minimax",
+        "id": "MiniMax-M2"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -4121,17 +4168,27 @@
     "name": "MiniMax-M2.5",
     "company": "minimax",
     "releaseDate": "2026-02-12",
-    "status": "unknown",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "text",
     "contextWindow": 204800,
     "maxOutput": null,
-    "pricing": { "inputPerMTok": 0.15, "outputPerMTok": 1.2 },
-    "costPerTask": { "usd": null, "effort": null },
+    "pricing": {
+      "inputPerMTok": 0.15,
+      "outputPerMTok": 1.2
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
-    "speed": { "outputTokensPerSec": 94.7, "timeToFirstTokenSec": 1.67, "effort": null },
+    "speed": {
+      "outputTokensPerSec": 94.7,
+      "timeToFirstTokenSec": 1.67,
+      "effort": null
+    },
     "license": {
       "spdx": null,
       "name": "MiniMax Modified MIT License",
@@ -4139,7 +4196,12 @@
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5/blob/main/LICENSE-MODEL",
       "commercialUse": true
     },
-    "apiIds": [{ "provider": "minimax", "id": "MiniMax-M2.5" }],
+    "apiIds": [
+      {
+        "provider": "minimax",
+        "id": "MiniMax-M2.5"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -4174,12 +4236,22 @@
     "modality": "multimodal",
     "contextWindow": 1000000,
     "maxOutput": null,
-    "pricing": { "inputPerMTok": 0.3, "outputPerMTok": 1.2 },
-    "costPerTask": { "usd": null, "effort": null },
+    "pricing": {
+      "inputPerMTok": 0.3,
+      "outputPerMTok": 1.2
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
-    "speed": { "outputTokensPerSec": 102.7, "timeToFirstTokenSec": 1.49, "effort": null },
+    "speed": {
+      "outputTokensPerSec": 102.7,
+      "timeToFirstTokenSec": 1.49,
+      "effort": null
+    },
     "license": {
       "spdx": null,
       "name": "MiniMax Community License",
@@ -4187,14 +4259,19 @@
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3/blob/main/LICENSE",
       "commercialUse": true
     },
-    "apiIds": [{ "provider": "minimax", "id": "MiniMax-M3" }],
+    "apiIds": [
+      {
+        "provider": "minimax",
+        "id": "MiniMax-M3"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": 80.5,
-      "terminalBench": 66.0,
+      "terminalBench": 66,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
@@ -4217,23 +4294,38 @@
     "name": "Seed 2.0 Pro",
     "company": "bytedance",
     "releaseDate": "2026-02-14",
-    "status": "unknown",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 256000,
     "maxOutput": 128000,
-    "pricing": { "inputPerMTok": 0.47, "outputPerMTok": 2.37 },
-    "costPerTask": { "usd": null, "effort": null },
+    "pricing": {
+      "inputPerMTok": 0.47,
+      "outputPerMTok": 2.37
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": null,
-    "speed": { "outputTokensPerSec": null, "timeToFirstTokenSec": null, "effort": null },
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
     "license": null,
-    "apiIds": [{ "provider": "volcengine", "id": "doubao-seed-2.0-pro" }],
+    "apiIds": [
+      {
+        "provider": "volcengine",
+        "id": "doubao-seed-2.0-pro"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
-      "mmluPro": 87.0,
+      "mmluPro": 87,
       "gpqaDiamond": 88.9,
       "sweBench": 76.5,
       "terminalBench": null,
@@ -4264,14 +4356,29 @@
     "modality": "multimodal",
     "contextWindow": 256000,
     "maxOutput": null,
-    "pricing": { "inputPerMTok": 0.83, "outputPerMTok": 4.14 },
-    "costPerTask": { "usd": null, "effort": null },
+    "pricing": {
+      "inputPerMTok": 0.83,
+      "outputPerMTok": 4.14
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": null,
-    "speed": { "outputTokensPerSec": null, "timeToFirstTokenSec": null, "effort": null },
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
     "license": null,
-    "apiIds": [{ "provider": "volcengine", "id": "doubao-seed-2.1-pro" }],
+    "apiIds": [
+      {
+        "provider": "volcengine",
+        "id": "doubao-seed-2.1-pro"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -4301,7 +4408,7 @@
     "name": "ERNIE 5.0",
     "company": "baidu",
     "releaseDate": "2026-01-22",
-    "status": "unknown",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 128000,
@@ -4415,7 +4522,7 @@
     "name": "Nova Premier",
     "company": "amazon",
     "releaseDate": "2025-04-30",
-    "status": "unknown",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 1000000,
@@ -4472,7 +4579,7 @@
     "name": "Nova 2 Pro",
     "company": "amazon",
     "releaseDate": "2025-12-02",
-    "status": "unknown",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 1000000,
@@ -4524,7 +4631,7 @@
     "name": "Command A",
     "company": "cohere",
     "releaseDate": "2025-03-13",
-    "status": "unknown",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "text",
     "contextWindow": 256000,

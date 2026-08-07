@@ -131,17 +131,17 @@
     "modelId": "gemini-2-0-flash",
     "tier": "fast",
     "start": "2024-12-11",
-    "end": "2025-10-15",
-    "dethronedBy": "claude-haiku-4-5",
-    "composite": 0
+    "end": "2025-08-05",
+    "dethronedBy": "gpt-oss-20b",
+    "composite": 0.069
   },
   {
-    "modelId": "claude-haiku-4-5",
+    "modelId": "gpt-oss-20b",
     "tier": "fast",
-    "start": "2025-10-15",
+    "start": "2025-08-05",
     "end": "2026-04-02",
     "dethronedBy": "gemma-4",
-    "composite": 0.3142
+    "composite": 0.33
   },
   {
     "modelId": "gemma-4",
@@ -149,7 +149,7 @@
     "start": "2026-04-02",
     "end": "2026-05-19",
     "dethronedBy": "gemini-3-5-flash",
-    "composite": 0.7702
+    "composite": 0.7128
   },
   {
     "modelId": "gemini-3-5-flash",
