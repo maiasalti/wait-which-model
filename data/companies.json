@@ -169,5 +169,14 @@
     "website": "https://www.antgroup.com",
     "color": "#8A5FD9",
     "order": 19
+  },
+  {
+    "id": "minimax",
+    "name": "MiniMax",
+    "country": "China",
+    "founded": 2021,
+    "website": "https://www.minimax.io",
+    "color": "#E73562",
+    "order": 20
   }
 ]

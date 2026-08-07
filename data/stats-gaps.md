@@ -262,6 +262,33 @@ New-model-release research on 2026-08-06, scoped to `mach-1-additive-35b`. Sourc
 | mach-1-additive-35b | costPerTask | 2026-08-06 | no public API and no Artificial Analysis coverage |
 | mach-1-additive-35b | pricing | 2026-08-06 | no public API — weights-only / local inference, no per-token price exists |
 
+New-model-release research on 2026-08-07, scoped to `minimax-m2`, `minimax-m2-5` and `minimax-m3` (new company MiniMax). Sources checked: minimax.io/news (m2, m25) and minimax.io/blog/minimax-m3, huggingface.co/MiniMaxAI model cards (M2, M2.5, M3) and their README/LICENSE files, github.com/MiniMax-AI license files, platform.minimax.io/docs (release-notes/models, guides/text-generation), artificialanalysis.ai model pages, openrouter.ai listings, aiknowledgecutoff.com.
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| minimax-m2 | terminalBench | 2026-08-07 | HF README reports "Terminal-Bench: 46.3" with no version label (2.0 vs 2.1); not the confirmed 2.1 metric this field tracks |
+| minimax-m2 | lmarenaElo | 2026-08-07 | no MiniMax-M2 text-arena Elo found on arena.ai |
+| minimax-m2 | arcAgi2 | 2026-08-07 | not on ARC Prize's official leaderboard or any tracker checked |
+| minimax-m2 | maxOutput | 2026-08-07 | MiniMax's own API docs state no max-output figure; a third-party 131,072 (OpenRouter) figure was not corroborated by an official source |
+| minimax-m2 | knowledgeCutoff | 2026-08-07 | not stated by MiniMax; third-party trackers (aiknowledgecutoff.com) don't list a cutoff for M2 specifically |
+| minimax-m2 | costPerTask.usd/.effort | 2026-08-07 | Artificial Analysis renders the per-task figure as a JS/SVG chart not extractable via static fetch |
+| minimax-m2-5 | mmluPro | 2026-08-07 | absent from MiniMax's own Hugging Face benchmark table; a third-party 74% figure is uncorroborated and inconsistent with M2's official 82 given M2.5's gains elsewhere |
+| minimax-m2-5 | terminalBench | 2026-08-07 | no Terminal-Bench 2.1 figure found for M2.5 specifically |
+| minimax-m2-5 | lmarenaElo | 2026-08-07 | no MiniMax-M2.5 text-arena Elo found on arena.ai |
+| minimax-m2-5 | arcAgi2 | 2026-08-07 | not on ARC Prize's official leaderboard or any tracker checked |
+| minimax-m2-5 | maxOutput | 2026-08-07 | not stated in MiniMax's official docs; conflicting uncorroborated third-party figures (8K vs 196,608) found |
+| minimax-m2-5 | knowledgeCutoff | 2026-08-07 | not stated by MiniMax |
+| minimax-m2-5 | costPerTask.usd/.effort | 2026-08-07 | same JS/SVG rendering issue on Artificial Analysis |
+| minimax-m3 | mmluPro | 2026-08-07 | MiniMax's launch benchmark table is an embedded image, not machine-readable; no independent source reproduced this score |
+| minimax-m3 | gpqaDiamond | 2026-08-07 | same — image-only benchmark table, not reproduced elsewhere |
+| minimax-m3 | aime | 2026-08-07 | same — image-only benchmark table, not reproduced elsewhere |
+| minimax-m3 | hle | 2026-08-07 | same — image-only benchmark table, not reproduced elsewhere |
+| minimax-m3 | lmarenaElo | 2026-08-07 | no MiniMax-M3 text-arena Elo found on arena.ai |
+| minimax-m3 | arcAgi2 | 2026-08-07 | not on ARC Prize's official leaderboard or any tracker checked |
+| minimax-m3 | maxOutput | 2026-08-07 | MiniMax's own docs describe only "up to 1M tokens context window with a guaranteed minimum of 512K," no separate max-output figure stated |
+| minimax-m3 | knowledgeCutoff | 2026-08-07 | not stated by MiniMax; a third-party "January 2026" claim found in search snippets was not traced to a primary source |
+| minimax-m3 | costPerTask.usd/.effort | 2026-08-07 | same JS/SVG rendering issue on Artificial Analysis |
+
 New-model-release research on 2026-08-07, scoped to `gpt-oss-120b` and `gpt-oss-20b`. Sources checked: openai.com/index/introducing-gpt-oss/ (403 on direct fetch, used via search cache), huggingface.co/openai/gpt-oss-120b and /gpt-oss-20b model cards, arxiv.org/html/2508.10925v1 (official model card, Table 3), developers.openai.com/api/docs/models/gpt-oss-120b and /gpt-oss-20b, docs.aws.amazon.com Bedrock model cards, artificialanalysis.ai model pages for both, openrouter.ai listings, vals.ai Terminal-Bench 2.1 leaderboard, Hacker News threads on real-world use.
 
 | model-id | field | checked | reason |

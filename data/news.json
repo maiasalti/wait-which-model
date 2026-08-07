@@ -1,5 +1,50 @@
 [
   {
+    "id": "2026-06-01-minimax-m3",
+    "date": "2026-06-01",
+    "title": "MiniMax releases MiniMax-M3, its first natively multimodal open-weight flagship",
+    "summary": "MiniMax shipped M3, combining a 1M-token context window (via a new MiniMax Sparse Attention architecture), native image/video input, and frontier-tier agentic coding (80.5% SWE-bench Verified, 66.0% Terminal-Bench 2.1) in one open-weight checkpoint, alongside a new revenue-gated 'MiniMax Community License.'",
+    "category": "release",
+    "companies": [
+      "minimax"
+    ],
+    "modelIds": [
+      "minimax-m3"
+    ],
+    "sourceName": "MiniMax",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3"
+  },
+  {
+    "id": "2026-02-12-minimax-m2-5",
+    "date": "2026-02-12",
+    "title": "MiniMax releases MiniMax-M2.5, setting a new SWE-bench Verified mark for the series",
+    "summary": "MiniMax's M2.5 update scored 80.2% on SWE-bench Verified, up sharply from M2's 69.4%, while cutting the standard-tier input price to $0.15 per million tokens and adding a faster 'Lightning' throughput mode.",
+    "category": "release",
+    "companies": [
+      "minimax"
+    ],
+    "modelIds": [
+      "minimax-m2-5"
+    ],
+    "sourceName": "MiniMax",
+    "sourceUrl": "https://www.minimax.io/news/minimax-m25"
+  },
+  {
+    "id": "2025-10-27-minimax-m2",
+    "date": "2025-10-27",
+    "title": "MiniMax open-sources MiniMax-M2, an agentic coding model at 8% of Claude Sonnet's price",
+    "summary": "MiniMax released M2 (230B total / 10B active parameters, MIT-derived licence) as an efficiency-focused agentic and coding model, reporting roughly double Claude Sonnet's inference speed at about 8% of its API price and a top-five ranking among open-weight models on Artificial Analysis' index.",
+    "category": "release",
+    "companies": [
+      "minimax"
+    ],
+    "modelIds": [
+      "minimax-m2"
+    ],
+    "sourceName": "MiniMax",
+    "sourceUrl": "https://www.minimax.io/news/minimax-m2"
+  },
+  {
     "id": "2025-08-05-gpt-oss",
     "date": "2025-08-05",
     "title": "OpenAI releases gpt-oss-120b and gpt-oss-20b, its first open-weight models since GPT-2",

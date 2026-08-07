@@ -4067,5 +4067,149 @@
       "Agentic terminal/tool-use tasks lag well behind its math and coding strength — a narrow specialist rather than an all-rounder"
     ],
     "notes": "Released alongside gpt-oss-120b as the lower-latency, edge-deployable sibling. GPQA Diamond 71.5%, HLE 10.9% and AIME 2025 91.7% are no-tools scores at high reasoning effort per OpenAI's model card (arXiv:2508.10925); with tools, GPQA rises to 74.2%, HLE to 17.3%, AIME to 98.7% (edging past the 120B model). MMLU-Pro 73.6 is from the official Hugging Face model card. Terminal-Bench reported is 2.0 (roughly 3%, sources conflict between 3.1% and 3.4%), not the tracked 2.1 metric, so left null here. Pricing ($0.03/$0.13 per MTok) is a representative third-party hosted rate (OpenRouter) — OpenAI's own API docs list the model with no attached price, and rates vary across hosts (e.g. AWS Bedrock charges $0.07/$0.30)."
+  },
+  {
+    "id": "minimax-m2",
+    "name": "MiniMax-M2",
+    "company": "minimax",
+    "releaseDate": "2025-10-27",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "text",
+    "contextWindow": 204800,
+    "maxOutput": null,
+    "pricing": { "inputPerMTok": 0.3, "outputPerMTok": 1.2 },
+    "costPerTask": { "usd": null, "effort": null },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": { "outputTokensPerSec": 94.9, "timeToFirstTokenSec": 1.69, "effort": null },
+    "license": {
+      "spdx": null,
+      "name": "MiniMax Modified MIT License",
+      "kind": "permissive",
+      "url": "https://github.com/MiniMax-AI/MiniMax-M2/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [{ "provider": "minimax", "id": "MiniMax-M2" }],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": 82,
+      "gpqaDiamond": 78,
+      "sweBench": 69.4,
+      "terminalBench": null,
+      "aime": 78,
+      "hle": 12.5,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Interleaved thinking alternates plan, act and reflect within a single response rather than reasoning once and executing blind — makes long, tool-heavy agent loops easier to debug",
+      "Genuinely fast for its price bracket — MiniMax reports roughly double the throughput of Claude Sonnet at a small fraction of the cost",
+      "Sparse MoE with only 10B active parameters keeps latency low on long agentic sessions despite the 230B total size"
+    ],
+    "weaknesses": [
+      "Programming ability trails the leading closed models, competitive mainly against other open-weight coding models",
+      "Reliable tool use depends on the interleaved-thinking output format; wrapping it in a non-standard harness reportedly degrades results",
+      "As the first release in a fast-iterating series, MiniMax had already shipped two further point updates within four months"
+    ],
+    "notes": "Officially announced 2025-10-27 (minimax.io/news/minimax-m2). Hugging Face model card lists 230B total / 10B active parameters. GPQA-Diamond 78, AIME25 78, HLE 12.5% (without tools, 31.8% with), MMLU-Pro 82 and SWE-bench Verified 69.4 are from the official Hugging Face README. A 46.3 'Terminal-Bench' figure also appears there without a version label, so left null here rather than assume 2.1. Context window 204,800 tokens per MiniMax's own API docs; max output isn't stated in MiniMax's docs (a third-party 131,072 figure was not independently corroborated, so left null). Licensed under MiniMax's 'Modified MIT' terms: commercial use is unrestricted, with an in-product attribution requirement triggered only above 100M monthly active users or $30M annual revenue."
+  },
+  {
+    "id": "minimax-m2-5",
+    "name": "MiniMax-M2.5",
+    "company": "minimax",
+    "releaseDate": "2026-02-12",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "text",
+    "contextWindow": 204800,
+    "maxOutput": null,
+    "pricing": { "inputPerMTok": 0.15, "outputPerMTok": 1.2 },
+    "costPerTask": { "usd": null, "effort": null },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": { "outputTokensPerSec": 94.7, "timeToFirstTokenSec": 1.67, "effort": null },
+    "license": {
+      "spdx": null,
+      "name": "MiniMax Modified MIT License",
+      "kind": "permissive",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5/blob/main/LICENSE-MODEL",
+      "commercialUse": true
+    },
+    "apiIds": [{ "provider": "minimax", "id": "MiniMax-M2.5" }],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 85.2,
+      "sweBench": 80.2,
+      "terminalBench": null,
+      "aime": 86.3,
+      "hle": 19.4,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "SWE-bench Verified jumped sharply over M2 in under four months, the fastest capability gain in the series so far",
+      "Cheap enough to run continuously — MiniMax markets a roughly $1/hour cost at 100 output tokens/sec",
+      "A separate 'Lightning' throughput mode trades some cost efficiency for materially faster output when latency matters more than price"
+    ],
+    "weaknesses": [
+      "Still text-only and capped at the same ~205K context as M2 — the long-context and multimodal jump waited for M3",
+      "MMLU-Pro wasn't part of MiniMax's own benchmark table at launch, an unusual omission next to its detailed coding and agentic suite",
+      "Superseded within four months by M3, the usual pace for this series"
+    ],
+    "notes": "Officially announced 2026-02-12 (minimax.io/news/minimax-m25); MiniMax's own release material frames this as an iteration on M2/M2.1 rather than an explicit replacement of either, so predecessorId is left null. GPQA-Diamond 85.2, AIME25 86.3 and HLE 19.4% (without tools) are from the official Hugging Face README's comparison table; SWE-bench Verified 80.2%, which MiniMax describes as a new record for the series, is from the same announcement. MMLU-Pro is absent from MiniMax's own table; a third-party 74% figure (oddly lower than M2's official 82) could not be corroborated and looks inconsistent with M2.5's gains elsewhere, so left null. Context window confirmed at 204,800 tokens via MiniMax's own API docs — the same as M2; the 1M-token window is M3-only, despite some third-party trackers conflating the two. Pricing shown is the standard (non-Lightning) tier; the Lightning variant runs faster (100 tok/s vs 50) at roughly double the output price ($0.30/$2.40 vs $0.15/$1.20)."
+  },
+  {
+    "id": "minimax-m3",
+    "name": "MiniMax-M3",
+    "company": "minimax",
+    "releaseDate": "2026-06-01",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 1000000,
+    "maxOutput": null,
+    "pricing": { "inputPerMTok": 0.3, "outputPerMTok": 1.2 },
+    "costPerTask": { "usd": null, "effort": null },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": { "outputTokensPerSec": 102.7, "timeToFirstTokenSec": 1.49, "effort": null },
+    "license": {
+      "spdx": null,
+      "name": "MiniMax Community License",
+      "kind": "restricted",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [{ "provider": "minimax", "id": "MiniMax-M3" }],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": 80.5,
+      "terminalBench": 66.0,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "First open-weight model from any lab to combine a 1M-token context window, frontier-tier coding, and native image/video understanding in one checkpoint",
+      "New MiniMax Sparse Attention architecture gives large prefill/decode speedups over M2 at long context, so the 1M window is reportedly usable rather than nominal",
+      "Can drive a desktop computer-use agent (MiniMax Code) directly, not just chat"
+    ],
+    "weaknesses": [
+      "License tightened from M2's largely unrestricted terms to a revenue-gated community license requiring authorization above $20M annual revenue",
+      "Multimodal input is new to this generation, so image/video handling is comparatively less battle-tested than its text/coding path",
+      "Early hands-on reception is cautiously optimistic rather than settled — reliability on production agent loops still needs workload-specific testing"
+    ],
+    "notes": "Officially announced 2026-06-01 (minimax.io/blog/minimax-m3); some third-party trackers (e.g. OpenRouter) list 2026-05-31, likely the weights-availability date. Total/active parameters ~428B/23B per the Hugging Face model card. SWE-bench Verified 80.5% and Terminal-Bench 2.1 66.0% are corroborated across the Hugging Face README and MiniMax's own blog. GPQA Diamond, AIME, HLE, MMLU-Pro and ARC-AGI-2 were not extractable — MiniMax's benchmark table at launch is an embedded image rather than machine-readable text, and no independent source reproduced these specific figures. Licensed under the bespoke 'MiniMax Community License': free for non-commercial use; commercial use under $20M annual revenue requires only a notice email and a 'Built with MiniMax' attribution label, above that threshold prior written authorization is required. Third-party framing calls M3 a 'successor to M2.7' (not tracked here), but MiniMax's own material explicitly keeps M2.5 available as a cheaper option for some workloads rather than deprecating it, so predecessorId is left null. Pricing is the standard tier for inputs up to 512K tokens; above that the rate doubles to $0.60/$2.40 per MTok."
   }
 ]
