@@ -1,5 +1,35 @@
 [
   {
+    "id": "2026-06-23-seed-2-1-pro",
+    "date": "2026-06-23",
+    "title": "ByteDance launches Doubao Seed 2.1, pitched as an agent that closes out real tasks",
+    "summary": "ByteDance's Seed team released Seed 2.1 Pro and a lower-cost Seed 2.1 Turbo at Volcano Engine's FORCE conference, framing the update around reliable end-to-end coding and multi-step agent execution rather than Seed 2.0's broad multimodal upgrade; no benchmark table was published alongside the qualitative claims.",
+    "category": "release",
+    "companies": [
+      "bytedance"
+    ],
+    "modelIds": [
+      "seed-2-1-pro"
+    ],
+    "sourceName": "ByteDance Seed",
+    "sourceUrl": "https://seed.bytedance.com/en/blog/seed2-1-officially-released-advancing-ai-productivity"
+  },
+  {
+    "id": "2026-02-14-seed-2-0-pro",
+    "date": "2026-02-14",
+    "title": "ByteDance releases the Seed 2.0 model family, its first with a full published model card",
+    "summary": "ByteDance's Seed team launched Seed 2.0 (Pro/Lite/Mini/Code), reporting 88.9% GPQA Diamond, 98.3% AIME 2025 and 76.5% SWE-bench Verified for the Pro tier alongside a detailed model card covering long-tail knowledge, agentic and video-understanding evaluations against GPT-5.2, Claude and Gemini 3 Pro.",
+    "category": "release",
+    "companies": [
+      "bytedance"
+    ],
+    "modelIds": [
+      "seed-2-0-pro"
+    ],
+    "sourceName": "ByteDance Seed",
+    "sourceUrl": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/seed2/0214/Seed2.0%20Model%20Card.pdf"
+  },
+  {
     "id": "2026-06-01-minimax-m3",
     "date": "2026-06-01",
     "title": "MiniMax releases MiniMax-M3, its first natively multimodal open-weight flagship",

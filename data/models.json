@@ -4211,5 +4211,89 @@
       "Early hands-on reception is cautiously optimistic rather than settled — reliability on production agent loops still needs workload-specific testing"
     ],
     "notes": "Officially announced 2026-06-01 (minimax.io/blog/minimax-m3); some third-party trackers (e.g. OpenRouter) list 2026-05-31, likely the weights-availability date. Total/active parameters ~428B/23B per the Hugging Face model card. SWE-bench Verified 80.5% and Terminal-Bench 2.1 66.0% are corroborated across the Hugging Face README and MiniMax's own blog. GPQA Diamond, AIME, HLE, MMLU-Pro and ARC-AGI-2 were not extractable — MiniMax's benchmark table at launch is an embedded image rather than machine-readable text, and no independent source reproduced these specific figures. Licensed under the bespoke 'MiniMax Community License': free for non-commercial use; commercial use under $20M annual revenue requires only a notice email and a 'Built with MiniMax' attribution label, above that threshold prior written authorization is required. Third-party framing calls M3 a 'successor to M2.7' (not tracked here), but MiniMax's own material explicitly keeps M2.5 available as a cheaper option for some workloads rather than deprecating it, so predecessorId is left null. Pricing is the standard tier for inputs up to 512K tokens; above that the rate doubles to $0.60/$2.40 per MTok."
+  },
+  {
+    "id": "seed-2-0-pro",
+    "name": "Seed 2.0 Pro",
+    "company": "bytedance",
+    "releaseDate": "2026-02-14",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 256000,
+    "maxOutput": 128000,
+    "pricing": { "inputPerMTok": 0.47, "outputPerMTok": 2.37 },
+    "costPerTask": { "usd": null, "effort": null },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": { "outputTokensPerSec": null, "timeToFirstTokenSec": null, "effort": null },
+    "license": null,
+    "apiIds": [{ "provider": "volcengine", "id": "doubao-seed-2.0-pro" }],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": 87.0,
+      "gpqaDiamond": 88.9,
+      "sweBench": 76.5,
+      "terminalBench": null,
+      "aime": 98.3,
+      "hle": 32.4,
+      "lmarenaElo": null,
+      "arcAgi2": 37.5
+    },
+    "strengths": [
+      "Ranked in the top handful of models on human-preference arena testing at launch, reflecting strong everyday conversational quality rather than just benchmark strength",
+      "Handles long, multi-part Chinese-language instructions — tone control, formatting, few-shot pattern-following — noticeably better than its Seed1.8 predecessor",
+      "Native video tool-use (VideoCut) lets it re-inspect footage at a higher frame rate mid-task instead of reasoning over static frames alone"
+    ],
+    "weaknesses": [
+      "ByteDance's own report is unusually candid about real gaps against Claude on repository-scale coding and against Gemini on long-tail factual knowledge",
+      "Long-context retrieval (needle-style) tasks lag its overall reasoning strength — it can lose track of scattered details in very long inputs",
+      "Hallucination-robustness trails GPT-5.2 on several factuality checks despite leading on many other evaluations"
+    ],
+    "notes": "Officially launched 2026-02-14 (Seed2.0 Model Card, ByteDance Seed, hosted at lf3-static.bytednsdoc.com; announcement blog at seed.bytedance.com). MMLU-Pro 87.0, GPQA Diamond 88.9, AIME 2025 98.3 and HLE 32.4% (no-tools, text-only) are from the model card's Table 3; SWE-bench Verified 76.5% is from Table 11 (agentic capacity evaluation); ARC-AGI-2 37.5 is from Table 3's General Reasoning section. Terminal-Bench figure in the same table (55.8) is version 2.0, not the tracked 2.1 metric, so left null here. LMArena listed only a rank (6th on the Text Arena leaderboard as of 2026-02-16), not an Elo score, so lmarenaElo stays null. Context window (256K) and max output (128K) are corroborated across third-party trackers (CloudPrice, others) citing the API model id 'doubao-seed-2-0-pro-260215'; not independently confirmed on an official ByteDance spec page, so treat as secondary-sourced. Pricing from the model card's Table 1 ($0.47/$2.37 per MTok, quoted alongside ¥3.41/¥17.04)."
+  },
+  {
+    "id": "seed-2-1-pro",
+    "name": "Seed 2.1 Pro",
+    "company": "bytedance",
+    "releaseDate": "2026-06-23",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 256000,
+    "maxOutput": null,
+    "pricing": { "inputPerMTok": 0.83, "outputPerMTok": 4.14 },
+    "costPerTask": { "usd": null, "effort": null },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": { "outputTokensPerSec": null, "timeToFirstTokenSec": null, "effort": null },
+    "license": null,
+    "apiIds": [{ "provider": "volcengine", "id": "doubao-seed-2.1-pro" }],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "ByteDance's launch framing shifts from Seed 2.0's broad multimodal upgrade to a narrower, workflow-oriented bar: whether the model can carry one real task from requirement to validated result",
+      "A preview build placed level with Claude Opus 4.6 on the Code Arena frontend leaderboard within days of release",
+      "Ships as a paired Pro/Turbo lineup from day one, so a lower-cost, lower-latency sibling is available immediately rather than following months later"
+    ],
+    "weaknesses": [
+      "No model card or benchmark table has been published at launch — every capability claim so far is qualitative ('leading', 'comparable to GPT-5.5') rather than a disclosed number",
+      "Parameter counts and knowledge cutoff remain undisclosed, unlike the detailed technical report ByteDance published for Seed 2.0",
+      "Too new for independent benchmark or arena coverage beyond a single preview-build leaderboard placement"
+    ],
+    "notes": "Officially launched 2026-06-23 at Volcano Engine's FORCE conference (seed.bytedance.com/en/blog/seed2-1-officially-released-advancing-ai-productivity); ByteDance's own post makes only qualitative claims (leads Terminal-Bench 2.1, SWE-Bench Pro, SciCode, OSWorld, MobileWorld, MMMU-Pro among named benchmarks) without publishing a benchmark table or model card, unlike Seed 2.0 — so all eight tracked benchmark fields are left null rather than guessed from prose. A Seed 2.1 Pro preview build ranked 8th on arena.ai's Code Arena frontend leaderboard with a score of 1539, level with Claude Opus 4.6, but that is a different (frontend-coding) leaderboard from the tracked overall text lmarenaElo, so left null here too. Context window (256K) is corroborated across multiple third-party API trackers citing Volcano Engine's model list; max output could not be pinned to a reliable single figure and is left null. Pricing (¥6/¥30 per MTok ≈ $0.83/$4.14) is from ByteDance's own announcement; Seed 2.1 Turbo is priced at half the Pro rate."
   }
 ]

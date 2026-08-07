@@ -178,5 +178,14 @@
     "website": "https://www.minimax.io",
     "color": "#E73562",
     "order": 20
+  },
+  {
+    "id": "bytedance",
+    "name": "ByteDance (Doubao/Seed)",
+    "country": "China",
+    "founded": 2012,
+    "website": "https://seed.bytedance.com",
+    "color": "#3C8CFF",
+    "order": 21
   }
 ]

@@ -262,6 +262,21 @@ New-model-release research on 2026-08-06, scoped to `mach-1-additive-35b`. Sourc
 | mach-1-additive-35b | costPerTask | 2026-08-06 | no public API and no Artificial Analysis coverage |
 | mach-1-additive-35b | pricing | 2026-08-06 | no public API — weights-only / local inference, no per-token price exists |
 
+New-model-release research on 2026-08-07, scoped to `seed-2-0-pro` and `seed-2-1-pro` (new company ByteDance). Sources checked: Seed2.0 Model Card PDF (lf3-static.bytednsdoc.com, official ByteDance Seed technical report, full text/tables extracted directly), seed.bytedance.com blog posts for Seed2.0 and Seed2.1, research.doubao.com/en/seed2, docs.volcengine.com model docs, artificialanalysis.ai (searched, no Doubao Seed 2.x Pro coverage found), llm-stats.com, CloudPrice, datanorth.ai, aibase.com, llmreference.com, benchquill.com, ofox.ai.
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| seed-2-0-pro | terminalBench | 2026-08-07 | official model card Table 11 reports Terminal-Bench **2.0** (55.8), not the tracked 2.1 metric; recorded in notes instead |
+| seed-2-0-pro | lmarenaElo | 2026-08-07 | model card cites only a leaderboard rank ("ranks 6th... as of Feb 16, 2026"), not an Elo score; no exact figure found on arena.ai |
+| seed-2-0-pro | costPerTask.usd/.effort | 2026-08-07 | Artificial Analysis has no model page for Doubao Seed 2.0 Pro found |
+| seed-2-0-pro | speed | 2026-08-07 | same — no Artificial Analysis coverage found |
+| seed-2-0-pro | knowledgeCutoff | 2026-08-07 | not stated in the official model card; a third-party "January 2024" claim (llm-stats.com) is implausibly stale for a Feb 2026 SOTA-claiming release and was rejected as unreliable |
+| seed-2-0-pro | contextWindow/maxOutput | 2026-08-07 | not found on an official ByteDance spec page; used third-party API-tracker consensus (256K/128K) instead, flagged as secondary-sourced in notes |
+| seed-2-1-pro | mmluPro/gpqaDiamond/sweBench/terminalBench/aime/hle/lmarenaElo/arcAgi2 | 2026-08-07 | ByteDance published no model card or benchmark table for Seed 2.1 at launch (confirmed via research.doubao.com/en/seed2, which lists only the Seed2.0 model card); official blog makes qualitative claims only ("leading scores on Terminal Bench 2.1, SWE-Pro and SciCode") with no numbers |
+| seed-2-1-pro | costPerTask/speed | 2026-08-07 | no Artificial Analysis coverage found |
+| seed-2-1-pro | knowledgeCutoff | 2026-08-07 | not published by ByteDance for Seed 2.1 (explicitly noted as unpublished by multiple secondary sources) |
+| seed-2-1-pro | maxOutput | 2026-08-07 | conflicting/confused third-party figures (some list max output equal to the 256K context window, which reads like a table-parsing error); left null rather than guess |
+
 New-model-release research on 2026-08-07, scoped to `minimax-m2`, `minimax-m2-5` and `minimax-m3` (new company MiniMax). Sources checked: minimax.io/news (m2, m25) and minimax.io/blog/minimax-m3, huggingface.co/MiniMaxAI model cards (M2, M2.5, M3) and their README/LICENSE files, github.com/MiniMax-AI license files, platform.minimax.io/docs (release-notes/models, guides/text-generation), artificialanalysis.ai model pages, openrouter.ai listings, aiknowledgecutoff.com.
 
 | model-id | field | checked | reason |
