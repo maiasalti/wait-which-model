@@ -2270,7 +2270,7 @@
     "name": "Gemini 3.5 Flash",
     "company": "google",
     "releaseDate": "2026-05-19",
-    "status": "superseded",
+    "status": "frontier",
     "tier": "fast",
     "modality": "multimodal",
     "contextWindow": 1048576,
@@ -4808,5 +4808,64 @@
       "Agentic knowledge work — the gap Meta itself flagged in 1.1 — narrows but still trails the frontier"
     ],
     "notes": "Terminal-Bench 2.1 score of 82.9% was measured running inside Muse Code, the paired coding agent Meta shipped alongside it, rather than the generic harness used for 1.1's SWE-bench Pro figure, so the two releases aren't directly comparable; GPQA Diamond, MMLU-Pro, AIME, HLE, LMArena Elo, and ARC-AGI-2 were not published for this release, and knowledge cutoff remains undisclosed. Meta's own announcement calls Muse Spark 1.1 'its predecessor,' the basis for predecessorId."
+  },
+  {
+    "id": "muse-glimmer",
+    "name": "Muse Glimmer",
+    "company": "meta",
+    "releaseDate": "2026-08-10",
+    "status": "superseded",
+    "tier": "fast",
+    "modality": "multimodal",
+    "contextWindow": 131072,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 0.35,
+      "outputPerMTok": 1.5
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": "2026-01",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/meta-models/Muse-Glimmer-30B/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 83.5,
+      "sweBench": 76,
+      "terminalBench": 51.7,
+      "aime": 94.7,
+      "hle": 22,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Runs entirely offline on a single 24–32GB consumer GPU or Apple Silicon Mac, agent loop and all — no account or network connection required",
+      "DFlash speculative decoding proposes 16-token blocks at once, more than tripling raw throughput on an RTX 5090 over standard decoding",
+      "Diagnoses a failed tool call and retries rather than stalling out, trained explicitly for failure recovery across multi-turn agent loops",
+      "Reads interleaved text, screenshots, charts and documents through a dedicated perception encoder, across 100+ languages"
+    ],
+    "weaknesses": [
+      "Trails Qwen3.6-27B on OSWorld-Verified and Terminal-Bench 2.1 — weaker at precise GUI and command-line work than its size-class rival",
+      "No audio input or output, and video is sampled as individual frames rather than processed natively",
+      "Launched compared only against Meta's own chosen size-class peers (Gemma4-31B, Qwen3.6-27B) — no independent LMArena or Artificial Analysis leaderboard placement yet"
+    ],
+    "notes": "Distilled from Muse Spark via logit distillation, but Meta's model card doesn't state it replaces Muse Spark, which stays on as Meta's separate, closed flagship. Benchmarks are Meta's own reported 'High Reasoning' figures except GPQA Diamond (83.5) and HLE Text-only (22.0), which the model card itself attributes to Artificial Analysis measurement rather than Meta's own eval. Terminal-Bench 2.1 (51.7%) was run 'with terminus2' scaffold; SWE-bench Pro (51.2%) was also reported but isn't the tracked metric. MMLU-Pro, LMArena Elo and ARC-AGI-2 are unpublished; Artificial Analysis hadn't indexed the model for its Intelligence Index or speed benchmarks as of this check (released 2026-08-10), so costPerTask and speed are null. Pricing shown ($0.35/$1.50 per MTok) is OpenRouter's hosted rate — Meta offers no official API for this open-weight release; Together AI and Fireworks AI also host it."
   }
 ]

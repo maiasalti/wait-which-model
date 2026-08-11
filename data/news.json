@@ -1599,5 +1599,20 @@
     ],
     "sourceName": "DeepSeek",
     "sourceUrl": "https://api-docs.deepseek.com/news/news250120"
+  },
+  {
+    "id": "2026-08-10-muse-glimmer",
+    "date": "2026-08-10",
+    "title": "Meta releases Muse Glimmer, a 30B open-weight agentic model built to run on a single consumer GPU",
+    "summary": "Meta Superintelligence Labs shipped Muse Glimmer, an Apache 2.0-licensed 30B dense multimodal model distilled from the closed Muse Spark and tuned for always-on local agent workflows, reaching SWE-bench Verified 76.0% and AIME 2026 94.7% while running quantized under 20GB with DFlash speculative decoding.",
+    "category": "release",
+    "companies": [
+      "meta"
+    ],
+    "modelIds": [
+      "muse-glimmer"
+    ],
+    "sourceName": "Meta Superintelligence Labs",
+    "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
   }
 ]
