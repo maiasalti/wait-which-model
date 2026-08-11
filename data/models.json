@@ -4752,5 +4752,61 @@
       "Too new for hands-on developer reception at time of research — behavior in production agent loops is not yet documented outside Cohere's own launch material"
     ],
     "notes": "Cohere's launch post (cohere.com/blog/command-a-plus) states it 'surpasses every previous generation in the Command series and unifies their capabilities into a single scalable model,' explicitly naming Command A among what it consolidates — read as an explicit supersession statement, so predecessorId is set to command-a. Reported figures (MMMU Pro 63%, MMMU 75.1%, MathVista 80.6%, CharXiv 52.7%, tau-squared-Bench Telecom 85%, Terminal-Bench Hard 25%, Artificial Analysis Intelligence Index 37) are Cohere's own and don't map onto this site's tracked eight benchmark keys, so all eight are left null; Terminal-Bench Hard is a different suite from the tracked Terminal-Bench 2.1. Pricing is unpublished as of this check — Cohere's pricing page and docs both defer newer Command A models to a sales-contact flow, and Artificial Analysis shows $0.00/$0.00 for its tracked build, which reads as a data placeholder rather than a real price and was not used. Context window conflict: Cohere's own blog and docs state 128K input / 64K max output; Artificial Analysis instead lists a 192K context window for its tracked variant — used Cohere's own figure and flagged the conflict rather than picking silently. Speed (193.4 tok/s, 0.44s TTFT) is from Artificial Analysis' page for what it labels the model's 'reasoning version'; Cohere describes reasoning as a supported mode without publishing distinct low/medium/high effort tiers, so effort is left null rather than guessed. Apache-2.0 licence and 218B-total/25B-active parameter count are from the Hugging Face model card. Knowledge cutoff not disclosed."
+  },
+  {
+    "id": "muse-spark-1-2",
+    "name": "Muse Spark 1.2",
+    "company": "meta",
+    "releaseDate": "2026-08-05",
+    "status": "frontier",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 1048576,
+    "maxOutput": 131072,
+    "pricing": {
+      "inputPerMTok": 1.25,
+      "outputPerMTok": 4.25
+    },
+    "costPerTask": {
+      "usd": 0.4,
+      "effort": "xhigh"
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": 165,
+      "timeToFirstTokenSec": 26.12,
+      "effort": "xhigh"
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "meta",
+        "id": "muse-spark-1.2"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": "muse-spark-1-1",
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "terminalBench": 82.9,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Built for multi-agent workflows — plans and delegates as a main agent, or runs in parallel as a subagent, with structured output and parallel function calling across coding harnesses",
+      "Coding-focused retrain shows in whole-repository work — holds dependency graphs and legacy code together across the long context window better than 1.1 did",
+      "Ships alongside Muse Code, a purpose-built terminal coding agent co-trained with the model rather than bolted on after release"
+    ],
+    "weaknesses": [
+      "Reasoning can't be switched off, and the coding-focused retrain cost latency — time to first token runs roughly nine times longer than 1.1, trading speed for the index gain",
+      "Agentic knowledge work — the gap Meta itself flagged in 1.1 — narrows but still trails the frontier"
+    ],
+    "notes": "Terminal-Bench 2.1 score of 82.9% was measured running inside Muse Code, the paired coding agent Meta shipped alongside it, rather than the generic harness used for 1.1's SWE-bench Pro figure, so the two releases aren't directly comparable; GPQA Diamond, MMLU-Pro, AIME, HLE, LMArena Elo, and ARC-AGI-2 were not published for this release, and knowledge cutoff remains undisclosed. Meta's own announcement calls Muse Spark 1.1 'its predecessor,' the basis for predecessorId."
   }
 ]

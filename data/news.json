@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-08-05-muse-spark-1-2",
+    "date": "2026-08-05",
+    "title": "Meta releases Muse Spark 1.2 and Muse Code, its first coding agent",
+    "summary": "Meta Superintelligence Labs shipped Muse Spark 1.2, a coding-focused update to Muse Spark 1.1, alongside Muse Code, its first terminal coding agent, co-trained with the model; Muse Spark 1.2 scores 82.9% on Terminal-Bench 2.1 running in Muse Code and 54 on Artificial Analysis' Intelligence Index, at unchanged $1.25/$4.25 per-million-token pricing.",
+    "category": "release",
+    "companies": [
+      "meta"
+    ],
+    "modelIds": [
+      "muse-spark-1-2"
+    ],
+    "sourceName": "Meta AI Research",
+    "sourceUrl": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2"
+  },
+  {
     "id": "2026-05-20-command-a-plus",
     "date": "2026-05-20",
     "title": "Cohere ships Command A+, consolidating its whole Command A generation into one MoE model",
