@@ -7,10 +7,11 @@ import {
   formatSpeed,
 } from "@/lib/data";
 
-/** The spec cells shared by the drawer and the standalone model page. `cols`
- *  differs between the two surfaces — two-up in the drawer's narrow column,
- *  wider on the page — so the caller picks the grid rather than the component
- *  guessing from a viewport it can't see. */
+/** The spec cells shared by the drawer and the standalone model page. The grid
+ *  differs between the two surfaces — both go three-up once there's room, but
+ *  the page has a wider text column to do it in — so the caller picks the grid
+ *  rather than the component guessing from a viewport it can't see. There are
+ *  nine cells, which is why three columns is the target: it fills exactly. */
 export function ModelStatsGrid({
   model,
   className = "",

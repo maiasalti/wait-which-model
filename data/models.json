@@ -4867,5 +4867,62 @@
       "Launched compared only against Meta's own chosen size-class peers (Gemma4-31B, Qwen3.6-27B) — no independent LMArena or Artificial Analysis leaderboard placement yet"
     ],
     "notes": "Distilled from Muse Spark via logit distillation, but Meta's model card doesn't state it replaces Muse Spark, which stays on as Meta's separate, closed flagship. Benchmarks are Meta's own reported 'High Reasoning' figures except GPQA Diamond (83.5) and HLE Text-only (22.0), which the model card itself attributes to Artificial Analysis measurement rather than Meta's own eval. Terminal-Bench 2.1 (51.7%) was run 'with terminus2' scaffold; SWE-bench Pro (51.2%) was also reported but isn't the tracked metric. MMLU-Pro, LMArena Elo and ARC-AGI-2 are unpublished; Artificial Analysis hadn't indexed the model for its Intelligence Index or speed benchmarks as of this check (released 2026-08-10), so costPerTask and speed are null. Pricing shown ($0.35/$1.50 per MTok) is OpenRouter's hosted rate — Meta offers no official API for this open-weight release; Together AI and Fireworks AI also host it."
+  },
+  {
+    "id": "gpt-5-6-cyber",
+    "name": "GPT-5.6-Cyber",
+    "company": "openai",
+    "releaseDate": "2026-08-10",
+    "status": "frontier",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 400000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 12.5,
+      "outputPerMTok": 75
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "restricted",
+    "knowledgeCutoff": "2026-02",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "gpt-5.6-cyber"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Carries out the dual-use half of security work — exploit reproduction, authentication bypass, privilege escalation — that the general-purpose Sol build refuses outright",
+      "Holds a vulnerability hunt together long enough to surface undocumented bugs in heavily audited code, including a chained V8 sandbox escape in Chrome",
+      "Takes screenshots and diagrams alongside source, so binary and tooling output doesn't have to be transcribed to text first"
+    ],
+    "weaknesses": [
+      "Writes shorter, thinner vulnerability reports than the general-purpose models and is weaker across broad security assessment — a specialist to reach for, not a replacement for Sol on review work",
+      "Every request sits behind identity verification, monitoring, approved-use restrictions and legal attestations, so it can't be trialled or adopted casually",
+      "No published general-capability scores and no independent leaderboard placement — behavior outside its cyber specialism is undocumented"
+    ],
+    "notes": "Purpose-trained cybersecurity variant built on GPT-5.6 Sol, reachable only through Daybreak Red, the vetted upper tier of OpenAI's Daybreak defender programme (Daybreak Blue covers general-purpose models), hence availability \"restricted\". Context window (400K, 272K max input), max output, knowledge cutoff (2026-02-16) and pricing ($12.50/$75 per MTok, cached input $1.25) are from OpenAI's own model docs; the model is served on the Responses API only. All eight tracked benchmarks are unpublished — OpenAI reported only cyber-specific evals: a 95.0% Advanced Cybersecurity Completion Rate against 57.3% for GPT-5.5-Cyber and 1.5% for GPT-5.6 Sol, plus an ExploitGym lead over both, and a Preparedness Framework cybersecurity rating of High but below Critical. Artificial Analysis has not indexed it, so costPerTask and speed are null, and its vetted-access gating makes future indexing unlikely. Announced 2026-08-10; OpenAI's API changelog listed the model and the daybreak-red-latest alias on 2026-08-07. GPT-5.5-Cyber (June 2026) is not tracked here and OpenAI states no supersession, so predecessorId stays null."
   }
 ]
