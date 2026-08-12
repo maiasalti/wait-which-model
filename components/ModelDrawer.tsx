@@ -28,7 +28,7 @@ export function ModelDrawer({ model }: { model: Model }) {
   return (
     <div className="fixed inset-0 z-50" role="dialog" aria-modal="true" aria-label={model.name}>
       <div className="absolute inset-0 bg-black/60" onClick={() => router.back()} />
-      <aside className="absolute inset-y-0 right-0 flex w-full max-w-md flex-col gap-6 overflow-y-auto border-l border-line bg-surface p-6 shadow-2xl">
+      <aside className="absolute inset-y-0 right-0 flex w-full max-w-2xl flex-col gap-6 overflow-y-auto border-l border-line bg-surface p-6 shadow-2xl">
         <div className="flex items-start justify-between gap-4">
           <div>
             <div className="flex items-center gap-2">
@@ -52,12 +52,13 @@ export function ModelDrawer({ model }: { model: Model }) {
           </button>
         </div>
 
-        <ModelStatsGrid model={model} className="grid-cols-2" />
+        <ModelStatsGrid model={model} className="grid-cols-2 sm:grid-cols-3" />
 
         <div>
           <Collapsible
             title="Benchmarks"
             meta={`${benchmarkCoverage(model).reported} of ${benchmarkCoverage(model).total} reported`}
+            defaultOpen
           >
             <ModelBenchmarks model={model} />
           </Collapsible>
