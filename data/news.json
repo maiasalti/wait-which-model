@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-08-10-gpt-5-6-cyber",
+    "date": "2026-08-10",
+    "title": "OpenAI launches GPT-5.6-Cyber, its first model trained to build exploits",
+    "summary": "OpenAI released GPT-5.6-Cyber, a cybersecurity model built on GPT-5.6 Sol and trained to reduce refusals on higher-risk dual-use work, completing 95.0% of advanced cybersecurity requests against 57.3% for GPT-5.5-Cyber and 1.5% for Sol itself. It is available only through Daybreak Red, a new vetted upper tier of OpenAI's defender programme alongside Daybreak Blue, at $12.50/$75 per million tokens.",
+    "category": "release",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-5-6-cyber"
+    ],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/"
+  },
+  {
     "id": "2026-08-05-muse-spark-1-2",
     "date": "2026-08-05",
     "title": "Meta releases Muse Spark 1.2 and Muse Code, its first coding agent",
