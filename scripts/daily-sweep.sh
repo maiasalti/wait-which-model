@@ -6,7 +6,7 @@
 # Researches new models, fills missing stats, checks data health, and opens a
 # PULL REQUEST. It never writes to main and never deploys.
 #
-# Run by launchd weekdays at 09:00 (com.waitwhichmodel.daily-sweep).
+# Run by launchd weekdays at 10:30 (com.waitwhichmodel.daily-sweep).
 # Run by hand any time with:  scripts/daily-sweep.sh --dry-run
 #
 set -uo pipefail
@@ -18,6 +18,7 @@ DOW="$(date +%u)"            # 1=Mon .. 7=Sun
 BRANCH="auto/sweep-$TODAY"
 CLAUDE="/Users/maia/.local/bin/claude"
 TIMEOUT_SECS=3600            # a hung run must not sit there forever
+FETCH_ATTEMPTS=5             # ~4 min of retries; see fetch_with_retry below
 
 DRY_RUN=0
 [ "${1:-}" = "--dry-run" ] && DRY_RUN=1
@@ -43,7 +44,12 @@ fi
 
 # ── Guard 2: never clobber work in progress ──────────────────────────────────
 if [ -n "$(git status --porcelain)" ]; then
-  log "SKIP  working tree dirty — refusing to touch a repo with uncommitted work"
+  # Only a real run logs. A --dry-run must touch nothing, and writing a dated
+  # line here would trip Guard 0 and silently cancel the day's actual sweep —
+  # which is what the two 2026-08-06 SKIP lines in the log turned out to be.
+  if [ "$DRY_RUN" = 0 ]; then
+    log "SKIP  working tree dirty — refusing to touch a repo with uncommitted work"
+  fi
   say  "working tree is dirty; a real run would stop here"
   exit 0
 fi
@@ -65,7 +71,31 @@ if [ "$DRY_RUN" = 1 ]; then
 fi
 
 # ── Branch from origin/main ──────────────────────────────────────────────────
-git fetch --quiet origin main || { log "FAIL  git fetch failed"; exit 1; }
+# launchd fires this job while the laptop is still waking, and Wi-Fi often has
+# not reassociated yet — a single attempt dies on "Could not resolve host:
+# github.com" and, because Guard 0 counts any dated log line as "handled
+# today", nothing retries until tomorrow. That silently cost two sweeps.
+# Retry the fetch itself rather than pinging something first: the fetch is both
+# the readiness test and the operation that actually has to succeed.
+# Explicit ifs, not `[ ] && return`, for the reason given under "Which jobs
+# run today" above.
+fetch_with_retry() {
+  local attempt=1 delay=15
+  FETCH_WAITED=0
+  while :; do
+    if git fetch --quiet origin main 2>/dev/null; then return 0; fi
+    if [ "$attempt" -ge "$FETCH_ATTEMPTS" ]; then return 1; fi
+    sleep "$delay"
+    FETCH_WAITED=$((FETCH_WAITED + delay))
+    attempt=$((attempt + 1))
+    delay=$((delay * 2))
+  done
+}
+
+if ! fetch_with_retry; then
+  log "FAIL  git fetch failed — no network after $FETCH_ATTEMPTS attempts over ${FETCH_WAITED}s"
+  exit 1
+fi
 git checkout --quiet -B "$BRANCH" origin/main || { log "FAIL  cannot create $BRANCH"; exit 1; }
 
 restore() { git checkout --quiet "$START_BRANCH" 2>/dev/null; }
@@ -128,19 +158,13 @@ if [ -z "$(git status --porcelain)" ]; then
   exit 0
 fi
 
-# ── Validate before asking for review ────────────────────────────────────────
-FAILED=""
-bash -c "$(grep '^node -e' AGENTS.md | head -1)" > /tmp/sweep-integrity.log 2>&1 || FAILED="$FAILED integrity"
-npm test  > /tmp/sweep-test.log  2>&1 || FAILED="$FAILED tests"
-npm run build > /tmp/sweep-build.log 2>&1 || FAILED="$FAILED build"
-
-if [ -n "$FAILED" ]; then
-  log "FAIL  validation failed:$FAILED — no PR opened; branch $BRANCH left for inspection"
-  restore
-  exit 1
-fi
-
-# ── Commit, push, open the PR ────────────────────────────────────────────────
+# ── Commit to the branch BEFORE validating ───────────────────────────────────
+# Validation used to run first, against an uncommitted tree, so a failure left
+# the work as uncommitted changes — which `restore`'s checkout then carried
+# onto $START_BRANCH, dirtying main and jamming Guard 2 on every later run,
+# while the log claimed the branch had been "left for inspection". Committing
+# first makes that claim true and leaves the checkout clean either way.
+# It also means artefacts from the build below can never land in the commit.
 CHANGED="$(git status --porcelain | wc -l | tr -d ' ')"
 git add -A
 git commit -q -m "Daily sweep $TODAY ($JOBS)
@@ -150,6 +174,19 @@ not be verified. Every figure is researched from primary sources; unverifiable
 cells are left null and logged to the gap ledgers.
 " || { log "FAIL  commit failed"; restore; exit 1; }
 
+# ── Validate before asking for review ────────────────────────────────────────
+FAILED=""
+bash -c "$(grep '^node -e' AGENTS.md | head -1)" > /tmp/sweep-integrity.log 2>&1 || FAILED="$FAILED integrity"
+npm test  > /tmp/sweep-test.log  2>&1 || FAILED="$FAILED tests"
+npm run build > /tmp/sweep-build.log 2>&1 || FAILED="$FAILED build"
+
+if [ -n "$FAILED" ]; then
+  log "FAIL  validation failed:$FAILED — no PR opened; work committed on $BRANCH for inspection"
+  restore
+  exit 1
+fi
+
+# ── Push and open the PR ─────────────────────────────────────────────────────
 git push -q -u origin "$BRANCH" || { log "FAIL  push failed"; restore; exit 1; }
 
 BODY="/tmp/sweep-report-$TODAY.md"
