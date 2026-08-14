@@ -2371,7 +2371,7 @@
       "No model card or active-parameter count published, so its real speed and cost profile are unknown",
       "Reachable only through subscription plans rather than a per-token endpoint"
     ],
-    "notes": "Announced 2026-07-19 at WAIC Shanghai as a preview, then given a general-availability launch with standard API pricing on 2026-08-03 (Alibaba Cloud Model Studio blog: \"Qwen3.8-Max: A New Bar for Coding and Cowork\"). Alibaba's own release benchmark table (self-reported, published as an image and not independently re-derivable) claims GPQA Diamond 92.6, Terminal-Bench 2.1 86.6, HLE 43.6, and SWE-bench Pro 67.7 (not the SWE-bench Verified variant this site tracks, so left unset here) — relayed via MarkTechPost and OfficeChai coverage of the announcement. Artificial Analysis's own independent evaluation (artificialanalysis.ai/models/qwen3-8-max and its per-benchmark leaderboards) measured GPQA Diamond 92.7 (close to Alibaba's claim) but Terminal-Bench v2.1 81.3 and HLE 41.4 — both notably below Alibaba's self-reported figures — so the AA-measured numbers are recorded here as the more independently verifiable source, with the discrepancy noted. Pricing ($2.00/$6.00 per 1M input/output tokens) is Alibaba Cloud Model Studio's Singapore/international rate; the China Beijing, Frankfurt, Virginia, Tokyo and Hong Kong regions price lower at $1.65/$4.951. Open weights, promised \"next week\" as of the Aug 3 announcement, had not appeared on Hugging Face as of this update. Context window (983,616) and max output (131,072) match Alibaba Cloud Model Studio's official model-info page (context 1,000,000, max input 991,808 with 1,000,000 minus max-output overhead, max output 131,072); some coverage rounds context down to \"1M tokens.\""
+    "notes": "Announced 2026-07-19 at WAIC Shanghai as a preview, then given a general-availability launch with standard API pricing on 2026-08-03 (Alibaba Cloud Model Studio blog: \"Qwen3.8-Max: A New Bar for Coding and Cowork\"). Alibaba's own release benchmark table (self-reported, published as an image and not independently re-derivable) claims GPQA Diamond 92.6, Terminal-Bench 2.1 86.6, HLE 43.6, and SWE-bench Pro 67.7 (not the SWE-bench Verified variant this site tracks, so left unset here) — relayed via MarkTechPost and OfficeChai coverage of the announcement. Artificial Analysis's own independent evaluation (artificialanalysis.ai/models/qwen3-8-max and its per-benchmark leaderboards) measured GPQA Diamond 92.7 (close to Alibaba's claim) but Terminal-Bench v2.1 81.3 and HLE 41.4 — both notably below Alibaba's self-reported figures — so the AA-measured numbers are recorded here as the more independently verifiable source, with the discrepancy noted. Pricing ($2.00/$6.00 per 1M input/output tokens) is Alibaba Cloud Model Studio's Singapore/international rate; the China Beijing, Frankfurt, Virginia, Tokyo and Hong Kong regions price lower at $1.65/$4.951. Open weights, promised \"next week\" as of the Aug 3 announcement, arrived on 2026-08-13 — but as `qwen3-8-2-4t-a95b`, a reduced text-only variant with a 262K native window rather than this multimodal 1M-context Max build, which stays closed. Context window (983,616) and max output (131,072) match Alibaba Cloud Model Studio's official model-info page (context 1,000,000, max input 991,808 with 1,000,000 minus max-output overhead, max output 131,072); some coverage rounds context down to \"1M tokens.\""
   },
   {
     "id": "qwen3-7-max",
@@ -4924,5 +4924,184 @@
       "No published general-capability scores and no independent leaderboard placement — behavior outside its cyber specialism is undocumented"
     ],
     "notes": "Purpose-trained cybersecurity variant built on GPT-5.6 Sol, reachable only through Daybreak Red, the vetted upper tier of OpenAI's Daybreak defender programme (Daybreak Blue covers general-purpose models), hence availability \"restricted\". Context window (400K, 272K max input), max output, knowledge cutoff (2026-02-16) and pricing ($12.50/$75 per MTok, cached input $1.25) are from OpenAI's own model docs; the model is served on the Responses API only. All eight tracked benchmarks are unpublished — OpenAI reported only cyber-specific evals: a 95.0% Advanced Cybersecurity Completion Rate against 57.3% for GPT-5.5-Cyber and 1.5% for GPT-5.6 Sol, plus an ExploitGym lead over both, and a Preparedness Framework cybersecurity rating of High but below Critical. Artificial Analysis has not indexed it, so costPerTask and speed are null, and its vetted-access gating makes future indexing unlikely. Announced 2026-08-10; OpenAI's API changelog listed the model and the daybreak-red-latest alias on 2026-08-07. GPT-5.5-Cyber (June 2026) is not tracked here and OpenAI states no supersession, so predecessorId stays null."
+  },
+  {
+    "id": "nemotron-3-5-lightning",
+    "name": "Nemotron 3.5 Lightning",
+    "company": "nvidia",
+    "releaseDate": "2026-08-11",
+    "status": "superseded",
+    "tier": "fast",
+    "modality": "text",
+    "contextWindow": 1000000,
+    "maxOutput": 131072,
+    "pricing": {
+      "inputPerMTok": 0.08,
+      "outputPerMTok": 0.2
+    },
+    "costPerTask": {
+      "usd": 0.06,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": "2025-09",
+    "speed": {
+      "outputTokensPerSec": 293.4,
+      "timeToFirstTokenSec": 1.12,
+      "effort": null
+    },
+    "license": {
+      "spdx": null,
+      "name": "OpenMDW-1.1",
+      "kind": "permissive",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "nvidia",
+        "id": "nvidia/nemotron-3.5-lightning-30b-a3b"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": 81.62,
+      "gpqaDiamond": 75.57,
+      "sweBench": 52.8,
+      "terminalBench": 23.46,
+      "aime": null,
+      "hle": 10.47,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Answers begin almost immediately and stream fast enough that an agent loop feels interactive rather than batched",
+      "Interleaved Mamba-2 layers hold throughput up as the context fills, where dense attention models slow down",
+      "Ships weights, training data and post-training recipes together, so it can genuinely be retrained rather than only run",
+      "Fits on a single H100 and the licence permits commercial deployment without negotiation"
+    ],
+    "weaknesses": [
+      "Extremely verbose on reasoning work — it burns roughly twice the tokens of a median model to reach an answer, which eats into the cost advantage its per-token price suggests",
+      "Text-only: no images, screenshots or documents",
+      "Built for throughput rather than depth, and falls away sharply on hard reasoning and long-horizon coding"
+    ],
+    "notes": "30B total / 3B active MoE with a hybrid Mamba-2 + MoE + attention architecture, released alongside NeMo Switchyard, NVIDIA's open model-routing library. Benchmarks are NVIDIA's own model-card figures for the NVFP4 checkpoint (MMLU-Pro 81.62, GPQA Diamond 75.57, SWE-bench Verified 52.80, Terminal-Bench 2.1 23.46, HLE text-only no-tools 10.47); the full-precision repo returned HTTP 401 so those were not separately confirmed. AIME, LMArena Elo and ARC-AGI-2 are unpublished. Knowledge cutoff is the pre-training date (September 2025); post-training data runs to May 2026. NVIDIA publishes no first-party per-token price — $0.08/$0.20 is OpenRouter's standard route, with DeepInfra at $0.05/$0.20 and CoreWeave at $0.10/$0.25, and a free route also exists. Artificial Analysis Intelligence Index 24 at $0.06 per task; it generated 100M tokens running the index against a 42M median, which is the basis for the verbosity note. OpenRouter describes it as distilled from Nemotron 3 Ultra, but no primary source states it replaces any model, so predecessorId stays null."
+  },
+  {
+    "id": "grok-4-6",
+    "name": "Grok 4.6",
+    "company": "xai",
+    "releaseDate": "2026-08-12",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 500000,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 2,
+      "outputPerMTok": 6
+    },
+    "costPerTask": {
+      "usd": 0.84,
+      "effort": "high"
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-02",
+    "speed": {
+      "outputTokensPerSec": 65.1,
+      "timeToFirstTokenSec": 32.3,
+      "effort": "high"
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "xai",
+        "id": "grok-4.6"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "terminalBench": 88.4,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Sustains a long agentic run without losing the thread — the work went into fine-tuning on regenerated trajectories rather than a new base model",
+      "Reasons through dense documents rather than pattern-matching them, which shows in legal and knowledge work",
+      "Holds the previous generation's price despite the capability step, so the cost of a finished task fell outright"
+    ],
+    "weaknesses": [
+      "Very slow to the first answer token — the thinking phase runs for half a minute before any output appears",
+      "Weakest on terminal and command-line work, well behind its scores on other agentic tasks",
+      "Crossing the 200K-token prompt threshold reprices the whole request at double rate, so long-context runs cost more than the headline suggests"
+    ],
+    "notes": "Reuses Grok 4.5's 1.5T-parameter base, with the gains from supervised fine-tuning on regenerated trajectories and reinforcement learning rather than a new pre-train. Terminal-Bench 2.1 88.4% is Artificial Analysis-measured; xAI's own card leads with Terminal-Bench 3.0 (26.5%), a different and much harder version that is not comparable to the 2.1 figure this site tracks. GPQA Diamond, MMLU-Pro, HLE, SWE-bench Verified, AIME and ARC-AGI-2 are unpublished by both xAI and AA, and the model has no arena.ai listing, so lmarenaElo is null — note that the widely-quoted \"1753 Elo\" is GDPval-AA v2, not LMArena. AA Intelligence Index 61 (joint third at release, level with GPT-5.6 Sol), cost per task $0.84 and speed measured at high effort. Pricing $2/$6 applies below a 200K-token prompt; above it every token in the request bills at $4/$12, and a fast variant costs double. xAI publishes no max-output figure. The company rebranded from xAI to SpaceXAI on 2026-07-06 after merging into SpaceX; companies.json still carries the old name."
+  },
+  {
+    "id": "qwen3-8-2-4t-a95b",
+    "name": "Qwen3.8-2.4T-A95B",
+    "company": "alibaba",
+    "releaseDate": "2026-08-13",
+    "status": "superseded",
+    "tier": "flagship",
+    "modality": "text",
+    "contextWindow": 262144,
+    "maxOutput": 131072,
+    "pricing": {
+      "inputPerMTok": 2,
+      "outputPerMTok": 6
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": null,
+      "name": "Qwen3.8-Max License",
+      "kind": "restricted",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 92.6,
+      "sweBench": null,
+      "terminalBench": 86.6,
+      "aime": null,
+      "hle": 43.6,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "The first Max-class Qwen ever released with downloadable weights — the flagship tier itself, not a distilled sibling",
+      "Loads straight into vLLM and SGLang from the release, with FP8 weights published alongside the full checkpoint",
+      "Reasoning runs deep before it answers, which is what carries it through long research and agent tasks"
+    ],
+    "weaknesses": [
+      "Text-only, and the native window is a quarter of what the closed Max serves — vision and the 1M context stay behind the API",
+      "Thinking mode cannot be switched off, so a one-line factual question still pays the full reasoning cost",
+      "Licence pulls large deployments back into a negotiated agreement once revenue or user thresholds are crossed"
+    ],
+    "notes": "Qwen's own model card describes this as the post-trained base that Qwen3.8-Max is built on, with Max adding vision and a non-thinking mode — so it is a distinct, reduced artefact rather than the tracked qwen3-8-max entry going open. 2.4T total / 95B active MoE. Context is 262,144 native, extensible to ~1,010,000; max output is the 131,072 final-response cap (reasoning content may run to 262,144). Benchmarks are Alibaba's own self-reported card figures (GPQA Diamond 92.6, Terminal-Bench 2.1 86.6, HLE 43.6) — note Artificial Analysis independently measured the closely-related Max at 92.7 / 81.3 / 41.4, so the Terminal-Bench and HLE claims here should be read as unverified. SWE-bench Pro 67.7 was also reported but is not the Verified variant this site tracks. MMLU-Pro, AIME, LMArena Elo and ARC-AGI-2 are unpublished, and AA had not indexed this variant separately at the time of this check, so costPerTask and speed are null. Pricing is OpenRouter's hosted rate; Alibaba publishes no first-party price for the open-weight release, which is also served by Together AI and Fireworks AI. The licence permits commercial use but requires prominent model-name attribution above 100M MAU or $20M monthly revenue, and a separate agreement for Model-as-a-Service or AI-assistant products above $50M annual revenue."
   }
 ]

@@ -1,5 +1,51 @@
 [
   {
+    "id": "2026-08-13-qwen3-8-2-4t-a95b",
+    "date": "2026-08-13",
+    "title": "Alibaba open-sources Qwen3.8-2.4T-A95B, its first Max-class model with downloadable weights",
+    "summary": "Alibaba published the weights for Qwen3.8-2.4T-A95B on Hugging Face and ModelScope, a 2.4-trillion-parameter MoE with 95B active — the first time a Qwen-Max-class flagship has been released openly. The open build is the text-only post-trained base that Qwen3.8-Max sits on top of, with a 262K native context rather than Max's vision support and 1M window.",
+    "category": "release",
+    "companies": [
+      "alibaba"
+    ],
+    "modelIds": [
+      "qwen3-8-2-4t-a95b",
+      "qwen3-8-max"
+    ],
+    "sourceName": "Qwen on Hugging Face",
+    "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B"
+  },
+  {
+    "id": "2026-08-12-grok-4-6",
+    "date": "2026-08-12",
+    "title": "SpaceXAI releases Grok 4.6, returning to the intelligence frontier at unchanged prices",
+    "summary": "SpaceXAI shipped Grok 4.6 five weeks after Grok 4.5, reusing the same 1.5-trillion-parameter base and putting the gains into fine-tuning on regenerated trajectories and reinforcement learning. It scores 61 on Artificial Analysis' Intelligence Index — level with GPT-5.6 Sol and third overall — while holding Grok 4.5's $2/$6 per-million-token pricing.",
+    "category": "release",
+    "companies": [
+      "xai"
+    ],
+    "modelIds": [
+      "grok-4-6"
+    ],
+    "sourceName": "Artificial Analysis",
+    "sourceUrl": "https://artificialanalysis.ai/articles/grok-4-6-benchmarks-and-analysis"
+  },
+  {
+    "id": "2026-08-11-nemotron-3-5-lightning",
+    "date": "2026-08-11",
+    "title": "NVIDIA releases Nemotron 3.5 Lightning, a 30B hybrid Mamba-2 MoE built for throughput",
+    "summary": "NVIDIA published Nemotron 3.5 Lightning, a 30B mixture-of-experts model with 3B active parameters that interleaves Mamba-2, MoE and attention layers across a 1M-token context, alongside NeMo Switchyard, an open model-routing library. It serves at roughly 293 tokens/sec under OpenMDW-1.1, trading peak intelligence for speed on high-volume agent work.",
+    "category": "release",
+    "companies": [
+      "nvidia"
+    ],
+    "modelIds": [
+      "nemotron-3-5-lightning"
+    ],
+    "sourceName": "NVIDIA on Hugging Face",
+    "sourceUrl": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4"
+  },
+  {
     "id": "2026-08-10-gpt-5-6-cyber",
     "date": "2026-08-10",
     "title": "OpenAI launches GPT-5.6-Cyber, its first model trained to build exploits",
