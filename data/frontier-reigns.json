@@ -165,7 +165,7 @@
     "start": "2026-05-19",
     "end": "2026-07-21",
     "dethronedBy": "gemini-3-6-flash",
-    "composite": 0.884
+    "composite": 0.9078
   },
   {
     "modelId": "gemini-3-6-flash",
@@ -173,6 +173,6 @@
     "start": "2026-07-21",
     "end": null,
     "dethronedBy": null,
-    "composite": 0.9351
+    "composite": 0.9585
   }
 ]
