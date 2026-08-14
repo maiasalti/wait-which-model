@@ -25,7 +25,7 @@ A Next.js site tracking frontier AI models: **Models Directory** (`/`), **Compar
 | "execute model specs protocol" / "fill in model specs" | `protocols/MODEL_SPECS_PROTOCOL.md` — fills `speed`, `license`, `apiIds`, `retirementDate`, `predecessorId` from primary sources only; `predecessorId` requires an explicit replacement claim in the lab's own announcement, never inferred from naming | `.claude/agents/spec-filler.md` |
 | "recompute frontier status" / run automatically after the release and data-gap protocols | `protocols/FRONTIER_STATUS_PROTOCOL.md` — `node scripts/frontier-status.js` (then `--apply`); **`status` is computed, never hand-assigned** except `deprecated` | — |
 | "recompute frontier reigns" / run automatically after any benchmark data change | `node scripts/frontier-reigns.js` (then `--apply`) — reigns are **derived**, never hand-edited | — |
-| _(automatic)_ **daily sweep** | `protocols/DAILY_SWEEP_PROTOCOL.md` — launchd, weekdays 09:00. Runs health + new-model scan daily, stats Tue/Thu, news Mon. Opens a **PR**; never writes to `main`. Aborts on a dirty working tree. | `scripts/daily-sweep.sh` |
+| _(automatic)_ **daily sweep** | `protocols/DAILY_SWEEP_PROTOCOL.md` — launchd, weekdays 10:30. Runs health + new-model scan daily, stats Tue/Thu, news Mon. Opens a **PR**; never writes to `main`. Aborts on a dirty working tree. | `scripts/daily-sweep.sh` |
 
 Model-release, news-scan, stats-filler, data-gap-finder, and spec-filler require **web research — never add figures from memory**; unverified values are `null`. The news scan covers ALL frontier-lab news (funding, policy, research…), not just releases.
 

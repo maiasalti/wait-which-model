@@ -3,6 +3,13 @@
 **Date:** 2026-08-06
 **Status:** draft — awaiting approval
 
+> **Amended 2026-08-13.** The 09:00 slot below was wrong in practice: launchd fired the job
+> as the laptop woke, before Wi-Fi had reassociated, so `git fetch` died on DNS and — because
+> guard 0 counts a `FAIL` as "already ran today" — nothing retried until the next morning.
+> Two sweeps were lost that way. The schedule moved to **10:30 local** and the fetch now
+> retries with backoff. Every "09:00" below is the original design, not the live config;
+> `protocols/DAILY_SWEEP_PROTOCOL.md` is authoritative.
+
 ## Problem
 
 Every data update this site has ever had was triggered by hand. There is no schedule
