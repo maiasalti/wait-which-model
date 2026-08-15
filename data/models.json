@@ -3783,7 +3783,7 @@
       "Fabricates heavily on knowledge probes, and factual coverage has not moved with the agentic gains",
       "Ships without a Jinja chat template — messages go through DeepSeek's own Python encoding scripts instead"
     ],
-    "notes": "The production release of DeepSeek-V4-Flash, superseding April's preview: same 284B/13B MoE and DSpark speculative-decoding module, with all gains from re-post-training. Terminal-Bench 2.1 82.7 is DeepSeek's own figure at max reasoning effort in its minimal-mode harness; Artificial Analysis measures 78.7 on the same benchmark. GPQA Diamond 90.8 and HLE 36.8% (no tools) are Artificial Analysis' measurements — DeepSeek published neither. Also reported by DeepSeek: NL2Repo 54.2, Cybergym 76.7, DeepSWE 54.4, Toolathlon-Verified 70.3, Agents' Last Exam 25.2. MMLU-Pro, SWE-bench Verified, AIME, LMArena and ARC-AGI-2 are unpublished. Artificial Analysis scores it 50 on its Intelligence Index, 10 points above the April preview’s 40. Max output is the 384K DeepSeek recommends for high and max effort; the OpenRouter endpoint caps completions at 65,536."
+    "notes": "The production release of DeepSeek-V4-Flash, superseding April's preview: same 284B/13B MoE and DSpark speculative-decoding module, with all gains from re-post-training. Terminal-Bench 2.1 82.7 is DeepSeek's own figure at max reasoning effort in its minimal-mode harness; Artificial Analysis measures 78.7 on the same benchmark. GPQA Diamond 90.8 and HLE 36.8% (no tools) are Artificial Analysis' measurements — DeepSeek published neither. Also reported by DeepSeek: NL2Repo 54.2, Cybergym 76.7, DeepSWE 54.4, Toolathlon-Verified 70.3, Agents' Last Exam 25.2. MMLU-Pro, SWE-bench Verified, AIME, LMArena and ARC-AGI-2 are unpublished. Artificial Analysis scores it 50 on its Intelligence Index, 10 points above the April preview’s 40. Max output is the 384K DeepSeek recommends for high and max effort; the OpenRouter endpoint caps completions at 65,536. DeepSeek announced an API price rise effective 16:00 UTC on 2026-08-16 that takes V4-Flash output from $0.28 to roughly $1.32 per MTok; the $0.14/$0.28 recorded here is the rate in effect until then."
   },
   {
     "id": "claude-sonnet-4-6",
@@ -5103,5 +5103,116 @@
       "Licence pulls large deployments back into a negotiated agreement once revenue or user thresholds are crossed"
     ],
     "notes": "Qwen's own model card describes this as the post-trained base that Qwen3.8-Max is built on, with Max adding vision and a non-thinking mode — so it is a distinct, reduced artefact rather than the tracked qwen3-8-max entry going open. 2.4T total / 95B active MoE. Context is 262,144 native, extensible to ~1,010,000; max output is the 131,072 final-response cap (reasoning content may run to 262,144). Benchmarks are Alibaba's own self-reported card figures (GPQA Diamond 92.6, Terminal-Bench 2.1 86.6, HLE 43.6) — note Artificial Analysis independently measured the closely-related Max at 92.7 / 81.3 / 41.4, so the Terminal-Bench and HLE claims here should be read as unverified. SWE-bench Pro 67.7 was also reported but is not the Verified variant this site tracks. MMLU-Pro, AIME, LMArena Elo and ARC-AGI-2 are unpublished, and AA had not indexed this variant separately at the time of this check, so costPerTask and speed are null. Pricing is OpenRouter's hosted rate; Alibaba publishes no first-party price for the open-weight release, which is also served by Together AI and Fireworks AI. The licence permits commercial use but requires prominent model-name attribution above 100M MAU or $20M monthly revenue, and a separate agreement for Model-as-a-Service or AI-assistant products above $50M annual revenue."
+  },
+  {
+    "id": "deepseek-v4-pro-0813",
+    "name": "DeepSeek-V4-Pro-0813",
+    "company": "deepseek",
+    "releaseDate": "2026-08-12",
+    "status": "superseded",
+    "tier": "flagship",
+    "modality": "text",
+    "contextWindow": 1000000,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 0.435,
+      "outputPerMTok": 0.87
+    },
+    "costPerTask": {
+      "usd": 0.25,
+      "effort": "max"
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": 89.7,
+      "timeToFirstTokenSec": 1.82,
+      "effort": "max"
+    },
+    "license": {
+      "spdx": "MIT",
+      "name": "MIT License",
+      "kind": "permissive",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 93,
+      "sweBench": 80.6,
+      "terminalBench": 87.9,
+      "aime": null,
+      "hle": 42.7,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Answers start almost immediately even at maximum reasoning effort, which is rare among models this size",
+      "Weights ship under MIT alongside the API, so the flagship itself can be self-hosted rather than only rented",
+      "Released with Harness, DeepSeek's own open agent runtime, so the tooling around the model is inspectable rather than proprietary"
+    ],
+    "weaknesses": [
+      "Every headline agentic figure is vendor-reported and the evaluation harness for them is unreleased, so none of it has been independently reproduced",
+      "Text-only — no images, screenshots or documents",
+      "The launch price is being withdrawn within days of release, and the replacement schedule varies by time of day, making cost hard to plan against"
+    ],
+    "notes": "1.57T total / 48B active MoE; the general-availability release of V4-Pro, which DeepSeek's own model card describes as \"superseding the preview version\". Benchmarks are DeepSeek's self-reported figures (GPQA Diamond 93.0, SWE-bench Verified 80.6, Terminal-Bench 2.1 87.9, HLE 42.7 without tools / 60 with tools) — no third-party evaluator had replicated any of them at the time of this check, and the agentic benchmark harness is unreleased, so treat them as claims rather than measurements. MMLU-Pro, AIME, LMArena Elo and ARC-AGI-2 are unpublished. Artificial Analysis Intelligence Index 53 at $0.25 per task, measured at max effort. Pricing $0.435/$0.87 is the rate in effect through 2026-08-16 15:59 UTC; at 16:00 UTC that day DeepSeek replaces it with a peak/off-peak schedule that raises output to roughly $3.96 per MTok at peak — a rise the company put at between 50% and 1,100% across V4-Pro and V4-Flash. Shipped alongside DeepSeek Harness v0.1, an MIT-licensed terminal coding agent positioned against Claude Code and Codex."
+  },
+  {
+    "id": "gemini-3-7-flash",
+    "name": "Gemini 3.7 Flash",
+    "company": "google",
+    "releaseDate": "2026-08-13",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "contextWindow": 1000000,
+    "maxOutput": 64000,
+    "pricing": {
+      "inputPerMTok": 0.75,
+      "outputPerMTok": 3.75
+    },
+    "costPerTask": {
+      "usd": 0.4,
+      "effort": "high"
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-03",
+    "speed": {
+      "outputTokensPerSec": 340.1,
+      "timeToFirstTokenSec": 9.83,
+      "effort": "high"
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "terminalBench": 85.8,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "The fastest model Artificial Analysis has measured — output streams quickly enough that it reads as instant in interactive use",
+      "Plans before acting and recovers from failed tool calls more reliably than the Flash before it, which is where the coding gains actually show",
+      "Near-perfect recall across a long context, so the window is usable rather than nominal",
+      "Takes audio and video alongside text and images, unusual at this price"
+    ],
+    "weaknesses": [
+      "Slow to the first answer token despite the raw streaming speed — the thinking phase runs long before output begins",
+      "The launch price is introductory and doubles on 2027-01-01, so anything budgeted on it has a known expiry",
+      "Google published no GPQA Diamond, MMLU-Pro or SWE-bench Verified figure, leaving it hard to place against models outside its own family"
+    ],
+    "notes": "Third Flash release in as many months, arriving three weeks after 3.6 Flash and built on it, though Google's model card stops short of saying it replaces it. Terminal-Bench 2.1 85.8% is from Google's own card; the card also reports Terminal-Bench 3.0 (14.9%), a different and much harder version not comparable to the 2.1 figure tracked here. HLE is left null deliberately: Google reports 53.6% on HLE-Verified, a cleaned subset rather than the full exam this site tracks, and taking it at face value would put a fast-tier model above every tracked flagship. GPQA Diamond, MMLU-Pro, SWE-bench Verified, AIME and ARC-AGI-2 are unreported. Artificial Analysis Intelligence Index 56 at $0.40 per task and 340.1 output tokens/sec — first of 188 models on speed — both at high effort. Pricing $0.75/$3.75 is introductory through 2026-12-31 and doubles to $1.50/$7.50 on 2027-01-01; it launched at half of 3.6 Flash's rate."
   }
 ]
