@@ -2270,7 +2270,7 @@
     "name": "Gemini 3.5 Flash",
     "company": "google",
     "releaseDate": "2026-05-19",
-    "status": "frontier",
+    "status": "superseded",
     "tier": "fast",
     "modality": "multimodal",
     "contextWindow": 1048576,
@@ -3726,7 +3726,7 @@
     "name": "DeepSeek-V4-Flash-0731",
     "company": "deepseek",
     "releaseDate": "2026-07-31",
-    "status": "frontier",
+    "status": "superseded",
     "tier": "fast",
     "modality": "text",
     "contextWindow": 1048576,
@@ -5103,5 +5103,171 @@
       "Licence pulls large deployments back into a negotiated agreement once revenue or user thresholds are crossed"
     ],
     "notes": "Qwen's own model card describes this as the post-trained base that Qwen3.8-Max is built on, with Max adding vision and a non-thinking mode — so it is a distinct, reduced artefact rather than the tracked qwen3-8-max entry going open. 2.4T total / 95B active MoE. Context is 262,144 native, extensible to ~1,010,000; max output is the 131,072 final-response cap (reasoning content may run to 262,144). Benchmarks are Alibaba's own self-reported card figures (GPQA Diamond 92.6, Terminal-Bench 2.1 86.6, HLE 43.6) — note Artificial Analysis independently measured the closely-related Max at 92.7 / 81.3 / 41.4, so the Terminal-Bench and HLE claims here should be read as unverified. SWE-bench Pro 67.7 was also reported but is not the Verified variant this site tracks. MMLU-Pro, AIME, LMArena Elo and ARC-AGI-2 are unpublished, and AA had not indexed this variant separately at the time of this check, so costPerTask and speed are null. Pricing is OpenRouter's hosted rate; Alibaba publishes no first-party price for the open-weight release, which is also served by Together AI and Fireworks AI. The licence permits commercial use but requires prominent model-name attribution above 100M MAU or $20M monthly revenue, and a separate agreement for Model-as-a-Service or AI-assistant products above $50M annual revenue."
+  },
+  {
+    "id": "gemini-3-7-flash",
+    "name": "Gemini 3.7 Flash",
+    "company": "google",
+    "releaseDate": "2026-08-13",
+    "status": "frontier",
+    "tier": "fast",
+    "modality": "multimodal",
+    "contextWindow": 1048576,
+    "maxOutput": 65536,
+    "pricing": {
+      "inputPerMTok": 0.75,
+      "outputPerMTok": 3.75
+    },
+    "costPerTask": {
+      "usd": 0.26,
+      "effort": "medium"
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-03",
+    "speed": {
+      "outputTokensPerSec": 273.6,
+      "timeToFirstTokenSec": 4.22,
+      "effort": "medium"
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "google",
+        "id": "gemini-3.7-flash"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": "gemini-3-6-flash",
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 94.5,
+      "sweBench": null,
+      "terminalBench": 85.8,
+      "aime": null,
+      "hle": 53.6,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Adapts to roadblocks mid-task instead of stalling — clarifies intent and follows multi-step instructions more reliably than 3.6 Flash",
+      "Low-effort mode lands close to the previous model's high-effort quality, so routine tasks run at a fraction of the cost and wait",
+      "Cleaner multi-step tool calling and planning means fewer retries and less manual oversight in agent pipelines"
+    ],
+    "weaknesses": [
+      "Time to first answer token stretches to roughly 10 seconds median at high effort, with worst-case waits near a minute — the effort dial needs deliberate tuning, not the default",
+      "Launch coverage is narrowly focused on coding and agent benchmarks — general chat and creative behavior are largely uncharacterized so far"
+    ],
+    "notes": "Shipped three weeks after 3.6 Flash as an algorithmic refinement of the same base model (Google's own framing: 'the core reasoning foundation'), not a new pretraining run; Google replaced 3.6 Flash with 3.7 Flash in the Gemini app's model picker on launch day (9to5Google), which is the explicit replacement evidence behind predecessorId here. Google's own headline coding-benchmark table reports DeepSWE v1.1 65.3% (was 49.0%), FrontierCode 1.1 Main 43.6% (was 34.4%), AutomationBench 30.4% (was 17.0%) and WebDev Arena Elo 1588 (was 1538) — none of these map to this site's tracked keys. GPQA Diamond 94.5% and HLE (Verified) 53.6% are Artificial Analysis' high-effort measurements; Terminal-Bench 2.1 85.8% is Google's own reported figure (vs 78.0% for 3.6 Flash). costPerTask and speed use AA's medium-effort listing per this site's convention ($0.26/task, 273.6 tok/s, 4.22s to first answer token); AA's high-effort listing instead shows $0.40/task at the introductory price. Pricing is the introductory rate ($0.75/$3.75 per 1M input/output tokens) in effect through 2026-12-31; it rises to $1.50/$7.50 on 2027-01-01."
+  },
+  {
+    "id": "qwen3-8-27b",
+    "name": "Qwen3.8-27B",
+    "company": "alibaba",
+    "releaseDate": "2026-08-14",
+    "status": "unknown",
+    "tier": "balanced",
+    "modality": "multimodal",
+    "contextWindow": 262144,
+    "maxOutput": 131072,
+    "pricing": {
+      "inputPerMTok": 0.45,
+      "outputPerMTok": 3.2
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-27B/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 89.2,
+      "sweBench": null,
+      "terminalBench": 73,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Runs comfortably on a single high-end consumer GPU while staying competitive with Alibaba's own cloud-only siblings on coding and office tasks",
+      "Vision and video understanding are built into the same dense weights from the start, not bolted on as a separate adapter",
+      "Reasoning effort is adjustable at inference time (off through xhigh), so a quick lookup and a long agent run can share one download"
+    ],
+    "weaknesses": [
+      "No competition-math (AIME) figure has been published, so its strength relative to peers on hard math is undocumented",
+      "Trails the closed frontier flagships on the hardest science and knowledge questions — a 27.8B dense model has a real ceiling",
+      "No technical report or knowledge cutoff disclosed at launch, so training-data freshness and provenance are unclear"
+    ],
+    "notes": "27.8B dense (not MoE) multimodal model — distinct from the 2.4T-parameter MoE flagship qwen3-8-2-4t-a95b (2026-08-13) and the closed qwen3-8-max, and is the smaller open checkpoint Alibaba promised alongside Qwen3.8-Max's 2026-08-03 GA announcement. GPQA Diamond 89.2% and Terminal-Bench 2.1 73.0% (up from 63.4% for Qwen3.6-27B) are from Alibaba's own release material; SWE-bench Pro 61.7% and OSWorld-Verified 84.3% were also reported but are not the SWE-bench Verified variant this site tracks. Qwen's own announcement (X/@Alibaba_Qwen) says it 'outperforms Qwen3.7-Plus overall' — comparison language, not a replacement statement, so predecessorId is left null. Pricing is OpenRouter's hosted rate ($0.45/$3.20 per 1M in/out); Alibaba has not published a first-party DashScope price for this open-weight checkpoint. Context is 262,144 native, extendable to roughly 1M via YaRN; max output is the 131,072 cap."
+  },
+  {
+    "id": "glm-5-3",
+    "name": "GLM-5.3",
+    "company": "zhipu",
+    "releaseDate": "2026-08-14",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "text",
+    "contextWindow": 1000000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "restricted",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "terminalBench": 88.2,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Independently drives front-end builds, bug fixes and refactors through repeated self-verification to a deliverable state with little hand-holding",
+      "Finds and triages real vulnerabilities at scale — Z.ai's own evaluation run surfaced thousands of flaws across public repositories",
+      "Reaches a meaningfully higher agentic ceiling than 5.2 without a larger base model — the entire gain came from more post-training, not more parameters"
+    ],
+    "weaknesses": [
+      "Still a step behind the closed frontier on the single hardest coding problems, even as it closes most of the gap on everyday agent work",
+      "Good at finding exploitable bugs but weaker at writing the exploits itself — defensive security strength doesn't carry over to offensive tasks",
+      "Weights are held back behind a safety review at launch, so self-hosting and local fine-tuning aren't possible yet"
+    ],
+    "notes": "Same ~744B-parameter (~40B active) MoE base as GLM-5.2 — Z.ai's own framing is 'scaling post-training is all we did for GLM-5.3' — so predecessorId is left null per this site's rule against lineage/build-upon language as replacement evidence, even though several outlets call GLM-5.2 its 'predecessor.' Z.ai's launch benchmark table is entirely agentic/coding/cyber (Terminal-Bench 2.1 88.2%, Terminal-Bench 3.0 4.6%→28.3%, DeepSWE v1.1 46.2%→66.9%, SWE-Marathon v1.1 19.4%→42.5%, AutomationBench 26.2%→48.2%, Agents' Last Exam 23.8%→28.5%, CyberGym 84.5% — ahead of Claude Mythos 5's 83.8% and GPT-5.6 Sol's 83.6% by Z.ai's account) and doesn't touch the site's tracked knowledge/reasoning keys, consistent with the unchanged-base-model claim. Context window and max output are carried over unchanged from GLM-5.2 (1M / 128K) pending a dedicated 5.3 model card. No public per-token API pricing yet — available today only via the GLM Coding Plan subscription (Lite/Pro/Max monthly plans) and a staged API rollout; Z.ai says open weights follow in roughly two weeks after safety hardening, at which point openWeights/license/pricing should be revisited."
   }
 ]

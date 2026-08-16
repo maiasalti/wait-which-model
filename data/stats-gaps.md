@@ -383,3 +383,23 @@ New-model-release research on 2026-08-07, scoped to `command-a` and `command-a-p
 | grok-4-6 | mmluPro / gpqaDiamond / sweBench / aime / hle / lmarenaElo / arcAgi2 | 2026-08-14 | xAI's own card reports only deepSwe, CursorBench, FrontierCode, SWE-Marathon, Terminal-Bench 3.0, APEX-Agents, DeepSearchQA and CyberGym — none map to these keys; AA publishes the composite index plus Terminal-Bench 2.1 (recorded) but no per-benchmark breakdown for the rest; no arena.ai listing exists, and the widely-quoted "1753 Elo" is GDPval-AA v2, not LMArena |
 | qwen3-8-2-4t-a95b | mmluPro / sweBench / aime / lmarenaElo / arcAgi2 | 2026-08-14 | absent from Alibaba's own model-card benchmark table (which reports GPQA Diamond, Terminal-Bench 2.1, HLE, SWE-bench Pro, Deep SWE, PaperBench and IFBench); SWE-bench Pro 67.7 is not the Verified variant tracked here; no arena.ai listing for the open-weight variant |
 | nemotron-3-5-lightning | aime / lmarenaElo / arcAgi2 | 2026-08-14 | not in NVIDIA's model-card benchmark table (which covers MMLU-Pro, GPQA Diamond, SWE-bench Verified, Terminal-Bench 2.1, HLE, SciCode, IFBench and AA-LCR); no arena.ai listing |
+
+New-model-release research on 2026-08-16, scoped to `gemini-3-7-flash`, `qwen3-8-27b` and `glm-5-3`. WebFetch returned `EGRESS_BLOCKED` for nearly every target domain this session (blog.google, deepmind.google, ai.google.dev, artificialanalysis.ai, huggingface.co, docs.z.ai, marktechpost.com, venturebeat.com, openrouter.ai, and most secondary trackers; storage.googleapis.com PDFs were reachable but image-based/not machine-readable) — findings rest on WebSearch-synthesized excerpts, cross-checked across multiple independent outlets each where possible.
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| gemini-3-7-flash | mmluPro | 2026-08-16 | not reported by Google at launch (headline table is DeepSWE v1.1/FrontierCode 1.1/AutomationBench/WebDev Arena instead); not found on any MMLU-Pro tracker |
+| gemini-3-7-flash | sweBench | 2026-08-16 | Google published no SWE-bench Verified figure for 3.7 Flash (DeepSWE v1.1 65.3% and FrontierCode 1.1 Main 43.6% reported instead, neither of which is SWE-bench) |
+| gemini-3-7-flash | aime | 2026-08-16 | not reported by Google; not found on any AIME tracker |
+| gemini-3-7-flash | lmarenaElo | 2026-08-16 | not found on arena.ai's text leaderboard; only the separate WebDev Arena Elo (1588, a different arena) was published |
+| gemini-3-7-flash | arcAgi2 | 2026-08-16 | not reported by Google; not found on ARC Prize or tracker leaderboards |
+| qwen3-8-27b | mmluPro | 2026-08-16 | not in Alibaba's own release material or on any MMLU-Pro tracker found |
+| qwen3-8-27b | sweBench | 2026-08-16 | Alibaba reports SWE-bench Pro (61.7%), not the Verified variant this field tracks |
+| qwen3-8-27b | aime | 2026-08-16 | no AIME figure published or found on any tracker |
+| qwen3-8-27b | hle | 2026-08-16 | secondary coverage references the model's HLE standing relative to Qwen3.7-Plus and Opus 4.6 Max without giving an absolute score; no exact figure traceable to a primary source |
+| qwen3-8-27b | lmarenaElo | 2026-08-16 | no arena.ai text-leaderboard listing found |
+| qwen3-8-27b | arcAgi2 | 2026-08-16 | not reported by Alibaba; not on ARC Prize or tracker leaderboards |
+| qwen3-8-27b | knowledgeCutoff | 2026-08-16 | not disclosed by Alibaba in the GitHub repo, HF listing (blocked from direct fetch) or any secondary source found; explicitly called out as undisclosed by one source |
+| glm-5-3 | mmluPro / gpqaDiamond / sweBench / aime / hle / lmarenaElo / arcAgi2 | 2026-08-16 | Z.ai's launch benchmark table is entirely agentic/coding/cyber (Terminal-Bench 2.1/3.0, DeepSWE v1.1, SWE-Marathon v1.1, AutomationBench, Agents' Last Exam, CyberGym) — none of the tracked knowledge/reasoning keys were re-reported, consistent with Z.ai's stated "same base model, post-training only" framing; not on arena.ai or Artificial Analysis (too new, no public API pricing or weights yet) |
+| glm-5-3 | knowledgeCutoff | 2026-08-16 | not disclosed for the 5.3 post-training run specifically; GLM-5.2's cutoff (2026-03) is not confirmed to carry over |
+| glm-5-3 | pricing (input/output) | 2026-08-16 | Z.ai's official pricing table still ends at GLM-5.2 with no GLM-5.3 row; only the GLM Coding Plan's flat monthly subscription tiers ($18/$80/$168) are public, not a per-token rate |
