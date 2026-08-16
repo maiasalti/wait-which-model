@@ -1,5 +1,54 @@
 [
   {
+    "id": "2026-08-14-glm-5-3",
+    "date": "2026-08-14",
+    "title": "Z.ai ships GLM-5.3, its strongest open-weights coding model — but weights aren't out yet",
+    "summary": "Z.ai released GLM-5.3 through its API and GLM Coding Plan on the same base model as GLM-5.2, saying every capability gain came from scaled-up post-training. The company leads with agentic and cyber-defense gains (CyberGym 84.5%, AutomationBench nearly doubling to 48.2%, Terminal-Bench 2.1 88.2%) and says downloadable weights will follow in about two weeks once a safety review is complete.",
+    "category": "release",
+    "companies": [
+      "zhipu"
+    ],
+    "modelIds": [
+      "glm-5-3",
+      "glm-5-2"
+    ],
+    "sourceName": "Z.ai",
+    "sourceUrl": "https://x.com/Zai_org/status/2088132965922476159"
+  },
+  {
+    "id": "2026-08-14-qwen3-8-27b",
+    "date": "2026-08-14",
+    "title": "Alibaba open-sources Qwen3.8-27B, the dense checkpoint promised alongside Qwen3.8-Max",
+    "summary": "Qwen released Qwen3.8-27B under Apache 2.0, a 27.8B-parameter dense multimodal model (text, image, video) with a 262K native context extendable toward 1M — the smaller open-weight release Alibaba had promised the week it shipped Qwen3.8-Max. It is distinct from the 2.4T-parameter MoE flagship Qwen3.8-2.4T-A95B that Alibaba open-sourced the day before, and targets single-GPU local deployment.",
+    "category": "release",
+    "companies": [
+      "alibaba"
+    ],
+    "modelIds": [
+      "qwen3-8-27b",
+      "qwen3-8-max",
+      "qwen3-8-2-4t-a95b"
+    ],
+    "sourceName": "Qwen (Alibaba)",
+    "sourceUrl": "https://x.com/Alibaba_Qwen/status/2088280182356611304"
+  },
+  {
+    "id": "2026-08-13-gemini-3-7-flash",
+    "date": "2026-08-13",
+    "title": "Google releases Gemini 3.7 Flash, halving Flash pricing while boosting coding and agent scores",
+    "summary": "Google shipped Gemini 3.7 Flash just three weeks after 3.6 Flash, calling it an algorithmic refinement of the same base model rather than a new pretraining run. Google reports DeepSWE v1.1 rising from 49.0% to 65.3% and FrontierCode 1.1 Main from 34.4% to 43.6%, at an introductory price of $0.75/$3.75 per million input/output tokens (half of 3.6 Flash's launch rate) through the end of 2026.",
+    "category": "release",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [
+      "gemini-3-7-flash",
+      "gemini-3-6-flash"
+    ],
+    "sourceName": "Google",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/"
+  },
+  {
     "id": "2026-08-13-qwen3-8-2-4t-a95b",
     "date": "2026-08-13",
     "title": "Alibaba open-sources Qwen3.8-2.4T-A95B, its first Max-class model with downloadable weights",
