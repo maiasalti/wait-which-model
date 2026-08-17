@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-08-14-anthropic-risk-report",
+    "date": "2026-08-14",
+    "title": "Anthropic raises its misalignment risk estimate to 'low' and discloses an unreleased Model 2",
+    "summary": "Anthropic published its second company-wide Risk Report under version 3.4 of its Responsible Scaling Policy, covering 24 February to 15 July 2026. It raises the broad estimate of catastrophic harm from misalignment in high-stakes settings from 'very low' to 'low', reports that its most concrete task-based capability evaluations have saturated, and discloses an internal model called Model 2 that is somewhat more capable than Claude Mythos 5 and which Anthropic says it has no current plans to release externally.",
+    "category": "company",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-fable-5"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/aug-2026-risk-report"
+  },
+  {
     "id": "2026-08-14-glm-5-3",
     "date": "2026-08-14",
     "title": "Z.ai ships GLM-5.3, its strongest open-weights coding model — but weights aren't out yet",
@@ -110,6 +125,19 @@
     "sourceUrl": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/"
   },
   {
+    "id": "2026-08-10-openai-tender-offer",
+    "date": "2026-08-10",
+    "title": "OpenAI completes a $7bn employee share buyback at a flat $852bn valuation",
+    "summary": "OpenAI closed a $7 billion tender offer for shares held by current and former employees, priced at an $852 billion valuation — unchanged from the March 2026 round in which it raised $122 billion, and the first time its valuation has held flat between successive deals. OpenAI funded the buyback from its own cash with no outside buyers participating, months after filing confidentially for an IPO; no exchange, ticker or listing date has been set.",
+    "category": "company",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [],
+    "sourceName": "CNBC",
+    "sourceUrl": "https://www.cnbc.com/2026/08/10/openai-wraps-7-billion-share-sale-ahead-of-potential-ipo-.html"
+  },
+  {
     "id": "2026-08-05-muse-spark-1-2",
     "date": "2026-08-05",
     "title": "Meta releases Muse Spark 1.2 and Muse Code, its first coding agent",
@@ -123,6 +151,35 @@
     ],
     "sourceName": "Meta AI Research",
     "sourceUrl": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2"
+  },
+  {
+    "id": "2026-08-04-white-house-frontier-framework",
+    "date": "2026-08-04",
+    "title": "White House convenes OpenAI, Anthropic, Google and Meta on a voluntary frontier-model testing framework",
+    "summary": "The White House hosted OpenAI, Anthropic, Google and Meta to review the completed voluntary framework for evaluating the cybersecurity capabilities of frontier models, mandated by the 2 June executive order. The framework lets developers give the government early access to covered models for up to 30 days before launch, and explicitly cannot be used to create a mandatory licensing or pre-clearance regime; no public commitments came out of the meeting.",
+    "category": "policy",
+    "companies": [
+      "openai",
+      "anthropic",
+      "google",
+      "meta"
+    ],
+    "modelIds": [],
+    "sourceName": "NBC News",
+    "sourceUrl": "https://www.nbcnews.com/tech/security/white-house-meets-ai-giants-rules-anthropic-models-offline-rcna590866"
+  },
+  {
+    "id": "2026-08-04-anthropic-global-affairs",
+    "date": "2026-08-04",
+    "title": "Anthropic names Tino Cuéllar its first Chief Global Affairs Officer",
+    "summary": "Anthropic appointed Mariano-Florentino (Tino) Cuéllar — until recently President of the Carnegie Endowment for International Peace, and previously a Justice of the Supreme Court of California — as its first Chief Global Affairs Officer, leading policy, international engagement and government relations. Cuéllar had served as a trustee of Anthropic's Long-Term Benefit Trust and stepped down from that seat to take the role.",
+    "category": "company",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/tino-cuellar"
   },
   {
     "id": "2026-05-20-command-a-plus",
