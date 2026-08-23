@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-08-19-ornith-1-5",
+    "date": "2026-08-19",
+    "title": "DeepReinforce releases Ornith-1.5, an MIT-licensed open-weights family trained by self-improvement",
+    "summary": "DeepReinforce's Ornith team shipped Ornith-1.5 in three open-weight sizes (9B, 35B-A3B, 397B), trained with a self-improvement loop where the model generates its own training tasks, scaffolds and solution rollouts. The 397B flagship reports Terminal-Bench 2.1 (86.1) and SWE-bench Verified (86) scores edging past Claude Opus 4.8's launch figures.",
+    "category": "release",
+    "companies": [
+      "deepreinforce"
+    ],
+    "modelIds": [
+      "ornith-1-5-397b"
+    ],
+    "sourceName": "Ornith",
+    "sourceUrl": "https://ornith.ai/ornith_1_5.html"
+  },
+  {
     "id": "2026-08-14-glm-5-3",
     "date": "2026-08-14",
     "title": "Z.ai ships GLM-5.3, its strongest open-weights coding model — but weights aren't out yet",

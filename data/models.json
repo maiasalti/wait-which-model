@@ -5269,5 +5269,63 @@
       "Weights are held back behind a safety review at launch, so self-hosting and local fine-tuning aren't possible yet"
     ],
     "notes": "Same ~744B-parameter (~40B active) MoE base as GLM-5.2 — Z.ai's own framing is 'scaling post-training is all we did for GLM-5.3' — so predecessorId is left null per this site's rule against lineage/build-upon language as replacement evidence, even though several outlets call GLM-5.2 its 'predecessor.' Z.ai's launch benchmark table is entirely agentic/coding/cyber (Terminal-Bench 2.1 88.2%, Terminal-Bench 3.0 4.6%→28.3%, DeepSWE v1.1 46.2%→66.9%, SWE-Marathon v1.1 19.4%→42.5%, AutomationBench 26.2%→48.2%, Agents' Last Exam 23.8%→28.5%, CyberGym 84.5% — ahead of Claude Mythos 5's 83.8% and GPT-5.6 Sol's 83.6% by Z.ai's account) and doesn't touch the site's tracked knowledge/reasoning keys, consistent with the unchanged-base-model claim. Context window and max output are carried over unchanged from GLM-5.2 (1M / 128K) pending a dedicated 5.3 model card. No public per-token API pricing yet — available today only via the GLM Coding Plan subscription (Lite/Pro/Max monthly plans) and a staged API rollout; Z.ai says open weights follow in roughly two weeks after safety hardening, at which point openWeights/license/pricing should be revisited."
+  },
+  {
+    "id": "ornith-1-5-397b",
+    "name": "Ornith-1.5-397B",
+    "company": "deepreinforce",
+    "releaseDate": "2026-08-19",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "text",
+    "contextWindow": 262144,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "self-host",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "MIT",
+      "name": "MIT License",
+      "kind": "permissive",
+      "url": "https://huggingface.co/ornith-ai/Ornith-1.5-397B",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": 86,
+      "terminalBench": 86.1,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Trained with an end-to-end self-improvement loop that generates its own tasks, scaffolds and solution rollouts rather than inheriting a human-authored training harness",
+      "Early agentic tests on the family show it planning, building and self-verifying open-ended goals unassisted — including running its own test suite to confirm a fix before stopping",
+      "Ships all three sizes (9B, 35B-A3B, 397B) under a permissive MIT license with no gated weights"
+    ],
+    "weaknesses": [
+      "Launch-week reception is thin and size-dependent — hands-on tests of the smaller 9B sibling exposed a wide gap between published benchmarks and real-world reliability, so the flagship's practical behavior is still largely unverified",
+      "Reported to perform poorly in plain chat without tool access, consistent with a model post-trained specifically for agentic scaffolds rather than general use",
+      "No first-party hosted API at launch — running the 397B checkpoint means self-hosting roughly 800GB (bf16) across multiple GPUs"
+    ],
+    "notes": "SWE-bench Verified (86) and Terminal-Bench 2.1 (86.1) are the 397B variant's launch comparisons against Claude Opus 4.8 (85.8 / 85), widely repeated at launch; GPQA Diamond and HLE figures conflict across secondary sources (no consistent primary figure found) and are left null. No official Artificial Analysis measurement or first-party API pricing published as of release. DeepReinforce's Ornith-1.0 (this model's obvious lineage) isn't tracked on this site, so predecessorId is left null rather than pointing at an untracked id."
   }
 ]

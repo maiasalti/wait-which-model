@@ -214,5 +214,14 @@
     "website": "https://cohere.com",
     "color": "#DB4F8A",
     "order": 24
+  },
+  {
+    "id": "deepreinforce",
+    "name": "DeepReinforce",
+    "country": "United States",
+    "founded": 2025,
+    "website": "https://deepreinforce.ai",
+    "color": "#2E86C1",
+    "order": 25
   }
 ]
