@@ -47,6 +47,14 @@ Sweep sources checked on 2026-07-04: LMArena (arena.ai) leaderboard, llm-stats.c
 | claude-fable-5 | arcAgi2 | 2026-07-04 | not on ARC-AGI-2 leaderboards as of July 2026 |
 | gemini-1-5-pro | sweBench | 2026-07-04 | Google never reported SWE-bench for 1.5 Pro; no comparable figure |
 | gemini-1-5-pro | aime | 2026-07-04 | never publicly evaluated on AIME |
+| ornith-1-5-397b | gpqaDiamond | 2026-08-23 | secondary sources conflict (89.2 vs 92.8) with no primary Ornith/DeepReinforce model card reachable to resolve which is correct |
+| ornith-1-5-397b | hle | 2026-08-23 | secondary sources conflict sharply (44.6 vs 56.1 with tools; 20.2/30.5 figures found elsewhere may belong to a smaller sibling) — no reachable primary source to resolve |
+| ornith-1-5-397b | mmluPro | 2026-08-23 | not found in any launch coverage checked |
+| ornith-1-5-397b | aime | 2026-08-23 | not found in any launch coverage checked |
+| ornith-1-5-397b | lmarenaElo | 2026-08-23 | not on LMArena as of launch week (chat-arena ranking not published for an agentic-coding-focused release) |
+| ornith-1-5-397b | arcAgi2 | 2026-08-23 | not found in any launch coverage checked |
+| ornith-1-5-397b | maxOutput | 2026-08-23 | not stated in any launch coverage checked; official Hugging Face model card unreachable (egress-blocked) |
+| ornith-1-5-397b | knowledgeCutoff | 2026-08-23 | not published in any launch coverage checked |
 | gemini-1-5-pro | arcAgi2 | 2026-07-04 | predates benchmark; never evaluated |
 | gemini-2-0-flash | aime | 2026-07-04 | Google reported MATH, not AIME; no public AIME figure |
 | gemini-2-0-flash | arcAgi2 | 2026-07-04 | not on ARC-AGI-2 leaderboards |
