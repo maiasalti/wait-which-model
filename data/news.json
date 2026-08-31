@@ -1,5 +1,16 @@
 [
   {
+    "id": "2026-08-26-glm-5-3-flash",
+    "date": "2026-08-26",
+    "title": "Zhipu releases GLM-5.3-Flash, an MIT-licensed open-weights model that spent a week running anonymously as \"Ox Alpha\"",
+    "summary": "Z.ai open-sourced GLM-5.3-Flash, a 320B-parameter (18B active) natively multimodal MoE with a 1M-token context and $0.15/$0.50 per-million-token pricing, revealing it as the mystery model developers had been hammering for free on OpenRouter under the \"Ox Alpha\" name since August 20.",
+    "category": "release",
+    "companies": ["zhipu"],
+    "modelIds": ["glm-5-3-flash"],
+    "sourceName": "Z.ai",
+    "sourceUrl": "https://huggingface.co/zai-org/GLM-5.3-Flash"
+  },
+  {
     "id": "2026-08-19-ornith-1-5",
     "date": "2026-08-19",
     "title": "DeepReinforce releases Ornith-1.5, an MIT-licensed open-weights family trained by self-improvement",

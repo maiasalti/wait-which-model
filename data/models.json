@@ -5327,5 +5327,53 @@
       "No first-party hosted API at launch — running the 397B checkpoint means self-hosting roughly 800GB (bf16) across multiple GPUs"
     ],
     "notes": "SWE-bench Verified (86) and Terminal-Bench 2.1 (86.1) are the 397B variant's launch comparisons against Claude Opus 4.8 (85.8 / 85), widely repeated at launch; GPQA Diamond and HLE figures conflict across secondary sources (no consistent primary figure found) and are left null. No official Artificial Analysis measurement or first-party API pricing published as of release. DeepReinforce's Ornith-1.0 (this model's obvious lineage) isn't tracked on this site, so predecessorId is left null rather than pointing at an untracked id."
+  },
+  {
+    "id": "glm-5-3-flash",
+    "name": "GLM-5.3-Flash",
+    "company": "zhipu",
+    "releaseDate": "2026-08-26",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "contextWindow": 1048576,
+    "maxOutput": 131072,
+    "pricing": { "inputPerMTok": 0.15, "outputPerMTok": 0.5 },
+    "costPerTask": { "usd": 0.09, "effort": "max" },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": { "outputTokensPerSec": 49.8, "timeToFirstTokenSec": 1.49, "effort": "max" },
+    "license": {
+      "spdx": "MIT",
+      "name": "MIT License",
+      "kind": "permissive",
+      "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+      "commercialUse": true
+    },
+    "apiIds": [{ "provider": "zhipu", "id": "glm-5.3-flash" }],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "terminalBench": 84.3,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Combines sparse and linear attention in one open checkpoint, cutting attention compute and KV-cache cost several-fold while keeping the million-token window usable rather than degrading toward the edges",
+      "Handles native multimodal tool calls — text, image, video and file input in the same turn — without a vision adapter bolted onto a text-only base",
+      "Ran anonymously on OpenRouter as \"Ox Alpha\" for a week under heavy public load before Zhipu claimed it, serving at real production volume before anyone knew whose model it was"
+    ],
+    "weaknesses": [
+      "Streams roughly half as fast as its own flagship sibling GLM-5.3 — the Flash name doesn't guarantee low latency, so time-sensitive use still needs its own benchmarking",
+      "Default responses aren't automation-ready for strict structured output — needs explicit response-format constraints where some rivals return clean JSON out of the box",
+      "Reasoning is always-on with only a low/high/max budget dial, not an off switch — every call carries at least some thinking overhead"
+    ],
+    "notes": "320B-total/18B-active MoE, Zhipu's first natively multimodal model in the GLM-5 line. Terminal-Bench 2.1 (84.3%) is Z.ai's own reported figure; GPQA Diamond, HLE, SWE-bench Verified, AIME, LMArena Elo and ARC-AGI-2 are left null — Z.ai's own table reports non-standard benchmarks instead (DeepSWE v1.1 63.4%, AutomationBench 48.8%, Toolathlon Verified 78.4%), and a single-source claim of an Artificial Analysis GPQA Diamond (91.2%) and HLE (55.3%) score could not be corroborated across independent sources on re-check. costPerTask ($0.09) and speed (49.8 tok/s, 1.49s to first answer token) are Artificial Analysis' max-effort measurements — the model has no medium-effort variant (only low/high/max). Pricing is Z.ai's standard $0.15/$0.50 rate; a 50%-off launch promotion runs through 2026-09-09. predecessorId is left null since Zhipu's own materials frame this as a new capability tier rather than an explicit replacement for GLM-5.2 or GLM-5.3."
   }
 ]

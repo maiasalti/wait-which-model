@@ -411,3 +411,16 @@ New-model-release research on 2026-08-16, scoped to `gemini-3-7-flash`, `qwen3-8
 | glm-5-3 | mmluPro / gpqaDiamond / sweBench / aime / hle / lmarenaElo / arcAgi2 | 2026-08-16 | Z.ai's launch benchmark table is entirely agentic/coding/cyber (Terminal-Bench 2.1/3.0, DeepSWE v1.1, SWE-Marathon v1.1, AutomationBench, Agents' Last Exam, CyberGym) — none of the tracked knowledge/reasoning keys were re-reported, consistent with Z.ai's stated "same base model, post-training only" framing; not on arena.ai or Artificial Analysis (too new, no public API pricing or weights yet) |
 | glm-5-3 | knowledgeCutoff | 2026-08-16 | not disclosed for the 5.3 post-training run specifically; GLM-5.2's cutoff (2026-03) is not confirmed to carry over |
 | glm-5-3 | pricing (input/output) | 2026-08-16 | Z.ai's official pricing table still ends at GLM-5.2 with no GLM-5.3 row; only the GLM Coding Plan's flat monthly subscription tiers ($18/$80/$168) are public, not a per-token rate |
+
+Weekly release-scan sweep on 2026-08-30, scoped to `glm-5-3-flash` (released 2026-08-26). WebFetch returned `EGRESS_BLOCKED` for every target domain this session (artificialanalysis.ai, huggingface.co, docs.z.ai, openrouter.ai, and all secondary trackers/news sites tried) — findings rest entirely on WebSearch-synthesized excerpts, cross-checked across multiple independent outlets where possible.
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| glm-5-3-flash | mmluPro | 2026-08-30 | not in Z.ai's own launch benchmark table (Terminal-Bench 2.1, DeepSWE v1.1, AutomationBench, Toolathlon Verified); no MMLU-Pro figure found on any tracker |
+| glm-5-3-flash | gpqaDiamond | 2026-08-30 | a single WebSearch synthesis attributed a 91.2% figure to Artificial Analysis, but a follow-up search could not reproduce or corroborate it from a second independent source, and artificialanalysis.ai itself was unreachable (EGRESS_BLOCKED) to confirm directly — rejected per this site's uncorroborated-single-source rule |
+| glm-5-3-flash | sweBench | 2026-08-30 | Z.ai's own table reports DeepSWE v1.1 (63.4%), not SWE-bench Verified; no Verified figure found |
+| glm-5-3-flash | aime | 2026-08-30 | not reported by Z.ai; no third-party figure traceable to a primary source |
+| glm-5-3-flash | hle | 2026-08-30 | same single-source/uncorroborated issue as gpqaDiamond — a 55.3% figure appeared once and could not be independently reproduced |
+| glm-5-3-flash | lmarenaElo | 2026-08-30 | no glm-5.3-flash listing found on arena.ai's text leaderboard |
+| glm-5-3-flash | arcAgi2 | 2026-08-30 | not reported by Z.ai; not on ARC Prize or tracker leaderboards |
+| glm-5-3-flash | knowledgeCutoff | 2026-08-30 | not disclosed in Z.ai's developer docs or the Hugging Face model card per any source found |
