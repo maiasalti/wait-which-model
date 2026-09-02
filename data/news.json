@@ -2,14 +2,15 @@
   {
     "id": "2026-09-01-claude-fable-5-1",
     "date": "2026-09-01",
-    "title": "Anthropic releases Claude Fable 5.1 and Mythos 5.1, one model split only by cyber safeguards",
-    "summary": "Anthropic shipped Claude Fable 5.1 (general availability) and Claude Mythos 5.1 (Project Glasswing participants only) — the same underlying model behind different safeguard layers — at Fable 5's $10/$50 per MTok with cache reads cut 75% to $0.25. Anthropic reports 52.6% on Terminal-Bench-Science 0.1 (more than double Fable 5's 24.7%), 55.8% on Terminal-Bench 4.0 (Mythos 5.1: 60.9%) and 60.9%/65.0% on Humanity's Last Exam without/with tools; Artificial Analysis scores it 66 at max effort, first on its Intelligence Index but 20% more per task than Fable 5.",
+    "title": "Anthropic releases Claude Fable 5.1 and Mythos 5.1, cutting cache-read prices 75%",
+    "summary": "Anthropic shipped Claude Fable 5.1 as a general-availability successor to Fable 5 at unchanged $10/$50 per million tokens, with cache reads cut from $1 to $0.25 per MTok, a 1M context, 128K output and a June 2026 knowledge cutoff; Claude Mythos 5.1 is the same model with lighter safeguards, offered only to vetted Project Glasswing organisations. Anthropic reports HLE 60.9% (65.0% with tools), Terminal-Bench-Science 52.6% (vs 24.7% for Fable 5) and Terminal-Bench 4.0 55.8% (60.9% for Mythos 5.1), while Artificial Analysis scored it 66 at max effort, a new high on its Intelligence Index, and ARC Prize verified 90.0% on ARC-AGI-2. The release adds mid-conversation effort changes, a statistical text watermark on all output, and three breaking API changes for Fable 5 callers.",
     "category": "release",
     "companies": [
       "anthropic"
     ],
     "modelIds": [
-      "claude-fable-5-1"
+      "claude-fable-5-1",
+      "claude-fable-5"
     ],
     "sourceName": "Anthropic",
     "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
@@ -157,6 +158,39 @@
     "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B"
   },
   {
+    "id": "2026-08-13-deepseek-v4-pro-0813",
+    "date": "2026-08-13",
+    "title": "DeepSeek ships V4-Pro-0813, taking V4-Pro out of preview — and raises V4 API prices up to 4x",
+    "summary": "DeepSeek quietly replaced April's V4-Pro preview with DeepSeek-V4-Pro-0813 — the same 1.6T/49B MoE re-post-trained for agentic work, with MIT weights on Hugging Face and no launch post. DeepSeek reports Terminal-Bench 2.1 87.9%, HLE 42.7% (60.0% with tools) and CyberGym 83.3% at max effort, while independent runs on the reference Terminal-Bench harness land far lower; Artificial Analysis scores it 53 on its Intelligence Index, one point above V4-Flash-0731. Alongside it DeepSeek moved the V4 line to peak/off-peak billing from 2026-08-16: V4-Pro rises to $1.32/$3.96 per million tokens at peak (from $0.435/$0.87) and V4-Flash to $0.44/$1.32 (from $0.14/$0.28), with off-peak rates 50% lower.",
+    "category": "release",
+    "companies": [
+      "deepseek"
+    ],
+    "modelIds": [
+      "deepseek-v4-pro-0813",
+      "deepseek-v4",
+      "deepseek-v4-flash-0731"
+    ],
+    "sourceName": "DeepSeek",
+    "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813"
+  },
+  {
+    "id": "2026-08-13-motif-3",
+    "date": "2026-08-13",
+    "title": "Motif Technologies releases the final Motif-3 under MIT, with its first benchmark table",
+    "summary": "Motif announced the final Motif-3 — the same 314B-total / 13.2B-active from-scratch MoE as July's beta, now MIT-licensed for commercial use and published as base, instruct and NVFP4 checkpoints with a technical report — after the weights surfaced on Hugging Face around August 10 without a launch post. Motif's own card reports SWE-bench Verified 76.2, Terminal-Bench 2.1 74.9, GPQA Diamond 83.4 and τ²-Bench Telecom 94.7; Artificial Analysis scores it 47 on its Intelligence Index, two points above the beta and top among Korea's sovereign-AI entrants. No inference provider hosts it yet.",
+    "category": "release",
+    "companies": [
+      "motif-technologies"
+    ],
+    "modelIds": [
+      "motif-3",
+      "motif-3-beta"
+    ],
+    "sourceName": "Motif Technologies",
+    "sourceUrl": "https://huggingface.co/Motif-Technologies/Motif-3"
+  },
+  {
     "id": "2026-08-12-grok-4-6",
     "date": "2026-08-12",
     "title": "SpaceXAI releases Grok 4.6, returning to the intelligence frontier at unchanged prices",
@@ -202,6 +236,21 @@
     "sourceUrl": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/"
   },
   {
+    "id": "2026-08-10-muse-glimmer",
+    "date": "2026-08-10",
+    "title": "Meta releases Muse Glimmer, a 30B open-weight agentic model built to run on a single consumer GPU",
+    "summary": "Meta Superintelligence Labs shipped Muse Glimmer, an Apache 2.0-licensed 30B dense multimodal model distilled from the closed Muse Spark and tuned for always-on local agent workflows, reaching SWE-bench Verified 76.0% and AIME 2026 94.7% while running quantized under 20GB with DFlash speculative decoding.",
+    "category": "release",
+    "companies": [
+      "meta"
+    ],
+    "modelIds": [
+      "muse-glimmer"
+    ],
+    "sourceName": "Meta Superintelligence Labs",
+    "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+  },
+  {
     "id": "2026-08-05-muse-spark-1-2",
     "date": "2026-08-05",
     "title": "Meta releases Muse Spark 1.2 and Muse Code, its first coding agent",
@@ -217,202 +266,6 @@
     "sourceUrl": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2"
   },
   {
-    "id": "2026-05-20-command-a-plus",
-    "date": "2026-05-20",
-    "title": "Cohere ships Command A+, consolidating its whole Command A generation into one MoE model",
-    "summary": "Cohere released Command A+ (218B total / 25B active parameters, Apache 2.0 weights), its first Mixture-of-Experts model, folding the separate Command A, Command A Reasoning, Command A Vision and Command A Translate variants into a single model with vision input, agentic tool use and 48-language support, running on as little as one B200 GPU.",
-    "category": "release",
-    "companies": [
-      "cohere"
-    ],
-    "modelIds": [
-      "command-a-plus"
-    ],
-    "sourceName": "Cohere Blog",
-    "sourceUrl": "https://cohere.com/blog/command-a-plus"
-  },
-  {
-    "id": "2025-03-13-command-a",
-    "date": "2025-03-13",
-    "title": "Cohere launches Command A, claiming GPT-4o/DeepSeek-V3-level performance on two GPUs",
-    "summary": "Cohere released Command A, a 111B-parameter model the company positioned as on par with or better than GPT-4o and DeepSeek-V3 on agentic enterprise tasks, while running on just two GPUs versus the larger footprints typical of comparable open-weight flagships; weights were released under a non-commercial CC-BY-NC licence.",
-    "category": "release",
-    "companies": [
-      "cohere"
-    ],
-    "modelIds": [
-      "command-a"
-    ],
-    "sourceName": "Cohere Blog",
-    "sourceUrl": "https://cohere.com/blog/command-a"
-  },
-  {
-    "id": "2025-12-02-nova-2-pro",
-    "date": "2025-12-02",
-    "title": "Amazon unveils the Nova 2 family, plus a service that lets customers train their own Nova variants",
-    "summary": "At AWS re:Invent 2025, Amazon introduced Nova 2 Pro (preview, its new flagship reasoning model), Nova 2 Lite (GA), Nova 2 Sonic and Nova 2 Omni (preview), alongside Nova Forge for organizations to build custom Nova-based models and Nova Act for browser-automation agents; Amazon says Nova 2 Lite already beats the former flagship Nova Premier at 7x lower cost.",
-    "category": "release",
-    "companies": [
-      "amazon"
-    ],
-    "modelIds": [
-      "nova-2-pro"
-    ],
-    "sourceName": "AWS News Blog",
-    "sourceUrl": "https://aws.amazon.com/about-aws/whats-new/2025/12/nova-2-foundation-models-amazon-bedrock"
-  },
-  {
-    "id": "2025-04-30-nova-premier",
-    "date": "2025-04-30",
-    "title": "Amazon launches Nova Premier, its most capable model and a teacher for distillation",
-    "summary": "AWS made Nova Premier generally available on Bedrock as its top-of-line multimodal model — a 1M-token-context text/image/video model designed to be both a strong standalone performer and the teacher model for distilling cheaper Nova Lite and Micro variants.",
-    "category": "release",
-    "companies": [
-      "amazon"
-    ],
-    "modelIds": [
-      "nova-premier"
-    ],
-    "sourceName": "AWS News Blog",
-    "sourceUrl": "https://aws.amazon.com/blogs/aws/amazon-nova-premier-our-most-capable-model-for-complex-tasks-and-teacher-for-model-distillation/"
-  },
-  {
-    "id": "2026-05-08-ernie-5-1",
-    "date": "2026-05-08",
-    "title": "Baidu releases ERNIE 5.1, claiming the top Chinese-model spot on LMArena at 6% of typical training cost",
-    "summary": "Baidu's ERNIE 5.1 is a text-only model distilled from ERNIE 5.0's sub-model matrix to roughly a third of its total parameters, reaching #1 among Chinese models (#4 globally) on LMArena's Search leaderboard and reporting 99.6% AIME 2026 accuracy with tools enabled.",
-    "category": "release",
-    "companies": [
-      "baidu"
-    ],
-    "modelIds": [
-      "ernie-5-1"
-    ],
-    "sourceName": "ERNIE Blog",
-    "sourceUrl": "https://ernie.baidu.com/blog/posts/ernie-5.1-0508-release/"
-  },
-  {
-    "id": "2026-01-22-ernie-5-0",
-    "date": "2026-01-22",
-    "title": "Baidu launches ERNIE 5.0, a 2.4-trillion-parameter native omni-modal model",
-    "summary": "Baidu officially launched ERNIE 5.0 at the Ernie Moment Conference 2026 in Shanghai, a unified text/image/audio/video model that became the first Chinese model to reach the LMArena Text leaderboard's global top 10, as monthly active users of Baidu's ERNIE assistant passed 200 million.",
-    "category": "release",
-    "companies": [
-      "baidu"
-    ],
-    "modelIds": [
-      "ernie-5-0"
-    ],
-    "sourceName": "ERNIE Blog",
-    "sourceUrl": "https://ernie.baidu.com/blog/posts/ernie5.0/"
-  },
-  {
-    "id": "2026-06-23-seed-2-1-pro",
-    "date": "2026-06-23",
-    "title": "ByteDance launches Doubao Seed 2.1, pitched as an agent that closes out real tasks",
-    "summary": "ByteDance's Seed team released Seed 2.1 Pro and a lower-cost Seed 2.1 Turbo at Volcano Engine's FORCE conference, framing the update around reliable end-to-end coding and multi-step agent execution rather than Seed 2.0's broad multimodal upgrade; no benchmark table was published alongside the qualitative claims.",
-    "category": "release",
-    "companies": [
-      "bytedance"
-    ],
-    "modelIds": [
-      "seed-2-1-pro"
-    ],
-    "sourceName": "ByteDance Seed",
-    "sourceUrl": "https://seed.bytedance.com/en/blog/seed2-1-officially-released-advancing-ai-productivity"
-  },
-  {
-    "id": "2026-02-14-seed-2-0-pro",
-    "date": "2026-02-14",
-    "title": "ByteDance releases the Seed 2.0 model family, its first with a full published model card",
-    "summary": "ByteDance's Seed team launched Seed 2.0 (Pro/Lite/Mini/Code), reporting 88.9% GPQA Diamond, 98.3% AIME 2025 and 76.5% SWE-bench Verified for the Pro tier alongside a detailed model card covering long-tail knowledge, agentic and video-understanding evaluations against GPT-5.2, Claude and Gemini 3 Pro.",
-    "category": "release",
-    "companies": [
-      "bytedance"
-    ],
-    "modelIds": [
-      "seed-2-0-pro"
-    ],
-    "sourceName": "ByteDance Seed",
-    "sourceUrl": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/seed2/0214/Seed2.0%20Model%20Card.pdf"
-  },
-  {
-    "id": "2026-06-01-minimax-m3",
-    "date": "2026-06-01",
-    "title": "MiniMax releases MiniMax-M3, its first natively multimodal open-weight flagship",
-    "summary": "MiniMax shipped M3, combining a 1M-token context window (via a new MiniMax Sparse Attention architecture), native image/video input, and frontier-tier agentic coding (80.5% SWE-bench Verified, 66.0% Terminal-Bench 2.1) in one open-weight checkpoint, alongside a new revenue-gated 'MiniMax Community License.'",
-    "category": "release",
-    "companies": [
-      "minimax"
-    ],
-    "modelIds": [
-      "minimax-m3"
-    ],
-    "sourceName": "MiniMax",
-    "sourceUrl": "https://www.minimax.io/blog/minimax-m3"
-  },
-  {
-    "id": "2026-02-12-minimax-m2-5",
-    "date": "2026-02-12",
-    "title": "MiniMax releases MiniMax-M2.5, setting a new SWE-bench Verified mark for the series",
-    "summary": "MiniMax's M2.5 update scored 80.2% on SWE-bench Verified, up sharply from M2's 69.4%, while cutting the standard-tier input price to $0.15 per million tokens and adding a faster 'Lightning' throughput mode.",
-    "category": "release",
-    "companies": [
-      "minimax"
-    ],
-    "modelIds": [
-      "minimax-m2-5"
-    ],
-    "sourceName": "MiniMax",
-    "sourceUrl": "https://www.minimax.io/news/minimax-m25"
-  },
-  {
-    "id": "2025-10-27-minimax-m2",
-    "date": "2025-10-27",
-    "title": "MiniMax open-sources MiniMax-M2, an agentic coding model at 8% of Claude Sonnet's price",
-    "summary": "MiniMax released M2 (230B total / 10B active parameters, MIT-derived licence) as an efficiency-focused agentic and coding model, reporting roughly double Claude Sonnet's inference speed at about 8% of its API price and a top-five ranking among open-weight models on Artificial Analysis' index.",
-    "category": "release",
-    "companies": [
-      "minimax"
-    ],
-    "modelIds": [
-      "minimax-m2"
-    ],
-    "sourceName": "MiniMax",
-    "sourceUrl": "https://www.minimax.io/news/minimax-m2"
-  },
-  {
-    "id": "2025-08-05-gpt-oss",
-    "date": "2025-08-05",
-    "title": "OpenAI releases gpt-oss-120b and gpt-oss-20b, its first open-weight models since GPT-2",
-    "summary": "OpenAI shipped two Apache 2.0-licensed reasoning models: gpt-oss-120b (117B total/5.1B active parameters, runs on a single 80GB GPU) and gpt-oss-20b (21B total/3.6B active, runs in ~16GB of memory), both with configurable low/medium/high reasoning effort and a 131K-token context window.",
-    "category": "release",
-    "companies": [
-      "openai"
-    ],
-    "modelIds": [
-      "gpt-oss-120b",
-      "gpt-oss-20b"
-    ],
-    "sourceName": "OpenAI",
-    "sourceUrl": "https://openai.com/index/introducing-gpt-oss/"
-  },
-  {
-    "id": "2026-04-24-ling-2-6-1t",
-    "date": "2026-04-24",
-    "title": "Ant Group releases Ling-2.6-1T, a trillion-parameter \"fast thinking\" flagship",
-    "summary": "Ant Group's Bailing (InclusionAI) team announced Ling-2.6-1T, a ~1 trillion-parameter (63B active) MoE model that skips extended chain-of-thought for token-efficient \"fast thinking,\" reporting 72.2% on SWE-bench Verified with a 262K-token context; open weights (MIT licence) followed on Hugging Face and ModelScope on April 30.",
-    "category": "release",
-    "companies": [
-      "ant-group"
-    ],
-    "modelIds": [
-      "ling-2-6-1t"
-    ],
-    "sourceName": "InclusionAI (Hugging Face)",
-    "sourceUrl": "https://huggingface.co/inclusionAI/Ling-2.6-1T"
-  },
-  {
     "id": "2026-08-03-mach-1-additive-35b",
     "date": "2026-08-03",
     "title": "Syzygy launches Mach-1 Additive 35B, a multiplication-free compression of Qwen3.6-35B",
@@ -426,21 +279,6 @@
     ],
     "sourceName": "Syzygy",
     "sourceUrl": "https://x.com/syzygyeng/status/2084350792841195992"
-  },
-  {
-    "id": "2026-02-17-claude-sonnet-4-6",
-    "date": "2026-02-17",
-    "title": "Anthropic releases Claude Sonnet 4.6 with a 1M-token context window",
-    "summary": "Anthropic shipped Claude Sonnet 4.6 as a full upgrade of its mid-tier model, becoming the default for Free and Pro plans, with improved coding, computer use, long-context reasoning and agent planning at unchanged $3/$15 per million token pricing. It scored 79.6% on SWE-bench Verified and 89.9% on GPQA Diamond, and Anthropic said performance that previously required an Opus-class model is now available in Sonnet 4.6 for many real-world office tasks.",
-    "category": "release",
-    "companies": [
-      "anthropic"
-    ],
-    "modelIds": [
-      "claude-sonnet-4-6"
-    ],
-    "sourceName": "Anthropic",
-    "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-4-6"
   },
   {
     "id": "2026-08-03-qwen3-8-max-ga",
@@ -1282,6 +1120,21 @@
     "sourceUrl": "https://www.axios.com/2026/06/26/openai-gpt-sol-terra-luna-trump"
   },
   {
+    "id": "2026-06-23-seed-2-1-pro",
+    "date": "2026-06-23",
+    "title": "ByteDance launches Doubao Seed 2.1, pitched as an agent that closes out real tasks",
+    "summary": "ByteDance's Seed team released Seed 2.1 Pro and a lower-cost Seed 2.1 Turbo at Volcano Engine's FORCE conference, framing the update around reliable end-to-end coding and multi-step agent execution rather than Seed 2.0's broad multimodal upgrade; no benchmark table was published alongside the qualitative claims.",
+    "category": "release",
+    "companies": [
+      "bytedance"
+    ],
+    "modelIds": [
+      "seed-2-1-pro"
+    ],
+    "sourceName": "ByteDance Seed",
+    "sourceUrl": "https://seed.bytedance.com/en/blog/seed2-1-officially-released-advancing-ai-productivity"
+  },
+  {
     "id": "2026-06-15-eu-ai-act-panel",
     "date": "2026-06-15",
     "title": "EU appoints scientific panel ahead of AI Act penalty powers",
@@ -1404,6 +1257,21 @@
     "sourceUrl": "https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/"
   },
   {
+    "id": "2026-06-01-minimax-m3",
+    "date": "2026-06-01",
+    "title": "MiniMax releases MiniMax-M3, its first natively multimodal open-weight flagship",
+    "summary": "MiniMax shipped M3, combining a 1M-token context window (via a new MiniMax Sparse Attention architecture), native image/video input, and frontier-tier agentic coding (80.5% SWE-bench Verified, 66.0% Terminal-Bench 2.1) in one open-weight checkpoint, alongside a new revenue-gated 'MiniMax Community License.'",
+    "category": "release",
+    "companies": [
+      "minimax"
+    ],
+    "modelIds": [
+      "minimax-m3"
+    ],
+    "sourceName": "MiniMax",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3"
+  },
+  {
     "id": "2026-05-28-claude-opus-4-8",
     "date": "2026-05-28",
     "title": "Anthropic releases Claude Opus 4.8",
@@ -1459,6 +1327,21 @@
     "sourceUrl": "https://www.forbes.com/sites/ronschmelzer/2026/05/22/the-ai-breakthrough-that-has-mathematicians-paying-attention/"
   },
   {
+    "id": "2026-05-20-command-a-plus",
+    "date": "2026-05-20",
+    "title": "Cohere ships Command A+, consolidating its whole Command A generation into one MoE model",
+    "summary": "Cohere released Command A+ (218B total / 25B active parameters, Apache 2.0 weights), its first Mixture-of-Experts model, folding the separate Command A, Command A Reasoning, Command A Vision and Command A Translate variants into a single model with vision input, agentic tool use and 48-language support, running on as little as one B200 GPU.",
+    "category": "release",
+    "companies": [
+      "cohere"
+    ],
+    "modelIds": [
+      "command-a-plus"
+    ],
+    "sourceName": "Cohere Blog",
+    "sourceUrl": "https://cohere.com/blog/command-a-plus"
+  },
+  {
     "id": "2026-05-20-qwen3-7-max",
     "date": "2026-05-20",
     "title": "Alibaba unveils Qwen3.7 Max, its first closed-weight flagship",
@@ -1502,6 +1385,21 @@
     "sourceUrl": "https://techcrunch.com/2026/05/11/thinking-machines-wants-to-build-an-ai-that-actually-listens-while-it-talks/"
   },
   {
+    "id": "2026-05-08-ernie-5-1",
+    "date": "2026-05-08",
+    "title": "Baidu releases ERNIE 5.1, claiming the top Chinese-model spot on LMArena at 6% of typical training cost",
+    "summary": "Baidu's ERNIE 5.1 is a text-only model distilled from ERNIE 5.0's sub-model matrix to roughly a third of its total parameters, reaching #1 among Chinese models (#4 globally) on LMArena's Search leaderboard and reporting 99.6% AIME 2026 accuracy with tools enabled.",
+    "category": "release",
+    "companies": [
+      "baidu"
+    ],
+    "modelIds": [
+      "ernie-5-1"
+    ],
+    "sourceName": "ERNIE Blog",
+    "sourceUrl": "https://ernie.baidu.com/blog/posts/ernie-5.1-0508-release/"
+  },
+  {
     "id": "2026-05-01-deepseek-huawei",
     "date": "2026-05-01",
     "title": "DeepSeek V4 triggers scramble for Huawei Ascend 950 chips",
@@ -1531,6 +1429,21 @@
     ],
     "sourceName": "Artificial Analysis",
     "sourceUrl": "https://artificialanalysis.ai/articles/xai-launches-grok-4-3-with-improved-agentic-performance-and-lower-pricing"
+  },
+  {
+    "id": "2026-04-24-ling-2-6-1t",
+    "date": "2026-04-24",
+    "title": "Ant Group releases Ling-2.6-1T, a trillion-parameter \"fast thinking\" flagship",
+    "summary": "Ant Group's Bailing (InclusionAI) team announced Ling-2.6-1T, a ~1 trillion-parameter (63B active) MoE model that skips extended chain-of-thought for token-efficient \"fast thinking,\" reporting 72.2% on SWE-bench Verified with a 262K-token context; open weights (MIT licence) followed on Hugging Face and ModelScope on April 30.",
+    "category": "release",
+    "companies": [
+      "ant-group"
+    ],
+    "modelIds": [
+      "ling-2-6-1t"
+    ],
+    "sourceName": "InclusionAI (Hugging Face)",
+    "sourceUrl": "https://huggingface.co/inclusionAI/Ling-2.6-1T"
   },
   {
     "id": "2026-04-24-deepseek-v4",
@@ -1608,6 +1521,51 @@
     "sourceUrl": "https://llm-stats.com/blog/research/nemotron-3-super-launch"
   },
   {
+    "id": "2026-02-17-claude-sonnet-4-6",
+    "date": "2026-02-17",
+    "title": "Anthropic releases Claude Sonnet 4.6 with a 1M-token context window",
+    "summary": "Anthropic shipped Claude Sonnet 4.6 as a full upgrade of its mid-tier model, becoming the default for Free and Pro plans, with improved coding, computer use, long-context reasoning and agent planning at unchanged $3/$15 per million token pricing. It scored 79.6% on SWE-bench Verified and 89.9% on GPQA Diamond, and Anthropic said performance that previously required an Opus-class model is now available in Sonnet 4.6 for many real-world office tasks.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-sonnet-4-6"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-4-6"
+  },
+  {
+    "id": "2026-02-14-seed-2-0-pro",
+    "date": "2026-02-14",
+    "title": "ByteDance releases the Seed 2.0 model family, its first with a full published model card",
+    "summary": "ByteDance's Seed team launched Seed 2.0 (Pro/Lite/Mini/Code), reporting 88.9% GPQA Diamond, 98.3% AIME 2025 and 76.5% SWE-bench Verified for the Pro tier alongside a detailed model card covering long-tail knowledge, agentic and video-understanding evaluations against GPT-5.2, Claude and Gemini 3 Pro.",
+    "category": "release",
+    "companies": [
+      "bytedance"
+    ],
+    "modelIds": [
+      "seed-2-0-pro"
+    ],
+    "sourceName": "ByteDance Seed",
+    "sourceUrl": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/seed2/0214/Seed2.0%20Model%20Card.pdf"
+  },
+  {
+    "id": "2026-02-12-minimax-m2-5",
+    "date": "2026-02-12",
+    "title": "MiniMax releases MiniMax-M2.5, setting a new SWE-bench Verified mark for the series",
+    "summary": "MiniMax's M2.5 update scored 80.2% on SWE-bench Verified, up sharply from M2's 69.4%, while cutting the standard-tier input price to $0.15 per million tokens and adding a faster 'Lightning' throughput mode.",
+    "category": "release",
+    "companies": [
+      "minimax"
+    ],
+    "modelIds": [
+      "minimax-m2-5"
+    ],
+    "sourceName": "MiniMax",
+    "sourceUrl": "https://www.minimax.io/news/minimax-m25"
+  },
+  {
     "id": "2026-02-11-gemini-3-1-pro",
     "date": "2026-02-11",
     "title": "Google previews Gemini 3.1 Pro with a 77% ARC-AGI-2 score",
@@ -1621,6 +1579,36 @@
     ],
     "sourceName": "Google DeepMind",
     "sourceUrl": "https://deepmind.google/models/gemini/pro/"
+  },
+  {
+    "id": "2026-01-22-ernie-5-0",
+    "date": "2026-01-22",
+    "title": "Baidu launches ERNIE 5.0, a 2.4-trillion-parameter native omni-modal model",
+    "summary": "Baidu officially launched ERNIE 5.0 at the Ernie Moment Conference 2026 in Shanghai, a unified text/image/audio/video model that became the first Chinese model to reach the LMArena Text leaderboard's global top 10, as monthly active users of Baidu's ERNIE assistant passed 200 million.",
+    "category": "release",
+    "companies": [
+      "baidu"
+    ],
+    "modelIds": [
+      "ernie-5-0"
+    ],
+    "sourceName": "ERNIE Blog",
+    "sourceUrl": "https://ernie.baidu.com/blog/posts/ernie5.0/"
+  },
+  {
+    "id": "2025-12-02-nova-2-pro",
+    "date": "2025-12-02",
+    "title": "Amazon unveils the Nova 2 family, plus a service that lets customers train their own Nova variants",
+    "summary": "At AWS re:Invent 2025, Amazon introduced Nova 2 Pro (preview, its new flagship reasoning model), Nova 2 Lite (GA), Nova 2 Sonic and Nova 2 Omni (preview), alongside Nova Forge for organizations to build custom Nova-based models and Nova Act for browser-automation agents; Amazon says Nova 2 Lite already beats the former flagship Nova Premier at 7x lower cost.",
+    "category": "release",
+    "companies": [
+      "amazon"
+    ],
+    "modelIds": [
+      "nova-2-pro"
+    ],
+    "sourceName": "AWS News Blog",
+    "sourceUrl": "https://aws.amazon.com/about-aws/whats-new/2025/12/nova-2-foundation-models-amazon-bedrock"
   },
   {
     "id": "2025-11-24-opus-4-5",
@@ -1698,6 +1686,21 @@
     "sourceUrl": "https://moonshotai.github.io/Kimi-K2/thinking.html"
   },
   {
+    "id": "2025-10-27-minimax-m2",
+    "date": "2025-10-27",
+    "title": "MiniMax open-sources MiniMax-M2, an agentic coding model at 8% of Claude Sonnet's price",
+    "summary": "MiniMax released M2 (230B total / 10B active parameters, MIT-derived licence) as an efficiency-focused agentic and coding model, reporting roughly double Claude Sonnet's inference speed at about 8% of its API price and a top-five ranking among open-weight models on Artificial Analysis' index.",
+    "category": "release",
+    "companies": [
+      "minimax"
+    ],
+    "modelIds": [
+      "minimax-m2"
+    ],
+    "sourceName": "MiniMax",
+    "sourceUrl": "https://www.minimax.io/news/minimax-m2"
+  },
+  {
     "id": "2025-10-15-haiku-4-5",
     "date": "2025-10-15",
     "title": "Claude Haiku 4.5 brings near-frontier coding to the small-model tier",
@@ -1758,6 +1761,22 @@
     "sourceUrl": "https://openai.com/index/introducing-gpt-5/"
   },
   {
+    "id": "2025-08-05-gpt-oss",
+    "date": "2025-08-05",
+    "title": "OpenAI releases gpt-oss-120b and gpt-oss-20b, its first open-weight models since GPT-2",
+    "summary": "OpenAI shipped two Apache 2.0-licensed reasoning models: gpt-oss-120b (117B total/5.1B active parameters, runs on a single 80GB GPU) and gpt-oss-20b (21B total/3.6B active, runs in ~16GB of memory), both with configurable low/medium/high reasoning effort and a 131K-token context window.",
+    "category": "release",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-oss-120b",
+      "gpt-oss-20b"
+    ],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-oss/"
+  },
+  {
     "id": "2025-07-11-kimi-k2",
     "date": "2025-07-11",
     "title": "Moonshot AI open-sources trillion-parameter Kimi K2",
@@ -1788,6 +1807,36 @@
     "sourceUrl": "https://x.ai/news/grok-4"
   },
   {
+    "id": "2025-04-30-nova-premier",
+    "date": "2025-04-30",
+    "title": "Amazon launches Nova Premier, its most capable model and a teacher for distillation",
+    "summary": "AWS made Nova Premier generally available on Bedrock as its top-of-line multimodal model — a 1M-token-context text/image/video model designed to be both a strong standalone performer and the teacher model for distilling cheaper Nova Lite and Micro variants.",
+    "category": "release",
+    "companies": [
+      "amazon"
+    ],
+    "modelIds": [
+      "nova-premier"
+    ],
+    "sourceName": "AWS News Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/aws/amazon-nova-premier-our-most-capable-model-for-complex-tasks-and-teacher-for-model-distillation/"
+  },
+  {
+    "id": "2025-03-13-command-a",
+    "date": "2025-03-13",
+    "title": "Cohere launches Command A, claiming GPT-4o/DeepSeek-V3-level performance on two GPUs",
+    "summary": "Cohere released Command A, a 111B-parameter model the company positioned as on par with or better than GPT-4o and DeepSeek-V3 on agentic enterprise tasks, while running on just two GPUs versus the larger footprints typical of comparable open-weight flagships; weights were released under a non-commercial CC-BY-NC licence.",
+    "category": "release",
+    "companies": [
+      "cohere"
+    ],
+    "modelIds": [
+      "command-a"
+    ],
+    "sourceName": "Cohere Blog",
+    "sourceUrl": "https://cohere.com/blog/command-a"
+  },
+  {
     "id": "2025-01-20-deepseek-r1",
     "date": "2025-01-20",
     "title": "DeepSeek-R1 shocks the market with open o1-class reasoning",
@@ -1801,20 +1850,5 @@
     ],
     "sourceName": "DeepSeek",
     "sourceUrl": "https://api-docs.deepseek.com/news/news250120"
-  },
-  {
-    "id": "2026-08-10-muse-glimmer",
-    "date": "2026-08-10",
-    "title": "Meta releases Muse Glimmer, a 30B open-weight agentic model built to run on a single consumer GPU",
-    "summary": "Meta Superintelligence Labs shipped Muse Glimmer, an Apache 2.0-licensed 30B dense multimodal model distilled from the closed Muse Spark and tuned for always-on local agent workflows, reaching SWE-bench Verified 76.0% and AIME 2026 94.7% while running quantized under 20GB with DFlash speculative decoding.",
-    "category": "release",
-    "companies": [
-      "meta"
-    ],
-    "modelIds": [
-      "muse-glimmer"
-    ],
-    "sourceName": "Meta Superintelligence Labs",
-    "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
   }
 ]

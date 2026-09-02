@@ -37,7 +37,7 @@
     "start": "2024-12-05",
     "end": "2025-02-17",
     "dethronedBy": "grok-3",
-    "composite": 0.4556
+    "composite": 0.4554
   },
   {
     "modelId": "grok-3",
@@ -53,7 +53,7 @@
     "start": "2025-09-24",
     "end": "2025-11-18",
     "dethronedBy": "gemini-3-pro",
-    "composite": 0.7622
+    "composite": 0.7618
   },
   {
     "modelId": "gemini-3-pro",
@@ -61,7 +61,7 @@
     "start": "2025-11-18",
     "end": "2026-02-11",
     "dethronedBy": "gemini-3-1-pro",
-    "composite": 0.7702
+    "composite": 0.7699
   },
   {
     "modelId": "gemini-3-1-pro",
@@ -69,15 +69,23 @@
     "start": "2026-02-11",
     "end": "2026-06-09",
     "dethronedBy": "claude-fable-5",
-    "composite": 0.8643
+    "composite": 0.8639
   },
   {
     "modelId": "claude-fable-5",
     "tier": "flagship",
     "start": "2026-06-09",
+    "end": "2026-09-01",
+    "dethronedBy": "claude-fable-5-1",
+    "composite": 0.9633
+  },
+  {
+    "modelId": "claude-fable-5-1",
+    "tier": "flagship",
+    "start": "2026-09-01",
     "end": null,
     "dethronedBy": null,
-    "composite": 0.9821
+    "composite": 0.9786
   },
   {
     "modelId": "claude-3-5-sonnet",

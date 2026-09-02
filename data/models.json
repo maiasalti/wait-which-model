@@ -5466,6 +5466,129 @@
     "notes": "Tencent's first 770B-total/49B-active MoE (256 routed + 1 shared expert, top-8), open-sourced 2026-08-28. GPQA Diamond 92.3 and Terminal-Bench 2.1 85.4 are Tencent's own chart figures, published as an image and transcribed by launch coverage — Artificial Analysis has not yet listed the model, so no independent run exists. HLE is left null: the with-tools figure (55.4%, text-only) is corroborated across trackers but the no-tools figure (43.4%) traces to a single transcription set. Tencent's chart does not report SWE-bench Verified; it reports SWE-bench Pro 65.7%, SWE-bench Multilingual 82.9%, DeepSWE 64.3%, and a 163-expert blind evaluation at 2.99/4 vs GLM-5.3 2.92 and Kimi K3 2.94. MMLU-Pro, AIME and ARC-AGI-2 were not published; the model is on arena.ai's Code Arena but not the text leaderboard. Pricing is Tencent's first-party TokenHub rate ($0.042 cache read), matched by OpenRouter; maxOutput 64K and a 960K max-input cap are from Tencent Cloud's docs. predecessorId is left null — Tencent extended free Hy3 access to 2026-09-30 alongside this launch and states no replacement."
   },
   {
+    "id": "deepseek-v4-pro-0813",
+    "name": "DeepSeek-V4-Pro-0813",
+    "company": "deepseek",
+    "releaseDate": "2026-08-13",
+    "status": "frontier",
+    "tier": "flagship",
+    "modality": "text",
+    "contextWindow": 1048576,
+    "maxOutput": 384000,
+    "pricing": {
+      "inputPerMTok": 1.32,
+      "outputPerMTok": 3.96
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": 78.1,
+      "timeToFirstTokenSec": 25.67,
+      "effort": "max"
+    },
+    "license": {
+      "spdx": "MIT",
+      "name": "MIT License",
+      "kind": "permissive",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "deepseek",
+        "id": "deepseek-v4-pro"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": "deepseek-v4",
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 93,
+      "sweBench": 96.4,
+      "terminalBench": 87.9,
+      "aime": null,
+      "hle": 42.7,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Same 1.6T/49B MoE structure as April's preview with a DSpark speculative-decoding module bolted on — the agentic gains arrive without a new architecture to re-integrate",
+      "Cyber-defense and terminal work are where the re-post-training shows most; independent evaluators single out CTF-style tasks as its clearest jump over the preview",
+      "Thinking and non-thinking modes with three effort levels behind one endpoint, so a quick lookup and a long agent run share the same model id",
+      "MIT-licensed weights mirrored on Fireworks, DeepInfra and OpenRouter within days — no dependence on DeepSeek's capacity-constrained first-party API"
+    ],
+    "weaknesses": [
+      "Headline agent scores come from DeepSeek's own unreleased minimal-mode harness — on the Terminal-Bench reference harness it lands below its cheaper Flash sibling, and nobody has reproduced the card's numbers",
+      "Multi-turn thinking mode requires replaying the previous turn's reasoning verbatim — the most common cause of 400 errors when migrating existing agent loops",
+      "Landed as a stealth update with no launch post (the brief notice on DeepSeek's site was pulled within a day), so documentation is thin and behavior is still being characterised"
+    ],
+    "notes": "The production release of DeepSeek-V4-Pro, superseding April's preview per DeepSeek's own model card: same 1.6T/49B MoE with a DSpark speculative-decoding module, all gains from re-post-training. Pricing is the peak-hour rate that took effect 2026-08-16 (peak = 01:00–04:00 and 06:00–10:00 UTC); off-peak is 50% lower at $0.66/$1.98 and cache-hit input is cheaper still — roughly a 3–4x rise from the preview's $0.435/$0.87. Terminal-Bench 2.1 87.9 and HLE 42.7% (60.0% with tools) are DeepSeek's own figures at max effort in its minimal-mode harness; independent runs on the Terminus 2 reference harness report 54.68 (V4-Flash-0731: 67.04). GPQA Diamond 93 is Artificial Analysis' measurement as displayed on its charts, not lab-reported — DeepSeek's own 0813 card figure could not be confirmed directly (one unofficial site cites 92.8; the 90.1 many aggregators list is April's preview). SWE-bench Verified 96.4 is third-party (Vals AI, #2 on its board behind Claude Opus 5) — DeepSeek published no SWE-bench figure and the 80.6 some trackers carry is the preview's. Also reported by DeepSeek: DeepSWE 62.7, CyberGym 83.3, NL2Repo 61.5, Toolathlon 74.1, Agents' Last Exam 25.7, AutomationBench 31.8. Artificial Analysis scores it 53 on its Intelligence Index — 8 points above April's preview but only 1 above V4-Flash-0731 on the current index version — measuring 78.1 tok/s and 25.67 s to first answer token on DeepSeek's endpoint at max effort; its per-task cost figure could not be retrieved. MMLU-Pro, AIME, LMArena and ARC-AGI-2 are unpublished. Max output is the 384K DeepSeek recommends for high/max effort. The API went live 2026-08-12 under the unchanged `deepseek-v4-pro` id; the Hugging Face card and DeepSeek's release notice followed on 2026-08-13."
+  },
+  {
+    "id": "motif-3",
+    "name": "Motif-3",
+    "company": "motif-technologies",
+    "releaseDate": "2026-08-13",
+    "status": "superseded",
+    "tier": "flagship",
+    "modality": "text",
+    "contextWindow": 262144,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "restricted",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "MIT",
+      "name": "MIT License",
+      "kind": "permissive",
+      "url": "https://huggingface.co/Motif-Technologies/Motif-3",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 83.4,
+      "sweBench": 76.2,
+      "terminalBench": 74.9,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "MIT-licensed where the beta was research-only — the first Motif-3 checkpoint that can legally go into a product",
+      "Ships with a benchmark table of its own this time, and it leans agentic — tool-use and telecom-style multi-step tasks are where Motif says it does best",
+      "Declines rather than invents when it doesn't know — its card leads with one of the higher non-hallucination rates on AA-Omniscience",
+      "Built from scratch under Korea's sovereign-AI rules with Korean as a first-class training target, and released as base, instruct and NVFP4 checkpoints"
+    ],
+    "weaknesses": [
+      "Every score is Motif's own — no third party has reproduced the card, and Artificial Analysis' index moved only two points over the beta",
+      "Nobody serves it — no inference provider or aggregator lists it, so the only route is self-hosting on B200/H200-class hardware with trust_remote_code and Motif's own vLLM image",
+      "Weights appeared on Hugging Face days before any announcement and the site carried no launch post — documentation beyond the card and technical report is thin"
+    ],
+    "notes": "The final Motif-3 release from Motif Technologies (a ~30-person Moreh subsidiary in South Korea's Dokpamo sovereign-AI programme): same 314B-total / 13.2B-active MoE (384 routed experts, 8 active) as the July beta, now MIT-licensed, published as Motif-3-Base, Motif-3 (instruct) and Motif-3-NVFP4 with a technical report (arXiv 2608.09119). Weights appeared on Hugging Face around 2026-08-10 unannounced; Motif's announcement followed on 2026-08-13, the date used here. SWE-bench Verified 76.2, Terminal-Bench 2.1 74.9 and GPQA Diamond 83.4 are Motif's own model-card figures (temperature 1.0, top-p 0.95, 262,144-token max sequence length), alongside τ²-Bench Telecom 94.7 and AA-Omniscience non-hallucination 71.6; none are independently reproduced. Artificial Analysis scores the final release 47 on its Intelligence Index (beta: 45) but its per-benchmark breakdown, speed and cost figures could not be read this session. HLE, MMLU-Pro, AIME, LMArena and ARC-AGI-2 are not in the card. No inference provider hosts it and Motif publishes no per-token price, so pricing and cost per task are unset and availability is 'restricted' (free chat at chat.motiftech.io or self-host) despite downloadable weights. Motif's card does not state that this release replaces the beta, so predecessorId stays null."
+  },
+  {
     "id": "claude-fable-5-1",
     "name": "Claude Fable 5.1",
     "company": "anthropic",
@@ -5480,16 +5603,16 @@
       "outputPerMTok": 50
     },
     "costPerTask": {
-      "usd": 3.76,
-      "effort": "max"
+      "usd": 1,
+      "effort": "medium"
     },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2026-06",
     "speed": {
-      "outputTokensPerSec": 66,
-      "timeToFirstTokenSec": 285.33,
-      "effort": "max"
+      "outputTokensPerSec": 46.8,
+      "timeToFirstTokenSec": 6.77,
+      "effort": "medium"
     },
     "license": null,
     "apiIds": [
@@ -5512,24 +5635,24 @@
       "mmluPro": 92.4,
       "gpqaDiamond": null,
       "sweBench": null,
-      "terminalBench": 85,
+      "terminalBench": 91.4,
       "aime": null,
       "hle": 60.9,
       "lmarenaElo": null,
-      "arcAgi2": null
+      "arcAgi2": 90
     },
     "strengths": [
-      "Writes with fewer stock phrases and less bold-and-bullets formatting than earlier Claude models, and takes style instructions more reliably",
-      "Runs very long tasks on a clear goal with little methodology guidance — hours-long refactors and multistep research hold together",
-      "Safeguards fire far less often than Fable 5's did at launch, and finding vulnerabilities in code is now permitted",
-      "Reads dense charts and tables nested in PDFs well, especially when given a crop-and-zoom tool"
+      "Does the task it was given and stops, instead of treating every ambiguity as more work to take on — the scope creep Fable 5 was known for is mostly gone",
+      "Code review is quieter and sharper: nitpick comments largely disappear while it still catches the same real issues",
+      "More comfortable left running unattended for hours than Fable 5, and fixes root causes rather than patching symptoms",
+      "Prose sounds less stereotypically Claude — denser, plainer, with far less bold-and-bullet scaffolding"
     ],
     "weaknesses": [
-      "Goes quiet during long tool runs and may issue one tool call per turn where Fable 5 batched several — agent loops need a batching nudge or they burn extra round trips",
-      "Rewrites whole files for small edits and widens scope unasked, fixing nearby code and committing tests the task never called for",
-      "At max effort it can think for many minutes before the first answer token and may draft a long deliverable twice, once in thinking and again in the reply"
+      "Slower in agent loops: it often issues one tool call per turn where Fable 5 batched several, and code reviews take about half again as long",
+      "At max effort it generates roughly twice the tokens of its peers and can sit for minutes before the first answer token, so per-task cost went up despite the cache-read cut",
+      "At low effort it answers from memory rather than searching, tends to rewrite whole files for small edits, and can lift passages from sources without marking them as quotes"
     ],
-    "notes": "Same weights as Claude Mythos 5.1 (Project Glasswing participants only); the two differ only in cyber safeguards. predecessorId is set from Anthropic's own models table (\"Successor to Claude Fable 5\") and migration guide (\"mostly drop-in\"). HLE 60.9% no tools / 65.0% with tools are Anthropic's announcement figures, relayed by launch coverage (anthropic.com was not fetchable this session). Terminal-Bench 2.1 85.0% (vals.ai reports 85.02%) and MMLU-Pro 92.4% (92.38%) are vals.ai third-party runs with Opus 5/4.8 server-side fallbacks on refusals — Terminal-Bench 2.1 drops to 79.0% if fallback-assisted tasks count as failures. Anthropic's own headline agentic figures are Terminal-Bench 4.0 55.8% (Mythos 5.1 60.9%) and Terminal-Bench-Science 0.1 52.6%, neither tracked here. SWE-bench Verified, GPQA Diamond and AIME unpublished; ARC Prize has not tested it. Cache reads $0.25/MTok (0.025x input vs 0.1x on other Claude models); batch API 50% off; forced tool_choice returns 400. costPerTask $3.76 and speed are Artificial Analysis' max-effort \"with fallback\" variant per AA's launch post; AA's live model page may now show $3.69 — re-check when fetchable."
+    "notes": "Same model as the restricted Claude Mythos 5.1 (Project Glasswing participants only), which shares its specs and pricing and differs only in safeguards — Anthropic reports no separate score on any tracked benchmark (Mythos 5.1 posts 60.9% vs 55.8% on the untracked Terminal-Bench 4.0). HLE 60.9% no tools / 65.0% with tools per Anthropic. Anthropic no longer reports SWE-bench Verified, GPQA Diamond or AIME: Terminal-Bench 2.1 91.4% is Artificial Analysis-measured at max effort (Vals AI's harness gives 85.0%), MMLU-Pro 92.4% is Vals AI's measurement at max effort, and ARC-AGI-2 90.0% is ARC Prize-verified at max effort ($4.49/task). Cache reads are $0.25/MTok (0.025x input, vs 0.1x on other Claude models); batch $5/$25. Cost per task and speed are AA's medium-effort variant — max effort runs $3.69/task at 66.2 tok/s with a 291 s first-answer latency."
   },
   {
     "id": "qwen3-8-flash-next",

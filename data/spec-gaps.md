@@ -1,3 +1,15 @@
+---
+type: Data Gap Report
+title: Model spec gaps
+description: Cells researched under protocols/MODEL_SPECS_PROTOCOL.md and found unverifiable from primary sources. Re-runs
+  skip everything listed here.
+tags:
+- data
+generated:
+  by: human:maia
+  at: '2026-08-16T00:27:36Z'
+---
+
 # Model spec gaps
 
 Cells researched under `protocols/MODEL_SPECS_PROTOCOL.md` and found unverifiable
@@ -45,13 +57,18 @@ qwen3-8-27b · predecessorId · 2026-08-16 · Qwen's own X announcement (@Alibab
 qwen3-8-27b · apiIds · 2026-08-16 · No official Alibaba Cloud Model Studio/DashScope model-id string found for this open-weight checkpoint (unlike qwen3-8-max, which has one); only OpenRouter's third-party listing ($0.45/$3.20 per 1M tokens) was found. Left [].
 qwen3-8-27b · speed / costPerTask · 2026-08-16 · Artificial Analysis coverage could not be directly verified this session (artificialanalysis.ai returned EGRESS_BLOCKED on every WebFetch attempt); no cost-per-task or speed figure surfaced via WebSearch either. Left null.
 glm-5-3 · predecessorId · 2026-08-16 · Z.ai's own launch material states only "scaling post-training is all we did for GLM-5.3" and that it uses the same base model as GLM-5.2 — lineage/build-upon language, not an explicit replacement statement (same bar as gemini-3-6-flash and muse-spark-1-1 above). Several secondary outlets (siliconrepublic.com, elsolitario.org) call GLM-5.2 its "predecessor," but this is journalist framing, not a primary-source claim traced to Z.ai's own copy. Left null.
-glm-5-3 · costPerTask · 2026-09-02 · Artificial Analysis now covers GLM-5.3 (max-effort variant; speed 72 tok/s, 1.63 s to first answer token, Intelligence Index 60), but only the whole-index run total ($1,238.50) surfaced via search snippets — the per-task figure this site records (intelligenceIndexCostPerTask.cost.total) was not readable and must not be derived. Left null; re-check when artificialanalysis.ai/models/glm-5-3 is fetchable.
-glm-5-3-flash · predecessorId · 2026-08-30 · Z.ai's own material frames GLM-5.3-Flash as its first natively multimodal model in the GLM-5 line (a new capability tier), not a stated replacement of GLM-5.2, GLM-5.3, or any earlier "Flash"-tier model — no such earlier Flash-tier GLM-5 model is tracked in this dataset regardless. Left null.
+glm-5-3 · apiIds · 2026-08-16 · WebSearch results attribute a model id of "glm-5.3" to Z.ai's own developer docs (docs.z.ai/guides/llm/glm-5.3), but the page itself returned EGRESS_BLOCKED on every direct WebFetch attempt this session and could not be independently confirmed. Left [] rather than record an unverified string; re-check once the docs page is reachable.
+glm-5-3 · license · 2026-08-16 · Not applicable — `openWeights: false` as of this release; Z.ai says open weights follow "in about two weeks" after a safety review. Per protocol, license stays null for closed-weight models. Re-check once weights actually publish.
+glm-5-3 · speed / costPerTask · 2026-08-16 · No Artificial Analysis coverage found — the model has no public per-token API pricing and no public weights yet, so AA has nothing to measure. Left null.
+motif-3 · predecessorId · 2026-08-18 · Motif's own Hugging Face card for the final release (huggingface.co/Motif-Technologies/Motif-3, read via mirrored excerpts — WebFetch unavailable) and its 2026-08-13 announcement describe the release as the final MIT-licensed weights of the same 314B/13.2B MoE, but no sentence stating it replaces or supersedes Motif-3-Beta surfaced; the beta card's own "intermediate checkpoint with the final still to come" wording is the beta anticipating a successor, not the final release claiming supersession. Left null pending a direct read of the card.
+motif-3 · apiIds · 2026-08-18 · No first-party API and no hosted provider (OpenRouter/DeepInfra/Fireworks all absent per multiple outlets); only a free chat at chat.motiftech.io. Left [].
+hy4-preview · predecessorId · 2026-08-31 · Tencent's own announcement (tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/) calls it "next-generation"; the HF card / GitHub README say only "As with Hy3 preview, we would rather ship early and hear what breaks — that's what made Hy3 substantially better, and it's how we will get Hy4 right." Lineage, not supersession, and Tencent Cloud's Hy API guide (tencentcloud.com/document/product/1300/80695) still lists hy3 as the production model with no deprecation. Left null.
+hy4-preview · speed / costPerTask · 2026-08-31 · Artificial Analysis has no page for the model (artificialanalysis.ai/models/hy4-preview and /models/hy4 both 404; site-scoped search returns only Hy3). OpenRouter's own throughput figure (~40 tok/s, 3.07 s P50 latency) is not an AA measurement, so both left null.
 
+glm-5-3 · costPerTask · 2026-09-02 · Artificial Analysis now covers GLM-5.3 (max-effort variant; speed 72 tok/s, 1.63 s to first answer token, Intelligence Index 60), but only the whole-index run total ($1,238.50) surfaced via search snippets — the per-task figure this site records (intelligenceIndexCostPerTask.cost.total) was not readable and must not be derived. Left null; re-check when artificialanalysis.ai/models/glm-5-3 is fetchable.
 hy4-preview · predecessorId · 2026-09-02 · Tencent's press release, HF card and X posts call Hy4 preview a "new-generation" / "next-generation" flagship and say model size, context and data were "expanded significantly", but state no replacement of Hy3 — the same announcement extends free Hy3 access on WorkBuddy/CodeBuddy to 2026-09-30, i.e. Hy3 stays on sale. Lineage language only; left null.
 hy4-preview · speed · 2026-09-02 · No Artificial Analysis page exists for the model yet (only Hy3 and Hy3-preview are listed); no output-speed or first-answer-token measurement found. Left null.
 hy4-preview · retirementDate · 2026-09-02 · No shutdown date announced; Tencent describes it as an early preview with headroom left, but names no end-of-life. Left null.
-claude-fable-5-1 · speed / costPerTask (medium) · 2026-09-02 · Artificial Analysis publishes only the max-effort ("max with fallback") and high-effort variants; no medium-effort cost per task exists, so the max figures were recorded per protocol. High variant scores 62 but its per-task cost was not visible in snippets. Re-check if AA adds medium.
 claude-fable-5-1 · retirementDate · 2026-09-02 · Anthropic's deprecations page lists claude-fable-5-1 as Active, "Not sooner than September 1, 2027" — a floor, not a retirement announcement. Left null.
 qwen3-8-flash-next · predecessorId · 2026-09-02 · Qwen's blog frames it as an experimental Qwen4-architecture preview that "plays the same role that Qwen3-Next played for Qwen3.5" and benchmarks it against Qwen3.7-Plus and Qwen3.8-27B — lineage/comparison language, no replacement statement toward qwen3-7-flash or any tracked model. Left null.
 qwen3-8-flash-next · apiIds · 2026-09-02 · No first-party id for the open checkpoint: alibabacloud.com Model Studio docs list qwen3.8-flash, qwen3.7-flash, qwen3.6-flash etc. but no "qwen3.8-flash-next"; OpenRouter has qwen/qwen3.8-flash only; ollama.com/library/qwen3.8-flash-next exists for local pulls with no cloud tag confirmed. The qwen3.8-flash string (qwencloud.com/models/qwen3.8-flash) belongs to the production version, so it is not recorded here. Left [].
