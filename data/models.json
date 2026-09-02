@@ -442,7 +442,7 @@
     },
     "license": null,
     "apiIds": [],
-    "retirementDate": null,
+    "retirementDate": "2026-01-05",
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": 68.5,
@@ -494,7 +494,7 @@
     },
     "license": null,
     "apiIds": [],
-    "retirementDate": null,
+    "retirementDate": "2025-10-28",
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": 76.1,
@@ -523,7 +523,7 @@
     "name": "Claude 3.7 Sonnet",
     "company": "anthropic",
     "releaseDate": "2025-02-24",
-    "status": "superseded",
+    "status": "deprecated",
     "tier": "balanced",
     "modality": "multimodal",
     "contextWindow": 200000,
@@ -546,7 +546,7 @@
     },
     "license": null,
     "apiIds": [],
-    "retirementDate": null,
+    "retirementDate": "2026-02-19",
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": 80.7,
@@ -574,7 +574,7 @@
     "name": "Claude Opus 4",
     "company": "anthropic",
     "releaseDate": "2025-05-22",
-    "status": "superseded",
+    "status": "deprecated",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 200000,
@@ -597,7 +597,7 @@
     },
     "license": null,
     "apiIds": [],
-    "retirementDate": null,
+    "retirementDate": "2026-06-15",
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": 87.4,
@@ -625,7 +625,7 @@
     "name": "Claude Sonnet 4",
     "company": "anthropic",
     "releaseDate": "2025-05-22",
-    "status": "superseded",
+    "status": "deprecated",
     "tier": "balanced",
     "modality": "multimodal",
     "contextWindow": 200000,
@@ -648,7 +648,7 @@
     },
     "license": null,
     "apiIds": [],
-    "retirementDate": null,
+    "retirementDate": "2026-06-15",
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": 83.8,
@@ -676,7 +676,7 @@
     "name": "Claude Opus 4.1",
     "company": "anthropic",
     "releaseDate": "2025-08-05",
-    "status": "superseded",
+    "status": "deprecated",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 200000,
@@ -699,7 +699,7 @@
     },
     "license": null,
     "apiIds": [],
-    "retirementDate": null,
+    "retirementDate": "2026-08-05",
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
@@ -1295,7 +1295,7 @@
     "name": "Grok 4.1",
     "company": "xai",
     "releaseDate": "2025-11-17",
-    "status": "unknown",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 256000,
@@ -1807,7 +1807,7 @@
     "name": "Kimi K3",
     "company": "moonshot",
     "releaseDate": "2026-07-16",
-    "status": "frontier",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 1048576,
@@ -3023,7 +3023,7 @@
       "Personality divides users; some find it blunt or contrarian outside coding work",
       "Deliberately weak at offensive security tasks"
     ],
-    "notes": "Introductory pricing $2/$10 per MTok through Aug 31 2026, rising to standard $3/$15 on Sept 1. HLE 43.2% no tools / 57.4% with tools per Anthropic's system card. LMArena Elo 1461 is the 'Claude Sonnet 5 High' text-arena listing (arena.ai). SWE-bench Verified 85.2% is widely cited by third-party trackers (OpenRouter, Requesty, EdenAI), but Anthropic's own system card reports SWE-bench Pro (63.2%) instead — no official Verified figure confirmed. GPQA Diamond 91.1% is Artificial Analysis' own measurement (its gpqa-diamond leaderboard, relayed by BenchLM), not an Anthropic figure — a 96.2% number circulating on some trackers is unsourced and was rejected. ARC-AGI-2 and AIME remain unpublished: Anthropic did not report AIME for Sonnet 5 and ARC Prize has not tested it."
+    "notes": "The $2/$10 per MTok launch price, originally billed as introductory through Aug 31 2026, was made the standard price — Anthropic's pricing page states the scheduled Sept 1 increase to $3/$15 will not occur. HLE 43.2% no tools / 57.4% with tools per Anthropic's system card. LMArena Elo 1461 is the 'Claude Sonnet 5 High' text-arena listing (arena.ai). SWE-bench Verified 85.2% is widely cited by third-party trackers (OpenRouter, Requesty, EdenAI), but Anthropic's own system card reports SWE-bench Pro (63.2%) instead — no official Verified figure confirmed. GPQA Diamond 91.1% is Artificial Analysis' own measurement (its gpqa-diamond leaderboard, relayed by BenchLM), not an Anthropic figure — a 96.2% number circulating on some trackers is unsourced and was rejected. ARC-AGI-2 and AIME remain unpublished: Anthropic did not report AIME for Sonnet 5 and ARC Prize has not tested it."
   },
   {
     "id": "grok-4-5",
@@ -5229,23 +5229,34 @@
     "contextWindow": 1000000,
     "maxOutput": 128000,
     "pricing": {
-      "inputPerMTok": null,
-      "outputPerMTok": null
+      "inputPerMTok": 1.4,
+      "outputPerMTok": 4.4
     },
     "costPerTask": {
       "usd": null,
       "effort": null
     },
-    "openWeights": false,
-    "availability": "restricted",
+    "openWeights": true,
+    "availability": "general",
     "knowledgeCutoff": null,
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
-      "effort": null
+      "outputTokensPerSec": 72,
+      "timeToFirstTokenSec": 1.63,
+      "effort": "max"
     },
-    "license": null,
-    "apiIds": [],
+    "license": {
+      "spdx": null,
+      "name": "GLM-5.3 License",
+      "kind": "restricted",
+      "url": "https://huggingface.co/zai-org/GLM-5.3/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "zhipu",
+        "id": "glm-5.3"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -5266,9 +5277,9 @@
     "weaknesses": [
       "Still a step behind the closed frontier on the single hardest coding problems, even as it closes most of the gap on everyday agent work",
       "Good at finding exploitable bugs but weaker at writing the exploits itself — defensive security strength doesn't carry over to offensive tasks",
-      "Weights are held back behind a safety review at launch, so self-hosting and local fine-tuning aren't possible yet"
+      "Reasoning is always-on with only a low/high/max budget dial, and Artificial Analysis measures it at max — every call carries thinking overhead you cannot switch off"
     ],
-    "notes": "Same ~744B-parameter (~40B active) MoE base as GLM-5.2 — Z.ai's own framing is 'scaling post-training is all we did for GLM-5.3' — so predecessorId is left null per this site's rule against lineage/build-upon language as replacement evidence, even though several outlets call GLM-5.2 its 'predecessor.' Z.ai's launch benchmark table is entirely agentic/coding/cyber (Terminal-Bench 2.1 88.2%, Terminal-Bench 3.0 4.6%→28.3%, DeepSWE v1.1 46.2%→66.9%, SWE-Marathon v1.1 19.4%→42.5%, AutomationBench 26.2%→48.2%, Agents' Last Exam 23.8%→28.5%, CyberGym 84.5% — ahead of Claude Mythos 5's 83.8% and GPT-5.6 Sol's 83.6% by Z.ai's account) and doesn't touch the site's tracked knowledge/reasoning keys, consistent with the unchanged-base-model claim. Context window and max output are carried over unchanged from GLM-5.2 (1M / 128K) pending a dedicated 5.3 model card. No public per-token API pricing yet — available today only via the GLM Coding Plan subscription (Lite/Pro/Max monthly plans) and a staged API rollout; Z.ai says open weights follow in roughly two weeks after safety hardening, at which point openWeights/license/pricing should be revisited."
+    "notes": "Same ~744B-parameter (~40B active) MoE base as GLM-5.2 — Z.ai's own framing is 'scaling post-training is all we did for GLM-5.3' — so predecessorId is left null per this site's rule against lineage/build-upon language as replacement evidence, even though several outlets call GLM-5.2 its 'predecessor.' Z.ai's launch benchmark table is entirely agentic/coding/cyber (Terminal-Bench 2.1 88.2%, Terminal-Bench 3.0 4.6%→28.3%, DeepSWE v1.1 46.2%→66.9%, SWE-Marathon v1.1 19.4%→42.5%, AutomationBench 26.2%→48.2%, Agents' Last Exam 23.8%→28.5%, CyberGym 84.5% — ahead of Claude Mythos 5's 83.8% and GPT-5.6 Sol's 83.6% by Z.ai's account) and doesn't touch the site's tracked knowledge/reasoning keys, consistent with the unchanged-base-model claim. Context window and max output are carried over unchanged from GLM-5.2 (1M / 128K) pending a dedicated 5.3 model card. Weights have since been published on Hugging Face (zai-org/GLM-5.3) under a bespoke \"GLM-5.3 License\" rather than the MIT terms used for GLM-5.2 and GLM-5.3-Flash: an MIT-style grant covering weights, code and derivative works, with one added condition — any Model-as-a-Service operator whose group revenue exceeds US$10B in a 12-month period must pass a Z.ai security review before commercial use. Z.ai's API now lists the model as glm-5.3 at $1.40/$4.40 per M input/output tokens (cached input $0.26); Artificial Analysis measures the max-effort variant at 72 tok/s and 1.63 s to first answer token, but its per-task cost figure could not be read. The exact weights-publication date (reported as 2026-08-28 by several trackers) could not be confirmed from a primary page."
   },
   {
     "id": "ornith-1-5-397b",
@@ -5338,12 +5349,22 @@
     "modality": "multimodal",
     "contextWindow": 1048576,
     "maxOutput": 131072,
-    "pricing": { "inputPerMTok": 0.15, "outputPerMTok": 0.5 },
-    "costPerTask": { "usd": 0.09, "effort": "max" },
+    "pricing": {
+      "inputPerMTok": 0.15,
+      "outputPerMTok": 0.5
+    },
+    "costPerTask": {
+      "usd": 0.09,
+      "effort": "max"
+    },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
-    "speed": { "outputTokensPerSec": 49.8, "timeToFirstTokenSec": 1.49, "effort": "max" },
+    "speed": {
+      "outputTokensPerSec": 49.8,
+      "timeToFirstTokenSec": 1.49,
+      "effort": "max"
+    },
     "license": {
       "spdx": "MIT",
       "name": "MIT License",
@@ -5351,7 +5372,12 @@
       "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
       "commercialUse": true
     },
-    "apiIds": [{ "provider": "zhipu", "id": "glm-5.3-flash" }],
+    "apiIds": [
+      {
+        "provider": "zhipu",
+        "id": "glm-5.3-flash"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -5375,5 +5401,193 @@
       "Reasoning is always-on with only a low/high/max budget dial, not an off switch — every call carries at least some thinking overhead"
     ],
     "notes": "320B-total/18B-active MoE, Zhipu's first natively multimodal model in the GLM-5 line. Terminal-Bench 2.1 (84.3%) is Z.ai's own reported figure; GPQA Diamond, HLE, SWE-bench Verified, AIME, LMArena Elo and ARC-AGI-2 are left null — Z.ai's own table reports non-standard benchmarks instead (DeepSWE v1.1 63.4%, AutomationBench 48.8%, Toolathlon Verified 78.4%), and a single-source claim of an Artificial Analysis GPQA Diamond (91.2%) and HLE (55.3%) score could not be corroborated across independent sources on re-check. costPerTask ($0.09) and speed (49.8 tok/s, 1.49s to first answer token) are Artificial Analysis' max-effort measurements — the model has no medium-effort variant (only low/high/max). Pricing is Z.ai's standard $0.15/$0.50 rate; a 50%-off launch promotion runs through 2026-09-09. predecessorId is left null since Zhipu's own materials frame this as a new capability tier rather than an explicit replacement for GLM-5.2 or GLM-5.3."
+  },
+  {
+    "id": "hy4-preview",
+    "name": "Hy4 preview",
+    "company": "tencent",
+    "releaseDate": "2026-08-28",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "text",
+    "contextWindow": 1048576,
+    "maxOutput": 64000,
+    "pricing": {
+      "inputPerMTok": 0.834,
+      "outputPerMTok": 2.501
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/tencent/Hy4-preview/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "tencent-cloud",
+        "id": "hy4-preview"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 92.3,
+      "sweBench": null,
+      "terminalBench": 85.4,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Gated sparse attention with a cross-layer index cache makes the full window usable in practice rather than just advertised — whole repositories fit in one prompt without chunking",
+      "Took part in its own training run — proposed and tested changes to data strategy, evaluation and inference kernels, and the throughput gains it found were folded back into the release",
+      "First-party endpoint speaks OpenAI Chat Completions, Responses and Anthropic Messages protocols, so existing agent harnesses point at it without a shim"
+    ],
+    "weaknesses": [
+      "Reasons longer than the task needs and re-verifies work that was already right — Tencent lists both as known issues, so agent runs burn far more tokens than the per-token price implies",
+      "Text-only: image input is rejected outright, with vision deferred to the full Hy4 release",
+      "Practically unrunnable at home — a 4-bit build is still around half a terabyte, so despite the open weights it is a rent-not-run model"
+    ],
+    "notes": "Tencent's first 770B-total/49B-active MoE (256 routed + 1 shared expert, top-8), open-sourced 2026-08-28. GPQA Diamond 92.3 and Terminal-Bench 2.1 85.4 are Tencent's own chart figures, published as an image and transcribed by launch coverage — Artificial Analysis has not yet listed the model, so no independent run exists. HLE is left null: the with-tools figure (55.4%, text-only) is corroborated across trackers but the no-tools figure (43.4%) traces to a single transcription set. Tencent's chart does not report SWE-bench Verified; it reports SWE-bench Pro 65.7%, SWE-bench Multilingual 82.9%, DeepSWE 64.3%, and a 163-expert blind evaluation at 2.99/4 vs GLM-5.3 2.92 and Kimi K3 2.94. MMLU-Pro, AIME and ARC-AGI-2 were not published; the model is on arena.ai's Code Arena but not the text leaderboard. Pricing is Tencent's first-party TokenHub rate ($0.042 cache read), matched by OpenRouter; maxOutput 64K and a 960K max-input cap are from Tencent Cloud's docs. predecessorId is left null — Tencent extended free Hy3 access to 2026-09-30 alongside this launch and states no replacement."
+  },
+  {
+    "id": "claude-fable-5-1",
+    "name": "Claude Fable 5.1",
+    "company": "anthropic",
+    "releaseDate": "2026-09-01",
+    "status": "frontier",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 1000000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 10,
+      "outputPerMTok": 50
+    },
+    "costPerTask": {
+      "usd": 3.76,
+      "effort": "max"
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-06",
+    "speed": {
+      "outputTokensPerSec": 66,
+      "timeToFirstTokenSec": 285.33,
+      "effort": "max"
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "anthropic",
+        "id": "claude-fable-5-1"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "anthropic.claude-fable-5-1"
+      },
+      {
+        "provider": "google-vertex",
+        "id": "claude-fable-5-1"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": "claude-fable-5",
+    "benchmarks": {
+      "mmluPro": 92.4,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "terminalBench": 85,
+      "aime": null,
+      "hle": 60.9,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Writes with fewer stock phrases and less bold-and-bullets formatting than earlier Claude models, and takes style instructions more reliably",
+      "Runs very long tasks on a clear goal with little methodology guidance — hours-long refactors and multistep research hold together",
+      "Safeguards fire far less often than Fable 5's did at launch, and finding vulnerabilities in code is now permitted",
+      "Reads dense charts and tables nested in PDFs well, especially when given a crop-and-zoom tool"
+    ],
+    "weaknesses": [
+      "Goes quiet during long tool runs and may issue one tool call per turn where Fable 5 batched several — agent loops need a batching nudge or they burn extra round trips",
+      "Rewrites whole files for small edits and widens scope unasked, fixing nearby code and committing tests the task never called for",
+      "At max effort it can think for many minutes before the first answer token and may draft a long deliverable twice, once in thinking and again in the reply"
+    ],
+    "notes": "Same weights as Claude Mythos 5.1 (Project Glasswing participants only); the two differ only in cyber safeguards. predecessorId is set from Anthropic's own models table (\"Successor to Claude Fable 5\") and migration guide (\"mostly drop-in\"). HLE 60.9% no tools / 65.0% with tools are Anthropic's announcement figures, relayed by launch coverage (anthropic.com was not fetchable this session). Terminal-Bench 2.1 85.0% (vals.ai reports 85.02%) and MMLU-Pro 92.4% (92.38%) are vals.ai third-party runs with Opus 5/4.8 server-side fallbacks on refusals — Terminal-Bench 2.1 drops to 79.0% if fallback-assisted tasks count as failures. Anthropic's own headline agentic figures are Terminal-Bench 4.0 55.8% (Mythos 5.1 60.9%) and Terminal-Bench-Science 0.1 52.6%, neither tracked here. SWE-bench Verified, GPQA Diamond and AIME unpublished; ARC Prize has not tested it. Cache reads $0.25/MTok (0.025x input vs 0.1x on other Claude models); batch API 50% off; forced tool_choice returns 400. costPerTask $3.76 and speed are Artificial Analysis' max-effort \"with fallback\" variant per AA's launch post; AA's live model page may now show $3.69 — re-check when fetchable."
+  },
+  {
+    "id": "qwen3-8-flash-next",
+    "name": "Qwen3.8-Flash-Next",
+    "company": "alibaba",
+    "releaseDate": "2026-08-26",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "contextWindow": 262144,
+    "maxOutput": 131072,
+    "pricing": {
+      "inputPerMTok": 0.16,
+      "outputPerMTok": 0.47
+    },
+    "costPerTask": {
+      "usd": 0.09,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": 87.5,
+      "timeToFirstTokenSec": 2.57,
+      "effort": null
+    },
+    "license": {
+      "spdx": null,
+      "name": "Qwen Community License 1.0",
+      "kind": "restricted",
+      "url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/blob/main/LICENSE",
+      "commercialUse": null
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 91.7,
+      "sweBench": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": 35.9,
+      "lmarenaElo": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Only a sliver of the weights fire per token and the n-gram table can sit in ordinary system RAM — a checkpoint this large runs from CPU memory at close to VRAM speeds on a single workstation",
+      "Thinking is on by default but switchable per request, with a low/medium/xhigh reasoning_effort dial and preserve_thinking to carry reasoning across agent turns instead of re-deriving it",
+      "Image and video understanding are native to the checkpoint — charts, documents, hour-scale video, computer-use and mobile-use tasks — not a vision adapter bolted onto a text base",
+      "Does its best work on open-ended agentic coding — reviewers found it stronger when given room to plan than when handed a fully specified brief"
+    ],
+    "weaknesses": [
+      "Qwen's own label is an under-trained architecture preview, and low-bit quantization visibly costs quality — behaviour is a moving target rather than a fixed release",
+      "Very verbose in thinking mode — Artificial Analysis saw it burn roughly twice the median token count on its index, which quietly inflates output bills and stretches single tasks to many minutes",
+      "Ships a brand-new architecture and Qwen-XML tool calls — runtimes without the matching parser or kernels drop tool calls or decode several times slower than the active-parameter count implies"
+    ],
+    "notes": "125B main model plus a separate 51B n-gram embedding table (176B on disk) and a 4B MTP head, 6B active per token; Qwen calls it an experimental preview of the Qwen4 architecture. GPQA Diamond 91.7 and HLE 35.9 are Qwen's own model-card figures (HLE judged by GPT-4o; the card does not say whether tools were used); Qwen also reports SWE-bench Pro 62.5, SWE-bench Multilingual 81.0, LiveCodeBench v6 91.9, CoWorkBench 73.9 and Toolathlon Verified 73.5, none of which is a tracked key, and the MMLU-Pro 73.23 in the card is for the pretrained Base checkpoint, not the released model. Terminal-Bench appears in the card's harness notes as the 2.0 version, with no figure found, so the 2.1 cell stays null. Arena has it at #24 overall in Agent Arena and 1617 (AutoEval) on Code Arena: WebDev, but no text-leaderboard Elo. Qwen states that \"Qwen3.8-Flash is the official version based on Qwen3.8-Flash-Next with more production features, e.g., 1M context length by default, official built-in tools\" — so pricing is Qwen's first-party rate for that hosted production version (1 RMB / 3 RMB, $0.16/$0.47; OpenRouter and Artificial Analysis list it at $0.15/$0.47), and costPerTask ($0.09) and speed (87.5 tok/s, 2.57 s to first answer token) are Artificial Analysis measurements taken on Alibaba's API without a disclosed effort tier (the model defaults to xhigh). Context is 262,144 native, extendable to about 1M via YaRN; max output is the 131,072 final-response cap (reasoning content may run to 262,144). Qwen's blog says it \"plays the same role that Qwen3-Next played for Qwen3.5\" and compares it to Qwen3.7-Plus — lineage language, not a replacement claim, so predecessorId is null."
   }
 ]

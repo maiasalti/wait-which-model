@@ -1,12 +1,78 @@
 [
   {
+    "id": "2026-09-01-claude-fable-5-1",
+    "date": "2026-09-01",
+    "title": "Anthropic releases Claude Fable 5.1 and Mythos 5.1, one model split only by cyber safeguards",
+    "summary": "Anthropic shipped Claude Fable 5.1 (general availability) and Claude Mythos 5.1 (Project Glasswing participants only) — the same underlying model behind different safeguard layers — at Fable 5's $10/$50 per MTok with cache reads cut 75% to $0.25. Anthropic reports 52.6% on Terminal-Bench-Science 0.1 (more than double Fable 5's 24.7%), 55.8% on Terminal-Bench 4.0 (Mythos 5.1: 60.9%) and 60.9%/65.0% on Humanity's Last Exam without/with tools; Artificial Analysis scores it 66 at max effort, first on its Intelligence Index but 20% more per task than Fable 5.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-fable-5-1"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+  },
+  {
+    "id": "2026-08-28-hy4-preview",
+    "date": "2026-08-28",
+    "title": "Tencent open-sources Hy4 preview, a 770B MoE that helped optimize its own training run",
+    "summary": "Hy4 preview is a 770B-total/49B-active MoE with a context window over 1M tokens, released under Apache 2.0 and priced at $0.834/$2.501 per million tokens on Tencent Cloud TokenHub and OpenRouter. Tencent says the model took part in optimizing its own training methods, data strategy and inference kernels — lifting end-to-end throughput 31.8% — and scored 2.99/4 in a 163-expert blind evaluation against GLM-5.3 (2.92) and Kimi K3 (2.94); it is free on WorkBuddy and CodeBuddy for two weeks.",
+    "category": "release",
+    "companies": [
+      "tencent"
+    ],
+    "modelIds": [
+      "hy4-preview"
+    ],
+    "sourceName": "Tencent",
+    "sourceUrl": "https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/"
+  },
+  {
+    "id": "2026-08-28-glm-5-3-weights",
+    "date": "2026-08-28",
+    "title": "Z.ai publishes GLM-5.3 weights under a bespoke licence, breaking from the GLM line's MIT habit",
+    "summary": "Two weeks after the API-only launch, Z.ai released GLM-5.3's weights on Hugging Face under a new \"GLM-5.3 License\" — an MIT-style grant with one added condition: model-as-a-service operators with over $10B in annual revenue must pass a Z.ai security review before commercial use. The same-base-model sibling GLM-5.2 and the smaller GLM-5.3-Flash remain MIT. Per-token API pricing landed alongside at $1.40/$4.40 per million tokens.",
+    "category": "release",
+    "companies": [
+      "zhipu"
+    ],
+    "modelIds": [
+      "glm-5-3",
+      "glm-5-2",
+      "glm-5-3-flash"
+    ],
+    "sourceName": "Z.ai",
+    "sourceUrl": "https://huggingface.co/zai-org/GLM-5.3"
+  },
+  {
+    "id": "2026-08-26-qwen3-8-flash-next",
+    "date": "2026-08-26",
+    "title": "Alibaba open-sources Qwen3.8-Flash-Next, a 6B-active MoE preview of the Qwen4 architecture",
+    "summary": "The 125B-parameter model (plus a 51B n-gram embedding table) activates only 6B parameters per token, is natively multimodal with a 256K context, and posts Qwen-reported GPQA Diamond 91.7, SWE-bench Pro 62.5 and HLE 35.9 at about a ninth of Qwen3.7-Plus's training cost. Weights ship under the Qwen Community License 1.0; the production version is served as Qwen3.8-Flash on QwenCloud at $0.16/$0.47 per million tokens.",
+    "category": "release",
+    "companies": [
+      "alibaba"
+    ],
+    "modelIds": [
+      "qwen3-8-flash-next"
+    ],
+    "sourceName": "Qwen",
+    "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-flash-next"
+  },
+  {
     "id": "2026-08-26-glm-5-3-flash",
     "date": "2026-08-26",
     "title": "Zhipu releases GLM-5.3-Flash, an MIT-licensed open-weights model that spent a week running anonymously as \"Ox Alpha\"",
     "summary": "Z.ai open-sourced GLM-5.3-Flash, a 320B-parameter (18B active) natively multimodal MoE with a 1M-token context and $0.15/$0.50 per-million-token pricing, revealing it as the mystery model developers had been hammering for free on OpenRouter under the \"Ox Alpha\" name since August 20.",
     "category": "release",
-    "companies": ["zhipu"],
-    "modelIds": ["glm-5-3-flash"],
+    "companies": [
+      "zhipu"
+    ],
+    "modelIds": [
+      "glm-5-3-flash"
+    ],
     "sourceName": "Z.ai",
     "sourceUrl": "https://huggingface.co/zai-org/GLM-5.3-Flash"
   },
