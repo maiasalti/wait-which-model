@@ -1,6 +1,6 @@
 "use client";
 
-import { benchmarks, companies, models } from "@/lib/data";
+import { activeBenchmarks, companies, models } from "@/lib/data";
 import { CompanyLogo } from "./CompanyLogo";
 import { WINDOW_LABELS } from "@/lib/filter";
 import type { BenchmarkKey, Filters, Highlight, TimeWindow } from "@/lib/types";
@@ -133,7 +133,7 @@ export function FilterRail({
           className="mt-2 w-full rounded border border-line bg-surface px-2 py-1.5 text-sm"
           aria-label="Benchmark for charts"
         >
-          {benchmarks.map((b) => (
+          {activeBenchmarks.map((b) => (
             <option key={b.key} value={b.key}>
               {b.name}
             </option>

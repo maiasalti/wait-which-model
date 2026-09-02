@@ -30,9 +30,14 @@ const sameList = (a: string[], b: string[]) =>
   a.length === b.length && a.every((v, i) => v === b[i]);
 
 const WINDOWS: TimeWindow[] = ["3m", "6m", "1y", "2y", "3y", "all"];
+/** Mirrors the non-retired keys in data/benchmarks.json (a test pins the two
+ *  together). Kept literal because this module runs under `node --test`, which
+ *  cannot resolve the `@/` JSON alias. A retired key in a shared link falls back
+ *  to the default benchmark rather than selecting something the picker no longer
+ *  offers. */
 const BENCHMARKS: BenchmarkKey[] = [
-  "mmluPro", "gpqaDiamond", "sweBench", "terminalBench",
-  "aime", "hle", "lmarenaElo", "arcAgi2",
+  "gpqaDiamond", "sweBench", "sweBenchPro", "terminalBench",
+  "hle", "lmarenaElo", "gdpvalAA", "arcAgi2",
 ];
 
 const num = (raw: string | null): number | null => {

@@ -27,7 +27,7 @@ node -e "
 const m=require('./data/models.json');
 const cutoff=new Date(); cutoff.setMonth(cutoff.getMonth()-6);
 const cutoffStr=cutoff.toISOString().slice(0,10);
-const keys=['mmluPro','gpqaDiamond','sweBench','aime','hle','lmarenaElo','arcAgi2'];
+const keys=require('./data/benchmarks.json').filter(b=>!b.retired).map(b=>b.key);
 for(const x of m){
   if(x.releaseDate < cutoffStr) continue;
   const miss=keys.filter(k=>x.benchmarks[k]==null);

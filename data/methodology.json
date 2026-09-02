@@ -8,7 +8,7 @@
       "Everyone else — capability bar: within its tier, a model's benchmark scores must land within about 15% of the best score any recent model in that tier has posted. Being newest isn't enough on its own — a fresh release with weaker benchmarks than the current leader doesn't qualify.",
       "Everyone else — verified data required: a model needs scores on at least 3 of the tracked benchmarks to be evaluated at all. A freshly announced model without enough published benchmark data yet is labeled \"Unknown\" rather than guessed into Frontier or Superseded."
     ],
-    "lastReviewed": "2026-08-05"
+    "lastReviewed": "2026-09-02"
   },
   "tiers": [
     {
@@ -75,18 +75,18 @@
   },
   "reigns": {
     "summary": "How long each model held the top of its tier — reconstructed from release dates and benchmark scores, not recorded as it happened. Read the notes below the chart before drawing conclusions from it: the timeline starts later than the real frontier did, because models that never reported three benchmarks are missing from it entirely.",
-    "caveat": "Reconstructed, not observed — and incomplete before November 2023.",
+    "caveat": "Reconstructed, not observed — and incomplete before February 2024.",
     "notes": [
       "This is a reconstruction, not an observed record. The site recomputes frontier status from scratch and keeps no history, so reigns are inferred after the fact.",
       "A model takes the crown on its release date if its composite score beats the incumbent's, and holds it until a later release scores higher.",
-      "Only models reporting at least three benchmarks can be crowned — one lucky score is not enough to claim a reign.",
+      "Only models reporting at least three non-retired benchmarks can be crowned — one lucky score is not enough to claim a reign.",
       "The composite is min-max normalised across each tier and averaged over whichever benchmarks a model reports, so two models reporting different benchmark sets are not compared on identical ground.",
       "Deprecated models are included: a retired model still held the frontier while it was alive.",
-      "A model that never reported three benchmarks is absent from the chart altogether, not merely denied a reign. The flagship timeline therefore begins in November 2023 with GPT-4 Turbo — not because nothing led the field before then, but because earlier models never published enough verified scores to be ranked here."
+      "A model that never reported three non-retired benchmarks is absent from the chart altogether, not merely denied a reign. The flagship timeline therefore begins in February 2024 with Gemini 1.5 Pro — not because nothing led the field before then, but because earlier models were ranked mainly on MMLU-Pro and AIME, both now retired, and never published enough of the benchmarks still in use to be ranked here."
     ]
   },
   "coverage": {
-    "summary": "Not every model reports every benchmark. A dash means the score was never published or could not be verified from a primary source — it does not mean zero."
+    "summary": "Not every model reports every benchmark. A dash means the score was never published or could not be verified from a primary source — it does not mean zero. Benchmarks marked retired (MMLU-Pro, AIME) are ones labs stopped reporting during 2026: scores already on record stay, but they are no longer charted on Compare or counted toward frontier status and reigns."
   },
   "costCalculator": {
     "summary": "Monthly cost is tasks per day x 30 x the model's measured cost per task.",

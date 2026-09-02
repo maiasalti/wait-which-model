@@ -6,10 +6,12 @@ export type BenchmarkKey =
   | "mmluPro"
   | "gpqaDiamond"
   | "sweBench"
+  | "sweBenchPro"
   | "terminalBench"
   | "aime"
   | "hle"
   | "lmarenaElo"
+  | "gdpvalAA"
   | "arcAgi2";
 
 export interface Pricing {
@@ -125,6 +127,11 @@ export interface BenchmarkMeta {
   unit: string;
   higherIsBetter: boolean;
   max: number | null;
+  /** Labs stopped reporting it. Scores stay on the models that have them (drawer
+   *  bars, coverage table), but the key is dropped from Compare's picker, the
+   *  head-to-head chart, the URL allowlist and the composite behind frontier
+   *  status and reigns. */
+  retired?: boolean;
 }
 
 export type NewsCategory = "release" | "benchmark" | "company" | "research" | "policy";

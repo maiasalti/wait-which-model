@@ -24,7 +24,7 @@ generated:
 ```bash
 node -e "
 const m=require('./data/models.json');
-const keys=['mmluPro','gpqaDiamond','sweBench','aime','hle','lmarenaElo','arcAgi2'];
+const keys=require('./data/benchmarks.json').filter(b=>!b.retired).map(b=>b.key);
 for(const x of m){
   const miss=keys.filter(k=>x.benchmarks[k]==null);
   const other=[['maxOutput',x.maxOutput],['inputPrice',x.pricing.inputPerMTok],['outputPrice',x.pricing.outputPerMTok],['knowledgeCutoff',x.knowledgeCutoff],['contextWindow',x.contextWindow]].filter(([,v])=>v==null).map(([k])=>k);

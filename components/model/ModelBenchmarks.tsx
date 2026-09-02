@@ -5,11 +5,18 @@ import type { Model } from "@/lib/types";
 import { CompanyLogo } from "../CompanyLogo";
 import { benchmarks, companyColor, models } from "@/lib/data";
 
-const ELO_VALUES = models
-  .map((m) => m.benchmarks.lmarenaElo)
-  .filter((v): v is number => v != null);
-const ELO_MIN = Math.floor(Math.min(...ELO_VALUES) / 50) * 50;
-const ELO_MAX = Math.ceil(Math.max(...ELO_VALUES) / 50) * 50;
+/** Elo-style benchmarks have no natural 0–100 scale, so each gets a bar domain
+ *  from the spread of scores actually on record, rounded out to the nearest 50. */
+const ELO_DOMAINS = new Map(
+  benchmarks
+    .filter((b) => b.unit === "Elo")
+    .map((b) => {
+      const vals = models.map((m) => m.benchmarks[b.key]).filter((v): v is number => v != null);
+      const min = vals.length ? Math.floor(Math.min(...vals) / 50) * 50 : 0;
+      const max = vals.length ? Math.ceil(Math.max(...vals) / 50) * 50 : 100;
+      return [b.key, { min, max }] as const;
+    })
+);
 
 function barPct(value: number | null | undefined, domainMin: number, domainMax: number): number {
   if (value == null) return 0;
@@ -133,9 +140,9 @@ export function ModelBenchmarks({ model }: { model: Model }) {
         {sortedBenchmarks.map((b) => {
           const v1 = model.benchmarks[b.key];
           const v2 = compareModel?.benchmarks[b.key];
-          const isElo = b.key === "lmarenaElo";
-          const domainMin = isElo ? ELO_MIN : 0;
-          const domainMax = isElo ? ELO_MAX : b.max ?? 100;
+          const elo = ELO_DOMAINS.get(b.key);
+          const domainMin = elo ? elo.min : 0;
+          const domainMax = elo ? elo.max : b.max ?? 100;
           const unit = b.unit === "%" ? "%" : "";
           const entries = compareModel
             ? [
@@ -147,6 +154,9 @@ export function ModelBenchmarks({ model }: { model: Model }) {
             <div key={b.key} className="border-b border-line py-2 last:border-0">
               <p className="text-xs text-ink-2" title={b.description}>
                 {b.name}
+                {b.retired && (
+                  <span className="ml-1.5 text-[10px] uppercase tracking-wider text-ink-3">retired</span>
+                )}
               </p>
               <div className="mt-1 space-y-1">
                 {entries.map((e, i) => (

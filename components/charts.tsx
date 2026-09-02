@@ -15,7 +15,7 @@ import {
   useXAxisScale,
   useYAxisScale,
 } from "recharts";
-import { benchmarkByKey, companies, companyColor, companyName, formatDate, formatPrice } from "@/lib/data";
+import { activeBenchmarks, benchmarkByKey, companies, companyColor, companyName, formatDate, formatPrice } from "@/lib/data";
 import { hasActiveHighlight, isHighlighted } from "@/lib/filter";
 import { LOGO_PATHS } from "@/lib/logos";
 import { CompanyLogo } from "./CompanyLogo";
@@ -331,7 +331,7 @@ export function TimelineScatter({
             type="number"
             dataKey="y"
             unit={meta?.unit === "%" ? "%" : undefined}
-            domain={meta?.key === "lmarenaElo" ? ["auto", "auto"] : [0, 100]}
+            domain={meta?.unit === "Elo" ? ["auto", "auto"] : [0, 100]}
             tickLine={false}
             axisLine={false}
             width={52}
@@ -407,7 +407,7 @@ export function CostPerfScatter({
             type="number"
             dataKey="y"
             unit={meta?.unit === "%" ? "%" : undefined}
-            domain={meta?.key === "lmarenaElo" ? ["auto", "auto"] : [0, 100]}
+            domain={meta?.unit === "Elo" ? ["auto", "auto"] : [0, 100]}
             tickLine={false}
             axisLine={false}
             width={52}
@@ -433,7 +433,7 @@ export function CostPerfScatter({
   );
 }
 
-const PCT_KEYS: BenchmarkKey[] = [...benchmarkByKey.values()]
+const PCT_KEYS: BenchmarkKey[] = activeBenchmarks
   .filter((b) => b.unit === "%")
   .map((b) => b.key);
 

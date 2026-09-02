@@ -35,10 +35,12 @@ How every record in `data/models.json` is written, so new models added by the re
     "mmluPro": null,
     "gpqaDiamond": 93.6,
     "sweBench": 88.6,
+    "sweBenchPro": null,
     "terminalBench": null,
     "aime": null,
     "hle": 49.8,
     "lmarenaElo": 1510,
+    "gdpvalAA": null,
     "arcAgi2": null
   },
   "strengths": ["Flags its own uncertainty and asks rather than guessing — far less confident nonsense", "The effort setting genuinely changes token spend, so quick and deep work share one model", "More expressive and varied on creative work than the 4.x releases before it"],
@@ -64,7 +66,7 @@ How every record in `data/models.json` is written, so new models added by the re
 | `openWeights` | `true` only if weights are downloadable | license nuances (research-only) go in `notes` or weaknesses |
 | `availability` | `general` \| `restricted` \| `self-host` — **can a person actually go and use this today?** `general` = public API, consumer app, or a mainstream host (an OpenRouter/DeepInfra listing counts). `restricted` = preview, waitlist, vetted partners, subscription-only, or an app with no API to build on. `self-host` = weights only, no practical hosted option. Default `general`; justify anything else in `notes` | Never rendered in the UI — it exists so the Which Model Tool stops recommending models a visitor cannot obtain. Not the same as `openWeights`: an open-weights model that any host serves is `general` |
 | `knowledgeCutoff` | `"YYYY-MM"`, `null` if unpublished | never guess from behavior |
-| `benchmarks` | numbers with the precision the source reports (typically 1 decimal), `null` if unverified; include ALL eight keys explicitly | percentages as `88.6` not `0.886`; Elo as integer. `terminalBench` is **Terminal-Bench 2.1 only** — 2.0 scores are not comparable, so leave the cell null and put the 2.0 figure in `notes` |
+| `benchmarks` | numbers with the precision the source reports (typically 1 decimal), `null` if unverified; include ALL ten keys explicitly — retired ones (`mmluPro`, `aime`) too: a lab that still publishes them gets the score recorded, it just isn't charted or scored | percentages as `88.6` not `0.886`; Elo as integer. `terminalBench` is **Terminal-Bench 2.1 only** — 2.0 scores are not comparable, so leave the cell null and put the 2.0 figure in `notes` |
 | `strengths` | 2–4 items | see voice rules below |
 | `weaknesses` | 1–3 items | see voice rules below |
 | `notes` | one short sentence or `""` — provenance, caveats, conflicts | `"HLE 64.5% is with tools; GPQA/SWE figures are third-party."` |

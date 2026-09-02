@@ -33,10 +33,12 @@
       "mmluPro": null,
       "gpqaDiamond": 35.7,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1163,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -85,10 +87,12 @@
       "mmluPro": 63.7,
       "gpqaDiamond": 48,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1256,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -137,10 +141,12 @@
       "mmluPro": 74.7,
       "gpqaDiamond": 53.6,
       "sweBench": 33.2,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 13.4,
       "hle": 2.7,
       "lmarenaElo": 1318,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -189,10 +195,12 @@
       "mmluPro": null,
       "gpqaDiamond": 78,
       "sweBench": 48.9,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 79.2,
       "hle": 9.1,
       "lmarenaElo": 1352,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -241,10 +249,12 @@
       "mmluPro": 80.5,
       "gpqaDiamond": 66.3,
       "sweBench": 54.6,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 48.1,
       "hle": 5.4,
       "lmarenaElo": 1366,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -293,10 +303,12 @@
       "mmluPro": 85.6,
       "gpqaDiamond": 83.3,
       "sweBench": 69.1,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 91.6,
       "hle": 20.3,
       "lmarenaElo": 1418,
+      "gdpvalAA": null,
       "arcAgi2": 6.5
     },
     "strengths": [
@@ -345,10 +357,12 @@
       "mmluPro": 87,
       "gpqaDiamond": 85.7,
       "sweBench": 74.9,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 94.6,
       "hle": 24.8,
       "lmarenaElo": 1442,
+      "gdpvalAA": null,
       "arcAgi2": 9.9
     },
     "strengths": [
@@ -397,10 +411,12 @@
       "mmluPro": null,
       "gpqaDiamond": 88.1,
       "sweBench": 76.3,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": 26.5,
       "lmarenaElo": 1465,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -448,10 +464,12 @@
       "mmluPro": 68.5,
       "gpqaDiamond": 50.4,
       "sweBench": 22.7,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1263,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -500,10 +518,12 @@
       "mmluPro": 76.1,
       "gpqaDiamond": 59.4,
       "sweBench": 49,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 16,
       "hle": 4.8,
       "lmarenaElo": 1300,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -552,10 +572,12 @@
       "mmluPro": 80.7,
       "gpqaDiamond": 84.8,
       "sweBench": 70.3,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 61.3,
       "hle": 8.9,
       "lmarenaElo": 1350,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -603,10 +625,12 @@
       "mmluPro": 87.4,
       "gpqaDiamond": 83.3,
       "sweBench": 72.5,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 75.5,
       "hle": 11.7,
       "lmarenaElo": 1420,
+      "gdpvalAA": null,
       "arcAgi2": 8.6
     },
     "strengths": [
@@ -654,10 +678,12 @@
       "mmluPro": 83.8,
       "gpqaDiamond": 75.4,
       "sweBench": 72.7,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 70.5,
       "hle": 9.2,
       "lmarenaElo": 1386,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -705,10 +731,12 @@
       "mmluPro": null,
       "gpqaDiamond": 80.9,
       "sweBench": 74.5,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 78,
       "hle": null,
       "lmarenaElo": 1430,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -756,10 +784,12 @@
       "mmluPro": null,
       "gpqaDiamond": 83.4,
       "sweBench": 77.2,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 87,
       "hle": 17.3,
       "lmarenaElo": 1449,
+      "gdpvalAA": null,
       "arcAgi2": 13.6
     },
     "strengths": [
@@ -807,10 +837,12 @@
       "mmluPro": null,
       "gpqaDiamond": 73,
       "sweBench": 73.3,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 83,
       "hle": null,
       "lmarenaElo": 1405,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -858,10 +890,12 @@
       "mmluPro": null,
       "gpqaDiamond": 87,
       "sweBench": 80.9,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1470,
+      "gdpvalAA": null,
       "arcAgi2": 37.6
     },
     "strengths": [
@@ -909,10 +943,12 @@
       "mmluPro": 69,
       "gpqaDiamond": 46.2,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": 4.6,
       "lmarenaElo": 1302,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -961,10 +997,12 @@
       "mmluPro": 77.6,
       "gpqaDiamond": 62.1,
       "sweBench": 51.8,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": 6.6,
       "lmarenaElo": 1356,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -1012,10 +1050,12 @@
       "mmluPro": 86.2,
       "gpqaDiamond": 84,
       "sweBench": 63.8,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 86.7,
       "hle": 18.8,
       "lmarenaElo": 1446,
+      "gdpvalAA": null,
       "arcAgi2": 4.9
     },
     "strengths": [
@@ -1064,10 +1104,12 @@
       "mmluPro": 89.8,
       "gpqaDiamond": 91.9,
       "sweBench": 76.2,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 95,
       "hle": 37.5,
       "lmarenaElo": 1501,
+      "gdpvalAA": null,
       "arcAgi2": 31.1
     },
     "strengths": [
@@ -1116,10 +1158,12 @@
       "mmluPro": 73.3,
       "gpqaDiamond": 51.1,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1269,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -1168,10 +1212,12 @@
       "mmluPro": 80.5,
       "gpqaDiamond": 69.8,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1330,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -1220,10 +1266,12 @@
       "mmluPro": 79.9,
       "gpqaDiamond": 84.6,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 93.3,
       "hle": null,
       "lmarenaElo": 1402,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -1272,10 +1320,12 @@
       "mmluPro": 86.6,
       "gpqaDiamond": 87.5,
       "sweBench": 72,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 91.7,
       "hle": 25.4,
       "lmarenaElo": 1435,
+      "gdpvalAA": null,
       "arcAgi2": 15.9
     },
     "strengths": [
@@ -1324,10 +1374,12 @@
       "mmluPro": null,
       "gpqaDiamond": 88,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1483,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -1375,10 +1427,12 @@
       "mmluPro": 69.4,
       "gpqaDiamond": 48.6,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1250,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -1426,10 +1480,12 @@
       "mmluPro": 77.2,
       "gpqaDiamond": 57.7,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1330,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -1477,10 +1533,12 @@
       "mmluPro": 75.9,
       "gpqaDiamond": 59.1,
       "sweBench": 42,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 39.2,
       "hle": null,
       "lmarenaElo": 1318,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -1529,10 +1587,12 @@
       "mmluPro": 84,
       "gpqaDiamond": 71.5,
       "sweBench": 49.2,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 79.8,
       "hle": 8.6,
       "lmarenaElo": 1358,
+      "gdpvalAA": null,
       "arcAgi2": 1.3
     },
     "strengths": [
@@ -1581,10 +1641,12 @@
       "mmluPro": 85,
       "gpqaDiamond": 79.9,
       "sweBench": 67.8,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 89.3,
       "hle": 19.8,
       "lmarenaElo": 1420,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -1632,10 +1694,12 @@
       "mmluPro": 82.8,
       "gpqaDiamond": 71.1,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 85.7,
       "hle": 11.8,
       "lmarenaElo": 1373,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -1683,10 +1747,12 @@
       "mmluPro": 85.4,
       "gpqaDiamond": 85.4,
       "sweBench": 69.6,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 92.3,
       "hle": null,
       "lmarenaElo": 1428,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -1734,10 +1800,12 @@
       "mmluPro": 81.1,
       "gpqaDiamond": 75.1,
       "sweBench": 65.8,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 49.5,
       "hle": 4.7,
       "lmarenaElo": 1385,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -1785,10 +1853,12 @@
       "mmluPro": 84.6,
       "gpqaDiamond": 84.5,
       "sweBench": 71.3,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 94.5,
       "hle": 23.9,
       "lmarenaElo": 1417,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -1836,10 +1906,12 @@
       "mmluPro": null,
       "gpqaDiamond": 93.5,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": 88.3,
       "aime": null,
       "hle": 43.5,
       "lmarenaElo": 1486,
+      "gdpvalAA": 1668,
       "arcAgi2": null
     },
     "strengths": [
@@ -1852,7 +1924,7 @@
       "The effort dial shipped locked at maximum, so cheap quick calls aren't possible",
       "Factual reliability went backwards: it states wrong answers more confidently than K2 did"
     ],
-    "notes": "MMLU-Pro, AIME 2025, and SWE-bench Verified are unconfirmed or conflicting in third-party coverage (AIME cited as both 88% and 96.1%) so left null; Moonshot's own suite reports Terminal-Bench 2.1 at 88.3 and SWE Marathon at 42.0 instead. HLE is 43.5% no tools / 56.0% with tools. Artificial Analysis ranks K3 #3 on its Intelligence Index at 57, with GDPval-AA v2 Elo 1668 (K2.6: 1190), AA-Omniscience +18 on 46% accuracy, and $0.94 per index task at $3.00/$15.00 per MTok — but its hallucination rate regressed to 51% from K2.6's 39%; none of these map to a tracked benchmark key. Weights landed on 2026-07-26 — 96 safetensors shards totalling roughly 1.56 TB, native MXFP4 with MXFP8 activations — under a bespoke Kimi K3 License that attaches conditions to large model-as-a-service and very large commercial deployments, rather than the MIT terms earlier Kimi releases carried."
+    "notes": "MMLU-Pro, AIME 2025, and SWE-bench Verified are unconfirmed or conflicting in third-party coverage (AIME cited as both 88% and 96.1%) so left null; Moonshot's own suite reports Terminal-Bench 2.1 at 88.3 and SWE Marathon at 42.0 instead. HLE is 43.5% no tools / 56.0% with tools. Artificial Analysis ranks K3 #3 on its Intelligence Index at 57, with GDPval-AA v2 Elo 1668 (K2.6: 1190), AA-Omniscience +18 on 46% accuracy, and $0.94 per index task at $3.00/$15.00 per MTok — but its hallucination rate regressed to 51% from K2.6's 39%. Weights landed on 2026-07-26 — 96 safetensors shards totalling roughly 1.56 TB, native MXFP4 with MXFP8 activations — under a bespoke Kimi K3 License that attaches conditions to large model-as-a-service and very large commercial deployments, rather than the MIT terms earlier Kimi releases carried."
   },
   {
     "id": "mistral-large-3",
@@ -1888,10 +1960,12 @@
       "mmluPro": null,
       "gpqaDiamond": 67.2,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -1939,10 +2013,12 @@
       "mmluPro": null,
       "gpqaDiamond": 94.3,
       "sweBench": 80.6,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 98.1,
       "hle": 44.4,
       "lmarenaElo": 1486,
+      "gdpvalAA": null,
       "arcAgi2": 77.1
     },
     "strengths": [
@@ -1962,7 +2038,7 @@
     "name": "Qwen3.5",
     "company": "alibaba",
     "releaseDate": "2026-02-16",
-    "status": "superseded",
+    "status": "unknown",
     "tier": "flagship",
     "modality": "text",
     "contextWindow": 262144,
@@ -1991,10 +2067,12 @@
       "mmluPro": 87.8,
       "gpqaDiamond": 88.4,
       "sweBench": 76.4,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -2013,7 +2091,7 @@
     "name": "Mistral Small 4",
     "company": "mistral",
     "releaseDate": "2026-03-16",
-    "status": "superseded",
+    "status": "unknown",
     "tier": "fast",
     "modality": "multimodal",
     "contextWindow": 262144,
@@ -2042,10 +2120,12 @@
       "mmluPro": 78,
       "gpqaDiamond": 71.2,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1358,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -2093,10 +2173,12 @@
       "mmluPro": null,
       "gpqaDiamond": 89.5,
       "sweBench": 77.4,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": 58.4,
       "lmarenaElo": 1487,
+      "gdpvalAA": null,
       "arcAgi2": 42.5
     },
     "strengths": [
@@ -2144,10 +2226,12 @@
       "mmluPro": null,
       "gpqaDiamond": 93.5,
       "sweBench": 88.7,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": 41.4,
       "lmarenaElo": 1481,
+      "gdpvalAA": null,
       "arcAgi2": 85
     },
     "strengths": [
@@ -2196,10 +2280,12 @@
       "mmluPro": 87.5,
       "gpqaDiamond": 90.1,
       "sweBench": 80.6,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": 48.2,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -2248,10 +2334,12 @@
       "mmluPro": null,
       "gpqaDiamond": 90.1,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -2299,10 +2387,12 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": 81,
+      "sweBenchPro": 55.1,
       "terminalBench": 76.2,
       "aime": null,
       "hle": 40.2,
       "lmarenaElo": 1481,
+      "gdpvalAA": null,
       "arcAgi2": 72.1
     },
     "strengths": [
@@ -2356,10 +2446,12 @@
       "mmluPro": null,
       "gpqaDiamond": 92.7,
       "sweBench": null,
+      "sweBenchPro": 67.7,
       "terminalBench": 81.3,
       "aime": null,
       "hle": 41.4,
       "lmarenaElo": 1496,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -2371,7 +2463,7 @@
       "No model card or active-parameter count published, so its real speed and cost profile are unknown",
       "Reachable only through subscription plans rather than a per-token endpoint"
     ],
-    "notes": "Announced 2026-07-19 at WAIC Shanghai as a preview, then given a general-availability launch with standard API pricing on 2026-08-03 (Alibaba Cloud Model Studio blog: \"Qwen3.8-Max: A New Bar for Coding and Cowork\"). Alibaba's own release benchmark table (self-reported, published as an image and not independently re-derivable) claims GPQA Diamond 92.6, Terminal-Bench 2.1 86.6, HLE 43.6, and SWE-bench Pro 67.7 (not the SWE-bench Verified variant this site tracks, so left unset here) — relayed via MarkTechPost and OfficeChai coverage of the announcement. Artificial Analysis's own independent evaluation (artificialanalysis.ai/models/qwen3-8-max and its per-benchmark leaderboards) measured GPQA Diamond 92.7 (close to Alibaba's claim) but Terminal-Bench v2.1 81.3 and HLE 41.4 — both notably below Alibaba's self-reported figures — so the AA-measured numbers are recorded here as the more independently verifiable source, with the discrepancy noted. Pricing ($2.00/$6.00 per 1M input/output tokens) is Alibaba Cloud Model Studio's Singapore/international rate; the China Beijing, Frankfurt, Virginia, Tokyo and Hong Kong regions price lower at $1.65/$4.951. Open weights, promised \"next week\" as of the Aug 3 announcement, arrived on 2026-08-13 — but as `qwen3-8-2-4t-a95b`, a reduced text-only variant with a 262K native window rather than this multimodal 1M-context Max build, which stays closed. Context window (983,616) and max output (131,072) match Alibaba Cloud Model Studio's official model-info page (context 1,000,000, max input 991,808 with 1,000,000 minus max-output overhead, max output 131,072); some coverage rounds context down to \"1M tokens.\""
+    "notes": "Announced 2026-07-19 at WAIC Shanghai as a preview, then given a general-availability launch with standard API pricing on 2026-08-03 (Alibaba Cloud Model Studio blog: \"Qwen3.8-Max: A New Bar for Coding and Cowork\"). Alibaba's own release benchmark table (self-reported, published as an image and not independently re-derivable) claims GPQA Diamond 92.6, Terminal-Bench 2.1 86.6, HLE 43.6, and SWE-bench Pro 67.7 — relayed via MarkTechPost and OfficeChai coverage of the announcement. Artificial Analysis's own independent evaluation (artificialanalysis.ai/models/qwen3-8-max and its per-benchmark leaderboards) measured GPQA Diamond 92.7 (close to Alibaba's claim) but Terminal-Bench v2.1 81.3 and HLE 41.4 — both notably below Alibaba's self-reported figures — so the AA-measured numbers are recorded here as the more independently verifiable source, with the discrepancy noted. Pricing ($2.00/$6.00 per 1M input/output tokens) is Alibaba Cloud Model Studio's Singapore/international rate; the China Beijing, Frankfurt, Virginia, Tokyo and Hong Kong regions price lower at $1.65/$4.951. Open weights, promised \"next week\" as of the Aug 3 announcement, arrived on 2026-08-13 — but as `qwen3-8-2-4t-a95b`, a reduced text-only variant with a 262K native window rather than this multimodal 1M-context Max build, which stays closed. Context window (983,616) and max output (131,072) match Alibaba Cloud Model Studio's official model-info page (context 1,000,000, max input 991,808 with 1,000,000 minus max-output overhead, max output 131,072); some coverage rounds context down to \"1M tokens.\""
   },
   {
     "id": "qwen3-7-max",
@@ -2407,10 +2499,12 @@
       "mmluPro": 89.6,
       "gpqaDiamond": 92.4,
       "sweBench": 80.4,
+      "sweBenchPro": 60.6,
       "terminalBench": null,
       "aime": null,
       "hle": 41.4,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -2459,10 +2553,12 @@
       "mmluPro": null,
       "gpqaDiamond": 93.6,
       "sweBench": 88.6,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": 49.8,
       "lmarenaElo": 1484,
+      "gdpvalAA": null,
       "arcAgi2": 72.1
     },
     "strengths": [
@@ -2520,10 +2616,12 @@
       "mmluPro": null,
       "gpqaDiamond": 92.6,
       "sweBench": 95,
+      "sweBenchPro": null,
       "terminalBench": 88,
       "aime": null,
       "hle": 64.5,
       "lmarenaElo": 1509,
+      "gdpvalAA": 1723,
       "arcAgi2": null
     },
     "strengths": [
@@ -2573,10 +2671,12 @@
       "mmluPro": 85.2,
       "gpqaDiamond": 84.3,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 89.2,
       "hle": 19.5,
       "lmarenaElo": 1452,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -2626,10 +2726,12 @@
       "mmluPro": 80.6,
       "gpqaDiamond": 91.2,
       "sweBench": null,
+      "sweBenchPro": 62.1,
       "terminalBench": null,
       "aime": 99.2,
       "hle": 40.5,
       "lmarenaElo": 1469,
+      "gdpvalAA": null,
       "arcAgi2": 22.8
     },
     "strengths": [
@@ -2683,10 +2785,12 @@
       "mmluPro": 89.1,
       "gpqaDiamond": 94.6,
       "sweBench": 96.2,
+      "sweBenchPro": null,
       "terminalBench": 88.8,
       "aime": null,
       "hle": 47.2,
       "lmarenaElo": 1485,
+      "gdpvalAA": 1711,
       "arcAgi2": 92.5
     },
     "strengths": [
@@ -2735,10 +2839,12 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": 87.4,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -2786,10 +2892,12 @@
       "mmluPro": null,
       "gpqaDiamond": 92.3,
       "sweBench": 93,
+      "sweBenchPro": 62.7,
       "terminalBench": 84.7,
       "aime": null,
       "hle": 37.2,
       "lmarenaElo": 1450,
+      "gdpvalAA": null,
       "arcAgi2": 59.5
     },
     "strengths": [
@@ -2838,10 +2946,12 @@
       "mmluPro": 51.4,
       "gpqaDiamond": 43.4,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -2862,7 +2972,7 @@
     "name": "Gemini 3.6 Flash",
     "company": "google",
     "releaseDate": "2026-07-21",
-    "status": "frontier",
+    "status": "superseded",
     "tier": "fast",
     "modality": "multimodal",
     "contextWindow": 1048576,
@@ -2896,10 +3006,12 @@
       "mmluPro": null,
       "gpqaDiamond": 92.8,
       "sweBench": null,
+      "sweBenchPro": 58.7,
       "terminalBench": 78,
       "aime": null,
       "hle": 38.3,
       "lmarenaElo": 1485,
+      "gdpvalAA": 1421,
       "arcAgi2": null
     },
     "strengths": [
@@ -2911,7 +3023,7 @@
       "Flash-tier depth ceiling — it executes well but doesn't crack genuinely hard reasoning",
       "Arrived with no matching Pro-tier model in its generation, so there was nothing to escalate to"
     ],
-    "notes": "Model card reports SWE-Bench Pro 58.7%, DeepSWE v1.1 49%, GDPval-AA v2 Elo 1421, and GDM-MRCR v2 91.8% at 128k; Google published none of the site's tracked benchmarks at launch. Artificial Analysis Intelligence Index 50 (third-party). GPQA Diamond 92.8% and HLE 38.3% are Artificial Analysis-measured, not Google-reported. LMArena Elo 1485 is the 'gemini-3.6-flash' text-arena listing (rank 12, arena.ai); it also sits #12 in the Frontend Code Arena at 1537. Announced 2026-07-21 alongside Gemini 3.5 Flash-Lite and the limited-access Gemini 3.5 Flash Cyber."
+    "notes": "Model card reports SWE-Bench Pro 58.7%, DeepSWE v1.1 49%, GDPval-AA v2 Elo 1421, and GDM-MRCR v2 91.8% at 128k; Google published none of the site's other tracked benchmarks at launch. Artificial Analysis Intelligence Index 50 (third-party). GPQA Diamond 92.8% and HLE 38.3% are Artificial Analysis-measured, not Google-reported. LMArena Elo 1485 is the 'gemini-3.6-flash' text-arena listing (rank 12, arena.ai); it also sits #12 in the Frontend Code Arena at 1537. Announced 2026-07-21 alongside Gemini 3.5 Flash-Lite and the limited-access Gemini 3.5 Flash Cyber."
   },
   {
     "id": "gemini-3-5-flash-lite",
@@ -2947,10 +3059,12 @@
       "mmluPro": null,
       "gpqaDiamond": 83.8,
       "sweBench": null,
+      "sweBenchPro": 54.2,
       "terminalBench": 54,
       "aime": null,
       "hle": 17.5,
       "lmarenaElo": 1459,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -2962,7 +3076,7 @@
       "Time to first token can feel unresponsive in chat even though it streams quickly once started",
       "Small-model ceiling: it executes well but won't reason its way out of an unfamiliar problem"
     ],
-    "notes": "Model card reports SWE-Bench Pro 54.2%, OSWorld-Verified 74.0%, MLE-Bench 39.2%, CharXiv 74.5% no tools / 76.5% with tools; Google published none of the tracked benchmark keys at launch. GPQA Diamond 83.8% and HLE 17.5% are Artificial Analysis-measured figures relayed by BenchLM — AA's own model page publishes only the composite Intelligence Index (36) — so treat both as third-party. LMArena Elo 1459 is the 'gemini-3.5-flash-lite' text-arena listing (rank 43, arena.ai). Also rolling out inside Google Search."
+    "notes": "Model card reports SWE-Bench Pro 54.2%, OSWorld-Verified 74.0%, MLE-Bench 39.2%, CharXiv 74.5% no tools / 76.5% with tools; Google published none of the site's other tracked benchmarks at launch. GPQA Diamond 83.8% and HLE 17.5% are Artificial Analysis-measured figures relayed by BenchLM — AA's own model page publishes only the composite Intelligence Index (36) — so treat both as third-party. LMArena Elo 1459 is the 'gemini-3.5-flash-lite' text-arena listing (rank 43, arena.ai). Also rolling out inside Google Search."
   },
   {
     "id": "claude-sonnet-5",
@@ -3007,10 +3121,12 @@
       "mmluPro": null,
       "gpqaDiamond": 91.1,
       "sweBench": 85.2,
+      "sweBenchPro": 63.2,
       "terminalBench": 80.4,
       "aime": null,
       "hle": 43.2,
       "lmarenaElo": 1461,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -3059,10 +3175,12 @@
       "mmluPro": null,
       "gpqaDiamond": 93.1,
       "sweBench": null,
+      "sweBenchPro": 64.7,
       "terminalBench": null,
       "aime": null,
       "hle": 40.3,
       "lmarenaElo": 1468,
+      "gdpvalAA": null,
       "arcAgi2": 52.6
     },
     "strengths": [
@@ -3082,7 +3200,7 @@
     "name": "Muse Spark 1.1",
     "company": "meta",
     "releaseDate": "2026-07-09",
-    "status": "frontier",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 1048576,
@@ -3116,10 +3234,12 @@
       "mmluPro": null,
       "gpqaDiamond": 89.8,
       "sweBench": null,
+      "sweBenchPro": 61.5,
       "terminalBench": null,
       "aime": null,
       "hle": 62.1,
       "lmarenaElo": 1495,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -3176,10 +3296,12 @@
       "mmluPro": null,
       "gpqaDiamond": 93.7,
       "sweBench": 96,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": 56.3,
       "lmarenaElo": null,
+      "gdpvalAA": 1824,
       "arcAgi2": 90.4
     },
     "strengths": [
@@ -3229,10 +3351,12 @@
       "mmluPro": null,
       "gpqaDiamond": 87.2,
       "sweBench": 77.6,
+      "sweBenchPro": 54.3,
       "terminalBench": 63.8,
       "aime": 97.1,
       "hle": 29.7,
       "lmarenaElo": 1441,
+      "gdpvalAA": 1238,
       "arcAgi2": 36.5
     },
     "strengths": [
@@ -3281,10 +3405,12 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": null,
+      "sweBenchPro": 59.4,
       "terminalBench": 70.2,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -3298,14 +3424,14 @@
       "Emits invalid JSON on nested tool calls inside some third-party agent scaffolds",
       "Tuned closely to its own harness; behavior shifts when moved to a different agent framework"
     ],
-    "notes": "Terminal-Bench 2.1 is the only tracked benchmark reported: poolside published agentic coding evals only, all with thinking enabled — Terminal-Bench 2.1 70.2%, SWE-bench Multilingual 78.5%, SWE-Bench Pro public 59.4%, DeepSWE v1.1 40.4%, SWE Atlas 46.2%, Toolathlon Verified 49.7% (pass@1 over 3-4 attempts). Without thinking, Terminal-Bench 2.1 drops to 60.4% and DeepSWE to 16.5%. SWE-bench Verified is absent from poolside's blog and Hugging Face model card — the Multilingual and Pro figures are different splits and are not recorded as a Verified score. Pricing is the OpenRouter listing served by poolside ($0.10/$0.20 per MTok, $0.01 cached read); poolside publishes no separate per-token price sheet and also offers a free 256K-context tier. Knowledge cutoff of November 2025 is poolside's own, stated in the launch post while ruling out contamination on an Erdős-problem result; the model shares XS 2.1's pre-training data. Max output 131,072 tokens per the OpenRouter endpoint spec. Artificial Analysis does not cover poolside models, so there is no cost-per-task figure."
+    "notes": "Terminal-Bench 2.1 and SWE-bench Pro are the only tracked benchmarks reported: poolside published agentic coding evals only, all with thinking enabled — Terminal-Bench 2.1 70.2%, SWE-bench Multilingual 78.5%, SWE-Bench Pro public 59.4%, DeepSWE v1.1 40.4%, SWE Atlas 46.2%, Toolathlon Verified 49.7% (pass@1 over 3-4 attempts). Without thinking, Terminal-Bench 2.1 drops to 60.4% and DeepSWE to 16.5%. SWE-bench Verified is absent from poolside's blog and Hugging Face model card — the Multilingual and Pro figures are different splits and are not recorded as a Verified score. Pricing is the OpenRouter listing served by poolside ($0.10/$0.20 per MTok, $0.01 cached read); poolside publishes no separate per-token price sheet and also offers a free 256K-context tier. Knowledge cutoff of November 2025 is poolside's own, stated in the launch post while ruling out contamination on an Erdős-problem result; the model shares XS 2.1's pre-training data. Max output 131,072 tokens per the OpenRouter endpoint spec. Artificial Analysis does not cover poolside models, so there is no cost-per-task figure."
   },
   {
     "id": "nemotron-3-super",
     "name": "Nemotron 3 Super",
     "company": "nvidia",
     "releaseDate": "2026-03-11",
-    "status": "superseded",
+    "status": "unknown",
     "tier": "balanced",
     "modality": "text",
     "contextWindow": 1000000,
@@ -3334,10 +3460,12 @@
       "mmluPro": 83.73,
       "gpqaDiamond": null,
       "sweBench": 60.47,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 90.21,
       "hle": 18.26,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -3385,10 +3513,12 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -3438,10 +3568,12 @@
       "mmluPro": null,
       "gpqaDiamond": 90.4,
       "sweBench": 78,
+      "sweBenchPro": 57.9,
       "terminalBench": 71.7,
       "aime": null,
       "hle": 31.6,
       "lmarenaElo": 1456,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -3491,10 +3623,12 @@
       "mmluPro": null,
       "gpqaDiamond": 88.9,
       "sweBench": null,
+      "sweBenchPro": 59.5,
       "terminalBench": 70.8,
       "aime": null,
       "hle": 32.1,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -3544,10 +3678,12 @@
       "mmluPro": null,
       "gpqaDiamond": 86.9,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": 70.8,
       "aime": null,
       "hle": 38.2,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -3597,10 +3733,12 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": 70.9,
+      "sweBenchPro": 47.6,
       "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -3650,10 +3788,12 @@
       "mmluPro": null,
       "gpqaDiamond": 89.5,
       "sweBench": 80.2,
+      "sweBenchPro": 55.9,
       "terminalBench": 64.7,
       "aime": 95.5,
       "hle": 31.6,
       "lmarenaElo": 1431,
+      "gdpvalAA": 1269,
       "arcAgi2": 40.1
     },
     "strengths": [
@@ -3703,10 +3843,12 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -3766,10 +3908,12 @@
       "mmluPro": null,
       "gpqaDiamond": 90.8,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": 82.7,
       "aime": null,
       "hle": 36.8,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -3832,10 +3976,12 @@
       "mmluPro": null,
       "gpqaDiamond": 89.9,
       "sweBench": 79.6,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 95.6,
       "hle": 33.2,
       "lmarenaElo": 1472,
+      "gdpvalAA": null,
       "arcAgi2": 60.4
     },
     "strengths": [
@@ -3890,10 +4036,12 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -3948,10 +4096,12 @@
       "mmluPro": null,
       "gpqaDiamond": 75.2,
       "sweBench": 72.2,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 87.4,
       "hle": 8.2,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -4015,10 +4165,12 @@
       "mmluPro": 80.8,
       "gpqaDiamond": 80.1,
       "sweBench": 62.4,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 92.5,
       "hle": 14.9,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -4082,10 +4234,12 @@
       "mmluPro": 73.6,
       "gpqaDiamond": 71.5,
       "sweBench": 60.7,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 91.7,
       "hle": 10.9,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -4145,10 +4299,12 @@
       "mmluPro": 82,
       "gpqaDiamond": 78,
       "sweBench": 69.4,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 78,
       "hle": 12.5,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -4208,10 +4364,12 @@
       "mmluPro": null,
       "gpqaDiamond": 85.2,
       "sweBench": 80.2,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 86.3,
       "hle": 19.4,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -4271,10 +4429,12 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": 80.5,
+      "sweBenchPro": null,
       "terminalBench": 66,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -4328,10 +4488,12 @@
       "mmluPro": 87,
       "gpqaDiamond": 88.9,
       "sweBench": 76.5,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 98.3,
       "hle": 32.4,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": 37.5
     },
     "strengths": [
@@ -4385,10 +4547,12 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -4401,7 +4565,7 @@
       "Parameter counts and knowledge cutoff remain undisclosed, unlike the detailed technical report ByteDance published for Seed 2.0",
       "Too new for independent benchmark or arena coverage beyond a single preview-build leaderboard placement"
     ],
-    "notes": "Officially launched 2026-06-23 at Volcano Engine's FORCE conference (seed.bytedance.com/en/blog/seed2-1-officially-released-advancing-ai-productivity); ByteDance's own post makes only qualitative claims (leads Terminal-Bench 2.1, SWE-Bench Pro, SciCode, OSWorld, MobileWorld, MMMU-Pro among named benchmarks) without publishing a benchmark table or model card, unlike Seed 2.0 — so all eight tracked benchmark fields are left null rather than guessed from prose. A Seed 2.1 Pro preview build ranked 8th on arena.ai's Code Arena frontend leaderboard with a score of 1539, level with Claude Opus 4.6, but that is a different (frontend-coding) leaderboard from the tracked overall text lmarenaElo, so left null here too. Context window (256K) is corroborated across multiple third-party API trackers citing Volcano Engine's model list; max output could not be pinned to a reliable single figure and is left null. Pricing (¥6/¥30 per MTok ≈ $0.83/$4.14) is from ByteDance's own announcement; Seed 2.1 Turbo is priced at half the Pro rate."
+    "notes": "Officially launched 2026-06-23 at Volcano Engine's FORCE conference (seed.bytedance.com/en/blog/seed2-1-officially-released-advancing-ai-productivity); ByteDance's own post makes only qualitative claims (leads Terminal-Bench 2.1, SWE-Bench Pro, SciCode, OSWorld, MobileWorld, MMMU-Pro among named benchmarks) without publishing a benchmark table or model card, unlike Seed 2.0 — so all tracked benchmark fields are left null rather than guessed from prose. A Seed 2.1 Pro preview build ranked 8th on arena.ai's Code Arena frontend leaderboard with a score of 1539, level with Claude Opus 4.6, but that is a different (frontend-coding) leaderboard from the tracked overall text lmarenaElo, so left null here too. Context window (256K) is corroborated across multiple third-party API trackers citing Volcano Engine's model list; max output could not be pinned to a reliable single figure and is left null. Pricing (¥6/¥30 per MTok ≈ $0.83/$4.14) is from ByteDance's own announcement; Seed 2.1 Turbo is priced at half the Pro rate."
   },
   {
     "id": "ernie-5-0",
@@ -4442,10 +4606,12 @@
       "mmluPro": 83.8,
       "gpqaDiamond": 86.36,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 89.06,
       "hle": 25.81,
       "lmarenaElo": 1447,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -4499,10 +4665,12 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 99.6,
       "hle": null,
       "lmarenaElo": 1467,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -4556,10 +4724,12 @@
       "mmluPro": 73.3,
       "gpqaDiamond": 56.9,
       "sweBench": 42.4,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 17.3,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -4579,7 +4749,7 @@
     "name": "Nova 2 Pro",
     "company": "amazon",
     "releaseDate": "2025-12-02",
-    "status": "superseded",
+    "status": "unknown",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 1000000,
@@ -4608,10 +4778,12 @@
       "mmluPro": 81.6,
       "gpqaDiamond": 81.4,
       "sweBench": 61.5,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": 92.3,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -4671,10 +4843,12 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -4734,10 +4908,12 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -4792,10 +4968,12 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": 82.9,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -4849,10 +5027,12 @@
       "mmluPro": null,
       "gpqaDiamond": 83.5,
       "sweBench": 76,
+      "sweBenchPro": 51.2,
       "terminalBench": 51.7,
       "aime": 94.7,
       "hle": 22,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -4866,7 +5046,7 @@
       "No audio input or output, and video is sampled as individual frames rather than processed natively",
       "Launched compared only against Meta's own chosen size-class peers (Gemma4-31B, Qwen3.6-27B) — no independent LMArena or Artificial Analysis leaderboard placement yet"
     ],
-    "notes": "Distilled from Muse Spark via logit distillation, but Meta's model card doesn't state it replaces Muse Spark, which stays on as Meta's separate, closed flagship. Benchmarks are Meta's own reported 'High Reasoning' figures except GPQA Diamond (83.5) and HLE Text-only (22.0), which the model card itself attributes to Artificial Analysis measurement rather than Meta's own eval. Terminal-Bench 2.1 (51.7%) was run 'with terminus2' scaffold; SWE-bench Pro (51.2%) was also reported but isn't the tracked metric. MMLU-Pro, LMArena Elo and ARC-AGI-2 are unpublished; Artificial Analysis hadn't indexed the model for its Intelligence Index or speed benchmarks as of this check (released 2026-08-10), so costPerTask and speed are null. Pricing shown ($0.35/$1.50 per MTok) is OpenRouter's hosted rate — Meta offers no official API for this open-weight release; Together AI and Fireworks AI also host it."
+    "notes": "Distilled from Muse Spark via logit distillation, but Meta's model card doesn't state it replaces Muse Spark, which stays on as Meta's separate, closed flagship. Benchmarks are Meta's own reported 'High Reasoning' figures except GPQA Diamond (83.5) and HLE Text-only (22.0), which the model card itself attributes to Artificial Analysis measurement rather than Meta's own eval. Terminal-Bench 2.1 (51.7%) was run 'with terminus2' scaffold; SWE-bench Pro 51.2% was also reported. MMLU-Pro, LMArena Elo and ARC-AGI-2 are unpublished; Artificial Analysis hadn't indexed the model for its Intelligence Index or speed benchmarks as of this check (released 2026-08-10), so costPerTask and speed are null. Pricing shown ($0.35/$1.50 per MTok) is OpenRouter's hosted rate — Meta offers no official API for this open-weight release; Together AI and Fireworks AI also host it."
   },
   {
     "id": "gpt-5-6-cyber",
@@ -4907,10 +5087,12 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -4970,10 +5152,12 @@
       "mmluPro": 81.62,
       "gpqaDiamond": 75.57,
       "sweBench": 52.8,
+      "sweBenchPro": null,
       "terminalBench": 23.46,
       "aime": null,
       "hle": 10.47,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -5028,10 +5212,12 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": 88.4,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": 1753,
       "arcAgi2": null
     },
     "strengths": [
@@ -5051,7 +5237,7 @@
     "name": "Qwen3.8-2.4T-A95B",
     "company": "alibaba",
     "releaseDate": "2026-08-13",
-    "status": "superseded",
+    "status": "frontier",
     "tier": "flagship",
     "modality": "text",
     "contextWindow": 262144,
@@ -5086,10 +5272,12 @@
       "mmluPro": null,
       "gpqaDiamond": 92.6,
       "sweBench": null,
+      "sweBenchPro": 67.7,
       "terminalBench": 86.6,
       "aime": null,
       "hle": 43.6,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -5102,7 +5290,7 @@
       "Thinking mode cannot be switched off, so a one-line factual question still pays the full reasoning cost",
       "Licence pulls large deployments back into a negotiated agreement once revenue or user thresholds are crossed"
     ],
-    "notes": "Qwen's own model card describes this as the post-trained base that Qwen3.8-Max is built on, with Max adding vision and a non-thinking mode — so it is a distinct, reduced artefact rather than the tracked qwen3-8-max entry going open. 2.4T total / 95B active MoE. Context is 262,144 native, extensible to ~1,010,000; max output is the 131,072 final-response cap (reasoning content may run to 262,144). Benchmarks are Alibaba's own self-reported card figures (GPQA Diamond 92.6, Terminal-Bench 2.1 86.6, HLE 43.6) — note Artificial Analysis independently measured the closely-related Max at 92.7 / 81.3 / 41.4, so the Terminal-Bench and HLE claims here should be read as unverified. SWE-bench Pro 67.7 was also reported but is not the Verified variant this site tracks. MMLU-Pro, AIME, LMArena Elo and ARC-AGI-2 are unpublished, and AA had not indexed this variant separately at the time of this check, so costPerTask and speed are null. Pricing is OpenRouter's hosted rate; Alibaba publishes no first-party price for the open-weight release, which is also served by Together AI and Fireworks AI. The licence permits commercial use but requires prominent model-name attribution above 100M MAU or $20M monthly revenue, and a separate agreement for Model-as-a-Service or AI-assistant products above $50M annual revenue."
+    "notes": "Qwen's own model card describes this as the post-trained base that Qwen3.8-Max is built on, with Max adding vision and a non-thinking mode — so it is a distinct, reduced artefact rather than the tracked qwen3-8-max entry going open. 2.4T total / 95B active MoE. Context is 262,144 native, extensible to ~1,010,000; max output is the 131,072 final-response cap (reasoning content may run to 262,144). Benchmarks are Alibaba's own self-reported card figures (GPQA Diamond 92.6, Terminal-Bench 2.1 86.6, HLE 43.6) — note Artificial Analysis independently measured the closely-related Max at 92.7 / 81.3 / 41.4, so the Terminal-Bench and HLE claims here should be read as unverified. SWE-bench Pro 67.7 is Alibaba's own figure. MMLU-Pro, AIME, LMArena Elo and ARC-AGI-2 are unpublished, and AA had not indexed this variant separately at the time of this check, so costPerTask and speed are null. Pricing is OpenRouter's hosted rate; Alibaba publishes no first-party price for the open-weight release, which is also served by Together AI and Fireworks AI. The licence permits commercial use but requires prominent model-name attribution above 100M MAU or $20M monthly revenue, and a separate agreement for Model-as-a-Service or AI-assistant products above $50M annual revenue."
   },
   {
     "id": "gemini-3-7-flash",
@@ -5143,10 +5331,12 @@
       "mmluPro": null,
       "gpqaDiamond": 94.5,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": 85.8,
       "aime": null,
       "hle": 53.6,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -5165,7 +5355,7 @@
     "name": "Qwen3.8-27B",
     "company": "alibaba",
     "releaseDate": "2026-08-14",
-    "status": "unknown",
+    "status": "superseded",
     "tier": "balanced",
     "modality": "multimodal",
     "contextWindow": 262144,
@@ -5200,10 +5390,12 @@
       "mmluPro": null,
       "gpqaDiamond": 89.2,
       "sweBench": null,
+      "sweBenchPro": 61.7,
       "terminalBench": 73,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -5216,7 +5408,7 @@
       "Trails the closed frontier flagships on the hardest science and knowledge questions — a 27.8B dense model has a real ceiling",
       "No technical report or knowledge cutoff disclosed at launch, so training-data freshness and provenance are unclear"
     ],
-    "notes": "27.8B dense (not MoE) multimodal model — distinct from the 2.4T-parameter MoE flagship qwen3-8-2-4t-a95b (2026-08-13) and the closed qwen3-8-max, and is the smaller open checkpoint Alibaba promised alongside Qwen3.8-Max's 2026-08-03 GA announcement. GPQA Diamond 89.2% and Terminal-Bench 2.1 73.0% (up from 63.4% for Qwen3.6-27B) are from Alibaba's own release material; SWE-bench Pro 61.7% and OSWorld-Verified 84.3% were also reported but are not the SWE-bench Verified variant this site tracks. Qwen's own announcement (X/@Alibaba_Qwen) says it 'outperforms Qwen3.7-Plus overall' — comparison language, not a replacement statement, so predecessorId is left null. Pricing is OpenRouter's hosted rate ($0.45/$3.20 per 1M in/out); Alibaba has not published a first-party DashScope price for this open-weight checkpoint. Context is 262,144 native, extendable to roughly 1M via YaRN; max output is the 131,072 cap."
+    "notes": "27.8B dense (not MoE) multimodal model — distinct from the 2.4T-parameter MoE flagship qwen3-8-2-4t-a95b (2026-08-13) and the closed qwen3-8-max, and is the smaller open checkpoint Alibaba promised alongside Qwen3.8-Max's 2026-08-03 GA announcement. GPQA Diamond 89.2% and Terminal-Bench 2.1 73.0% (up from 63.4% for Qwen3.6-27B) are from Alibaba's own release material; SWE-bench Pro 61.7% and OSWorld-Verified 84.3% were also reported. Qwen's own announcement (X/@Alibaba_Qwen) says it 'outperforms Qwen3.7-Plus overall' — comparison language, not a replacement statement, so predecessorId is left null. Pricing is OpenRouter's hosted rate ($0.45/$3.20 per 1M in/out); Alibaba has not published a first-party DashScope price for this open-weight checkpoint. Context is 262,144 native, extendable to roughly 1M via YaRN; max output is the 131,072 cap."
   },
   {
     "id": "glm-5-3",
@@ -5263,10 +5455,12 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": 88.2,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -5321,10 +5515,12 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": 86,
+      "sweBenchPro": null,
       "terminalBench": 86.1,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -5384,10 +5580,12 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": 84.3,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -5407,7 +5605,7 @@
     "name": "Hy4 preview",
     "company": "tencent",
     "releaseDate": "2026-08-28",
-    "status": "unknown",
+    "status": "frontier",
     "tier": "flagship",
     "modality": "text",
     "contextWindow": 1048576,
@@ -5447,10 +5645,12 @@
       "mmluPro": null,
       "gpqaDiamond": 92.3,
       "sweBench": null,
+      "sweBenchPro": 65.7,
       "terminalBench": 85.4,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -5510,10 +5710,12 @@
       "mmluPro": null,
       "gpqaDiamond": 93,
       "sweBench": 96.4,
+      "sweBenchPro": null,
       "terminalBench": 87.9,
       "aime": null,
       "hle": 42.7,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -5569,10 +5771,12 @@
       "mmluPro": null,
       "gpqaDiamond": 83.4,
       "sweBench": 76.2,
+      "sweBenchPro": null,
       "terminalBench": 74.9,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -5635,10 +5839,12 @@
       "mmluPro": 92.4,
       "gpqaDiamond": null,
       "sweBench": null,
+      "sweBenchPro": null,
       "terminalBench": 91.4,
       "aime": null,
       "hle": 60.9,
       "lmarenaElo": null,
+      "gdpvalAA": 1853,
       "arcAgi2": 90
     },
     "strengths": [
@@ -5652,14 +5858,14 @@
       "At max effort it generates roughly twice the tokens of its peers and can sit for minutes before the first answer token, so per-task cost went up despite the cache-read cut",
       "At low effort it answers from memory rather than searching, tends to rewrite whole files for small edits, and can lift passages from sources without marking them as quotes"
     ],
-    "notes": "Same model as the restricted Claude Mythos 5.1 (Project Glasswing participants only), which shares its specs and pricing and differs only in safeguards — Anthropic reports no separate Mythos score on any tracked benchmark. HLE 60.9% no tools / 65.0% with tools per Anthropic. Anthropic no longer reports SWE-bench Verified, GPQA Diamond or AIME: Terminal-Bench 2.1 91.4% is Artificial Analysis-measured at max effort (Vals AI's harness gives 85.0%), MMLU-Pro 92.4% is Vals AI's measurement at max effort, and ARC-AGI-2 90.0% is ARC Prize-verified at max effort ($4.49/task). Cache reads are $0.25/MTok (0.025x input, vs 0.1x on other Claude models); batch $5/$25. Cost per task and speed are AA's medium-effort variant — max effort runs $3.69/task at 66.2 tok/s with a 291 s first-answer latency. Anthropic's launch table also reports Terminal-Bench-Science 0.1 52.6%, Terminal-Bench 4.0 55.8% (Mythos 5.1 60.9%), GDPval-AA v2 1853, OSWorld 2.0 77.9% partial / 41.7% strict, AutomationBench 31.4% and CursorBench 3.2.0 73.4% — none are tracked keys — with Fable 5.1 scored with production safeguards on, taking zeros where they intervened."
+    "notes": "Same model as the restricted Claude Mythos 5.1 (Project Glasswing participants only), which shares its specs and pricing and differs only in safeguards — Anthropic reports no separate Mythos score on any tracked benchmark. HLE 60.9% no tools / 65.0% with tools per Anthropic. Anthropic no longer reports SWE-bench Verified, GPQA Diamond or AIME: Terminal-Bench 2.1 91.4% is Artificial Analysis-measured at max effort (Vals AI's harness gives 85.0%), MMLU-Pro 92.4% is Vals AI's measurement at max effort, and ARC-AGI-2 90.0% is ARC Prize-verified at max effort ($4.49/task). Cache reads are $0.25/MTok (0.025x input, vs 0.1x on other Claude models); batch $5/$25. Cost per task and speed are AA's medium-effort variant — max effort runs $3.69/task at 66.2 tok/s with a 291 s first-answer latency. Anthropic's launch table also reports Terminal-Bench-Science 0.1 52.6%, Terminal-Bench 4.0 55.8% (Mythos 5.1 60.9%), GDPval-AA v2 1853, OSWorld 2.0 77.9% partial / 41.7% strict, AutomationBench 31.4% and CursorBench 3.2.0 73.4%, with Fable 5.1 scored with production safeguards on, taking zeros where they intervened."
   },
   {
     "id": "qwen3-8-flash-next",
     "name": "Qwen3.8-Flash-Next",
     "company": "alibaba",
     "releaseDate": "2026-08-26",
-    "status": "unknown",
+    "status": "superseded",
     "tier": "fast",
     "modality": "multimodal",
     "contextWindow": 262144,
@@ -5694,10 +5900,12 @@
       "mmluPro": null,
       "gpqaDiamond": 91.7,
       "sweBench": null,
+      "sweBenchPro": 62.5,
       "terminalBench": null,
       "aime": null,
       "hle": 35.9,
       "lmarenaElo": null,
+      "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
@@ -5711,6 +5919,6 @@
       "Very verbose in thinking mode — Artificial Analysis saw it burn roughly twice the median token count on its index, which quietly inflates output bills and stretches single tasks to many minutes",
       "Ships a brand-new architecture and Qwen-XML tool calls — runtimes without the matching parser or kernels drop tool calls or decode several times slower than the active-parameter count implies"
     ],
-    "notes": "125B main model plus a separate 51B n-gram embedding table (176B on disk) and a 4B MTP head, 6B active per token; Qwen calls it an experimental preview of the Qwen4 architecture. GPQA Diamond 91.7 and HLE 35.9 are Qwen's own model-card figures (HLE judged by GPT-4o; the card does not say whether tools were used); Qwen also reports SWE-bench Pro 62.5, SWE-bench Multilingual 81.0, LiveCodeBench v6 91.9, CoWorkBench 73.9 and Toolathlon Verified 73.5, none of which is a tracked key, and the MMLU-Pro 73.23 in the card is for the pretrained Base checkpoint, not the released model. Terminal-Bench appears in the card's harness notes as the 2.0 version, with no figure found, so the 2.1 cell stays null. Arena has it at #24 overall in Agent Arena and 1617 (AutoEval) on Code Arena: WebDev, but no text-leaderboard Elo. Qwen states that \"Qwen3.8-Flash is the official version based on Qwen3.8-Flash-Next with more production features, e.g., 1M context length by default, official built-in tools\" — so pricing is Qwen's first-party rate for that hosted production version (1 RMB / 3 RMB, $0.16/$0.47; OpenRouter and Artificial Analysis list it at $0.15/$0.47), and costPerTask ($0.09) and speed (87.5 tok/s, 2.57 s to first answer token) are Artificial Analysis measurements taken on Alibaba's API without a disclosed effort tier (the model defaults to xhigh). Context is 262,144 native, extendable to about 1M via YaRN; max output is the 131,072 final-response cap (reasoning content may run to 262,144). Qwen's blog says it \"plays the same role that Qwen3-Next played for Qwen3.5\" and compares it to Qwen3.7-Plus — lineage language, not a replacement claim, so predecessorId is null."
+    "notes": "125B main model plus a separate 51B n-gram embedding table (176B on disk) and a 4B MTP head, 6B active per token; Qwen calls it an experimental preview of the Qwen4 architecture. GPQA Diamond 91.7 and HLE 35.9 are Qwen's own model-card figures (HLE judged by GPT-4o; the card does not say whether tools were used); Qwen also reports SWE-bench Pro 62.5, SWE-bench Multilingual 81.0, LiveCodeBench v6 91.9, CoWorkBench 73.9 and Toolathlon Verified 73.5, and the MMLU-Pro 73.23 in the card is for the pretrained Base checkpoint, not the released model. Terminal-Bench appears in the card's harness notes as the 2.0 version, with no figure found, so the 2.1 cell stays null. Arena has it at #24 overall in Agent Arena and 1617 (AutoEval) on Code Arena: WebDev, but no text-leaderboard Elo. Qwen states that \"Qwen3.8-Flash is the official version based on Qwen3.8-Flash-Next with more production features, e.g., 1M context length by default, official built-in tools\" — so pricing is Qwen's first-party rate for that hosted production version (1 RMB / 3 RMB, $0.16/$0.47; OpenRouter and Artificial Analysis list it at $0.15/$0.47), and costPerTask ($0.09) and speed (87.5 tok/s, 2.57 s to first answer token) are Artificial Analysis measurements taken on Alibaba's API without a disclosed effort tier (the model defaults to xhigh). Context is 262,144 native, extendable to about 1M via YaRN; max output is the 131,072 final-response cap (reasoning content may run to 262,144). Qwen's blog says it \"plays the same role that Qwen3-Next played for Qwen3.5\" and compares it to Qwen3.7-Plus — lineage language, not a replacement claim, so predecessorId is null."
   }
 ]

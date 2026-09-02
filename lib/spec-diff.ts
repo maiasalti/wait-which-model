@@ -116,10 +116,6 @@ export const DIFF_FIELDS: DiffField[] = [
     display: (m) => formatSpeed(null, m.speed.timeToFirstTokenSec),
   },
   {
-    key: "mmluPro", label: "MMLU-Pro", direction: "higher-better",
-    value: (m) => m.benchmarks.mmluPro ?? null, display: (m) => dash(m.benchmarks.mmluPro ?? null, "%"),
-  },
-  {
     key: "gpqaDiamond", label: "GPQA Diamond", direction: "higher-better",
     value: (m) => m.benchmarks.gpqaDiamond ?? null, display: (m) => dash(m.benchmarks.gpqaDiamond ?? null, "%"),
   },
@@ -128,12 +124,12 @@ export const DIFF_FIELDS: DiffField[] = [
     value: (m) => m.benchmarks.sweBench ?? null, display: (m) => dash(m.benchmarks.sweBench ?? null, "%"),
   },
   {
-    key: "terminalBench", label: "Terminal-Bench 2.1", direction: "higher-better",
-    value: (m) => m.benchmarks.terminalBench ?? null, display: (m) => dash(m.benchmarks.terminalBench ?? null, "%"),
+    key: "sweBenchPro", label: "SWE-bench Pro", direction: "higher-better",
+    value: (m) => m.benchmarks.sweBenchPro ?? null, display: (m) => dash(m.benchmarks.sweBenchPro ?? null, "%"),
   },
   {
-    key: "aime", label: "AIME", direction: "higher-better",
-    value: (m) => m.benchmarks.aime ?? null, display: (m) => dash(m.benchmarks.aime ?? null, "%"),
+    key: "terminalBench", label: "Terminal-Bench 2.1", direction: "higher-better",
+    value: (m) => m.benchmarks.terminalBench ?? null, display: (m) => dash(m.benchmarks.terminalBench ?? null, "%"),
   },
   {
     key: "hle", label: "Humanity's Last Exam", direction: "higher-better",
@@ -142,6 +138,10 @@ export const DIFF_FIELDS: DiffField[] = [
   {
     key: "lmarenaElo", label: "LMArena Elo", direction: "higher-better",
     value: (m) => m.benchmarks.lmarenaElo ?? null, display: (m) => dash(m.benchmarks.lmarenaElo ?? null),
+  },
+  {
+    key: "gdpvalAA", label: "GDPval-AA v2", direction: "higher-better",
+    value: (m) => m.benchmarks.gdpvalAA ?? null, display: (m) => dash(m.benchmarks.gdpvalAA ?? null),
   },
   {
     key: "arcAgi2", label: "ARC-AGI-2", direction: "higher-better",

@@ -79,6 +79,9 @@ export default function InfoPage() {
                 <tr key={b.key} className="border-b border-line last:border-0">
                   <td className="whitespace-nowrap py-2 pl-3 pr-4 align-top font-semibold text-ink">
                     {b.name}
+                    {b.retired && (
+                      <span className="ml-1.5 text-[10px] font-normal uppercase tracking-wider text-ink-3">retired</span>
+                    )}
                   </td>
                   <td className="py-2 pr-3 text-ink-2">{b.description}</td>
                 </tr>
