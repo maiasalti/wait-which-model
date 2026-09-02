@@ -1,0 +1,37 @@
+# OKF concept catalog — every note with its `type`, grouped. Generated once by hand; edit freely in Obsidian.
+filters:
+  and:
+    - 'file.ext == "md"'
+    - 'file.name != "index"'
+    - 'file.name != "log"'
+properties:
+  note.type:
+    displayName: Type
+  note.description:
+    displayName: Description
+  note.status:
+    displayName: Status
+  note.tags:
+    displayName: Tags
+  file.folder:
+    displayName: Folder
+views:
+  - type: table
+    name: By type
+    groupBy:
+      property: note.type
+      direction: ASC
+    order:
+      - file.name
+      - note.description
+      - note.status
+      - note.tags
+  - type: table
+    name: By folder
+    groupBy:
+      property: file.folder
+      direction: ASC
+    order:
+      - file.name
+      - note.type
+      - note.description

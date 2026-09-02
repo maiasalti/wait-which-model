@@ -1,0 +1,114 @@
+{
+  "bundle_name": "frontier-models-website",
+  "author": "human:maia",
+  "exclude_dirs": [
+    ".git",
+    ".obsidian",
+    ".okf",
+    ".claude",
+    ".agents",
+    ".codex",
+    ".superpowers",
+    ".vercel",
+    ".next",
+    ".playwright-mcp",
+    "node_modules",
+    "public",
+    "app",
+    "components",
+    "lib",
+    "scripts"
+  ],
+  "default_type": "Note",
+  "types": [
+    {
+      "glob": "CLAUDE.md",
+      "type": "Agent Instructions"
+    },
+    {
+      "glob": "AGENTS.md",
+      "type": "Agent Instructions"
+    },
+    {
+      "glob": "CUSTOM_COMMANDS.md",
+      "type": "Reference"
+    },
+    {
+      "glob": "README.md",
+      "type": "Overview"
+    },
+    {
+      "glob": "*/README.md",
+      "type": "Overview"
+    },
+    {
+      "glob": "protocols/*.md",
+      "type": "Protocol"
+    },
+    {
+      "glob": "docs/superpowers/specs/*.md",
+      "type": "Design Spec"
+    },
+    {
+      "glob": "docs/superpowers/plans/*.md",
+      "type": "Plan"
+    },
+    {
+      "glob": "data/*.md",
+      "type": "Data Gap Report"
+    },
+    {
+      "glob": "logs/*.md",
+      "type": "Report"
+    }
+  ],
+  "overrides": {
+    "CLAUDE.md": {
+      "title": "Wait Which Model?",
+      "description": "A Next.js site tracking frontier AI models — a models directory, Compare charts, News, a public Info/methodology page, and the Which Model? and Cost Calculator tools — driven entirely by the JSON files in data/ (no backend) and kept current by protocol-driven, web-researched updates."
+    },
+    "AGENTS.md": {
+      "title": "Wait Which Model?",
+      "description": "A Next.js site tracking frontier AI models — a models directory, Compare charts, News, a public Info/methodology page, and the Which Model? and Cost Calculator tools — driven entirely by the JSON files in data/ (no backend) and kept current by protocol-driven, web-researched updates."
+    },
+    "CUSTOM_COMMANDS.md": {
+      "description": "Table of the project's Claude Code slash commands (/stale-data-scanner, /fact-checker, /news-scan-24h) — what each one does and when to use it versus the phrase-triggered protocol agents."
+    },
+    "docs/superpowers/plans/2026-07-28-which-model-tool.md": {
+      "description": "Task-by-task implementation plan for the Which Model? tool — a client chat page plus an API route that streams 1-3 recommendations grounded only in the site's own data/*.json, served via Groq after Vercel AI Gateway was dropped mid-execution."
+    },
+    "docs/superpowers/plans/2026-08-04-model-data-and-tools-expansion.md": {
+      "description": "Task-by-task implementation plan for five new model-schema fields (speed, license, apiIds, retirementDate, predecessorId), derived frontier reigns and benchmark coverage, a leaner model drawer, and three decision tools: shareable Compare, spec diff and cost calculator."
+    },
+    "docs/superpowers/specs/2026-08-03-deep-linkable-model-pages-design.md": {
+      "description": "Give every model its own crawlable, unfurl-friendly URL at /models/[id], with a parallel-route modal so the directory keeps its drawer feel; approved 2026-08-03."
+    },
+    "docs/superpowers/specs/2026-08-04-model-data-and-tools-expansion-design.md": {
+      "description": "Design for adding speed, licence, API ids, retirement dates and lineage to the model schema, deriving a history of frontier reigns, and turning the Compare page into shareable, pairwise and cost-aware decision tools; approved 2026-08-04."
+    },
+    "docs/superpowers/specs/2026-08-06-daily-sweep-design.md": {
+      "description": "Design for the unattended weekday sweep (launchd) that runs the health, model, stats and news protocols and opens a PR instead of writing to main — amended 2026-08-13 after the 09:00 slot lost runs to firing before Wi-Fi reconnected."
+    },
+    "logs/sweep-report-2026-08-17.md": {
+      "description": "Report from the 2026-08-17 daily sweep (health, models, news): four sourced news entries added, no model, status or reign changes; includes a scope note on backfilled non-release entries."
+    },
+    "protocols/DATA_GAP_FINDER_PROTOCOL.md": {
+      "description": "Fill null fields on models released in the last 6 months from primary sources only (the lab's own announcement or model card, LMArena, official leaderboards); a cell that cannot be verified stays null rather than guessed."
+    },
+    "protocols/FRONTIER_STATUS_PROTOCOL.md": {
+      "description": "How status in data/models.json is computed by scripts/frontier-status.js — a major-lab flagship recency override plus a per-tier benchmark rule — so frontier is a derived signal that never goes stale by hand."
+    },
+    "protocols/MODEL_SPECS_PROTOCOL.md": {
+      "description": "Find and fill speed, license, apiIds, retirementDate and predecessorId in data/models.json from primary sources; predecessorId requires an explicit replacement claim in the lab's own announcement and is never inferred from naming."
+    },
+    "protocols/NEWS_SCAN_PROTOCOL.md": {
+      "description": "Refresh the News tab with all recent frontier-lab news (releases, benchmarks, funding, policy, research): interview Maia on companies, period, categories and depth first, then web-search and append sourced entries to data/news.json."
+    },
+    "protocols/NEW_MODEL_RELEASE_PROTOCOL.md": {
+      "description": "Add a newly released frontier model to data/models.json with web-verified, sourced data so it appears correctly in Directory, Compare and News; frontier status is then computed, never assigned."
+    },
+    "protocols/STATS_FILLER_PROTOCOL.md": {
+      "description": "Find and fill missing benchmark scores and spec fields (pricing, context window, max output, knowledge cutoff) in data/models.json with verified, sourced values; unverifiable cells are recorded in data/stats-gaps.md so re-runs skip them."
+    }
+  }
+}

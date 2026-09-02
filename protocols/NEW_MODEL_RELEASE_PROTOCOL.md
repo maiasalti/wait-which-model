@@ -1,3 +1,15 @@
+---
+type: Protocol
+title: New Model Release Protocol
+description: Add a newly released frontier model to data/models.json with web-verified, sourced data so it appears correctly
+  in Directory, Compare and News; frontier status is then computed, never assigned.
+tags:
+- protocols
+generated:
+  by: human:maia
+  at: '2026-08-05T06:05:55Z'
+---
+
 # New Model Release Protocol
 
 **Trigger:** Maia says "execute new model release protocol" (optionally naming the model, e.g. "…for Grok 5"). If no model is named, first web-search for frontier model releases since the newest `releaseDate` in `data/models.json` and confirm with Maia which to add — or add all of them.

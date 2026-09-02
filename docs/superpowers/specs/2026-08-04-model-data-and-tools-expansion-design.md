@@ -1,3 +1,17 @@
+---
+type: Design Spec
+title: Model data and tools expansion
+description: Design for adding speed, licence, API ids, retirement dates and lineage to the model schema, deriving a history
+  of frontier reigns, and turning the Compare page into shareable, pairwise and cost-aware decision tools; approved 2026-08-04.
+tags:
+- docs
+- superpowers
+- specs
+generated:
+  by: human:maia
+  at: '2026-08-04T08:50:14Z'
+---
+
 # Model data and tools expansion
 
 **Date:** 2026-08-04

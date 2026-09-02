@@ -1,3 +1,17 @@
+---
+type: Design Spec
+title: Deep-linkable model pages
+description: Give every model its own crawlable, unfurl-friendly URL at /models/[id], with a parallel-route modal so the directory
+  keeps its drawer feel; approved 2026-08-03.
+tags:
+- docs
+- superpowers
+- specs
+generated:
+  by: human:maia
+  at: '2026-08-03T08:23:11Z'
+---
+
 # Deep-linkable model pages
 
 **Date:** 2026-08-03

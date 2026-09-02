@@ -1,3 +1,17 @@
+---
+type: Design Spec
+title: Frontier Info Page — Design
+description: Add a public "Info" tab explaining, in plain language, what "frontier" means on this site, how it compares to
+  how the term is used elsewhere, why some data is missing, and how the data stays current…
+tags:
+- docs
+- superpowers
+- specs
+generated:
+  by: human:maia
+  at: '2026-07-21T09:06:08Z'
+---
+
 # Frontier Info Page — Design
 
 ## Purpose

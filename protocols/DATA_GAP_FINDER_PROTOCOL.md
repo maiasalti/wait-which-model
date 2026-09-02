@@ -1,3 +1,15 @@
+---
+type: Protocol
+title: Data Gap Finder Protocol
+description: Fill null fields on models released in the last 6 months from primary sources only (the lab's own announcement
+  or model card, LMArena, official leaderboards); a cell that cannot be verified stays null rather than guessed.
+tags:
+- protocols
+generated:
+  by: human:maia
+  at: '2026-07-22T03:04:03Z'
+---
+
 # Data Gap Finder Protocol
 
 **Trigger:** Maia says "execute data gap finder protocol" / "find data gaps" / "check recent models for missing data" (optionally scoped, e.g. "…for Anthropic's recent models").

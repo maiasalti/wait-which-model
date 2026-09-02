@@ -1,3 +1,16 @@
+---
+type: Protocol
+title: Stats Filler Protocol
+description: Find and fill missing benchmark scores and spec fields (pricing, context window, max output, knowledge cutoff)
+  in data/models.json with verified, sourced values; unverifiable cells are recorded in data/stats-gaps.md so re-runs skip
+  them.
+tags:
+- protocols
+generated:
+  by: human:maia
+  at: '2026-07-22T07:07:48Z'
+---
+
 # Stats Filler Protocol
 
 **Trigger:** Maia says "execute stats filler protocol" (optionally scoped, e.g. "…for the 2026 models" or "…for SWE-bench only").

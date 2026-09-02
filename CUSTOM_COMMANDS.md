@@ -1,3 +1,13 @@
+---
+type: Reference
+title: Custom slash commands
+description: Table of the project's Claude Code slash commands (/stale-data-scanner, /fact-checker, /news-scan-24h) — what
+  each one does and when to use it versus the phrase-triggered protocol agents.
+generated:
+  by: human:maia
+  at: '2026-07-22T02:31:08Z'
+---
+
 # Custom slash commands
 
 Project-specific commands in `.claude/commands/`, invoked as `/<name>` in Claude Code.

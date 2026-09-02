@@ -1,3 +1,17 @@
+---
+type: Plan
+title: Which Model Tool Implementation Plan
+description: Task-by-task implementation plan for the Which Model? tool — a client chat page plus an API route that streams
+  1-3 recommendations grounded only in the site's own data/*.json, served via Groq after Vercel AI Gateway was dropped mid-execution.
+tags:
+- docs
+- superpowers
+- plans
+generated:
+  by: human:maia
+  at: '2026-07-28T07:49:22Z'
+---
+
 # Which Model Tool Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.

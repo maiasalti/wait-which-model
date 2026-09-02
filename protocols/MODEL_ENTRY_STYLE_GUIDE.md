@@ -1,3 +1,15 @@
+---
+type: Protocol
+title: Model Entry Style Guide
+description: How every record in data/models.json is written, so new models added by the release protocol are indistinguishable
+  in style from existing ones. The UI renders these values verbatim — consistency here…
+tags:
+- protocols
+generated:
+  by: human:maia
+  at: '2026-07-29T03:50:57Z'
+---
+
 # Model Entry Style Guide
 
 How every record in `data/models.json` is written, so new models added by the release protocol are indistinguishable in style from existing ones. The UI renders these values verbatim — consistency here IS consistency on the page.
