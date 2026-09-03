@@ -31,7 +31,8 @@ function escapeHtml(s) {
  *  recipient and must appear verbatim. */
 function buildEmail(models, companies, siteUrl) {
   const companyName = (id) => companies.find((c) => c.id === id)?.name ?? id;
-  const subject = "NEW model release: " + models.map((m) => m.name).join(", ");
+  const subject =
+    "NEW model release: " + models.map((m) => String(m.name).replace(/[\r\n]+/g, " ")).join(", ");
 
   const blocks = models.map((m) => {
     const url = `${siteUrl}/models/${m.id}`;

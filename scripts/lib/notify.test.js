@@ -45,6 +45,12 @@ test("subject lists every model name, comma-separated, untruncated", () => {
   assert.equal(three.subject, "NEW model release: Gemini 3.8 Flash, Gemini 3.8 Flash Cyber, Qwen3.8-Max-0902");
 });
 
+test("subject strips CR/LF from model names so header injection can't smuggle a Bcc", () => {
+  const { subject } = buildEmail([model({ name: "Foo\r\nBcc: x@y" })], companies, SITE);
+  assert.equal(subject, "NEW model release: Foo Bcc: x@y");
+  assert.doesNotMatch(subject, /[\r\n]/);
+});
+
 test("html links each model to its page and carries lab, tier, date and first strength", () => {
   const { html } = buildEmail([model()], companies, SITE);
   assert.match(html, /href="https:\/\/www\.waitwhichmodel\.fyi\/models\/gemini-3-8-flash"/);
