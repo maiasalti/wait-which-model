@@ -1,0 +1,50 @@
+"use client";
+
+import { MESSAGES, useSubscribe } from "./useSubscribe";
+
+/** Footer sign-up for model-release emails. Posts to /api/subscribe; the
+ *  hidden `website` field is a honeypot that real visitors never see. */
+export function SubscribeForm() {
+  const { email, setEmail, status, submit } = useSubscribe();
+
+  return (
+    <form onSubmit={submit} className="flex flex-col items-center gap-2" aria-label="Get an email when a new model is added">
+      <label htmlFor="subscribe-email" className="text-ink-2">
+        Get an email when a new model is added
+      </label>
+      <div className="flex w-full max-w-sm gap-2">
+        <input
+          id="subscribe-email"
+          type="email"
+          name="email"
+          required
+          autoComplete="email"
+          placeholder="you@example.com"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          disabled={status === "sending"}
+          className="min-w-0 flex-1 rounded border border-line bg-surface px-2 py-1.5 text-xs text-ink placeholder:text-ink-3"
+        />
+        <button
+          type="submit"
+          disabled={status === "sending"}
+          className="rounded border border-line-strong bg-surface-2 px-3 py-1.5 text-xs font-semibold text-ink hover:bg-white/5 disabled:opacity-60"
+        >
+          {status === "sending" ? "Adding…" : "Notify me"}
+        </button>
+        {/* Honeypot: hidden from people, filled by bots. */}
+        <input
+          type="text"
+          name="website"
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          className="absolute -left-[9999px] h-0 w-0 opacity-0"
+        />
+      </div>
+      <p role="status" aria-live="polite" className="min-h-4 text-ink-3">
+        {status === "idle" || status === "sending" ? "" : MESSAGES[status]}
+      </p>
+    </form>
+  );
+}

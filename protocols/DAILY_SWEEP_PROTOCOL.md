@@ -18,6 +18,10 @@ generated:
 An unattended run of the existing protocols that opens a **pull request**. It never writes
 to `main` and never deploys.
 
+Merging a sweep PR that adds models is what triggers the subscriber email (see
+`AGENTS.md` → Notifications), so a wrong model merged is a wrong email sent — review the
+PR's `models.json` additions before merging.
+
 ## Cadence
 
 Weekdays only. The laptop is shut at weekends, so a Saturday job would either never run or

@@ -1,0 +1,35 @@
+# Emails subscribers when a push to main adds a model to data/models.json.
+# Design: docs/superpowers/specs/2026-09-03-model-release-notifications-design.md
+name: Notify subscribers of new models
+
+on:
+  push:
+    branches: [main]
+    paths: [data/models.json]
+
+# One run at a time, in order. GitHub keeps at most ONE pending run per group: a third
+# push while one runs and one waits cancels the waiting one, and its models are never
+# announced (each run diffs only its own before→after). Accepted: merges happen one PR
+# at a time.
+concurrency: notify-new-models
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # the script reads data/models.json at the before-commit
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Diff models.json and send one broadcast
+        run: node scripts/notify-new-models.js
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_SEGMENT_ID: ${{ secrets.RESEND_SEGMENT_ID }}
