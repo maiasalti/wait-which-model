@@ -1,5 +1,21 @@
 [
   {
+    "id": "2026-09-02-gemini-3-8-flash",
+    "date": "2026-09-02",
+    "title": "Google releases Gemini 3.8 Flash and Gemini 3.8 Flash Cyber, its third Flash in six weeks",
+    "summary": "Google shipped Gemini 3.8 Flash three weeks after 3.7 Flash at the same introductory $0.75/$3.75 per million tokens (rising to $1.50/$7.50 on 2027-01-01), with a 1M context, 64K output, a March 2026 knowledge cutoff and general availability across the Gemini API, AI Studio, Antigravity, Gemini Enterprise and the Gemini app for Pro and Ultra subscribers. Google reports Terminal-Bench 2.1 89.4% (85.8% for 3.7 Flash), HLE-Verified 54.9%, DeepSWE v1.1 73.7% and GDPval-AA v2 1545, while Artificial Analysis scores it 59 at high effort at $0.58 per task and warns it is markedly more verbose; 3.7 Flash stays fully supported for efficiency-first workloads. Gemini 3.8 Flash Cyber, the same base model with more permissive cybersecurity mitigations, posts CWE-Bench pass@1 47.2% and 2.6x more correct Chrome patches than the best commercial models, and is offered only to vetted governments, critical-infrastructure operators and software maintainers through the new Fairwind Program.",
+    "category": "release",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [
+      "gemini-3-8-flash",
+      "gemini-3-8-flash-cyber"
+    ],
+    "sourceName": "Google",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+  },
+  {
     "id": "2026-09-01-claude-fable-5-1",
     "date": "2026-09-01",
     "title": "Anthropic releases Claude Fable 5.1 and Mythos 5.1, cutting cache-read prices 75%",

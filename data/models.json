@@ -5335,9 +5335,9 @@
       "terminalBench": 85.8,
       "aime": null,
       "hle": 53.6,
-      "lmarenaElo": null,
+      "lmarenaElo": 1491,
       "gdpvalAA": null,
-      "arcAgi2": null
+      "arcAgi2": 84.6
     },
     "strengths": [
       "Adapts to roadblocks mid-task instead of stalling — clarifies intent and follows multi-step instructions more reliably than 3.6 Flash",
@@ -5348,7 +5348,7 @@
       "Time to first answer token stretches to roughly 10 seconds median at high effort, with worst-case waits near a minute — the effort dial needs deliberate tuning, not the default",
       "Launch coverage is narrowly focused on coding and agent benchmarks — general chat and creative behavior are largely uncharacterized so far"
     ],
-    "notes": "Shipped three weeks after 3.6 Flash as an algorithmic refinement of the same base model (Google's own framing: 'the core reasoning foundation'), not a new pretraining run; Google replaced 3.6 Flash with 3.7 Flash in the Gemini app's model picker on launch day (9to5Google), which is the explicit replacement evidence behind predecessorId here. Google's own headline coding-benchmark table reports DeepSWE v1.1 65.3% (was 49.0%), FrontierCode 1.1 Main 43.6% (was 34.4%), AutomationBench 30.4% (was 17.0%) and WebDev Arena Elo 1588 (was 1538) — none of these map to this site's tracked keys. GPQA Diamond 94.5% and HLE (Verified) 53.6% are Artificial Analysis' high-effort measurements; Terminal-Bench 2.1 85.8% is Google's own reported figure (vs 78.0% for 3.6 Flash). costPerTask and speed use AA's medium-effort listing per this site's convention ($0.26/task, 273.6 tok/s, 4.22s to first answer token); AA's high-effort listing instead shows $0.40/task at the introductory price. Pricing is the introductory rate ($0.75/$3.75 per 1M input/output tokens) in effect through 2026-12-31; it rises to $1.50/$7.50 on 2027-01-01."
+    "notes": "Shipped three weeks after 3.6 Flash as an algorithmic refinement of the same base model (Google's own framing: 'the core reasoning foundation'), not a new pretraining run; Google replaced 3.6 Flash with 3.7 Flash in the Gemini app's model picker on launch day (9to5Google), which is the explicit replacement evidence behind predecessorId here. Google's own headline coding-benchmark table reports DeepSWE v1.1 65.3% (was 49.0%), FrontierCode 1.1 Main 43.6% (was 34.4%), AutomationBench 30.4% (was 17.0%) and WebDev Arena Elo 1588 (was 1538) — none of these map to this site's tracked keys. GPQA Diamond 94.5% and HLE (Verified) 53.6% are Artificial Analysis' high-effort measurements; Terminal-Bench 2.1 85.8% is Google's own reported figure (vs 78.0% for 3.6 Flash). costPerTask and speed use AA's medium-effort listing per this site's convention ($0.26/task, 273.6 tok/s, 4.22s to first answer token); AA's high-effort listing instead shows $0.40/task at the introductory price. Pricing is the introductory rate ($0.75/$3.75 per 1M input/output tokens) in effect through 2026-12-31; it rises to $1.50/$7.50 on 2027-01-01. Backfilled 2026-09-03: ARC-AGI-2 84.6% is ARC Prize-verified at high effort ($0.25/task; medium 63.7%, low 52.9%), and LMArena Elo 1491 is the 'gemini-3.7-flash-high' text-arena listing (rank 11, preliminary). Google's 3.8 Flash evaluation table now shows 3.7 Flash at GDPval-AA v2 1482 while AA's live board lists 1516 at high effort — left null pending a stable figure."
   },
   {
     "id": "qwen3-8-27b",
@@ -5920,5 +5920,118 @@
       "Ships a brand-new architecture and Qwen-XML tool calls — runtimes without the matching parser or kernels drop tool calls or decode several times slower than the active-parameter count implies"
     ],
     "notes": "125B main model plus a separate 51B n-gram embedding table (176B on disk) and a 4B MTP head, 6B active per token; Qwen calls it an experimental preview of the Qwen4 architecture. GPQA Diamond 91.7 and HLE 35.9 are Qwen's own model-card figures (HLE judged by GPT-4o; the card does not say whether tools were used); Qwen also reports SWE-bench Pro 62.5, SWE-bench Multilingual 81.0, LiveCodeBench v6 91.9, CoWorkBench 73.9 and Toolathlon Verified 73.5, and the MMLU-Pro 73.23 in the card is for the pretrained Base checkpoint, not the released model. Terminal-Bench appears in the card's harness notes as the 2.0 version, with no figure found, so the 2.1 cell stays null. Arena has it at #24 overall in Agent Arena and 1617 (AutoEval) on Code Arena: WebDev, but no text-leaderboard Elo. Qwen states that \"Qwen3.8-Flash is the official version based on Qwen3.8-Flash-Next with more production features, e.g., 1M context length by default, official built-in tools\" — so pricing is Qwen's first-party rate for that hosted production version (1 RMB / 3 RMB, $0.16/$0.47; OpenRouter and Artificial Analysis list it at $0.15/$0.47), and costPerTask ($0.09) and speed (87.5 tok/s, 2.57 s to first answer token) are Artificial Analysis measurements taken on Alibaba's API without a disclosed effort tier (the model defaults to xhigh). Context is 262,144 native, extendable to about 1M via YaRN; max output is the 131,072 final-response cap (reasoning content may run to 262,144). Qwen's blog says it \"plays the same role that Qwen3-Next played for Qwen3.5\" and compares it to Qwen3.7-Plus — lineage language, not a replacement claim, so predecessorId is null."
+  },
+  {
+    "id": "gemini-3-8-flash",
+    "name": "Gemini 3.8 Flash",
+    "company": "google",
+    "releaseDate": "2026-09-02",
+    "status": "frontier",
+    "tier": "fast",
+    "modality": "multimodal",
+    "contextWindow": 1048576,
+    "maxOutput": 65536,
+    "pricing": {
+      "inputPerMTok": 0.75,
+      "outputPerMTok": 3.75
+    },
+    "costPerTask": {
+      "usd": 0.41,
+      "effort": "medium"
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-03",
+    "speed": {
+      "outputTokensPerSec": 312.3,
+      "timeToFirstTokenSec": 6.44,
+      "effort": "medium"
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "google",
+        "id": "gemini-3.8-flash"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 95.3,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": 89.4,
+      "aime": null,
+      "hle": 54.9,
+      "lmarenaElo": 1494,
+      "gdpvalAA": 1545,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Takes smaller reasoning steps, calls tools iteratively and re-checks its own work — long-horizon coding runs go further before it declares victory than 3.7 Flash did",
+      "Low effort answers in well under a second while high effort deliberates for a quarter of a minute — one endpoint spans quick chat and patient agent work",
+      "Markedly harder to prompt-inject than the 3.x Flash releases before it on Gray Swan's robustness suite, so it can be pointed at untrusted web content with less babysitting"
+    ],
+    "weaknesses": [
+      "Burns roughly 40% more output tokens than 3.7 Flash on the same work by design — Google itself points efficiency-first workloads back to 3.7 Flash, which stays on sale",
+      "Time to first answer token climbs to about 13 seconds at high effort, and Google's own model card warns of occasional slowness and timeouts",
+      "Rejects the minimal thinking level outright, and at low effort long code answers can hit the generation ceiling before the visible answer completes"
+    ],
+    "notes": "Third Flash release in six weeks; the model card says it is 'based on Gemini 3.7 Flash' and Google's docs say 3.7 Flash 'remains fully supported' with no shutdown date on the deprecations page, so predecessorId stays null (lineage, not replacement). Terminal-Bench 2.1 89.4% (Terminus 2 harness) and HLE-Verified 54.9% (the 1,811-item verified set, no tools) are Google's own self-computed figures from the evaluation-methodology PDF, which lists 3.7 Flash at 85.8% and 53.6%; GDPval-AA v2 1545 is Artificial Analysis' high-effort listing as cited in that table; GPQA Diamond 95.3% is AA's high-effort measurement, not Google-reported; LMArena Elo 1494 is the 'gemini-3.8-flash-high' text-arena listing (rank 8, preliminary) on launch day. Google published no SWE-bench Verified, SWE-bench Pro, MMLU-Pro, AIME or ARC-AGI-2 figures — the SWE-bench Pro 61.6% and Terminal-Bench 90.8% quoted by DataCamp appear nowhere in Google's material and are not used. Google's table also reports DeepSWE v1.1 73.7% (was 65.3%), Terminal-Bench 4.0 19.1%, Vals Finance Agent v2 61.4%, Harvey Legal 10.0%, OSWorld 2.0 59.0% partial and LABBench2 86.2%, none of which map to tracked keys. costPerTask and speed are AA's medium-effort variant per site convention ($0.41/task, 312.3 tok/s, 6.44 s to first answer token); high effort scores AA Intelligence Index 59 (up 3 on 3.7 Flash) at $0.58/task, 302.1 tok/s and 13.3 s, low effort 52 at $0.24/task and 0.70 s. Pricing is the introductory rate through 2026-12-31, rising to $1.50/$7.50 on 2027-01-01 (batch half price, context caching $0.075). Model card notes some domains' knowledge is limited to January 2025 despite the March 2026 cutoff. Released alongside Gemini 3.8 Flash Cyber, the same base model with looser cyber mitigations, gated to the Fairwind Program."
+  },
+  {
+    "id": "gemini-3-8-flash-cyber",
+    "name": "Gemini 3.8 Flash Cyber",
+    "company": "google",
+    "releaseDate": "2026-09-02",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "contextWindow": null,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "restricted",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Closes the loop from finding a vulnerability to a verified, deployable patch — Chrome's security team got more correct fixes out of it than from far larger commercial models",
+      "Ships with looser cyber-offence mitigations than the public 3.8 Flash, so vulnerability reproduction and pentest-recall work the general model refuses goes through",
+      "Hunts beyond C/C++ across some twenty languages at Flash-class cost — cheap enough to run as a continuous scanning loop rather than a one-off audit"
+    ],
+    "weaknesses": [
+      "Reachable only through the Fairwind Program — background-checked organisations, access limited to internal security teams, no redistribution — so it cannot be trialled casually",
+      "Tuned toward patching rather than exploitation by design, so it is a weaker fit for red-team exploit development than for defensive triage",
+      "No published general-capability scores, specs or pricing — behaviour outside vulnerability work is undocumented"
+    ],
+    "notes": "Cybersecurity variant of Gemini 3.8 Flash — Google says both releases are 'powered by the same foundational intelligence', with Cyber shipping 'a more permissive set of mitigations for cybersecurity' — available only through the new Fairwind Program (trusted governments and national cyber authorities, critical-infrastructure operators and core software maintainers; background-checked, 650+ partner organisations at launch), hence availability 'restricted'. Served as a managed model on Gemini Enterprise Agent Platform (zero data retention) and inside Google's CodeMender agent; no public API id, pricing, context window, output limit or knowledge cutoff has been published for it, so those cells are null rather than copied from 3.8 Flash. Google reports only cyber-specific evals: CWE-Bench pass@1 47.2% against 47.8% for the leading frontier model, a success rate above 70% on an internal 20-language vulnerability-discovery benchmark, CyberGym above 3.5 Flash Cyber and larger frontier models (no figure given), 2.6x more correct Chrome vulnerability patches than the best commercial models (Chrome Security team), and 7.5–9.7 points higher recall at 2.3–5.2x lower cost on Wiz's penetration-testing benchmarks — none of the site's tracked benchmarks, and none of 3.8 Flash's scores are stated to apply. Artificial Analysis has not indexed it and the gating makes that unlikely. Gemini 3.5 Flash Cyber (July 2026) is not tracked here and Google states no supersession, so predecessorId stays null."
   }
 ]

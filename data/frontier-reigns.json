@@ -165,7 +165,7 @@
     "start": "2025-08-05",
     "end": "2025-10-15",
     "dethronedBy": "claude-haiku-4-5",
-    "composite": 0.1992
+    "composite": 0.1961
   },
   {
     "modelId": "claude-haiku-4-5",
@@ -173,7 +173,7 @@
     "start": "2025-10-15",
     "end": "2026-04-02",
     "dethronedBy": "gemma-4",
-    "composite": 0.4127
+    "composite": 0.4017
   },
   {
     "modelId": "gemma-4",
@@ -181,28 +181,44 @@
     "start": "2026-04-02",
     "end": "2026-05-19",
     "dethronedBy": "gemini-3-5-flash",
-    "composite": 0.5679
+    "composite": 0.5438
   },
   {
     "modelId": "gemini-3-5-flash",
     "tier": "fast",
     "start": "2026-05-19",
-    "end": "2026-07-21",
-    "dethronedBy": "gemini-3-6-flash",
-    "composite": 0.763
+    "end": "2026-07-09",
+    "dethronedBy": "gpt-5-6-luna",
+    "composite": 0.6585
   },
   {
-    "modelId": "gemini-3-6-flash",
+    "modelId": "gpt-5-6-luna",
     "tier": "fast",
-    "start": "2026-07-21",
+    "start": "2026-07-09",
+    "end": "2026-07-31",
+    "dethronedBy": "deepseek-v4-flash-0731",
+    "composite": 0.7362
+  },
+  {
+    "modelId": "deepseek-v4-flash-0731",
+    "tier": "fast",
+    "start": "2026-07-31",
     "end": "2026-08-13",
     "dethronedBy": "gemini-3-7-flash",
-    "composite": 0.8582
+    "composite": 0.796
   },
   {
     "modelId": "gemini-3-7-flash",
     "tier": "fast",
     "start": "2026-08-13",
+    "end": "2026-09-02",
+    "dethronedBy": "gemini-3-8-flash",
+    "composite": 0.9745
+  },
+  {
+    "modelId": "gemini-3-8-flash",
+    "tier": "fast",
+    "start": "2026-09-02",
     "end": null,
     "dethronedBy": null,
     "composite": 1

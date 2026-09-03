@@ -402,8 +402,8 @@ New-model-release research on 2026-08-16, scoped to `gemini-3-7-flash`, `qwen3-8
 | gemini-3-7-flash | mmluPro | 2026-08-16 | not reported by Google at launch (headline table is DeepSWE v1.1/FrontierCode 1.1/AutomationBench/WebDev Arena instead); not found on any MMLU-Pro tracker |
 | gemini-3-7-flash | sweBench | 2026-08-16 | Google published no SWE-bench Verified figure for 3.7 Flash (DeepSWE v1.1 65.3% and FrontierCode 1.1 Main 43.6% reported instead, neither of which is SWE-bench) |
 | gemini-3-7-flash | aime | 2026-08-16 | not reported by Google; not found on any AIME tracker |
-| gemini-3-7-flash | lmarenaElo | 2026-08-16 | not found on arena.ai's text leaderboard; only the separate WebDev Arena Elo (1588, a different arena) was published |
-| gemini-3-7-flash | arcAgi2 | 2026-08-16 | not reported by Google; not found on ARC Prize or tracker leaderboards |
+| gemini-3-7-flash | lmarenaElo | 2026-08-16 | ~~not found on arena.ai's text leaderboard; only the separate WebDev Arena Elo (1588, a different arena) was published~~ **superseded 2026-09-03: arena.ai now lists 'gemini-3.7-flash-high' at 1491 (rank 11, preliminary) — filled** |
+| gemini-3-7-flash | arcAgi2 | 2026-08-16 | ~~not reported by Google; not found on ARC Prize or tracker leaderboards~~ **superseded 2026-09-03: ARC Prize has since published a verified 84.6% at high effort ($0.25/task; arcprize.org/results/google-gemini-3-7-flash) — filled** |
 | qwen3-8-27b | mmluPro | 2026-08-16 | not in Alibaba's own release material or on any MMLU-Pro tracker found |
 | qwen3-8-27b | sweBench | 2026-08-16 | Alibaba reports SWE-bench Pro (61.7%), not the Verified variant this field tracks |
 | qwen3-8-27b | aime | 2026-08-16 | no AIME figure published or found on any tracker |
@@ -507,3 +507,15 @@ Release-protocol research on 2026-09-02 (daily sweep), scoped to `hy4-preview` (
 | qwen3-8-flash-next | arcAgi2 | 2026-09-02 | not reported by Qwen; no arcprize.org leaderboard entry |
 | qwen3-8-flash-next | knowledgeCutoff | 2026-09-02 | not disclosed in the Qwen blog, HF model card, GitHub README, or on the AA page |
 | qwen3-8-flash-next | costPerTask.effort / speed.effort | 2026-09-02 | Artificial Analysis lists a single unsuffixed "Qwen3.8-Flash-Next" variant with no disclosed effort tier (model default is xhigh); left null rather than assume |
+
+Release-protocol research on 2026-09-03, scoped to `gemini-3-8-flash` and `gemini-3-8-flash-cyber` (both announced 2026-09-02). Sources read: Google's launch post, the DeepMind model card, the evaluation-methodology PDF (storage.googleapis.com/deepmind-media/gemini/gemini_3-8_flash_model_evaluation.pdf), ai.google.dev model/pricing/deprecations/changelog pages, the Fairwind Program page, Artificial Analysis model and evaluation pages, arena.ai and arcprize.org.
+| gemini-3-8-flash | mmluPro | 2026-09-03 | not in Google's evaluation table (DeepSWE, GDPval-AA, Vals Finance, Harvey, Terminal-Bench 2.1/4.0, GDP.PDF, CharXiv, LVBench, HLE-Verified, OSWorld, BioMysteryBench, LABBench2); no tracker figure found |
+| gemini-3-8-flash | sweBench | 2026-09-03 | Google published no SWE-bench Verified figure (DeepSWE v1.1 73.7% instead); not on any Verified leaderboard found |
+| gemini-3-8-flash | sweBenchPro | 2026-09-03 | not in Google's evaluation table or model card; DataCamp quotes 61.6% (and 60.4% for 3.7 Flash) alongside a Terminal-Bench 90.8% that contradicts Google's own 89.4%, so the DataCamp figures are not traceable to a primary source — rejected |
+| gemini-3-8-flash | aime | 2026-09-03 | not reported by Google; no tracker figure found |
+| gemini-3-8-flash | arcAgi2 | 2026-09-03 | arcprize.org/results/google-gemini-3-8-flash returns 404 one day after launch; not on the ARC Prize leaderboard yet — re-check (3.7 Flash was verified on its launch day) |
+| gemini-3-8-flash | gdpvalAA (3.7 Flash conflict) | 2026-09-03 | for the record: Google's 3.8 Flash table cites 3.7 Flash at 1482 while AA's gdpval-aa board lists 3.7 Flash (high) at 1516, (medium) 1492, (low) 1446 — 3.7 Flash's cell left null pending a stable AA figure; 3.8 Flash's 1545 agrees across both sources |
+| gemini-3-8-flash-cyber | mmluPro / gpqaDiamond / sweBench / sweBenchPro / terminalBench / aime / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-09-03 | Google reports only cyber evals (CWE-Bench 47.2% pass@1, CyberGym "surpasses 3.5 Flash Cyber", >70% internal 20-language discovery, Chrome 2.6x patches, Wiz recall); no model card exists (deepmind.google/models/model-cards/gemini-3-8-flash-cyber/ 404) and Google does not state that 3.8 Flash's scores apply; Fairwind gating rules out third-party indexing |
+| gemini-3-8-flash-cyber | contextWindow / maxOutput / knowledgeCutoff | 2026-09-03 | no model card or docs page publishes them; Google says only that both models share 'the same foundational intelligence' — not copied from 3.8 Flash |
+| gemini-3-8-flash-cyber | inputPrice / outputPrice | 2026-09-03 | not on ai.google.dev pricing; the Fairwind page says only 'a fraction of the operating cost of traditional frontier models' — no figure |
+| gemini-3-8-flash-cyber | costPerTask | 2026-09-03 | not indexed by Artificial Analysis; vetted-access gating makes indexing unlikely |
