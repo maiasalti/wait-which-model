@@ -168,7 +168,7 @@ Body, one block per model:
 
 - **Name** as a link to `<siteUrl>/models/<id>`
 - lab name (from companies.json) · tier (Flagship / Balanced / Fast) · released YYYY-MM-DD
-- `availability !== "general"` → a one-line "Restricted access" note, since a subscriber
+- `availability === "restricted"` → a one-line "Restricted access" note, since a subscriber
   can't go and use it
 - the first `strengths[]` item, if any, as the one-line teaser (they are written as
   behavioural fragments and read well alone)

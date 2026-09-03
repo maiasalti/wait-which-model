@@ -55,10 +55,16 @@ test("html links each model to its page and carries lab, tier, date and first st
   assert.match(html, /href="https:\/\/www\.waitwhichmodel\.fyi"/);
 });
 
-test("restricted-access line appears only when availability is not general", () => {
+test("restricted-access line appears only when availability is restricted", () => {
   assert.doesNotMatch(buildEmail([model()], companies, SITE).html, /Restricted access/);
   assert.match(buildEmail([model({ availability: "restricted" })], companies, SITE).html, /Restricted access/);
   assert.match(buildEmail([model({ availability: "restricted" })], companies, SITE).text, /Restricted access/);
+});
+
+test("restricted-access line does not appear for self-host availability", () => {
+  const { html, text } = buildEmail([model({ availability: "self-host" })], companies, SITE);
+  assert.doesNotMatch(html, /Restricted access/);
+  assert.doesNotMatch(text, /Restricted access/);
 });
 
 test("model names and strengths are escaped in html", () => {

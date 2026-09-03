@@ -36,7 +36,7 @@ function buildEmail(models, companies, siteUrl) {
   const blocks = models.map((m) => {
     const url = `${siteUrl}/models/${m.id}`;
     const meta = [companyName(m.company), TIER_LABELS[m.tier] ?? m.tier, `released ${m.releaseDate}`].join(" · ");
-    const restricted = m.availability !== "general";
+    const restricted = m.availability === "restricted";
     const teaser = m.strengths?.[0] ?? "";
     return {
       html: `
