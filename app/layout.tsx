@@ -3,6 +3,7 @@ import { IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
+import { SubscribeForm } from "@/components/SubscribeForm";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -66,7 +67,8 @@ gtag('config', 'G-GJFVT58K8P');`}
           {children}
         </main>
         {modal}
-        <footer className="mono flex flex-col items-center gap-1.5 border-t border-line px-4 py-6 text-center text-xs text-ink-3">
+        <footer className="mono flex flex-col items-center gap-3 border-t border-line px-4 py-6 text-center text-xs text-ink-3">
+          <SubscribeForm />
           <p>
             Wait Which Model? · data curated via the release &amp; news-scan
             protocols · figures are launch-time reported scores
