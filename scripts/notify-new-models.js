@@ -71,7 +71,16 @@ async function sendBroadcast({ subject, html, text }, dateLabel) {
   });
   const body = await res.text();
   if (!res.ok) throw new Error(`Resend responded ${res.status}: ${body}`);
-  return body;
+  let parsed;
+  try {
+    parsed = JSON.parse(body);
+  } catch {
+    throw new Error("Resend returned no broadcast id: " + body);
+  }
+  if (typeof parsed?.id !== "string" || parsed.id.length === 0) {
+    throw new Error("Resend returned no broadcast id: " + body);
+  }
+  return parsed;
 }
 
 async function main() {
@@ -105,7 +114,7 @@ async function main() {
   for (const k of ["RESEND_API_KEY", "RESEND_SEGMENT_ID"]) if (!process.env[k]) throw new Error(`${k} is required`);
   await waitForPages(ids);
   const result = await sendBroadcast(email, dateLabel);
-  log("broadcast sent:", result);
+  log("broadcast sent:", result.id);
 }
 
 main().catch((err) => {
