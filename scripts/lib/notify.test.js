@@ -35,6 +35,10 @@ test("parseModelIds splits on commas, trims whitespace, and drops empty entries"
   assert.deepEqual(parseModelIds(" a, b ,,c "), ["a", "b", "c"]);
 });
 
+test("parseModelIds de-duplicates, keeping first-occurrence order", () => {
+  assert.deepEqual(parseModelIds("a,b,a"), ["a", "b"]);
+});
+
 const { buildEmail, escapeHtml } = require("./notify.js");
 
 const companies = [{ id: "google", name: "Google DeepMind" }, { id: "anthropic", name: "Anthropic" }];

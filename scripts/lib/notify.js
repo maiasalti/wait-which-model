@@ -15,14 +15,16 @@ function isUsableSha(sha) {
 }
 
 /** Parses the MODEL_IDS override: a comma-separated list of model ids, with
- *  whitespace trimmed and empty entries dropped. `undefined`/""/whitespace
- *  all mean "no override" and return []. */
+ *  whitespace trimmed, empty entries dropped, and duplicates removed
+ *  (first occurrence wins, order preserved). `undefined`/""/whitespace all
+ *  mean "no override" and return []. */
 function parseModelIds(raw) {
   if (raw === undefined) return [];
-  return raw
+  const ids = raw
     .split(",")
     .map((s) => s.trim())
     .filter((s) => s.length > 0);
+  return [...new Set(ids)];
 }
 
 const TIER_LABELS = { flagship: "Flagship", balanced: "Balanced", fast: "Fast" };

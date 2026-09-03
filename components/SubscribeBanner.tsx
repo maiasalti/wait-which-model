@@ -29,6 +29,7 @@ export function SubscribeBanner() {
     if (!shouldShowBanner(stored, Date.now())) return;
 
     let shown = false;
+    let timer: number;
     const show = () => {
       if (shown) return;
       shown = true;
@@ -39,11 +40,12 @@ export function SubscribeBanner() {
     const onScroll = () => {
       if (window.scrollY > 120) show();
     };
-    window.addEventListener("scroll", onScroll);
-    const timer = window.setTimeout(show, 4000);
+    const scrollOptions: AddEventListenerOptions = { passive: true };
+    window.addEventListener("scroll", onScroll, scrollOptions);
+    timer = window.setTimeout(show, 4000);
 
     function cleanup() {
-      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("scroll", onScroll, scrollOptions);
       window.clearTimeout(timer);
     }
 
@@ -52,9 +54,10 @@ export function SubscribeBanner() {
 
   useEffect(() => {
     if (!visible) return;
+    const previous = document.body.style.paddingBottom;
     document.body.style.paddingBottom = "6rem";
     return () => {
-      document.body.style.paddingBottom = "";
+      document.body.style.paddingBottom = previous;
     };
   }, [visible]);
 
@@ -96,6 +99,7 @@ export function SubscribeBanner() {
               required
               autoComplete="email"
               placeholder="you@example.com"
+              aria-label="Email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               disabled={status === "sending"}
