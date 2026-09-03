@@ -1,3 +1,14 @@
+---
+type: Agent Instructions
+title: Wait Which Model?
+description: A Next.js site tracking frontier AI models — a models directory, Compare charts, News, a public Info/methodology
+  page, and the Which Model? and Cost Calculator tools — driven entirely by the JSON files in data/ (no backend) and kept
+  current by protocol-driven, web-researched updates.
+generated:
+  by: human:maia
+  at: '2026-08-14T02:42:48Z'
+---
+
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 
@@ -31,9 +42,9 @@ Model-release, news-scan, stats-filler, data-gap-finder, and spec-filler require
 
 ## Data files (`data/`)
 
-- **models.json** — `{ id, name, company (companies.json id), releaseDate "YYYY-MM-DD", status: frontier|superseded|unknown|deprecated, tier: flagship|balanced|fast, modality: text|multimodal, contextWindow, maxOutput, pricing: {inputPerMTok, outputPerMTok}, costPerTask: {usd, effort}, openWeights, knowledgeCutoff, benchmarks: {mmluPro, gpqaDiamond, sweBench, terminalBench, aime, hle, lmarenaElo, arcAgi2}, strengths[], weaknesses[], notes, speed: {outputTokensPerSec, timeToFirstTokenSec, effort} (Artificial Analysis), license: {spdx, name, kind, url, commercialUse} | null (open-weight models only), apiIds: [{provider, id}], retirementDate, predecessorId (points backwards; successors are derived) }`. Numbers are launch-time reported scores; null = unpublished/unverified. `costPerTask` is Artificial Analysis' cost per Intelligence Index task (USD), taken at whatever reasoning effort AA publishes for that model — the effort varies model to model and is unrecorded for many of them, so figures at different efforts aren't strictly comparable — it's the headline cost figure on the model card, while per-token `pricing` moved to the drawer. `status` is computed by `scripts/frontier-status.js` (see `protocols/FRONTIER_STATUS_PROTOCOL.md`), not hand-assigned — except `deprecated`, which stays manual.
+- **models.json** — `{ id, name, company (companies.json id), releaseDate "YYYY-MM-DD", status: frontier|superseded|unknown|deprecated, tier: flagship|balanced|fast, modality: text|multimodal, contextWindow, maxOutput, pricing: {inputPerMTok, outputPerMTok}, costPerTask: {usd, effort}, openWeights, knowledgeCutoff, benchmarks: {mmluPro, gpqaDiamond, sweBench, sweBenchPro, terminalBench, aime, hle, lmarenaElo, gdpvalAA, arcAgi2}, strengths[], weaknesses[], notes, speed: {outputTokensPerSec, timeToFirstTokenSec, effort} (Artificial Analysis), license: {spdx, name, kind, url, commercialUse} | null (open-weight models only), apiIds: [{provider, id}], retirementDate, predecessorId (points backwards; successors are derived) }`. Numbers are launch-time reported scores; null = unpublished/unverified. `costPerTask` is Artificial Analysis' cost per Intelligence Index task (USD), taken at whatever reasoning effort AA publishes for that model — the effort varies model to model and is unrecorded for many of them, so figures at different efforts aren't strictly comparable — it's the headline cost figure on the model card, while per-token `pricing` moved to the drawer. `status` is computed by `scripts/frontier-status.js` (see `protocols/FRONTIER_STATUS_PROTOCOL.md`), not hand-assigned — except `deprecated`, which stays manual.
 - **companies.json** — `{ id, name, country, founded, website, color, order }`. Colors are a CVD-validated categorical palette for dark surface `#0B0E1A` in `order` sequence — don't change casually; new colors must pass `node scripts/palette-check.js` (OKLCH L 0.48–0.67, chroma ≥ 0.1, adjacent-pair CVD ΔE ≥ 8, adjacent normal-vision ΔE ≥ 15, contrast ≥ 3:1).
-- **benchmarks.json** — chart/tooltip metadata per benchmark key. Adding a key here is all the site needs to chart it (plus scores in models.json; the head-to-head bar chart lists % keys in `PCT_KEYS` in `components/charts.tsx`).
+- **benchmarks.json** — chart/tooltip metadata per benchmark key. Adding a key takes four edits: this file, the `BenchmarkKey` union in `lib/types.ts`, the URL allowlist in `lib/compare-url.ts` (a test pins it to this file), and a `null` on every models.json record; the spec-diff table (`lib/spec-diff.ts`, with its direction test) and the Which Model prompt (`app/api/which-model/route.ts`) name keys too. `retired: true` keeps a key's scores and drawer bars but drops it from Compare's picker, the head-to-head chart and the composite behind status/reigns (`scripts/lib/composite.js` reads this file). Currently retired: `mmluPro`, `aime`.
 - **news.json** — `{ id "YYYY-MM-DD-slug", date, title, summary, category: release|benchmark|company|research|policy, companies[] (ids or plain names), modelIds[], sourceName, sourceUrl }`. Permanent record — append/correct, never delete.
 - **methodology.json** — content for the public `/info` page (frontier definition, tiers, status meanings, benchmark notes, data-currency blurb). Edit this, not the page component, when the definition or wording changes; keep `frontierDefinition.lastReviewed` current.
 - **stats-gaps.md** — ledger of model stat cells researched but unverifiable (kept by the stats-filler protocol so re-runs skip them).

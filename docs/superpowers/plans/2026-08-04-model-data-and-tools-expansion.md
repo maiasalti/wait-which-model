@@ -1,3 +1,18 @@
+---
+type: Plan
+title: Model Data and Tools Expansion Implementation Plan
+description: 'Task-by-task implementation plan for five new model-schema fields (speed, license, apiIds, retirementDate, predecessorId),
+  derived frontier reigns and benchmark coverage, a leaner model drawer, and three decision tools: shareable Compare, spec
+  diff and cost calculator.'
+tags:
+- docs
+- superpowers
+- plans
+generated:
+  by: human:maia
+  at: '2026-08-05T04:02:01Z'
+---
+
 # Model Data and Tools Expansion Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.

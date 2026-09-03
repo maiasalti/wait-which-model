@@ -1,3 +1,15 @@
+---
+type: Protocol
+title: New Model Release Protocol
+description: Add a newly released frontier model to data/models.json with web-verified, sourced data so it appears correctly
+  in Directory, Compare and News; frontier status is then computed, never assigned.
+tags:
+- protocols
+generated:
+  by: human:maia
+  at: '2026-08-05T06:05:55Z'
+---
+
 # New Model Release Protocol
 
 **Trigger:** Maia says "execute new model release protocol" (optionally naming the model, e.g. "…for Grok 5"). If no model is named, first web-search for frontier model releases since the newest `releaseDate` in `data/models.json` and confirm with Maia which to add — or add all of them.
@@ -21,7 +33,7 @@ Search for and read, in order of preference: the lab's official announcement/mod
 - Context window and max output tokens
 - Knowledge cutoff (null if unpublished), modality, open weights or not
 - `availability` — can a person actually go and use it today? `general` (public API, consumer app, or a mainstream host), `restricted` (preview/waitlist/vetted-partner/subscription/app-only), or `self-host` (weights only, no practical hosted option). Check for an aggregator listing before assuming `self-host` — an open-weights model any host serves is `general`
-- Benchmark scores for the keys in `data/benchmarks.json` (currently: mmluPro, gpqaDiamond, sweBench, aime, hle, lmarenaElo, arcAgi2)
+- Benchmark scores for the keys in `data/benchmarks.json` — the non-`retired` ones are what matter (currently gpqaDiamond, sweBench, sweBenchPro, terminalBench, hle, lmarenaElo, gdpvalAA, arcAgi2); `mmluPro` and `aime` are retired (labs stopped reporting them in 2026) but still get recorded when a lab happens to publish them
 - Which `tier` it belongs to — `flagship` (top-of-line), `balanced` (mid cost/capability, e.g. a "Sonnet"/"Medium"-class release), or `fast` (small/cheap/low-latency, e.g. "Haiku"/"Flash"/"Mini"-class)
 - 2–4 strengths and 1–3 weaknesses from launch reception
 - `speed` — `{ outputTokensPerSec, timeToFirstTokenSec, effort }` from Artificial Analysis' model page. AA measures each model at a specific reasoning-effort setting and the setting dominates the numbers, so always record which one in `effort` (`low`/`medium`/`high`/`xhigh`/`max`, or `null` if the model has no effort levels) — use AA's medium-effort variant whenever it publishes a cost for one, otherwise whichever variant does. `timeToFirstTokenSec` is time to first *answer* token (after any thinking phase, so it can run to minutes at high effort) — never label it just "first token" in prose, that reads as stalled inference. Both null if AA hasn't measured the model.

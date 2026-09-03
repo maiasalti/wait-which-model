@@ -1,3 +1,15 @@
+---
+type: Protocol
+title: Frontier Status Protocol
+description: How status in data/models.json is computed by scripts/frontier-status.js — a major-lab flagship recency override
+  plus a per-tier benchmark rule — so frontier is a derived signal that never goes stale by hand.
+tags:
+- protocols
+generated:
+  by: human:maia
+  at: '2026-07-29T01:59:47Z'
+---
+
 # Frontier Status Protocol
 
 **Trigger:** run automatically as the last step of the [new model release protocol](./NEW_MODEL_RELEASE_PROTOCOL.md) and the [news scan protocol](./NEWS_SCAN_PROTOCOL.md). Can also be run standalone whenever Maia asks to "recompute frontier status" or "audit frontier statuses."

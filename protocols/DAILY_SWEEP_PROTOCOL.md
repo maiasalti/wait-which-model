@@ -1,3 +1,14 @@
+---
+type: Protocol
+title: Daily Sweep Protocol
+description: An unattended run of the existing protocols that opens a pull request. It never writes to main and never deploys.
+tags:
+- protocols
+generated:
+  by: human:maia
+  at: '2026-08-14T02:42:48Z'
+---
+
 # Daily Sweep Protocol
 
 **Trigger:** launchd, weekdays at 10:30 local (`com.waitwhichmodel.daily-sweep`).

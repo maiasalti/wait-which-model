@@ -1,3 +1,17 @@
+---
+type: Design Spec
+title: Which Model Tool — Design
+description: Add a new tab that helps any visitor — non-technical or technical — decide which model in the directory fits
+  their task. They describe what they need, in whatever terms they naturally think in (plain…
+tags:
+- docs
+- superpowers
+- specs
+generated:
+  by: human:maia
+  at: '2026-07-28T07:49:22Z'
+---
+
 # Which Model Tool — Design
 
 ## Purpose

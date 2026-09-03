@@ -1,0 +1,4 @@
+# frontier-models-website Update Log
+
+## 2026-09-01
+* **Initialization**: Adopted the [Open Knowledge Format v0.2](https://github.com/GoogleCloudPlatform/open-knowledge-format/blob/main/SPEC.md). Every concept (`.md`) now carries YAML frontmatter with `type`, `title`, `description`, `tags` and `generated`; each folder has a generated `index.md`; the folder is opened in place as an Obsidian vault (`.obsidian/`). Type mapping lives in `.okf/rules.json`; regenerate with `python3 ~/.okf/okf_sync.py . --apply` (on this Mac's Python 3.9 that trips on a UTC-stamped commit in this repo's history — use `uv run --python 3.13 --with pyyaml ~/.okf/okf_sync.py . --apply` instead). The operational history of the automated daily sweep continues in [logs/](logs/) (sweep reports and launchd run logs, gitignored).

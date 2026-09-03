@@ -1,3 +1,15 @@
+---
+type: Protocol
+title: News Scan Protocol
+description: 'Refresh the News tab with all recent frontier-lab news (releases, benchmarks, funding, policy, research): interview
+  Maia on companies, period, categories and depth first, then web-search and append sourced entries to data/news.json.'
+tags:
+- protocols
+generated:
+  by: human:maia
+  at: '2026-07-21T06:33:28Z'
+---
+
 # News Scan Protocol
 
 **Trigger:** Maia says "execute news scan protocol" / "news sweep" (optionally with scope, e.g. "…for the last month" or "…Anthropic only").

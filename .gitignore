@@ -50,3 +50,7 @@ next-env.d.ts
 
 # scheduled sweep run log
 logs/
+
+# Obsidian — per-machine UI state (the rest of .obsidian/ is shared vault config)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json

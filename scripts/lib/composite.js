@@ -1,16 +1,13 @@
 /** Benchmark normalisation shared by frontier-status.js and frontier-reigns.js.
  *  Extracted so the two derivations cannot drift apart. */
 
-const BENCHMARK_KEYS = [
-  "mmluPro",
-  "gpqaDiamond",
-  "sweBench",
-  "terminalBench",
-  "aime",
-  "hle",
-  "lmarenaElo",
-  "arcAgi2",
-];
+const benchmarks = require("../../data/benchmarks.json");
+
+/** Every non-retired key in data/benchmarks.json. Retired benchmarks (ones labs
+ *  have stopped reporting) keep their historical scores in models.json but no
+ *  longer count toward rankability or the composite — otherwise a 2024 model's
+ *  MMLU-Pro would keep outscoring a 2026 model that never ran it. */
+const BENCHMARK_KEYS = benchmarks.filter((b) => !b.retired).map((b) => b.key);
 
 const MIN_BENCHMARKS = 3;
 

@@ -1,3 +1,15 @@
+---
+type: Data Gap Report
+title: Stats gaps ledger
+description: Cells researched by the stats-filler protocol that could not be verified, so re-runs skip them. Remove a row
+  to have the next run re-check it.
+tags:
+- data
+generated:
+  by: human:maia
+  at: '2026-08-16T00:27:36Z'
+---
+
 # Stats gaps ledger
 
 Cells researched by the stats-filler protocol that could **not** be verified, so re-runs skip them. Remove a row to have the next run re-check it.
@@ -47,14 +59,6 @@ Sweep sources checked on 2026-07-04: LMArena (arena.ai) leaderboard, llm-stats.c
 | claude-fable-5 | arcAgi2 | 2026-07-04 | not on ARC-AGI-2 leaderboards as of July 2026 |
 | gemini-1-5-pro | sweBench | 2026-07-04 | Google never reported SWE-bench for 1.5 Pro; no comparable figure |
 | gemini-1-5-pro | aime | 2026-07-04 | never publicly evaluated on AIME |
-| ornith-1-5-397b | gpqaDiamond | 2026-08-23 | secondary sources conflict (89.2 vs 92.8) with no primary Ornith/DeepReinforce model card reachable to resolve which is correct |
-| ornith-1-5-397b | hle | 2026-08-23 | secondary sources conflict sharply (44.6 vs 56.1 with tools; 20.2/30.5 figures found elsewhere may belong to a smaller sibling) — no reachable primary source to resolve |
-| ornith-1-5-397b | mmluPro | 2026-08-23 | not found in any launch coverage checked |
-| ornith-1-5-397b | aime | 2026-08-23 | not found in any launch coverage checked |
-| ornith-1-5-397b | lmarenaElo | 2026-08-23 | not on LMArena as of launch week (chat-arena ranking not published for an agentic-coding-focused release) |
-| ornith-1-5-397b | arcAgi2 | 2026-08-23 | not found in any launch coverage checked |
-| ornith-1-5-397b | maxOutput | 2026-08-23 | not stated in any launch coverage checked; official Hugging Face model card unreachable (egress-blocked) |
-| ornith-1-5-397b | knowledgeCutoff | 2026-08-23 | not published in any launch coverage checked |
 | gemini-1-5-pro | arcAgi2 | 2026-07-04 | predates benchmark; never evaluated |
 | gemini-2-0-flash | aime | 2026-07-04 | Google reported MATH, not AIME; no public AIME figure |
 | gemini-2-0-flash | arcAgi2 | 2026-07-04 | not on ARC-AGI-2 leaderboards |
@@ -138,7 +142,7 @@ Sweep sources checked on 2026-07-04: LMArena (arena.ai) leaderboard, llm-stats.c
 | kimi-k3 | mmluPro | 2026-07-21 | only third-party blog aggregators (78.5) days after launch; not in Moonshot's own table (which reports MMMU-Pro 81.6, a different multimodal benchmark) — rejected |
 | kimi-k3 | sweBench | 2026-07-21 | Moonshot reports its own coding suite (DeepSWE 67.5, Terminal-Bench 2.1 88.3, FrontierSWE 81.2, SWE Marathon 42.0) instead of standard SWE-bench Verified; a 76.8/49% figure appears on some aggregator sites but is unconfirmed/contradictory |
 | kimi-k3 | aime | 2026-07-21 | conflicting unofficial figures (88% vs 96.1%) across secondary sources, neither traceable to an official table |
-| kimi-k3 | arcAgi2 | 2026-07-21 | not on ARC-AGI-2 leaderboards as of July 2026; one blog cites "ARC-AGI: 8%" with version unclear — rejected |
+| kimi-k3 | arcAgi2 | 2026-07-21 | ~~not on ARC-AGI-2 leaderboards as of July 2026; one blog cites "ARC-AGI: 8%" with version unclear — rejected~~ **superseded 2026-08-18: ARC Prize published a verified 60.4% (max effort, $1.59/task) on 2026-07-31 — filled** |
 | kimi-k3 | knowledgeCutoff | 2026-07-21 | not disclosed by Moonshot in launch materials or API docs |
 
 Data-gap-finder sweep on 2026-07-22 (models released within the last 6 months, primary sources only: lab announcements/model cards, arena.ai, official benchmark leaderboards).
@@ -173,7 +177,7 @@ Stats-filler sweep on 2026-07-27. Sources checked: arena.ai text leaderboard, Ar
 | gemini-3-6-flash | mmluPro | 2026-07-29 | absent from official DeepMind model card; Google published no academic table; BenchLM lists only MMMU-Pro 83.2 (a different, multimodal benchmark) |
 | gemini-3-6-flash | sweBench | 2026-07-29 | Google reports SWE-Bench Pro 58.7% and DeepSWE v1.1 49% instead; no SWE-bench Verified figure |
 | gemini-3-6-flash | aime | 2026-07-29 | not reported at launch; not on any tracker |
-| gemini-3-6-flash | arcAgi2 | 2026-07-29 | not on ARC Prize, BenchLM or llm-stats ARC-AGI-2 leaderboards |
+| gemini-3-6-flash | arcAgi2 | 2026-07-29 | ~~not on ARC Prize, BenchLM or llm-stats ARC-AGI-2 leaderboards~~ **superseded 2026-08-18: ARC Prize has since published a verified 60.4% ($0.61/task) — filled** |
 | gemini-3-5-flash-lite | mmluPro | 2026-07-29 | absent from official DeepMind model card; BenchLM lists only MMMU-Pro 79.0 (different benchmark) |
 | gemini-3-5-flash-lite | sweBench | 2026-07-29 | Google reports SWE-Bench Pro 54.2%; no SWE-bench Verified figure |
 | gemini-3-5-flash-lite | aime | 2026-07-29 | not reported at launch; not on any tracker |
@@ -227,7 +231,6 @@ Weekly release-scan sweep on 2026-08-02 (new model: DeepSeek-V4-Flash-0731, rele
 | deepseek-v4-flash-0731 | sweBench | 2026-08-02 | DeepSeek reports DeepSWE and DSBench-FullStack instead of SWE-bench Verified; no comparable figure |
 | deepseek-v4-flash-0731 | aime | 2026-08-02 | not reported by DeepSeek or Artificial Analysis for this build |
 | deepseek-v4-flash-0731 | lmarenaElo | 2026-08-02 | not listed on arena.ai as of 2026-08-02 |
-| deepseek-v4-flash-0731 | arcAgi2 | 2026-08-02 | not on ARC-AGI-2 leaderboards as of 2026-08-02 |
 | deepseek-v4-flash-0731 | knowledgeCutoff | 2026-08-02 | not disclosed for the 0731 build specifically; only an unverifiable inference that it matches the April preview's cutoff |
 | deepseek-v4-flash-0731 | costPerTask.usd | 2026-08-02 | Artificial Analysis states only an approximate "~$0.03 at max effort"; the precise `intelligenceIndexCostPerTask.cost.total` figure this field requires could not be retrieved (AA's model page returned 403 on direct fetch) |
 
@@ -388,7 +391,7 @@ New-model-release research on 2026-08-07, scoped to `command-a` and `command-a-p
 | command-a-plus | costPerTask | 2026-08-07 | same placeholder issue — AA shows $0.00 cost per task for this model, not used |
 | command-a-plus | knowledgeCutoff | 2026-08-07 | not disclosed by Cohere anywhere found |
 | gpt-5-6-cyber | mmluPro / gpqaDiamond / sweBench / terminalBench / aime / hle / lmarenaElo / arcAgi2 | 2026-08-12 | OpenAI published only cyber-specific evals for this model (Advanced Cybersecurity Completion Rate 95.0%, ExploitGym, Preparedness cyber rating High) — none map onto the tracked eight keys; no third-party general-capability scores exist because access is gated behind Daybreak Red, and it is absent from arena.ai and Artificial Analysis |
-| grok-4-6 | mmluPro / gpqaDiamond / sweBench / aime / hle / lmarenaElo / arcAgi2 | 2026-08-14 | xAI's own card reports only deepSwe, CursorBench, FrontierCode, SWE-Marathon, Terminal-Bench 3.0, APEX-Agents, DeepSearchQA and CyberGym — none map to these keys; AA publishes the composite index plus Terminal-Bench 2.1 (recorded) but no per-benchmark breakdown for the rest; no arena.ai listing exists, and the widely-quoted "1753 Elo" is GDPval-AA v2, not LMArena |
+| grok-4-6 | mmluPro / gpqaDiamond / sweBench / aime / hle / lmarenaElo | 2026-08-14 | xAI's own card reports only deepSwe, CursorBench, FrontierCode, SWE-Marathon, Terminal-Bench 3.0, APEX-Agents, DeepSearchQA and CyberGym — none map to these keys; AA publishes the composite index plus Terminal-Bench 2.1 (recorded) but no per-benchmark breakdown for the rest; no arena.ai listing exists, and the widely-quoted "1753 Elo" is GDPval-AA v2, not LMArena. (arcAgi2 was originally in this row; superseded 2026-08-18 when ARC Prize published a verified 67.1% ($0.76/task) — filled) |
 | qwen3-8-2-4t-a95b | mmluPro / sweBench / aime / lmarenaElo / arcAgi2 | 2026-08-14 | absent from Alibaba's own model-card benchmark table (which reports GPQA Diamond, Terminal-Bench 2.1, HLE, SWE-bench Pro, Deep SWE, PaperBench and IFBench); SWE-bench Pro 67.7 is not the Verified variant tracked here; no arena.ai listing for the open-weight variant |
 | nemotron-3-5-lightning | aime / lmarenaElo / arcAgi2 | 2026-08-14 | not in NVIDIA's model-card benchmark table (which covers MMLU-Pro, GPQA Diamond, SWE-bench Verified, Terminal-Bench 2.1, HLE, SciCode, IFBench and AA-LCR); no arena.ai listing |
 
@@ -399,8 +402,8 @@ New-model-release research on 2026-08-16, scoped to `gemini-3-7-flash`, `qwen3-8
 | gemini-3-7-flash | mmluPro | 2026-08-16 | not reported by Google at launch (headline table is DeepSWE v1.1/FrontierCode 1.1/AutomationBench/WebDev Arena instead); not found on any MMLU-Pro tracker |
 | gemini-3-7-flash | sweBench | 2026-08-16 | Google published no SWE-bench Verified figure for 3.7 Flash (DeepSWE v1.1 65.3% and FrontierCode 1.1 Main 43.6% reported instead, neither of which is SWE-bench) |
 | gemini-3-7-flash | aime | 2026-08-16 | not reported by Google; not found on any AIME tracker |
-| gemini-3-7-flash | lmarenaElo | 2026-08-16 | not found on arena.ai's text leaderboard; only the separate WebDev Arena Elo (1588, a different arena) was published |
-| gemini-3-7-flash | arcAgi2 | 2026-08-16 | not reported by Google; not found on ARC Prize or tracker leaderboards |
+| gemini-3-7-flash | lmarenaElo | 2026-08-16 | ~~not found on arena.ai's text leaderboard; only the separate WebDev Arena Elo (1588, a different arena) was published~~ **superseded 2026-09-03: arena.ai now lists 'gemini-3.7-flash-high' at 1491 (rank 11, preliminary) — filled** |
+| gemini-3-7-flash | arcAgi2 | 2026-08-16 | ~~not reported by Google; not found on ARC Prize or tracker leaderboards~~ **superseded 2026-09-03: ARC Prize has since published a verified 84.6% at high effort ($0.25/task; arcprize.org/results/google-gemini-3-7-flash) — filled** |
 | qwen3-8-27b | mmluPro | 2026-08-16 | not in Alibaba's own release material or on any MMLU-Pro tracker found |
 | qwen3-8-27b | sweBench | 2026-08-16 | Alibaba reports SWE-bench Pro (61.7%), not the Verified variant this field tracks |
 | qwen3-8-27b | aime | 2026-08-16 | no AIME figure published or found on any tracker |
@@ -408,27 +411,86 @@ New-model-release research on 2026-08-16, scoped to `gemini-3-7-flash`, `qwen3-8
 | qwen3-8-27b | lmarenaElo | 2026-08-16 | no arena.ai text-leaderboard listing found |
 | qwen3-8-27b | arcAgi2 | 2026-08-16 | not reported by Alibaba; not on ARC Prize or tracker leaderboards |
 | qwen3-8-27b | knowledgeCutoff | 2026-08-16 | not disclosed by Alibaba in the GitHub repo, HF listing (blocked from direct fetch) or any secondary source found; explicitly called out as undisclosed by one source |
-| glm-5-3 | mmluPro / gpqaDiamond / sweBench / aime / hle / lmarenaElo / arcAgi2 | 2026-08-16 | Z.ai's launch benchmark table is entirely agentic/coding/cyber (Terminal-Bench 2.1/3.0, DeepSWE v1.1, SWE-Marathon v1.1, AutomationBench, Agents' Last Exam, CyberGym) — none of the tracked knowledge/reasoning keys were re-reported, consistent with Z.ai's stated "same base model, post-training only" framing; not on arena.ai; Artificial Analysis now lists it (Intelligence Index 60 at max effort) but AA per-benchmark cells were not readable via search snippets on 2026-09-02 |
+| glm-5-3 | mmluPro / gpqaDiamond / sweBench / aime / hle / lmarenaElo / arcAgi2 | 2026-08-16 | Z.ai's launch benchmark table is entirely agentic/coding/cyber (Terminal-Bench 2.1/3.0, DeepSWE v1.1, SWE-Marathon v1.1, AutomationBench, Agents' Last Exam, CyberGym) — none of the tracked knowledge/reasoning keys were re-reported, consistent with Z.ai's stated "same base model, post-training only" framing; not on arena.ai or Artificial Analysis (too new, no public API pricing or weights yet) |
 | glm-5-3 | knowledgeCutoff | 2026-08-16 | not disclosed for the 5.3 post-training run specifically; GLM-5.2's cutoff (2026-03) is not confirmed to carry over |
+| glm-5-3 | pricing (input/output) | 2026-08-16 | Z.ai's official pricing table still ends at GLM-5.2 with no GLM-5.3 row; only the GLM Coding Plan's flat monthly subscription tiers ($18/$80/$168) are public, not a per-token rate |
 
-Weekly release-scan sweep on 2026-08-30, scoped to `glm-5-3-flash` (released 2026-08-26). WebFetch returned `EGRESS_BLOCKED` for every target domain this session (artificialanalysis.ai, huggingface.co, docs.z.ai, openrouter.ai, and all secondary trackers/news sites tried) — findings rest entirely on WebSearch-synthesized excerpts, cross-checked across multiple independent outlets where possible.
+New-model-release research on 2026-08-18 (daily sweep), scoped to `deepseek-v4-pro-0813` (released 2026-08-13; missed by the 08-14 and 08-17 scans). WebFetch was not permitted at all this session — findings rest on WebSearch-synthesized excerpts, cross-checked across at least two independent outlets each. Sources checked: DeepSeek's Hugging Face model card (huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813, via mirrored README text on Fireworks/DeepInfra), DeepSeek's API-pricing post on X (x.com/deepseek_ai/status/2087864589895798968), Artificial Analysis model/providers pages and X post, Vals AI model page, arena.ai, ARC Prize, SCMP, TechTimes, Yahoo/Quartz, Engadget, InfoWorld, Fortune, MindStudio, codersera, dsv4pro.novcog.us.com, gHacks, OfficeChai, aihubmix.
 
 | model-id | field | checked | reason |
 |---|---|---|---|
-| glm-5-3-flash | mmluPro | 2026-08-30 | not in Z.ai's own launch benchmark table (Terminal-Bench 2.1, DeepSWE v1.1, AutomationBench, Toolathlon Verified); no MMLU-Pro figure found on any tracker |
-| glm-5-3-flash | gpqaDiamond | 2026-08-30 | a single WebSearch synthesis attributed a 91.2% figure to Artificial Analysis, but a follow-up search could not reproduce or corroborate it from a second independent source, and artificialanalysis.ai itself was unreachable (EGRESS_BLOCKED) to confirm directly — rejected per this site's uncorroborated-single-source rule |
-| glm-5-3-flash | sweBench | 2026-08-30 | Z.ai's own table reports DeepSWE v1.1 (63.4%), not SWE-bench Verified; no Verified figure found |
-| glm-5-3-flash | aime | 2026-08-30 | not reported by Z.ai; no third-party figure traceable to a primary source |
-| glm-5-3-flash | hle | 2026-08-30 | same single-source/uncorroborated issue as gpqaDiamond — a 55.3% figure appeared once and could not be independently reproduced |
-| glm-5-3-flash | lmarenaElo | 2026-08-30 | no glm-5.3-flash listing found on arena.ai's text leaderboard |
-| glm-5-3-flash | arcAgi2 | 2026-08-30 | not reported by Z.ai; not on ARC Prize or tracker leaderboards |
-| glm-5-3-flash | knowledgeCutoff | 2026-08-30 | not disclosed in Z.ai's developer docs or the Hugging Face model card per any source found |
+| deepseek-v4-pro-0813 | mmluPro | 2026-08-18 | not in DeepSeek's 0813 card table as reported by any outlet; the 87.5 aggregators carry is April's preview (V4-Pro-Max) figure, not re-run for 0813 |
+| deepseek-v4-pro-0813 | aime | 2026-08-18 | not reported by DeepSeek, Artificial Analysis or Vals AI for this build |
+| deepseek-v4-pro-0813 | lmarenaElo | 2026-08-18 | no 0813-specific text-arena listing found; only an approximate "~1450" for the un-dated "DeepSeek V4 Pro" and a Code Arena WebDev score (1607, a different arena) |
+| deepseek-v4-pro-0813 | arcAgi2 | 2026-08-18 | ARC Prize has verified V4-Flash-0731 (61.4%) but published no V4-Pro-0813 result as of this check |
+| deepseek-v4-pro-0813 | knowledgeCutoff | 2026-08-18 | not disclosed anywhere in DeepSeek's documentation for V4 or the 0813 build; explicitly called out as unpublished by secondary coverage |
+| deepseek-v4-pro-0813 | costPerTask.usd | 2026-08-18 | Artificial Analysis publishes only the total Intelligence Index evaluation cost ($604.51 at max effort) in reachable excerpts; the per-task `intelligenceIndexCostPerTask.cost.total` figure could not be retrieved (AA page not fetchable this session) — never derive it |
 
+Stats-filler sweep on 2026-08-18 (daily sweep, unattended). WebFetch was not permitted at all this session — every finding rests on WebSearch-synthesised excerpts, cross-checked across at least two independent outlets or an official/leaderboard excerpt. Sources checked: arena.ai (via its X announcements and llm-stats/swfte/metatext relays), ARC Prize verified leaderboard and x.com/arcprize posts, Artificial Analysis (Terminal-Bench v2.1 evaluation leaderboard, Muse Spark 1.2 / Muse Glimmer / Inkling articles, model pages for GLM-5.x, Qwen3.8 27B, Qwen3.8 2.4T A95B, Muse Glimmer, Inkling), Vals AI Terminal-Bench 2.1, BenchLM, tbench.ai (Terminal-Bench 2.1 published 2026-04-30), Anthropic/Meta/OpenAI/NVIDIA/Thinking Machines/poolside/Alibaba launch material as relayed by Vellum, codersera, llm-stats, MarkTechPost, kingy.ai, orcarouter, eesel. Rows below are cells researched this pass and left null; three ledger rows above (grok-4-6 arcAgi2, gemini-3-6-flash arcAgi2, kimi-k3 arcAgi2) were superseded because ARC Prize published verified results after those rows were logged — see the amended rows.
 
+| model-id | field | checked | reason |
+|---|---|---|---|
+| muse-spark-1-2 | mmluPro | 2026-08-18 | not published by Meta; not on Artificial Analysis (Intelligence Index v4.1.1 dropped MMLU-Pro) or any MMLU-Pro tracker found |
+| muse-spark-1-2 | sweBench | 2026-08-18 | Meta reports SWE-bench Pro / DeepSWE-style suites, no SWE-bench Verified figure; none found on trackers |
+| muse-spark-1-2 | aime | 2026-08-18 | not published by Meta; not on AA's AIME 2025 leaderboard excerpts |
+| muse-spark-1-2 | arcAgi2 | 2026-08-18 | ARC Prize's verified board (as relayed by search) lists the original Muse Spark (42.5%) only; 1.2 not tested as of this check |
+| muse-spark-1-2 | knowledgeCutoff | 2026-08-18 | not stated on developer.meta.com model page, Meta's research blog post, or OpenRouter listing |
+| muse-glimmer | maxOutput | 2026-08-18 | not stated by Meta; Artificial Analysis gives only the 131K context window |
+| muse-glimmer | costPerTask.usd/.effort | 2026-08-18 | Artificial Analysis has now indexed Muse Glimmer (high) at Intelligence Index 35, but reachable excerpts give only the total suite cost ($105.03) and per-token price ($0.32/$1.35), not the per-task figure — never derive it |
+| gpt-5-6-cyber | costPerTask | 2026-08-18 | Artificial Analysis has not indexed the Daybreak Red-gated model (search surfaces only Sol/Terra pages) |
+| gpt-5-6-sol | aime | 2026-08-18 | OpenAI published no AIME for the GPT-5.6 family; not on Artificial Analysis's AIME 2025 leaderboard excerpts (not part of Intelligence Index v4.1) |
+| gpt-5-6-luna | mmluPro | 2026-08-18 | OpenAI published no per-tier academic table; BenchLM/BenchmarkList list the benchmark name without a Luna score |
+| gpt-5-6-luna | aime | 2026-08-18 | same — OpenAI explicitly did not publish AIME for the 5.6 family; no third-party run found |
+| grok-4-6 | maxOutput | 2026-08-18 | xAI's docs document context and tiered pricing but no output cap (same as Grok 4.5 / 4.3); no number to record |
+| qwen3-8-2-4t-a95b | knowledgeCutoff | 2026-08-18 | not disclosed by Alibaba; Artificial Analysis model page excerpt lists no cutoff |
+| qwen3-8-2-4t-a95b | costPerTask.usd/.effort | 2026-08-18 | Artificial Analysis has a model page (Intelligence Index 58, $2/$6 per MTok, "4 of 4" cost band) but the exact per-task USD figure was not retrievable from search excerpts and no effort tier is stated |
+| qwen3-8-27b | costPerTask.usd/.effort | 2026-08-18 | Artificial Analysis model page shows Intelligence Index 52 but pricing $0.00/$0.00 and "Cost per Intelligence Index task: Unknown" |
+| glm-5-3 | costPerTask.usd/.effort | 2026-08-18 | Artificial Analysis has no GLM-5.3 page yet (GLM-5.2 max is the latest); Z.ai's pricing table also still ends at 5.2 |
+| qwen3-7-flash | mmluPro / gpqaDiamond / sweBench / terminalBench / aime / hle / lmarenaElo / arcAgi2 | 2026-08-18 | Alibaba published no benchmark table, eval name or percentage for the Flash model (confirmed by two independent reviews); not indexed by Artificial Analysis (no model page), arena.ai or ARC Prize |
+| qwen3-7-flash | knowledgeCutoff | 2026-08-18 | not disclosed in the QwenCloud changelog entry or Model Studio docs found |
+| qwen3-7-flash | costPerTask.usd/.effort | 2026-08-18 | no Artificial Analysis model page exists for Qwen3.7 Flash |
+| laguna-xs-2-1 | mmluPro / gpqaDiamond / aime / hle / lmarenaElo / arcAgi2 | 2026-08-18 | poolside publishes agentic-coding evals only (SWE-bench Verified/Multilingual/Pro, Terminal-Bench 2.0); no knowledge/maths/reasoning benchmark in the HF card, NVIDIA Build card or technical report excerpts; not on arena.ai or ARC Prize |
+| laguna-xs-2-1 | terminalBench | 2026-08-18 | poolside reports Terminal-Bench **2.0** (37.5%) only, not the tracked 2.1 metric |
+| laguna-xs-2-1 | knowledgeCutoff | 2026-08-18 | not disclosed by poolside in any source found |
+| laguna-xs-2-1 | costPerTask.usd/.effort | 2026-08-18 | Artificial Analysis does not cover poolside (no model page, as with Laguna S 2.1) |
+| inkling | maxOutput | 2026-08-18 | Thinking Machines' model card and Artificial Analysis state no max-output figure (only 256K Tinker / 1M open-weights context) |
+| inkling | knowledgeCutoff | 2026-08-18 | model card says only "limited to information available as of its training cutoff" with no date; third-party reviews explicitly note it is unpublished |
+| inkling | costPerTask.usd/.effort | 2026-08-18 | Artificial Analysis lists Inkling (xhigh) at Intelligence Index 41 and 25K output tokens per task, but the per-task USD figure was not retrievable from excerpts — never derive it |
+| inkling-small | maxOutput | 2026-08-18 | not stated on Thinking Machines' Inkling-Small model card or Artificial Analysis |
+| inkling-small | knowledgeCutoff | 2026-08-18 | not stated on the model card (same wording as Inkling); unpublished per third-party reviews |
+| nemotron-3-ultra | maxOutput | 2026-08-18 | NVIDIA's own docs state no output cap in the material seen; a 65,536 / "66K" figure appears only on third-party API listings (Puter, Together, DeepInfra) |
+| nemotron-3-super | maxOutput | 2026-08-18 | only a third-party "up to 32,768 output tokens" listing found, not an NVIDIA figure |
+| nemotron-3-super | knowledgeCutoff | 2026-08-18 | sources conflict — most model-card relays say pre-training cutoff June 2025 (post-training February 2026) but the HF Base page reportedly says December 2025; unresolved without fetching the cards |
+| gpt-5-5 | terminalBench | 2026-08-18 | no OpenAI-reported Terminal-Bench 2.1 figure (GPT-5.5 launched 2026-04-23, a week before 2.1 was published; OpenAI's headline 82.7% is 2.0); Anthropic's Opus 4.8 comparison table gives 78.2 on Terminus-2 and mentions 83.4 via Codex CLI — conflicting harnesses, third-party-run, so left null pending a primary figure |
+| hy3 | mmluPro / aime / arcAgi2 | 2026-08-18 | Tencent's Hy3 image table (transcribed by launch coverage) has no MMLU-Pro or AIME row (USAMO 2026 72.0 reported instead); the only MMLU-Pro figure found (65.8) is for the Hy3 pre-trained *base* checkpoint in the April Hy3-preview README, not the released post-trained model — rejected; not on ARC Prize's verified board as relayed by search |
+| hy3 | knowledgeCutoff | 2026-08-18 | not disclosed by Tencent in any source found |
+| longcat-2-0 | mmluPro / sweBench / aime / lmarenaElo / arcAgi2 | 2026-08-18 | Meituan's harness table has no MMLU-Pro/AIME/SWE-bench Verified rows (SWE-bench Pro and Multilingual instead); no arena.ai listing or ARC Prize result surfaced by this pass's sweeps |
+| longcat-2-0 | knowledgeCutoff | 2026-08-18 | not disclosed by Meituan |
+| motif-3-beta | mmluPro / sweBench / aime / lmarenaElo / arcAgi2 | 2026-08-18 | Motif publishes no benchmark table beyond the Artificial Analysis index; AA's per-benchmark breakdown covers GPQA/HLE/Terminal-Bench only; no arena.ai or ARC Prize listing surfaced |
+| motif-3-beta | maxOutput / inputPrice / outputPrice / knowledgeCutoff / costPerTask | 2026-08-18 | preview checkpoint with no hosted API — no per-token price exists, so no AA cost per task; max output and cutoff not stated in the HF card |
+
+New-model-release research on 2026-08-18 (daily sweep follow-up), scoped to `motif-3` (final release, announced 2026-08-13). WebFetch unavailable this session — WebSearch excerpts only, cross-checked across TechTimes (articles/324260), Digital Today (digitaltoday.co.kr/en/view/92837), BigGo Finance, orcarouter, AI Weekly, the mirrored Hugging Face card text (huggingface.co/Motif-Technologies/Motif-3), the technical report listing (arxiv.org/abs/2608.09119) and Artificial Analysis (artificialanalysis.ai/models/motif-3).
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| motif-3 | mmluPro | 2026-08-18 | the technical report's MMLU-Pro row is for the pretrained base model (Table 4), not the instruct release; no instruct figure surfaced |
+| motif-3 | aime | 2026-08-18 | not in Motif's card table (which reports SWE-bench Verified, Terminal-Bench 2.1, GPQA Diamond, τ²-Bench Telecom, AA-Omniscience) and not found on any tracker |
+| motif-3 | hle | 2026-08-18 | not in Motif's card table; Artificial Analysis' per-benchmark breakdown for the final release could not be read (only the composite index of 47 surfaced) |
+| motif-3 | lmarenaElo | 2026-08-18 | no arena.ai listing found for Motif-3 or Motif-3-Beta |
+| motif-3 | arcAgi2 | 2026-08-18 | not on ARC Prize; never tested |
+| motif-3 | maxOutput / pricing (input/output) / knowledgeCutoff / costPerTask | 2026-08-18 | no inference provider or aggregator hosts the model, so no per-token price and no AA cost per task exist; max output and knowledge cutoff are not stated in the card or report as far as reachable excerpts show |
+| motif-3 | speed | 2026-08-18 | Artificial Analysis lists no hosted endpoint for the final release, so no throughput/latency measurement |
+| hy4-preview | sweBench | 2026-08-31 | Tencent's benchmark appendix (model-card image at huggingface.co/tencent/Hy4-preview/resolve/main/assets/benchmark-appendix.jpg, read directly) has no SWE-bench Verified row — only SWE-bench Pro 65.7 and SWE-bench Multilingual 82.9; no third-party Verified run found |
+| hy4-preview | mmluPro / aime / arcAgi2 | 2026-08-31 | absent from Tencent's appendix table (its math rows are MathArena Apex 2025, HorizonMath, ArXivMath, BrokenArXiv); not indexed by Artificial Analysis and not on ARC Prize's board as relayed by search |
+| hy4-preview | lmarenaElo | 2026-08-31 | not on arena.ai's text leaderboard as of its 2026-08-27 update (only Hy3, 1456); Arena's 2026-08-30 X post gives a WebDev Code Arena AutoEval of 1633, which is a different board and an automated score |
+| hy4-preview | knowledgeCutoff | 2026-08-31 | not disclosed on the tencent.com announcement, HF card, GitHub README or Tencent Cloud's Hy4 preview FAQ (tencentcloud.com/techpedia/148044) |
+| claude-fable-5-1 | gpqaDiamond | 2026-09-02 | Anthropic dropped GPQA from official reporting; not among the Fable 5.1 variants on Artificial Analysis' gpqa-diamond leaderboard as of launch day, and Vals AI's GPQA page shows no usable Fable 5.1 figure (search excerpts relay an anomalous 0.0% for it) — rejected |
+| claude-fable-5-1 | sweBench | 2026-09-02 | Anthropic no longer reports SWE-bench Verified (Terminal-Bench 4.0 / Terminal-Bench-Science instead); Vals AI's SWE-bench Verified board has no Fable 5.1 entry as of 2026-09-02 |
+| claude-fable-5-1 | aime | 2026-09-02 | Anthropic retired AIME from reporting as saturated; no third-party AIME run found for Fable 5.1 |
+| claude-fable-5-1 | lmarenaElo | 2026-09-02 | not yet on arena.ai's text leaderboard one day after release (claude-fable-5 still tops it at 1507); re-check |
+
+| glm-5-3 | mmluPro / gpqaDiamond / sweBench / aime / hle / lmarenaElo / arcAgi2 | 2026-08-16 | Z.ai's launch benchmark table is entirely agentic/coding/cyber (Terminal-Bench 2.1/3.0, DeepSWE v1.1, SWE-Marathon v1.1, AutomationBench, Agents' Last Exam, CyberGym) — none of the tracked knowledge/reasoning keys were re-reported, consistent with Z.ai's stated "same base model, post-training only" framing; not on arena.ai; Artificial Analysis now lists it (Intelligence Index 60 at max effort) but AA per-benchmark cells were not readable via search snippets on 2026-09-02 |
 Release-protocol research on 2026-09-02 (daily sweep), scoped to `hy4-preview` (released 2026-08-28). WebFetch was unavailable this session; findings rest on WebSearch excerpts restricted to primary domains, cross-checked across independent trackers where possible.
-
-| model-id | field | checked | reason |
-|---|---|---|---|
 | hy4-preview | mmluPro | 2026-09-02 | not in Tencent's launch chart (GPQA Diamond, HLE, Terminal-Bench 2.1, SWE-bench Pro/Multilingual, DeepSWE, SkillsBench, HorizonMath, BioMysteryBench); no tracker figure found |
 | hy4-preview | sweBench | 2026-09-02 | Tencent's chart reports SWE-bench Pro (65.7) and Multilingual (82.9), not Verified; the HF community-eval PR (discussions/3) covers the same set, and no Verified figure surfaced on any leaderboard |
 | hy4-preview | hle | 2026-09-02 | no-tools figure (43.4%) appears only in a single transcription set of Tencent's chart image (Medium/DataLearner); with-tools 55.4% is corroborated but is not the cell this site records — both kept in notes, cell null until the chart is readable or AA runs it |
@@ -437,12 +499,6 @@ Release-protocol research on 2026-09-02 (daily sweep), scoped to `hy4-preview` (
 | hy4-preview | arcAgi2 | 2026-09-02 | not reported by Tencent; not on the ARC Prize leaderboard |
 | hy4-preview | costPerTask | 2026-09-02 | Artificial Analysis has not listed the model (searches on artificialanalysis.ai return only Hy3/Hy3-preview) |
 | hy4-preview | knowledgeCutoff | 2026-09-02 | not disclosed on the HF model card, GitHub README, Tencent press release, or Tencent Cloud FAQ per any excerpt found |
-| claude-fable-5-1 | sweBench | 2026-09-02 | not in Anthropic's announcement or What's new page (Anthropic leads with Terminal-Bench 4.0 / Terminal-Bench-Science 0.1); no SWE-bench Verified figure on vals.ai's model page — only SWE-bench Pro 81.2% (BenchLM), a different benchmark |
-| claude-fable-5-1 | gpqaDiamond | 2026-09-02 | not published by Anthropic; searches of vals.ai, artificialanalysis.ai and general web returned only Fable 5 figures (92.6% / 85.0%, conflicting), none for 5.1 |
-| claude-fable-5-1 | aime | 2026-09-02 | not published by Anthropic (same pattern as Opus 5 / Sonnet 5); no third-party figure found |
-| claude-fable-5-1 | lmarenaElo | 2026-09-02 | no claude-fable-5-1 listing on arena.ai's text leaderboard or leaderboard changelog as of 2026-09-02, one day post-launch |
-| claude-fable-5-1 | arcAgi2 | 2026-09-02 | ARC Prize has published no Fable 5.1 result (arcprize.org/results and @arcprize on X show only Fable 5: ARC-AGI-2 89.2% max, and Opus 5) |
-| claude-fable-5-1 | costPerTask (re-check) | 2026-09-02 | recorded $3.76 from AA's dated launch post (reproduced across two searches); AA's live model page snippet once showed $3.69 — neither figure was visible in raw page text, so confirm against artificialanalysis.ai/models/claude-fable-5-1 when fetchable |
 | qwen3-8-flash-next | mmluPro | 2026-09-02 | the only MMLU-Pro figure in Qwen's card (73.23) is for the pretrained Qwen3.8-Flash-Next-Base checkpoint, not the released post-trained model; no post-trained figure on any tracker |
 | qwen3-8-flash-next | sweBench | 2026-09-02 | Qwen reports SWE-bench Pro (62.5, Claude Code harness) and SWE-bench Multilingual (81.0), not the Verified variant this field tracks |
 | qwen3-8-flash-next | terminalBench | 2026-09-02 | Qwen's card references a Terminal-Bench 2.0 (Harbor/Terminus-2) harness but no figure surfaced; AA folds TB 2.1 into its index without publishing the component; no 2.1 figure found |
@@ -452,17 +508,23 @@ Release-protocol research on 2026-09-02 (daily sweep), scoped to `hy4-preview` (
 | qwen3-8-flash-next | knowledgeCutoff | 2026-09-02 | not disclosed in the Qwen blog, HF model card, GitHub README, or on the AA page |
 | qwen3-8-flash-next | costPerTask.effort / speed.effort | 2026-09-02 | Artificial Analysis lists a single unsuffixed "Qwen3.8-Flash-Next" variant with no disclosed effort tier (model default is xhigh); left null rather than assume |
 
-Release-protocol research on 2026-09-03 (daily sweep), scoped to `gemini-3-8-flash` (released 2026-09-02), `qwen3-8-max-0902` (2026-09-02) and `deepseek-v4-flash-vision-exp` (2026-08-21, missed by earlier sweeps). WebFetch was denied for every URL this session; findings rest on WebSearch excerpts of primary pages (blog.google, ai.google.dev, deepmind.google model card, docs.cloud.google.com, x.com/Alibaba_Qwen, x.com/arena, x.com/ArtificialAnlys, api-docs.deepseek.com, huggingface.co) cross-checked across independent trackers and launch coverage (Artificial Analysis articles, OfficeChai, The Register, 9to5Google, CellCog, TheNextWeb, OpenRouter).
+Release-protocol research on 2026-09-03, scoped to `gemini-3-8-flash` and `gemini-3-8-flash-cyber` (both announced 2026-09-02). Sources read: Google's launch post, the DeepMind model card, the evaluation-methodology PDF (storage.googleapis.com/deepmind-media/gemini/gemini_3-8_flash_model_evaluation.pdf), ai.google.dev model/pricing/deprecations/changelog pages, the Fairwind Program page, Artificial Analysis model and evaluation pages, arena.ai and arcprize.org.
+| gemini-3-8-flash | mmluPro | 2026-09-03 | not in Google's evaluation table (DeepSWE, GDPval-AA, Vals Finance, Harvey, Terminal-Bench 2.1/4.0, GDP.PDF, CharXiv, LVBench, HLE-Verified, OSWorld, BioMysteryBench, LABBench2); no tracker figure found |
+| gemini-3-8-flash | sweBench | 2026-09-03 | Google published no SWE-bench Verified figure (DeepSWE v1.1 73.7% instead); not on any Verified leaderboard found |
+| gemini-3-8-flash | sweBenchPro | 2026-09-03 | not in Google's evaluation table or model card; DataCamp quotes 61.6% (and 60.4% for 3.7 Flash) alongside a Terminal-Bench 90.8% that contradicts Google's own 89.4%, so the DataCamp figures are not traceable to a primary source — rejected |
+| gemini-3-8-flash | aime | 2026-09-03 | not reported by Google; no tracker figure found |
+| gemini-3-8-flash | arcAgi2 | 2026-09-03 | arcprize.org/results/google-gemini-3-8-flash returns 404 one day after launch; not on the ARC Prize leaderboard yet — re-check (3.7 Flash was verified on its launch day) |
+| gemini-3-8-flash | gdpvalAA (3.7 Flash conflict) | 2026-09-03 | for the record: Google's 3.8 Flash table cites 3.7 Flash at 1482 while AA's gdpval-aa board lists 3.7 Flash (high) at 1516, (medium) 1492, (low) 1446 — 3.7 Flash's cell left null pending a stable AA figure; 3.8 Flash's 1545 agrees across both sources |
+| gemini-3-8-flash-cyber | mmluPro / gpqaDiamond / sweBench / sweBenchPro / terminalBench / aime / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-09-03 | Google reports only cyber evals (CWE-Bench 47.2% pass@1, CyberGym "surpasses 3.5 Flash Cyber", >70% internal 20-language discovery, Chrome 2.6x patches, Wiz recall); no model card exists (deepmind.google/models/model-cards/gemini-3-8-flash-cyber/ 404) and Google does not state that 3.8 Flash's scores apply; Fairwind gating rules out third-party indexing |
+| gemini-3-8-flash-cyber | contextWindow / maxOutput / knowledgeCutoff | 2026-09-03 | no model card or docs page publishes them; Google says only that both models share 'the same foundational intelligence' — not copied from 3.8 Flash |
+| gemini-3-8-flash-cyber | inputPrice / outputPrice | 2026-09-03 | not on ai.google.dev pricing; the Fairwind page says only 'a fraction of the operating cost of traditional frontier models' — no figure |
+| gemini-3-8-flash-cyber | costPerTask | 2026-09-03 | not indexed by Artificial Analysis; vetted-access gating makes indexing unlikely |
 
-| model-id | field | checked | reason |
-|---|---|---|---|
+Release-protocol research on 2026-09-03 (daily sweep), scoped to `gemini-3-8-flash` (released 2026-09-02), `qwen3-8-max-0902` (2026-09-02) and `deepseek-v4-flash-vision-exp` (2026-08-21, missed by earlier sweeps). WebFetch was denied for every URL this session; findings rest on WebSearch excerpts of primary pages (blog.google, ai.google.dev, deepmind.google model card, docs.cloud.google.com, x.com/Alibaba_Qwen, x.com/arena, x.com/ArtificialAnlys, api-docs.deepseek.com, huggingface.co) cross-checked across independent trackers and launch coverage (Artificial Analysis articles, OfficeChai, The Register, 9to5Google, CellCog, TheNextWeb, OpenRouter).
 | gemini-3-8-flash | mmluPro | 2026-09-03 | not in Google's launch table (Terminal-Bench 2.1/4.0, HLE-Verified, DeepSWE v1, OSWorld-2.0, Vals Finance Agent, Harvey legal, CharXiv, LVBench); AA's index no longer carries MMLU-Pro; no tracker figure found |
-| gemini-3-8-flash | gpqaDiamond | 2026-09-03 | not in Google's table; a "95.3%" figure surfaced in one search synthesis with no attributable source and BenchmarkList shows 90.4% (rank 36/226, provenance unstated) — the two conflict and neither traces to Google or an AA page, so rejected |
 | gemini-3-8-flash | sweBench | 2026-09-03 | Google reports SWE-Bench Pro ("barely moved" from 3.7 Flash) and DeepSWE v1 71.0%, not Verified; BenchmarkList's 68.70% has no stated source and looks like an older Flash model's figure — rejected |
 | gemini-3-8-flash | aime | 2026-09-03 | not reported by Google; not on any AIME tracker found |
 | gemini-3-8-flash | arcAgi2 | 2026-09-03 | ARC Prize has published no 3.8 Flash result (arcprize.org/results shows 3.7 Flash only); BenchmarkList's 33.60% is Gemini 3 Flash Preview's December 2025 score, misattributed |
-| gemini-3-8-flash | terminalBench (conflict) | 2026-09-03 | recorded Google's launch-table 89.4% (vs 85.8% for 3.7 Flash, the same surface as the tracked 3.7 figure); Google's Gemini Enterprise developer guide states 90.8% (vs 81.6%) — kept in notes, re-check which configuration each surface reports when fetchable |
-| gemini-3-8-flash | costPerTask (re-check) | 2026-09-03 | $0.41 medium is from AA's launch post/X thread ("falls to $0.41 with medium reasoning and $0.24 with low"); confirm against artificialanalysis.ai/models/gemini-3-8-flash-medium when fetchable |
 | deepseek-v4-flash-vision-exp | mmluPro | 2026-09-03 | not in DeepSeek's eleven-benchmark launch table; not on any tracker found |
 | deepseek-v4-flash-vision-exp | gpqaDiamond | 2026-09-03 | not published by DeepSeek; AA folds it into the model's Intelligence Index (51, max effort) but the per-eval figure was not readable via search snippets |
 | deepseek-v4-flash-vision-exp | sweBench | 2026-09-03 | DeepSeek reports DeepSWE 59.3, not SWE-bench Verified |
@@ -477,11 +539,7 @@ Release-protocol research on 2026-09-03 (daily sweep), scoped to `gemini-3-8-fla
 | qwen3-8-max-0902 | costPerTask | 2026-09-03 | Artificial Analysis shows a single "Qwen3.8 Max" listing (Index 58) with no separate 0902 snapshot and no disclosed effort tier — cannot attribute a per-task figure to this snapshot |
 | qwen3-8-max-0902 | knowledgeCutoff | 2026-09-03 | not disclosed in Qwen's X post or on the QwenCloud / Model Studio pages per any excerpt found |
 | qwen3-8-max-0902 | contextWindow (precision) | 2026-09-03 | recorded Qwen's own "1M context tokens"; Model Studio's exact usable-input figure for this snapshot (the sibling qwen3-8-max records 983,616) was not readable — re-check alibabacloud.com/help/en/model-studio/qwen3-8-max when fetchable |
-
 Stats-filler sweep on 2026-09-03 (daily sweep), two batches: (a) recent/unknown/frontier models with open cells, (b) a Terminal-Bench 2.1 and Artificial Analysis cost-per-task leaderboard pass over older models. WebFetch was denied for every URL this session and the shared WebSearch budget ran out mid-run, so tbench.ai, vals.ai, artificialanalysis.ai and lab pages were never read directly; every fill and gap rests on WebSearch excerpts cross-checked across independent outlets. Cells that were merely unreadable this session (AA chart-rendered figures, unread model cards, single uncorroborated excerpts) are deliberately NOT logged here so the next run re-checks them — see the sweep PR body for that list. Sources consulted via excerpts: arena.ai + Arena's X posts; AA model pages and the terminalbench-v2-1 board; tbench.ai 2.1 leaderboard/announcement; vals.ai TB 2.1 and its BenchLM/Snorkel mirrors; benchmarklist.com; ARC Prize, llm-stats and Epoch ARC-AGI-2 boards; OpenAI DevDay post and model docs; Meta's Muse Spark 1.2 launch chart (as transcribed by Medium, kingy.ai, eesel); developer.meta.com / NVIDIA NIM cards; Thinking Machines model cards; poolside blog and HF/NVIDIA Laguna cards; HF cards for Ornith, Motif-3, Hy3, LongCat-2.0, Qwen3.8-2.4T, Nemotron 3 Ultra, Soofi-S; help.aliyun.com qwen3.7-flash page; Z.ai docs via DataCamp/Semgrep; DeepSeek's V4-Pro-0813 comparison table via MindStudio/codersera; Alibaba's Qwen3.8-Max table via DataCamp/Together.
-
-| model-id | field | checked | reason |
-|---|---|---|---|
 | qwen3-7-flash | mmluPro | 2026-09-03 | no benchmark published by Alibaba (QwenCloud changelog only); not indexed by Artificial Analysis (only Qwen3.7 Max/Plus and Qwen3.8-Flash-Next appear); BenchLM page is spec-only |
 | qwen3-7-flash | gpqaDiamond | 2026-09-03 | same — no Alibaba figure, no AA page, no tracker figure |
 | qwen3-7-flash | sweBench | 2026-09-03 | same — no figure anywhere found |

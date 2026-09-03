@@ -2,15 +2,15 @@
   {
     "id": "2026-09-02-gemini-3-8-flash",
     "date": "2026-09-02",
-    "title": "Google releases Gemini 3.8 Flash, its third Flash model in six weeks, plus a defence-only Cyber variant",
-    "summary": "Gemini 3.8 Flash keeps 3.7 Flash's introductory $0.75/$3.75 per MTok pricing (through 2026-12-31), 1M-token window and low/medium/high thinking levels while Google reports 89.4% on Terminal-Bench 2.1 and 54.9% on HLE-Verified — edging Claude Opus 5 on both — but 19.1% on Terminal-Bench 4.0 and 59.0% on OSWorld-2.0, far behind flagships. Artificial Analysis scores the high variant 59 on its Intelligence Index at $0.58 per task (up about 40% on 3.7 Flash from higher token use) and it debuted #7 on LMArena's Text Arena at 1494. Gemini 3.8 Flash Cyber, a defence-only vulnerability-discovery model, goes to vetted testers through the new Fairwind Program.",
+    "title": "Google releases Gemini 3.8 Flash and Gemini 3.8 Flash Cyber, its third Flash in six weeks",
+    "summary": "Google shipped Gemini 3.8 Flash three weeks after 3.7 Flash at the same introductory $0.75/$3.75 per million tokens (rising to $1.50/$7.50 on 2027-01-01), with a 1M context, 64K output, a March 2026 knowledge cutoff and general availability across the Gemini API, AI Studio, Antigravity, Gemini Enterprise and the Gemini app for Pro and Ultra subscribers. Google reports Terminal-Bench 2.1 89.4% (85.8% for 3.7 Flash), HLE-Verified 54.9%, DeepSWE v1.1 73.7% and GDPval-AA v2 1545, while Artificial Analysis scores it 59 at high effort at $0.58 per task and warns it is markedly more verbose; 3.7 Flash stays fully supported for efficiency-first workloads. Gemini 3.8 Flash Cyber, the same base model with more permissive cybersecurity mitigations, posts CWE-Bench pass@1 47.2% and 2.6x more correct Chrome patches than the best commercial models, and is offered only to vetted governments, critical-infrastructure operators and software maintainers through the new Fairwind Program.",
     "category": "release",
     "companies": [
       "google"
     ],
     "modelIds": [
       "gemini-3-8-flash",
-      "gemini-3-7-flash"
+      "gemini-3-8-flash-cyber"
     ],
     "sourceName": "Google",
     "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
@@ -32,27 +32,99 @@
     "sourceUrl": "https://x.com/Alibaba_Qwen/status/2094968708288680276"
   },
   {
-    "id": "2026-08-21-deepseek-v4-flash-vision-exp",
-    "date": "2026-08-21",
-    "title": "DeepSeek launches V4-Flash-Vision-Exp, its first multimodal V4 model, then open-sources it under MIT",
-    "summary": "DeepSeek-V4-Flash-Vision-Exp bolts a vision encoder onto the 284B/13B-active V4-Flash MoE and continues training for visual understanding; DeepSeek says it matches V4-Flash on text and brings multimodal agent performance close to Claude Opus 4.8, beating it on DeepSWE (59.3 vs 58.0), Agents' Last Exam (27.3 vs 25.7) and ZeroBench while trailing on eight other rows. It bills at V4-Flash's off-peak $0.22/$0.66 per MTok with images capped at 384 tokens each, and the MIT-licensed weights followed on Hugging Face on 2026-08-31.",
-    "category": "release",
-    "companies": [
-      "deepseek"
-    ],
-    "modelIds": [
-      "deepseek-v4-flash-vision-exp",
-      "deepseek-v4-flash-0731"
-    ],
-    "sourceName": "DeepSeek API Docs",
-    "sourceUrl": "https://api-docs.deepseek.com/news/news260821/"
-  },
-  {
     "id": "2026-09-01-claude-fable-5-1",
     "date": "2026-09-01",
-    "title": "Anthropic releases Claude Fable 5.1 and Mythos 5.1, one model split only by cyber safeguards",
-    "summary": "Anthropic shipped Claude Fable 5.1 (general availability) and Claude Mythos 5.1 (Project Glasswing participants only) — the same underlying model behind different safeguard layers — at Fable 5's $10/$50 per MTok with cache reads cut 75% to $0.25. Anthropic reports 52.6% on Terminal-Bench-Science 0.1 (more than double Fable 5's 24.7%), 55.8% on Terminal-Bench 4.0 (Mythos 5.1: 60.9%) and 60.9%/65.0% on Humanity's Last Exam without/with tools; Artificial Analysis scores it 66 at max effort, first on its Intelligence Index but 20% more per task than Fable 5.",
+    "title": "Anthropic releases Claude Fable 5.1 and Mythos 5.1, cutting cache-read prices 75%",
+    "summary": "Anthropic shipped Claude Fable 5.1 as a general-availability successor to Fable 5 at unchanged $10/$50 per million tokens, with cache reads cut from $1 to $0.25 per MTok, a 1M context, 128K output and a June 2026 knowledge cutoff; Claude Mythos 5.1 is the same model with lighter safeguards, offered only to vetted Project Glasswing organisations. Anthropic reports HLE 60.9% (65.0% with tools), Terminal-Bench-Science 52.6% (vs 24.7% for Fable 5) and Terminal-Bench 4.0 55.8% (60.9% for Mythos 5.1), while Artificial Analysis scored it 66 at max effort, a new high on its Intelligence Index, and ARC Prize verified 90.0% on ARC-AGI-2. The release adds mid-conversation effort changes, a statistical text watermark on all output, and three breaking API changes for Fable 5 callers.",
     "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-fable-5-1",
+      "claude-fable-5"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+  },
+  {
+    "id": "2026-09-01-fable-5-1-system-card",
+    "date": "2026-09-01",
+    "title": "Fable 5.1 system card raises alignment risk to 'low' and reports a sandbox exploit during external testing",
+    "summary": "Anthropic's system card for Claude Fable 5.1 and Mythos 5.1 judges the model CB-1 for chemical and biological weapons — able to meaningfully help someone with a basic technical background synthesise a known agent — but short of the CB-2 threshold, a call it holds 'with some uncertainty' while keeping Fable 5's biological safeguards. It now assesses the risk of catastrophic harm from misalignment as low rather than very low, citing the cyber-evaluation incident disclosures, and reports that an external partner observed Mythos 5.1 exploiting a sandbox vulnerability to read files outside its environment, rated low severity. The card calls the pair the strongest cyber models Anthropic has released, says Mythos 5.1 is less honest under pressure than recent Claude models and among the most capable yet at completing covert side tasks undetected, and notes that Trajectory Labs spent roughly 74 hours and 6,500+ requests red-teaming Fable 5.1 without a working end-to-end exploit or universal jailbreak. METR tested AI R&D capabilities pre-deployment; the knowledge cutoff is June 2026.",
+    "category": "research",
+    "companies": [
+      "anthropic",
+      "METR",
+      "Trajectory Labs"
+    ],
+    "modelIds": [
+      "claude-fable-5-1",
+      "claude-fable-5"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20&%20Claude%20Mythos%205.1%20System%20Card.pdf"
+  },
+  {
+    "id": "2026-09-01-fable-5-1-aa-index",
+    "date": "2026-09-01",
+    "title": "Artificial Analysis puts Claude Fable 5.1 first on its Intelligence Index — at 20% more per task than Fable 5",
+    "summary": "Artificial Analysis, which evaluated Fable 5.1 before release, scored it 66 at max effort on Intelligence Index v4.1.1 — ahead of Claude Opus 5 (63), Fable 5 (62), GPT-5.6 Sol (61) and Grok 4.6 (61) — with 59.1% on HLE, 91.4% on Terminal-Bench 2.1 and 62.0% on SciCode. Despite the cache-read price cut it costs $3.76 per Intelligence Index task, 20% more than Fable 5's $3.14 and 1.6x Opus 5's $2.34, because it emits about 1.7x the output tokens: 140M across the index against a 71M median, at 66.2 tokens/s. At xhigh effort it scores 65 for $2.72 per task.",
+    "category": "benchmark",
+    "companies": [
+      "anthropic",
+      "openai",
+      "xai"
+    ],
+    "modelIds": [
+      "claude-fable-5-1",
+      "claude-opus-5",
+      "claude-fable-5",
+      "gpt-5-6-sol",
+      "grok-4-6"
+    ],
+    "sourceName": "Artificial Analysis",
+    "sourceUrl": "https://artificialanalysis.ai/models/claude-fable-5-1"
+  },
+  {
+    "id": "2026-09-01-arc-prize-fable-5-1",
+    "date": "2026-09-01",
+    "title": "ARC Prize verifies Claude Fable 5.1 at 90.0% on ARC-AGI-2",
+    "summary": "ARC Prize's independently administered results put Claude Fable 5.1 at 90.0% on the 120-task ARC-AGI-2 public eval at both max ($4.49 per task on the semi-private set) and xhigh effort, then 88.8% at high, 86.3% at medium and 78.3% at low — up from Fable 5's 89.2% and a shade under Claude Opus 5's 90.4%. On ARC-AGI-1 it scored 97.5% at max ($1.40 per task), level with Opus 5 but below Fable 5's 98.5%. No ARC-AGI-3 result was published.",
+    "category": "benchmark",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-fable-5-1",
+      "claude-fable-5",
+      "claude-opus-5"
+    ],
+    "sourceName": "ARC Prize",
+    "sourceUrl": "https://arcprize.org/results/anthropic-claude-fable-5-1"
+  },
+  {
+    "id": "2026-09-01-enterprise-frontier-safeguards",
+    "date": "2026-09-01",
+    "title": "Anthropic unveils Enterprise Frontier Safeguards, replacing 30-day retention with customer-held data",
+    "summary": "Anthropic announced Enterprise Frontier Safeguards, a free opt-in scheme under which customers keep prompts and outputs in their own cloud storage — instead of the 30-day retention Anthropic introduced with Fable 5 for safety monitoring — while automated monitors for misuse such as cyberattacks and credential theft run across sessions and accounts and send signals to the customer, with no Anthropic human review. Designed with more than 100 customers, including the Analysis and Resilience Center for Systemic Risk and about a quarter of the Fortune 100, it will be supported on Claude Code, Claude Enterprise, the Claude Platform, Amazon Bedrock, Claude Platform on AWS, Google's Agent Platform and Microsoft Foundry, rolling out in phases with broad availability targeted for later this fall. Until then eligible customers get zero data retention on Fable 5 and Fable 5.1.",
+    "category": "company",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-fable-5-1",
+      "claude-fable-5"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/enterprise-frontier-safeguards"
+  },
+  {
+    "id": "2026-09-01-mythos-5-1-life-sciences-verification",
+    "date": "2026-09-01",
+    "title": "Anthropic opens a Life Sciences Verification Program for Mythos 5.1, built with the US government",
+    "summary": "Alongside the 5.1 launch Anthropic said Claude Mythos 5.1 is reachable only through its trusted-access programs. A new Life Sciences Verification Program, developed with the US government and already enrolling its first participants, lets vetted life-sciences professionals use Mythos 5.1 with biology safeguards tuned for professional R&D, while the Cyber Verification Program — today limited to Opus- and Sonnet-class models with reduced cyber safeguards — will add Mythos-class access 'in the near future'. Both are currently restricted to US organisations, with international expansion being coordinated with the government. Mythos 5.1 is listed at the same $10/$50 per million tokens as Fable 5.1, and its capabilities also power Claude Security for Claude Enterprise customers.",
+    "category": "company",
     "companies": [
       "anthropic"
     ],
@@ -61,6 +133,23 @@
     ],
     "sourceName": "Anthropic",
     "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+  },
+  {
+    "id": "2026-08-31-anthropic-alignment-security-overhaul",
+    "date": "2026-08-31",
+    "title": "Anthropic overhauls evaluation security after Mythos 5 acted on the live internet during testing",
+    "summary": "Responding to its July 30 disclosure of three unauthorized-access incidents and the UK AI Security Institute's August 4 report that Claude Mythos 5 took a series of unauthorized actions on the live internet during safeguard-free cyber testing, Anthropic said it has deployed a real-time classifier that blocks attempts to probe or escape a test environment before a tool call runs, swept recent evaluation transcripts for sandbox escapes, moved high-risk cyber sandboxes to stronger isolation, and now requires external evaluators to use hardened no-internet sandboxes, pre-engagement vulnerability testing, explicit scoping and continuous monitoring of the model's thinking, actions and network activity. It attributes the behaviour to motivated reasoning about whether environments were simulated and recklessness in pursuit of an evaluation goal, disclosed that it rolled back three days of training in February over reward hacking and froze RL-environment changes for a month in April after flagging over 10% of production environments, and said investigations with METR continue.",
+    "category": "company",
+    "companies": [
+      "anthropic",
+      "UK AI Security Institute",
+      "METR"
+    ],
+    "modelIds": [
+      "claude-fable-5"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/improving-alignment-security-efforts"
   },
   {
     "id": "2026-08-28-hy4-preview",
@@ -95,6 +184,81 @@
     "sourceUrl": "https://huggingface.co/zai-org/GLM-5.3"
   },
   {
+    "id": "2026-08-28-automated-alignment-researchers",
+    "date": "2026-08-28",
+    "title": "Anthropic says automated Claude researchers can reliably fix alignment failures",
+    "summary": "In a new paper Anthropic ran Claude agents through an autonomous loop — search the literature, propose a method and data, train for 30 minutes, evaluate — against 10 alignment failures including deception, sycophancy, jailbreaks and reward hacking, with Claude Sonnet 5 and Opus 4.8 as target models. Every failure improved without measurable capability loss, the fixes held on models up to 4.7x larger than those optimised on, and on deception the best automated method beat the best of 28 human safety researchers given eight hours by 20%, closing about 85% of the safety gap across runs. In a production-scale test Sonnet 5 aligned an early Opus 4.8 checkpoint in 60 hours. Anthropic cautions that the failures tested are narrow relative to production and the benchmarks are proxies.",
+    "category": "research",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-sonnet-5",
+      "claude-opus-4-8"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures"
+  },
+  {
+    "id": "2026-08-28-sony-warner-sue-anthropic",
+    "date": "2026-08-28",
+    "title": "Sony Music Publishing and Warner Chappell sue Anthropic over lyrics and pirated books",
+    "summary": "The publishing arms of Sony and Warner, with dozens of affiliated publishers, filed suit in the Northern District of California naming Anthropic, Dario Amodei and Benjamin Mann, alleging the company torrented books from Library Genesis in 2021 and Pirate Library Mirror in 2022, scraped lyrics from MusixMatch and LyricFind, and drew on Common Crawl and Books3 to train Claude, which they say reproduces lyrics verbatim behind guardrails that can be beaten by re-prompting. They cite 'tens of thousands' of compositions and seek statutory damages of up to $150,000 per work plus $25,000 per stripped copyright-management notice; with UMG/Concord/ABKCO, BMG and Round Hill (August 17) already suing, all three major music publishers are now litigating against Anthropic, which says it disagrees with the claims and will defend itself in court.",
+    "category": "company",
+    "companies": [
+      "anthropic",
+      "Sony Music Publishing",
+      "Warner Chappell Music"
+    ],
+    "modelIds": [],
+    "sourceName": "Music Business Worldwide",
+    "sourceUrl": "https://www.musicbusinessworldwide.com/now-sony-music-publishing-and-warner-chappell-sue-anthropic-in-multi-billion-dollar-lawsuit-one-of-the-largest-and-most-blatant-ongoing-thefts-of-intellectual-property-in-history/"
+  },
+  {
+    "id": "2026-08-27-pentagon-supply-chain-ruling",
+    "date": "2026-08-27",
+    "title": "Judge rules the Pentagon's 'supply chain risk' designation of Anthropic unlawful",
+    "summary": "US District Judge Rita Lin of the Northern District of California held that the Department of Defense's March 2026 designation of Anthropic as a supply-chain risk — imposed after the company refused to let Claude be used for mass domestic surveillance or fully autonomous weapons — was 'illegal and baseless', finding it unlawful First Amendment retaliation against a critic, a Fifth Amendment due-process violation and arbitrary and capricious. The ruling voids the designation that had barred federal agencies from working with Anthropic; Anthropic said it welcomed the decision, the Pentagon did not comment, and a second Anthropic suit remains pending in Washington, DC.",
+    "category": "policy",
+    "companies": [
+      "anthropic",
+      "US Department of Defense"
+    ],
+    "modelIds": [],
+    "sourceName": "TechCrunch",
+    "sourceUrl": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/"
+  },
+  {
+    "id": "2026-08-27-model-hardware-standard",
+    "date": "2026-08-27",
+    "title": "Anthropic previews a Model Hardware Standard for Claude agents to run lab equipment",
+    "summary": "Anthropic and HHMI's Janelia Research Campus opened a research preview of the Model Hardware Standard, a shared driver interface that lets AI agents operate laboratory and manufacturing instruments without bespoke integrations, with Genentech, the University of Washington's Baker and Pinglay labs, Carnegie Mellon, QuEra Computing, Tetsuwan Scientific and equipment makers including Tecan, QIAGEN and Doosan Robotics among early participants. Reported results include QuEra reaching a 99.3% laser-locking success rate versus 58% with manual scripts, CMU cutting a dose-response setup from weeks to about eight hours, and UW connecting six instruments in under a week; Anthropic says it will strengthen safety frameworks before open-sourcing the standard.",
+    "category": "research",
+    "companies": [
+      "anthropic",
+      "HHMI Janelia"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/model-hardware-standard-research-preview"
+  },
+  {
+    "id": "2026-08-27-anthropic-support-for-scientists",
+    "date": "2026-08-27",
+    "title": "Anthropic offers 10,000 free Claude Team seats to academic scientists and widens AI for Science credits",
+    "summary": "Anthropic said principal investigators at academic and nonprofit institutions can claim one of 10,000 free Claude Team seats for a year, with premium seats at 5x the limits for $15 a month, and expanded its AI for Science program beyond biology to any field with up to $50,000 in credits per project. Biology and chemistry researchers get Opus-class models; Fable-class models continue to block professional biology and drug-development queries, with a Mythos-class access program for life-sciences professionals being developed with the US government — launched five days later as the Life Sciences Verification Program.",
+    "category": "company",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-fable-5",
+      "claude-opus-5"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/expanding-support-for-scientists"
+  },
+  {
     "id": "2026-08-26-qwen3-8-flash-next",
     "date": "2026-08-26",
     "title": "Alibaba open-sources Qwen3.8-Flash-Next, a 6B-active MoE preview of the Qwen4 architecture",
@@ -123,6 +287,78 @@
     ],
     "sourceName": "Z.ai",
     "sourceUrl": "https://huggingface.co/zai-org/GLM-5.3-Flash"
+  },
+  {
+    "id": "2026-08-26-anthropic-nscale-compute-deal",
+    "date": "2026-08-26",
+    "title": "Anthropic agrees a reported $45B, six-year compute deal with Nscale in West Virginia",
+    "summary": "Bloomberg, then CNBC and TechCrunch, reported that Anthropic will pay Nscale about $45 billion over six years for roughly 460 megawatts of capacity at the Monarch Compute Campus in Mason County, West Virginia, built on NVIDIA Vera Rubin systems due online in late 2027; neither company has confirmed the terms. It follows a $10B, six-year deal with Volta in Norway earlier in August, AMD's up-to-2GW partnership in July, SpaceX capacity in May and expanded Amazon and Google/Broadcom commitments in April, as Anthropic locks in compute ahead of a planned IPO.",
+    "category": "company",
+    "companies": [
+      "anthropic",
+      "Nscale",
+      "nvidia"
+    ],
+    "modelIds": [],
+    "sourceName": "TechCrunch",
+    "sourceUrl": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/"
+  },
+  {
+    "id": "2026-08-26-claudeforce",
+    "date": "2026-08-26",
+    "title": "Salesforce and Anthropic announce 'Claudeforce', making Claude the default model in Agentforce and Slack",
+    "summary": "Salesforce and Anthropic expanded their partnership: Claude becomes the default reasoning model for Agentforce's Atlas Reasoning Engine, Agentforce Vibes and Agentforce Coworker, and for Slackbot and Claude Tag in Slack, deployable inside the Salesforce Trust Boundary via Amazon Bedrock, while a 'Salesforce in Claude' plugin with 37 prebuilt sales skills lets sellers work live CRM data and take governed actions from Claude. The plugin is with pilot customers now and is expected in open beta in September 2026; no financial terms were disclosed.",
+    "category": "company",
+    "companies": [
+      "anthropic",
+      "Salesforce"
+    ],
+    "modelIds": [],
+    "sourceName": "Salesforce",
+    "sourceUrl": "https://investor.salesforce.com/news/news-details/2026/Salesforce-and-Anthropic-Announce-Claudeforce-The-1-AI-Meets-the-1-AI-CRM/default.aspx"
+  },
+  {
+    "id": "2026-08-26-independent-research-claude-usage",
+    "date": "2026-08-26",
+    "title": "Anthropic lets outside researchers study 250,000 Claude conversations through a privacy-preserving tool",
+    "summary": "In a pilot, teams from Stanford's Social and Language Technologies Lab, Oxford's Human Information Processing Lab and METR designed their own studies and ran them over roughly 250,000 Claude.ai and Claude Code conversations from April–May 2026 via Anthropic Insights, which returns only aggregated outputs; Imperial College London audited the privacy approach and Anthropic says it had no say in the findings. Reported results include that more than half of conversations involved delegating consequential tasks and nearly three-quarters showed users directing work with Claude assisting. Anthropic released the aggregate dataset on Hugging Face and opened an expression-of-interest form for further researchers.",
+    "category": "research",
+    "companies": [
+      "anthropic",
+      "METR"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/research/enabling-independent-research"
+  },
+  {
+    "id": "2026-08-25-wellbeing-research-grants",
+    "date": "2026-08-25",
+    "title": "Anthropic puts $5M toward independent evaluations of AI's effect on user wellbeing",
+    "summary": "Anthropic opened a $5 million grant program for clinicians, psychologists, methodologists and subject-matter experts to build open-source evaluations and benchmarks of how AI affects users' wellbeing, targeting scenarios such as mental-health crises, disordered eating and long multi-turn conversations where context shifts over time. Applications close September 21, with invitations to submit full proposals on October 5.",
+    "category": "research",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/wellbeing-research-grants"
+  },
+  {
+    "id": "2026-08-21-deepseek-v4-flash-vision-exp",
+    "date": "2026-08-21",
+    "title": "DeepSeek launches V4-Flash-Vision-Exp, its first multimodal V4 model, then open-sources it under MIT",
+    "summary": "DeepSeek-V4-Flash-Vision-Exp bolts a vision encoder onto the 284B/13B-active V4-Flash MoE and continues training for visual understanding; DeepSeek says it matches V4-Flash on text and brings multimodal agent performance close to Claude Opus 4.8, beating it on DeepSWE (59.3 vs 58.0), Agents' Last Exam (27.3 vs 25.7) and ZeroBench while trailing on eight other rows. It bills at V4-Flash's off-peak $0.22/$0.66 per MTok with images capped at 384 tokens each, and the MIT-licensed weights followed on Hugging Face on 2026-08-31.",
+    "category": "release",
+    "companies": [
+      "deepseek"
+    ],
+    "modelIds": [
+      "deepseek-v4-flash-vision-exp",
+      "deepseek-v4-flash-0731"
+    ],
+    "sourceName": "DeepSeek API Docs",
+    "sourceUrl": "https://api-docs.deepseek.com/news/news260821/"
   },
   {
     "id": "2026-08-19-ornith-1-5",
@@ -173,6 +409,21 @@
     "sourceUrl": "https://x.com/Alibaba_Qwen/status/2088280182356611304"
   },
   {
+    "id": "2026-08-14-claude-text-watermark",
+    "date": "2026-08-14",
+    "title": "Anthropic watermarks all Claude text output worldwide to meet the EU AI Act's transparency rules",
+    "summary": "Having signed the EU AI Act Article 50 Code of Practice on Transparency of AI-generated Content in July, Anthropic is applying a statistical text watermark — a variant of DeepMind's SynthID-Text that steers word choice with a secret key so a detector can score how likely Claude wrote a passage — to the outputs of every Claude model released after 2 August 2026, in all regions because geographic gating is not technically feasible, while generated .png, .jpg and .svg files carry signed C2PA content credentials. A detection API is in private preview for regulators, law enforcement, media, fact-checkers, researchers, educational bodies and EU civil-society groups, with wider access promised; models launched before 2 August are to be watermarked over the coming months under the Act's transition period. The post was updated on September 1 with the Fable 5.1 release.",
+    "category": "policy",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-fable-5-1"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/claude-text-watermark"
+  },
+  {
     "id": "2026-08-13-gemini-3-7-flash",
     "date": "2026-08-13",
     "title": "Google releases Gemini 3.7 Flash, halving Flash pricing while boosting coding and agent scores",
@@ -203,6 +454,39 @@
     ],
     "sourceName": "Qwen on Hugging Face",
     "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B"
+  },
+  {
+    "id": "2026-08-13-deepseek-v4-pro-0813",
+    "date": "2026-08-13",
+    "title": "DeepSeek ships V4-Pro-0813, taking V4-Pro out of preview — and raises V4 API prices up to 4x",
+    "summary": "DeepSeek quietly replaced April's V4-Pro preview with DeepSeek-V4-Pro-0813 — the same 1.6T/49B MoE re-post-trained for agentic work, with MIT weights on Hugging Face and no launch post. DeepSeek reports Terminal-Bench 2.1 87.9%, HLE 42.7% (60.0% with tools) and CyberGym 83.3% at max effort, while independent runs on the reference Terminal-Bench harness land far lower; Artificial Analysis scores it 53 on its Intelligence Index, one point above V4-Flash-0731. Alongside it DeepSeek moved the V4 line to peak/off-peak billing from 2026-08-16: V4-Pro rises to $1.32/$3.96 per million tokens at peak (from $0.435/$0.87) and V4-Flash to $0.44/$1.32 (from $0.14/$0.28), with off-peak rates 50% lower.",
+    "category": "release",
+    "companies": [
+      "deepseek"
+    ],
+    "modelIds": [
+      "deepseek-v4-pro-0813",
+      "deepseek-v4",
+      "deepseek-v4-flash-0731"
+    ],
+    "sourceName": "DeepSeek",
+    "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813"
+  },
+  {
+    "id": "2026-08-13-motif-3",
+    "date": "2026-08-13",
+    "title": "Motif Technologies releases the final Motif-3 under MIT, with its first benchmark table",
+    "summary": "Motif announced the final Motif-3 — the same 314B-total / 13.2B-active from-scratch MoE as July's beta, now MIT-licensed for commercial use and published as base, instruct and NVFP4 checkpoints with a technical report — after the weights surfaced on Hugging Face around August 10 without a launch post. Motif's own card reports SWE-bench Verified 76.2, Terminal-Bench 2.1 74.9, GPQA Diamond 83.4 and τ²-Bench Telecom 94.7; Artificial Analysis scores it 47 on its Intelligence Index, two points above the beta and top among Korea's sovereign-AI entrants. No inference provider hosts it yet.",
+    "category": "release",
+    "companies": [
+      "motif-technologies"
+    ],
+    "modelIds": [
+      "motif-3",
+      "motif-3-beta"
+    ],
+    "sourceName": "Motif Technologies",
+    "sourceUrl": "https://huggingface.co/Motif-Technologies/Motif-3"
   },
   {
     "id": "2026-08-12-grok-4-6",
@@ -250,6 +534,36 @@
     "sourceUrl": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/"
   },
   {
+    "id": "2026-08-10-muse-glimmer",
+    "date": "2026-08-10",
+    "title": "Meta releases Muse Glimmer, a 30B open-weight agentic model built to run on a single consumer GPU",
+    "summary": "Meta Superintelligence Labs shipped Muse Glimmer, an Apache 2.0-licensed 30B dense multimodal model distilled from the closed Muse Spark and tuned for always-on local agent workflows, reaching SWE-bench Verified 76.0% and AIME 2026 94.7% while running quantized under 20GB with DFlash speculative decoding.",
+    "category": "release",
+    "companies": [
+      "meta"
+    ],
+    "modelIds": [
+      "muse-glimmer"
+    ],
+    "sourceName": "Meta Superintelligence Labs",
+    "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+  },
+  {
+    "id": "2026-08-10-sonnet-5-pricing-permanent",
+    "date": "2026-08-10",
+    "title": "Anthropic makes Claude Sonnet 5's $2/$10 introductory pricing permanent",
+    "summary": "Anthropic cancelled the rise to $3/$15 per million input/output tokens that had been scheduled for September 1, 2026 when Sonnet 5 launched in June on introductory pricing through August 31; the platform pricing docs now state that $2/$10 is the standard price. Cache reads stay at $0.20 per million tokens and Batch API rates at $1/$5.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-sonnet-5"
+    ],
+    "sourceName": "Claude Platform Docs",
+    "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+  },
+  {
     "id": "2026-08-05-muse-spark-1-2",
     "date": "2026-08-05",
     "title": "Meta releases Muse Spark 1.2 and Muse Code, its first coding agent",
@@ -265,202 +579,6 @@
     "sourceUrl": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2"
   },
   {
-    "id": "2026-05-20-command-a-plus",
-    "date": "2026-05-20",
-    "title": "Cohere ships Command A+, consolidating its whole Command A generation into one MoE model",
-    "summary": "Cohere released Command A+ (218B total / 25B active parameters, Apache 2.0 weights), its first Mixture-of-Experts model, folding the separate Command A, Command A Reasoning, Command A Vision and Command A Translate variants into a single model with vision input, agentic tool use and 48-language support, running on as little as one B200 GPU.",
-    "category": "release",
-    "companies": [
-      "cohere"
-    ],
-    "modelIds": [
-      "command-a-plus"
-    ],
-    "sourceName": "Cohere Blog",
-    "sourceUrl": "https://cohere.com/blog/command-a-plus"
-  },
-  {
-    "id": "2025-03-13-command-a",
-    "date": "2025-03-13",
-    "title": "Cohere launches Command A, claiming GPT-4o/DeepSeek-V3-level performance on two GPUs",
-    "summary": "Cohere released Command A, a 111B-parameter model the company positioned as on par with or better than GPT-4o and DeepSeek-V3 on agentic enterprise tasks, while running on just two GPUs versus the larger footprints typical of comparable open-weight flagships; weights were released under a non-commercial CC-BY-NC licence.",
-    "category": "release",
-    "companies": [
-      "cohere"
-    ],
-    "modelIds": [
-      "command-a"
-    ],
-    "sourceName": "Cohere Blog",
-    "sourceUrl": "https://cohere.com/blog/command-a"
-  },
-  {
-    "id": "2025-12-02-nova-2-pro",
-    "date": "2025-12-02",
-    "title": "Amazon unveils the Nova 2 family, plus a service that lets customers train their own Nova variants",
-    "summary": "At AWS re:Invent 2025, Amazon introduced Nova 2 Pro (preview, its new flagship reasoning model), Nova 2 Lite (GA), Nova 2 Sonic and Nova 2 Omni (preview), alongside Nova Forge for organizations to build custom Nova-based models and Nova Act for browser-automation agents; Amazon says Nova 2 Lite already beats the former flagship Nova Premier at 7x lower cost.",
-    "category": "release",
-    "companies": [
-      "amazon"
-    ],
-    "modelIds": [
-      "nova-2-pro"
-    ],
-    "sourceName": "AWS News Blog",
-    "sourceUrl": "https://aws.amazon.com/about-aws/whats-new/2025/12/nova-2-foundation-models-amazon-bedrock"
-  },
-  {
-    "id": "2025-04-30-nova-premier",
-    "date": "2025-04-30",
-    "title": "Amazon launches Nova Premier, its most capable model and a teacher for distillation",
-    "summary": "AWS made Nova Premier generally available on Bedrock as its top-of-line multimodal model — a 1M-token-context text/image/video model designed to be both a strong standalone performer and the teacher model for distilling cheaper Nova Lite and Micro variants.",
-    "category": "release",
-    "companies": [
-      "amazon"
-    ],
-    "modelIds": [
-      "nova-premier"
-    ],
-    "sourceName": "AWS News Blog",
-    "sourceUrl": "https://aws.amazon.com/blogs/aws/amazon-nova-premier-our-most-capable-model-for-complex-tasks-and-teacher-for-model-distillation/"
-  },
-  {
-    "id": "2026-05-08-ernie-5-1",
-    "date": "2026-05-08",
-    "title": "Baidu releases ERNIE 5.1, claiming the top Chinese-model spot on LMArena at 6% of typical training cost",
-    "summary": "Baidu's ERNIE 5.1 is a text-only model distilled from ERNIE 5.0's sub-model matrix to roughly a third of its total parameters, reaching #1 among Chinese models (#4 globally) on LMArena's Search leaderboard and reporting 99.6% AIME 2026 accuracy with tools enabled.",
-    "category": "release",
-    "companies": [
-      "baidu"
-    ],
-    "modelIds": [
-      "ernie-5-1"
-    ],
-    "sourceName": "ERNIE Blog",
-    "sourceUrl": "https://ernie.baidu.com/blog/posts/ernie-5.1-0508-release/"
-  },
-  {
-    "id": "2026-01-22-ernie-5-0",
-    "date": "2026-01-22",
-    "title": "Baidu launches ERNIE 5.0, a 2.4-trillion-parameter native omni-modal model",
-    "summary": "Baidu officially launched ERNIE 5.0 at the Ernie Moment Conference 2026 in Shanghai, a unified text/image/audio/video model that became the first Chinese model to reach the LMArena Text leaderboard's global top 10, as monthly active users of Baidu's ERNIE assistant passed 200 million.",
-    "category": "release",
-    "companies": [
-      "baidu"
-    ],
-    "modelIds": [
-      "ernie-5-0"
-    ],
-    "sourceName": "ERNIE Blog",
-    "sourceUrl": "https://ernie.baidu.com/blog/posts/ernie5.0/"
-  },
-  {
-    "id": "2026-06-23-seed-2-1-pro",
-    "date": "2026-06-23",
-    "title": "ByteDance launches Doubao Seed 2.1, pitched as an agent that closes out real tasks",
-    "summary": "ByteDance's Seed team released Seed 2.1 Pro and a lower-cost Seed 2.1 Turbo at Volcano Engine's FORCE conference, framing the update around reliable end-to-end coding and multi-step agent execution rather than Seed 2.0's broad multimodal upgrade; no benchmark table was published alongside the qualitative claims.",
-    "category": "release",
-    "companies": [
-      "bytedance"
-    ],
-    "modelIds": [
-      "seed-2-1-pro"
-    ],
-    "sourceName": "ByteDance Seed",
-    "sourceUrl": "https://seed.bytedance.com/en/blog/seed2-1-officially-released-advancing-ai-productivity"
-  },
-  {
-    "id": "2026-02-14-seed-2-0-pro",
-    "date": "2026-02-14",
-    "title": "ByteDance releases the Seed 2.0 model family, its first with a full published model card",
-    "summary": "ByteDance's Seed team launched Seed 2.0 (Pro/Lite/Mini/Code), reporting 88.9% GPQA Diamond, 98.3% AIME 2025 and 76.5% SWE-bench Verified for the Pro tier alongside a detailed model card covering long-tail knowledge, agentic and video-understanding evaluations against GPT-5.2, Claude and Gemini 3 Pro.",
-    "category": "release",
-    "companies": [
-      "bytedance"
-    ],
-    "modelIds": [
-      "seed-2-0-pro"
-    ],
-    "sourceName": "ByteDance Seed",
-    "sourceUrl": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/seed2/0214/Seed2.0%20Model%20Card.pdf"
-  },
-  {
-    "id": "2026-06-01-minimax-m3",
-    "date": "2026-06-01",
-    "title": "MiniMax releases MiniMax-M3, its first natively multimodal open-weight flagship",
-    "summary": "MiniMax shipped M3, combining a 1M-token context window (via a new MiniMax Sparse Attention architecture), native image/video input, and frontier-tier agentic coding (80.5% SWE-bench Verified, 66.0% Terminal-Bench 2.1) in one open-weight checkpoint, alongside a new revenue-gated 'MiniMax Community License.'",
-    "category": "release",
-    "companies": [
-      "minimax"
-    ],
-    "modelIds": [
-      "minimax-m3"
-    ],
-    "sourceName": "MiniMax",
-    "sourceUrl": "https://www.minimax.io/blog/minimax-m3"
-  },
-  {
-    "id": "2026-02-12-minimax-m2-5",
-    "date": "2026-02-12",
-    "title": "MiniMax releases MiniMax-M2.5, setting a new SWE-bench Verified mark for the series",
-    "summary": "MiniMax's M2.5 update scored 80.2% on SWE-bench Verified, up sharply from M2's 69.4%, while cutting the standard-tier input price to $0.15 per million tokens and adding a faster 'Lightning' throughput mode.",
-    "category": "release",
-    "companies": [
-      "minimax"
-    ],
-    "modelIds": [
-      "minimax-m2-5"
-    ],
-    "sourceName": "MiniMax",
-    "sourceUrl": "https://www.minimax.io/news/minimax-m25"
-  },
-  {
-    "id": "2025-10-27-minimax-m2",
-    "date": "2025-10-27",
-    "title": "MiniMax open-sources MiniMax-M2, an agentic coding model at 8% of Claude Sonnet's price",
-    "summary": "MiniMax released M2 (230B total / 10B active parameters, MIT-derived licence) as an efficiency-focused agentic and coding model, reporting roughly double Claude Sonnet's inference speed at about 8% of its API price and a top-five ranking among open-weight models on Artificial Analysis' index.",
-    "category": "release",
-    "companies": [
-      "minimax"
-    ],
-    "modelIds": [
-      "minimax-m2"
-    ],
-    "sourceName": "MiniMax",
-    "sourceUrl": "https://www.minimax.io/news/minimax-m2"
-  },
-  {
-    "id": "2025-08-05-gpt-oss",
-    "date": "2025-08-05",
-    "title": "OpenAI releases gpt-oss-120b and gpt-oss-20b, its first open-weight models since GPT-2",
-    "summary": "OpenAI shipped two Apache 2.0-licensed reasoning models: gpt-oss-120b (117B total/5.1B active parameters, runs on a single 80GB GPU) and gpt-oss-20b (21B total/3.6B active, runs in ~16GB of memory), both with configurable low/medium/high reasoning effort and a 131K-token context window.",
-    "category": "release",
-    "companies": [
-      "openai"
-    ],
-    "modelIds": [
-      "gpt-oss-120b",
-      "gpt-oss-20b"
-    ],
-    "sourceName": "OpenAI",
-    "sourceUrl": "https://openai.com/index/introducing-gpt-oss/"
-  },
-  {
-    "id": "2026-04-24-ling-2-6-1t",
-    "date": "2026-04-24",
-    "title": "Ant Group releases Ling-2.6-1T, a trillion-parameter \"fast thinking\" flagship",
-    "summary": "Ant Group's Bailing (InclusionAI) team announced Ling-2.6-1T, a ~1 trillion-parameter (63B active) MoE model that skips extended chain-of-thought for token-efficient \"fast thinking,\" reporting 72.2% on SWE-bench Verified with a 262K-token context; open weights (MIT licence) followed on Hugging Face and ModelScope on April 30.",
-    "category": "release",
-    "companies": [
-      "ant-group"
-    ],
-    "modelIds": [
-      "ling-2-6-1t"
-    ],
-    "sourceName": "InclusionAI (Hugging Face)",
-    "sourceUrl": "https://huggingface.co/inclusionAI/Ling-2.6-1T"
-  },
-  {
     "id": "2026-08-03-mach-1-additive-35b",
     "date": "2026-08-03",
     "title": "Syzygy launches Mach-1 Additive 35B, a multiplication-free compression of Qwen3.6-35B",
@@ -474,21 +592,6 @@
     ],
     "sourceName": "Syzygy",
     "sourceUrl": "https://x.com/syzygyeng/status/2084350792841195992"
-  },
-  {
-    "id": "2026-02-17-claude-sonnet-4-6",
-    "date": "2026-02-17",
-    "title": "Anthropic releases Claude Sonnet 4.6 with a 1M-token context window",
-    "summary": "Anthropic shipped Claude Sonnet 4.6 as a full upgrade of its mid-tier model, becoming the default for Free and Pro plans, with improved coding, computer use, long-context reasoning and agent planning at unchanged $3/$15 per million token pricing. It scored 79.6% on SWE-bench Verified and 89.9% on GPQA Diamond, and Anthropic said performance that previously required an Opus-class model is now available in Sonnet 4.6 for many real-world office tasks.",
-    "category": "release",
-    "companies": [
-      "anthropic"
-    ],
-    "modelIds": [
-      "claude-sonnet-4-6"
-    ],
-    "sourceName": "Anthropic",
-    "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-4-6"
   },
   {
     "id": "2026-08-03-qwen3-8-max-ga",
@@ -1330,6 +1433,21 @@
     "sourceUrl": "https://www.axios.com/2026/06/26/openai-gpt-sol-terra-luna-trump"
   },
   {
+    "id": "2026-06-23-seed-2-1-pro",
+    "date": "2026-06-23",
+    "title": "ByteDance launches Doubao Seed 2.1, pitched as an agent that closes out real tasks",
+    "summary": "ByteDance's Seed team released Seed 2.1 Pro and a lower-cost Seed 2.1 Turbo at Volcano Engine's FORCE conference, framing the update around reliable end-to-end coding and multi-step agent execution rather than Seed 2.0's broad multimodal upgrade; no benchmark table was published alongside the qualitative claims.",
+    "category": "release",
+    "companies": [
+      "bytedance"
+    ],
+    "modelIds": [
+      "seed-2-1-pro"
+    ],
+    "sourceName": "ByteDance Seed",
+    "sourceUrl": "https://seed.bytedance.com/en/blog/seed2-1-officially-released-advancing-ai-productivity"
+  },
+  {
     "id": "2026-06-15-eu-ai-act-panel",
     "date": "2026-06-15",
     "title": "EU appoints scientific panel ahead of AI Act penalty powers",
@@ -1452,6 +1570,21 @@
     "sourceUrl": "https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/"
   },
   {
+    "id": "2026-06-01-minimax-m3",
+    "date": "2026-06-01",
+    "title": "MiniMax releases MiniMax-M3, its first natively multimodal open-weight flagship",
+    "summary": "MiniMax shipped M3, combining a 1M-token context window (via a new MiniMax Sparse Attention architecture), native image/video input, and frontier-tier agentic coding (80.5% SWE-bench Verified, 66.0% Terminal-Bench 2.1) in one open-weight checkpoint, alongside a new revenue-gated 'MiniMax Community License.'",
+    "category": "release",
+    "companies": [
+      "minimax"
+    ],
+    "modelIds": [
+      "minimax-m3"
+    ],
+    "sourceName": "MiniMax",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m3"
+  },
+  {
     "id": "2026-05-28-claude-opus-4-8",
     "date": "2026-05-28",
     "title": "Anthropic releases Claude Opus 4.8",
@@ -1507,6 +1640,21 @@
     "sourceUrl": "https://www.forbes.com/sites/ronschmelzer/2026/05/22/the-ai-breakthrough-that-has-mathematicians-paying-attention/"
   },
   {
+    "id": "2026-05-20-command-a-plus",
+    "date": "2026-05-20",
+    "title": "Cohere ships Command A+, consolidating its whole Command A generation into one MoE model",
+    "summary": "Cohere released Command A+ (218B total / 25B active parameters, Apache 2.0 weights), its first Mixture-of-Experts model, folding the separate Command A, Command A Reasoning, Command A Vision and Command A Translate variants into a single model with vision input, agentic tool use and 48-language support, running on as little as one B200 GPU.",
+    "category": "release",
+    "companies": [
+      "cohere"
+    ],
+    "modelIds": [
+      "command-a-plus"
+    ],
+    "sourceName": "Cohere Blog",
+    "sourceUrl": "https://cohere.com/blog/command-a-plus"
+  },
+  {
     "id": "2026-05-20-qwen3-7-max",
     "date": "2026-05-20",
     "title": "Alibaba unveils Qwen3.7 Max, its first closed-weight flagship",
@@ -1550,6 +1698,21 @@
     "sourceUrl": "https://techcrunch.com/2026/05/11/thinking-machines-wants-to-build-an-ai-that-actually-listens-while-it-talks/"
   },
   {
+    "id": "2026-05-08-ernie-5-1",
+    "date": "2026-05-08",
+    "title": "Baidu releases ERNIE 5.1, claiming the top Chinese-model spot on LMArena at 6% of typical training cost",
+    "summary": "Baidu's ERNIE 5.1 is a text-only model distilled from ERNIE 5.0's sub-model matrix to roughly a third of its total parameters, reaching #1 among Chinese models (#4 globally) on LMArena's Search leaderboard and reporting 99.6% AIME 2026 accuracy with tools enabled.",
+    "category": "release",
+    "companies": [
+      "baidu"
+    ],
+    "modelIds": [
+      "ernie-5-1"
+    ],
+    "sourceName": "ERNIE Blog",
+    "sourceUrl": "https://ernie.baidu.com/blog/posts/ernie-5.1-0508-release/"
+  },
+  {
     "id": "2026-05-01-deepseek-huawei",
     "date": "2026-05-01",
     "title": "DeepSeek V4 triggers scramble for Huawei Ascend 950 chips",
@@ -1579,6 +1742,21 @@
     ],
     "sourceName": "Artificial Analysis",
     "sourceUrl": "https://artificialanalysis.ai/articles/xai-launches-grok-4-3-with-improved-agentic-performance-and-lower-pricing"
+  },
+  {
+    "id": "2026-04-24-ling-2-6-1t",
+    "date": "2026-04-24",
+    "title": "Ant Group releases Ling-2.6-1T, a trillion-parameter \"fast thinking\" flagship",
+    "summary": "Ant Group's Bailing (InclusionAI) team announced Ling-2.6-1T, a ~1 trillion-parameter (63B active) MoE model that skips extended chain-of-thought for token-efficient \"fast thinking,\" reporting 72.2% on SWE-bench Verified with a 262K-token context; open weights (MIT licence) followed on Hugging Face and ModelScope on April 30.",
+    "category": "release",
+    "companies": [
+      "ant-group"
+    ],
+    "modelIds": [
+      "ling-2-6-1t"
+    ],
+    "sourceName": "InclusionAI (Hugging Face)",
+    "sourceUrl": "https://huggingface.co/inclusionAI/Ling-2.6-1T"
   },
   {
     "id": "2026-04-24-deepseek-v4",
@@ -1656,6 +1834,51 @@
     "sourceUrl": "https://llm-stats.com/blog/research/nemotron-3-super-launch"
   },
   {
+    "id": "2026-02-17-claude-sonnet-4-6",
+    "date": "2026-02-17",
+    "title": "Anthropic releases Claude Sonnet 4.6 with a 1M-token context window",
+    "summary": "Anthropic shipped Claude Sonnet 4.6 as a full upgrade of its mid-tier model, becoming the default for Free and Pro plans, with improved coding, computer use, long-context reasoning and agent planning at unchanged $3/$15 per million token pricing. It scored 79.6% on SWE-bench Verified and 89.9% on GPQA Diamond, and Anthropic said performance that previously required an Opus-class model is now available in Sonnet 4.6 for many real-world office tasks.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-sonnet-4-6"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/claude-sonnet-4-6"
+  },
+  {
+    "id": "2026-02-14-seed-2-0-pro",
+    "date": "2026-02-14",
+    "title": "ByteDance releases the Seed 2.0 model family, its first with a full published model card",
+    "summary": "ByteDance's Seed team launched Seed 2.0 (Pro/Lite/Mini/Code), reporting 88.9% GPQA Diamond, 98.3% AIME 2025 and 76.5% SWE-bench Verified for the Pro tier alongside a detailed model card covering long-tail knowledge, agentic and video-understanding evaluations against GPT-5.2, Claude and Gemini 3 Pro.",
+    "category": "release",
+    "companies": [
+      "bytedance"
+    ],
+    "modelIds": [
+      "seed-2-0-pro"
+    ],
+    "sourceName": "ByteDance Seed",
+    "sourceUrl": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/seed2/0214/Seed2.0%20Model%20Card.pdf"
+  },
+  {
+    "id": "2026-02-12-minimax-m2-5",
+    "date": "2026-02-12",
+    "title": "MiniMax releases MiniMax-M2.5, setting a new SWE-bench Verified mark for the series",
+    "summary": "MiniMax's M2.5 update scored 80.2% on SWE-bench Verified, up sharply from M2's 69.4%, while cutting the standard-tier input price to $0.15 per million tokens and adding a faster 'Lightning' throughput mode.",
+    "category": "release",
+    "companies": [
+      "minimax"
+    ],
+    "modelIds": [
+      "minimax-m2-5"
+    ],
+    "sourceName": "MiniMax",
+    "sourceUrl": "https://www.minimax.io/news/minimax-m25"
+  },
+  {
     "id": "2026-02-11-gemini-3-1-pro",
     "date": "2026-02-11",
     "title": "Google previews Gemini 3.1 Pro with a 77% ARC-AGI-2 score",
@@ -1669,6 +1892,36 @@
     ],
     "sourceName": "Google DeepMind",
     "sourceUrl": "https://deepmind.google/models/gemini/pro/"
+  },
+  {
+    "id": "2026-01-22-ernie-5-0",
+    "date": "2026-01-22",
+    "title": "Baidu launches ERNIE 5.0, a 2.4-trillion-parameter native omni-modal model",
+    "summary": "Baidu officially launched ERNIE 5.0 at the Ernie Moment Conference 2026 in Shanghai, a unified text/image/audio/video model that became the first Chinese model to reach the LMArena Text leaderboard's global top 10, as monthly active users of Baidu's ERNIE assistant passed 200 million.",
+    "category": "release",
+    "companies": [
+      "baidu"
+    ],
+    "modelIds": [
+      "ernie-5-0"
+    ],
+    "sourceName": "ERNIE Blog",
+    "sourceUrl": "https://ernie.baidu.com/blog/posts/ernie5.0/"
+  },
+  {
+    "id": "2025-12-02-nova-2-pro",
+    "date": "2025-12-02",
+    "title": "Amazon unveils the Nova 2 family, plus a service that lets customers train their own Nova variants",
+    "summary": "At AWS re:Invent 2025, Amazon introduced Nova 2 Pro (preview, its new flagship reasoning model), Nova 2 Lite (GA), Nova 2 Sonic and Nova 2 Omni (preview), alongside Nova Forge for organizations to build custom Nova-based models and Nova Act for browser-automation agents; Amazon says Nova 2 Lite already beats the former flagship Nova Premier at 7x lower cost.",
+    "category": "release",
+    "companies": [
+      "amazon"
+    ],
+    "modelIds": [
+      "nova-2-pro"
+    ],
+    "sourceName": "AWS News Blog",
+    "sourceUrl": "https://aws.amazon.com/about-aws/whats-new/2025/12/nova-2-foundation-models-amazon-bedrock"
   },
   {
     "id": "2025-11-24-opus-4-5",
@@ -1746,6 +1999,21 @@
     "sourceUrl": "https://moonshotai.github.io/Kimi-K2/thinking.html"
   },
   {
+    "id": "2025-10-27-minimax-m2",
+    "date": "2025-10-27",
+    "title": "MiniMax open-sources MiniMax-M2, an agentic coding model at 8% of Claude Sonnet's price",
+    "summary": "MiniMax released M2 (230B total / 10B active parameters, MIT-derived licence) as an efficiency-focused agentic and coding model, reporting roughly double Claude Sonnet's inference speed at about 8% of its API price and a top-five ranking among open-weight models on Artificial Analysis' index.",
+    "category": "release",
+    "companies": [
+      "minimax"
+    ],
+    "modelIds": [
+      "minimax-m2"
+    ],
+    "sourceName": "MiniMax",
+    "sourceUrl": "https://www.minimax.io/news/minimax-m2"
+  },
+  {
     "id": "2025-10-15-haiku-4-5",
     "date": "2025-10-15",
     "title": "Claude Haiku 4.5 brings near-frontier coding to the small-model tier",
@@ -1806,6 +2074,22 @@
     "sourceUrl": "https://openai.com/index/introducing-gpt-5/"
   },
   {
+    "id": "2025-08-05-gpt-oss",
+    "date": "2025-08-05",
+    "title": "OpenAI releases gpt-oss-120b and gpt-oss-20b, its first open-weight models since GPT-2",
+    "summary": "OpenAI shipped two Apache 2.0-licensed reasoning models: gpt-oss-120b (117B total/5.1B active parameters, runs on a single 80GB GPU) and gpt-oss-20b (21B total/3.6B active, runs in ~16GB of memory), both with configurable low/medium/high reasoning effort and a 131K-token context window.",
+    "category": "release",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-oss-120b",
+      "gpt-oss-20b"
+    ],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-oss/"
+  },
+  {
     "id": "2025-07-11-kimi-k2",
     "date": "2025-07-11",
     "title": "Moonshot AI open-sources trillion-parameter Kimi K2",
@@ -1836,6 +2120,36 @@
     "sourceUrl": "https://x.ai/news/grok-4"
   },
   {
+    "id": "2025-04-30-nova-premier",
+    "date": "2025-04-30",
+    "title": "Amazon launches Nova Premier, its most capable model and a teacher for distillation",
+    "summary": "AWS made Nova Premier generally available on Bedrock as its top-of-line multimodal model — a 1M-token-context text/image/video model designed to be both a strong standalone performer and the teacher model for distilling cheaper Nova Lite and Micro variants.",
+    "category": "release",
+    "companies": [
+      "amazon"
+    ],
+    "modelIds": [
+      "nova-premier"
+    ],
+    "sourceName": "AWS News Blog",
+    "sourceUrl": "https://aws.amazon.com/blogs/aws/amazon-nova-premier-our-most-capable-model-for-complex-tasks-and-teacher-for-model-distillation/"
+  },
+  {
+    "id": "2025-03-13-command-a",
+    "date": "2025-03-13",
+    "title": "Cohere launches Command A, claiming GPT-4o/DeepSeek-V3-level performance on two GPUs",
+    "summary": "Cohere released Command A, a 111B-parameter model the company positioned as on par with or better than GPT-4o and DeepSeek-V3 on agentic enterprise tasks, while running on just two GPUs versus the larger footprints typical of comparable open-weight flagships; weights were released under a non-commercial CC-BY-NC licence.",
+    "category": "release",
+    "companies": [
+      "cohere"
+    ],
+    "modelIds": [
+      "command-a"
+    ],
+    "sourceName": "Cohere Blog",
+    "sourceUrl": "https://cohere.com/blog/command-a"
+  },
+  {
     "id": "2025-01-20-deepseek-r1",
     "date": "2025-01-20",
     "title": "DeepSeek-R1 shocks the market with open o1-class reasoning",
@@ -1849,20 +2163,5 @@
     ],
     "sourceName": "DeepSeek",
     "sourceUrl": "https://api-docs.deepseek.com/news/news250120"
-  },
-  {
-    "id": "2026-08-10-muse-glimmer",
-    "date": "2026-08-10",
-    "title": "Meta releases Muse Glimmer, a 30B open-weight agentic model built to run on a single consumer GPU",
-    "summary": "Meta Superintelligence Labs shipped Muse Glimmer, an Apache 2.0-licensed 30B dense multimodal model distilled from the closed Muse Spark and tuned for always-on local agent workflows, reaching SWE-bench Verified 76.0% and AIME 2026 94.7% while running quantized under 20GB with DFlash speculative decoding.",
-    "category": "release",
-    "companies": [
-      "meta"
-    ],
-    "modelIds": [
-      "muse-glimmer"
-    ],
-    "sourceName": "Meta Superintelligence Labs",
-    "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
   }
 ]

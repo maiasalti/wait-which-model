@@ -1,5 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { DEFAULT_COMPARE_STATE, DEFAULT_PICKS, stateToQuery, queryToState } from "./compare-url.ts";
 
 test("default state serialises to an empty query", () => {
@@ -58,4 +59,24 @@ test("an absent picks param yields the defaults, an empty one yields none", () =
 test("a deselected-everything state round-trips", () => {
   const state = { ...DEFAULT_COMPARE_STATE, picks: [] };
   assert.deepEqual(queryToState(new URLSearchParams(stateToQuery(state))), state);
+});
+
+const benchmarkMeta = JSON.parse(
+  readFileSync(new URL("../data/benchmarks.json", import.meta.url), "utf8")
+) as { key: string; retired?: boolean }[];
+
+test("every non-retired benchmark key survives the URL round-trip", () => {
+  for (const b of benchmarkMeta.filter((x) => !x.retired)) {
+    const s = queryToState(new URLSearchParams(`bench=${b.key}`));
+    assert.equal(s.filters.benchmark, b.key);
+  }
+});
+
+test("a retired benchmark in a shared link falls back to the default", () => {
+  const retired = benchmarkMeta.filter((x) => x.retired);
+  assert.ok(retired.length > 0, "fixture: at least one key is retired");
+  for (const b of retired) {
+    const s = queryToState(new URLSearchParams(`bench=${b.key}`));
+    assert.equal(s.filters.benchmark, DEFAULT_COMPARE_STATE.filters.benchmark);
+  }
 });

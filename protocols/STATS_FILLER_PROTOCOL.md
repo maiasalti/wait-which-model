@@ -1,3 +1,16 @@
+---
+type: Protocol
+title: Stats Filler Protocol
+description: Find and fill missing benchmark scores and spec fields (pricing, context window, max output, knowledge cutoff)
+  in data/models.json with verified, sourced values; unverifiable cells are recorded in data/stats-gaps.md so re-runs skip
+  them.
+tags:
+- protocols
+generated:
+  by: human:maia
+  at: '2026-07-22T07:07:48Z'
+---
+
 # Stats Filler Protocol
 
 **Trigger:** Maia says "execute stats filler protocol" (optionally scoped, e.g. "…for the 2026 models" or "…for SWE-bench only").
@@ -11,7 +24,7 @@
 ```bash
 node -e "
 const m=require('./data/models.json');
-const keys=['mmluPro','gpqaDiamond','sweBench','aime','hle','lmarenaElo','arcAgi2'];
+const keys=require('./data/benchmarks.json').filter(b=>!b.retired).map(b=>b.key);
 for(const x of m){
   const miss=keys.filter(k=>x.benchmarks[k]==null);
   const other=[['maxOutput',x.maxOutput],['inputPrice',x.pricing.inputPerMTok],['outputPrice',x.pricing.outputPerMTok],['knowledgeCutoff',x.knowledgeCutoff],['contextWindow',x.contextWindow]].filter(([,v])=>v==null).map(([k])=>k);

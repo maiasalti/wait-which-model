@@ -1,3 +1,17 @@
+---
+type: Design Spec
+title: Daily automated sweep
+description: Design for the unattended weekday sweep (launchd) that runs the health, model, stats and news protocols and opens
+  a PR instead of writing to main — amended 2026-08-13 after the 09:00 slot lost runs to firing before Wi-Fi reconnected.
+tags:
+- docs
+- superpowers
+- specs
+generated:
+  by: human:maia
+  at: '2026-08-14T02:42:48Z'
+---
+
 # Daily automated sweep
 
 **Date:** 2026-08-06

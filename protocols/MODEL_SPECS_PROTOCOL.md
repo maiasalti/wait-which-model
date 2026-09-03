@@ -1,3 +1,15 @@
+---
+type: Protocol
+title: Model Specs Protocol
+description: Find and fill speed, license, apiIds, retirementDate and predecessorId in data/models.json from primary sources;
+  predecessorId requires an explicit replacement claim in the lab's own announcement and is never inferred from naming.
+tags:
+- protocols
+generated:
+  by: human:maia
+  at: '2026-08-05T01:39:04Z'
+---
+
 # Model Specs Protocol
 
 **Trigger:** Maia says "execute model specs protocol" / "fill in model specs" (optionally scoped, e.g. "…for frontier models" or "…for licences only").

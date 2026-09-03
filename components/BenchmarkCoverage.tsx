@@ -5,6 +5,7 @@ import { benchmarks, models } from "@/lib/data";
 export function BenchmarkCoverage() {
   const rows = benchmarks.map((b) => ({
     name: b.name,
+    retired: b.retired ?? false,
     reported: models.filter((m) => m.benchmarks[b.key] != null).length,
   }));
   const total = models.length;
@@ -13,7 +14,12 @@ export function BenchmarkCoverage() {
     <ul className="mono space-y-2 text-xs">
       {rows.map((r) => (
         <li key={r.name} className="flex items-center gap-3">
-          <span className="w-44 shrink-0 truncate text-ink-2">{r.name}</span>
+          <span className="w-44 shrink-0 truncate text-ink-2">
+            {r.name}
+            {r.retired && (
+              <span className="ml-1.5 text-[10px] uppercase tracking-wider text-ink-3">retired</span>
+            )}
+          </span>
           <span className="h-2 flex-1 overflow-hidden rounded-full bg-white/5">
             <span
               className="block h-full rounded-full bg-accent"

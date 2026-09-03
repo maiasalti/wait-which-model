@@ -17,6 +17,11 @@ export const companies = (companiesJson as Company[]).slice().sort(
 
 export const benchmarks = benchmarksJson as BenchmarkMeta[];
 
+/** Benchmarks still worth comparing on. Retired keys stay in `benchmarks` (older
+ *  models' drawers and the coverage table still show them) but are dropped from
+ *  Compare's picker, the head-to-head chart and the URL allowlist. */
+export const activeBenchmarks = benchmarks.filter((b) => !b.retired);
+
 export const methodology = methodologyJson as Methodology;
 
 export const news = (newsJson as NewsItem[]).slice().sort(

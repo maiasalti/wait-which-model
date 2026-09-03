@@ -2,10 +2,11 @@
   {
     "key": "mmluPro",
     "name": "MMLU-Pro",
-    "description": "Harder multi-task knowledge and reasoning benchmark (10-choice questions across 14 domains).",
+    "description": "Harder multi-task knowledge and reasoning benchmark (10-choice questions across 14 domains). Retired: labs stopped reporting it during 2026, so scores already on record stay but it is no longer charted or counted toward frontier status.",
     "unit": "%",
     "higherIsBetter": true,
-    "max": 100
+    "max": 100,
+    "retired": true
   },
   {
     "key": "gpqaDiamond",
@@ -24,6 +25,14 @@
     "max": 100
   },
   {
+    "key": "sweBenchPro",
+    "name": "SWE-bench Pro",
+    "description": "Harder successor to SWE-bench Verified: long-horizon, multi-file issues from newer repositories chosen to resist training-data contamination. Public split; the figure most labs now report instead of Verified.",
+    "unit": "%",
+    "higherIsBetter": true,
+    "max": 100
+  },
+  {
     "key": "terminalBench",
     "name": "Terminal-Bench 2.1",
     "description": "Long-horizon agentic tasks executed in a real terminal; increasingly reported in place of SWE-bench Verified. Version 2.1 only — 2.0 scores are not comparable and are left unset.",
@@ -34,10 +43,11 @@
   {
     "key": "aime",
     "name": "AIME (latest)",
-    "description": "American Invitational Mathematics Examination — competition math, no tools unless noted.",
+    "description": "American Invitational Mathematics Examination — competition math, no tools unless noted. Retired: labs stopped reporting it during 2026, so scores already on record stay but it is no longer charted or counted toward frontier status.",
     "unit": "%",
     "higherIsBetter": true,
-    "max": 100
+    "max": 100,
+    "retired": true
   },
   {
     "key": "hle",
@@ -51,6 +61,14 @@
     "key": "lmarenaElo",
     "name": "LMArena Elo",
     "description": "Crowd-sourced head-to-head preference rating from LMArena (formerly Chatbot Arena).",
+    "unit": "Elo",
+    "higherIsBetter": true,
+    "max": null
+  },
+  {
+    "key": "gdpvalAA",
+    "name": "GDPval-AA v2",
+    "description": "Artificial Analysis' Elo rating for economically valuable knowledge work — real occupational tasks (documents, spreadsheets, analyses) judged pairwise. Measured by Artificial Analysis, not lab-reported.",
     "unit": "Elo",
     "higherIsBetter": true,
     "max": null

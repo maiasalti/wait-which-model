@@ -3,7 +3,7 @@ const assert = require("node:assert/strict");
 const { computeReigns } = require("./frontier-reigns.js");
 
 const mk = (id, releaseDate, tier, benchmarks) => ({ id, releaseDate, tier, benchmarks, status: "superseded" });
-const THREE = (v) => ({ aime: v, hle: v, sweBench: v });
+const THREE = (v) => ({ gpqaDiamond: v, hle: v, sweBench: v });
 
 test("the first rankable model in a tier takes the crown", () => {
   const reigns = computeReigns([mk("a", "2024-01-01", "flagship", THREE(50))]);
@@ -38,7 +38,7 @@ test("a later but weaker model never takes the crown", () => {
 test("models below the benchmark minimum cannot be crowned", () => {
   const reigns = computeReigns([
     mk("a", "2024-01-01", "flagship", THREE(50)),
-    mk("sparse", "2024-06-01", "flagship", { aime: 100 }),
+    mk("sparse", "2024-06-01", "flagship", { gpqaDiamond: 100 }),
   ]);
   assert.deepEqual(reigns.map((r) => r.modelId), ["a"]);
 });
