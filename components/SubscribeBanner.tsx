@@ -14,7 +14,7 @@ import { MESSAGES, useSubscribe } from "./useSubscribe";
  *  where it was already dismissed, and no hydration mismatch), then shows
  *  itself after the visitor scrolls past 120px or after 4 seconds,
  *  whichever comes first — unless localStorage says it was already
- *  dismissed (within the last 30 days) or the visitor already subscribed. */
+ *  dismissed (within the last 24 hours) or the visitor already subscribed. */
 export function SubscribeBanner() {
   const [visible, setVisible] = useState(false);
   const { email, setEmail, status, submit } = useSubscribe();

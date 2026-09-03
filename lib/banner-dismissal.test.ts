@@ -4,11 +4,11 @@ import {
   shouldShowBanner,
   dismissedValue,
   subscribedValue,
-  DISMISS_DAYS,
+  DISMISS_HOURS,
   BANNER_STORAGE_KEY,
 } from "./banner-dismissal.ts";
 
-const DAY_MS = 86_400_000;
+const HOUR_MS = 3_600_000;
 const NOW = Date.parse("2026-09-03T00:00:00Z");
 
 test("null stored value shows banner", () => {
@@ -23,18 +23,18 @@ test("subscribed stored value never shows banner", () => {
   assert.equal(shouldShowBanner(JSON.stringify({ subscribed: true }), NOW), false);
 });
 
-test("dismissed 1 day ago hides banner", () => {
-  const stored = JSON.stringify({ dismissedAt: NOW - DAY_MS });
+test("dismissed 12 hours ago hides banner", () => {
+  const stored = JSON.stringify({ dismissedAt: NOW - 12 * HOUR_MS });
   assert.equal(shouldShowBanner(stored, NOW), false);
 });
 
-test("dismissed 31 days ago shows banner again", () => {
-  const stored = JSON.stringify({ dismissedAt: NOW - 31 * DAY_MS });
+test("dismissed 25 hours ago shows banner again", () => {
+  const stored = JSON.stringify({ dismissedAt: NOW - 25 * HOUR_MS });
   assert.equal(shouldShowBanner(stored, NOW), true);
 });
 
-test("dismissed exactly 30 days ago shows banner again", () => {
-  const stored = JSON.stringify({ dismissedAt: NOW - DISMISS_DAYS * DAY_MS });
+test("dismissed exactly 24 hours ago shows banner again", () => {
+  const stored = JSON.stringify({ dismissedAt: NOW - DISMISS_HOURS * HOUR_MS });
   assert.equal(shouldShowBanner(stored, NOW), true);
 });
 
