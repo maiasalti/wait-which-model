@@ -1,48 +1,14 @@
 "use client";
 
-import { useState } from "react";
-
-type Status = "idle" | "sending" | "done" | "invalid" | "paused" | "limited" | "error";
-
-const MESSAGES: Record<Exclude<Status, "idle" | "sending">, string> = {
-  done: "You're on the list.",
-  invalid: "That address didn't work — try again?",
-  paused: "Sign-ups are paused.",
-  limited: "Too many attempts — try again later.",
-  error: "Something went wrong — try again in a minute.",
-};
+import { MESSAGES, useSubscribe } from "./useSubscribe";
 
 /** Footer sign-up for model-release emails. Posts to /api/subscribe; the
  *  hidden `website` field is a honeypot that real visitors never see. */
 export function SubscribeForm() {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<Status>("idle");
-
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const website = (new FormData(e.currentTarget).get("website") as string) ?? "";
-    setStatus("sending");
-    try {
-      const res = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, website }),
-      });
-      const data = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string };
-      if (res.ok && data.ok) {
-        setStatus("done");
-        setEmail("");
-      } else if (data.error === "invalid_email") setStatus("invalid");
-      else if (data.error === "not_configured") setStatus("paused");
-      else if (data.error === "rate_limited") setStatus("limited");
-      else setStatus("error");
-    } catch {
-      setStatus("error");
-    }
-  }
+  const { email, setEmail, status, submit } = useSubscribe();
 
   return (
-    <form onSubmit={onSubmit} className="flex flex-col items-center gap-2" aria-label="Get an email when a new model is added">
+    <form onSubmit={submit} className="flex flex-col items-center gap-2" aria-label="Get an email when a new model is added">
       <label htmlFor="subscribe-email" className="text-ink-2">
         Get an email when a new model is added
       </label>
