@@ -41,7 +41,11 @@ async function waitForPages(ids) {
   while (pending.size && Date.now() < deadline) {
     for (const id of [...pending]) {
       try {
-        const res = await fetch(`${SITE_URL}/models/${id}`, { method: "HEAD", redirect: "follow" });
+        const res = await fetch(`${SITE_URL}/models/${id}`, {
+          method: "HEAD",
+          redirect: "follow",
+          signal: AbortSignal.timeout(10_000),
+        });
         if (res.ok) pending.delete(id);
       } catch {
         /* network blip — retry on the next tick */
