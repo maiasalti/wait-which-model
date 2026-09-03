@@ -55,7 +55,7 @@ Subscribers (a Resend **Segment**, id in `RESEND_SEGMENT_ID`) get one email per 
 - **Sign-up:** `components/SubscribeForm` in the footer → `app/api/subscribe/route.ts` → Resend `POST /contacts`. Needs `RESEND_API_KEY` + `RESEND_SEGMENT_ID` in Vercel (production only — previews deliberately return 503 "not_configured"). Pure parsing in `lib/subscribe.ts`.
 - **Sender:** `.github/workflows/notify-new-models.yml` (push to main, `paths: data/models.json`) runs `scripts/notify-new-models.js`: diffs model ids between `github.event.before` and `github.sha`, waits up to 10 min for the site to serve each new `/models/<id>`, then Resend `POST /broadcasts` with `send: true`. Pure helpers (`newModelIds`, `buildEmail`) in `scripts/lib/notify.js`, tested under `npm test`. Secrets are GitHub repository secrets of the same names.
 - Subject is `NEW model release: <every added model name, comma-separated>`. Deleting or editing a model never notifies. Re-running a workflow run by hand **resends** — don't. Three merges within a few minutes can drop the middle one's email (GitHub queues one pending run per concurrency group).
-- Dry run: `BEFORE_SHA=<sha> AFTER_SHA=<sha> node scripts/notify-new-models.js --dry-run`. Design: `docs/superpowers/specs/2026-09-03-model-release-notifications-design.md`.
+- Dry run: `BEFORE_SHA=<sha> AFTER_SHA=<sha> node scripts/notify-new-models.js --dry-run`. Manual selection: `MODEL_IDS=<comma-separated ids>` skips the diff and announces exactly those ids (e.g. re-announcing after a failed run) — `MODEL_IDS=claude-fable-5-1,gemini-3-8-flash AFTER_SHA=origin/main node scripts/notify-new-models.js --dry-run`. Design: `docs/superpowers/specs/2026-09-03-model-release-notifications-design.md`.
 
 ## Code layout
 

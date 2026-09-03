@@ -5,9 +5,12 @@
  *
  *  Dry run against a real range (the 09-03 sweep merge, three models):
  *    BEFORE_SHA=2c55e20 AFTER_SHA=b6f2a4e node scripts/notify-new-models.js --dry-run
+ *
+ *  Announce specific models by hand (e.g. re-announce after a failed run):
+ *    MODEL_IDS=claude-fable-5-1,gemini-3-8-flash AFTER_SHA=origin/main node scripts/notify-new-models.js --dry-run
  */
 const { execFileSync } = require("child_process");
-const { newModelIds, isUsableSha, buildEmail } = require("./lib/notify.js");
+const { newModelIds, isUsableSha, parseModelIds, buildEmail } = require("./lib/notify.js");
 
 const DRY_RUN = process.argv.includes("--dry-run");
 const SITE_URL = (process.env.SITE_URL || "https://www.waitwhichmodel.fyi").replace(/\/$/, "");
@@ -88,24 +91,37 @@ async function sendBroadcast({ subject, html, text }, dateLabel) {
 }
 
 async function main() {
-  const { BEFORE_SHA, AFTER_SHA } = process.env;
+  const { BEFORE_SHA, AFTER_SHA, MODEL_IDS } = process.env;
   if (!AFTER_SHA) throw new Error("AFTER_SHA is required");
-  if (!isUsableSha(BEFORE_SHA) || !shaExists(BEFORE_SHA)) {
+
+  const manualIds = parseModelIds(MODEL_IDS);
+  if (manualIds.length === 0 && (!isUsableSha(BEFORE_SHA) || !shaExists(BEFORE_SHA))) {
     log(`no usable before-commit (${BEFORE_SHA || "unset"}); nothing to diff, exiting`);
     return;
   }
 
-  const before = gitJson(BEFORE_SHA, "data/models.json");
   const after = gitJson(AFTER_SHA, "data/models.json");
   const companies = gitJson(AFTER_SHA, "data/companies.json");
-  const ids = newModelIds(before, after);
-  if (ids.length === 0) {
-    log("no new models between", BEFORE_SHA, "and", AFTER_SHA);
-    return;
-  }
-  log("new models:", ids.join(", "));
 
-  const added = after.filter((m) => ids.includes(m.id));
+  let ids, added;
+  if (manualIds.length > 0) {
+    for (const id of manualIds) {
+      if (!after.some((m) => m.id === id)) throw new Error(`MODEL_IDS: unknown model id ${id}`);
+    }
+    ids = manualIds;
+    added = manualIds.map((id) => after.find((m) => m.id === id));
+    log("manual selection:", ids.join(", "));
+  } else {
+    const before = gitJson(BEFORE_SHA, "data/models.json");
+    ids = newModelIds(before, after);
+    if (ids.length === 0) {
+      log("no new models between", BEFORE_SHA, "and", AFTER_SHA);
+      return;
+    }
+    log("new models:", ids.join(", "));
+    added = after.filter((m) => ids.includes(m.id));
+  }
+
   const email = buildEmail(added, companies, SITE_URL);
   const dateLabel = new Date().toISOString().slice(0, 10);
 

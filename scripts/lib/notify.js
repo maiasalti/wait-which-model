@@ -14,6 +14,17 @@ function isUsableSha(sha) {
   return typeof sha === "string" && sha.length > 0 && !/^0+$/.test(sha);
 }
 
+/** Parses the MODEL_IDS override: a comma-separated list of model ids, with
+ *  whitespace trimmed and empty entries dropped. `undefined`/""/whitespace
+ *  all mean "no override" and return []. */
+function parseModelIds(raw) {
+  if (raw === undefined) return [];
+  return raw
+    .split(",")
+    .map((s) => s.trim())
+    .filter((s) => s.length > 0);
+}
+
 const TIER_LABELS = { flagship: "Flagship", balanced: "Balanced", fast: "Fast" };
 
 function escapeHtml(s) {
@@ -81,4 +92,4 @@ function buildEmail(models, companies, siteUrl) {
   return { subject, html, text };
 }
 
-module.exports = { newModelIds, isUsableSha, buildEmail, escapeHtml, TIER_LABELS };
+module.exports = { newModelIds, isUsableSha, parseModelIds, buildEmail, escapeHtml, TIER_LABELS };

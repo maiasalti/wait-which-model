@@ -1,7 +1,7 @@
 // scripts/lib/notify.test.js
 const { test } = require("node:test");
 const assert = require("node:assert/strict");
-const { newModelIds, isUsableSha } = require("./notify.js");
+const { newModelIds, isUsableSha, parseModelIds } = require("./notify.js");
 
 const mk = (...ids) => ids.map((id) => ({ id }));
 
@@ -23,6 +23,16 @@ test("isUsableSha rejects missing and all-zero shas", () => {
   assert.equal(isUsableSha(""), false);
   assert.equal(isUsableSha("0000000000000000000000000000000000000000"), false);
   assert.equal(isUsableSha("b6f2a4e"), true);
+});
+
+test("parseModelIds returns an empty array for undefined, empty, or whitespace-only input", () => {
+  assert.deepEqual(parseModelIds(undefined), []);
+  assert.deepEqual(parseModelIds(""), []);
+  assert.deepEqual(parseModelIds("   "), []);
+});
+
+test("parseModelIds splits on commas, trims whitespace, and drops empty entries", () => {
+  assert.deepEqual(parseModelIds(" a, b ,,c "), ["a", "b", "c"]);
 });
 
 const { buildEmail, escapeHtml } = require("./notify.js");
