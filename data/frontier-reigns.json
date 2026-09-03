@@ -67,25 +67,25 @@
     "modelId": "gemini-3-1-pro",
     "tier": "flagship",
     "start": "2026-02-11",
+    "end": "2026-04-08",
+    "dethronedBy": "muse-spark",
+    "composite": 0.7403
+  },
+  {
+    "modelId": "muse-spark",
+    "tier": "flagship",
+    "start": "2026-04-08",
     "end": "2026-04-23",
     "dethronedBy": "gpt-5-5",
-    "composite": 0.8384
+    "composite": 0.7801
   },
   {
     "modelId": "gpt-5-5",
     "tier": "flagship",
     "start": "2026-04-23",
-    "end": "2026-05-28",
-    "dethronedBy": "claude-opus-4-8",
-    "composite": 0.8606
-  },
-  {
-    "modelId": "claude-opus-4-8",
-    "tier": "flagship",
-    "start": "2026-05-28",
     "end": "2026-06-09",
     "dethronedBy": "claude-fable-5",
-    "composite": 0.8621
+    "composite": 0.8355
   },
   {
     "modelId": "claude-fable-5",
