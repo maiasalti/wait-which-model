@@ -38,7 +38,8 @@ export default function PrivacyPage() {
             , the service that sends the emails, and used for exactly one thing: an email
             when a new model is added to this site. Nothing else is sent to it, and it is
             not shared or sold. Every email has an unsubscribe link, which removes you
-            immediately.
+            immediately. There is no confirmation step, so if someone else entered your
+            address, that same unsubscribe link removes it, or you can email me.
           </p>
         </div>
 

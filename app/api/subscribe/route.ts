@@ -32,6 +32,7 @@ export async function POST(req: Request) {
   if (!apiKey || !segmentId) return json({ error: "not_configured" }, 503);
 
   const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+  // Rate-limit before parsing: cheaper, and bots burn their quota on garbage. (The spec lists parse first; this reordering is deliberate.)
   if (isRateLimited(ip)) return json({ error: "rate_limited" }, 429);
 
   let body: unknown;

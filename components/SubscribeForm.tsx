@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 
-type Status = "idle" | "sending" | "done" | "invalid" | "paused" | "error";
+type Status = "idle" | "sending" | "done" | "invalid" | "paused" | "limited" | "error";
 
 const MESSAGES: Record<Exclude<Status, "idle" | "sending">, string> = {
   done: "You're on the list.",
   invalid: "That address didn't work — try again?",
   paused: "Sign-ups are paused.",
+  limited: "Too many attempts — try again later.",
   error: "Something went wrong — try again in a minute.",
 };
 
@@ -33,6 +34,7 @@ export function SubscribeForm() {
         setEmail("");
       } else if (data.error === "invalid_email") setStatus("invalid");
       else if (data.error === "not_configured") setStatus("paused");
+      else if (data.error === "rate_limited") setStatus("limited");
       else setStatus("error");
     } catch {
       setStatus("error");
