@@ -7,7 +7,10 @@ on:
     branches: [main]
     paths: [data/models.json]
 
-# Pushes in quick succession run one at a time, in order.
+# One run at a time, in order. GitHub keeps at most ONE pending run per group: a third
+# push while one runs and one waits cancels the waiting one, and its models are never
+# announced (each run diffs only its own before→after). Accepted: merges happen one PR
+# at a time.
 concurrency: notify-new-models
 
 permissions:
