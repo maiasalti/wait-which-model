@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { SubscribeForm } from "@/components/SubscribeForm";
+import { SubscribeBanner } from "@/components/SubscribeBanner";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -67,6 +68,7 @@ gtag('config', 'G-GJFVT58K8P');`}
           {children}
         </main>
         {modal}
+        <SubscribeBanner />
         <footer className="mono flex flex-col items-center gap-3 border-t border-line px-4 py-6 text-center text-xs text-ink-3">
           <SubscribeForm />
           <p>
