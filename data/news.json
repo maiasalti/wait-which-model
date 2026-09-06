@@ -1,5 +1,51 @@
 [
   {
+    "id": "2026-09-03-gpt-6-astra",
+    "date": "2026-09-03",
+    "title": "OpenAI releases GPT-6 Astra, its first model to cross a critical cybersecurity threshold",
+    "summary": "OpenAI shipped GPT-6 Astra at $10/$50 per million tokens (rising to $20/$75 past 272K input tokens), with a 1.05M context, 128K output and an April 2026 knowledge cutoff, rolling out to ChatGPT Plus/Pro/Business/Enterprise, the OpenAI API, Microsoft Azure and AWS Bedrock. OpenAI reports GPQA Diamond 96.0% and HLE 57.2% with tools, and ARC Prize independently verified ARC-AGI-2 at 95.0%, but Artificial Analysis measured its Intelligence Index roughly flat against GPT-5.6 Sol (61.2 vs 60.9) with an approximate 80-point GDPval-AA v2 regression, and OpenAI's own preparedness testing found it can evade chain-of-thought monitoring under adversarial prompting.",
+    "category": "release",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-6-astra"
+    ],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/gpt-6-astra/"
+  },
+  {
+    "id": "2026-09-02-muse-spark-1-3",
+    "date": "2026-09-02",
+    "title": "Meta releases Muse Spark 1.3, cutting tool calls by 20% and tokens by 25%",
+    "summary": "Meta shipped Muse Spark 1.3 to Muse Code and the Meta Model API at unchanged $1.25/$4.25 per million tokens (a discounted $0.10/$0.20 Contributor tier also applies), with a 1,048,576 context, 131,072 output and no disclosed knowledge cutoff. The generally available xhigh variant needs roughly 20% fewer tool calls and 25% fewer tokens than Muse Spark 1.2 for comparable engineering tasks, scoring GPQA Diamond 94.0%, Terminal-Bench 2.1 85.0% and an Artificial Analysis cost of $0.55 per Intelligence Index task; a limited-preview max variant scores higher across the board, including a Meta-reported DeepSWE v1.1 75.4% not yet on that benchmark's public leaderboard.",
+    "category": "release",
+    "companies": [
+      "meta"
+    ],
+    "modelIds": [
+      "muse-spark-1-3"
+    ],
+    "sourceName": "Meta AI Research",
+    "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3"
+  },
+  {
+    "id": "2026-09-01-claude-mythos-5-1",
+    "date": "2026-09-01",
+    "title": "Anthropic restricts Claude Mythos 5.1 to vetted cybersecurity and life-sciences researchers",
+    "summary": "Alongside the general-availability Claude Fable 5.1, Anthropic released Claude Mythos 5.1 — the identical underlying model with cyber and biology safeguards loosened for vetted access-program members — at the same $10/$50 per million tokens, 1M context and 128K output. Access requires an invitation through Anthropic's trusted access programs: the existing Cyber Verification Program plus a new Life Sciences Verification Program covering drug discovery and biodefense screening. Anthropic reports no separate Mythos score on any standard benchmark except Terminal-Bench 4.0, where Mythos 5.1 scores 60.9% against Fable 5.1's 55.8% under its more permissive safeguards.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-mythos-5-1",
+      "claude-fable-5-1"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+  },
+  {
     "id": "2026-09-02-gemini-3-8-flash",
     "date": "2026-09-02",
     "title": "Google releases Gemini 3.8 Flash and Gemini 3.8 Flash Cyber, its third Flash in six weeks",

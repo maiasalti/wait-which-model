@@ -633,3 +633,24 @@ Stats-filler sweep on 2026-09-03 (daily sweep), two batches: (a) recent/unknown/
 | gemini-1-5-pro | terminalBench | 2026-09-03 | predates Terminal-Bench (all versions); never evaluated on any board excerpt |
 | gpt-4-turbo | terminalBench | 2026-09-03 | predates Terminal-Bench (all versions); never evaluated on any board excerpt |
 | gpt-4 | terminalBench | 2026-09-03 | predates Terminal-Bench (all versions); never evaluated on any board excerpt |
+
+New-model-release research on 2026-09-06, scoped to `gpt-6-astra`, `claude-mythos-5-1` and `muse-spark-1-3`. WebFetch returned EGRESS_BLOCKED on every domain tried this session (openai.com, docs.aws.amazon.com, research.meta.ai, en.wikipedia.org, llm-stats.com, marktechpost.com, artificialanalysis.ai, cnbc.com, eesel.ai); all findings rest on WebSearch-synthesized excerpts of primary sources, cross-checked across multiple independent outlets each.
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| gpt-6-astra | mmluPro | 2026-09-06 | not reported by OpenAI; not on any tracker excerpt found |
+| gpt-6-astra | sweBench | 2026-09-06 | OpenAI published no SWE-bench Verified or Pro figure for this release; DeepSWE v1.1 74.1% was reported instead and is a different, non-comparable benchmark |
+| gpt-6-astra | sweBenchPro | 2026-09-06 | same — not published |
+| gpt-6-astra | terminalBench | 2026-09-06 | OpenAI's launch table reports Terminal-Bench 4.0 (~57.7-57.9%, transcribed inconsistently across outlets), not the tracked 2.1 metric; recorded in notes instead |
+| gpt-6-astra | aime | 2026-09-06 | not reported; benchmark retired dataset-wide regardless |
+| gpt-6-astra | lmarenaElo | 2026-09-06 | Arena's own X post says Astra is in Agent Arena with "scores coming soon" — not yet on the main text leaderboard as of launch |
+| gpt-6-astra | gdpvalAA | 2026-09-06 | Artificial Analysis and third-party coverage describe an approximate 80-point GDPval-AA v2 Elo regression against GPT-5.6 Sol, but no absolute score was found in any excerpt — left null rather than back-calculate from Sol's recorded 1711 |
+| gpt-6-astra | costPerTask | 2026-09-06 | Artificial Analysis excerpts gave inconsistent low/max effort figures ($0.46-$0.63 low, $1.67 max, in different snippets) and no medium-effort figure specifically; the required usd/effort pairing was not verifiable — left null |
+| claude-mythos-5-1 | mmluPro / gpqaDiamond / sweBench / sweBenchPro / terminalBench / aime / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-09-06 | Anthropic's own system card and launch coverage state Mythos 5.1 shares Fable 5.1's weights and report no separate Mythos score on any of these benchmarks — the sole distinct figure found is Terminal-Bench 4.0 (60.9%, not the tracked 2.1 metric), recorded in notes |
+| claude-mythos-5-1 | speed / costPerTask | 2026-09-06 | Restricted to Project Glasswing invite-only access with no public API; Artificial Analysis has no coverage (only the generally-available Fable 5.1 twin is measured) |
+| muse-spark-1-3 | mmluPro | 2026-09-06 | not reported by Meta; not on any tracker excerpt found |
+| muse-spark-1-3 | sweBench / sweBenchPro | 2026-09-06 | Meta reports DeepSWE v1.1 (75.4% at max) instead of SWE-bench Verified or Pro for this release; as of 2026-09-04 not yet on DeepSWE's own public leaderboard, so treated as an unverified Meta-run result and not recorded in the tracked field |
+| muse-spark-1-3 | aime | 2026-09-06 | not reported; benchmark retired dataset-wide regardless |
+| muse-spark-1-3 | lmarenaElo | 2026-09-06 | no Muse Spark 1.3 text-arena listing found on arena.ai as of this check |
+| muse-spark-1-3 | arcAgi2 | 2026-09-06 | not tested by ARC Prize or any tracker excerpt found |
+| muse-spark-1-3 | knowledgeCutoff | 2026-09-06 | not disclosed by Meta in the launch post or model catalogue, matching the pattern for 1.1 and 1.2 |

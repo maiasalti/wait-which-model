@@ -5219,7 +5219,7 @@
     "name": "Muse Spark 1.2",
     "company": "meta",
     "releaseDate": "2026-08-05",
-    "status": "frontier",
+    "status": "unknown",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 1048576,
@@ -5338,7 +5338,7 @@
     "name": "GPT-5.6-Cyber",
     "company": "openai",
     "releaseDate": "2026-08-10",
-    "status": "frontier",
+    "status": "unknown",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 400000,
@@ -6444,5 +6444,186 @@
       "Served from Alibaba Cloud under Chinese jurisdiction, which some enterprise buyers rule out regardless of capability"
     ],
     "notes": "Dated snapshot of Qwen3.8-Max (Model Studio alias qwen3.8-max-2026-09-02): same 2.4T-parameter base and 1M window, further post-trained on coding and cowork. Announced on Qwen's X account on 2026-09-02 China time (it appeared on QwenCloud late on 2026-09-01 US time). Qwen's own table, relayed by CellCog, Lookonchain and wccftech, reports Terminal-Bench 3.0 29.0% (Qwen3.8-Max: 11.3%), DeepSWE 1.1 69.3% (56.6%) and NL2Repo-Bench 64.9% (55.9%), plus ProgramBench, SWE-Marathon, CoWorkBench, JobBench and Toolathlon rows on which Opus 5 stays ahead; none of these are tracked keys and Terminal-Bench 3.0 is not comparable with the 2.1 cell, so every benchmark cell is null. The GPQA Diamond 92.6 / HLE 43.6 / Terminal-Bench 2.1 86.6 figures circulating for it are Alibaba's August Qwen3.8-Max numbers, not re-runs on this snapshot. Arena's Code Arena: WebDev debut was #1 at 1691 (22 above the previous Qwen3.8-Max); no Text Arena score yet. Context is Qwen's own 1M claim — the sibling qwen3-8-max entry records Model Studio's 983,616 usable figure, which was not re-verified for this snapshot. Pricing unchanged at $2/$6 per MTok with cache reads $0.25 (implicit) / $0.17 (explicit); Artificial Analysis had not published a separate 0902 listing when checked. predecessorId is null — Qwen's just-got-upgraded framing is lineage, and the earlier build is still served under its own id. Qwen's X post and the Model Studio / QwenCloud pages were not fetchable this session."
+  },
+  {
+    "id": "gpt-6-astra",
+    "name": "GPT-6 Astra",
+    "company": "openai",
+    "releaseDate": "2026-09-03",
+    "status": "frontier",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 1050000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 10,
+      "outputPerMTok": 50
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-04",
+    "speed": {
+      "outputTokensPerSec": 79.1,
+      "timeToFirstTokenSec": 24.55,
+      "effort": "medium"
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "gpt-6-astra"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 96,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": 57.2,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": 95
+    },
+    "strengths": [
+      "Computer-use and browser workflows finish in a fraction of the wall-clock time Sol needed — the clearest generational jump in this release",
+      "Holds instructed output length far more reliably than Sol — told to keep its visible reasoning short, it actually does",
+      "Cybersecurity is a deliberate specialism deep enough that OpenAI gated it behind its strictest safeguards rather than ship it open"
+    ],
+    "weaknesses": [
+      "Chain-of-thought oversight got worse, not better — external red-teamers found ways to prompt past its own monitoring, which OpenAI names as an unresolved research priority",
+      "Broad knowledge-work performance is flat to down against its own predecessor outside the benchmarks it was tuned for, reading as a specialist update dressed as a flagship",
+      "Long-context prompts cross a hard pricing cliff well before the context window's ceiling, catching users who assume list price holds throughout"
+    ],
+    "notes": "OpenAI's first model to cross its 'critical' cybersecurity threshold under the Preparedness Framework, so cyber-capable prompts are restricted by design. GPQA Diamond 96.0% is OpenAI-reported; ARC-AGI-2 95.0% is ARC Prize-verified ($1.12/task). HLE 57.2% is with tools, per OpenAI's own launch table (Claude Fable 5.1 leads it at 65.0%). OpenAI published no SWE-bench Verified, SWE-bench Pro or Terminal-Bench 2.1 figure for this release — DeepSWE v1.1 74.1% (vs Sol's 70.8%) and Terminal-Bench 4.0 ~57.7-57.9% (transcribed inconsistently across outlets) were reported instead and aren't comparable to the tracked metrics. Artificial Analysis Intelligence Index 61.2, roughly level with GPT-5.6 Sol's 60.9; AA also reports an approximate 80-point GDPval-AA v2 Elo regression against Sol alongside an ~80-point gain in AA-Briefcase, but no absolute GDPval-AA v2 score was found, so that cell stays null. Standard API pricing reprices to $20/$75 per MTok past 272,000 input tokens; a separate, faster 2x-price tier also exists. Not yet listed on LMArena's text leaderboard as of launch. Rolling out to ChatGPT Plus/Pro/Business/Enterprise, the OpenAI API, Microsoft Azure and AWS Bedrock, though no official Azure/Bedrock model-id string was confirmed."
+  },
+  {
+    "id": "claude-mythos-5-1",
+    "name": "Claude Mythos 5.1",
+    "company": "anthropic",
+    "releaseDate": "2026-09-01",
+    "status": "frontier",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 1000000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 10,
+      "outputPerMTok": 50
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "restricted",
+    "knowledgeCutoff": "2026-06",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "anthropic",
+        "id": "claude-mythos-5-1"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "global.anthropic.claude-mythos-5-1"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Same weights as Claude Fable 5.1 but with cyber and biology safeguards loosened for vetted researchers, so it can be pushed on tasks Fable's production guardrails would refuse",
+      "Its one published score comes in five points above Fable 5.1 on the identical underlying model — a direct read on how much the production safeguards were suppressing",
+      "Two separate vetted-access gates (a cybersecurity defenders program and a new Life Sciences Verification Program) let each community unlock a different permissive slice rather than one blanket switch"
+    ],
+    "weaknesses": [
+      "Not obtainable outside Anthropic's trusted-access programs, so its behavior for a typical user is entirely secondhand",
+      "Requires opting in to provider data sharing just to get access, a friction Fable 5.1 users never face",
+      "No distinct benchmark record beyond one Terminal-Bench 4.0 figure exists — capability claims otherwise rest on Fable 5.1's numbers, not a Mythos-specific evaluation"
+    ],
+    "notes": "Same underlying model as the generally available Claude Fable 5.1 (claude-fable-5-1), differing only in which safeguards are relaxed for vetted access-program members; Anthropic reports no separate Mythos score on any tracked benchmark. On Terminal-Bench 4.0 (not the tracked 2.1 metric), Mythos 5.1 scores 60.9% against Fable 5.1's 55.8%, run with Mythos's more permissive safeguards enabled. Access requires an invitation through Anthropic's trusted access programs — the Cyber Verification Program plus a new Life Sciences Verification Program covering drug discovery and biodefense screening — and opting in to provider data sharing; not covered by Artificial Analysis, so speed and cost-per-task are unmeasured. Pricing, context window and max output mirror Fable 5.1 (cache reads $0.25/MTok, batch $5/$25)."
+  },
+  {
+    "id": "muse-spark-1-3",
+    "name": "Muse Spark 1.3",
+    "company": "meta",
+    "releaseDate": "2026-09-02",
+    "status": "frontier",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 1048576,
+    "maxOutput": 131072,
+    "pricing": {
+      "inputPerMTok": 1.25,
+      "outputPerMTok": 4.25
+    },
+    "costPerTask": {
+      "usd": 0.55,
+      "effort": "xhigh"
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": 128.2,
+      "timeToFirstTokenSec": 54.08,
+      "effort": "xhigh"
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "meta",
+        "id": "muse-spark-1.3"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 94,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": 85,
+      "aime": null,
+      "hle": 47,
+      "lmarenaElo": null,
+      "gdpvalAA": 1709,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Roughly 20% fewer tool calls and 25% fewer tokens than 1.2 to finish comparable engineering tasks — real cost and latency savings in agent loops, not just a benchmark gain",
+      "Follows complex, long-form multi-step instructions more reliably than earlier Muse Spark releases, preserving constraints instead of dropping them mid-task",
+      "Cleaner, less verbose coding style than 1.2, with fewer redundant turns"
+    ],
+    "weaknesses": [
+      "Doesn't expose its thinking process, which developers report makes debugging its coding decisions harder than with models that show reasoning traces",
+      "Its headline scores belong to the max-effort variant still limited to Meta's partners — the publicly available xhigh tier trails behind on the same charts",
+      "Gets confused by skill and tool instructions more often than peers, per early developer reports"
+    ],
+    "notes": "Meta's fourth Muse Spark release in five months. Figures recorded here are for the generally available xhigh variant; the limited-preview max variant (Meta partners only) scores higher across the board — GPQA Diamond ties at 94.0%, Terminal-Bench 2.1 88.8% (ties GPT-5.6 Sol) vs xhigh's 85.0%, HLE ~49% vs xhigh's 47.0%, GDPval-AA v2 1754 vs xhigh's 1709, and an Artificial Analysis Intelligence Index of 62 vs xhigh's 61. Meta reports DeepSWE v1.1 75.4% (max) instead of SWE-bench or SWE-bench Pro; as of 2026-09-04 this hadn't appeared on DeepSWE's public leaderboard, so treat it as a Meta-run result, not an independently verified one. Not yet listed on LMArena's text leaderboard. A discounted Contributor tier (data-sharing, for experimentation) prices at $0.10/$0.20 per MTok, well below the $1.25/$4.25 standard tier recorded here."
   }
 ]
