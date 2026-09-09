@@ -5219,7 +5219,7 @@
     "name": "Muse Spark 1.2",
     "company": "meta",
     "releaseDate": "2026-08-05",
-    "status": "frontier",
+    "status": "unknown",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 1048576,
@@ -5338,7 +5338,7 @@
     "name": "GPT-5.6-Cyber",
     "company": "openai",
     "releaseDate": "2026-08-10",
-    "status": "frontier",
+    "status": "unknown",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 400000,
@@ -6444,5 +6444,130 @@
       "Served from Alibaba Cloud under Chinese jurisdiction, which some enterprise buyers rule out regardless of capability"
     ],
     "notes": "Dated snapshot of Qwen3.8-Max (Model Studio alias qwen3.8-max-2026-09-02): same 2.4T-parameter base and 1M window, further post-trained on coding and cowork. Announced on Qwen's X account on 2026-09-02 China time (it appeared on QwenCloud late on 2026-09-01 US time). Qwen's own table, relayed by CellCog, Lookonchain and wccftech, reports Terminal-Bench 3.0 29.0% (Qwen3.8-Max: 11.3%), DeepSWE 1.1 69.3% (56.6%) and NL2Repo-Bench 64.9% (55.9%), plus ProgramBench, SWE-Marathon, CoWorkBench, JobBench and Toolathlon rows on which Opus 5 stays ahead; none of these are tracked keys and Terminal-Bench 3.0 is not comparable with the 2.1 cell, so every benchmark cell is null. The GPQA Diamond 92.6 / HLE 43.6 / Terminal-Bench 2.1 86.6 figures circulating for it are Alibaba's August Qwen3.8-Max numbers, not re-runs on this snapshot. Arena's Code Arena: WebDev debut was #1 at 1691 (22 above the previous Qwen3.8-Max); no Text Arena score yet. Context is Qwen's own 1M claim — the sibling qwen3-8-max entry records Model Studio's 983,616 usable figure, which was not re-verified for this snapshot. Pricing unchanged at $2/$6 per MTok with cache reads $0.25 (implicit) / $0.17 (explicit); Artificial Analysis had not published a separate 0902 listing when checked. predecessorId is null — Qwen's just-got-upgraded framing is lineage, and the earlier build is still served under its own id. Qwen's X post and the Model Studio / QwenCloud pages were not fetchable this session."
+  },
+  {
+    "id": "gpt-6-astra",
+    "name": "GPT-6 Astra",
+    "company": "openai",
+    "releaseDate": "2026-09-03",
+    "status": "frontier",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 1050000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 10,
+      "outputPerMTok": 50
+    },
+    "costPerTask": {
+      "usd": 0.75,
+      "effort": "medium"
+    },
+    "openWeights": false,
+    "availability": "restricted",
+    "knowledgeCutoff": "2026-04",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "gpt-6-astra"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 96,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Drives a desktop end to end — locating UI targets, filling spreadsheets, building sites — and finishes computer-use tasks markedly faster than Sol did rather than just more accurately",
+      "Holds recall across the full million-token window instead of degrading past a few hundred thousand, so long-document and whole-repo work doesn't need chunking",
+      "Asynchronous tool calls let it fire a call and keep reasoning on independent work while it waits, so long agent runs stall less between steps",
+      "Far harder to hijack through content it reads: indirect prompt-injection attempts land at roughly a third of Sol's rate"
+    ],
+    "weaknesses": [
+      "Its written reasoning is less monitorable than Sol's — OpenAI says so explicitly, so chain-of-thought is a weaker debugging and oversight handle exactly where the model is most autonomous",
+      "The API still defaults to low reasoning effort while the marketing describes the top end, so the model most people call is not the model in the launch table until they set reasoning.effort",
+      "Gated at every layer — trusted-access first, enterprise workspaces off until an admin opts in, cybersecurity capability behind the Daybreak programme — so it can't simply be picked up and trialled",
+      "Behavior is a moving target this early: no hands-on reviews of voice, verbosity or agentic stamina exist yet, and independent leaderboards haven't placed it"
+    ],
+    "notes": "OpenAI's first model designated Critical for cybersecurity under its Preparedness Framework, launched via staged rollout (trusted-access enterprises first, then ChatGPT Plus/Pro/Business/Enterprise and the wider API), hence availability \"restricted\". Context 1,050,000 tokens (922K max input) and 128K output, cutoff 2026-04-30, and $10/$50 per MTok ($1 cached input, $12.50 cache writes) are from OpenAI's own model docs; prompts over 272K input tokens bill at 2x input/cache and 1.5x output for the whole request, and a fast tier costs 2x ($20/$100). GPQA Diamond 96.0 is from OpenAI's launch table; the rest of that table uses benchmarks this site doesn't track (Terminal-Bench 4.0 57.7% — not the tracked 2.1 metric — DeepSWE v1.1 74.1%, FrontierMath Tier 4 v2 97.6%, OSWorld 2.0 72.6%, ScreenSpot-Pro 92.7%, BrowseComp 91.5%, ExploitBench 100%, MRCR v2 8-needle 100% at 256K-512K and 96.3% at 512K-1M). HLE is left null because the only published figure, 57.2%, is with tools and so isn't comparable to the no-tools scores recorded here. OpenAI has not published SWE-bench Verified since February 2026 and Astra is absent from the SWE-bench Pro leaderboard. ARC Prize measured ARC-AGI-3 (62.7% on its standard harness, 99.9% via a provider-adapter harness ARC Prize warns is not comparable to human testing) but published no ARC-AGI-2 figure. Artificial Analysis scores it 61 on the Intelligence Index at max effort (level with GPT-5.6 Sol, 5 below Claude Fable 5.1) at $1.67 per task, and $0.75 per task at medium effort, the figure recorded here; AA reports no speed measurements yet, and flags a ~80 Elo regression on GDPval-AA v2 against Sol without publishing the absolute rating."
+  },
+  {
+    "id": "muse-spark-1-3",
+    "name": "Muse Spark 1.3",
+    "company": "meta",
+    "releaseDate": "2026-09-02",
+    "status": "frontier",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 1048576,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 1.25,
+      "outputPerMTok": 4.25
+    },
+    "costPerTask": {
+      "usd": 0.55,
+      "effort": "xhigh"
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": 179,
+      "timeToFirstTokenSec": 42.49,
+      "effort": "xhigh"
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "meta",
+        "id": "muse-spark-1.3"
+      },
+      {
+        "provider": "openrouter",
+        "id": "meta/muse-spark-1.3"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 94,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": 85,
+      "aime": null,
+      "hle": 47,
+      "lmarenaElo": null,
+      "gdpvalAA": 1709,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Trained to stop and ask — checks in before irreversible actions and surfaces conflicting inputs rather than picking one silently",
+      "Terser in agent loops than 1.2: roughly a fifth fewer tool calls and a quarter fewer tokens on the same coding work",
+      "The million-token window is genuinely usable — near-ceiling recall on Meta's own 512K–1M retrieval evals rather than degrading past the halfway mark",
+      "Streams fast for a reasoning model, so the cost of the long thinking phase is paid up front rather than throughout the answer"
+    ],
+    "weaknesses": [
+      "Long silence before the first answer token — the reasoning phase runs well over half a minute at the shipping effort setting",
+      "Answer verbosity climbed sharply over 1.2, so the unchanged per-token price does not mean unchanged bills",
+      "The headline agentic numbers come from a max reasoning mode that was still in limited preview at launch — what developers can call is the weaker xhigh configuration"
+    ],
+    "notes": "Figures here describe the generally available xhigh reasoning configuration; a stronger `max` variant was still in safety testing at launch and only Artificial Analysis' partner preview had access. Terminal-Bench 2.1 conflicts: Artificial Analysis measured 85% (xhigh) and 86% (max) in its own harness, while Meta reports 88.8% for max — the AA xhigh figure is recorded as the one matching the shipping model. GPQA Diamond, HLE and GDPval-AA v2 are Artificial Analysis measurements of xhigh, not lab-reported. Meta lists a Contributor tier at $0.10/$0.20 per M tokens in exchange for training rights, and cached input at $0.15/M. Meta's roadmap promises a future 'Muse Spark open weights release' but 1.3 itself is closed."
   }
 ]

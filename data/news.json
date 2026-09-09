@@ -1,5 +1,36 @@
 [
   {
+    "id": "2026-09-03-gpt-6-astra",
+    "date": "2026-09-03",
+    "title": "OpenAI launches GPT-6 Astra and calls it the start of the \"AGI era\"",
+    "summary": "GPT-6 Astra is OpenAI's new flagship at $10/$50 per million tokens (2.5x GPT-5.6 Sol, matching Claude Fable 5.1), with a 1.05M-token context, 128K output, an April 2026 cutoff and a staged rollout — trusted-access enterprises first, then ChatGPT Plus/Pro/Business/Enterprise, the API and AWS Bedrock. OpenAI's launch table reports GPQA Diamond 96.0%, FrontierMath Tier 4 v2 97.6%, Terminal-Bench 4.0 57.7%, DeepSWE v1.1 74.1%, OSWorld 2.0 72.6% and ExploitBench 100%, and the model is the first OpenAI designates Critical for cybersecurity under its Preparedness Framework; Artificial Analysis puts it level with Sol on its Intelligence Index at 61 and five points behind Fable 5.1.",
+    "category": "release",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-6-astra",
+      "gpt-5-6-sol"
+    ],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/gpt-6-astra/"
+  },
+  {
+    "id": "2026-09-02-muse-spark-1-3",
+    "date": "2026-09-02",
+    "title": "Meta releases Muse Spark 1.3",
+    "summary": "Meta's new flagship reasoning model holds pricing at $1.25/$4.25 per million tokens and a 1M-token context window, and Artificial Analysis scores the shipping xhigh configuration at 61 on its Intelligence Index. A stronger 'max' reasoning variant with the headline agentic scores was still in limited preview at launch.",
+    "category": "release",
+    "companies": [
+      "meta"
+    ],
+    "modelIds": [
+      "muse-spark-1-3"
+    ],
+    "sourceName": "Meta AI Research",
+    "sourceUrl": "https://research.meta.ai/blog/introducing-muse-spark-1-3"
+  },
+  {
     "id": "2026-09-02-gemini-3-8-flash",
     "date": "2026-09-02",
     "title": "Google releases Gemini 3.8 Flash and Gemini 3.8 Flash Cyber, its third Flash in six weeks",

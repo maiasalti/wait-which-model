@@ -129,3 +129,9 @@ grok-4-1 · apiIds · 2026-09-03 · docs.x.ai lists only grok-4-1-fast-reasoning
 grok-4-1 · retirementDate · 2026-09-03 · Only the Fast variants' 2026-05-15 retirement surfaced; nothing on the base Grok 4.1. Left null.
 kimi-k2 · retirementDate · 2026-09-03 · No lifecycle notice on platform.moonshot.ai. Left null.
 kimi-k2-thinking · retirementDate · 2026-09-03 · No lifecycle notice on platform.moonshot.ai. Left null.
+gpt-6-astra · speed · 2026-09-04 · Artificial Analysis lists output speed and TTFT as N/A across all four effort variants at launch. Left null.
+gpt-6-astra · apiIds · 2026-09-04 · Only OpenAI's own `gpt-6-astra` slug is documented; AWS Bedrock and Azure hosting are announced but no provider model strings are published yet.
+gpt-6-astra · retirementDate · 2026-09-04 · No entry on OpenAI's deprecations page. Left null.
+gpt-6-astra · predecessorId · 2026-09-04 · Neither developers.openai.com/api/docs/models/gpt-6-astra nor deploymentsafety.openai.com/gpt-6-astra names a model Astra replaces — the safety hub says only "significantly more robust than its predecessors" (generic, plural) and otherwise uses GPT-5.6 Sol purely as the comparison baseline. Comparison is not supersession. Left null.
+muse-spark-1-3 · predecessorId · 2026-09-04 · Meta's launch post (research.meta.ai/blog/introducing-muse-spark-1-3) says only that 1.3 "drew on what we learned from months of broad adoption of Muse Code and Meta Model API" and benchmarks against 1.2 — improvement/lineage language, no replacement or supersession claim, and no deprecation notice for muse-spark-1-2 on developer.meta.com. Same bar as muse-spark-1-1 above. Left null.
+muse-spark-1-3 · retirementDate · 2026-09-04 · no lifecycle or deprecation page for the Meta Model API lists a shutdown date for any Muse Spark build. Left null.
