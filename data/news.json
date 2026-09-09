@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-09-08-navier-stokes-solution",
+    "date": "2026-09-08",
+    "title": "OpenAI says an unreleased internal model resolved the Navier–Stokes Millennium Prize problem",
+    "summary": "OpenAI published a proof, produced by an unreleased internal model it describes as significantly more capable than GPT-6 Astra, that the three-dimensional incompressible Navier–Stokes equations can develop a finite-time singularity from a smooth fluid at rest under a smooth force with finite energy, establishing statements 'C' and 'D' of the Clay Mathematics Institute's official formulation of a problem open for roughly 90 years. The blow-up solution is a vortex that spirals inward and stretches along its axis while its energy stays finite. A system of coordinating agents run on the internal model reached the result on 5 September, about 88 hours after launch, at one point using on the order of 10,000 concurrent agents; the Navier–Stokes effort alone consumed 2.7 million agent messages and roughly 130 billion output tokens, and GPT-6 Astra then took a further 17 hours to produce and verify a Lean formalisation. The same run separately disproved regularity for the unforced Euler equations with nearly 100 agents over about 50 hours. OpenAI says it does not intend to claim the Millennium Prize, and recognises the priority of concurrent work by Levent Alpöge and Tristan Buckmaster on the forced Euler problem, which it says it did not see before public release.",
+    "category": "research",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-6-astra"
+    ],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/navier-stokes-solution/"
+  },
+  {
     "id": "2026-09-03-gpt-6-astra",
     "date": "2026-09-03",
     "title": "OpenAI launches GPT-6 Astra and calls it the start of the \"AGI era\"",
