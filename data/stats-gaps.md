@@ -633,3 +633,20 @@ Stats-filler sweep on 2026-09-03 (daily sweep), two batches: (a) recent/unknown/
 | gemini-1-5-pro | terminalBench | 2026-09-03 | predates Terminal-Bench (all versions); never evaluated on any board excerpt |
 | gpt-4-turbo | terminalBench | 2026-09-03 | predates Terminal-Bench (all versions); never evaluated on any board excerpt |
 | gpt-4 | terminalBench | 2026-09-03 | predates Terminal-Bench (all versions); never evaluated on any board excerpt |
+| gpt-6-astra | sweBench | 2026-09-04 | OpenAI stopped publishing SWE-bench Verified in Feb 2026; no Verified score in the launch table or system card |
+| gpt-6-astra | sweBenchPro | 2026-09-04 | Not on the Scale/SWE-bench Pro public leaderboard as of 2026-09-04; OpenAI reported DeepSWE v1.1 74.1 instead |
+| gpt-6-astra | terminalBench | 2026-09-04 | OpenAI reports Terminal-Bench 4.0 (57.7%); no 2.1 run published, and versions are not comparable |
+| gpt-6-astra | hle | 2026-09-04 | Only a with-tools figure published (57.2%); no no-tools score from OpenAI or AA |
+| gpt-6-astra | lmarenaElo | 2026-09-04 | Not yet rated on LMArena/Arena text leaderboard |
+| gpt-6-astra | gdpvalAA | 2026-09-04 | AA's launch article cites only a ~80 Elo regression vs GPT-5.6 Sol, no absolute rating |
+| gpt-6-astra | arcAgi2 | 2026-09-04 | ARC Prize published only ARC-AGI-3 results; secondary claims of a 95.0% ARC-AGI-2 score are unverified by ARC Prize |
+| gpt-6-astra | mmluPro | 2026-09-04 | Retired benchmark; not in OpenAI's launch table |
+| gpt-6-astra | aime | 2026-09-04 | Retired benchmark; not in OpenAI's launch table |
+| muse-spark-1-3 | maxOutput | 2026-09-04 | not stated on developer.meta.com's Muse Spark page, Meta's research blog post, or the OpenRouter listing (which echoes the 1,048,576 context window) |
+| muse-spark-1-3 | knowledgeCutoff | 2026-09-04 | not disclosed by Meta on the model page or launch post; Artificial Analysis' model page leaves it blank |
+| muse-spark-1-3 | mmluPro | 2026-09-04 | not published by Meta (launch material is agent/coding/instruction-following/long-context charts); AA's Intelligence Index v4.1.1 no longer includes MMLU-Pro |
+| muse-spark-1-3 | aime | 2026-09-04 | not published by Meta; no tracker figure found |
+| muse-spark-1-3 | sweBench | 2026-09-04 | Meta reports DeepSWE v1.1 (75.4) and SWEAtlas CodeBase QnA (59.4), neither a SWE-bench Verified score; none found on trackers |
+| muse-spark-1-3 | sweBenchPro | 2026-09-04 | not reported for 1.3 by Meta or any tracker found (1.1 was the last Muse Spark with a SWE-bench Pro figure) |
+| muse-spark-1-3 | arcAgi2 | 2026-09-04 | no Muse Spark 1.3 result on ARC Prize, llm-stats or Epoch AI ARC-AGI-2 boards; only the original Muse Spark (42.5%) has been tested |
+| muse-spark-1-3 | lmarenaElo | 2026-09-04 | no Muse Spark 1.3 listing on arena.ai's text leaderboard two days after launch |
