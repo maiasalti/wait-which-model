@@ -6569,5 +6569,198 @@
       "The headline agentic numbers come from a max reasoning mode that was still in limited preview at launch — what developers can call is the weaker xhigh configuration"
     ],
     "notes": "Figures here describe the generally available xhigh reasoning configuration; a stronger `max` variant was still in safety testing at launch and only Artificial Analysis' partner preview had access. Terminal-Bench 2.1 conflicts: Artificial Analysis measured 85% (xhigh) and 86% (max) in its own harness, while Meta reports 88.8% for max — the AA xhigh figure is recorded as the one matching the shipping model. GPQA Diamond, HLE and GDPval-AA v2 are Artificial Analysis measurements of xhigh, not lab-reported. Meta lists a Contributor tier at $0.10/$0.20 per M tokens in exchange for training rights, and cached input at $0.15/M. Meta's roadmap promises a future 'Muse Spark open weights release' but 1.3 itself is closed."
+  },
+  {
+    "id": "deepseek-v4-1-flash",
+    "name": "DeepSeek-V4.1-Flash",
+    "company": "deepseek",
+    "releaseDate": "2026-09-10",
+    "status": "superseded",
+    "tier": "fast",
+    "modality": "multimodal",
+    "contextWindow": 1048576,
+    "maxOutput": 384000,
+    "pricing": {
+      "inputPerMTok": 0.15,
+      "outputPerMTok": 0.6
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": 206.3,
+      "timeToFirstTokenSec": 10.36,
+      "effort": "max"
+    },
+    "license": {
+      "spdx": "MIT",
+      "name": "MIT License",
+      "kind": "permissive",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "deepseek",
+        "id": "deepseek-v4.1-flash"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": "deepseek-v4-flash-0731",
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 90.9,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": 90.6,
+      "aime": null,
+      "hle": 36.8,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Streams noticeably faster than the 0731 Flash it replaces, so multi-file coding and long agent turns render live rather than in visible chunks",
+      "Handles from-scratch build tasks (e.g. turning a raw 3D asset into an interactive viewer with working UI controls) with little hand-holding",
+      "Native image and PDF input arrives without a separate vision-specific spinoff, folding the short-lived Vision-Exp sibling's capability into the mainline model"
+    ],
+    "weaknesses": [
+      "Markedly more verbose than its predecessor on the same benchmark suite, burning far more output tokens per answer — the flat per-token price doesn't mean a flat bill",
+      "DeepSeek's headline agentic table swaps in its own DeepSWE metric rather than SWE-bench Verified, so the coding claim can't be checked against most rivals' published numbers",
+      "Community throughput reports run well above DeepSeek's own vendor-reported speed figures, an unreconciled gap that leaves the real-world number uncertain"
+    ],
+    "notes": "First model on DeepSeek's new Causal Encoder-Decoder (CED) architecture: a 552B-parameter MoE backbone activating roughly 8B parameters on input (prefill) and 16B on output (decode), with a Compressed Sparse Attention 2 module. DeepSeek's own site describes V4-Flash-0731 and V4-Flash-Vision-Exp as retired, with the deepseek-v4-flash and deepseek-v4-flash-vision-exp API names now routing to V4.1-Flash for compatibility (also temporarily true of deepseek-v4-pro, until a V4.1-Pro ships) — the explicit predecessor statement for the 0731 Flash entry. GPQA Diamond 90.9 and Terminal-Bench 2.1 90.6 are DeepSeek's own launch-comparison-table figures (up from 0731's 82.7 on Terminal-Bench); the table also reports Codeforces 3,471, CyberGym 88.1, NL2Repo-Bench 65.4 and DeepSWE v1.1 74.2, none tracked here. HLE 36.8% is the full no-tools figure; DeepSeek separately reports 39.1% on a text-only subset, not comparable to the multimodal full-set score recorded here. Pricing is peak/off-peak like the rest of the V4 line: $0.15/$0.60 per million tokens off-peak (recorded as the base tier) rising to $0.30/$1.20 at peak (01:00-04:00 and 06:00-10:00 UTC weekdays), with cache-hit input at $0.003/M off-peak and $0.006/M at peak. Speed (206.3 tok/s, 10.36s to first answer token) is Artificial Analysis' max-effort measurement on DeepSeek's own API; a separate AA cross-model speed comparison lists 217.1 tok/s for the same model, a discrepancy this entry could not resolve. Artificial Analysis scores it 40 on its Intelligence Index — a regression from V4-Flash-0731's 50 on the prior index version, not a like-for-like comparison — and flags it as unusually verbose (roughly 250M tokens spent evaluating the index, against a 140M median); its per-task cost figure was not retrievable as text (AA gives only a $476.89 total-evaluation-cost figure). MMLU-Pro, SWE-bench Verified, SWE-bench Pro, AIME, LMArena Elo, ARC-AGI-2 and knowledge cutoff are unpublished."
+  },
+  {
+    "id": "fugu-max",
+    "name": "Fugu Max",
+    "company": "sakana",
+    "releaseDate": "2026-09-11",
+    "status": "unknown",
+    "tier": "balanced",
+    "modality": "multimodal",
+    "contextWindow": 1000000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 2,
+      "outputPerMTok": 6
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-08",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "sakana",
+        "id": "fugu-max"
+      },
+      {
+        "provider": "openrouter",
+        "id": "sakana/fugu-max"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Genuinely cost-competitive on output pricing against same-class flagship single models rather than just against other orchestrators",
+      "One OpenAI-compatible endpoint handles function calling, structured outputs and built-in web search/fetch without extra integration work",
+      "Sakana reports it as best-in-class on several of its own coding and document-reasoning evals against single frontier models, not just against its own prior tier"
+    ],
+    "weaknesses": [
+      "Routing is a black box: which underlying model answered a given request is not exposed or auditable, a real gap for compliance-sensitive use",
+      "Orchestration overhead shows up as billed tokens the user never sees — one hands-on test logged the large majority of a coding task's billed tokens as back-channel coordination rather than visible output",
+      "Latency is unpredictable rather than merely high: simple questions have taken well over a minute end to end while the coordinator deliberates regardless of task difficulty",
+      "Too new for independent benchmark verification — every headline number so far is Sakana's own vendor-reported evaluation"
+    ],
+    "notes": "Not a single foundation model: a language-model orchestrator (built on Sakana's TRINITY and Conductor research, ICLR 2026) trained to route each request across a fixed, undisclosed pool of open-weight and specialized models — including NVIDIA's Nemotron family — and to recursively call itself, then assemble a final answer behind one API. Closed/proprietary: no weights are published and the composition of the model pool is not disclosed. Cache-hit input is $0.25/M; web_search and web_fetch tool calls are billed separately, reported as $0.007/call by some trackers and as $10/1,000 calls ($0.01/call) by OpenRouter's listing — this entry could not reconcile the two. Sakana's launch post claims best-overall score on six of its own benchmarks (Terminal-Bench 2.1, GPQA Diamond, AA-LCR, GDP.pdf, AutomationBench and SWEFish) against single frontier models, but the actual percentages are rendered only in chart images in the announcement, not as text, so none of this site's tracked benchmark fields could be filled with a specific number; GDP.pdf (a Surge AI PDF/document-reasoning benchmark) is a different, unrelated benchmark from this site's gdpvalAA (Artificial Analysis' GDPval-AA v2), so no mapping was made between them. No Artificial Analysis Intelligence Index coverage exists for any Fugu model as of launch, hence costPerTask and speed are null. Knowledge cutoff (2026-08) is sourced from OpenRouter's model listing, not confirmed on an official Sakana page — treat as third-party-sourced."
+  },
+  {
+    "id": "fugu-ultra-v2",
+    "name": "Fugu Ultra v2.0",
+    "company": "sakana",
+    "releaseDate": "2026-09-11",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 1000000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 5,
+      "outputPerMTok": 30
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-08",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "sakana",
+        "id": "fugu-ultra-v2"
+      },
+      {
+        "provider": "openrouter",
+        "id": "sakana/fugu-ultra-v2"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Configurable reasoning effort (high/xhigh/max) plus function calling, structured outputs and built-in web search/fetch in one endpoint, aimed at autonomous research and full-stack agentic work",
+      "Sakana reports it best or joint-best on five of its own eight tracked evals against single frontier models on multi-step reasoning and document-heavy tasks",
+      "A smaller, more selective model pool than the original Fugu Ultra, traded for a reported score increase rather than broader coverage"
+    ],
+    "weaknesses": [
+      "Orchestration tax is severe at this tier: one first-touch coding test logged roughly nine times as many hidden orchestration tokens as visible output, and took several minutes",
+      "Routing decisions are opaque end to end — no way to see or audit which pool model handled a given part of a request",
+      "A heavy user can exhaust a fixed monthly budget in a few hours of sustained use; cost is unpredictable by design rather than merely high",
+      "Too new for independent benchmarking — no Artificial Analysis or third-party leaderboard coverage exists yet, only Sakana's own reported figures"
+    ],
+    "notes": "Not a single foundation model: the higher-capability tier of Sakana's TRINITY/Conductor-derived (ICLR 2026) orchestration architecture, routing each request across a fixed, undisclosed pool of open-weight and specialized models and recursively calling itself, versioned v2.0 as the successor line to the original Fugu Ultra (launched 2026-06-22, later v1.1) — neither earlier build is tracked in this dataset, so predecessorId stays null. Closed/proprietary: no weights published, model-pool composition undisclosed. Pricing rises to $10/$45 per million tokens (and $1.00/M cached input, from $0.50/M) above 272,000 tokens of context. Sakana's launch post reports it best or joint-best on five of eight of its own benchmarks, including 74.3 on DeepSWE and 48.3 on Chartography (vs. 27.3 for Claude Opus 5 and 29.5 for Claude Fable 5 on the latter) — neither DeepSWE nor Chartography maps to a benchmark tracked on this site, and this site's ten tracked keys (GPQA Diamond, Terminal-Bench 2.1, SWE-bench Pro, HLE, etc., all reportedly among Fugu Ultra's strong evals per Sakana) appear only in the announcement's chart images, not as extractable text, so all stay null here. No Artificial Analysis coverage exists for any Fugu model, hence costPerTask and speed are null. Knowledge cutoff (2026-08) is sourced from OpenRouter's model listing, not an official Sakana page — treat as third-party-sourced."
   }
 ]

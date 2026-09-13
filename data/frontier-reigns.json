@@ -189,7 +189,7 @@
     "start": "2026-05-19",
     "end": "2026-07-09",
     "dethronedBy": "gpt-5-6-luna",
-    "composite": 0.6585
+    "composite": 0.6561
   },
   {
     "modelId": "gpt-5-6-luna",
@@ -197,7 +197,7 @@
     "start": "2026-07-09",
     "end": "2026-07-31",
     "dethronedBy": "deepseek-v4-flash-0731",
-    "composite": 0.7362
+    "composite": 0.7338
   },
   {
     "modelId": "deepseek-v4-flash-0731",
@@ -205,7 +205,7 @@
     "start": "2026-07-31",
     "end": "2026-08-13",
     "dethronedBy": "gemini-3-7-flash",
-    "composite": 0.796
+    "composite": 0.7907
   },
   {
     "modelId": "gemini-3-7-flash",
@@ -213,7 +213,7 @@
     "start": "2026-08-13",
     "end": "2026-09-02",
     "dethronedBy": "gemini-3-8-flash",
-    "composite": 0.9745
+    "composite": 0.9712
   },
   {
     "modelId": "gemini-3-8-flash",
@@ -221,6 +221,6 @@
     "start": "2026-09-02",
     "end": null,
     "dethronedBy": null,
-    "composite": 1
+    "composite": 0.9964
   }
 ]

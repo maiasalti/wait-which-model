@@ -650,3 +650,39 @@ Stats-filler sweep on 2026-09-03 (daily sweep), two batches: (a) recent/unknown/
 | muse-spark-1-3 | sweBenchPro | 2026-09-04 | not reported for 1.3 by Meta or any tracker found (1.1 was the last Muse Spark with a SWE-bench Pro figure) |
 | muse-spark-1-3 | arcAgi2 | 2026-09-04 | no Muse Spark 1.3 result on ARC Prize, llm-stats or Epoch AI ARC-AGI-2 boards; only the original Muse Spark (42.5%) has been tested |
 | muse-spark-1-3 | lmarenaElo | 2026-09-04 | no Muse Spark 1.3 listing on arena.ai's text leaderboard two days after launch |
+
+Weekly release-scan sweep on 2026-09-13, scoped to `deepseek-v4-1-flash` (2026-09-10), `fugu-max` and `fugu-ultra-v2` (both 2026-09-11). WebFetch returned EGRESS_BLOCKED for every domain tried this session (api-docs.deepseek.com, huggingface.co, openrouter.ai, deepseek.com, artificialanalysis.ai, datanorth.ai, heise.de, cellcog.ai, bitrue.com, anthropic.com) — findings rest entirely on WebSearch-synthesized excerpts, cross-checked across at least two independent outlets each where possible. Sources checked via excerpts: DeepSeek's own site and API changelog (deepseek.com/en/news/deepseek-v4-1-flash, api-docs.deepseek.com/news/news260910, api-docs.deepseek.com/quick_start/pricing), Hugging Face model card/LICENSE, OpenRouter, Artificial Analysis model pages, technode.com, heise.de, cellcog.ai, bitrue.com, buildfastwithai.com, datacamp.com, mindstudio.ai, an X/Twitter post quoting DeepSeek's own comparison table; Sakana's own site (sakana.ai/fugu-max-release, sakana.ai/fugu, sakana.ai/company-info), OpenRouter, modelgrep.com, datanorth.ai, orcarouter.ai, marktechpost.com, alphasignal.ai, theroboticsmedia.com, pondero.ai, forkast.news.
+
+| deepseek-v4-1-flash | knowledgeCutoff | 2026-09-13 | not disclosed on DeepSeek's site, API changelog or HF card excerpts found; no source stated a training-data cutoff for this build |
+| deepseek-v4-1-flash | sweBench | 2026-09-13 | DeepSeek's launch table reports DeepSWE v1.1 (74.2), not SWE-bench Verified; no comparable figure found |
+| deepseek-v4-1-flash | sweBenchPro | 2026-09-13 | not reported by DeepSeek or found on the SWE-bench Pro public leaderboard as of this check |
+| deepseek-v4-1-flash | mmluPro | 2026-09-13 | not in DeepSeek's launch comparison table; not found on any tracker |
+| deepseek-v4-1-flash | aime | 2026-09-13 | not reported by DeepSeek or found on any tracker |
+| deepseek-v4-1-flash | lmarenaElo | 2026-09-13 | no arena.ai listing found two days after launch |
+| deepseek-v4-1-flash | arcAgi2 | 2026-09-13 | not reported by DeepSeek; not on ARC Prize's leaderboard |
+| deepseek-v4-1-flash | gdpvalAA | 2026-09-13 | not covered by Artificial Analysis' GDPval-AA v2 leaderboard as of this check |
+| deepseek-v4-1-flash | costPerTask.usd | 2026-09-13 | Artificial Analysis publishes only a total-evaluation-cost figure ($476.89) and an Intelligence Index score (40); the per-task `intelligenceIndexCostPerTask.cost.total` figure this field requires was not retrievable as text — never derive it |
+| fugu-max | gpqaDiamond | 2026-09-13 | Sakana's launch post claims a best-overall score but renders the actual percentage only in a chart image, not extractable text; no third-party leaderboard listing found |
+| fugu-max | terminalBench | 2026-09-13 | same chart-image issue as gpqaDiamond; Sakana claims best-overall on Terminal-Bench 2.1 but no numeric figure found in text |
+| fugu-max | sweBench | 2026-09-13 | not reported; Sakana's own evals (SWEFish, AutomationBench) don't map to SWE-bench Verified |
+| fugu-max | sweBenchPro | 2026-09-13 | not reported by Sakana; not on the SWE-bench Pro public leaderboard |
+| fugu-max | hle | 2026-09-13 | not found in any text-extractable source for this specific model |
+| fugu-max | mmluPro | 2026-09-13 | not reported |
+| fugu-max | aime | 2026-09-13 | not reported |
+| fugu-max | lmarenaElo | 2026-09-13 | no arena.ai listing found |
+| fugu-max | arcAgi2 | 2026-09-13 | not reported |
+| fugu-max | gdpvalAA | 2026-09-13 | Sakana reports its own "GDP.pdf" (a Surge AI benchmark), a different benchmark from Artificial Analysis' GDPval-AA v2 — no mapping made; AA has not scored any Fugu model |
+| fugu-max | costPerTask.usd | 2026-09-13 | no Artificial Analysis Intelligence Index page exists for any Fugu model as of this check |
+| fugu-max | speed | 2026-09-13 | no Artificial Analysis measurement exists; third-party OpenRouter/ModelGrep throughput numbers are not AA-sourced and conflict with each other (13-72 tok/s across trackers), so none were recorded per the AA-only rule for this field |
+| fugu-ultra-v2 | gpqaDiamond | 2026-09-13 | same chart-image issue as fugu-max; Sakana reportedly evaluated it but no extractable numeric figure found for the v2.0 build specifically (a 95.5% figure found in comparisons is attributed to the original June 2026 Fugu/Fugu Ultra, not confirmed as the v2.0 build's own score) |
+| fugu-ultra-v2 | terminalBench | 2026-09-13 | same issue; an 82.1% figure found in comparisons is attributed to the original Fugu Ultra, not confirmed as v2.0-specific |
+| fugu-ultra-v2 | sweBench | 2026-09-13 | not reported; Sakana's own SWE Bench Pro claim doesn't specify a numeric score in extractable text |
+| fugu-ultra-v2 | sweBenchPro | 2026-09-13 | Sakana claims state-of-the-art on SWE-bench Pro but the number is only in a chart image |
+| fugu-ultra-v2 | hle | 2026-09-13 | Sakana says it evaluated HLE (incl. multimodal, no tools) but no extractable numeric score found |
+| fugu-ultra-v2 | mmluPro | 2026-09-13 | not reported |
+| fugu-ultra-v2 | aime | 2026-09-13 | not reported |
+| fugu-ultra-v2 | lmarenaElo | 2026-09-13 | no arena.ai listing found |
+| fugu-ultra-v2 | arcAgi2 | 2026-09-13 | not reported |
+| fugu-ultra-v2 | gdpvalAA | 2026-09-13 | Sakana's "GDP.pdf" is a different, Surge-AI-authored benchmark, not Artificial Analysis' GDPval-AA v2 — no mapping made; AA has not scored any Fugu model |
+| fugu-ultra-v2 | costPerTask.usd | 2026-09-13 | no Artificial Analysis Intelligence Index page exists for any Fugu model |
+| fugu-ultra-v2 | speed | 2026-09-13 | no Artificial Analysis measurement exists; third-party trackers disagree (49-55 tok/s range) and are not AA-sourced, so left null per the AA-only rule |

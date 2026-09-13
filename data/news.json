@@ -1,5 +1,39 @@
 [
   {
+    "id": "2026-09-11-fugu-max-fugu-ultra-v2",
+    "date": "2026-09-11",
+    "title": "Sakana AI splits Fugu into Fugu Max and Fugu Ultra v2.0, its multi-agent orchestration systems sold as single models",
+    "summary": "Sakana AI released Fugu Max ($2/$6 per million tokens) as a cost-first tier and Fugu Ultra v2.0 ($5/$30, 1M context) as its highest-capability tier — both are learned orchestrators, built on the lab's TRINITY and Conductor research (ICLR 2026), that route each request across an undisclosed pool of open and specialized models rather than a single trained model. Sakana reports both as best or joint-best on several of its own benchmarks against single frontier models, but the exact scores are published only as chart images, and early hands-on tests flag heavy, opaque orchestration overhead and unpredictable latency and cost.",
+    "category": "release",
+    "companies": [
+      "sakana"
+    ],
+    "modelIds": [
+      "fugu-max",
+      "fugu-ultra-v2"
+    ],
+    "sourceName": "Sakana AI",
+    "sourceUrl": "https://sakana.ai/fugu-max-release/"
+  },
+  {
+    "id": "2026-09-10-deepseek-v4-1-flash",
+    "date": "2026-09-10",
+    "title": "DeepSeek releases V4.1 Flash, retiring V4 Flash and V4 Flash Vision Exp",
+    "summary": "DeepSeek's first model on its new Causal Encoder-Decoder architecture (552B MoE, ~8B active on input/16B on output) adds native multimodal input to the Flash tier and reports Terminal-Bench 2.1 90.6% and GPQA Diamond 90.9%, both up sharply from V4-Flash-0731. It ships MIT-licensed at $0.15/$0.60 per million tokens off-peak (doubling at peak hours), with V4-Flash and V4-Flash-Vision-Exp retired and their API names now routing to V4.1-Flash, and V4-Pro traffic temporarily routing to it too pending a V4.1-Pro release.",
+    "category": "release",
+    "companies": [
+      "deepseek"
+    ],
+    "modelIds": [
+      "deepseek-v4-1-flash",
+      "deepseek-v4-flash-0731",
+      "deepseek-v4-flash-vision-exp",
+      "deepseek-v4-pro-0813"
+    ],
+    "sourceName": "DeepSeek",
+    "sourceUrl": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/"
+  },
+  {
     "id": "2026-09-08-navier-stokes-solution",
     "date": "2026-09-08",
     "title": "OpenAI says an unreleased internal model resolved the Navier–Stokes Millennium Prize problem",

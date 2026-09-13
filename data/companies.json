@@ -223,5 +223,14 @@
     "website": "https://deepreinforce.ai",
     "color": "#2E86C1",
     "order": 25
+  },
+  {
+    "id": "sakana",
+    "name": "Sakana AI",
+    "country": "Japan",
+    "founded": 2023,
+    "website": "https://sakana.ai",
+    "color": "#B8842E",
+    "order": 26
   }
 ]
