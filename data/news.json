@@ -1,5 +1,21 @@
 [
   {
+    "id": "2026-09-11-fugu-max-fugu-ultra-v2",
+    "date": "2026-09-11",
+    "title": "Sakana AI splits Fugu into Fugu Max and Fugu Ultra v2.0, its multi-agent orchestration systems sold as single models",
+    "summary": "Sakana AI released Fugu Max ($2/$6 per million tokens) as a cost-first tier and Fugu Ultra v2.0 ($5/$30, 1M context) as its highest-capability tier — both are learned orchestrators, built on the lab's TRINITY and Conductor research (ICLR 2026), that route each request across an undisclosed pool of open and specialized models rather than a single trained model. Sakana reports both as best or joint-best on several of its own benchmarks against single frontier models, but the exact scores are published only as chart images, and early hands-on tests flag heavy, opaque orchestration overhead and unpredictable latency and cost.",
+    "category": "release",
+    "companies": [
+      "sakana"
+    ],
+    "modelIds": [
+      "fugu-max",
+      "fugu-ultra-v2"
+    ],
+    "sourceName": "Sakana AI",
+    "sourceUrl": "https://sakana.ai/fugu-max-release/"
+  },
+  {
     "id": "2026-09-10-deepseek-v4-1-flash",
     "date": "2026-09-10",
     "title": "DeepSeek releases DeepSeek-V4.1-Flash, a natively multimodal 552B MoE on a new encoder-decoder architecture",
