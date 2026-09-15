@@ -18,20 +18,17 @@
   {
     "id": "2026-09-10-deepseek-v4-1-flash",
     "date": "2026-09-10",
-    "title": "DeepSeek releases V4.1 Flash, retiring V4 Flash and V4 Flash Vision Exp",
-    "summary": "DeepSeek's first model on its new Causal Encoder-Decoder architecture (552B MoE, ~8B active on input/16B on output) adds native multimodal input to the Flash tier and reports Terminal-Bench 2.1 90.6% and GPQA Diamond 90.9%, both up sharply from V4-Flash-0731. It ships MIT-licensed at $0.15/$0.60 per million tokens off-peak (doubling at peak hours), with V4-Flash and V4-Flash-Vision-Exp retired and their API names now routing to V4.1-Flash, and V4-Pro traffic temporarily routing to it too pending a V4.1-Pro release.",
+    "title": "DeepSeek releases DeepSeek-V4.1-Flash, a natively multimodal 552B MoE on a new encoder-decoder architecture",
+    "summary": "DeepSeek's first Causal Encoder-Decoder model activates 8B parameters on input and 16B on output, adds native vision, keeps the 1M context and ships MIT-licensed weights. DeepSeek reports Terminal-Bench 2.1 90.6, DeepSWE 74.2 and GPQA Diamond 90.9 — ahead of its own V4-Pro — at $0.15/$0.60 per MTok off-peak; V4 Flash and V4 Flash Vision Exp are retired and routed to it.",
     "category": "release",
     "companies": [
       "deepseek"
     ],
     "modelIds": [
-      "deepseek-v4-1-flash",
-      "deepseek-v4-flash-0731",
-      "deepseek-v4-flash-vision-exp",
-      "deepseek-v4-pro-0813"
+      "deepseek-v4-1-flash"
     ],
-    "sourceName": "DeepSeek",
-    "sourceUrl": "https://www.deepseek.com/en/news/deepseek-v4-1-flash/"
+    "sourceName": "DeepSeek API Docs",
+    "sourceUrl": "https://api-docs.deepseek.com/news/news260910/"
   },
   {
     "id": "2026-09-08-navier-stokes-solution",

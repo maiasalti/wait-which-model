@@ -4153,7 +4153,7 @@
     "name": "DeepSeek-V4-Flash-0731",
     "company": "deepseek",
     "releaseDate": "2026-07-31",
-    "status": "superseded",
+    "status": "deprecated",
     "tier": "fast",
     "modality": "text",
     "contextWindow": 1048576,
@@ -4187,7 +4187,7 @@
         "id": "deepseek-v4-flash"
       }
     ],
-    "retirementDate": null,
+    "retirementDate": "2026-09-10",
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
@@ -4212,7 +4212,7 @@
       "Fabricates heavily on knowledge probes, and factual coverage has not moved with the agentic gains",
       "Ships without a Jinja chat template — messages go through DeepSeek's own Python encoding scripts instead"
     ],
-    "notes": "The production release of DeepSeek-V4-Flash, superseding April's preview: same 284B/13B MoE and DSpark speculative-decoding module, with all gains from re-post-training. Terminal-Bench 2.1 82.7 is DeepSeek's own figure at max reasoning effort in its minimal-mode harness; Artificial Analysis measures 78.7 on the same benchmark. GPQA Diamond 90.8 and HLE 36.8% (no tools) are Artificial Analysis' measurements — DeepSeek published neither. Also reported by DeepSeek: NL2Repo 54.2, Cybergym 76.7, DeepSWE 54.4, Toolathlon-Verified 70.3, Agents' Last Exam 25.2. MMLU-Pro, SWE-bench Verified, AIME, LMArena and ARC-AGI-2 are unpublished. Artificial Analysis scores it 50 on its Intelligence Index, 10 points above the April preview’s 40. Max output is the 384K DeepSeek recommends for high and max effort; the OpenRouter endpoint caps completions at 65,536. Pricing updated 2026-09-03: DeepSeek moved the V4 line to peak/off-peak billing on 2026-08-16 16:00 UTC (announced 2026-08-14) — the flat $0.14/$0.28 became $0.22/$0.66 off-peak and $0.44/$1.32 during peak hours (01:00-04:00 and 06:00-10:00 UTC); the off-peak rate is recorded here as the base tier, and costPerTask ($0.0271) predates the change."
+    "notes": "The production release of DeepSeek-V4-Flash, superseding April's preview: same 284B/13B MoE and DSpark speculative-decoding module, with all gains from re-post-training. Terminal-Bench 2.1 82.7 is DeepSeek's own figure at max reasoning effort in its minimal-mode harness; Artificial Analysis measures 78.7 on the same benchmark. GPQA Diamond 90.8 and HLE 36.8% (no tools) are Artificial Analysis' measurements — DeepSeek published neither. Also reported by DeepSeek: NL2Repo 54.2, Cybergym 76.7, DeepSWE 54.4, Toolathlon-Verified 70.3, Agents' Last Exam 25.2. MMLU-Pro, SWE-bench Verified, AIME, LMArena and ARC-AGI-2 are unpublished. Artificial Analysis scores it 50 on its Intelligence Index, 10 points above the April preview’s 40. Max output is the 384K DeepSeek recommends for high and max effort; the OpenRouter endpoint caps completions at 65,536. Pricing updated 2026-09-03: DeepSeek moved the V4 line to peak/off-peak billing on 2026-08-16 16:00 UTC (announced 2026-08-14) — the flat $0.14/$0.28 became $0.22/$0.66 off-peak and $0.44/$1.32 during peak hours (01:00-04:00 and 06:00-10:00 UTC); the off-peak rate is recorded here as the base tier, and costPerTask ($0.0271) predates the change. Retired 2026-09-10: DeepSeek's change log states \"the previous-generation models V4 Flash and V4 Flash Vision Exp have been retired\" with the launch of DeepSeek-V4.1-Flash; the `deepseek-v4-flash` id is still accepted but temporarily routed to V4.1-Flash and billed at Flash rates, so calls to it no longer reach this model. Weights remain on Hugging Face."
   },
   {
     "id": "claude-sonnet-4-6",
@@ -6014,7 +6014,7 @@
       "Multi-turn thinking mode requires replaying the previous turn's reasoning verbatim — the most common cause of 400 errors when migrating existing agent loops",
       "Landed as a stealth update with no launch post (the brief notice on DeepSeek's site was pulled within a day), so documentation is thin and behavior is still being characterised"
     ],
-    "notes": "The production release of DeepSeek-V4-Pro, superseding April's preview per DeepSeek's own model card: same 1.6T/49B MoE with a DSpark speculative-decoding module, all gains from re-post-training. Pricing is the peak-hour rate that took effect 2026-08-16 (peak = 01:00–04:00 and 06:00–10:00 UTC); off-peak is 50% lower at $0.66/$1.98 and cache-hit input is cheaper still — roughly a 3–4x rise from the preview's $0.435/$0.87. Terminal-Bench 2.1 87.9 and HLE 42.7% (60.0% with tools) are DeepSeek's own figures at max effort in its minimal-mode harness; independent runs on the Terminus 2 reference harness report 54.68 (V4-Flash-0731: 67.04). GPQA Diamond 93 is Artificial Analysis' measurement as displayed on its charts, not lab-reported — DeepSeek's own 0813 card figure could not be confirmed directly (one unofficial site cites 92.8; the 90.1 many aggregators list is April's preview). SWE-bench Verified 96.4 is third-party (Vals AI, #2 on its board behind Claude Opus 5) — DeepSeek published no SWE-bench figure and the 80.6 some trackers carry is the preview's. Also reported by DeepSeek: DeepSWE 62.7, CyberGym 83.3, NL2Repo 61.5, Toolathlon 74.1, Agents' Last Exam 25.7, AutomationBench 31.8. Artificial Analysis scores it 53 on its Intelligence Index — 8 points above April's preview but only 1 above V4-Flash-0731 on the current index version — measuring 78.1 tok/s and 25.67 s to first answer token on DeepSeek's endpoint at max effort; its per-task cost figure could not be retrieved. MMLU-Pro, AIME, LMArena and ARC-AGI-2 are unpublished. Max output is the 384K DeepSeek recommends for high/max effort. The API went live 2026-08-12 under the unchanged `deepseek-v4-pro` id; the Hugging Face card and DeepSeek's release notice followed on 2026-08-13."
+    "notes": "The production release of DeepSeek-V4-Pro, superseding April's preview per DeepSeek's own model card: same 1.6T/49B MoE with a DSpark speculative-decoding module, all gains from re-post-training. Pricing is the peak-hour rate that took effect 2026-08-16 (peak = 01:00–04:00 and 06:00–10:00 UTC); off-peak is 50% lower at $0.66/$1.98 and cache-hit input is cheaper still — roughly a 3–4x rise from the preview's $0.435/$0.87. Terminal-Bench 2.1 87.9 and HLE 42.7% (60.0% with tools) are DeepSeek's own figures at max effort in its minimal-mode harness; independent runs on the Terminus 2 reference harness report 54.68 (V4-Flash-0731: 67.04). GPQA Diamond 93 is Artificial Analysis' measurement as displayed on its charts, not lab-reported — DeepSeek's own 0813 card figure could not be confirmed directly (one unofficial site cites 92.8; the 90.1 many aggregators list is April's preview). SWE-bench Verified 96.4 is third-party (Vals AI, #2 on its board behind Claude Opus 5) — DeepSeek published no SWE-bench figure and the 80.6 some trackers carry is the preview's. Also reported by DeepSeek: DeepSWE 62.7, CyberGym 83.3, NL2Repo 61.5, Toolathlon 74.1, Agents' Last Exam 25.7, AutomationBench 31.8. Artificial Analysis scores it 53 on its Intelligence Index — 8 points above April's preview but only 1 above V4-Flash-0731 on the current index version — measuring 78.1 tok/s and 25.67 s to first answer token on DeepSeek's endpoint at max effort; its per-task cost figure could not be retrieved. MMLU-Pro, AIME, LMArena and ARC-AGI-2 are unpublished. Max output is the 384K DeepSeek recommends for high/max effort. The API went live 2026-08-12 under the unchanged `deepseek-v4-pro` id; the Hugging Face card and DeepSeek's release notice followed on 2026-08-13. Updated 2026-09-15: DeepSeek's V4.1-Flash launch post (2026-09-10) said all `deepseek-v4-pro` requests would route to V4.1-Flash from 2026-09-14 04:00 UTC until V4.1-Pro ships, but the API change log and pricing page then reversed this \"in response to user demand\" — V4 Pro service continues after 2026-09-14 with billing unchanged, so no retirement is recorded."
   },
   {
     "id": "motif-3",
@@ -6324,7 +6324,7 @@
     "name": "DeepSeek-V4-Flash-Vision-Exp",
     "company": "deepseek",
     "releaseDate": "2026-08-21",
-    "status": "unknown",
+    "status": "deprecated",
     "tier": "fast",
     "modality": "multimodal",
     "contextWindow": 1048576,
@@ -6358,7 +6358,7 @@
         "id": "deepseek-v4-flash-vision-exp"
       }
     ],
-    "retirementDate": null,
+    "retirementDate": "2026-09-10",
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
@@ -6383,7 +6383,7 @@
       "Misreads exact chart values and fails caption-checking far more often than rivals — anything legal, medical or financial needs verification against the source",
       "Labelled experimental by DeepSeek itself — an Exp model whose behaviour may shift before a production vision release"
     ],
-    "notes": "DeepSeek's first multimodal V4 model: a vision encoder and aligner on the 284B-total/13B-active V4-Flash MoE with continued training, live on the API from 2026-08-21 and open-sourced under MIT on 2026-08-31 (FP8 with FP4 expert weights, roughly 168 GB). Terminal-Bench 2.1 83.9 is DeepSeek's own figure from its eleven-benchmark launch table (no logs, sample sizes or confidence intervals published); the table also reports DeepSWE 59.3, Agents' Last Exam 27.3, ApexBench 36.5, ZeroBench pass@5 35.0 and Chartography 64.3 against Opus 4.8, none tracked here. Artificial Analysis scores it 51 at max effort (one above V4-Flash-0731) and folds GPQA Diamond and HLE into that index, but the per-eval figures were not readable, so those cells stay null. Speed (109 tok/s, 19.54 s to first answer token) is AA's max-effort measurement; AA's per-task cost was not visible, only the $235.89 whole-index total, so costPerTask is null rather than derived. Pricing is the off-peak rate that has applied to the whole V4-Flash line since 2026-08-16 — peak hours (01:00-04:00 and 06:00-10:00 UTC) bill double at $0.44/$1.32, the rate AA lists; images bill as tokens, capped at 384 per image; cache hits $0.007/MTok. Max output follows the 384K DeepSeek recommends for V4-Flash at high and max effort. predecessorId is null: DeepSeek frames it as an experimental sibling of V4-Flash-0731, not a replacement. api-docs.deepseek.com and the HF card were not fetchable this session; figures are cross-checked across DeepSeek's X post, OpenRouter, AA and launch coverage."
+    "notes": "DeepSeek's first multimodal V4 model: a vision encoder and aligner on the 284B-total/13B-active V4-Flash MoE with continued training, live on the API from 2026-08-21 and open-sourced under MIT on 2026-08-31 (FP8 with FP4 expert weights, roughly 168 GB). Terminal-Bench 2.1 83.9 is DeepSeek's own figure from its eleven-benchmark launch table (no logs, sample sizes or confidence intervals published); the table also reports DeepSWE 59.3, Agents' Last Exam 27.3, ApexBench 36.5, ZeroBench pass@5 35.0 and Chartography 64.3 against Opus 4.8, none tracked here. Artificial Analysis scores it 51 at max effort (one above V4-Flash-0731) and folds GPQA Diamond and HLE into that index, but the per-eval figures were not readable, so those cells stay null. Speed (109 tok/s, 19.54 s to first answer token) is AA's max-effort measurement; AA's per-task cost was not visible, only the $235.89 whole-index total, so costPerTask is null rather than derived. Pricing is the off-peak rate that has applied to the whole V4-Flash line since 2026-08-16 — peak hours (01:00-04:00 and 06:00-10:00 UTC) bill double at $0.44/$1.32, the rate AA lists; images bill as tokens, capped at 384 per image; cache hits $0.007/MTok. Max output follows the 384K DeepSeek recommends for V4-Flash at high and max effort. predecessorId is null: DeepSeek frames it as an experimental sibling of V4-Flash-0731, not a replacement. api-docs.deepseek.com and the HF card were not fetchable this session; figures are cross-checked across DeepSeek's X post, OpenRouter, AA and launch coverage. Retired 2026-09-10: DeepSeek's change log states \"the previous-generation models V4 Flash and V4 Flash Vision Exp have been retired\" with the launch of DeepSeek-V4.1-Flash, whose vision is native rather than bolted on; the `deepseek-v4-flash-vision-exp` id is still accepted but temporarily routed to V4.1-Flash and billed at Flash rates. Weights remain on Hugging Face."
   },
   {
     "id": "qwen3-8-max-0902",
@@ -6575,25 +6575,25 @@
     "name": "DeepSeek-V4.1-Flash",
     "company": "deepseek",
     "releaseDate": "2026-09-10",
-    "status": "superseded",
+    "status": "frontier",
     "tier": "fast",
     "modality": "multimodal",
-    "contextWindow": 1048576,
+    "contextWindow": 1000000,
     "maxOutput": 384000,
     "pricing": {
       "inputPerMTok": 0.15,
       "outputPerMTok": 0.6
     },
     "costPerTask": {
-      "usd": null,
-      "effort": null
+      "usd": 0.2652,
+      "effort": "max"
     },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
     "speed": {
-      "outputTokensPerSec": 206.3,
-      "timeToFirstTokenSec": 10.36,
+      "outputTokensPerSec": 222.2,
+      "timeToFirstTokenSec": 1.16,
       "effort": "max"
     },
     "license": {
@@ -6606,7 +6606,7 @@
     "apiIds": [
       {
         "provider": "deepseek",
-        "id": "deepseek-v4.1-flash"
+        "id": "deepseek-flash"
       }
     ],
     "retirementDate": null,
@@ -6620,20 +6620,22 @@
       "aime": null,
       "hle": 36.8,
       "lmarenaElo": null,
-      "gdpvalAA": null,
+      "gdpvalAA": 1632,
       "arcAgi2": null
     },
     "strengths": [
-      "Streams noticeably faster than the 0731 Flash it replaces, so multi-file coding and long agent turns render live rather than in visible chunks",
-      "Handles from-scratch build tasks (e.g. turning a raw 3D asset into an interactive viewer with working UI controls) with little hand-holding",
-      "Native image and PDF input arrives without a separate vision-specific spinoff, folding the short-lived Vision-Exp sibling's capability into the mainline model"
+      "Reading is cheaper than writing by design — the encoder half activates half the parameters of the decoder and the KV cache is a quarter of V4-Flash's, so re-reading a large context each agent turn is where the savings actually land",
+      "Vision was trained in from the start of pre-training rather than bolted on as with V4-Flash-Vision-Exp — screenshots and charts go through the same model that does the coding, with no separate endpoint",
+      "Reasoning effort is a continuous 1–100 dial instead of three fixed levels, so token spend can be tuned per call rather than per mode",
+      "Runs on far less hardware than the parameter count suggests — the 197B Engram lookup table can sit on SSD, and Ollama, Baseten and DeepInfra served it on day one under MIT"
     ],
     "weaknesses": [
-      "Markedly more verbose than its predecessor on the same benchmark suite, burning far more output tokens per answer — the flat per-token price doesn't mean a flat bill",
-      "DeepSeek's headline agentic table swaps in its own DeepSWE metric rather than SWE-bench Verified, so the coding claim can't be checked against most rivals' published numbers",
-      "Community throughput reports run well above DeepSeek's own vendor-reported speed figures, an unreconciled gap that leaves the real-world number uncertain"
+      "Thinks at enormous length on max effort — Artificial Analysis found it far more verbose than its peers, so the per-token discount arrives at the bill diluted and its per-task cost is roughly ten times V4-Flash-0731's",
+      "Builds plausible-looking scaffolding fast but the logic underneath breaks under scrutiny — hands-on tests caught a Rubik's-cube 'solver' that just replayed the scramble in reverse",
+      "Agent scores swing with the scaffold — DeepSeek's own table shows several points between its harness and Claude Code or Codex, so the headline figures need the matching harness to reproduce",
+      "Still answers rather than abstains when it doesn't know — Artificial Analysis measures a near-total hallucination rate on its knowledge probe, unchanged from the V4 line"
     ],
-    "notes": "First model on DeepSeek's new Causal Encoder-Decoder (CED) architecture: a 552B-parameter MoE backbone activating roughly 8B parameters on input (prefill) and 16B on output (decode), with a Compressed Sparse Attention 2 module. DeepSeek's own site describes V4-Flash-0731 and V4-Flash-Vision-Exp as retired, with the deepseek-v4-flash and deepseek-v4-flash-vision-exp API names now routing to V4.1-Flash for compatibility (also temporarily true of deepseek-v4-pro, until a V4.1-Pro ships) — the explicit predecessor statement for the 0731 Flash entry. GPQA Diamond 90.9 and Terminal-Bench 2.1 90.6 are DeepSeek's own launch-comparison-table figures (up from 0731's 82.7 on Terminal-Bench); the table also reports Codeforces 3,471, CyberGym 88.1, NL2Repo-Bench 65.4 and DeepSWE v1.1 74.2, none tracked here. HLE 36.8% is the full no-tools figure; DeepSeek separately reports 39.1% on a text-only subset, not comparable to the multimodal full-set score recorded here. Pricing is peak/off-peak like the rest of the V4 line: $0.15/$0.60 per million tokens off-peak (recorded as the base tier) rising to $0.30/$1.20 at peak (01:00-04:00 and 06:00-10:00 UTC weekdays), with cache-hit input at $0.003/M off-peak and $0.006/M at peak. Speed (206.3 tok/s, 10.36s to first answer token) is Artificial Analysis' max-effort measurement on DeepSeek's own API; a separate AA cross-model speed comparison lists 217.1 tok/s for the same model, a discrepancy this entry could not resolve. Artificial Analysis scores it 40 on its Intelligence Index — a regression from V4-Flash-0731's 50 on the prior index version, not a like-for-like comparison — and flags it as unusually verbose (roughly 250M tokens spent evaluating the index, against a 140M median); its per-task cost figure was not retrievable as text (AA gives only a $476.89 total-evaluation-cost figure). MMLU-Pro, SWE-bench Verified, SWE-bench Pro, AIME, LMArena Elo, ARC-AGI-2 and knowledge cutoff are unpublished."
+    "notes": "DeepSeek's first Causal Encoder-Decoder model: a 552B-backbone MoE (763B on disk with the 197B Engram memory, DSpark draft module and vision encoder) activating 8B parameters during prefill and 16B during decode, trained from scratch on 45T multimodal tokens. GPQA Diamond 90.9, Terminal-Bench 2.1 90.6 and HLE 36.8% are DeepSeek's own figures at max reasoning effort (reasoning_effort=100) in its minimal-mode DeepSeek Harness; HLE is 39.1% on the text-only subset and 63.9% with tools, and the same weights score 88.0 on Terminal-Bench 2.1 under Claude Code and 84.1 under Codex per DeepSeek's cross-scaffold table. Artificial Analysis independently measures HLE 39.2% and rates it 1632 on GDPval-AA v2; it scores 40 on AA's Intelligence Index v4.3, which was rescaled since the 50 recorded for V4-Flash-0731 and no longer includes GPQA, so the two index figures are not comparable. Also reported by DeepSeek: DeepSWE v1.1 74.2, Terminal-Bench 3.0 30.0 and 4.0 31.2, Codeforces 3471, MathArena Apex 65.6, NL2Repo-Bench 64.0, CyberGym 88.1, SEC-Bench Pro 62.8, AutomationBench 54.8, Agents' Last Exam 31.8, Chartography 78.9, BabyVision 89.6 and ZeroBench 49.0 (the last three with tools). MMLU-Pro is published only for the base model (74.1, 5-shot) and is not recorded as an instruct score; SWE-bench Verified/Pro, AIME, LMArena and ARC-AGI-2 are unpublished, and Vals AI ranks it the top open-weight model on its index at high effort. Pricing follows the off-peak convention of the V4-Flash-0731 entry: $0.15 input (cache miss) / $0.60 output with cache hits at $0.003, doubling to $0.30 / $1.20 / $0.006 during peak hours (01:00-04:00 and 06:00-10:00 UTC, Monday-Friday) — the peak rate is what Artificial Analysis lists. costPerTask ($0.2652) and speed (222.2 tok/s, 1.16 s to first answer token) are AA's max-effort measurements on DeepSeek's API. Context is the 1M DeepSeek's pricing page states; max output is that page's 384K maximum, while the Hugging Face card recommends max_tokens of at least 256K. The API id is `deepseek-flash`; DeepSeek's change log retired V4 Flash and V4 Flash Vision Exp the same day and temporarily routes `deepseek-v4-flash` and `deepseek-v4-flash-vision-exp` to this model at Flash rates, which is the explicit replacement behind predecessorId. The launch post also said all `deepseek-v4-pro` traffic would route here from 2026-09-14 until V4.1-Pro ships, but the change log and pricing page later reversed that: V4 Pro service continues after 2026-09-14 with billing unchanged. As with the V4 line, no Jinja chat template ships — prompts go through DeepSeek's Python encoding reference or its Rust deepseek-recipe toolkit."
   },
   {
     "id": "fugu-max",

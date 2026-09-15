@@ -651,17 +651,8 @@ Stats-filler sweep on 2026-09-03 (daily sweep), two batches: (a) recent/unknown/
 | muse-spark-1-3 | arcAgi2 | 2026-09-04 | no Muse Spark 1.3 result on ARC Prize, llm-stats or Epoch AI ARC-AGI-2 boards; only the original Muse Spark (42.5%) has been tested |
 | muse-spark-1-3 | lmarenaElo | 2026-09-04 | no Muse Spark 1.3 listing on arena.ai's text leaderboard two days after launch |
 
-Weekly release-scan sweep on 2026-09-13, scoped to `deepseek-v4-1-flash` (2026-09-10), `fugu-max` and `fugu-ultra-v2` (both 2026-09-11). WebFetch returned EGRESS_BLOCKED for every domain tried this session (api-docs.deepseek.com, huggingface.co, openrouter.ai, deepseek.com, artificialanalysis.ai, datanorth.ai, heise.de, cellcog.ai, bitrue.com, anthropic.com) — findings rest entirely on WebSearch-synthesized excerpts, cross-checked across at least two independent outlets each where possible. Sources checked via excerpts: DeepSeek's own site and API changelog (deepseek.com/en/news/deepseek-v4-1-flash, api-docs.deepseek.com/news/news260910, api-docs.deepseek.com/quick_start/pricing), Hugging Face model card/LICENSE, OpenRouter, Artificial Analysis model pages, technode.com, heise.de, cellcog.ai, bitrue.com, buildfastwithai.com, datacamp.com, mindstudio.ai, an X/Twitter post quoting DeepSeek's own comparison table; Sakana's own site (sakana.ai/fugu-max-release, sakana.ai/fugu, sakana.ai/company-info), OpenRouter, modelgrep.com, datanorth.ai, orcarouter.ai, marktechpost.com, alphasignal.ai, theroboticsmedia.com, pondero.ai, forkast.news.
+Weekly release-scan sweep on 2026-09-13, scoped to `fugu-max` and `fugu-ultra-v2` (both 2026-09-11); `deepseek-v4-1-flash` was independently researched and committed the same day (see the 2026-09-15 sweep below for its remaining gaps). WebFetch returned EGRESS_BLOCKED for every domain tried this session (api-docs.deepseek.com, huggingface.co, openrouter.ai, deepseek.com, artificialanalysis.ai, datanorth.ai, heise.de, cellcog.ai, bitrue.com, anthropic.com) — findings rest entirely on WebSearch-synthesized excerpts, cross-checked across at least two independent outlets each where possible. Sources checked via excerpts: Sakana's own site (sakana.ai/fugu-max-release, sakana.ai/fugu, sakana.ai/company-info), OpenRouter, modelgrep.com, datanorth.ai, orcarouter.ai, marktechpost.com, alphasignal.ai, theroboticsmedia.com, pondero.ai, forkast.news.
 
-| deepseek-v4-1-flash | knowledgeCutoff | 2026-09-13 | not disclosed on DeepSeek's site, API changelog or HF card excerpts found; no source stated a training-data cutoff for this build |
-| deepseek-v4-1-flash | sweBench | 2026-09-13 | DeepSeek's launch table reports DeepSWE v1.1 (74.2), not SWE-bench Verified; no comparable figure found |
-| deepseek-v4-1-flash | sweBenchPro | 2026-09-13 | not reported by DeepSeek or found on the SWE-bench Pro public leaderboard as of this check |
-| deepseek-v4-1-flash | mmluPro | 2026-09-13 | not in DeepSeek's launch comparison table; not found on any tracker |
-| deepseek-v4-1-flash | aime | 2026-09-13 | not reported by DeepSeek or found on any tracker |
-| deepseek-v4-1-flash | lmarenaElo | 2026-09-13 | no arena.ai listing found two days after launch |
-| deepseek-v4-1-flash | arcAgi2 | 2026-09-13 | not reported by DeepSeek; not on ARC Prize's leaderboard |
-| deepseek-v4-1-flash | gdpvalAA | 2026-09-13 | not covered by Artificial Analysis' GDPval-AA v2 leaderboard as of this check |
-| deepseek-v4-1-flash | costPerTask.usd | 2026-09-13 | Artificial Analysis publishes only a total-evaluation-cost figure ($476.89) and an Intelligence Index score (40); the per-task `intelligenceIndexCostPerTask.cost.total` figure this field requires was not retrievable as text — never derive it |
 | fugu-max | gpqaDiamond | 2026-09-13 | Sakana's launch post claims a best-overall score but renders the actual percentage only in a chart image, not extractable text; no third-party leaderboard listing found |
 | fugu-max | terminalBench | 2026-09-13 | same chart-image issue as gpqaDiamond; Sakana claims best-overall on Terminal-Bench 2.1 but no numeric figure found in text |
 | fugu-max | sweBench | 2026-09-13 | not reported; Sakana's own evals (SWEFish, AutomationBench) don't map to SWE-bench Verified |
@@ -686,3 +677,13 @@ Weekly release-scan sweep on 2026-09-13, scoped to `deepseek-v4-1-flash` (2026-0
 | fugu-ultra-v2 | gdpvalAA | 2026-09-13 | Sakana's "GDP.pdf" is a different, Surge-AI-authored benchmark, not Artificial Analysis' GDPval-AA v2 — no mapping made; AA has not scored any Fugu model |
 | fugu-ultra-v2 | costPerTask.usd | 2026-09-13 | no Artificial Analysis Intelligence Index page exists for any Fugu model |
 | fugu-ultra-v2 | speed | 2026-09-13 | no Artificial Analysis measurement exists; third-party trackers disagree (49-55 tok/s range) and are not AA-sourced, so left null per the AA-only rule |
+
+Weekly release-scan sweep on 2026-09-15, scoped to `deepseek-v4-1-flash` (2026-09-10).
+
+| deepseek-v4-1-flash | mmluPro | 2026-09-15 | DeepSeek publishes MMLU-Pro only for the base model (74.1, 5-shot) in the HF card; no instruct-model figure, and AA's Intelligence Index v4.3 no longer includes MMLU-Pro |
+| deepseek-v4-1-flash | sweBench | 2026-09-15 | DeepSeek reports DeepSWE v1.1 (74.2), not SWE-bench Verified; Vals AI's model page lists no SWE-bench Verified run for it |
+| deepseek-v4-1-flash | sweBenchPro | 2026-09-15 | not in DeepSeek's launch table; not on the Scale SWE-bench Pro public leaderboard as of 2026-09-15 |
+| deepseek-v4-1-flash | aime | 2026-09-15 | not published by DeepSeek (reports MathArena Apex 65.6 and Codeforces 3471 instead); AA's index no longer carries AIME |
+| deepseek-v4-1-flash | lmarenaElo | 2026-09-15 | no V4.1-Flash listing on arena.ai's text leaderboard (only deepseek-v4-pro variants, ranks 50/57); Design Arena's 1347 is a different arena |
+| deepseek-v4-1-flash | arcAgi2 | 2026-09-15 | ARC Prize has verified V4-Flash-0731 (61.4%) but has no V4.1-Flash results page (arcprize.org/results/deepseek-v4-1-flash returns 404) |
+| deepseek-v4-1-flash | knowledgeCutoff | 2026-09-15 | not disclosed in DeepSeek's HF card, API docs or launch post; AA's model page records knowledgeCutoffDate null |

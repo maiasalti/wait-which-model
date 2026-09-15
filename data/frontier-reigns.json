@@ -211,16 +211,8 @@
     "modelId": "gemini-3-7-flash",
     "tier": "fast",
     "start": "2026-08-13",
-    "end": "2026-09-02",
-    "dethronedBy": "gemini-3-8-flash",
-    "composite": 0.9712
-  },
-  {
-    "modelId": "gemini-3-8-flash",
-    "tier": "fast",
-    "start": "2026-09-02",
     "end": null,
     "dethronedBy": null,
-    "composite": 0.9964
+    "composite": 0.9712
   }
 ]
