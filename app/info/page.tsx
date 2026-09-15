@@ -4,7 +4,7 @@ import { ReignChart } from "@/components/ReignChart";
 import { BenchmarkCoverage } from "@/components/BenchmarkCoverage";
 
 export const metadata: Metadata = {
-  title: "Info · Wait Which Model?",
+  title: "Info",
   description: "How this site defines \"frontier,\" what the benchmarks mean, and how the data stays current.",
 };
 
