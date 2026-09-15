@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-09-10-deepseek-v4-1-flash",
+    "date": "2026-09-10",
+    "title": "DeepSeek releases DeepSeek-V4.1-Flash, a natively multimodal 552B MoE on a new encoder-decoder architecture",
+    "summary": "DeepSeek's first Causal Encoder-Decoder model activates 8B parameters on input and 16B on output, adds native vision, keeps the 1M context and ships MIT-licensed weights. DeepSeek reports Terminal-Bench 2.1 90.6, DeepSWE 74.2 and GPQA Diamond 90.9 — ahead of its own V4-Pro — at $0.15/$0.60 per MTok off-peak; V4 Flash and V4 Flash Vision Exp are retired and routed to it.",
+    "category": "release",
+    "companies": [
+      "deepseek"
+    ],
+    "modelIds": [
+      "deepseek-v4-1-flash"
+    ],
+    "sourceName": "DeepSeek API Docs",
+    "sourceUrl": "https://api-docs.deepseek.com/news/news260910/"
+  },
+  {
     "id": "2026-09-08-navier-stokes-solution",
     "date": "2026-09-08",
     "title": "OpenAI says an unreleased internal model resolved the Navier–Stokes Millennium Prize problem",
