@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy · Wait Which Model?",
+  title: "Privacy Policy",
   description: "How this site handles data and analytics.",
 };
 
@@ -20,7 +20,7 @@ export default function PrivacyPage() {
         <p>
           Wait Which Model? is a static reference site. It has no user accounts and
           nothing to log in to. The one thing it can collect is an email address, and
-          only if you type it into the sign-up box in the footer.
+          only if you type it into the sign-up box in the footer or on the subscribe page.
         </p>
 
         <div>
