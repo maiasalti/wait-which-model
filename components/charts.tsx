@@ -23,21 +23,38 @@ import type { BenchmarkKey, Highlight, Model } from "@/lib/types";
 
 const DIM = 0.14;
 const MARK = 15; // logo mark size in px
+const HIT = 12; // hover target radius in px, independent of the mark's own geometry
 
-/** Scatter mark: the company logo, tinted in the company color, dimmed when not highlighted. */
+/** Scatter mark: the company logo, tinted in the company color, dimmed when not highlighted.
+ *
+ * Recharts puts the tooltip's mouse handlers on a <g> wrapping this shape, and a <g> only
+ * receives pointer events where a child actually paints. Hovering a bare logo path therefore
+ * means hitting its filled pixels — a target that is both tiny and full of holes, so the
+ * tooltip misses between letter strokes. The transparent circle underneath gives every mark
+ * one solid, predictable hit area. It needs fill="transparent" rather than fill="none":
+ * "none" is not hit-tested. */
 function logoShape(color: string, path: string | undefined, dimming: boolean) {
   return function LogoMark(props: unknown) {
     const { cx, cy, payload } = props as { cx?: number; cy?: number; payload?: Point };
     if (cx == null || cy == null) return <g />;
     const opacity = dimming && payload && !payload.hi ? DIM : 0.95;
+    const hitArea = <circle cx={cx} cy={cy} r={HIT} fill="transparent" />;
     if (!path)
-      return <circle cx={cx} cy={cy} r={5} fill={color} fillOpacity={opacity} />;
+      return (
+        <g>
+          {hitArea}
+          <circle cx={cx} cy={cy} r={5} fill={color} fillOpacity={opacity} />
+        </g>
+      );
     return (
-      <g
-        transform={`translate(${cx - MARK / 2}, ${cy - MARK / 2}) scale(${MARK / 24})`}
-        opacity={opacity}
-      >
-        <path d={path} fill={color} />
+      <g>
+        {hitArea}
+        <g
+          transform={`translate(${cx - MARK / 2}, ${cy - MARK / 2}) scale(${MARK / 24})`}
+          opacity={opacity}
+        >
+          <path d={path} fill={color} />
+        </g>
       </g>
     );
   };
