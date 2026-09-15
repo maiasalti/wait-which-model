@@ -18,6 +18,9 @@ permissions:
 
 jobs:
   notify:
+    # Backfills of models that were released a while ago should not email anyone:
+    # put "[skip notify]" in the merge commit message (the head commit of the push).
+    if: "!contains(github.event.head_commit.message, '[skip notify]')"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
