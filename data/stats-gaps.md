@@ -650,3 +650,10 @@ Stats-filler sweep on 2026-09-03 (daily sweep), two batches: (a) recent/unknown/
 | muse-spark-1-3 | sweBenchPro | 2026-09-04 | not reported for 1.3 by Meta or any tracker found (1.1 was the last Muse Spark with a SWE-bench Pro figure) |
 | muse-spark-1-3 | arcAgi2 | 2026-09-04 | no Muse Spark 1.3 result on ARC Prize, llm-stats or Epoch AI ARC-AGI-2 boards; only the original Muse Spark (42.5%) has been tested |
 | muse-spark-1-3 | lmarenaElo | 2026-09-04 | no Muse Spark 1.3 listing on arena.ai's text leaderboard two days after launch |
+| deepseek-v4-1-flash | mmluPro | 2026-09-15 | DeepSeek publishes MMLU-Pro only for the base model (74.1, 5-shot) in the HF card; no instruct-model figure, and AA's Intelligence Index v4.3 no longer includes MMLU-Pro |
+| deepseek-v4-1-flash | sweBench | 2026-09-15 | DeepSeek reports DeepSWE v1.1 (74.2), not SWE-bench Verified; Vals AI's model page lists no SWE-bench Verified run for it |
+| deepseek-v4-1-flash | sweBenchPro | 2026-09-15 | not in DeepSeek's launch table; not on the Scale SWE-bench Pro public leaderboard as of 2026-09-15 |
+| deepseek-v4-1-flash | aime | 2026-09-15 | not published by DeepSeek (reports MathArena Apex 65.6 and Codeforces 3471 instead); AA's index no longer carries AIME |
+| deepseek-v4-1-flash | lmarenaElo | 2026-09-15 | no V4.1-Flash listing on arena.ai's text leaderboard (only deepseek-v4-pro variants, ranks 50/57); Design Arena's 1347 is a different arena |
+| deepseek-v4-1-flash | arcAgi2 | 2026-09-15 | ARC Prize has verified V4-Flash-0731 (61.4%) but has no V4.1-Flash results page (arcprize.org/results/deepseek-v4-1-flash returns 404) |
+| deepseek-v4-1-flash | knowledgeCutoff | 2026-09-15 | not disclosed in DeepSeek's HF card, API docs or launch post; AA's model page records knowledgeCutoffDate null |
