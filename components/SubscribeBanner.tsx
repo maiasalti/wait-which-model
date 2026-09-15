@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import {
   BANNER_STORAGE_KEY,
   dismissedValue,
@@ -18,6 +19,7 @@ import { MESSAGES, useSubscribe } from "./useSubscribe";
 export function SubscribeBanner() {
   const [visible, setVisible] = useState(false);
   const { email, setEmail, status, submit } = useSubscribe();
+  const pathname = usePathname();
 
   useEffect(() => {
     let stored: string | null = null;
@@ -81,7 +83,8 @@ export function SubscribeBanner() {
     setVisible(false);
   }
 
-  if (!visible) return null;
+  // The subscribe page is the form; a second copy pinned under it is noise.
+  if (!visible || pathname === "/subscribe") return null;
 
   return (
     <aside
