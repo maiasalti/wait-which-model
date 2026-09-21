@@ -6,17 +6,28 @@
  *  Dry run against a real range (the 09-03 sweep merge, three models):
  *    BEFORE_SHA=2c55e20 AFTER_SHA=b6f2a4e node scripts/notify-new-models.js --dry-run
  *
- *  Announce specific models by hand (e.g. re-announce after a failed run):
+ *  Announce specific models by hand (e.g. re-announce after a failed run);
+ *  this bypasses the digest queue and cooldown:
  *    MODEL_IDS=claude-fable-5-1,gemini-3-8-flash AFTER_SHA=origin/main node scripts/notify-new-models.js --dry-run
+ *
+ *  Cooldown: a merge inside NOTIFY_COOLDOWN_HOURS (default 20) of the last
+ *  email queues its models in the NOTIFY_PENDING_IDS repository variable
+ *  instead of sending; the daily scheduled run flushes the queue as one digest.
  */
 const { execFileSync } = require("child_process");
-const { newModelIds, isUsableSha, parseModelIds, buildEmail } = require("./lib/notify.js");
+const { newModelIds, isUsableSha, parseModelIds, buildEmail, encodePending, decodePending, mergePending, cooldownActive } = require("./lib/notify.js");
 
 const DRY_RUN = process.argv.includes("--dry-run");
 const SITE_URL = (process.env.SITE_URL || "https://www.waitwhichmodel.fyi").replace(/\/$/, "");
 const FROM = process.env.NOTIFY_FROM || "Wait Which Model? <notify@waitwhichmodel.fyi>";
 const POLL_TIMEOUT_MS = Number(process.env.POLL_TIMEOUT_MS || 10 * 60_000);
 const POLL_INTERVAL_MS = Number(process.env.POLL_INTERVAL_MS || 20_000);
+// Merges that land within this window of the last email are queued, not sent;
+// the daily scheduled run flushes the queue as one digest. Keeps a burst of
+// separate PR merges from turning into a burst of emails.
+const COOLDOWN_MS = Number(process.env.NOTIFY_COOLDOWN_HOURS || 20) * 3600_000;
+const VAR_PENDING = "NOTIFY_PENDING_IDS";
+const VAR_LAST_SENT = "NOTIFY_LAST_SENT_AT";
 
 const log = (...a) => console.log("[notify]", ...a);
 
@@ -62,6 +73,36 @@ async function waitForPages(ids) {
   if (pending.size) log(`WARNING: ${[...pending].join(", ")} not live after ${POLL_TIMEOUT_MS / 1000}s — sending anyway`);
 }
 
+/** Repository variables hold the digest queue and the last send time. The
+ *  workflow token needs `actions: write` for the PATCH/POST. */
+async function ghVar(name) {
+  const { GITHUB_REPOSITORY, GITHUB_TOKEN } = process.env;
+  const res = await fetch(`https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/variables/${name}`, {
+    headers: { Authorization: `Bearer ${GITHUB_TOKEN}`, Accept: "application/vnd.github+json" },
+  });
+  if (res.status === 404) return undefined;
+  if (!res.ok) throw new Error(`GitHub variables GET ${name}: ${res.status} ${await res.text()}`);
+  return (await res.json()).value;
+}
+
+async function setGhVar(name, value) {
+  const { GITHUB_REPOSITORY, GITHUB_TOKEN } = process.env;
+  const headers = { Authorization: `Bearer ${GITHUB_TOKEN}`, Accept: "application/vnd.github+json", "Content-Type": "application/json" };
+  let res = await fetch(`https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/variables/${name}`, {
+    method: "PATCH",
+    headers,
+    body: JSON.stringify({ name, value }),
+  });
+  if (res.status === 404) {
+    res = await fetch(`https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/variables`, {
+      method: "POST",
+      headers,
+      body: JSON.stringify({ name, value }),
+    });
+  }
+  if (!res.ok) throw new Error(`GitHub variables set ${name}: ${res.status} ${await res.text()}`);
+}
+
 async function sendBroadcast({ subject, html, text }, dateLabel) {
   const res = await fetch("https://api.resend.com/broadcasts", {
     method: "POST",
@@ -94,34 +135,63 @@ async function main() {
   const { BEFORE_SHA, AFTER_SHA, MODEL_IDS } = process.env;
   if (!AFTER_SHA) throw new Error("AFTER_SHA is required");
 
-  const manualIds = parseModelIds(MODEL_IDS);
-  if (manualIds.length === 0 && (!isUsableSha(BEFORE_SHA) || !shaExists(BEFORE_SHA))) {
-    log(`no usable before-commit (${BEFORE_SHA || "unset"}); nothing to diff, exiting`);
-    return;
-  }
-
   const after = gitJson(AFTER_SHA, "data/models.json");
   const companies = gitJson(AFTER_SHA, "data/companies.json");
+  const manualIds = parseModelIds(MODEL_IDS);
 
-  let ids, added;
+  // What this run itself added. A scheduled flush has no diff base and adds nothing.
+  let ids = [];
   if (manualIds.length > 0) {
     for (const id of manualIds) {
       if (!after.some((m) => m.id === id)) throw new Error(`MODEL_IDS: unknown model id ${id}`);
     }
     ids = manualIds;
-    added = manualIds.map((id) => after.find((m) => m.id === id));
     log("manual selection:", ids.join(", "));
+  } else if (isUsableSha(BEFORE_SHA) && shaExists(BEFORE_SHA)) {
+    ids = newModelIds(gitJson(BEFORE_SHA, "data/models.json"), after);
+    if (ids.length) log("new models:", ids.join(", "));
+    else log("no new models between", BEFORE_SHA, "and", AFTER_SHA);
   } else {
-    const before = gitJson(BEFORE_SHA, "data/models.json");
-    ids = newModelIds(before, after);
-    if (ids.length === 0) {
-      log("no new models between", BEFORE_SHA, "and", AFTER_SHA);
-      return;
-    }
-    log("new models:", ids.join(", "));
-    added = after.filter((m) => ids.includes(m.id));
+    log(`no usable before-commit (${BEFORE_SHA || "unset"}); checking the digest queue only`);
   }
 
+  // The digest queue: manual selections bypass it (a human asked for exactly this email).
+  const manual = manualIds.length > 0;
+  const stateAvailable = Boolean(process.env.GITHUB_TOKEN && process.env.GITHUB_REPOSITORY);
+  let pending = ids;
+  let lastSentAt;
+  if (!manual && stateAvailable) {
+    const [storedPending, storedLast] = await Promise.all([ghVar(VAR_PENDING), ghVar(VAR_LAST_SENT)]);
+    lastSentAt = storedLast;
+    pending = mergePending(storedPending, ids);
+    const queued = decodePending(storedPending);
+    if (queued.length) log("already queued:", queued.join(", "));
+  } else if (!manual) {
+    log("no GITHUB_TOKEN/GITHUB_REPOSITORY; digest queue and cooldown disabled for this run");
+  }
+
+  if (pending.length === 0) {
+    log("nothing to announce");
+    return;
+  }
+
+  // Ids queued earlier may have been deleted since; announce only what still exists.
+  const announce = pending.filter((id) => after.some((m) => m.id === id));
+  const dropped = pending.filter((id) => !announce.includes(id));
+  if (dropped.length) log("dropped (no longer in models.json):", dropped.join(", "));
+
+  if (!manual && cooldownActive(lastSentAt, Date.now(), COOLDOWN_MS)) {
+    log(`last email went out at ${lastSentAt}, inside the ${COOLDOWN_MS / 3600_000}h cooldown; queueing`, announce.join(", "));
+    if (!DRY_RUN && stateAvailable) await setGhVar(VAR_PENDING, encodePending(announce));
+    return;
+  }
+  if (announce.length === 0) {
+    log("nothing left to announce");
+    if (!DRY_RUN && stateAvailable && !manual) await setGhVar(VAR_PENDING, encodePending([]));
+    return;
+  }
+
+  const added = announce.map((id) => after.find((m) => m.id === id));
   const email = buildEmail(added, companies, SITE_URL);
   const dateLabel = new Date().toISOString().slice(0, 10);
 
@@ -132,9 +202,15 @@ async function main() {
   }
 
   for (const k of ["RESEND_API_KEY", "RESEND_SEGMENT_ID"]) if (!process.env[k]) throw new Error(`${k} is required`);
-  await waitForPages(ids);
+  // Record the send before making it: a crash after this point can cost one
+  // email (re-announce with MODEL_IDS), never produce a duplicate.
+  if (stateAvailable && !manual) {
+    await setGhVar(VAR_PENDING, encodePending([]));
+    await setGhVar(VAR_LAST_SENT, new Date().toISOString());
+  }
+  await waitForPages(announce);
   const result = await sendBroadcast(email, dateLabel);
-  log("broadcast sent:", result.id);
+  log("broadcast sent:", result.id, "for", announce.join(", "));
 }
 
 main().catch((err) => {

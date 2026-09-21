@@ -27,6 +27,32 @@ function parseModelIds(raw) {
   return [...new Set(ids)];
 }
 
+/** The digest queue lives in a GitHub Actions repository variable, which
+ *  cannot hold an empty string, so "-" stands for "nothing pending". */
+function encodePending(ids) {
+  return ids.length ? ids.join(",") : "-";
+}
+
+function decodePending(raw) {
+  if (raw === undefined || raw === null || raw === "-") return [];
+  return parseModelIds(String(raw));
+}
+
+/** Ids already waiting plus the ones this push added, deduplicated, queue
+ *  order preserved so the oldest announcement leads the email. */
+function mergePending(storedRaw, ids) {
+  return [...new Set([...decodePending(storedRaw), ...ids])];
+}
+
+/** True while a broadcast went out less than `cooldownMs` ago. An unparsable
+ *  or missing timestamp never blocks a send. */
+function cooldownActive(lastSentAt, nowMs, cooldownMs) {
+  if (!lastSentAt) return false;
+  const t = Date.parse(lastSentAt);
+  if (Number.isNaN(t)) return false;
+  return nowMs - t < cooldownMs;
+}
+
 const TIER_LABELS = { flagship: "Flagship", balanced: "Balanced", fast: "Fast" };
 
 function escapeHtml(s) {
@@ -94,4 +120,4 @@ function buildEmail(models, companies, siteUrl) {
   return { subject, html, text };
 }
 
-module.exports = { newModelIds, isUsableSha, parseModelIds, buildEmail, escapeHtml, TIER_LABELS };
+module.exports = { newModelIds, isUsableSha, parseModelIds, buildEmail, escapeHtml, TIER_LABELS, encodePending, decodePending, mergePending, cooldownActive };
