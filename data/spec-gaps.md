@@ -143,3 +143,18 @@ qwen3-8-omni-flash · retirementDate · 2026-09-20 · No lifecycle/deprecation p
 qwen3-8-omni-flash · speed · 2026-09-20 · No Artificial Analysis measurement found for this checkpoint at launch.
 jev · speed · 2026-09-21 · No Artificial Analysis measurement; TypeSafe's 70-500 ms figure and priorbench's ~430 ms floor are end-to-end latencies for typed answers, not tokens/sec, so the field does not apply. Left null.
 jev · retirementDate · 2026-09-21 · No lifecycle or deprecation page on docs.typesafe.ai at launch. Left null.
+atria-dawn-preview · predecessorId · 2026-09-22 · Shanghai AI Lab's first Atria model; the card and report describe it as post-trained on GLM-5.2 (lineage, not supersession) and name no InternLM model it replaces. Left null.
+atria-dawn-preview · retirementDate · 2026-09-22 · No lifecycle page on atria-asi.ai or api.atria-asi.ai. Left null.
+atria-dawn-preview · speed · 2026-09-22 · No Artificial Analysis measurement (AA has no page for the model). Left null.
+kimi-k2-8-preview · predecessorId · 2026-09-22 · Moonshot's what's-new says kimi-for-coding was "upgraded in place" from K2.7 Code — an explicit replacement, but K2.7 Code is not a tracked model in this dataset. Set it if K2.7 Code is ever added.
+kimi-k2-8-preview · retirementDate · 2026-09-22 · No lifecycle notice on kimi.com/code docs or platform.kimi.ai. Left null.
+kimi-k2-8-preview · speed · 2026-09-22 · Not on Artificial Analysis (subscription-only, no metered API). Left null.
+kimi-k2-8-preview · apiIds · 2026-09-22 · Only the shared kimi-for-coding alias in Kimi Code; no dedicated model string on platform.kimi.ai.
+step-5-preview · predecessorId · 2026-09-22 · StepFun's announcement calls it "our new flagship model for agentic work" and names no Step 3.x model it replaces; platform docs carry no deprecation notice. Left null.
+step-5-preview · retirementDate · 2026-09-22 · No lifecycle page on platform.stepfun.ai at launch. Left null.
+step-5-preview · license · 2026-09-22 · Not applicable yet: weights are promised for 2026-10-15 and no licence is named; the HF repo stepfun-ai/Step-5-Preview-BF16 holds only .gitattributes. Revisit when weights ship (flip openWeights, add license).
+step-5-preview · speed effort · 2026-09-22 · AA lists one unlabelled reasoning variant; effort recorded as null rather than guessed (StepFun's own table ran high).
+grok-4-7 · predecessorId · 2026-09-22 · x.ai/news/grok-4-7 says only "served at the same price and speed as Grok 4.6" and docs.x.ai still lists grok-4.6 — comparison, not supersession. Left null.
+grok-4-7 · retirementDate · 2026-09-22 · No deprecation entry on docs.x.ai for Grok 4.7 or 4.6. Left null.
+grok-4-7 · speed · 2026-09-22 · AA shows "N/A" for output speed and no first-answer latency on both the high and xhigh pages as of 2026-09-22. Re-check.
+grok-4-7 · apiIds · 2026-09-22 · Only xAI's own grok-4.7 slug is documented; the fast variant's model string and any Bedrock/Vertex/Azure listing were not published on the card.

@@ -241,5 +241,23 @@
     "website": "https://typesafe.ai",
     "color": "#2E9E8F",
     "order": 27
+  },
+  {
+    "id": "shanghai-ai-lab",
+    "name": "Shanghai AI Laboratory",
+    "country": "China",
+    "founded": 2020,
+    "website": "https://www.shlab.org.cn",
+    "color": "#D2782A",
+    "order": 28
+  },
+  {
+    "id": "stepfun",
+    "name": "StepFun",
+    "country": "China",
+    "founded": 2023,
+    "website": "https://www.stepfun.com",
+    "color": "#8B6BE6",
+    "order": 29
   }
 ]
