@@ -687,6 +687,17 @@ Weekly release-scan sweep on 2026-09-15, scoped to `deepseek-v4-1-flash` (2026-0
 | deepseek-v4-1-flash | lmarenaElo | 2026-09-15 | no V4.1-Flash listing on arena.ai's text leaderboard (only deepseek-v4-pro variants, ranks 50/57); Design Arena's 1347 is a different arena |
 | deepseek-v4-1-flash | arcAgi2 | 2026-09-15 | ARC Prize has verified V4-Flash-0731 (61.4%) but has no V4.1-Flash results page (arcprize.org/results/deepseek-v4-1-flash returns 404) |
 | deepseek-v4-1-flash | knowledgeCutoff | 2026-09-15 | not disclosed in DeepSeek's HF card, API docs or launch post; AA's model page records knowledgeCutoffDate null |
+| qwen3-8-omni-flash | knowledgeCutoff | 2026-09-20 | not stated in launch coverage; one third-party listing's "Apr 2024" appears to describe the earlier Qwen3-Omni line, not this checkpoint, so rejected as unreliable rather than used |
+| qwen3-8-omni-flash | mmluPro | 2026-09-20 | not reported by Alibaba for this checkpoint in any source read this session |
+| qwen3-8-omni-flash | sweBench | 2026-09-20 | Alibaba reports SWE-bench Pro (63.3, recorded), not SWE-bench Verified, for this checkpoint |
+| qwen3-8-omni-flash | terminalBench | 2026-09-20 | not reported by Alibaba for this checkpoint |
+| qwen3-8-omni-flash | aime | 2026-09-20 | not reported by Alibaba for this checkpoint |
+| qwen3-8-omni-flash | hle | 2026-09-20 | not reported by Alibaba for this checkpoint |
+| qwen3-8-omni-flash | lmarenaElo | 2026-09-20 | no arena.ai text-leaderboard listing found for this checkpoint at launch |
+| qwen3-8-omni-flash | gdpvalAA | 2026-09-20 | no Artificial Analysis coverage found for this checkpoint; a 1743 figure found elsewhere is for the separate Qwen3.8-Flash-Next model, not used here |
+| qwen3-8-omni-flash | arcAgi2 | 2026-09-20 | not reported by Alibaba and no independent leaderboard listing found |
+| qwen3-8-omni-flash | costPerTask | 2026-09-20 | no Artificial Analysis Intelligence Index measurement found for this checkpoint |
+| qwen3-8-omni-flash | speed | 2026-09-20 | no Artificial Analysis speed measurement found for this checkpoint |
 | jev | gpqaDiamond, sweBench, sweBenchPro, terminalBench, hle, lmarenaElo, gdpvalAA, arcAgi2, mmluPro, aime | 2026-09-21 | not applicable, not merely unpublished: Jev is a typed-decision model that cannot generate text, so no generative benchmark can be run on it; independent evals (priorbench/jev, scienthoon/jev-ood-calibration, beri.net) measure classification accuracy and calibration only |
 | jev | maxOutput | 2026-09-21 | no output-token limit published; output is a fixed set of typed values, not a token stream, and output tokens are unmetered |
 | jev | knowledgeCutoff | 2026-09-21 | not disclosed on TypeSafe's models page, blog or docs |
