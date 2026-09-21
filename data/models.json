@@ -6764,5 +6764,70 @@
       "Too new for independent benchmarking — no Artificial Analysis or third-party leaderboard coverage exists yet, only Sakana's own reported figures"
     ],
     "notes": "Not a single foundation model: the higher-capability tier of Sakana's TRINITY/Conductor-derived (ICLR 2026) orchestration architecture, routing each request across a fixed, undisclosed pool of open-weight and specialized models and recursively calling itself, versioned v2.0 as the successor line to the original Fugu Ultra (launched 2026-06-22, later v1.1) — neither earlier build is tracked in this dataset, so predecessorId stays null. Closed/proprietary: no weights published, model-pool composition undisclosed. Pricing rises to $10/$45 per million tokens (and $1.00/M cached input, from $0.50/M) above 272,000 tokens of context. Sakana's launch post reports it best or joint-best on five of eight of its own benchmarks, including 74.3 on DeepSWE and 48.3 on Chartography (vs. 27.3 for Claude Opus 5 and 29.5 for Claude Fable 5 on the latter) — neither DeepSWE nor Chartography maps to a benchmark tracked on this site, and this site's ten tracked keys (GPQA Diamond, Terminal-Bench 2.1, SWE-bench Pro, HLE, etc., all reportedly among Fugu Ultra's strong evals per Sakana) appear only in the announcement's chart images, not as extractable text, so all stay null here. No Artificial Analysis coverage exists for any Fugu model, hence costPerTask and speed are null. Knowledge cutoff (2026-08) is sourced from OpenRouter's model listing, not an official Sakana page — treat as third-party-sourced."
+  },
+  {
+    "id": "jev",
+    "name": "Jev",
+    "company": "typesafe",
+    "releaseDate": "2026-09-15",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "text",
+    "contextWindow": 64000,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 0.042,
+      "outputPerMTok": 0
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "typesafe",
+        "id": "jev-1.13.0"
+      },
+      {
+        "provider": "openrouter",
+        "id": "typesafe/jev-1.13"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Returns typed values from the schema you declare rather than text — a malformed or undeclared field is impossible by construction, so there is no parsing layer to break",
+      "Answers in a few hundred milliseconds with a fixed floor of roughly 430 ms per call, so batching hundreds of questions into one request costs barely more than asking one",
+      "Its top confidence band is a usable routing signal: in an independent pre-registered eval, gating at 0.99 gave 100% accuracy on the 60% of traffic that cleared the bar",
+      "Decisions are defined at runtime in the question text, so a classifier can be changed or added without retraining or labelled data"
+    ],
+    "weaknesses": [
+      "Cannot generate text at all, and TypeSafe's own docs warn that counting, arithmetic and date reasoning are unreliable — anything numeric has to live in code",
+      "Calibration is uneven below the top band: an independent test measured expected calibration error at 4x the noise floor, with yes/no answers underconfident, multiple-choice overconfident, and an average 0.74 confidence on questions it got right under half the time",
+      "Reads criteria literally with no out-of-scope reflex — a wrongly worded criterion dropped accuracy below the random floor, and inputs matching none of the options still get a confident pick",
+      "Broad single questions underperform: 62.6% on phishing detection asked once against 95% only after the task was split into five atomic questions plus a fitted regression the user has to maintain"
+    ],
+    "notes": "Not an LLM: a \"System One\" decision model trained with TypeSafe's RLCD (reinforcement learning for calibrated decisions) that takes text state plus typed questions (Choice, Score, Noul) and returns values with calibrated probabilities, sampled in parallel rather than token by token, so none of this site's benchmarks apply and every cell is null by design. Filed under the fast tier for cost and latency, since it is not comparable to flagship generators. Context is 64k tokens per request per TypeSafe's model page (32k for state plus the longest question); OpenRouter lists it as 32k. Output tokens are unmetered. TypeSafe's own console opened with an early-access waitlist, but OpenRouter (typesafe/jev-1.13, via a separate alpha decisions endpoint) and Vercel AI Gateway serve it to anyone, hence availability general. TypeSafe's 40-200x speed and 40-400x cost claims come from its own workflow evals, which it says were written by its capabilities team and timed from laptops; the latency and calibration figures in strengths/weaknesses are third-party (priorbench, scienthoon, beri.net). No Artificial Analysis coverage as of launch."
   }
 ]
