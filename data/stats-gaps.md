@@ -56,7 +56,7 @@ Sweep sources checked on 2026-07-04: LMArena (arena.ai) leaderboard, llm-stats.c
 | claude-opus-4-8 | aime | 2026-07-04 | not reported (Anthropic dropped AIME); no verifiable third-party figure |
 | claude-fable-5 | mmluPro | 2026-07-04 | Anthropic retired saturated benchmarks; BenchLM hides non-public rows |
 | claude-fable-5 | aime | 2026-07-04 | not reported; no verifiable third-party figure |
-| claude-fable-5 | arcAgi2 | 2026-07-04 | not on ARC-AGI-2 leaderboards as of July 2026 |
+| claude-fable-5 | arcAgi2 | 2026-07-04 | not on ARC-AGI-2 leaderboards as of July 2026 — **superseded 2026-09-22: ARC Prize results page (anthropic-claude-fable-5) gives a verified 89.2% at max effort ($5.45/task) — filled** |
 | gemini-1-5-pro | sweBench | 2026-07-04 | Google never reported SWE-bench for 1.5 Pro; no comparable figure |
 | gemini-1-5-pro | aime | 2026-07-04 | never publicly evaluated on AIME |
 | gemini-1-5-pro | arcAgi2 | 2026-07-04 | predates benchmark; never evaluated |
@@ -169,7 +169,7 @@ Stats-filler sweep on 2026-07-27. Sources checked: arena.ai text leaderboard, Ar
 |---|---|---|---|
 | claude-opus-5 | mmluPro | 2026-07-27 | not in Anthropic's announcement or system card; absent from AA's and BenchLM's MMLU-Pro leaderboards (both stop at Opus 4.5/4.6). A "91.59%" figure appears only in a search snippet attributed to vals.ai and could not be reproduced on the vals.ai page — rejected |
 | claude-opus-5 | aime | 2026-07-27 | not published; Anthropic leads with Frontier-Bench v0.1 (43.3%), GDPval-AA v2 and ARC-AGI-3 instead |
-| claude-opus-5 | lmarenaElo | 2026-07-27 | no Claude Opus 5 listing on arena.ai's text leaderboard as of 2026-07-27 (three days post-launch); BenchLM also shows Arena Elo "Not listed" |
+| claude-opus-5 | lmarenaElo | 2026-07-27 | no Claude Opus 5 listing on arena.ai's text leaderboard as of 2026-07-27 (three days post-launch); BenchLM also shows Arena Elo "Not listed" — **superseded 2026-09-22: arena.ai now lists claude-opus-5-high at 1493 (max 1487) — filled** |
 | claude-sonnet-5 | mmluPro | 2026-07-27 | not in Anthropic's system card; not on AA or BenchLM MMLU-Pro leaderboards |
 | claude-sonnet-5 | aime | 2026-07-27 | Anthropic did not publish AIME for Sonnet 5; no third-party figure found |
 | claude-sonnet-5 | arcAgi2 | 2026-07-27 | not on ARC Prize, BenchLM (19 models) or llm-stats ARC-AGI-2 leaderboards |
@@ -210,13 +210,13 @@ Stats-filler sweep on 2026-07-27. Sources checked: arena.ai text leaderboard, Ar
 | gpt-5-6-terra | aime | 2026-07-29 | not published for any GPT-5.6 tier |
 | gpt-5-6-terra | hle | 2026-07-29 | component of AA's Intelligence Index but not broken out per tier |
 | gpt-5-6-terra | lmarenaElo | 2026-07-29 | no gpt-5.6-terra listing on arena.ai (only the Sol variants) |
-| gpt-5-6-terra | arcAgi2 | 2026-07-29 | ARC Prize published Sol only; Terra untested |
+| gpt-5-6-terra | arcAgi2 | 2026-07-29 | ARC Prize published Sol only; Terra untested — **superseded 2026-09-22: ARC Prize has since published a Terra results page — 83.9% at max effort — filled** |
 | gpt-5-6-terra | knowledgeCutoff | 2026-07-29 | not disclosed per tier; Sol's 2026-02 not confirmed to apply to Terra |
 | nemotron-3-ultra | mmluPro | 2026-07-29 | NVIDIA's technical report has ablation/quantisation tables rather than one headline model table; could not attribute a final-model figure |
 | nemotron-3-ultra | gpqaDiamond | 2026-07-29 | same — report shows both 'GPQA Diamond' and 'GPQA no tools' rows across many configs; no unambiguous final figure |
-| nemotron-3-ultra | sweBench | 2026-07-29 | not reported for Ultra |
+| nemotron-3-ultra | sweBench | 2026-07-29 | not reported for Ultra — **superseded 2026-09-22: NVIDIA's BF16 model card on Hugging Face has a single evaluation table with SWE-Bench Verified 70.7 — filled (Terminal Bench 2.1 56.4 and HLE no-tools 26.7 filled from the same table)** |
 | nemotron-3-ultra | aime | 2026-07-29 | not reported; report cites IMO AnswerBench instead |
-| nemotron-3-ultra | hle | 2026-07-29 | multiple HLE rows across ablations (no-tools and with-tools); no unambiguous final figure |
+| nemotron-3-ultra | hle | 2026-07-29 | multiple HLE rows across ablations (no-tools and with-tools); no unambiguous final figure — **superseded 2026-09-22: model card table gives "HLE (no tools)" 26.7 / "HLE (with tools)" 37.4 — filled with the no-tools figure** |
 | nemotron-3-ultra | lmarenaElo | 2026-07-29 | no Nemotron 3 Ultra listing on arena.ai |
 | nemotron-3-ultra | arcAgi2 | 2026-07-29 | not tested by ARC Prize |
 | nemotron-3-super | gpqaDiamond | 2026-07-29 | reported 79.23 is labelled 'GPQA no tools', which NVIDIA's report treats as distinct from GPQA Diamond |
@@ -309,7 +309,7 @@ New-model-release research on 2026-08-07, scoped to `minimax-m2`, `minimax-m2-5`
 | minimax-m3 | gpqaDiamond | 2026-08-07 | same — image-only benchmark table, not reproduced elsewhere |
 | minimax-m3 | aime | 2026-08-07 | same — image-only benchmark table, not reproduced elsewhere |
 | minimax-m3 | hle | 2026-08-07 | same — image-only benchmark table, not reproduced elsewhere |
-| minimax-m3 | lmarenaElo | 2026-08-07 | no MiniMax-M3 text-arena Elo found on arena.ai |
+| minimax-m3 | lmarenaElo | 2026-08-07 | no MiniMax-M3 text-arena Elo found on arena.ai — **superseded 2026-09-22: arena.ai now lists minimax-m3 at 1441 — filled** |
 | minimax-m3 | arcAgi2 | 2026-08-07 | not on ARC Prize's official leaderboard or any tracker checked |
 | minimax-m3 | maxOutput | 2026-08-07 | MiniMax's own docs describe only "up to 1M tokens context window with a guaranteed minimum of 512K," no separate max-output figure stated |
 | minimax-m3 | knowledgeCutoff | 2026-08-07 | not stated by MiniMax; a third-party "January 2026" claim found in search snippets was not traced to a primary source |
@@ -411,7 +411,7 @@ New-model-release research on 2026-08-16, scoped to `gemini-3-7-flash`, `qwen3-8
 | qwen3-8-27b | lmarenaElo | 2026-08-16 | no arena.ai text-leaderboard listing found |
 | qwen3-8-27b | arcAgi2 | 2026-08-16 | not reported by Alibaba; not on ARC Prize or tracker leaderboards |
 | qwen3-8-27b | knowledgeCutoff | 2026-08-16 | not disclosed by Alibaba in the GitHub repo, HF listing (blocked from direct fetch) or any secondary source found; explicitly called out as undisclosed by one source |
-| glm-5-3 | mmluPro / gpqaDiamond / sweBench / aime / hle / lmarenaElo / arcAgi2 | 2026-08-16 | Z.ai's launch benchmark table is entirely agentic/coding/cyber (Terminal-Bench 2.1/3.0, DeepSWE v1.1, SWE-Marathon v1.1, AutomationBench, Agents' Last Exam, CyberGym) — none of the tracked knowledge/reasoning keys were re-reported, consistent with Z.ai's stated "same base model, post-training only" framing; not on arena.ai or Artificial Analysis (too new, no public API pricing or weights yet) |
+| glm-5-3 | mmluPro / gpqaDiamond / sweBench / aime / hle / lmarenaElo / arcAgi2 | 2026-08-16 | Z.ai's launch benchmark table is entirely agentic/coding/cyber (Terminal-Bench 2.1/3.0, DeepSWE v1.1, SWE-Marathon v1.1, AutomationBench, Agents' Last Exam, CyberGym) — none of the tracked knowledge/reasoning keys were re-reported, consistent with Z.ai's stated "same base model, post-training only" framing; not on arena.ai or Artificial Analysis (too new, no public API pricing or weights yet) — **lmarenaElo superseded 2026-09-22: arena.ai now lists glm-5.3-max at 1483 — filled; the other cells stand** |
 | glm-5-3 | knowledgeCutoff | 2026-08-16 | not disclosed for the 5.3 post-training run specifically; GLM-5.2's cutoff (2026-03) is not confirmed to carry over |
 | glm-5-3 | pricing (input/output) | 2026-08-16 | Z.ai's official pricing table still ends at GLM-5.2 with no GLM-5.3 row; only the GLM Coding Plan's flat monthly subscription tiers ($18/$80/$168) are public, not a per-token rate |
 
@@ -421,8 +421,8 @@ New-model-release research on 2026-08-18 (daily sweep), scoped to `deepseek-v4-p
 |---|---|---|---|
 | deepseek-v4-pro-0813 | mmluPro | 2026-08-18 | not in DeepSeek's 0813 card table as reported by any outlet; the 87.5 aggregators carry is April's preview (V4-Pro-Max) figure, not re-run for 0813 |
 | deepseek-v4-pro-0813 | aime | 2026-08-18 | not reported by DeepSeek, Artificial Analysis or Vals AI for this build |
-| deepseek-v4-pro-0813 | lmarenaElo | 2026-08-18 | no 0813-specific text-arena listing found; only an approximate "~1450" for the un-dated "DeepSeek V4 Pro" and a Code Arena WebDev score (1607, a different arena) |
-| deepseek-v4-pro-0813 | arcAgi2 | 2026-08-18 | ARC Prize has verified V4-Flash-0731 (61.4%) but published no V4-Pro-0813 result as of this check |
+| deepseek-v4-pro-0813 | lmarenaElo | 2026-08-18 | no 0813-specific text-arena listing found; only an approximate "~1450" for the un-dated "DeepSeek V4 Pro" and a Code Arena WebDev score (1607, a different arena) — **superseded 2026-09-22: arena.ai now lists deepseek-v4-pro-high-20260813 at 1463 — filled** |
+| deepseek-v4-pro-0813 | arcAgi2 | 2026-08-18 | ARC Prize has verified V4-Flash-0731 (61.4%) but published no V4-Pro-0813 result as of this check — **superseded 2026-09-22: ARC Prize results page (deepseek-v4-pro-0813) gives 61.3% at max effort ($0.60/task) — filled** |
 | deepseek-v4-pro-0813 | knowledgeCutoff | 2026-08-18 | not disclosed anywhere in DeepSeek's documentation for V4 or the 0813 build; explicitly called out as unpublished by secondary coverage |
 | deepseek-v4-pro-0813 | costPerTask.usd | 2026-08-18 | Artificial Analysis publishes only the total Intelligence Index evaluation cost ($604.51 at max effort) in reachable excerpts; the per-task `intelligenceIndexCostPerTask.cost.total` figure could not be retrieved (AA page not fetchable this session) — never derive it |
 
@@ -489,7 +489,7 @@ New-model-release research on 2026-08-18 (daily sweep follow-up), scoped to `mot
 | claude-fable-5-1 | aime | 2026-09-02 | Anthropic retired AIME from reporting as saturated; no third-party AIME run found for Fable 5.1 |
 | claude-fable-5-1 | lmarenaElo | 2026-09-02 | not yet on arena.ai's text leaderboard one day after release (claude-fable-5 still tops it at 1507); re-check |
 
-| glm-5-3 | mmluPro / gpqaDiamond / sweBench / aime / hle / lmarenaElo / arcAgi2 | 2026-08-16 | Z.ai's launch benchmark table is entirely agentic/coding/cyber (Terminal-Bench 2.1/3.0, DeepSWE v1.1, SWE-Marathon v1.1, AutomationBench, Agents' Last Exam, CyberGym) — none of the tracked knowledge/reasoning keys were re-reported, consistent with Z.ai's stated "same base model, post-training only" framing; not on arena.ai; Artificial Analysis now lists it (Intelligence Index 60 at max effort) but AA per-benchmark cells were not readable via search snippets on 2026-09-02 |
+| glm-5-3 | mmluPro / gpqaDiamond / sweBench / aime / hle / lmarenaElo / arcAgi2 | 2026-08-16 | Z.ai's launch benchmark table is entirely agentic/coding/cyber (Terminal-Bench 2.1/3.0, DeepSWE v1.1, SWE-Marathon v1.1, AutomationBench, Agents' Last Exam, CyberGym) — none of the tracked knowledge/reasoning keys were re-reported, consistent with Z.ai's stated "same base model, post-training only" framing; not on arena.ai; Artificial Analysis now lists it (Intelligence Index 60 at max effort) but AA per-benchmark cells were not readable via search snippets on 2026-09-02 — **lmarenaElo superseded 2026-09-22: arena.ai now lists glm-5.3-max at 1483 — filled; the other cells stand** |
 Release-protocol research on 2026-09-02 (daily sweep), scoped to `hy4-preview` (released 2026-08-28). WebFetch was unavailable this session; findings rest on WebSearch excerpts restricted to primary domains, cross-checked across independent trackers where possible.
 | hy4-preview | mmluPro | 2026-09-02 | not in Tencent's launch chart (GPQA Diamond, HLE, Terminal-Bench 2.1, SWE-bench Pro/Multilingual, DeepSWE, SkillsBench, HorizonMath, BioMysteryBench); no tracker figure found |
 | hy4-preview | sweBench | 2026-09-02 | Tencent's chart reports SWE-bench Pro (65.7) and Multilingual (82.9), not Verified; the HF community-eval PR (discussions/3) covers the same set, and no Verified figure surfaced on any leaderboard |
@@ -637,9 +637,9 @@ Stats-filler sweep on 2026-09-03 (daily sweep), two batches: (a) recent/unknown/
 | gpt-6-astra | sweBenchPro | 2026-09-04 | Not on the Scale/SWE-bench Pro public leaderboard as of 2026-09-04; OpenAI reported DeepSWE v1.1 74.1 instead |
 | gpt-6-astra | terminalBench | 2026-09-04 | OpenAI reports Terminal-Bench 4.0 (57.7%); no 2.1 run published, and versions are not comparable |
 | gpt-6-astra | hle | 2026-09-04 | Only a with-tools figure published (57.2%); no no-tools score from OpenAI or AA |
-| gpt-6-astra | lmarenaElo | 2026-09-04 | Not yet rated on LMArena/Arena text leaderboard |
+| gpt-6-astra | lmarenaElo | 2026-09-04 | Not yet rated on LMArena/Arena text leaderboard — **superseded 2026-09-22: arena.ai now lists gpt-6-astra-max at 1480±12 — filled** |
 | gpt-6-astra | gdpvalAA | 2026-09-04 | AA's launch article cites only a ~80 Elo regression vs GPT-5.6 Sol, no absolute rating |
-| gpt-6-astra | arcAgi2 | 2026-09-04 | ARC Prize published only ARC-AGI-3 results; secondary claims of a 95.0% ARC-AGI-2 score are unverified by ARC Prize |
+| gpt-6-astra | arcAgi2 | 2026-09-04 | ARC Prize published only ARC-AGI-3 results; secondary claims of a 95.0% ARC-AGI-2 score are unverified by ARC Prize — **superseded 2026-09-22: ARC Prize's results page (openai-gpt-6-astra) now carries ARC-AGI-2 95.0% at max effort — filled** |
 | gpt-6-astra | mmluPro | 2026-09-04 | Retired benchmark; not in OpenAI's launch table |
 | gpt-6-astra | aime | 2026-09-04 | Retired benchmark; not in OpenAI's launch table |
 | muse-spark-1-3 | maxOutput | 2026-09-04 | not stated on developer.meta.com's Muse Spark page, Meta's research blog post, or the OpenRouter listing (which echoes the 1,048,576 context window) |
@@ -649,7 +649,7 @@ Stats-filler sweep on 2026-09-03 (daily sweep), two batches: (a) recent/unknown/
 | muse-spark-1-3 | sweBench | 2026-09-04 | Meta reports DeepSWE v1.1 (75.4) and SWEAtlas CodeBase QnA (59.4), neither a SWE-bench Verified score; none found on trackers |
 | muse-spark-1-3 | sweBenchPro | 2026-09-04 | not reported for 1.3 by Meta or any tracker found (1.1 was the last Muse Spark with a SWE-bench Pro figure) |
 | muse-spark-1-3 | arcAgi2 | 2026-09-04 | no Muse Spark 1.3 result on ARC Prize, llm-stats or Epoch AI ARC-AGI-2 boards; only the original Muse Spark (42.5%) has been tested |
-| muse-spark-1-3 | lmarenaElo | 2026-09-04 | no Muse Spark 1.3 listing on arena.ai's text leaderboard two days after launch |
+| muse-spark-1-3 | lmarenaElo | 2026-09-04 | no Muse Spark 1.3 listing on arena.ai's text leaderboard two days after launch — **superseded 2026-09-22: arena.ai now lists muse-spark-1.3-max at 1493 — filled** |
 
 Weekly release-scan sweep on 2026-09-13, scoped to `fugu-max` and `fugu-ultra-v2` (both 2026-09-11); `deepseek-v4-1-flash` was independently researched and committed the same day (see the 2026-09-15 sweep below for its remaining gaps). WebFetch returned EGRESS_BLOCKED for every domain tried this session (api-docs.deepseek.com, huggingface.co, openrouter.ai, deepseek.com, artificialanalysis.ai, datanorth.ai, heise.de, cellcog.ai, bitrue.com, anthropic.com) — findings rest entirely on WebSearch-synthesized excerpts, cross-checked across at least two independent outlets each where possible. Sources checked via excerpts: Sakana's own site (sakana.ai/fugu-max-release, sakana.ai/fugu, sakana.ai/company-info), OpenRouter, modelgrep.com, datanorth.ai, orcarouter.ai, marktechpost.com, alphasignal.ai, theroboticsmedia.com, pondero.ai, forkast.news.
 
@@ -691,3 +691,187 @@ Weekly release-scan sweep on 2026-09-15, scoped to `deepseek-v4-1-flash` (2026-0
 | jev | maxOutput | 2026-09-21 | no output-token limit published; output is a fixed set of typed values, not a token stream, and output tokens are unmetered |
 | jev | knowledgeCutoff | 2026-09-21 | not disclosed on TypeSafe's models page, blog or docs |
 | jev | costPerTask | 2026-09-21 | no Artificial Analysis coverage of any TypeSafe model as of launch |
+
+Stats-filler sweep on 2026-09-22 (first pass over the new `sweBenchPro` / `gdpvalAA` keys plus a re-check of frontier/unknown models). Sources checked: labs.scale.com SWE-Bench Pro public leaderboard and the SWE-Bench Pro paper (arXiv 2509.16941), arena.ai text leaderboard (2026-09-13 update), arcprize.org/results index and per-model pages, artificialanalysis.ai/evaluations/gdpval-aa (now v2.1), AA model pages, tbench.ai/Snorkel and BenchLM Terminal-Bench 2.1 boards, llm-stats SWE-bench Pro board, official model cards (Google DeepMind 3.1 Pro / 3.7 Flash, Hugging Face cards for DeepSeek-V4-Pro, Ornith-1.5-397B, GLM-5.3, GLM-5.3-Flash, Kimi K3, MiniMax M2/M2.5, Nemotron 3 Ultra), Meta's Muse Spark Eval Methodology PDF, Anthropic/OpenAI launch coverage (openai.com and Anthropic's Fable 5 page were not fetchable; system-card PDFs too large). **GDPval-AA note:** Artificial Analysis rescaled its board to v2.1 between the last sweep and this one; every `gdpvalAA` cell on record is a v2 figure, so no v2.1 figures were filled — the rows below carry the v2.1 ratings seen so a future migration of the key is cheap.
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| gpt-4 | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| gpt-4 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| gpt-4-turbo | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| gpt-4-turbo | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| gpt-4o | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| gpt-4o | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| o1 | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| o1 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| gpt-4-1 | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| gpt-4-1 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| o3 | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| o3 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| gpt-5 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| gpt-5-1 | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| gpt-5-1 | terminalBench | 2026-09-22 | not on tbench.ai/Snorkel or BenchLM Terminal-Bench 2.1 boards; OpenAI reported 2.0 only |
+| gpt-5-1 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| claude-3-opus | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| claude-3-opus | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| claude-3-5-sonnet | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| claude-3-5-sonnet | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| claude-3-7-sonnet | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| claude-3-7-sonnet | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| claude-opus-4 | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| claude-opus-4 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| claude-sonnet-4 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| claude-opus-4-1 | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| claude-opus-4-1 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| claude-sonnet-4-5 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| claude-haiku-4-5 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| claude-opus-4-5 | terminalBench | 2026-09-22 | not on tbench.ai/Snorkel or BenchLM Terminal-Bench 2.1 boards; Anthropic reported 2.0 only |
+| claude-opus-4-5 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| gemini-1-5-pro | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| gemini-1-5-pro | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| gemini-2-0-flash | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| gemini-2-0-flash | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| gemini-2-5-pro | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| gemini-2-5-pro | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| gemini-3-pro | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| llama-3-1-405b | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| llama-4-maverick | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| grok-3 | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| grok-3 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| grok-4 | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| grok-4 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| grok-4-1 | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| grok-4-1 | terminalBench | 2026-09-22 | not on tbench.ai/Snorkel or BenchLM Terminal-Bench 2.1 boards |
+| grok-4-1 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| mistral-large-2 | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| mistral-large-2 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| mistral-medium-3 | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| mistral-medium-3 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| deepseek-v3 | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| deepseek-v3 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| deepseek-r1 | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| deepseek-r1 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| deepseek-v3-2 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| qwen3-235b | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| qwen3-max | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| qwen3-max | terminalBench | 2026-09-22 | not on tbench.ai/Snorkel or BenchLM Terminal-Bench 2.1 boards |
+| qwen3-max | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| kimi-k2 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| kimi-k2-thinking | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| kimi-k2-thinking | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| kimi-k3 | sweBenchPro | 2026-09-22 | Moonshot's HF model card table (DeepSWE 67.5, Terminal-Bench 2.1 88.3, ProgramBench, Kimi Code Bench, SWE-Marathon, SciCode) has no SWE-bench Pro row; not on Scale's leaderboard |
+| mistral-large-3 | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| mistral-large-3 | terminalBench | 2026-09-22 | not on tbench.ai/Snorkel or BenchLM Terminal-Bench 2.1 boards |
+| mistral-large-3 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| gemini-3-1-pro | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| qwen3-5 | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| qwen3-5 | terminalBench | 2026-09-22 | not on tbench.ai/Snorkel or BenchLM Terminal-Bench 2.1 boards |
+| qwen3-5 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| mistral-small-4 | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| mistral-small-4 | terminalBench | 2026-09-22 | not on tbench.ai/Snorkel or BenchLM Terminal-Bench 2.1 boards |
+| mistral-small-4 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| muse-spark | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| gpt-5-5 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| deepseek-v4 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| grok-4-3 | sweBenchPro | 2026-09-22 | xAI published tau2-Bench/IFBench at launch; not on Scale's leaderboard (Grok 4.5 was the first Grok with a SWE-bench Pro figure) |
+| grok-4-3 | terminalBench | 2026-09-22 | not on tbench.ai/Snorkel or BenchLM Terminal-Bench 2.1 boards |
+| grok-4-3 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| gemini-3-5-flash | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| qwen3-8-max | gdpvalAA | 2026-09-22 | Artificial Analysis' board has moved to GDPval-AA v2.1 (rescaled — Fable 5.1 max reads 1735 there against the 1853 v2 figure on record), and no v2 rating for this model is retrievable; not filled to avoid mixing scales. v2.1 rating seen 2026-09-22: 1596 — migrate the key before using it |
+| qwen3-7-max | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| claude-opus-4-8 | gdpvalAA | 2026-09-22 | Artificial Analysis' board has moved to GDPval-AA v2.1 (rescaled — Fable 5.1 max reads 1735 there against the 1853 v2 figure on record), and no v2 rating for this model is retrievable; not filled to avoid mixing scales. v2.1 rating seen 2026-09-22: 1438 (max) — migrate the key before using it |
+| gemma-4 | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| gemma-4 | terminalBench | 2026-09-22 | not on tbench.ai/Snorkel or BenchLM Terminal-Bench 2.1 boards |
+| gemma-4 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| glm-5-2 | gdpvalAA | 2026-09-22 | Artificial Analysis' board has moved to GDPval-AA v2.1 (rescaled — Fable 5.1 max reads 1735 there against the 1853 v2 figure on record), and no v2 rating for this model is retrievable; not filled to avoid mixing scales. v2.1 rating seen 2026-09-22: 1358 (max) — migrate the key before using it |
+| gpt-5-6-terra | gdpvalAA | 2026-09-22 | Artificial Analysis' board has moved to GDPval-AA v2.1 (rescaled — Fable 5.1 max reads 1735 there against the 1853 v2 figure on record), and no v2 rating for this model is retrievable; not filled to avoid mixing scales. v2.1 rating seen 2026-09-22: 1432 (max) — migrate the key before using it |
+| gpt-5-6-luna | gdpvalAA | 2026-09-22 | Artificial Analysis' board has moved to GDPval-AA v2.1 (rescaled — Fable 5.1 max reads 1735 there against the 1853 v2 figure on record), and no v2 rating for this model is retrievable; not filled to avoid mixing scales. v2.1 rating seen 2026-09-22: 1443 (max) — migrate the key before using it |
+| soofi-s-30b-a3b | sweBenchPro | 2026-09-22 | not evaluated in arXiv:2607.09424 |
+| soofi-s-30b-a3b | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| gemini-3-5-flash-lite | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| claude-sonnet-5 | gdpvalAA | 2026-09-22 | Artificial Analysis' board has moved to GDPval-AA v2.1 (rescaled — Fable 5.1 max reads 1735 there against the 1853 v2 figure on record), and no v2 rating for this model is retrievable; not filled to avoid mixing scales. v2.1 rating seen 2026-09-22: 1449 (max) — migrate the key before using it |
+| grok-4-5 | gdpvalAA | 2026-09-22 | Artificial Analysis' board has moved to GDPval-AA v2.1 (rescaled — Fable 5.1 max reads 1735 there against the 1853 v2 figure on record), and no v2 rating for this model is retrievable; not filled to avoid mixing scales. v2.1 rating seen 2026-09-22: 1370 (high) — migrate the key before using it |
+| muse-spark-1-1 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| laguna-s-2-1 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| nemotron-3-super | sweBenchPro | 2026-09-22 | not in NVIDIA's model card table |
+| nemotron-3-super | terminalBench | 2026-09-22 | not in NVIDIA's Super model card table as read; not on tbench.ai/Snorkel or BenchLM Terminal-Bench 2.1 boards |
+| nemotron-3-super | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| nemotron-3-ultra | sweBenchPro | 2026-09-22 | NVIDIA's BF16 model card table has SWE-Bench Verified and Multilingual but no SWE-bench Pro |
+| nemotron-3-ultra | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| hy3 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| longcat-2-0 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| motif-3-beta | sweBenchPro | 2026-09-22 | same table set as the final release; no SWE-bench Pro row |
+| motif-3-beta | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| laguna-xs-2-1 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| qwen3-7-flash | sweBenchPro | 2026-09-22 | no benchmark table exists for this model (changelog-only launch); not on any SWE-bench Pro board |
+| qwen3-7-flash | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| deepseek-v4-flash-0731 | sweBenchPro | 2026-09-22 | DeepSeek's 0731 table reports DeepSWE 54.4, NL2Repo, Cybergym, Toolathlon and ALE, not SWE Pro; llm-stats' "DeepSeek-V4-Flash-Max 52.6" is the April Flash build |
+| deepseek-v4-flash-0731 | gdpvalAA | 2026-09-22 | Artificial Analysis' board has moved to GDPval-AA v2.1 (rescaled — Fable 5.1 max reads 1735 there against the 1853 v2 figure on record), and no v2 rating for this model is retrievable; not filled to avoid mixing scales. v2.1 rating seen 2026-09-22: 1427 (max) — migrate the key before using it |
+| claude-sonnet-4-6 | sweBenchPro | 2026-09-22 | system card reports SWE-bench Verified and Multilingual only; not on Scale's public leaderboard |
+| claude-sonnet-4-6 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| mach-1-additive-35b | sweBenchPro | 2026-09-22 | Syzygy publishes retention percentages only |
+| mach-1-additive-35b | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| ling-2-6-1t | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| ling-2-6-1t | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| gpt-oss-120b | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| gpt-oss-20b | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| gpt-oss-20b | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| minimax-m2 | sweBenchPro | 2026-09-22 | MiniMax's HF card reports SWE-bench Verified, Multi-SWE-Bench and Multilingual, no SWE-bench Pro |
+| minimax-m2 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| minimax-m2-5 | sweBenchPro | 2026-09-22 | MiniMax's HF card omits SWE-bench Pro; llm-stats' 55.4 attributed to MiniMax could not be traced to a primary table |
+| minimax-m2-5 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| minimax-m3 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| seed-2-0-pro | sweBenchPro | 2026-09-22 | not in the Seed2.0 model card tables as previously read; not on Scale's leaderboard |
+| seed-2-0-pro | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| seed-2-1-pro | sweBenchPro | 2026-09-22 | ByteDance published only qualitative "leading scores on SWE-Pro"; llm-stats' 57.5 is untraceable to a ByteDance table |
+| seed-2-1-pro | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| ernie-5-0 | sweBenchPro | 2026-09-22 | same |
+| ernie-5-0 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| ernie-5-1 | sweBenchPro | 2026-09-22 | Baidu reported no SWE-bench Pro figure; not on Scale's leaderboard |
+| ernie-5-1 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| nova-premier | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| nova-premier | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| nova-2-pro | sweBenchPro | 2026-09-22 | Amazon reported SWE-bench Verified only; not on Scale's leaderboard |
+| nova-2-pro | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| command-a | sweBenchPro | 2026-09-22 | not on Scale's public-set leaderboard (25 models, checked 2026-09-22) or the SWE-Bench Pro paper's public-set table; lab never reported SWE-bench Pro |
+| command-a | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| command-a-plus | sweBenchPro | 2026-09-22 | Cohere reported no SWE-bench variant |
+| command-a-plus | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| muse-spark-1-2 | gpqaDiamond | 2026-09-22 | not published by Meta (launch material is agentic bar charts); AA's model page shows only Intelligence Index 40 and now marks the model deprecated in favour of 1.3 |
+| muse-spark-1-2 | sweBenchPro | 2026-09-22 | Meta reported Terminal-Bench 2.1 inside Muse Code for 1.2 and no SWE-bench Pro figure (1.1 was the last with one); not on Scale's leaderboard |
+| muse-spark-1-2 | hle | 2026-09-22 | same — AA folds HLE into its index without a per-eval figure; Meta published none |
+| muse-spark-1-2 | gdpvalAA | 2026-09-22 | Artificial Analysis' board has moved to GDPval-AA v2.1 (rescaled — Fable 5.1 max reads 1735 there against the 1853 v2 figure on record), and no v2 rating for this model is retrievable; not filled to avoid mixing scales. v2.1 rating seen 2026-09-22: 1482 (xhigh) — migrate the key before using it |
+| muse-glimmer | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| gpt-5-6-cyber | sweBenchPro | 2026-09-22 | OpenAI published only cyber evals for this variant |
+| gpt-5-6-cyber | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| nemotron-3-5-lightning | sweBenchPro | 2026-09-22 | NVIDIA's model card reports SWE-bench Verified only |
+| nemotron-3-5-lightning | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| grok-4-6 | sweBenchPro | 2026-09-22 | xAI's card reports deepSwe, CursorBench, FrontierCode, SWE-Marathon and Terminal-Bench 3.0 but no SWE-bench Pro; not on Scale's public leaderboard; secondary coverage confirms the omission |
+| qwen3-8-2-4t-a95b | gdpvalAA | 2026-09-22 | Artificial Analysis' board has moved to GDPval-AA v2.1 (rescaled — Fable 5.1 max reads 1735 there against the 1853 v2 figure on record), and no v2 rating for this model is retrievable; not filled to avoid mixing scales. v2.1 rating seen 2026-09-22: 1597 — migrate the key before using it |
+| gemini-3-7-flash | sweBenchPro | 2026-09-22 | Google's 3.7 Flash model card has no SWE-Bench Pro row (FrontierCode 1.1, DeepSWE v1.1, Terminal-bench 2.1/3.0, AutomationBench, GDPVal-AA v2 1525, Harvey, GDP.pdf, CharXiv, LVBench, MRCR, OSWorld-2.0, BioMysteryBench, LABBench2); DataCamp's 60.4% remains untraceable |
+| gemini-3-7-flash | gdpvalAA | 2026-09-22 | Artificial Analysis' board has moved to GDPval-AA v2.1 (rescaled — Fable 5.1 max reads 1735 there against the 1853 v2 figure on record), and no v2 rating for this model is retrievable; not filled to avoid mixing scales. v2.1 rating seen 2026-09-22: 1371 (high) — migrate the key before using it |
+| qwen3-8-27b | gdpvalAA | 2026-09-22 | Artificial Analysis' board has moved to GDPval-AA v2.1 (rescaled — Fable 5.1 max reads 1735 there against the 1853 v2 figure on record), and no v2 rating for this model is retrievable; not filled to avoid mixing scales. v2.1 rating seen 2026-09-22: 1409 (xhigh) — migrate the key before using it |
+| glm-5-3 | sweBenchPro | 2026-09-22 | Z.ai's HF model card table (Terminal-Bench 2.1/3.0, DeepSWE v1.1, CyberGym, ExploitGym, HLE w/ tools, Toolathlon, AutomationBench, ALE-CLI) has no SWE-bench Pro row; not on Scale's leaderboard |
+| glm-5-3 | gdpvalAA | 2026-09-22 | Artificial Analysis' board has moved to GDPval-AA v2.1 (rescaled — Fable 5.1 max reads 1735 there against the 1853 v2 figure on record), and no v2 rating for this model is retrievable; not filled to avoid mixing scales. v2.1 rating seen 2026-09-22: 1646 (max) — migrate the key before using it |
+| ornith-1-5-397b | lmarenaElo | 2026-09-22 | no Ornith listing on arena.ai's text leaderboard (402 models, 2026-09-13 update) |
+| ornith-1-5-397b | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| ornith-1-5-397b | arcAgi2 | 2026-09-22 | not in ARC Prize's results index; HF model card has no ARC-AGI row |
+| ornith-1-5-397b | maxOutput | 2026-09-22 | HF model card states only a 131,072-token generation limit used in its own evaluation runs, not a documented serving cap; no hosted API exists |
+| ornith-1-5-397b | knowledgeCutoff | 2026-09-22 | not stated in the HF model card |
+| glm-5-3-flash | gpqaDiamond | 2026-09-22 | not in Z.ai's launch table or HF card; the single-source "91.2" AA claim in earlier notes still could not be corroborated on AA's model page (Intelligence Index 42 only) |
+| glm-5-3-flash | sweBench | 2026-09-22 | Z.ai reports DeepSWE v1.1 63.4, not SWE-bench Verified; no third-party Verified run found |
+| glm-5-3-flash | sweBenchPro | 2026-09-22 | Z.ai's six-benchmark launch table (DeepSWE v1.1, AutomationBench, GDPval-AA v2, Terminal Bench 2.1, Toolathlon, multimodal) has no SWE-bench Pro row; HF card footnotes name the benchmark but no figure is readable; not on Scale's leaderboard |
+| glm-5-3-flash | hle | 2026-09-22 | only "HLE w/ tools 55.3" circulates (Qubrid/eesel relaying Z.ai); no no-tools figure, and the tracked cell records no-tools scores |
+| glm-5-3-flash | gdpvalAA | 2026-09-22 | Artificial Analysis' board has moved to GDPval-AA v2.1 (rescaled — Fable 5.1 max reads 1735 there against the 1853 v2 figure on record), and no v2 rating for this model is retrievable; not filled to avoid mixing scales. v2.1 rating seen 2026-09-22: 1641 — migrate the key before using it |
+| glm-5-3-flash | arcAgi2 | 2026-09-22 | no GLM-5.3-Flash entry in ARC Prize's results index (17 systems as of 2026-09-22) |
+| glm-5-3-flash | knowledgeCutoff | 2026-09-22 | not stated in the HF model card, Z.ai launch coverage, or AA's model page |
+| hy4-preview | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| deepseek-v4-pro-0813 | sweBenchPro | 2026-09-22 | DeepSeek's 0813 table (Terminal-Bench 2.1, DeepSWE, NL2Repo, CyberGym, AutomationBench) omits SWE Pro; the HF V4-Pro card's 55.4 is the April V4-Pro-Max figure, already recorded on deepseek-v4 |
+| deepseek-v4-pro-0813 | gdpvalAA | 2026-09-22 | Artificial Analysis' board has moved to GDPval-AA v2.1 (rescaled — Fable 5.1 max reads 1735 there against the 1853 v2 figure on record), and no v2 rating for this model is retrievable; not filled to avoid mixing scales. v2.1 rating seen 2026-09-22: 1441 (max) — migrate the key before using it |
+| motif-3 | sweBenchPro | 2026-09-22 | not in Motif's model-card table (SWE-bench Verified, Terminal-Bench 2.1, GPQA Diamond, τ²-Bench Telecom, AA-Omniscience) |
+| motif-3 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
+| qwen3-8-flash-next | gdpvalAA | 2026-09-22 | Artificial Analysis' board has moved to GDPval-AA v2.1 (rescaled — Fable 5.1 max reads 1735 there against the 1853 v2 figure on record), and no v2 rating for this model is retrievable; not filled to avoid mixing scales. v2.1 rating seen 2026-09-22: 1612 — migrate the key before using it |
+| deepseek-v4-flash-vision-exp | sweBenchPro | 2026-09-22 | DeepSeek's eleven-benchmark launch table has no SWE-bench Pro row |
+| deepseek-v4-flash-vision-exp | gdpvalAA | 2026-09-22 | Artificial Analysis' board has moved to GDPval-AA v2.1 (rescaled — Fable 5.1 max reads 1735 there against the 1853 v2 figure on record), and no v2 rating for this model is retrievable; not filled to avoid mixing scales. v2.1 rating seen 2026-09-22: 1534 (max) — migrate the key before using it |
+| qwen3-8-max-0902 | sweBenchPro | 2026-09-22 | Qwen's 0902 table (Terminal-Bench 3.0, DeepSWE 1.1, NL2Repo, ProgramBench, SWE-Marathon, CoWorkBench, JobBench, Toolathlon) has no SWE-bench Pro row; llm-stats' "Qwen3.8 Max 67.7" is the August build |
+| qwen3-8-max-0902 | gdpvalAA | 2026-09-22 | Artificial Analysis' board has moved to GDPval-AA v2.1 (rescaled — Fable 5.1 max reads 1735 there against the 1853 v2 figure on record), and no v2 rating for this model is retrievable; not filled to avoid mixing scales. v2.1 rating seen 2026-09-22: 1668 — migrate the key before using it |

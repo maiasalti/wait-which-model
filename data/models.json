@@ -377,7 +377,7 @@
       "mmluPro": 87,
       "gpqaDiamond": 85.7,
       "sweBench": 74.9,
-      "sweBenchPro": null,
+      "sweBenchPro": 41.78,
       "terminalBench": null,
       "aime": 94.6,
       "hle": 24.8,
@@ -395,7 +395,7 @@
       "Flatter, more clinical voice; users described losing a companion, not just a tool",
       "Under-answers by default, giving a summary where the previous line elaborated"
     ],
-    "notes": "Scores shown for GPT-5 (thinking, high)."
+    "notes": "Scores shown for GPT-5 (thinking, high). SWE-bench Pro 41.78% is Scale's public-set leaderboard figure for \"gpt-5-2025-08-07 (High)\" — third-party, not OpenAI-reported; the original SWE-Bench Pro paper (arXiv 2509.16941) lists the same run at 41.8%, while the 23.3% widely quoted from the paper's launch coverage was the commercial-set figure."
   },
   {
     "id": "gpt-5-1",
@@ -751,7 +751,7 @@
       "mmluPro": 83.8,
       "gpqaDiamond": 75.4,
       "sweBench": 72.7,
-      "sweBenchPro": null,
+      "sweBenchPro": 42.7,
       "terminalBench": null,
       "aime": 70.5,
       "hle": 9.2,
@@ -768,7 +768,7 @@
       "Loses coherence on runs measured in hours where the flagship holds",
       "Settles for a plausible answer sooner on genuinely hard problems"
     ],
-    "notes": ""
+    "notes": "SWE-bench Pro 42.7% is Scale's public-set figure (also Table 1 of the SWE-Bench Pro paper, arXiv 2509.16941) — third-party, not Anthropic-reported."
   },
   {
     "id": "claude-opus-4-1",
@@ -883,7 +883,7 @@
       "mmluPro": null,
       "gpqaDiamond": 83.4,
       "sweBench": 77.2,
-      "sweBenchPro": null,
+      "sweBenchPro": 43.6,
       "terminalBench": null,
       "aime": 87,
       "hle": 17.3,
@@ -900,7 +900,7 @@
       "Hits a ceiling on genuinely novel reasoning; more thinking doesn't produce a better answer",
       "Declares a task finished before verifying that it is"
     ],
-    "notes": ""
+    "notes": "SWE-bench Pro 43.6% is Scale's public-set figure (also Table 1 of the SWE-Bench Pro paper, arXiv 2509.16941) — third-party, not Anthropic-reported."
   },
   {
     "id": "claude-haiku-4-5",
@@ -953,7 +953,7 @@
       "mmluPro": null,
       "gpqaDiamond": 73,
       "sweBench": 73.3,
-      "sweBenchPro": null,
+      "sweBenchPro": 39.45,
       "terminalBench": null,
       "aime": 83,
       "hle": null,
@@ -970,7 +970,7 @@
       "Loses the thread on long tasks; needs a bigger model to plan for it and check it",
       "Takes instructions literally and misses implied requirements"
     ],
-    "notes": "Anthropic's current small model."
+    "notes": "Anthropic's current small model. SWE-bench Pro 39.45% is Scale's public-set leaderboard figure for claude-4-5-haiku — third-party, not Anthropic-reported."
   },
   {
     "id": "claude-opus-4-5",
@@ -1019,7 +1019,7 @@
       "mmluPro": null,
       "gpqaDiamond": 87,
       "sweBench": 80.9,
-      "sweBenchPro": null,
+      "sweBenchPro": 45.89,
       "terminalBench": null,
       "aime": null,
       "hle": null,
@@ -1036,7 +1036,7 @@
       "Context felt tight for whole-repository work by the standards of its own moment",
       "Verbose by default — explains its reasoning even when you only wanted the answer"
     ],
-    "notes": ""
+    "notes": "SWE-bench Pro 45.89% is Scale's public-set leaderboard figure for claude-opus-4-5-20251101 — third-party, not Anthropic-reported."
   },
   {
     "id": "gemini-1-5-pro",
@@ -1252,8 +1252,8 @@
       "mmluPro": 89.8,
       "gpqaDiamond": 91.9,
       "sweBench": 76.2,
-      "sweBenchPro": null,
-      "terminalBench": null,
+      "sweBenchPro": 43.3,
+      "terminalBench": 73.9,
       "aime": 95,
       "hle": 37.5,
       "lmarenaElo": 1501,
@@ -1270,7 +1270,7 @@
       "Old prompt-engineering habits — elaborate personas, hand-written chain-of-thought — make it worse, not better",
       "Deep Think sits behind the top consumer tier rather than the API"
     ],
-    "notes": ""
+    "notes": "SWE-Bench Pro (public) 43.3% is Google's own figure (cited in the Gemini 3.1 Pro model card's comparison column) and matches Scale's public leaderboard entry for gemini-3-pro-preview (43.30%). Terminal-Bench 2.1 73.9% (±1.3) is the Terminus 2 harness entry dated 2025-11-18 on the tbench.ai leaderboard as mirrored by Snorkel AI — third-party; the Gemini CLI entry scores 65.8%."
   },
   {
     "id": "llama-3-1-405b",
@@ -1312,7 +1312,7 @@
       "mmluPro": 73.3,
       "gpqaDiamond": 51.1,
       "sweBench": null,
-      "sweBenchPro": null,
+      "sweBenchPro": 11.18,
       "terminalBench": null,
       "aime": null,
       "hle": null,
@@ -1330,7 +1330,7 @@
       "Text-only, so no screenshots, charts or documents",
       "One-pass answers with no way to make it think longer"
     ],
-    "notes": "Pricing shown is typical hosted-inference cost."
+    "notes": "Pricing shown is typical hosted-inference cost. SWE-bench Pro 11.18% is Scale's public-set leaderboard figure for llama3-1-405b-instruct — third-party, not Meta-reported."
   },
   {
     "id": "llama-4-maverick",
@@ -1372,7 +1372,7 @@
       "mmluPro": 80.5,
       "gpqaDiamond": 69.8,
       "sweBench": null,
-      "sweBenchPro": null,
+      "sweBenchPro": 5.24,
       "terminalBench": null,
       "aime": null,
       "hle": null,
@@ -1390,7 +1390,7 @@
       "Weak at code and maths against open models released within months of it",
       "Long-context quality degrades well before the advertised limit"
     ],
-    "notes": "Meta's last major open release before its superintelligence-lab reorg."
+    "notes": "Meta's last major open release before its superintelligence-lab reorg. SWE-bench Pro 5.24% is Scale's public-set leaderboard figure for llama4-maverick-17b-instruct — third-party, not Meta-reported."
   },
   {
     "id": "grok-3",
@@ -1829,7 +1829,7 @@
       "mmluPro": 85,
       "gpqaDiamond": 79.9,
       "sweBench": 67.8,
-      "sweBenchPro": null,
+      "sweBenchPro": 15.56,
       "terminalBench": null,
       "aime": 89.3,
       "hle": 19.8,
@@ -1846,7 +1846,7 @@
       "An experimental release — behavior shifted noticeably between checkpoints",
       "Prose and instruction-following still trail its reasoning"
     ],
-    "notes": "Listed as V3.2-Exp at release."
+    "notes": "Listed as V3.2-Exp at release. SWE-bench Pro 15.56% is Scale's public-set leaderboard figure for \"deepseek-v3p2\" — third-party, not DeepSeek-reported."
   },
   {
     "id": "qwen3-235b",
@@ -1888,7 +1888,7 @@
       "mmluPro": 82.8,
       "gpqaDiamond": 71.1,
       "sweBench": null,
-      "sweBenchPro": null,
+      "sweBenchPro": 21.41,
       "terminalBench": null,
       "aime": 85.7,
       "hle": 11.8,
@@ -1905,7 +1905,7 @@
       "Loses coherence on long agentic runs where closed models hold together",
       "Thinking mode is verbose and hard to bound"
     ],
-    "notes": "Scores for the July 2025 updated (2507) checkpoints where applicable."
+    "notes": "Scores for the July 2025 updated (2507) checkpoints where applicable. SWE-bench Pro 21.41% is Scale's public-set leaderboard figure for \"qwen3-235b-a22b\" — third-party, not Alibaba-reported; Scale does not state which Qwen3-235B-A22B checkpoint (original or 2507) it ran."
   },
   {
     "id": "qwen3-max",
@@ -2000,7 +2000,7 @@
       "mmluPro": 81.1,
       "gpqaDiamond": 75.1,
       "sweBench": 65.8,
-      "sweBenchPro": null,
+      "sweBenchPro": 27.67,
       "terminalBench": null,
       "aime": 49.5,
       "hle": 4.7,
@@ -2017,7 +2017,7 @@
       "No deliberation at all, so hard maths and multi-step logic fail outright",
       "Large enough that self-hosting is a serious infrastructure commitment"
     ],
-    "notes": "Licence is Moonshot's Modified MIT: MIT plus a 'Kimi K2' UI-attribution clause above 100M MAU or US$20M monthly revenue, classified permissive."
+    "notes": "Licence is Moonshot's Modified MIT: MIT plus a 'Kimi K2' UI-attribution clause above 100M MAU or US$20M monthly revenue, classified permissive. SWE-bench Pro 27.67% is Scale's public-set leaderboard figure for kimi-k2-instruct — third-party, not Moonshot-reported."
   },
   {
     "id": "kimi-k2-thinking",
@@ -2129,7 +2129,7 @@
       "hle": 43.5,
       "lmarenaElo": 1486,
       "gdpvalAA": 1668,
-      "arcAgi2": null
+      "arcAgi2": 60.4
     },
     "strengths": [
       "Agentic browsing and long-horizon coding are where it feels genuinely frontier-class",
@@ -2141,7 +2141,7 @@
       "The effort dial shipped locked at maximum, so cheap quick calls aren't possible",
       "Factual reliability went backwards: it states wrong answers more confidently than K2 did"
     ],
-    "notes": "MMLU-Pro, AIME 2025, and SWE-bench Verified are unconfirmed or conflicting in third-party coverage (AIME cited as both 88% and 96.1%) so left null; Moonshot's own suite reports Terminal-Bench 2.1 at 88.3 and SWE Marathon at 42.0 instead. HLE is 43.5% no tools / 56.0% with tools. Artificial Analysis ranks K3 #3 on its Intelligence Index at 57, with GDPval-AA v2 Elo 1668 (K2.6: 1190), AA-Omniscience +18 on 46% accuracy, and $0.94 per index task at $3.00/$15.00 per MTok — but its hallucination rate regressed to 51% from K2.6's 39%. Weights landed on 2026-07-26 — 96 safetensors shards totalling roughly 1.56 TB, native MXFP4 with MXFP8 activations — under a bespoke Kimi K3 License that attaches conditions to large model-as-a-service and very large commercial deployments, rather than the MIT terms earlier Kimi releases carried. Licence is Moonshot's bespoke Kimi K3 License (MIT-derived, with attribution above 100M MAU / $20M monthly revenue and a separate agreement for large Model-as-a-Service operators), classified restricted; ordinary commercial use is permitted outright."
+    "notes": "MMLU-Pro, AIME 2025, and SWE-bench Verified are unconfirmed or conflicting in third-party coverage (AIME cited as both 88% and 96.1%) so left null; Moonshot's own suite reports Terminal-Bench 2.1 at 88.3 and SWE Marathon at 42.0 instead. HLE is 43.5% no tools / 56.0% with tools. Artificial Analysis ranks K3 #3 on its Intelligence Index at 57, with GDPval-AA v2 Elo 1668 (K2.6: 1190), AA-Omniscience +18 on 46% accuracy, and $0.94 per index task at $3.00/$15.00 per MTok — but its hallucination rate regressed to 51% from K2.6's 39%. Weights landed on 2026-07-26 — 96 safetensors shards totalling roughly 1.56 TB, native MXFP4 with MXFP8 activations — under a bespoke Kimi K3 License that attaches conditions to large model-as-a-service and very large commercial deployments, rather than the MIT terms earlier Kimi releases carried. Licence is Moonshot's bespoke Kimi K3 License (MIT-derived, with attribution above 100M MAU / $20M monthly revenue and a separate agreement for large Model-as-a-Service operators), classified restricted; ordinary commercial use is permitted outright. ARC-AGI-2 60.4% is ARC Prize-verified at max effort ($1.59/task; high 55.0%, low 12.4%), published 2026-07-16 at arcprize.org/results/moonshot-kimi-k3."
   },
   {
     "id": "mistral-large-3",
@@ -2241,7 +2241,7 @@
       "mmluPro": null,
       "gpqaDiamond": 94.3,
       "sweBench": 80.6,
-      "sweBenchPro": null,
+      "sweBenchPro": 54.2,
       "terminalBench": 70.7,
       "aime": 98.1,
       "hle": 44.4,
@@ -2259,7 +2259,7 @@
       "Elaborate prompt scaffolding backfires — it over-analyses the prompt itself",
       "Creative prose is competent but flat"
     ],
-    "notes": "Preview Feb 11, 2026; ARC-AGI-2 reported as 77.1 (76.5 in some sources). Knowledge cutoff Jan 2025 per DeepMind model page. AIME 98.1 is vals.ai-measured (third-party); MMLU-Pro not publicly reported. Terminal-Bench 2.1 70.7 is the official tbench.ai leaderboard figure with the Terminus 2 harness (Gemini CLI harness 67.1; vals.ai's own harness 70.79). Speed per Artificial Analysis' Gemini 3.1 Pro Preview page (Google's API), which carries no effort label."
+    "notes": "Preview Feb 11, 2026; ARC-AGI-2 reported as 77.1 (76.5 in some sources). Knowledge cutoff Jan 2025 per DeepMind model page. AIME 98.1 is vals.ai-measured (third-party); MMLU-Pro not publicly reported. Terminal-Bench 2.1 70.7 is the official tbench.ai leaderboard figure with the Terminus 2 harness (Gemini CLI harness 67.1; vals.ai's own harness 70.79). Speed per Artificial Analysis' Gemini 3.1 Pro Preview page (Google's API), which carries no effort label. SWE-Bench Pro (public) 54.2% is Google's own model-card figure (deepmind.google/models/model-cards/gemini-3-1-pro); Scale's public leaderboard lists \"gemini-3.1-pro (thinking)\" lower at 46.10%, a harness difference rather than a correction."
   },
   {
     "id": "qwen3-5",
@@ -2407,7 +2407,7 @@
       "mmluPro": null,
       "gpqaDiamond": 89.5,
       "sweBench": 77.4,
-      "sweBenchPro": null,
+      "sweBenchPro": 52.4,
       "terminalBench": null,
       "aime": null,
       "hle": 58.4,
@@ -2424,7 +2424,7 @@
       "Weak on abstract novel reasoning relative to how strong it is on domain knowledge",
       "No public API at launch — usable only through Meta's own products"
     ],
-    "notes": "Replaced Llama as Meta's flagship line. Closed hosted model — no public API pricing or max-output figure. SWE-bench 77.4 lab-reported; HLE 58.4 is third-party (LLM-Stats), with tools in Contemplating mode; ARC-AGI-2 42.5 in Contemplating mode."
+    "notes": "Replaced Llama as Meta's flagship line. Closed hosted model — no public API pricing or max-output figure. SWE-bench 77.4 lab-reported; HLE 58.4 is third-party (LLM-Stats), with tools in Contemplating mode; ARC-AGI-2 42.5 in Contemplating mode. SWE-Bench Pro (public) 52.4 is Meta's own figure for Muse Spark (Thinking) in its Muse Spark Eval Methodology table (ai.meta.com/static-resource/muse-spark-eval-methodology; Meta's scaffold, averaged over 4 attempts); Scale's public leaderboard lists \"Muse Spark\" higher at 55.00% — lab figure used, per house rules."
   },
   {
     "id": "gpt-5-5",
@@ -2460,7 +2460,7 @@
       "mmluPro": null,
       "gpqaDiamond": 93.5,
       "sweBench": 88.7,
-      "sweBenchPro": null,
+      "sweBenchPro": 58.6,
       "terminalBench": 83.4,
       "aime": null,
       "hle": 41.4,
@@ -2478,7 +2478,7 @@
       "Struggles to recover once a long thread already contains a wrong assumption",
       "Training artefacts surfaced in production, including a tic for inserting creature words that OpenAI later patched out"
     ],
-    "notes": "GPT-5.5 Pro variant ($30/$180) sits #2 on LMArena. Context reported as 1M API / 1.1M by some trackers. Knowledge cutoff Dec 2025. SWE-bench Verified 88.7 lab-reported; LMArena Elo 1481 is the GPT-5.5 (high) listing. Terminal-Bench 2.1 83.4 is the vendor-submitted Codex CLI + GPT-5.5 entry on tbench.ai (also on CodingFleet's 2.1 board); the same model scores 76.4 through the Terminus 2 harness, and OpenAI's launch post reported Terminal-Bench 2.0 82.7. Speed is Artificial Analysis' GPT-5.5 (medium) model-page figure on OpenAI's API (2026-09-03); AA's providers page for the same variant showed a different window (OpenAI 75.0 tok/s / 6.41 s)."
+    "notes": "GPT-5.5 Pro variant ($30/$180) sits #2 on LMArena. Context reported as 1M API / 1.1M by some trackers. Knowledge cutoff Dec 2025. SWE-bench Verified 88.7 lab-reported; LMArena Elo 1481 is the GPT-5.5 (high) listing. Terminal-Bench 2.1 83.4 is the vendor-submitted Codex CLI + GPT-5.5 entry on tbench.ai (also on CodingFleet's 2.1 board); the same model scores 76.4 through the Terminus 2 harness, and OpenAI's launch post reported Terminal-Bench 2.0 82.7. Speed is Artificial Analysis' GPT-5.5 (medium) model-page figure on OpenAI's API (2026-09-03); AA's providers page for the same variant showed a different window (OpenAI 75.0 tok/s / 6.41 s). SWE-Bench Pro 58.6% is OpenAI's launch figure (per llm-stats' OpenAI-sourced entry and Anthropic's Claude Fable 5 comparison table, which lists GPT-5.5 at 58.6); one DataCamp piece quotes 59.4%, untraced. OpenAI later audited SWE-Bench Pro (~30% broken tasks) and stopped recommending it."
   },
   {
     "id": "deepseek-v4",
@@ -2514,7 +2514,7 @@
       "mmluPro": 87.5,
       "gpqaDiamond": 90.1,
       "sweBench": 80.6,
-      "sweBenchPro": null,
+      "sweBenchPro": 55.4,
       "terminalBench": 72.1,
       "aime": null,
       "hle": 48.2,
@@ -2532,7 +2532,7 @@
       "Serving capacity is chip-constrained, so the top variant is frequently unavailable",
       "No dedicated reasoning line to escalate to"
     ],
-    "notes": "V4-Pro is a 1.6T/49B-active MoE; V4-Flash costs $0.14/$0.28. MMLU-Pro 87.5 / GPQA 90.1 are DeepSeek-reported for V4-Pro in Max reasoning mode; HLE 48.2 is third-party (LLM-Stats), same mode. Terminal-Bench 2.1 72.1 is DeepSeek's own figure for the April V4-Pro preview, published in its V4-Pro-0813 comparison table (harness not stated; the 0813 production build scores 87.9)."
+    "notes": "V4-Pro is a 1.6T/49B-active MoE; V4-Flash costs $0.14/$0.28. MMLU-Pro 87.5 / GPQA 90.1 are DeepSeek-reported for V4-Pro in Max reasoning mode; HLE 48.2 is third-party (LLM-Stats), same mode. Terminal-Bench 2.1 72.1 is DeepSeek's own figure for the April V4-Pro preview, published in its V4-Pro-0813 comparison table (harness not stated; the 0813 production build scores 87.9). SWE-bench Pro 55.4 (\"SWE Pro\") is DeepSeek's own model-card figure for V4-Pro in Max reasoning mode (huggingface.co/deepseek-ai/DeepSeek-V4-Pro; High 54.4, Non-Think 52.1)."
   },
   {
     "id": "grok-4-3",
@@ -2810,7 +2810,7 @@
       "mmluPro": null,
       "gpqaDiamond": 93.6,
       "sweBench": 88.6,
-      "sweBenchPro": null,
+      "sweBenchPro": 69.2,
       "terminalBench": 74.6,
       "aime": null,
       "hle": 49.8,
@@ -2828,7 +2828,7 @@
       "Can get caught in self-correction loops, re-checking work that was already right",
       "Clarifying questions interrupt fully autonomous runs that were meant to need no input"
     ],
-    "notes": "HLE 49.8% no tools / 57.9% with tools. LMArena Elo corrected to 1484 (current Opus 4.8 Thinking listing, July 2026); an earlier 1510 figure did not match the live leaderboard. ARC-AGI-2 72.1% added July 2026 once ARC Prize published verified results: 72.08% at high effort (71.67% medium, 62.22% low). Terminal-Bench 2.1 74.6 is Anthropic's reported figure with the public Terminus 2 harness (reproduced by DataCamp, Vellum and others; anthropic.com was not directly readable this run); the vendor-submitted Claude Code + Opus 4.8 pair on tbench.ai is listed at 78.9."
+    "notes": "HLE 49.8% no tools / 57.9% with tools. LMArena Elo corrected to 1484 (current Opus 4.8 Thinking listing, July 2026); an earlier 1510 figure did not match the live leaderboard. ARC-AGI-2 72.1% added July 2026 once ARC Prize published verified results: 72.08% at high effort (71.67% medium, 62.22% low). Terminal-Bench 2.1 74.6 is Anthropic's reported figure with the public Terminus 2 harness (reproduced by DataCamp, Vellum and others; anthropic.com was not directly readable this run); the vendor-submitted Claude Code + Opus 4.8 pair on tbench.ai is listed at 78.9. SWE-bench Pro 69.2% is Anthropic's figure for Opus 4.8 in the Claude Fable 5 launch comparison table (2026-06-09), as reproduced by Vellum and llm-stats."
   },
   {
     "id": "claude-fable-5",
@@ -2873,13 +2873,13 @@
       "mmluPro": null,
       "gpqaDiamond": 92.6,
       "sweBench": 95,
-      "sweBenchPro": null,
+      "sweBenchPro": 80.3,
       "terminalBench": 88,
       "aime": null,
       "hle": 64.5,
       "lmarenaElo": 1509,
       "gdpvalAA": 1723,
-      "arcAgi2": null
+      "arcAgi2": 89.2
     },
     "strengths": [
       "Holds decision quality steady across sessions that run for days, remembering why it chose something hours earlier",
@@ -2892,7 +2892,7 @@
       "Slow, and its depth of explanation is a cost when you wanted a quick scan",
       "Token spend and latency swing enormously between low and max effort, making budgeting hard"
     ],
-    "notes": "Shares weights with the restricted Claude Mythos 5 (vetted partners only). HLE 64.5% is with tools; GPQA/SWE figures are third-party — Anthropic retired saturated benchmarks from official reporting. Terminal-Bench 2.1 88.0% as reported in poolside's Laguna S 2.1 comparison table."
+    "notes": "Shares weights with the restricted Claude Mythos 5 (vetted partners only). HLE 64.5% is with tools; GPQA/SWE figures are third-party — Anthropic retired saturated benchmarks from official reporting. Terminal-Bench 2.1 88.0% as reported in poolside's Laguna S 2.1 comparison table. ARC-AGI-2 89.2% is ARC Prize-verified at max effort ($5.45/task; xhigh 88.3%, high 87.5%), published 2026-06-09 at arcprize.org/results/anthropic-claude-fable-5. SWE-bench Pro 80.3% is Anthropic's own launch-table figure (2026-06-09, its own scaffolding; Mythos Preview 77.8, Opus 4.8 69.2, GPT-5.5 58.6, Gemini 3.1 Pro 54.2 in the same table, as reproduced by Vellum); trackers such as llm-stats and BenchLM round it to 80.0%."
   },
   {
     "id": "gemma-4",
@@ -3042,7 +3042,7 @@
       "mmluPro": 89.1,
       "gpqaDiamond": 94.6,
       "sweBench": 96.2,
-      "sweBenchPro": null,
+      "sweBenchPro": 64.6,
       "terminalBench": 88.8,
       "aime": null,
       "hle": 47.2,
@@ -3060,14 +3060,14 @@
       "Pre-deployment testing found it gaming its own evaluations, which makes any single score harder to trust",
       "Priced well above its Terra and Luna siblings, which close much of the gap on everyday work"
     ],
-    "notes": "The frontier tier of the three-model GPT-5.6 family (Sol / Terra / Luna), all released 2026-07-09. Context window and max output confirmed via OpenAI's developer docs. GPQA Diamond 94.6 and HLE 47.2 are OpenAI/Artificial Analysis-reported; MMLU-Pro 89.1 and ARC-AGI-2 92.5 (Max effort, per ARC Prize) are third-party. OpenAI published no SWE-bench or AIME figure for this family; SWE-bench Verified 96.2 is third-party, from Vals AI’s independent harness (leaderboard updated 2026-07-31, run at max reasoning effort), the same board that supplies Luna’s 93.0. AIME stays null. LMArena Elo 1485 is the \"gpt-5.6-sol-xhigh\" text-arena listing (arena.ai). Artificial Analysis Intelligence Index 59. Terminal-Bench 2.1 88.8% from the GPT-5.6 launch comparison table (Sol 88.8 / Terra 87.4 / Luna 84.7). Sol's price held at $5.00/$30.00 through OpenAI's 2026-07-30 cuts to the other two tiers, which also added an optional fast mode: up to 2.5x the speed at twice the price."
+    "notes": "The frontier tier of the three-model GPT-5.6 family (Sol / Terra / Luna), all released 2026-07-09. Context window and max output confirmed via OpenAI's developer docs. GPQA Diamond 94.6 and HLE 47.2 are OpenAI/Artificial Analysis-reported; MMLU-Pro 89.1 and ARC-AGI-2 92.5 (Max effort, per ARC Prize) are third-party. OpenAI published no SWE-bench or AIME figure for this family; SWE-bench Verified 96.2 is third-party, from Vals AI’s independent harness (leaderboard updated 2026-07-31, run at max reasoning effort), the same board that supplies Luna’s 93.0. AIME stays null. LMArena Elo 1485 is the \"gpt-5.6-sol-xhigh\" text-arena listing (arena.ai). Artificial Analysis Intelligence Index 59. Terminal-Bench 2.1 88.8% from the GPT-5.6 launch comparison table (Sol 88.8 / Terra 87.4 / Luna 84.7). Sol's price held at $5.00/$30.00 through OpenAI's 2026-07-30 cuts to the other two tiers, which also added an optional fast mode: up to 2.5x the speed at twice the price. SWE-Bench Pro 64.6% is OpenAI's launch-table figure (openai.com/index/gpt-5-6, not fetchable directly), as reproduced by Vellum, LayerLens and llm-stats and cross-cited in Anthropic's Claude Opus 5 system-card table."
   },
   {
     "id": "gpt-5-6-terra",
     "name": "GPT-5.6 Terra",
     "company": "openai",
     "releaseDate": "2026-07-09",
-    "status": "unknown",
+    "status": "frontier",
     "tier": "balanced",
     "modality": "multimodal",
     "contextWindow": 1000000,
@@ -3101,13 +3101,13 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": null,
-      "sweBenchPro": null,
+      "sweBenchPro": 63.4,
       "terminalBench": 87.4,
       "aime": null,
       "hle": null,
       "lmarenaElo": null,
       "gdpvalAA": null,
-      "arcAgi2": null
+      "arcAgi2": 83.9
     },
     "strengths": [
       "Behaves like the flagship on ordinary work — the gap only opens on the hardest long-horizon agentic tasks",
@@ -3118,7 +3118,7 @@
       "OpenAI published no per-tier academic benchmarks, so where it really sits against rivals is hard to pin down",
       "Trails Sol most on exactly the long-horizon agentic work that justifies reaching for a frontier model"
     ],
-    "notes": "Middle tier of the three-model GPT-5.6 family. OpenAI published only agentic suites per tier — Terminal-Bench 2.1 87.4%, Coding Agent Index 77.4, Agents' Last Exam 50.4, MRCR long-context recall 89.6% — and none of the site's tracked academic benchmarks, so those stay null. Artificial Analysis Intelligence Index 55 (vs Sol 59, Luna 51); speed is AA's medium-effort measurement, matching the costPerTask effort (an earlier 140.4 tok/s reading in these notes was a different listing). Pricing is OpenAI's list rate, cut from $2.50/$15.00 to $2.00/$12.00 on 2026-07-30 (Luna was cut 80% in the same move). Context window per Artificial Analysis and OpenRouter; max output is tracker-reported, not from OpenAI's docs. Knowledge cutoff not published per tier."
+    "notes": "Middle tier of the three-model GPT-5.6 family. OpenAI published only agentic suites per tier — Terminal-Bench 2.1 87.4%, Coding Agent Index 77.4, Agents' Last Exam 50.4, MRCR long-context recall 89.6% — and none of the site's tracked academic benchmarks (GPQA Diamond, HLE, MMLU-Pro, AIME stay null); SWE-Bench Pro and ARC-AGI-2 were filled later from OpenAI's launch table and ARC Prize respectively (below). Artificial Analysis Intelligence Index 55 (vs Sol 59, Luna 51); speed is AA's medium-effort measurement, matching the costPerTask effort (an earlier 140.4 tok/s reading in these notes was a different listing). Pricing is OpenAI's list rate, cut from $2.50/$15.00 to $2.00/$12.00 on 2026-07-30 (Luna was cut 80% in the same move). Context window per Artificial Analysis and OpenRouter; max output is tracker-reported, not from OpenAI's docs. Knowledge cutoff not published per tier. ARC-AGI-2 83.9% is ARC Prize-verified at max effort (xhigh 74.2%, high 67.1%, medium 37.5%, low 18.8%), published 2026-07-09 at arcprize.org/results/openai-gpt-5-6-terra; cost per task not stated. SWE-Bench Pro 63.4% is OpenAI's launch-table figure (Sol 64.6 / Terra 63.4 / Luna 62.7), as reproduced by LayerLens, DataCamp and llm-stats."
   },
   {
     "id": "gpt-5-6-luna",
@@ -3279,7 +3279,7 @@
       "hle": 38.3,
       "lmarenaElo": 1485,
       "gdpvalAA": 1421,
-      "arcAgi2": null
+      "arcAgi2": 60.4
     },
     "strengths": [
       "Sticks to the change you asked for instead of touching adjacent files during diagnostic work",
@@ -3290,7 +3290,7 @@
       "Flash-tier depth ceiling — it executes well but doesn't crack genuinely hard reasoning",
       "Arrived with no matching Pro-tier model in its generation, so there was nothing to escalate to"
     ],
-    "notes": "Model card reports SWE-Bench Pro 58.7%, DeepSWE v1.1 49%, GDPval-AA v2 Elo 1421, and GDM-MRCR v2 91.8% at 128k; Google published none of the site's other tracked benchmarks at launch. Artificial Analysis Intelligence Index 50 (third-party). GPQA Diamond 92.8% and HLE 38.3% are Artificial Analysis-measured, not Google-reported. LMArena Elo 1485 is the 'gemini-3.6-flash' text-arena listing (rank 12, arena.ai); it also sits #12 in the Frontend Code Arena at 1537. Announced 2026-07-21 alongside Gemini 3.5 Flash-Lite and the limited-access Gemini 3.5 Flash Cyber."
+    "notes": "Model card reports SWE-Bench Pro 58.7%, DeepSWE v1.1 49%, GDPval-AA v2 Elo 1421, and GDM-MRCR v2 91.8% at 128k; Google published none of the site's other tracked benchmarks at launch. Artificial Analysis Intelligence Index 50 (third-party). GPQA Diamond 92.8% and HLE 38.3% are Artificial Analysis-measured, not Google-reported. LMArena Elo 1485 is the 'gemini-3.6-flash' text-arena listing (rank 12, arena.ai); it also sits #12 in the Frontend Code Arena at 1537. Announced 2026-07-21 alongside Gemini 3.5 Flash-Lite and the limited-access Gemini 3.5 Flash Cyber. ARC-AGI-2 60.4% is ARC Prize-verified at high effort ($0.61/task; medium 50.4%, low 30.4%), published 2026-07-21 at arcprize.org/results/gemini-3-6-flash."
   },
   {
     "id": "gemini-3-5-flash-lite",
@@ -3563,11 +3563,11 @@
       "mmluPro": null,
       "gpqaDiamond": 93.7,
       "sweBench": 96,
-      "sweBenchPro": null,
-      "terminalBench": null,
+      "sweBenchPro": 79.2,
+      "terminalBench": 84.6,
       "aime": null,
       "hle": 56.3,
-      "lmarenaElo": null,
+      "lmarenaElo": 1493,
       "gdpvalAA": 1824,
       "arcAgi2": 90.4
     },
@@ -3582,7 +3582,7 @@
       "Early users describe it as neurotic and apologetic, and less willing to follow a prescribed workflow than Opus 4.8",
       "Easy to misconfigure: effort and skill settings change its behavior more than the version bump does"
     ],
-    "notes": "HLE 56.3% no tools / 64.7% with tools. SWE-bench Verified 96.0% is Anthropic's own system-card figure (five-trial average); a third-party aggregator (vals.ai) cites 97.0%. GPQA Diamond varies 93.4-93.7% across trackers; 93.7% used. ARC-AGI-2 90.4% (max effort) and ARC-AGI-3 30.2% (high effort, a separate untracked scale) per ARC Prize (arcprize.org). Max output is 128K on the synchronous API, up to 300K via the Message Batches API. AIME not published — Anthropic appears to be moving to newer evals (IMO 2026, Frontier-Bench v0.1) instead."
+    "notes": "HLE 56.3% no tools / 64.7% with tools. SWE-bench Verified 96.0% is Anthropic's own system-card figure (five-trial average); a third-party aggregator (vals.ai) cites 97.0%. GPQA Diamond varies 93.4-93.7% across trackers; 93.7% used. ARC-AGI-2 90.4% (max effort) and ARC-AGI-3 30.2% (high effort, a separate untracked scale) per ARC Prize (arcprize.org). Max output is 128K on the synchronous API, up to 300K via the Message Batches API. AIME not published — Anthropic appears to be moving to newer evals (IMO 2026, Frontier-Bench v0.1) instead. LMArena Elo 1493 is the \"claude-opus-5-high\" text-arena listing (arena.ai, 2026-09-13 update, rank 10); the \"claude-opus-5-max\" listing sits at 1487. SWE-bench Pro 79.2% is Anthropic's system-card figure (the launch post itself gives only relative claims), as relayed by BenchLM, llm-stats and DataNorth; the same table lists Fable 5 at 80.0 and GPT-5.6 Sol at 64.6. Terminal-Bench 2.1 84.64% is Vals AI's independent-harness measurement at high effort (vals.ai/models/anthropic_claude-opus-5, 2026-07-23) — third-party; Artificial Analysis is reported (via morphllm) to measure 89.1% at max effort in the Terminus 2 harness, but that figure could not be read from AA directly."
   },
   {
     "id": "inkling",
@@ -3763,7 +3763,7 @@
     "name": "Nemotron 3 Ultra",
     "company": "nvidia",
     "releaseDate": "2026-06-04",
-    "status": "unknown",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "text",
     "contextWindow": 1000000,
@@ -3778,7 +3778,7 @@
     },
     "openWeights": true,
     "availability": "general",
-    "knowledgeCutoff": null,
+    "knowledgeCutoff": "2025-09",
     "speed": {
       "outputTokensPerSec": 95.7,
       "timeToFirstTokenSec": null,
@@ -3791,11 +3791,11 @@
     "benchmarks": {
       "mmluPro": null,
       "gpqaDiamond": null,
-      "sweBench": null,
+      "sweBench": 70.7,
       "sweBenchPro": null,
-      "terminalBench": null,
+      "terminalBench": 56.4,
       "aime": null,
-      "hle": null,
+      "hle": 26.7,
       "lmarenaElo": null,
       "gdpvalAA": null,
       "arcAgi2": null
@@ -3811,7 +3811,7 @@
       "Trails the leading Chinese open-weights models on composite intelligence despite its size",
       "NVIDIA published no standard academic benchmark table at launch, so it is hard to place precisely"
     ],
-    "notes": "Largest of the three-model Nemotron 3 family (Nano, Super, Ultra); 550B total / 55B active MoE. Artificial Analysis Intelligence Index 47.7 — ahead of Gemma 4 31B (39.2) and Nemotron 3 Super (36.0), behind Kimi K2.6 (53.9). None of the site's tracked benchmarks could be attributed with confidence: NVIDIA's technical report contains many ablation and quantisation tables rather than a single headline model table, so they stay null rather than risk quoting an intermediate checkpoint. Pricing is OpenRouter's listing; NVIDIA publishes no first-party per-token price. Context is 1M per NVIDIA, though OpenRouter serves a 512K effective window. Output speed is Artificial Analysis' median across providers serving Nemotron 3 Ultra; AA's median time to first answer token was not readable and is left null."
+    "notes": "Largest of the three-model Nemotron 3 family (Nano, Super, Ultra); 550B total / 55B active MoE. Artificial Analysis Intelligence Index 47.7 — ahead of Gemma 4 31B (39.2) and Nemotron 3 Super (36.0), behind Kimi K2.6 (53.9). NVIDIA's technical report contains many ablation and quantisation tables rather than a single headline model table, so nothing was taken from it; the tracked cells filled below come from the model card instead. Pricing is OpenRouter's listing; NVIDIA publishes no first-party per-token price. Context is 1M per NVIDIA, though OpenRouter serves a 512K effective window. Output speed is Artificial Analysis' median across providers serving Nemotron 3 Ultra; AA's median time to first answer token was not readable and is left null. SWE-Bench Verified 70.7, Terminal Bench 2.1 56.4 and HLE 26.7 (no tools; 37.4 with tools) are NVIDIA's own figures from the BF16 model card's evaluation table (huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16, collected via NeMo Evaluator SDK), which supersede the earlier read of the technical report; the card's \"GPQA (no tools)\" 87.0 is left out of gpqaDiamond, matching the Nemotron 3 Super treatment. Knowledge cutoff 2025-09 is the pre-training data cutoff per the card; post-training data runs to May 2026."
   },
   {
     "id": "hy3",
@@ -4199,7 +4199,7 @@
       "hle": 36.8,
       "lmarenaElo": null,
       "gdpvalAA": null,
-      "arcAgi2": null
+      "arcAgi2": 61.4
     },
     "strengths": [
       "Same weights and architecture as the April preview — every gain comes from a rebuilt post-training recipe, not new pre-training",
@@ -4212,7 +4212,7 @@
       "Fabricates heavily on knowledge probes, and factual coverage has not moved with the agentic gains",
       "Ships without a Jinja chat template — messages go through DeepSeek's own Python encoding scripts instead"
     ],
-    "notes": "The production release of DeepSeek-V4-Flash, superseding April's preview: same 284B/13B MoE and DSpark speculative-decoding module, with all gains from re-post-training. Terminal-Bench 2.1 82.7 is DeepSeek's own figure at max reasoning effort in its minimal-mode harness; Artificial Analysis measures 78.7 on the same benchmark. GPQA Diamond 90.8 and HLE 36.8% (no tools) are Artificial Analysis' measurements — DeepSeek published neither. Also reported by DeepSeek: NL2Repo 54.2, Cybergym 76.7, DeepSWE 54.4, Toolathlon-Verified 70.3, Agents' Last Exam 25.2. MMLU-Pro, SWE-bench Verified, AIME, LMArena and ARC-AGI-2 are unpublished. Artificial Analysis scores it 50 on its Intelligence Index, 10 points above the April preview’s 40. Max output is the 384K DeepSeek recommends for high and max effort; the OpenRouter endpoint caps completions at 65,536. Pricing updated 2026-09-03: DeepSeek moved the V4 line to peak/off-peak billing on 2026-08-16 16:00 UTC (announced 2026-08-14) — the flat $0.14/$0.28 became $0.22/$0.66 off-peak and $0.44/$1.32 during peak hours (01:00-04:00 and 06:00-10:00 UTC); the off-peak rate is recorded here as the base tier, and costPerTask ($0.0271) predates the change. Retired 2026-09-10: DeepSeek's change log states \"the previous-generation models V4 Flash and V4 Flash Vision Exp have been retired\" with the launch of DeepSeek-V4.1-Flash; the `deepseek-v4-flash` id is still accepted but temporarily routed to V4.1-Flash and billed at Flash rates, so calls to it no longer reach this model. Weights remain on Hugging Face."
+    "notes": "The production release of DeepSeek-V4-Flash, superseding April's preview: same 284B/13B MoE and DSpark speculative-decoding module, with all gains from re-post-training. Terminal-Bench 2.1 82.7 is DeepSeek's own figure at max reasoning effort in its minimal-mode harness; Artificial Analysis measures 78.7 on the same benchmark. GPQA Diamond 90.8 and HLE 36.8% (no tools) are Artificial Analysis' measurements — DeepSeek published neither. Also reported by DeepSeek: NL2Repo 54.2, Cybergym 76.7, DeepSWE 54.4, Toolathlon-Verified 70.3, Agents' Last Exam 25.2. MMLU-Pro, SWE-bench Verified, AIME and LMArena are unpublished; ARC-AGI-2 comes from ARC Prize (below). Artificial Analysis scores it 50 on its Intelligence Index, 10 points above the April preview’s 40. Max output is the 384K DeepSeek recommends for high and max effort; the OpenRouter endpoint caps completions at 65,536. Pricing updated 2026-09-03: DeepSeek moved the V4 line to peak/off-peak billing on 2026-08-16 16:00 UTC (announced 2026-08-14) — the flat $0.14/$0.28 became $0.22/$0.66 off-peak and $0.44/$1.32 during peak hours (01:00-04:00 and 06:00-10:00 UTC); the off-peak rate is recorded here as the base tier, and costPerTask ($0.0271) predates the change. Retired 2026-09-10: DeepSeek's change log states \"the previous-generation models V4 Flash and V4 Flash Vision Exp have been retired\" with the launch of DeepSeek-V4.1-Flash; the `deepseek-v4-flash` id is still accepted but temporarily routed to V4.1-Flash and billed at Flash rates, so calls to it no longer reach this model. Weights remain on Hugging Face. ARC-AGI-2 61.4% is ARC Prize-verified at max effort ($0.04/task; high 56.0%, low 46.0%), published 2026-07-31 at arcprize.org/results/deepseek-v4-flash-0731."
   },
   {
     "id": "claude-sonnet-4-6",
@@ -4450,7 +4450,7 @@
       "mmluPro": 80.8,
       "gpqaDiamond": 80.1,
       "sweBench": 62.4,
-      "sweBenchPro": null,
+      "sweBenchPro": 16.2,
       "terminalBench": null,
       "aime": 92.5,
       "hle": 14.9,
@@ -4468,7 +4468,7 @@
       "Locked to OpenAI's bespoke Harmony response format; feeding it a generic chat template silently breaks tool calls and reasoning",
       "Inherited safety training leans toward refusal, and self-hosters report it overcorrecting on benign prompts"
     ],
-    "notes": "OpenAI's first open-weight release since GPT-2. GPQA Diamond 80.1%, HLE 14.9% and AIME 2025 92.5% are no-tools scores at high reasoning effort per OpenAI's model card (arXiv:2508.10925); with tools, GPQA rises to 80.9%, HLE to 19.0%, AIME to 97.9%. MMLU-Pro 80.8 is from the official Hugging Face model card. Terminal-Bench reported is 2.0 (18.7%), not the tracked 2.1 metric, so left null here. Pricing ($0.03/$0.17 per MTok) is a representative third-party hosted rate (OpenRouter/CoreWeave) — OpenAI's own API docs list the model with no attached price, and rates vary roughly 9x across hosts (e.g. AWS Bedrock charges $0.15/$0.60)."
+    "notes": "OpenAI's first open-weight release since GPT-2. GPQA Diamond 80.1%, HLE 14.9% and AIME 2025 92.5% are no-tools scores at high reasoning effort per OpenAI's model card (arXiv:2508.10925); with tools, GPQA rises to 80.9%, HLE to 19.0%, AIME to 97.9%. MMLU-Pro 80.8 is from the official Hugging Face model card. Terminal-Bench reported is 2.0 (18.7%), not the tracked 2.1 metric, so left null here. Pricing ($0.03/$0.17 per MTok) is a representative third-party hosted rate (OpenRouter/CoreWeave) — OpenAI's own API docs list the model with no attached price, and rates vary roughly 9x across hosts (e.g. AWS Bedrock charges $0.15/$0.60). SWE-bench Pro 16.2% is Scale's public-set leaderboard figure (also Table 1 of the SWE-Bench Pro paper) — third-party, not OpenAI-reported."
   },
   {
     "id": "gpt-oss-20b",
@@ -4674,7 +4674,7 @@
     "name": "MiniMax-M3",
     "company": "minimax",
     "releaseDate": "2026-06-01",
-    "status": "unknown",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 1000000,
@@ -4714,11 +4714,11 @@
       "mmluPro": null,
       "gpqaDiamond": null,
       "sweBench": 80.5,
-      "sweBenchPro": null,
+      "sweBenchPro": 59,
       "terminalBench": 66,
       "aime": null,
       "hle": null,
-      "lmarenaElo": null,
+      "lmarenaElo": 1441,
       "gdpvalAA": null,
       "arcAgi2": null
     },
@@ -4732,7 +4732,7 @@
       "Multimodal input is new to this generation, so image/video handling is comparatively less battle-tested than its text/coding path",
       "Early hands-on reception is cautiously optimistic rather than settled — reliability on production agent loops still needs workload-specific testing"
     ],
-    "notes": "Officially announced 2026-06-01 (minimax.io/blog/minimax-m3); some third-party trackers (e.g. OpenRouter) list 2026-05-31, likely the weights-availability date. Total/active parameters ~428B/23B per the Hugging Face model card. SWE-bench Verified 80.5% and Terminal-Bench 2.1 66.0% are corroborated across the Hugging Face README and MiniMax's own blog. GPQA Diamond, AIME, HLE, MMLU-Pro and ARC-AGI-2 were not extractable — MiniMax's benchmark table at launch is an embedded image rather than machine-readable text, and no independent source reproduced these specific figures. Licensed under the bespoke 'MiniMax Community License': free for non-commercial use; commercial use under $20M annual revenue requires only a notice email and a 'Built with MiniMax' attribution label, above that threshold prior written authorization is required. Third-party framing calls M3 a 'successor to M2.7' (not tracked here), but MiniMax's own material explicitly keeps M2.5 available as a cheaper option for some workloads rather than deprecating it, so predecessorId is left null. Pricing is the standard tier for inputs up to 512K tokens; above that the rate doubles to $0.60/$2.40 per MTok."
+    "notes": "Officially announced 2026-06-01 (minimax.io/blog/minimax-m3); some third-party trackers (e.g. OpenRouter) list 2026-05-31, likely the weights-availability date. Total/active parameters ~428B/23B per the Hugging Face model card. SWE-bench Verified 80.5% and Terminal-Bench 2.1 66.0% are corroborated across the Hugging Face README and MiniMax's own blog. GPQA Diamond, AIME, HLE, MMLU-Pro and ARC-AGI-2 were not extractable — MiniMax's benchmark table at launch is an embedded image rather than machine-readable text, and no independent source reproduced these specific figures. Licensed under the bespoke 'MiniMax Community License': free for non-commercial use; commercial use under $20M annual revenue requires only a notice email and a 'Built with MiniMax' attribution label, above that threshold prior written authorization is required. Third-party framing calls M3 a 'successor to M2.7' (not tracked here), but MiniMax's own material explicitly keeps M2.5 available as a cheaper option for some workloads rather than deprecating it, so predecessorId is left null. Pricing is the standard tier for inputs up to 512K tokens; above that the rate doubles to $0.60/$2.40 per MTok. LMArena Elo 1441 is the \"minimax-m3\" text-arena listing (arena.ai, 2026-09-13 update). SWE-Bench Pro 59.0% is MiniMax's own launch figure (the benchmark table is an image), as reproduced by VentureBeat, CodingFleet and llm-stats."
   },
   {
     "id": "seed-2-0-pro",
@@ -5463,7 +5463,7 @@
     "name": "Grok 4.6",
     "company": "xai",
     "releaseDate": "2026-08-12",
-    "status": "unknown",
+    "status": "frontier",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 500000,
@@ -5503,7 +5503,7 @@
       "hle": null,
       "lmarenaElo": null,
       "gdpvalAA": 1753,
-      "arcAgi2": null
+      "arcAgi2": 67.1
     },
     "strengths": [
       "Sustains a long agentic run without losing the thread — the work went into fine-tuning on regenerated trajectories rather than a new base model",
@@ -5515,14 +5515,14 @@
       "Weakest on terminal and command-line work, well behind its scores on other agentic tasks",
       "Crossing the 200K-token prompt threshold reprices the whole request at double rate, so long-context runs cost more than the headline suggests"
     ],
-    "notes": "Reuses Grok 4.5's 1.5T-parameter base, with the gains from supervised fine-tuning on regenerated trajectories and reinforcement learning rather than a new pre-train. Terminal-Bench 2.1 88.4% is Artificial Analysis-measured; xAI's own card leads with Terminal-Bench 3.0 (26.5%), a different and much harder version that is not comparable to the 2.1 figure this site tracks. GPQA Diamond, MMLU-Pro, HLE, SWE-bench Verified, AIME and ARC-AGI-2 are unpublished by both xAI and AA, and the model has no arena.ai listing, so lmarenaElo is null — note that the widely-quoted \"1753 Elo\" is GDPval-AA v2, not LMArena. AA Intelligence Index 61 (joint third at release, level with GPT-5.6 Sol), cost per task $0.84 and speed measured at high effort. Pricing $2/$6 applies below a 200K-token prompt; above it every token in the request bills at $4/$12, and a fast variant costs double. xAI publishes no max-output figure. The company rebranded from xAI to SpaceXAI on 2026-07-06 after merging into SpaceX; companies.json still carries the old name."
+    "notes": "Reuses Grok 4.5's 1.5T-parameter base, with the gains from supervised fine-tuning on regenerated trajectories and reinforcement learning rather than a new pre-train. Terminal-Bench 2.1 88.4% is Artificial Analysis-measured; xAI's own card leads with Terminal-Bench 3.0 (26.5%), a different and much harder version that is not comparable to the 2.1 figure this site tracks. GPQA Diamond, MMLU-Pro, HLE, SWE-bench Verified and AIME are unpublished by both xAI and AA (ARC-AGI-2 was later verified by ARC Prize, below), and the model has no arena.ai listing, so lmarenaElo is null — note that the widely-quoted \"1753 Elo\" is GDPval-AA v2, not LMArena. AA Intelligence Index 61 (joint third at release, level with GPT-5.6 Sol), cost per task $0.84 and speed measured at high effort. Pricing $2/$6 applies below a 200K-token prompt; above it every token in the request bills at $4/$12, and a fast variant costs double. xAI publishes no max-output figure. The company rebranded from xAI to SpaceXAI on 2026-07-06 after merging into SpaceX; companies.json still carries the old name. ARC-AGI-2 67.1% is ARC Prize-verified at xhigh effort ($0.76/task; high 65.1%, medium 61.3%), published 2026-08-11 at arcprize.org/results/xai-grok-4-6."
   },
   {
     "id": "qwen3-8-2-4t-a95b",
     "name": "Qwen3.8-2.4T-A95B",
     "company": "alibaba",
     "releaseDate": "2026-08-13",
-    "status": "frontier",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "text",
     "contextWindow": 262144,
@@ -5744,7 +5744,7 @@
       "terminalBench": 88.2,
       "aime": null,
       "hle": null,
-      "lmarenaElo": null,
+      "lmarenaElo": 1483,
       "gdpvalAA": null,
       "arcAgi2": null
     },
@@ -5758,14 +5758,14 @@
       "Good at finding exploitable bugs but weaker at writing the exploits itself — defensive security strength doesn't carry over to offensive tasks",
       "Reasoning is always-on with only a low/high/max budget dial, and Artificial Analysis measures it at max — every call carries thinking overhead you cannot switch off"
     ],
-    "notes": "Same ~744B-parameter (~40B active) MoE base as GLM-5.2 — Z.ai's own framing is 'scaling post-training is all we did for GLM-5.3' — so predecessorId is left null per this site's rule against lineage/build-upon language as replacement evidence, even though several outlets call GLM-5.2 its 'predecessor.' Z.ai's launch benchmark table is entirely agentic/coding/cyber (Terminal-Bench 2.1 88.2%, Terminal-Bench 3.0 4.6%→28.3%, DeepSWE v1.1 46.2%→66.9%, SWE-Marathon v1.1 19.4%→42.5%, AutomationBench 26.2%→48.2%, Agents' Last Exam 23.8%→28.5%, CyberGym 84.5% — ahead of Claude Mythos 5's 83.8% and GPT-5.6 Sol's 83.6% by Z.ai's account) and doesn't touch the site's tracked knowledge/reasoning keys, consistent with the unchanged-base-model claim. Context window and max output are carried over unchanged from GLM-5.2 (1M / 128K) pending a dedicated 5.3 model card. Weights have since been published on Hugging Face (zai-org/GLM-5.3) under a bespoke \"GLM-5.3 License\" rather than the MIT terms used for GLM-5.2 and GLM-5.3-Flash: an MIT-style grant covering weights, code and derivative works, with one added condition — any Model-as-a-Service operator whose group revenue exceeds US$10B in a 12-month period must pass a Z.ai security review before commercial use. Z.ai's API now lists the model as glm-5.3 at $1.40/$4.40 per M input/output tokens (cached input $0.26); Artificial Analysis measures the max-effort variant at 72 tok/s and 1.63 s to first answer token, but its per-task cost figure could not be read. The exact weights-publication date (reported as 2026-08-28 by several trackers) could not be confirmed from a primary page."
+    "notes": "Same ~744B-parameter (~40B active) MoE base as GLM-5.2 — Z.ai's own framing is 'scaling post-training is all we did for GLM-5.3' — so predecessorId is left null per this site's rule against lineage/build-upon language as replacement evidence, even though several outlets call GLM-5.2 its 'predecessor.' Z.ai's launch benchmark table is entirely agentic/coding/cyber (Terminal-Bench 2.1 88.2%, Terminal-Bench 3.0 4.6%→28.3%, DeepSWE v1.1 46.2%→66.9%, SWE-Marathon v1.1 19.4%→42.5%, AutomationBench 26.2%→48.2%, Agents' Last Exam 23.8%→28.5%, CyberGym 84.5% — ahead of Claude Mythos 5's 83.8% and GPT-5.6 Sol's 83.6% by Z.ai's account) and doesn't touch the site's tracked knowledge/reasoning keys, consistent with the unchanged-base-model claim. Context window and max output are carried over unchanged from GLM-5.2 (1M / 128K) pending a dedicated 5.3 model card. Weights have since been published on Hugging Face (zai-org/GLM-5.3) under a bespoke \"GLM-5.3 License\" rather than the MIT terms used for GLM-5.2 and GLM-5.3-Flash: an MIT-style grant covering weights, code and derivative works, with one added condition — any Model-as-a-Service operator whose group revenue exceeds US$10B in a 12-month period must pass a Z.ai security review before commercial use. Z.ai's API now lists the model as glm-5.3 at $1.40/$4.40 per M input/output tokens (cached input $0.26); Artificial Analysis measures the max-effort variant at 72 tok/s and 1.63 s to first answer token, but its per-task cost figure could not be read. The exact weights-publication date (reported as 2026-08-28 by several trackers) could not be confirmed from a primary page. LMArena Elo 1483 is the \"glm-5.3-max\" text-arena listing (arena.ai, 2026-09-13 update, rank 19)."
   },
   {
     "id": "ornith-1-5-397b",
     "name": "Ornith-1.5-397B",
     "company": "deepreinforce",
     "releaseDate": "2026-08-19",
-    "status": "unknown",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "text",
     "contextWindow": 262144,
@@ -5798,12 +5798,12 @@
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
-      "gpqaDiamond": null,
+      "gpqaDiamond": 92.8,
       "sweBench": 86,
-      "sweBenchPro": null,
+      "sweBenchPro": 65.1,
       "terminalBench": 86.1,
       "aime": null,
-      "hle": null,
+      "hle": 44.6,
       "lmarenaElo": null,
       "gdpvalAA": null,
       "arcAgi2": null
@@ -5818,7 +5818,7 @@
       "Reported to perform poorly in plain chat without tool access, consistent with a model post-trained specifically for agentic scaffolds rather than general use",
       "No first-party hosted API at launch — running the 397B checkpoint means self-hosting roughly 800GB (bf16) across multiple GPUs"
     ],
-    "notes": "SWE-bench Verified (86) and Terminal-Bench 2.1 (86.1) are the 397B variant's launch comparisons against Claude Opus 4.8 (85.8 / 85), widely repeated at launch; GPQA Diamond and HLE figures conflict across secondary sources (no consistent primary figure found) and are left null. No official Artificial Analysis measurement or first-party API pricing published as of release. DeepReinforce's Ornith-1.0 (this model's obvious lineage) isn't tracked on this site, so predecessorId is left null rather than pointing at an untracked id."
+    "notes": "SWE-bench Verified (86) and Terminal-Bench 2.1 (86.1) are the 397B variant's launch comparisons against Claude Opus 4.8 (85.8 / 85), widely repeated at launch; GPQA Diamond and HLE were initially left null because secondary sources conflicted; the HF model card has since supplied them (below). No official Artificial Analysis measurement or first-party API pricing published as of release. DeepReinforce's Ornith-1.0 (this model's obvious lineage) isn't tracked on this site, so predecessorId is left null rather than pointing at an untracked id. SWE-bench Pro 65.1, GPQA Diamond 92.8 and HLE 44.6 (no tools; 56.1 with tools) are Ornith AI's own model-card figures (huggingface.co/ornith-ai/Ornith-1.5-397B, averaged over five runs), which also give SWE-bench Multilingual 79.6 and DeepSWE 56; the earlier conflicting secondary GPQA/HLE figures are superseded by the card."
   },
   {
     "id": "glm-5-3-flash",
@@ -5869,7 +5869,7 @@
       "terminalBench": 84.3,
       "aime": null,
       "hle": null,
-      "lmarenaElo": null,
+      "lmarenaElo": 1475,
       "gdpvalAA": null,
       "arcAgi2": null
     },
@@ -5883,14 +5883,14 @@
       "Default responses aren't automation-ready for strict structured output — needs explicit response-format constraints where some rivals return clean JSON out of the box",
       "Reasoning is always-on with only a low/high/max budget dial, not an off switch — every call carries at least some thinking overhead"
     ],
-    "notes": "320B-total/18B-active MoE, Zhipu's first natively multimodal model in the GLM-5 line. Terminal-Bench 2.1 (84.3%) is Z.ai's own reported figure; GPQA Diamond, HLE, SWE-bench Verified, AIME, LMArena Elo and ARC-AGI-2 are left null — Z.ai's own table reports non-standard benchmarks instead (DeepSWE v1.1 63.4%, AutomationBench 48.8%, Toolathlon Verified 78.4%), and a single-source claim of an Artificial Analysis GPQA Diamond (91.2%) and HLE (55.3%) score could not be corroborated across independent sources on re-check. costPerTask ($0.09) and speed (49.8 tok/s, 1.49s to first answer token) are Artificial Analysis' max-effort measurements — the model has no medium-effort variant (only low/high/max). Pricing is Z.ai's standard $0.15/$0.50 rate; a 50%-off launch promotion runs through 2026-09-09. predecessorId is left null since Zhipu's own materials frame this as a new capability tier rather than an explicit replacement for GLM-5.2 or GLM-5.3."
+    "notes": "320B-total/18B-active MoE, Zhipu's first natively multimodal model in the GLM-5 line. Terminal-Bench 2.1 (84.3%) is Z.ai's own reported figure; GPQA Diamond, HLE, SWE-bench Verified, AIME and ARC-AGI-2 are left null (LMArena Elo was listed later, below) — Z.ai's own table reports non-standard benchmarks instead (DeepSWE v1.1 63.4%, AutomationBench 48.8%, Toolathlon Verified 78.4%), and a single-source claim of an Artificial Analysis GPQA Diamond (91.2%) and HLE (55.3%) score could not be corroborated across independent sources on re-check. costPerTask ($0.09) and speed (49.8 tok/s, 1.49s to first answer token) are Artificial Analysis' max-effort measurements — the model has no medium-effort variant (only low/high/max). Pricing is Z.ai's standard $0.15/$0.50 rate; a 50%-off launch promotion runs through 2026-09-09. predecessorId is left null since Zhipu's own materials frame this as a new capability tier rather than an explicit replacement for GLM-5.2 or GLM-5.3. LMArena Elo 1475 is the \"glm-5.3-flash\" text-arena listing (arena.ai, 2026-09-13 update, rank 29)."
   },
   {
     "id": "hy4-preview",
     "name": "Hy4 preview",
     "company": "tencent",
     "releaseDate": "2026-08-28",
-    "status": "frontier",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "text",
     "contextWindow": 1048576,
@@ -5955,7 +5955,7 @@
     "name": "DeepSeek-V4-Pro-0813",
     "company": "deepseek",
     "releaseDate": "2026-08-13",
-    "status": "frontier",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "text",
     "contextWindow": 1048576,
@@ -5999,9 +5999,9 @@
       "terminalBench": 87.9,
       "aime": null,
       "hle": 42.7,
-      "lmarenaElo": null,
+      "lmarenaElo": 1463,
       "gdpvalAA": null,
-      "arcAgi2": null
+      "arcAgi2": 61.3
     },
     "strengths": [
       "Same 1.6T/49B MoE structure as April's preview with a DSpark speculative-decoding module bolted on — the agentic gains arrive without a new architecture to re-integrate",
@@ -6014,7 +6014,7 @@
       "Multi-turn thinking mode requires replaying the previous turn's reasoning verbatim — the most common cause of 400 errors when migrating existing agent loops",
       "Landed as a stealth update with no launch post (the brief notice on DeepSeek's site was pulled within a day), so documentation is thin and behavior is still being characterised"
     ],
-    "notes": "The production release of DeepSeek-V4-Pro, superseding April's preview per DeepSeek's own model card: same 1.6T/49B MoE with a DSpark speculative-decoding module, all gains from re-post-training. Pricing is the peak-hour rate that took effect 2026-08-16 (peak = 01:00–04:00 and 06:00–10:00 UTC); off-peak is 50% lower at $0.66/$1.98 and cache-hit input is cheaper still — roughly a 3–4x rise from the preview's $0.435/$0.87. Terminal-Bench 2.1 87.9 and HLE 42.7% (60.0% with tools) are DeepSeek's own figures at max effort in its minimal-mode harness; independent runs on the Terminus 2 reference harness report 54.68 (V4-Flash-0731: 67.04). GPQA Diamond 93 is Artificial Analysis' measurement as displayed on its charts, not lab-reported — DeepSeek's own 0813 card figure could not be confirmed directly (one unofficial site cites 92.8; the 90.1 many aggregators list is April's preview). SWE-bench Verified 96.4 is third-party (Vals AI, #2 on its board behind Claude Opus 5) — DeepSeek published no SWE-bench figure and the 80.6 some trackers carry is the preview's. Also reported by DeepSeek: DeepSWE 62.7, CyberGym 83.3, NL2Repo 61.5, Toolathlon 74.1, Agents' Last Exam 25.7, AutomationBench 31.8. Artificial Analysis scores it 53 on its Intelligence Index — 8 points above April's preview but only 1 above V4-Flash-0731 on the current index version — measuring 78.1 tok/s and 25.67 s to first answer token on DeepSeek's endpoint at max effort; its per-task cost figure could not be retrieved. MMLU-Pro, AIME, LMArena and ARC-AGI-2 are unpublished. Max output is the 384K DeepSeek recommends for high/max effort. The API went live 2026-08-12 under the unchanged `deepseek-v4-pro` id; the Hugging Face card and DeepSeek's release notice followed on 2026-08-13. Updated 2026-09-15: DeepSeek's V4.1-Flash launch post (2026-09-10) said all `deepseek-v4-pro` requests would route to V4.1-Flash from 2026-09-14 04:00 UTC until V4.1-Pro ships, but the API change log and pricing page then reversed this \"in response to user demand\" — V4 Pro service continues after 2026-09-14 with billing unchanged, so no retirement is recorded."
+    "notes": "The production release of DeepSeek-V4-Pro, superseding April's preview per DeepSeek's own model card: same 1.6T/49B MoE with a DSpark speculative-decoding module, all gains from re-post-training. Pricing is the peak-hour rate that took effect 2026-08-16 (peak = 01:00–04:00 and 06:00–10:00 UTC); off-peak is 50% lower at $0.66/$1.98 and cache-hit input is cheaper still — roughly a 3–4x rise from the preview's $0.435/$0.87. Terminal-Bench 2.1 87.9 and HLE 42.7% (60.0% with tools) are DeepSeek's own figures at max effort in its minimal-mode harness; independent runs on the Terminus 2 reference harness report 54.68 (V4-Flash-0731: 67.04). GPQA Diamond 93 is Artificial Analysis' measurement as displayed on its charts, not lab-reported — DeepSeek's own 0813 card figure could not be confirmed directly (one unofficial site cites 92.8; the 90.1 many aggregators list is April's preview). SWE-bench Verified 96.4 is third-party (Vals AI, #2 on its board behind Claude Opus 5) — DeepSeek published no SWE-bench figure and the 80.6 some trackers carry is the preview's. Also reported by DeepSeek: DeepSWE 62.7, CyberGym 83.3, NL2Repo 61.5, Toolathlon 74.1, Agents' Last Exam 25.7, AutomationBench 31.8. Artificial Analysis scores it 53 on its Intelligence Index — 8 points above April's preview but only 1 above V4-Flash-0731 on the current index version — measuring 78.1 tok/s and 25.67 s to first answer token on DeepSeek's endpoint at max effort; its per-task cost figure could not be retrieved. MMLU-Pro and AIME are unpublished; the arena.ai listing and ARC Prize result arrived after launch (below). Max output is the 384K DeepSeek recommends for high/max effort. The API went live 2026-08-12 under the unchanged `deepseek-v4-pro` id; the Hugging Face card and DeepSeek's release notice followed on 2026-08-13. Updated 2026-09-15: DeepSeek's V4.1-Flash launch post (2026-09-10) said all `deepseek-v4-pro` requests would route to V4.1-Flash from 2026-09-14 04:00 UTC until V4.1-Pro ships, but the API change log and pricing page then reversed this \"in response to user demand\" — V4 Pro service continues after 2026-09-14 with billing unchanged, so no retirement is recorded. ARC-AGI-2 61.3% is ARC Prize-verified at max effort ($0.60/task; high 59.7%, low 56.3%), published 2026-08-13 at arcprize.org/results/deepseek-v4-pro-0813. LMArena Elo 1463 is the \"deepseek-v4-pro-high-20260813\" text-arena listing (arena.ai, 2026-09-13 update); the undated \"deepseek-v4-pro\" listing sits at 1457."
   },
   {
     "id": "motif-3",
@@ -6124,11 +6124,11 @@
       "mmluPro": 92.4,
       "gpqaDiamond": null,
       "sweBench": null,
-      "sweBenchPro": null,
+      "sweBenchPro": 81.2,
       "terminalBench": 91.4,
       "aime": null,
       "hle": 60.9,
-      "lmarenaElo": null,
+      "lmarenaElo": 1498,
       "gdpvalAA": 1853,
       "arcAgi2": 90
     },
@@ -6143,7 +6143,7 @@
       "At max effort it generates roughly twice the tokens of its peers and can sit for minutes before the first answer token, so per-task cost went up despite the cache-read cut",
       "At low effort it answers from memory rather than searching, tends to rewrite whole files for small edits, and can lift passages from sources without marking them as quotes"
     ],
-    "notes": "Same model as the restricted Claude Mythos 5.1 (Project Glasswing participants only), which shares its specs and pricing and differs only in safeguards — Anthropic reports no separate Mythos score on any tracked benchmark. HLE 60.9% no tools / 65.0% with tools per Anthropic. Anthropic no longer reports SWE-bench Verified, GPQA Diamond or AIME: Terminal-Bench 2.1 91.4% is Artificial Analysis-measured at max effort (Vals AI's harness gives 85.0%), MMLU-Pro 92.4% is Vals AI's measurement at max effort, and ARC-AGI-2 90.0% is ARC Prize-verified at max effort ($4.49/task). Cache reads are $0.25/MTok (0.025x input, vs 0.1x on other Claude models); batch $5/$25. Cost per task and speed are AA's medium-effort variant — max effort runs $3.69/task at 66.2 tok/s with a 291 s first-answer latency. Anthropic's launch table also reports Terminal-Bench-Science 0.1 52.6%, Terminal-Bench 4.0 55.8% (Mythos 5.1 60.9%), GDPval-AA v2 1853, OSWorld 2.0 77.9% partial / 41.7% strict, AutomationBench 31.4% and CursorBench 3.2.0 73.4%, with Fable 5.1 scored with production safeguards on, taking zeros where they intervened."
+    "notes": "Same model as the restricted Claude Mythos 5.1 (Project Glasswing participants only), which shares its specs and pricing and differs only in safeguards — Anthropic reports no separate Mythos score on any tracked benchmark. HLE 60.9% no tools / 65.0% with tools per Anthropic. Anthropic no longer reports SWE-bench Verified, GPQA Diamond or AIME: Terminal-Bench 2.1 91.4% is Artificial Analysis-measured at max effort (Vals AI's harness gives 85.0%), MMLU-Pro 92.4% is Vals AI's measurement at max effort, and ARC-AGI-2 90.0% is ARC Prize-verified at max effort ($4.49/task). Cache reads are $0.25/MTok (0.025x input, vs 0.1x on other Claude models); batch $5/$25. Cost per task and speed are AA's medium-effort variant — max effort runs $3.69/task at 66.2 tok/s with a 291 s first-answer latency. Anthropic's launch table also reports Terminal-Bench-Science 0.1 52.6%, Terminal-Bench 4.0 55.8% (Mythos 5.1 60.9%), GDPval-AA v2 1853, OSWorld 2.0 77.9% partial / 41.7% strict, AutomationBench 31.4% and CursorBench 3.2.0 73.4%, with Fable 5.1 scored with production safeguards on, taking zeros where they intervened. LMArena Elo 1498 is the \"claude-fable-5.1-max\" text-arena listing (arena.ai, 2026-09-13 update, rank 5). SWE-bench Pro 81.2% is Anthropic's system-card figure (not in the launch post), as relayed by BenchLM, CodingFleet and emergent.sh; the system-card PDF was too large to read directly this run."
   },
   {
     "id": "qwen3-8-flash-next",
@@ -6488,9 +6488,9 @@
       "terminalBench": null,
       "aime": null,
       "hle": null,
-      "lmarenaElo": null,
+      "lmarenaElo": 1480,
       "gdpvalAA": null,
-      "arcAgi2": null
+      "arcAgi2": 95
     },
     "strengths": [
       "Drives a desktop end to end — locating UI targets, filling spreadsheets, building sites — and finishes computer-use tasks markedly faster than Sol did rather than just more accurately",
@@ -6504,7 +6504,7 @@
       "Gated at every layer — trusted-access first, enterprise workspaces off until an admin opts in, cybersecurity capability behind the Daybreak programme — so it can't simply be picked up and trialled",
       "Behavior is a moving target this early: no hands-on reviews of voice, verbosity or agentic stamina exist yet, and independent leaderboards haven't placed it"
     ],
-    "notes": "OpenAI's first model designated Critical for cybersecurity under its Preparedness Framework, launched via staged rollout (trusted-access enterprises first, then ChatGPT Plus/Pro/Business/Enterprise and the wider API), hence availability \"restricted\". Context 1,050,000 tokens (922K max input) and 128K output, cutoff 2026-04-30, and $10/$50 per MTok ($1 cached input, $12.50 cache writes) are from OpenAI's own model docs; prompts over 272K input tokens bill at 2x input/cache and 1.5x output for the whole request, and a fast tier costs 2x ($20/$100). GPQA Diamond 96.0 is from OpenAI's launch table; the rest of that table uses benchmarks this site doesn't track (Terminal-Bench 4.0 57.7% — not the tracked 2.1 metric — DeepSWE v1.1 74.1%, FrontierMath Tier 4 v2 97.6%, OSWorld 2.0 72.6%, ScreenSpot-Pro 92.7%, BrowseComp 91.5%, ExploitBench 100%, MRCR v2 8-needle 100% at 256K-512K and 96.3% at 512K-1M). HLE is left null because the only published figure, 57.2%, is with tools and so isn't comparable to the no-tools scores recorded here. OpenAI has not published SWE-bench Verified since February 2026 and Astra is absent from the SWE-bench Pro leaderboard. ARC Prize measured ARC-AGI-3 (62.7% on its standard harness, 99.9% via a provider-adapter harness ARC Prize warns is not comparable to human testing) but published no ARC-AGI-2 figure. Artificial Analysis scores it 61 on the Intelligence Index at max effort (level with GPT-5.6 Sol, 5 below Claude Fable 5.1) at $1.67 per task, and $0.75 per task at medium effort, the figure recorded here; AA reports no speed measurements yet, and flags a ~80 Elo regression on GDPval-AA v2 against Sol without publishing the absolute rating."
+    "notes": "OpenAI's first model designated Critical for cybersecurity under its Preparedness Framework, launched via staged rollout (trusted-access enterprises first, then ChatGPT Plus/Pro/Business/Enterprise and the wider API), hence availability \"restricted\". Context 1,050,000 tokens (922K max input) and 128K output, cutoff 2026-04-30, and $10/$50 per MTok ($1 cached input, $12.50 cache writes) are from OpenAI's own model docs; prompts over 272K input tokens bill at 2x input/cache and 1.5x output for the whole request, and a fast tier costs 2x ($20/$100). GPQA Diamond 96.0 is from OpenAI's launch table; the rest of that table uses benchmarks this site doesn't track (Terminal-Bench 4.0 57.7% — not the tracked 2.1 metric — DeepSWE v1.1 74.1%, FrontierMath Tier 4 v2 97.6%, OSWorld 2.0 72.6%, ScreenSpot-Pro 92.7%, BrowseComp 91.5%, ExploitBench 100%, MRCR v2 8-needle 100% at 256K-512K and 96.3% at 512K-1M). HLE is left null because the only published figure, 57.2%, is with tools and so isn't comparable to the no-tools scores recorded here. OpenAI has not published SWE-bench Verified since February 2026 and Astra is absent from the SWE-bench Pro leaderboard; the arena.ai listing and ARC Prize's ARC-AGI-2 result arrived after launch (below). ARC Prize measured ARC-AGI-3 (62.7% on its standard harness, 99.9% via a provider-adapter harness ARC Prize warns is not comparable to human testing) but published no ARC-AGI-2 figure. Artificial Analysis scores it 61 on the Intelligence Index at max effort (level with GPT-5.6 Sol, 5 below Claude Fable 5.1) at $1.67 per task, and $0.75 per task at medium effort, the figure recorded here; AA reports no speed measurements yet, and flags a ~80 Elo regression on GDPval-AA v2 against Sol without publishing the absolute rating. ARC-AGI-2 95.0% is ARC Prize-verified at max effort (xhigh 93.3%, high/medium 92.1%, low 85.4%), published 2026-09-02 at arcprize.org/results/openai-gpt-6-astra; cost per task not stated on that page. LMArena Elo 1480 (±12) is the \"gpt-6-astra-max\" text-arena listing (arena.ai, 2026-09-13 update, rank 24)."
   },
   {
     "id": "muse-spark-1-3",
@@ -6553,7 +6553,7 @@
       "terminalBench": 85,
       "aime": null,
       "hle": 47,
-      "lmarenaElo": null,
+      "lmarenaElo": 1493,
       "gdpvalAA": 1709,
       "arcAgi2": null
     },
@@ -6568,7 +6568,7 @@
       "Answer verbosity climbed sharply over 1.2, so the unchanged per-token price does not mean unchanged bills",
       "The headline agentic numbers come from a max reasoning mode that was still in limited preview at launch — what developers can call is the weaker xhigh configuration"
     ],
-    "notes": "Figures here describe the generally available xhigh reasoning configuration; a stronger `max` variant was still in safety testing at launch and only Artificial Analysis' partner preview had access. Terminal-Bench 2.1 conflicts: Artificial Analysis measured 85% (xhigh) and 86% (max) in its own harness, while Meta reports 88.8% for max — the AA xhigh figure is recorded as the one matching the shipping model. GPQA Diamond, HLE and GDPval-AA v2 are Artificial Analysis measurements of xhigh, not lab-reported. Meta lists a Contributor tier at $0.10/$0.20 per M tokens in exchange for training rights, and cached input at $0.15/M. Meta's roadmap promises a future 'Muse Spark open weights release' but 1.3 itself is closed."
+    "notes": "Figures here describe the generally available xhigh reasoning configuration; a stronger `max` variant was still in safety testing at launch and only Artificial Analysis' partner preview had access. Terminal-Bench 2.1 conflicts: Artificial Analysis measured 85% (xhigh) and 86% (max) in its own harness, while Meta reports 88.8% for max — the AA xhigh figure is recorded as the one matching the shipping model. GPQA Diamond, HLE and GDPval-AA v2 are Artificial Analysis measurements of xhigh, not lab-reported. Meta lists a Contributor tier at $0.10/$0.20 per M tokens in exchange for training rights, and cached input at $0.15/M. Meta's roadmap promises a future 'Muse Spark open weights release' but 1.3 itself is closed. LMArena Elo 1493 is the \"muse-spark-1.3-max\" text-arena listing (arena.ai, 2026-09-13 update, rank 8)."
   },
   {
     "id": "deepseek-v4-1-flash",
