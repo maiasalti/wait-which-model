@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-09-18-qwen3-8-omni-flash",
+    "date": "2026-09-18",
+    "title": "Alibaba launches Qwen3.8-Omni-Flash, its first agentic omni-modal model",
+    "summary": "Alibaba's Qwen team released Qwen3.8-Omni-Flash, a native text/image/audio/video-in, text-out model built around agentic tool use, with a 1M-token context window and reported GPQA Diamond 91.0 and SWE-bench Pro 63.3. Alibaba says per-hour audio costs fall 98% and combined audio-video costs fall 93% versus its predecessor Qwen3.5-Omni-Plus.",
+    "category": "release",
+    "companies": [
+      "alibaba"
+    ],
+    "modelIds": [
+      "qwen3-8-omni-flash"
+    ],
+    "sourceName": "Alibaba Qwen",
+    "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-omni-flash"
+  },
+  {
     "id": "2026-09-15-jev",
     "date": "2026-09-15",
     "title": "TypeSafe AI emerges from stealth with Jev, a decision model that returns typed probabilities instead of text",
