@@ -138,3 +138,5 @@ fugu-max · predecessorId · 2026-09-13 · Sakana frames Fugu Max as a new cost-
 fugu-ultra-v2 · predecessorId · 2026-09-13 · Versioned "v2.0" as the successor to Fugu Ultra (launched 2026-06-22, later v1.1 on 2026-07-24) and framed by coverage as "a smaller pool, a higher score" than the prior build — but neither Fugu Ultra v1.0 nor v1.1 is a tracked model in this dataset, so the field stays null. Re-check only if an earlier Fugu Ultra build is ever added.
 fugu-max · retirementDate · 2026-09-13 · No lifecycle/deprecation page found for any Sakana Fugu model at launch. Left null.
 fugu-ultra-v2 · retirementDate · 2026-09-13 · Same — no lifecycle page found. Left null.
+jev · speed · 2026-09-21 · No Artificial Analysis measurement; TypeSafe's 70-500 ms figure and priorbench's ~430 ms floor are end-to-end latencies for typed answers, not tokens/sec, so the field does not apply. Left null.
+jev · retirementDate · 2026-09-21 · No lifecycle or deprecation page on docs.typesafe.ai at launch. Left null.
