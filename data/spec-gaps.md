@@ -141,3 +141,5 @@ fugu-ultra-v2 · retirementDate · 2026-09-13 · Same — no lifecycle page foun
 qwen3-8-omni-flash · predecessorId · 2026-09-20 · Launch coverage repeatedly calls Qwen3.5-Omni-Plus this model's "predecessor" by name (e.g. cost comparisons), but Qwen3.5-Omni-Plus is not itself a tracked model in this dataset, so the field stays null. Re-check only if Qwen3.5-Omni-Plus is ever added.
 qwen3-8-omni-flash · retirementDate · 2026-09-20 · No lifecycle/deprecation page found for this checkpoint at launch. Left null.
 qwen3-8-omni-flash · speed · 2026-09-20 · No Artificial Analysis measurement found for this checkpoint at launch.
+jev · speed · 2026-09-21 · No Artificial Analysis measurement; TypeSafe's 70-500 ms figure and priorbench's ~430 ms floor are end-to-end latencies for typed answers, not tokens/sec, so the field does not apply. Left null.
+jev · retirementDate · 2026-09-21 · No lifecycle or deprecation page on docs.typesafe.ai at launch. Left null.

@@ -698,3 +698,7 @@ Weekly release-scan sweep on 2026-09-15, scoped to `deepseek-v4-1-flash` (2026-0
 | qwen3-8-omni-flash | arcAgi2 | 2026-09-20 | not reported by Alibaba and no independent leaderboard listing found |
 | qwen3-8-omni-flash | costPerTask | 2026-09-20 | no Artificial Analysis Intelligence Index measurement found for this checkpoint |
 | qwen3-8-omni-flash | speed | 2026-09-20 | no Artificial Analysis speed measurement found for this checkpoint |
+| jev | gpqaDiamond, sweBench, sweBenchPro, terminalBench, hle, lmarenaElo, gdpvalAA, arcAgi2, mmluPro, aime | 2026-09-21 | not applicable, not merely unpublished: Jev is a typed-decision model that cannot generate text, so no generative benchmark can be run on it; independent evals (priorbench/jev, scienthoon/jev-ood-calibration, beri.net) measure classification accuracy and calibration only |
+| jev | maxOutput | 2026-09-21 | no output-token limit published; output is a fixed set of typed values, not a token stream, and output tokens are unmetered |
+| jev | knowledgeCutoff | 2026-09-21 | not disclosed on TypeSafe's models page, blog or docs |
+| jev | costPerTask | 2026-09-21 | no Artificial Analysis coverage of any TypeSafe model as of launch |

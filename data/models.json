@@ -6823,5 +6823,70 @@
       "Hosted-only despite sitting on the open-weight Qwen3.8-Flash-Next architecture — Alibaba has published no downloadable weights for the Omni-Flash checkpoint itself"
     ],
     "notes": "Alibaba's first omni-modal model built around agentic tool use (text, image, audio and video in; text out), launched 2026-09-18 on Qwen Chat, QwenCloud and Model Studio's OpenAI-compatible endpoint. GPQA Diamond 91.0 and SWE-bench Pro 63.3 are Alibaba's own reported figures via launch coverage (official qwen.ai/alibabacloud.com pages were unreachable this session); MMLU-Pro, Terminal-Bench, AIME, HLE, LMArena Elo, GDPval-AA and ARC-AGI-2 were not found reported for this specific checkpoint and are logged to stats-gaps.md. Pricing (~$0.11/$0.38 per MTok) is converted from Alibaba Cloud Model Studio's official CNY rate (0.8/2.7 per million tokens) and matches one reseller's quote, but a second reseller lists $0.15/$0.47 — flagging the conflict rather than picking one; per-hour audio/video surcharge pricing is not broken out here. Context window is Alibaba's marketed 1M figure; QwenCloud's own listing shows a 991K/131K input/output split, used for maxOutput. Coverage repeatedly calls Qwen3.5-Omni-Plus this model's 'predecessor' by name, but Qwen3.5-Omni-Plus is not itself a tracked model in this dataset, so predecessorId stays null (logged to spec-gaps.md). No Artificial Analysis coverage found, hence costPerTask and speed are null; no official retirement page exists yet."
+  },
+  {
+    "id": "jev",
+    "name": "Jev",
+    "company": "typesafe",
+    "releaseDate": "2026-09-15",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "text",
+    "contextWindow": 64000,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 0.042,
+      "outputPerMTok": 0
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "typesafe",
+        "id": "jev-1.13.0"
+      },
+      {
+        "provider": "openrouter",
+        "id": "typesafe/jev-1.13"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Returns typed values from the schema you declare rather than text — a malformed or undeclared field is impossible by construction, so there is no parsing layer to break",
+      "Answers in a few hundred milliseconds with a fixed floor of roughly 430 ms per call, so batching hundreds of questions into one request costs barely more than asking one",
+      "Its top confidence band is a usable routing signal: in an independent pre-registered eval, gating at 0.99 gave 100% accuracy on the 60% of traffic that cleared the bar",
+      "Decisions are defined at runtime in the question text, so a classifier can be changed or added without retraining or labelled data"
+    ],
+    "weaknesses": [
+      "Cannot generate text at all, and TypeSafe's own docs warn that counting, arithmetic and date reasoning are unreliable — anything numeric has to live in code",
+      "Calibration is uneven below the top band: an independent test measured expected calibration error at 4x the noise floor, with yes/no answers underconfident, multiple-choice overconfident, and an average 0.74 confidence on questions it got right under half the time",
+      "Reads criteria literally with no out-of-scope reflex — a wrongly worded criterion dropped accuracy below the random floor, and inputs matching none of the options still get a confident pick",
+      "Broad single questions underperform: 62.6% on phishing detection asked once against 95% only after the task was split into five atomic questions plus a fitted regression the user has to maintain"
+    ],
+    "notes": "Not an LLM: a \"System One\" decision model trained with TypeSafe's RLCD (reinforcement learning for calibrated decisions) that takes text state plus typed questions (Choice, Score, Noul) and returns values with calibrated probabilities, sampled in parallel rather than token by token, so none of this site's benchmarks apply and every cell is null by design. Filed under the fast tier for cost and latency, since it is not comparable to flagship generators. Context is 64k tokens per request per TypeSafe's model page (32k for state plus the longest question); OpenRouter lists it as 32k. Output tokens are unmetered. TypeSafe's own console opened with an early-access waitlist, but OpenRouter (typesafe/jev-1.13, via a separate alpha decisions endpoint) and Vercel AI Gateway serve it to anyone, hence availability general. TypeSafe's 40-200x speed and 40-400x cost claims come from its own workflow evals, which it says were written by its capabilities team and timed from laptops; the latency and calibration figures in strengths/weaknesses are third-party (priorbench, scienthoon, beri.net). No Artificial Analysis coverage as of launch."
   }
 ]

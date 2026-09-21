@@ -15,6 +15,21 @@
     "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-omni-flash"
   },
   {
+    "id": "2026-09-15-jev",
+    "date": "2026-09-15",
+    "title": "TypeSafe AI emerges from stealth with Jev, a decision model that returns typed probabilities instead of text",
+    "summary": "TypeSafe AI, founded by former OpenAI researcher and RLHF co-inventor Diogo Almeida, launched with a $40M DCVC-led seed round and Jev, its first \"System One\" model: it takes text state plus typed questions and returns calibrated probabilistic decisions sampled in parallel, priced at $0.042 per million input tokens with output free and answering in 70 to 500 ms. TypeSafe claims 40-200x speed and 40-400x cost gains over frontier LLMs on decision workflows from its own evals; early independent tests confirm the latency and find strong accuracy on decomposed classification tasks but uneven calibration below the top confidence band.",
+    "category": "release",
+    "companies": [
+      "typesafe"
+    ],
+    "modelIds": [
+      "jev"
+    ],
+    "sourceName": "TypeSafe AI",
+    "sourceUrl": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+  },
+  {
     "id": "2026-09-11-fugu-max-fugu-ultra-v2",
     "date": "2026-09-11",
     "title": "Sakana AI splits Fugu into Fugu Max and Fugu Ultra v2.0, its multi-agent orchestration systems sold as single models",

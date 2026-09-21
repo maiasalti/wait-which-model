@@ -232,5 +232,14 @@
     "website": "https://sakana.ai",
     "color": "#B8842E",
     "order": 26
+  },
+  {
+    "id": "typesafe",
+    "name": "TypeSafe AI",
+    "country": "United States",
+    "founded": 2024,
+    "website": "https://typesafe.ai",
+    "color": "#2E9E8F",
+    "order": 27
   }
 ]
