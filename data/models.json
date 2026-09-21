@@ -5883,7 +5883,7 @@
       "Default responses aren't automation-ready for strict structured output — needs explicit response-format constraints where some rivals return clean JSON out of the box",
       "Reasoning is always-on with only a low/high/max budget dial, not an off switch — every call carries at least some thinking overhead"
     ],
-    "notes": "320B-total/18B-active MoE, Zhipu's first natively multimodal model in the GLM-5 line. Terminal-Bench 2.1 (84.3%) is Z.ai's own reported figure; GPQA Diamond, HLE, SWE-bench Verified, AIME, LMArena Elo and ARC-AGI-2 are left null — Z.ai's own table reports non-standard benchmarks instead (DeepSWE v1.1 63.4%, AutomationBench 48.8%, Toolathlon Verified 78.4%), and a single-source claim of an Artificial Analysis GPQA Diamond (91.2%) and HLE (55.3%) score could not be corroborated across independent sources on re-check. costPerTask ($0.09) and speed (49.8 tok/s, 1.49s to first answer token) are Artificial Analysis' max-effort measurements — the model has no medium-effort variant (only low/high/max). Pricing is Z.ai's standard $0.15/$0.50 rate; a 50%-off launch promotion runs through 2026-09-09. predecessorId is left null since Zhipu's own materials frame this as a new capability tier rather than an explicit replacement for GLM-5.2 or GLM-5.3."
+    "notes": "320B-total/18B-active MoE, Zhipu's first natively multimodal model in the GLM-5 line. Terminal-Bench 2.1 (84.3%) is Z.ai's own reported figure; GPQA Diamond, HLE, SWE-bench Verified, AIME, LMArena Elo and ARC-AGI-2 are left null — Z.ai's own table reports non-standard benchmarks instead (DeepSWE v1.1 63.4%, AutomationBench 48.8%, Toolathlon Verified 78.4%), and a single-source claim of an Artificial Analysis GPQA Diamond (91.2%) and HLE (55.3%) score could not be corroborated across independent sources on re-check. costPerTask ($0.09) and speed (49.8 tok/s, 1.49s to first answer token) are Artificial Analysis' max-effort measurements — the model has no medium-effort variant (only low/high/max). Pricing is Z.ai's standard $0.15/$0.50 rate; a 50%-off launch promotion runs through 2026-09-09. predecessorId is left null since Zhipu's own materials frame this as a new capability tier rather than an explicit replacement for GLM-5.2 or GLM-5.3. On 2026-09-18 Z.ai added GLM-5.3-FlashX (`glm-5.3-flashx`), a hosted high-speed tier of the same weights at up to 200 tok/s for $0.37/$1.25 — no separate benchmarks or checkpoint, so it is recorded here rather than as its own entry; FlashX is not on the GLM Coding Plan."
   },
   {
     "id": "hy4-preview",
@@ -6829,5 +6829,250 @@
       "Broad single questions underperform: 62.6% on phishing detection asked once against 95% only after the task was split into five atomic questions plus a fitted regression the user has to maintain"
     ],
     "notes": "Not an LLM: a \"System One\" decision model trained with TypeSafe's RLCD (reinforcement learning for calibrated decisions) that takes text state plus typed questions (Choice, Score, Noul) and returns values with calibrated probabilities, sampled in parallel rather than token by token, so none of this site's benchmarks apply and every cell is null by design. Filed under the fast tier for cost and latency, since it is not comparable to flagship generators. Context is 64k tokens per request per TypeSafe's model page (32k for state plus the longest question); OpenRouter lists it as 32k. Output tokens are unmetered. TypeSafe's own console opened with an early-access waitlist, but OpenRouter (typesafe/jev-1.13, via a separate alpha decisions endpoint) and Vercel AI Gateway serve it to anyone, hence availability general. TypeSafe's 40-200x speed and 40-400x cost claims come from its own workflow evals, which it says were written by its capabilities team and timed from laptops; the latency and calibration figures in strengths/weaknesses are third-party (priorbench, scienthoon, beri.net). No Artificial Analysis coverage as of launch."
+  },
+  {
+    "id": "atria-dawn-preview",
+    "name": "Atria Dawn Preview",
+    "company": "shanghai-ai-lab",
+    "releaseDate": "2026-09-11",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "text",
+    "contextWindow": 262144,
+    "maxOutput": 65536,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "MIT",
+      "name": "MIT License",
+      "kind": "permissive",
+      "url": "https://huggingface.co/internlm/Atria-Dawn-Preview/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "atria",
+        "id": "Atria-Dawn-Preview"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": 59.6,
+      "terminalBench": 78.3,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Built for the research loop rather than chat — it searches literature, calls tools, runs the experiment, reads the result and iterates, and its strongest results are all on discovery and tool-use suites",
+      "Recovers from a failed tool call by re-planning instead of stalling, which is where the post-training went: a verifiable-experience pipeline that ties every tool interaction to an executable environment and a checked outcome",
+      "MIT weights with SGLang and vLLM support from day one, so self-hosting is a licensing non-event for anyone with the hardware",
+      "Sparse attention inherited from the GLM-5.2 base cuts the KV cache roughly fourfold, which is what keeps the 256K window serviceable on a 744B model"
+    ],
+    "weaknesses": [
+      "Text only: images, PDFs and audio are rejected with a 400 at inference time, so anything visual has to be pre-processed by another model",
+      "Tuned for discovery and tool use, not software engineering — coding is where it lands furthest from the closed flagships, and it is not the model to reach for on a pure SWE task",
+      "Every benchmark is vendor-reported with no independent evaluation yet, and the 1.5 TB BF16 (756 GB FP8) footprint puts local verification out of reach for most teams"
+    ],
+    "notes": "Shanghai AI Laboratory's first dedicated agentic foundation model, released under the Atria brand (atria-asi.ai; Hugging Face org internlm): agentic post-training on Zhipu's 744B-parameter GLM-5.2 MoE base through a Verifiable Experience Pipeline. Weights went up on Hugging Face on 2026-09-11 with no announcement, the FP8 checkpoint on 09-12, the 140-author technical report (arXiv 2609.15818) on 09-14 and a press release on 09-15. SWE-bench Pro 59.6 and Terminal-Bench 2.1 78.3 are from the model card's own 16-benchmark table, which also reports DeepSearchQA 96.0, BrowseComp 92.5, WideSearch 81.9, DeepResearch Bench II 51.1, MLE-bench Lite 86.2, BFCL v4 77.0, AutomationBench 53.8, SkillsBench 66.4, tau3-Bench Banking 41.2, Workspace-Bench 65.0, JobBench 50.3, CyberGym 86.5 and a 'GDPval' Elo of 1583 whose version is unstated and whose comparison-model figures match neither Artificial Analysis' v2 nor v2.1 boards, so gdpvalAA is null. GPQA Diamond, HLE, SWE-bench Verified, ARC-AGI-2 and LMArena are unpublished, and AA has no page for it. The active-parameter count is not on the card; third-party guides put it at 18B over 256 experts and 78 layers, inherited from GLM-5.2. The international API (api.atria-asi.ai, model id Atria-Dawn-Preview, Google sign-in) has published no price and LLM Gateway serves it free at launch, hence availability general with pricing null. Context is the card's 256K (262,144 per hosts); max output 65,536. predecessorId is null: this is the lab's first Atria model and it is not framed as replacing any InternLM release."
+  },
+  {
+    "id": "kimi-k2-8-preview",
+    "name": "Kimi K2.8 Preview",
+    "company": "moonshot",
+    "releaseDate": "2026-09-11",
+    "status": "unknown",
+    "tier": "balanced",
+    "modality": "multimodal",
+    "contextWindow": 1048576,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "restricted",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "moonshot",
+        "id": "kimi-for-coding"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Takes screenshots and short videos of a broken UI directly in the coding thread — the first Kimi Code model that can, so a visual bug no longer has to be described in prose",
+      "Thinks more economically than K2.7 Code for what Moonshot calls near-K3 results — one early head-to-head finished an agent task in two-thirds of K3's wall-clock time and cost",
+      "Drops into existing setups with zero configuration: the kimi-for-coding alias was upgraded in place, and every paid tier now gets the full 1M window instead of rationing context"
+    ],
+    "weaknesses": [
+      "Moonshot has published no benchmarks and no model card, so 'close to K3' is a vendor claim — early testers found it faster but not at K3's level, and it failed to one-shot a task K3 completed",
+      "Only reachable through Kimi Code and Kimi Work subscriptions — there is no per-token API price or open-platform listing, so it cannot be metered, pinned or self-hosted",
+      "The unchanged alias means the model underneath changed silently on 2026-09-11 — anything evaluated against K2.7 Code through kimi-for-coding is no longer reproducible"
+    ],
+    "notes": "Subscription-only mid-tier model served in Kimi Code and Kimi Work from 2026-09-11 through the existing kimi-for-coding alias, which Moonshot upgraded in place from K2.7 Code (a model this site does not track, so predecessorId stays null even though the in-place replacement is explicit). Moonshot's docs give image and video input, a 1,048,576-token window on Plus and above (Andante and above on legacy plans) and low/high/max thinking effort — the models page says high is the default while the what's-new post says max. No benchmark table, model card, knowledge cutoff or per-token price exists: platform.kimi.ai lists K3 ($3/$15) and K2.7 Code ($0.95/$4.00) but no K2.8, and the $0.80-1 / $3.35-4 figures on third-party gateways are unofficial, so pricing is null and availability restricted. Not on Artificial Analysis, arena.ai or ARC Prize. Filed as balanced: Moonshot positions it between K3 and K2.7 Code for cost-effective everyday development."
+  },
+  {
+    "id": "step-5-preview",
+    "name": "Step 5 Preview",
+    "company": "stepfun",
+    "releaseDate": "2026-09-20",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 1000000,
+    "maxOutput": 64000,
+    "pricing": {
+      "inputPerMTok": 1,
+      "outputPerMTok": 2.7
+    },
+    "costPerTask": {
+      "usd": 0.72,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": 92.1,
+      "timeToFirstTokenSec": 3.05,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "stepfun",
+        "id": "step-5-preview"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 93.5,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Sustains long agentic runs without hand-holding — StepFun's own long-horizon kernel-optimisation experiment had it iterating to a marginally faster kernel than Claude Opus 5 reached on the same task",
+      "Streams quickly for a 600B reasoning model — a 1,000-token answer lands in about ten seconds where slower peers take half a minute, which matters once outputs run long",
+      "Takes up to 60 images or a short video in a single request, so UI and document-heavy agent tasks stay in one thread",
+      "Built with finance in mind: corporate valuation, live-search and financial deep-research tasks are where StepFun claims parity with the closed flagships"
+    ],
+    "weaknesses": [
+      "Very verbose in its reasoning: Artificial Analysis' index run drew nearly twice the median output tokens, so the cheap per-token rate buys less than it looks",
+      "StepFun's comparison table runs Step 5 at high effort against rivals at max and mixes HLE tool settings, so its own parity claims are not apples-to-apples",
+      "A preview with no model card, no weights yet and no stated licence — the open-weights promise for October 15 currently has nothing behind it but an empty Hugging Face repo"
+    ],
+    "notes": "600B-total / 27B-active sparse MoE with 92 layers, StepFun's first Step 5 model, announced on X at 03:15 UTC on 2026-09-20 with API access the same day (Artificial Analysis dates it 2026-09-18). GPQA Diamond 93.5 is from StepFun's launch table, published only as an image and transcribed by CellCog and a linux.do relay, at high effort. That table also lists HLE 46.5%, but StepFun's footnote says its HLE row is a with-tools row mixing text-only-subset and full-dataset runs, so it is not recorded; it further lists Terminal-Bench 4.0 33.3% (not the 2.1 this site tracks), DeepSWE v1.1 67.7, SWE-Marathon v1.1 72.7, BrowseComp 88.7, FrontierFinance 66.4, DRACO 83.3, StepCodeBench 49.0, ProgramBench 80.5, ALE-CLI 29.5, MMMU-Pro 76.0 and a GDPval-AA figure of 1571 whose version label could not be confirmed; AA rates it 1566 on GDPval-AA v2.1, a rescaled successor to the v2 this site's gdpvalAA key records, so that cell stays null. AA Intelligence Index 44 (level with Grok 4.6 and Kimi K3 Max); costPerTask $0.72 and speed (92.1 tok/s, 3.05 s to first answer token) are AA's measurements of the single reasoning variant it lists, which carries no effort label even though the API exposes low/medium/high — hence effort null. Pricing is $1.00 input on cache miss / $0.05 on cache hit / $2.70 output including reasoning tokens; max output 64K per StepFun's platform docs. Weights are promised for 2026-10-15 in BF16 (~1.2 TB) with no licence named, so openWeights stays false until they ship. No arena.ai listing, no ARC Prize entry surfaced, knowledge cutoff undisclosed. predecessorId is null: StepFun frames it as a new flagship, not a replacement for Step 3.7 Flash."
+  },
+  {
+    "id": "grok-4-7",
+    "name": "Grok 4.7",
+    "company": "xai",
+    "releaseDate": "2026-09-21",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 500000,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 2,
+      "outputPerMTok": 6
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-05",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "xai",
+        "id": "grok-4.7"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Works longer on hard tasks and re-checks its own output before declaring done — the RL run was weighted toward problems that take hours, with self-verification as the explicit training target",
+      "Far easier to talk through architecture and in-depth explanations with than 4.6, which early Cursor users had found unusable for that kind of design work",
+      "Understands the Grok Bot harness natively, so agent runs need less scaffolding to get well-formed tool use",
+      "Serves at 4.6's speed despite the larger base model, so the capability step costs nothing in latency"
+    ],
+    "weaknesses": [
+      "Burns roughly twice the tokens of Grok 4.6 on the same job in early Cursor use, so the unchanged per-token price understates what a task costs — several developers called it a sidegrade on value",
+      "Has picked up a verbose, presumptuous house style — the concise structured findings of 4.5 gave way to forced cadences, per early Cursor feedback, and Artificial Analysis flags it as very verbose on its index run",
+      "Crossing the 200K-token prompt threshold reprices the whole request at double rate, and the fast variant doubles it again — long-context or low-latency runs cost far more than the headline"
+    ],
+    "notes": "Announced 2026-09-21 after Musk's 2026-09-02 'ten days' promise slipped twice; xAI says it uses a new, larger base model than Grok 4.6 (the 2.1T-parameter figure is Musk's pre-release claim, not on the card) with a longer RL run on multi-hour tasks. xAI's card reports only CursorBench 4.0 46.3%, DeepSWE v1.1 71.0% (high effort), EEBench 64.0%, AA Briefcase v1.1 1,657, Terminal-Bench 4.0 38.0%, Harvey Legal Agent 19.6% and HealthBench Professional 56.7% — none map to a tracked key, and Terminal-Bench 4.0 is not comparable with the 2.1 this site records, so terminalBench is null; Artificial Analysis independently measures Terminal-Bench 4.0 at 26%. AA scores it 46 on its Intelligence Index at both high (the API default) and xhigh effort, but had published no cost-per-task or speed figures as of 2026-09-22, and rates it 1694 (high) / 1695 (xhigh) on GDPval-AA v2.1 — a rescaled successor to the v2 this site's gdpvalAA key records (Grok 4.6 is 1632 on v2.1 against its recorded 1753 on v2), so that cell stays null. GPQA Diamond, HLE, SWE-bench Verified/Pro, AIME, MMLU-Pro and ARC-AGI-2 are unpublished by xAI and AA; arena.ai's board (last updated 2026-09-13) has no listing. Knowledge cutoff May 2026 per docs.x.ai's models page. Pricing $2/$6 with cached input $0.50 applies below a 200K-token prompt; at or above it every token in the request bills at $4/$12 ($1.00 cached), and the fast variant costs double for twice the output speed. Effort levels low/medium/high/xhigh; batch API unsupported; xAI publishes no max-output figure. predecessorId is null: the card says only that it is 'served at the same price and speed as Grok 4.6', and grok-4.6 remains listed in the API. xAI also claims it is its strongest model on refusals and jailbreak resistance. The company rebranded from xAI to SpaceXAI on 2026-07-06; companies.json still carries the old name."
   }
 ]

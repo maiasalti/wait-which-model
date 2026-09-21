@@ -1,5 +1,35 @@
 [
   {
+    "id": "2026-09-21-grok-4-7",
+    "date": "2026-09-21",
+    "title": "xAI ships Grok 4.7, a larger base model held at Grok 4.6's price",
+    "summary": "xAI released Grok 4.7 on 2026-09-21, nine days after Musk's promised date, built on a new larger base model with a longer reinforcement-learning run on multi-hour tasks and priced unchanged at $2/$6 per million tokens with a 500K context and May 2026 knowledge cutoff. xAI's card leads with Terminal-Bench 4.0 (38.0%), DeepSWE v1.1 (71.0%) and EEBench (64.0%) against Grok 4.6, GPT-5.6 Sol and Claude Fable 5.1; Artificial Analysis scores it 46 on its Intelligence Index, behind Fable 5.1 and GPT-6 at 53, and early Cursor users report roughly double the token spend of 4.6.",
+    "category": "release",
+    "companies": [
+      "xai"
+    ],
+    "modelIds": [
+      "grok-4-7"
+    ],
+    "sourceName": "xAI",
+    "sourceUrl": "https://x.ai/news/grok-4-7"
+  },
+  {
+    "id": "2026-09-20-step-5-preview",
+    "date": "2026-09-20",
+    "title": "StepFun launches Step 5 Preview, a 600B agentic flagship at $1/$2.70 with open weights promised for October 15",
+    "summary": "StepFun announced Step 5 Preview, a 600B-total / 27B-active sparse MoE with a 1M-token context and native image and video input, and opened API access the same day at $1.00 input / $2.70 output per million tokens (95% cache discount). StepFun reports GPQA Diamond 93.5%, DeepSWE v1.1 67.7% and FrontierFinance 66.4% at high effort against rivals at max; Artificial Analysis rates it 44 on its Intelligence Index, level with Grok 4.6 and Kimi K3, at $0.72 per task, and notes it is very verbose. Weights are promised for 2026-10-15 with no licence named yet.",
+    "category": "release",
+    "companies": [
+      "stepfun"
+    ],
+    "modelIds": [
+      "step-5-preview"
+    ],
+    "sourceName": "StepFun",
+    "sourceUrl": "https://x.com/StepFun_ai/status/2101510462685003786"
+  },
+  {
     "id": "2026-09-15-jev",
     "date": "2026-09-15",
     "title": "TypeSafe AI emerges from stealth with Jev, a decision model that returns typed probabilities instead of text",
@@ -13,6 +43,36 @@
     ],
     "sourceName": "TypeSafe AI",
     "sourceUrl": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+  },
+  {
+    "id": "2026-09-11-kimi-k2-8-preview",
+    "date": "2026-09-11",
+    "title": "Moonshot rolls out Kimi K2.8 Preview across Kimi Code and Kimi Work, upgrading kimi-for-coding in place with 1M context and vision",
+    "summary": "Moonshot AI switched the kimi-for-coding alias in Kimi Code and Kimi Work to Kimi K2.8 Preview, a subscription-only mid-tier model it describes as close to K3 with more efficient thinking than K2.7 Code, adding image and video input, low/high/max effort levels and a 1,048,576-token context window on every paid tier. Moonshot published no benchmarks, model card or per-token price, and the model is absent from its open API pricing page.",
+    "category": "release",
+    "companies": [
+      "moonshot"
+    ],
+    "modelIds": [
+      "kimi-k2-8-preview"
+    ],
+    "sourceName": "Kimi Code docs",
+    "sourceUrl": "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html"
+  },
+  {
+    "id": "2026-09-11-atria-dawn-preview",
+    "date": "2026-09-11",
+    "title": "Shanghai AI Laboratory quietly posts Atria Dawn Preview, an MIT-licensed 744B agentic model built on GLM-5.2",
+    "summary": "Shanghai AI Laboratory put Atria Dawn Preview on Hugging Face under the MIT licence with no announcement — a text-only, 256K-context agentic model post-trained on Zhipu's 744B-parameter GLM-5.2 base for long-horizon research and engineering work, with a 140-author technical report following on 2026-09-14. The lab's own 16-benchmark table claims top scores on DeepSearchQA (96.0), BrowseComp (92.5), BFCL v4 (77.0), AutomationBench (53.8) and CyberGym (86.5), with SWE-bench Pro 59.6 and Terminal-Bench 2.1 78.3; a hosted API at api.atria-asi.ai has no published price and no independent evaluation exists yet.",
+    "category": "release",
+    "companies": [
+      "shanghai-ai-lab"
+    ],
+    "modelIds": [
+      "atria-dawn-preview"
+    ],
+    "sourceName": "Hugging Face (internlm/Atria-Dawn-Preview)",
+    "sourceUrl": "https://huggingface.co/internlm/Atria-Dawn-Preview"
   },
   {
     "id": "2026-09-11-fugu-max-fugu-ultra-v2",
