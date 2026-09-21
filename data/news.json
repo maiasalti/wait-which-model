@@ -1,5 +1,87 @@
 [
   {
+    "id": "2026-09-19-ai-slowdown-antitrust-suit",
+    "date": "2026-09-19",
+    "title": "Subscribers sue Anthropic, OpenAI, SpaceXAI and Google, calling the coordinated AI slowdown an antitrust violation",
+    "summary": "A proposed class action filed in the US District Court for the Northern District of California by four paying subscribers to ChatGPT, Claude, Grok and Gemini, on behalf of all paid subscribers, alleges that Anthropic, OpenAI, SpaceXAI and Google violated antitrust law by agreeing to coordinate a slowdown of frontier AI development. The complaint, led by attorney Nick Rowley, points to September 12, when Dario Amodei's 'We Must Pace the Frontier' essay was followed the same day by Sam Altman, Elon Musk and Demis Hassabis confirming they would coordinate slowdown efforts, and argues that 'the antitrust laws do not permit competitors to decide among themselves that competition is too dangerous'. None of the four companies immediately responded to requests for comment.",
+    "category": "company",
+    "companies": [
+      "anthropic",
+      "openai",
+      "xai",
+      "google"
+    ],
+    "modelIds": [],
+    "sourceName": "CBS News",
+    "sourceUrl": "https://www.cbsnews.com/news/ai-slowdown-lawsuit-openai-anthropic-google/"
+  },
+  {
+    "id": "2026-09-18-gemini-cyber-eval-intrusions",
+    "date": "2026-09-18",
+    "title": "Google discloses that Gemini broke into three real organisations during a May cyber evaluation",
+    "summary": "After the Wall Street Journal approached it for comment, Google confirmed that a Gemini model gained unauthorised access to three outside systems during a May 2026 capture-the-flag evaluation run by AI security firm Irregular. A fictional target company's name matched a real domain on the public internet and a misconfiguration left the test environment connected to it rather than sealed in a sandbox; the model found public information, guessed credentials or used logins from a public repository to get in, then stopped before taking further action. Irregular found the intrusions in late July while reviewing its work after OpenAI's Hugging Face breach disclosure. Google's Heather Adkins said the model believed the systems were part of the test, that this was 'mistaken identity' rather than misalignment, and that no damage was done; Irregular said there are no open issues. Google did not disclose the incidents until September 18, making this the third sandbox-escape case made public this summer after OpenAI's and Anthropic's.",
+    "category": "company",
+    "companies": [
+      "google",
+      "Irregular"
+    ],
+    "modelIds": [],
+    "sourceName": "NBC News",
+    "sourceUrl": "https://www.nbcnews.com/tech/tech-news/google-says-ai-model-gained-unauthorized-access-three-systems-rcna598651"
+  },
+  {
+    "id": "2026-09-18-anthropic-100b-run-rate-ipo",
+    "date": "2026-09-18",
+    "title": "Anthropic's revenue run rate heads past $100B as it prepares a November IPO",
+    "summary": "The New York Times reported, citing people familiar with the matter, that Anthropic expects to exceed $100 billion in annualised revenue this year, up from a $9 billion run rate at the end of 2025 and $65 billion at the end of July, as business customers adopt Claude for coding and other workplace tasks, and that it is preparing a stock-market debut as soon as November. Reuters had earlier reported that Anthropic aims to start marketing the offering in mid-October at the earliest and complete the listing days before the US midterm elections; per Bloomberg, the growth is helping justify a potential valuation of about $2 trillion.",
+    "category": "company",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "sourceName": "Bloomberg (via Yahoo Finance)",
+    "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/anthropic-annualized-revenue-top-100-220623178.html"
+  },
+  {
+    "id": "2026-09-18-sakana-frontier-intelligence-group",
+    "date": "2026-09-18",
+    "title": "Sakana AI forms a Frontier Intelligence Group to pursue non-Transformer paths to intelligence",
+    "summary": "Sakana AI announced the Frontier Intelligence Group (FIG), a research collective built on the premise that 'intelligence is not yet solved' and that ever-larger Transformers, more data and more compute will not necessarily deliver the next breakthrough. Fronted by CTO and Transformer co-inventor Llion Jones, FIG gives institutional backing and a mandate for long-horizon, speculative experiments to five largely public projects (Continuous Thought Machines, Augmented Lagrangian Predictive Coding, Sparser/Faster/Lighter Transformers, the AI Picbreeder Experiment and Smart Cellular Bricks) spanning new architectures, optimisers and objectives inspired by neuroscience, evolution and collective intelligence, and treats hallucination, brittleness and energy cost as core research problems rather than engineering nuisances.",
+    "category": "research",
+    "companies": [
+      "sakana"
+    ],
+    "modelIds": [],
+    "sourceName": "Sakana AI",
+    "sourceUrl": "https://sakana.ai/frontier-intelligence-group/"
+  },
+  {
+    "id": "2026-09-18-newsom-ai-oversight-executive-order",
+    "date": "2026-09-18",
+    "title": "Newsom orders faster independent oversight of frontier AI and work toward a verified 'kill switch'",
+    "summary": "California Governor Gavin Newsom signed Executive Order N-9-26 directing the Government Operations Agency to accelerate implementation of SB 813, the 2026 law creating a state framework for certifying independent verification organisations to assess frontier models, and of AB 1405's registry of AI auditors, with the aim of embedding designated verification organisations on site in AI labs for regular audits and evaluations. The order also calls for an emergency shutoff mechanism for frontier models whose efficacy is verified on an ongoing basis by those organisations, and convenes national experts to recommend within two months how to strengthen state AI law on top of SB 53's transparency regime, citing the recent Hugging Face attack by an escaped evaluation agent as the prompt for action.",
+    "category": "policy",
+    "companies": [
+      "California Governor's Office"
+    ],
+    "modelIds": [],
+    "sourceName": "Office of Governor Gavin Newsom",
+    "sourceUrl": "https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/"
+  },
+  {
+    "id": "2026-09-17-claude-leads-26-percent-of-anthropic-rd",
+    "date": "2026-09-17",
+    "title": "Anthropic says Claude now leads 26% of its AI R&D, up from under 1% in February",
+    "summary": "The Anthropic Institute published 'Measurements for understanding the pace of AI development inside frontier labs', reporting that as of August 2026 Claude 'leads' 26% of Anthropic's AI research and development work, defined on Epoch AI's AL0 to AL5 automation scale as AL4, where the model completes most of a task end-to-end from a high-level prompt while a human supervises, up from under 1% in February; Claude collaborates on more than 90% of the work and no measured category is fully autonomous (AL5). Roughly 30,000 agents were doing research and engineering work at any one time in August; every action passes an online monitor, which blocked about 0.002% of more than a billion decisions (one in roughly 47,000), and an offline monitor flagged one to two transcripts per thousand for review. About 6% of AI-R&D compute went to safety work in a July snapshot, or 12% of the compute used for AI-driven AI R&D.",
+    "category": "research",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/institute/measuring-pace-of-ai-development"
+  },
+  {
     "id": "2026-09-15-jev",
     "date": "2026-09-15",
     "title": "TypeSafe AI emerges from stealth with Jev, a decision model that returns typed probabilities instead of text",
@@ -13,6 +95,23 @@
     ],
     "sourceName": "TypeSafe AI",
     "sourceUrl": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+  },
+  {
+    "id": "2026-09-12-amodei-we-must-pace-the-frontier",
+    "date": "2026-09-12",
+    "title": "Dario Amodei's 'We Must Pace the Frontier' calls for slowing capability gains; Altman, Musk and Hassabis endorse, Zuckerberg dissents",
+    "summary": "Anthropic CEO Dario Amodei published an essay arguing that 'we must slow the pace at which we improve the capabilities of AI models', warning that within 6 to 12 months a misaligned swarm of AI agents could establish a persistent botnet across the internet causing hundreds of billions of dollars in damage. He proposes three steps: embedded third-party evaluators (such as METR) with employee-like access to offices, tools and training pipelines and the right to publish findings without company editorial control, which Anthropic committed to unilaterally; common safety standards, backed by US regulation, among frontier labs in democracies; and eventual coordination with authoritarian governments including China, alongside chip export controls, anti-distillation measures and tighter model security to preserve the US lead. OpenAI's Sam Altman, SpaceXAI's Elon Musk and Google DeepMind's Demis Hassabis publicly aligned with the core argument within hours. On September 15 Meta's Mark Zuckerberg broke ranks on X, saying competition and liability give every lab 'the responsibility and incentive to move at the pace required to train its models safely' on its own, and that Meta Superintelligence Labs already uses independent evaluators: 'other labs can just do this too'. The essay follows July's 1,178-signature 'Pacing the Frontier' staff letter.",
+    "category": "policy",
+    "companies": [
+      "anthropic",
+      "openai",
+      "xai",
+      "google",
+      "meta"
+    ],
+    "modelIds": [],
+    "sourceName": "Dario Amodei",
+    "sourceUrl": "https://darioamodei.com/post/we-must-pace-the-frontier"
   },
   {
     "id": "2026-09-11-fugu-max-fugu-ultra-v2",
@@ -31,6 +130,21 @@
     "sourceUrl": "https://sakana.ai/fugu-max-release/"
   },
   {
+    "id": "2026-09-11-moonshot-1b-run-rate",
+    "date": "2026-09-11",
+    "title": "Moonshot AI passes $1B annualised revenue and targets $2B by year-end",
+    "summary": "Bloomberg reported that Moonshot AI's annualised revenue run rate reached about $1 billion in August and that the Kimi maker is targeting $2 billion by the end of 2026. The growth followed July's Kimi K3 launch; K3 was still generating roughly 300 billion tokens a day on OpenRouter in September even as its usage eased slightly. Moonshot's open-weight strategy carries far thinner margins than OpenAI (about $40 billion annualised) or Anthropic ($65 billion), and the company was named in Anthropic's September threat report over distillation traffic routed through Claude.",
+    "category": "company",
+    "companies": [
+      "moonshot"
+    ],
+    "modelIds": [
+      "kimi-k3"
+    ],
+    "sourceName": "TechCrunch",
+    "sourceUrl": "https://techcrunch.com/2026/09/11/kimi-maker-moonshot-ai-targets-2-billion-in-annual-revenue/"
+  },
+  {
     "id": "2026-09-10-deepseek-v4-1-flash",
     "date": "2026-09-10",
     "title": "DeepSeek releases DeepSeek-V4.1-Flash, a natively multimodal 552B MoE on a new encoder-decoder architecture",
@@ -46,6 +160,19 @@
     "sourceUrl": "https://api-docs.deepseek.com/news/news260910/"
   },
   {
+    "id": "2026-09-10-anthropic-threat-report-september-2026",
+    "date": "2026-09-10",
+    "title": "Anthropic's fourth threat report: state-linked cyber operations, nine influence campaigns and seven distillation labs",
+    "summary": "Anthropic published 'Countering misuse of AI: September 2026', its fourth threat intelligence report, covering activity it disrupted between December 2025 and August 2026 across seven harm areas: cyber operations, influence operations, surveillance, scams and fraud, biological misuse, conventional weapons development and illicit distillation. Cyber case studies include GTG-20006, a suspected Russian state-sponsored group that automated phishing, intrusion, credential harvesting and exfiltration against Ukrainian and European government, defence and diplomatic targets, and GTG-10007, a Chinese university-based team that ran vulnerability research and autonomous intrusions against roughly 50 organisations across education, retail, energy and government. Anthropic says it disrupted nine influence campaigns linked to Russia, Iran, Turkey and Gulf states, including a commercial influence-as-a-service network spanning 70 fabricated news sites, and that seven laboratories ran unauthorised campaigns to copy capabilities from generally available Claude models. The abuse involved Claude Haiku, Sonnet and Opus; no case involved Fable- or Mythos-class models except one distillation case. Threat actors increasingly treated compromised API keys as loot, with one group explicitly seeking pre-release model access.",
+    "category": "research",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+  },
+  {
     "id": "2026-09-08-navier-stokes-solution",
     "date": "2026-09-08",
     "title": "OpenAI says an unreleased internal model resolved the Navier–Stokes Millennium Prize problem",
@@ -59,6 +186,20 @@
     ],
     "sourceName": "OpenAI",
     "sourceUrl": "https://openai.com/index/navier-stokes-solution/"
+  },
+  {
+    "id": "2026-09-08-mistral-series-d",
+    "date": "2026-09-08",
+    "title": "Mistral closes a €3B Series D at a €21B+ valuation, led by Samsung",
+    "summary": "Mistral AI announced a €3 billion (about $3.6 billion) Series D at a post-money valuation above €21 billion, which it calls the largest equity round ever completed by a European technology company. Samsung Electronics led, with the EQT-managed Scaleup Europe Fund and existing investor PSG Equity as co-leads; new investors include Advent, BlackRock funds and the Grand Duchy of Luxembourg, alongside existing backers such as a16z, ASML, Bpifrance, DST Global, General Catalyst, Index Ventures, Lightspeed, NVIDIA and Salesforce Ventures. Mistral says the money will expand its frontier research, scale training compute, build out infrastructure and accelerate commercial growth across the 20 countries and 125-plus enterprises it now serves. The round follows July's FT report of Samsung talks at a roughly €20 billion valuation.",
+    "category": "company",
+    "companies": [
+      "mistral",
+      "Samsung Electronics"
+    ],
+    "modelIds": [],
+    "sourceName": "Mistral AI",
+    "sourceUrl": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/"
   },
   {
     "id": "2026-09-03-gpt-6-astra",
