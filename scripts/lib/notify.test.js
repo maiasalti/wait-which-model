@@ -1,7 +1,7 @@
 // scripts/lib/notify.test.js
 const { test } = require("node:test");
 const assert = require("node:assert/strict");
-const { newModelIds, isUsableSha, parseModelIds } = require("./notify.js");
+const { newModelIds, isUsableSha, parseModelIds, encodePending, decodePending, mergePending, cooldownActive } = require("./notify.js");
 
 const mk = (...ids) => ids.map((id) => ({ id }));
 
@@ -113,4 +113,26 @@ test("a model with no strengths and an unknown company still renders", () => {
 
 test("escapeHtml covers the five characters", () => {
   assert.equal(escapeHtml(`<a href="x">'&'</a>`), "&lt;a href=&quot;x&quot;&gt;&#39;&amp;&#39;&lt;/a&gt;");
+});
+
+test("encodePending/decodePending round-trip, with '-' standing for an empty queue", () => {
+  assert.equal(encodePending([]), "-");
+  assert.deepEqual(decodePending("-"), []);
+  assert.deepEqual(decodePending(undefined), []);
+  assert.deepEqual(decodePending(encodePending(["a", "b"])), ["a", "b"]);
+});
+
+test("mergePending appends new ids after the queued ones and drops duplicates", () => {
+  assert.deepEqual(mergePending("-", ["x"]), ["x"]);
+  assert.deepEqual(mergePending("a,b", ["b", "c"]), ["a", "b", "c"]);
+  assert.deepEqual(mergePending(undefined, []), []);
+});
+
+test("cooldownActive is true only inside the window and never for a missing or bad timestamp", () => {
+  const h = 3600_000;
+  const now = Date.parse("2026-09-22T12:00:00Z");
+  assert.equal(cooldownActive("2026-09-22T00:00:00Z", now, 20 * h), true);
+  assert.equal(cooldownActive("2026-09-21T12:00:00Z", now, 20 * h), false);
+  assert.equal(cooldownActive(undefined, now, 20 * h), false);
+  assert.equal(cooldownActive("not a date", now, 20 * h), false);
 });
