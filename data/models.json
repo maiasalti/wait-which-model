@@ -6766,6 +6766,65 @@
     "notes": "Not a single foundation model: the higher-capability tier of Sakana's TRINITY/Conductor-derived (ICLR 2026) orchestration architecture, routing each request across a fixed, undisclosed pool of open-weight and specialized models and recursively calling itself, versioned v2.0 as the successor line to the original Fugu Ultra (launched 2026-06-22, later v1.1) — neither earlier build is tracked in this dataset, so predecessorId stays null. Closed/proprietary: no weights published, model-pool composition undisclosed. Pricing rises to $10/$45 per million tokens (and $1.00/M cached input, from $0.50/M) above 272,000 tokens of context. Sakana's launch post reports it best or joint-best on five of eight of its own benchmarks, including 74.3 on DeepSWE and 48.3 on Chartography (vs. 27.3 for Claude Opus 5 and 29.5 for Claude Fable 5 on the latter) — neither DeepSWE nor Chartography maps to a benchmark tracked on this site, and this site's ten tracked keys (GPQA Diamond, Terminal-Bench 2.1, SWE-bench Pro, HLE, etc., all reportedly among Fugu Ultra's strong evals per Sakana) appear only in the announcement's chart images, not as extractable text, so all stay null here. No Artificial Analysis coverage exists for any Fugu model, hence costPerTask and speed are null. Knowledge cutoff (2026-08) is sourced from OpenRouter's model listing, not an official Sakana page — treat as third-party-sourced."
   },
   {
+    "id": "qwen3-8-omni-flash",
+    "name": "Qwen3.8-Omni-Flash",
+    "company": "alibaba",
+    "releaseDate": "2026-09-18",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "contextWindow": 1000000,
+    "maxOutput": 131072,
+    "pricing": {
+      "inputPerMTok": 0.11,
+      "outputPerMTok": 0.38
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "Alibaba Cloud Model Studio",
+        "id": "qwen3.8-omni-flash"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 91,
+      "sweBench": null,
+      "sweBenchPro": 63.3,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Reasons over audio and video with an agentic, coarse-to-fine 'selective seeking' pass — decides what to watch or listen to first and spends tokens only on the segments that matter, rather than transcoding a whole stream",
+      "Alibaba's own eval of real meeting audio shows diarization errors falling from 88% to 3% and transcription errors from near 90% to 17% versus the prior Omni line",
+      "Sharply cheaper on audio/video workloads than its predecessor — Alibaba reports a 98% drop in per-hour audio cost and 93% on combined audio-video"
+    ],
+    "weaknesses": [
+      "Text-only output — no generated speech; Alibaba's own Model Studio docs point developers back to Qwen3.5-Omni when a spoken response is needed",
+      "Selective seeking trims tokens at the cost of more tool round-trips, decode time and storage reads, so latency doesn't fall as cleanly as the token count does",
+      "Hosted-only despite sitting on the open-weight Qwen3.8-Flash-Next architecture — Alibaba has published no downloadable weights for the Omni-Flash checkpoint itself"
+    ],
+    "notes": "Alibaba's first omni-modal model built around agentic tool use (text, image, audio and video in; text out), launched 2026-09-18 on Qwen Chat, QwenCloud and Model Studio's OpenAI-compatible endpoint. GPQA Diamond 91.0 and SWE-bench Pro 63.3 are Alibaba's own reported figures via launch coverage (official qwen.ai/alibabacloud.com pages were unreachable this session); MMLU-Pro, Terminal-Bench, AIME, HLE, LMArena Elo, GDPval-AA and ARC-AGI-2 were not found reported for this specific checkpoint and are logged to stats-gaps.md. Pricing (~$0.11/$0.38 per MTok) is converted from Alibaba Cloud Model Studio's official CNY rate (0.8/2.7 per million tokens) and matches one reseller's quote, but a second reseller lists $0.15/$0.47 — flagging the conflict rather than picking one; per-hour audio/video surcharge pricing is not broken out here. Context window is Alibaba's marketed 1M figure; QwenCloud's own listing shows a 991K/131K input/output split, used for maxOutput. Coverage repeatedly calls Qwen3.5-Omni-Plus this model's 'predecessor' by name, but Qwen3.5-Omni-Plus is not itself a tracked model in this dataset, so predecessorId stays null (logged to spec-gaps.md). No Artificial Analysis coverage found, hence costPerTask and speed are null; no official retirement page exists yet."
+  },
+  {
     "id": "jev",
     "name": "Jev",
     "company": "typesafe",

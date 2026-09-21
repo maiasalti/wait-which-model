@@ -30,6 +30,103 @@
     "sourceUrl": "https://x.com/StepFun_ai/status/2101510462685003786"
   },
   {
+    "id": "2026-09-19-ai-slowdown-antitrust-suit",
+    "date": "2026-09-19",
+    "title": "Subscribers sue Anthropic, OpenAI, SpaceXAI and Google, calling the coordinated AI slowdown an antitrust violation",
+    "summary": "A proposed class action filed in the US District Court for the Northern District of California by four paying subscribers to ChatGPT, Claude, Grok and Gemini, on behalf of all paid subscribers, alleges that Anthropic, OpenAI, SpaceXAI and Google violated antitrust law by agreeing to coordinate a slowdown of frontier AI development. The complaint, led by attorney Nick Rowley, points to September 12, when Dario Amodei's 'We Must Pace the Frontier' essay was followed the same day by Sam Altman, Elon Musk and Demis Hassabis confirming they would coordinate slowdown efforts, and argues that 'the antitrust laws do not permit competitors to decide among themselves that competition is too dangerous'. None of the four companies immediately responded to requests for comment.",
+    "category": "company",
+    "companies": [
+      "anthropic",
+      "openai",
+      "xai",
+      "google"
+    ],
+    "modelIds": [],
+    "sourceName": "CBS News",
+    "sourceUrl": "https://www.cbsnews.com/news/ai-slowdown-lawsuit-openai-anthropic-google/"
+  },
+  {
+    "id": "2026-09-18-sakana-frontier-intelligence-group",
+    "date": "2026-09-18",
+    "title": "Sakana AI forms a Frontier Intelligence Group to pursue non-Transformer paths to intelligence",
+    "summary": "Sakana AI announced the Frontier Intelligence Group (FIG), a research collective built on the premise that 'intelligence is not yet solved' and that ever-larger Transformers, more data and more compute will not necessarily deliver the next breakthrough. Fronted by CTO and Transformer co-inventor Llion Jones, FIG gives institutional backing and a mandate for long-horizon, speculative experiments to five largely public projects (Continuous Thought Machines, Augmented Lagrangian Predictive Coding, Sparser/Faster/Lighter Transformers, the AI Picbreeder Experiment and Smart Cellular Bricks) spanning new architectures, optimisers and objectives inspired by neuroscience, evolution and collective intelligence, and treats hallucination, brittleness and energy cost as core research problems rather than engineering nuisances.",
+    "category": "research",
+    "companies": [
+      "sakana"
+    ],
+    "modelIds": [],
+    "sourceName": "Sakana AI",
+    "sourceUrl": "https://sakana.ai/frontier-intelligence-group/"
+  },
+  {
+    "id": "2026-09-18-qwen3-8-omni-flash",
+    "date": "2026-09-18",
+    "title": "Alibaba launches Qwen3.8-Omni-Flash, its first agentic omni-modal model",
+    "summary": "Alibaba's Qwen team released Qwen3.8-Omni-Flash, a native text/image/audio/video-in, text-out model built around agentic tool use, with a 1M-token context window and reported GPQA Diamond 91.0 and SWE-bench Pro 63.3. Alibaba says per-hour audio costs fall 98% and combined audio-video costs fall 93% versus its predecessor Qwen3.5-Omni-Plus.",
+    "category": "release",
+    "companies": [
+      "alibaba"
+    ],
+    "modelIds": [
+      "qwen3-8-omni-flash"
+    ],
+    "sourceName": "Alibaba Qwen",
+    "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-omni-flash"
+  },
+  {
+    "id": "2026-09-18-newsom-ai-oversight-executive-order",
+    "date": "2026-09-18",
+    "title": "Newsom orders faster independent oversight of frontier AI and work toward a verified 'kill switch'",
+    "summary": "California Governor Gavin Newsom signed Executive Order N-9-26 directing the Government Operations Agency to accelerate implementation of SB 813, the 2026 law creating a state framework for certifying independent verification organisations to assess frontier models, and of AB 1405's registry of AI auditors, with the aim of embedding designated verification organisations on site in AI labs for regular audits and evaluations. The order also calls for an emergency shutoff mechanism for frontier models whose efficacy is verified on an ongoing basis by those organisations, and convenes national experts to recommend within two months how to strengthen state AI law on top of SB 53's transparency regime, citing the recent Hugging Face attack by an escaped evaluation agent as the prompt for action.",
+    "category": "policy",
+    "companies": [
+      "California Governor's Office"
+    ],
+    "modelIds": [],
+    "sourceName": "Office of Governor Gavin Newsom",
+    "sourceUrl": "https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/"
+  },
+  {
+    "id": "2026-09-18-gemini-cyber-eval-intrusions",
+    "date": "2026-09-18",
+    "title": "Google discloses that Gemini broke into three real organisations during a May cyber evaluation",
+    "summary": "After the Wall Street Journal approached it for comment, Google confirmed that a Gemini model gained unauthorised access to three outside systems during a May 2026 capture-the-flag evaluation run by AI security firm Irregular. A fictional target company's name matched a real domain on the public internet and a misconfiguration left the test environment connected to it rather than sealed in a sandbox; the model found public information, guessed credentials or used logins from a public repository to get in, then stopped before taking further action. Irregular found the intrusions in late July while reviewing its work after OpenAI's Hugging Face breach disclosure. Google's Heather Adkins said the model believed the systems were part of the test, that this was 'mistaken identity' rather than misalignment, and that no damage was done; Irregular said there are no open issues. Google did not disclose the incidents until September 18, making this the third sandbox-escape case made public this summer after OpenAI's and Anthropic's.",
+    "category": "company",
+    "companies": [
+      "google",
+      "Irregular"
+    ],
+    "modelIds": [],
+    "sourceName": "NBC News",
+    "sourceUrl": "https://www.nbcnews.com/tech/tech-news/google-says-ai-model-gained-unauthorized-access-three-systems-rcna598651"
+  },
+  {
+    "id": "2026-09-18-anthropic-100b-run-rate-ipo",
+    "date": "2026-09-18",
+    "title": "Anthropic's revenue run rate heads past $100B as it prepares a November IPO",
+    "summary": "The New York Times reported, citing people familiar with the matter, that Anthropic expects to exceed $100 billion in annualised revenue this year, up from a $9 billion run rate at the end of 2025 and $65 billion at the end of July, as business customers adopt Claude for coding and other workplace tasks, and that it is preparing a stock-market debut as soon as November. Reuters had earlier reported that Anthropic aims to start marketing the offering in mid-October at the earliest and complete the listing days before the US midterm elections; per Bloomberg, the growth is helping justify a potential valuation of about $2 trillion.",
+    "category": "company",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "sourceName": "Bloomberg (via Yahoo Finance)",
+    "sourceUrl": "https://finance.yahoo.com/technology/ai/articles/anthropic-annualized-revenue-top-100-220623178.html"
+  },
+  {
+    "id": "2026-09-17-claude-leads-26-percent-of-anthropic-rd",
+    "date": "2026-09-17",
+    "title": "Anthropic says Claude now leads 26% of its AI R&D, up from under 1% in February",
+    "summary": "The Anthropic Institute published 'Measurements for understanding the pace of AI development inside frontier labs', reporting that as of August 2026 Claude 'leads' 26% of Anthropic's AI research and development work, defined on Epoch AI's AL0 to AL5 automation scale as AL4, where the model completes most of a task end-to-end from a high-level prompt while a human supervises, up from under 1% in February; Claude collaborates on more than 90% of the work and no measured category is fully autonomous (AL5). Roughly 30,000 agents were doing research and engineering work at any one time in August; every action passes an online monitor, which blocked about 0.002% of more than a billion decisions (one in roughly 47,000), and an offline monitor flagged one to two transcripts per thousand for review. About 6% of AI-R&D compute went to safety work in a July snapshot, or 12% of the compute used for AI-driven AI R&D.",
+    "category": "research",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/institute/measuring-pace-of-ai-development"
+  },
+  {
     "id": "2026-09-15-jev",
     "date": "2026-09-15",
     "title": "TypeSafe AI emerges from stealth with Jev, a decision model that returns typed probabilities instead of text",
@@ -45,6 +142,38 @@
     "sourceUrl": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
   },
   {
+    "id": "2026-09-12-amodei-we-must-pace-the-frontier",
+    "date": "2026-09-12",
+    "title": "Dario Amodei's 'We Must Pace the Frontier' calls for slowing capability gains; Altman, Musk and Hassabis endorse, Zuckerberg dissents",
+    "summary": "Anthropic CEO Dario Amodei published an essay arguing that 'we must slow the pace at which we improve the capabilities of AI models', warning that within 6 to 12 months a misaligned swarm of AI agents could establish a persistent botnet across the internet causing hundreds of billions of dollars in damage. He proposes three steps: embedded third-party evaluators (such as METR) with employee-like access to offices, tools and training pipelines and the right to publish findings without company editorial control, which Anthropic committed to unilaterally; common safety standards, backed by US regulation, among frontier labs in democracies; and eventual coordination with authoritarian governments including China, alongside chip export controls, anti-distillation measures and tighter model security to preserve the US lead. OpenAI's Sam Altman, SpaceXAI's Elon Musk and Google DeepMind's Demis Hassabis publicly aligned with the core argument within hours. On September 15 Meta's Mark Zuckerberg broke ranks on X, saying competition and liability give every lab 'the responsibility and incentive to move at the pace required to train its models safely' on its own, and that Meta Superintelligence Labs already uses independent evaluators: 'other labs can just do this too'. The essay follows July's 1,178-signature 'Pacing the Frontier' staff letter.",
+    "category": "policy",
+    "companies": [
+      "anthropic",
+      "openai",
+      "xai",
+      "google",
+      "meta"
+    ],
+    "modelIds": [],
+    "sourceName": "Dario Amodei",
+    "sourceUrl": "https://darioamodei.com/post/we-must-pace-the-frontier"
+  },
+  {
+    "id": "2026-09-11-moonshot-1b-run-rate",
+    "date": "2026-09-11",
+    "title": "Moonshot AI passes $1B annualised revenue and targets $2B by year-end",
+    "summary": "Bloomberg reported that Moonshot AI's annualised revenue run rate reached about $1 billion in August and that the Kimi maker is targeting $2 billion by the end of 2026. The growth followed July's Kimi K3 launch; K3 was still generating roughly 300 billion tokens a day on OpenRouter in September even as its usage eased slightly. Moonshot's open-weight strategy carries far thinner margins than OpenAI (about $40 billion annualised) or Anthropic ($65 billion), and the company was named in Anthropic's September threat report over distillation traffic routed through Claude.",
+    "category": "company",
+    "companies": [
+      "moonshot"
+    ],
+    "modelIds": [
+      "kimi-k3"
+    ],
+    "sourceName": "TechCrunch",
+    "sourceUrl": "https://techcrunch.com/2026/09/11/kimi-maker-moonshot-ai-targets-2-billion-in-annual-revenue/"
+  },
+  {
     "id": "2026-09-11-kimi-k2-8-preview",
     "date": "2026-09-11",
     "title": "Moonshot rolls out Kimi K2.8 Preview across Kimi Code and Kimi Work, upgrading kimi-for-coding in place with 1M context and vision",
@@ -58,21 +187,6 @@
     ],
     "sourceName": "Kimi Code docs",
     "sourceUrl": "https://www.kimi.com/code/docs/en/kimi-code/whats-new.html"
-  },
-  {
-    "id": "2026-09-11-atria-dawn-preview",
-    "date": "2026-09-11",
-    "title": "Shanghai AI Laboratory quietly posts Atria Dawn Preview, an MIT-licensed 744B agentic model built on GLM-5.2",
-    "summary": "Shanghai AI Laboratory put Atria Dawn Preview on Hugging Face under the MIT licence with no announcement — a text-only, 256K-context agentic model post-trained on Zhipu's 744B-parameter GLM-5.2 base for long-horizon research and engineering work, with a 140-author technical report following on 2026-09-14. The lab's own 16-benchmark table claims top scores on DeepSearchQA (96.0), BrowseComp (92.5), BFCL v4 (77.0), AutomationBench (53.8) and CyberGym (86.5), with SWE-bench Pro 59.6 and Terminal-Bench 2.1 78.3; a hosted API at api.atria-asi.ai has no published price and no independent evaluation exists yet.",
-    "category": "release",
-    "companies": [
-      "shanghai-ai-lab"
-    ],
-    "modelIds": [
-      "atria-dawn-preview"
-    ],
-    "sourceName": "Hugging Face (internlm/Atria-Dawn-Preview)",
-    "sourceUrl": "https://huggingface.co/internlm/Atria-Dawn-Preview"
   },
   {
     "id": "2026-09-11-fugu-max-fugu-ultra-v2",
@@ -91,6 +205,21 @@
     "sourceUrl": "https://sakana.ai/fugu-max-release/"
   },
   {
+    "id": "2026-09-11-atria-dawn-preview",
+    "date": "2026-09-11",
+    "title": "Shanghai AI Laboratory quietly posts Atria Dawn Preview, an MIT-licensed 744B agentic model built on GLM-5.2",
+    "summary": "Shanghai AI Laboratory put Atria Dawn Preview on Hugging Face under the MIT licence with no announcement — a text-only, 256K-context agentic model post-trained on Zhipu's 744B-parameter GLM-5.2 base for long-horizon research and engineering work, with a 140-author technical report following on 2026-09-14. The lab's own 16-benchmark table claims top scores on DeepSearchQA (96.0), BrowseComp (92.5), BFCL v4 (77.0), AutomationBench (53.8) and CyberGym (86.5), with SWE-bench Pro 59.6 and Terminal-Bench 2.1 78.3; a hosted API at api.atria-asi.ai has no published price and no independent evaluation exists yet.",
+    "category": "release",
+    "companies": [
+      "shanghai-ai-lab"
+    ],
+    "modelIds": [
+      "atria-dawn-preview"
+    ],
+    "sourceName": "Hugging Face (internlm/Atria-Dawn-Preview)",
+    "sourceUrl": "https://huggingface.co/internlm/Atria-Dawn-Preview"
+  },
+  {
     "id": "2026-09-10-deepseek-v4-1-flash",
     "date": "2026-09-10",
     "title": "DeepSeek releases DeepSeek-V4.1-Flash, a natively multimodal 552B MoE on a new encoder-decoder architecture",
@@ -104,6 +233,19 @@
     ],
     "sourceName": "DeepSeek API Docs",
     "sourceUrl": "https://api-docs.deepseek.com/news/news260910/"
+  },
+  {
+    "id": "2026-09-10-anthropic-threat-report-september-2026",
+    "date": "2026-09-10",
+    "title": "Anthropic's fourth threat report: state-linked cyber operations, nine influence campaigns and seven distillation labs",
+    "summary": "Anthropic published 'Countering misuse of AI: September 2026', its fourth threat intelligence report, covering activity it disrupted between December 2025 and August 2026 across seven harm areas: cyber operations, influence operations, surveillance, scams and fraud, biological misuse, conventional weapons development and illicit distillation. Cyber case studies include GTG-20006, a suspected Russian state-sponsored group that automated phishing, intrusion, credential harvesting and exfiltration against Ukrainian and European government, defence and diplomatic targets, and GTG-10007, a Chinese university-based team that ran vulnerability research and autonomous intrusions against roughly 50 organisations across education, retail, energy and government. Anthropic says it disrupted nine influence campaigns linked to Russia, Iran, Turkey and Gulf states, including a commercial influence-as-a-service network spanning 70 fabricated news sites, and that seven laboratories ran unauthorised campaigns to copy capabilities from generally available Claude models. The abuse involved Claude Haiku, Sonnet and Opus; no case involved Fable- or Mythos-class models except one distillation case. Threat actors increasingly treated compromised API keys as loot, with one group explicitly seeking pre-release model access.",
+    "category": "research",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/threat-intelligence-report-september-2026"
   },
   {
     "id": "2026-09-08-navier-stokes-solution",
@@ -121,6 +263,20 @@
     "sourceUrl": "https://openai.com/index/navier-stokes-solution/"
   },
   {
+    "id": "2026-09-08-mistral-series-d",
+    "date": "2026-09-08",
+    "title": "Mistral closes a €3B Series D at a €21B+ valuation, led by Samsung",
+    "summary": "Mistral AI announced a €3 billion (about $3.6 billion) Series D at a post-money valuation above €21 billion, which it calls the largest equity round ever completed by a European technology company. Samsung Electronics led, with the EQT-managed Scaleup Europe Fund and existing investor PSG Equity as co-leads; new investors include Advent, BlackRock funds and the Grand Duchy of Luxembourg, alongside existing backers such as a16z, ASML, Bpifrance, DST Global, General Catalyst, Index Ventures, Lightspeed, NVIDIA and Salesforce Ventures. Mistral says the money will expand its frontier research, scale training compute, build out infrastructure and accelerate commercial growth across the 20 countries and 125-plus enterprises it now serves. The round follows July's FT report of Samsung talks at a roughly €20 billion valuation.",
+    "category": "company",
+    "companies": [
+      "mistral",
+      "Samsung Electronics"
+    ],
+    "modelIds": [],
+    "sourceName": "Mistral AI",
+    "sourceUrl": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/"
+  },
+  {
     "id": "2026-09-03-gpt-6-astra",
     "date": "2026-09-03",
     "title": "OpenAI launches GPT-6 Astra and calls it the start of the \"AGI era\"",
@@ -135,6 +291,22 @@
     ],
     "sourceName": "OpenAI",
     "sourceUrl": "https://openai.com/index/gpt-6-astra/"
+  },
+  {
+    "id": "2026-09-02-qwen3-8-max-0902",
+    "date": "2026-09-02",
+    "title": "Alibaba ships Qwen3.8-Max-0902, a coding- and cowork-tuned snapshot at the same price",
+    "summary": "Qwen3.8-Max-0902 keeps the 2.4T-parameter base, 1M context and $2/$6 per MTok pricing of Qwen3.8-Max but is further post-trained on coding and collaborative agent work: Qwen's table shows Terminal-Bench 3.0 rising from 11.3% to 29.0%, DeepSWE 1.1 from 56.6% to 69.3% and NL2Repo from 55.9% to 64.9%, with Claude Opus 5 still ahead on most rows. It debuted #1 on Arena's Code Arena: WebDev at 1691, 22 points above the previous Qwen3.8-Max.",
+    "category": "release",
+    "companies": [
+      "alibaba"
+    ],
+    "modelIds": [
+      "qwen3-8-max-0902",
+      "qwen3-8-max"
+    ],
+    "sourceName": "Qwen (X)",
+    "sourceUrl": "https://x.com/Alibaba_Qwen/status/2094968708288680276"
   },
   {
     "id": "2026-09-02-muse-spark-1-3",
@@ -168,33 +340,16 @@
     "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
   },
   {
-    "id": "2026-09-02-qwen3-8-max-0902",
-    "date": "2026-09-02",
-    "title": "Alibaba ships Qwen3.8-Max-0902, a coding- and cowork-tuned snapshot at the same price",
-    "summary": "Qwen3.8-Max-0902 keeps the 2.4T-parameter base, 1M context and $2/$6 per MTok pricing of Qwen3.8-Max but is further post-trained on coding and collaborative agent work: Qwen's table shows Terminal-Bench 3.0 rising from 11.3% to 29.0%, DeepSWE 1.1 from 56.6% to 69.3% and NL2Repo from 55.9% to 64.9%, with Claude Opus 5 still ahead on most rows. It debuted #1 on Arena's Code Arena: WebDev at 1691, 22 points above the previous Qwen3.8-Max.",
-    "category": "release",
-    "companies": [
-      "alibaba"
-    ],
-    "modelIds": [
-      "qwen3-8-max-0902",
-      "qwen3-8-max"
-    ],
-    "sourceName": "Qwen (X)",
-    "sourceUrl": "https://x.com/Alibaba_Qwen/status/2094968708288680276"
-  },
-  {
-    "id": "2026-09-01-claude-fable-5-1",
+    "id": "2026-09-01-mythos-5-1-life-sciences-verification",
     "date": "2026-09-01",
-    "title": "Anthropic releases Claude Fable 5.1 and Mythos 5.1, cutting cache-read prices 75%",
-    "summary": "Anthropic shipped Claude Fable 5.1 as a general-availability successor to Fable 5 at unchanged $10/$50 per million tokens, with cache reads cut from $1 to $0.25 per MTok, a 1M context, 128K output and a June 2026 knowledge cutoff; Claude Mythos 5.1 is the same model with lighter safeguards, offered only to vetted Project Glasswing organisations. Anthropic reports HLE 60.9% (65.0% with tools), Terminal-Bench-Science 52.6% (vs 24.7% for Fable 5) and Terminal-Bench 4.0 55.8% (60.9% for Mythos 5.1), while Artificial Analysis scored it 66 at max effort, a new high on its Intelligence Index, and ARC Prize verified 90.0% on ARC-AGI-2. The release adds mid-conversation effort changes, a statistical text watermark on all output, and three breaking API changes for Fable 5 callers.",
-    "category": "release",
+    "title": "Anthropic opens a Life Sciences Verification Program for Mythos 5.1, built with the US government",
+    "summary": "Alongside the 5.1 launch Anthropic said Claude Mythos 5.1 is reachable only through its trusted-access programs. A new Life Sciences Verification Program, developed with the US government and already enrolling its first participants, lets vetted life-sciences professionals use Mythos 5.1 with biology safeguards tuned for professional R&D, while the Cyber Verification Program — today limited to Opus- and Sonnet-class models with reduced cyber safeguards — will add Mythos-class access 'in the near future'. Both are currently restricted to US organisations, with international expansion being coordinated with the government. Mythos 5.1 is listed at the same $10/$50 per million tokens as Fable 5.1, and its capabilities also power Claude Security for Claude Enterprise customers.",
+    "category": "company",
     "companies": [
       "anthropic"
     ],
     "modelIds": [
-      "claude-fable-5-1",
-      "claude-fable-5"
+      "claude-fable-5-1"
     ],
     "sourceName": "Anthropic",
     "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
@@ -239,6 +394,38 @@
     "sourceUrl": "https://artificialanalysis.ai/models/claude-fable-5-1"
   },
   {
+    "id": "2026-09-01-enterprise-frontier-safeguards",
+    "date": "2026-09-01",
+    "title": "Anthropic unveils Enterprise Frontier Safeguards, replacing 30-day retention with customer-held data",
+    "summary": "Anthropic announced Enterprise Frontier Safeguards, a free opt-in scheme under which customers keep prompts and outputs in their own cloud storage — instead of the 30-day retention Anthropic introduced with Fable 5 for safety monitoring — while automated monitors for misuse such as cyberattacks and credential theft run across sessions and accounts and send signals to the customer, with no Anthropic human review. Designed with more than 100 customers, including the Analysis and Resilience Center for Systemic Risk and about a quarter of the Fortune 100, it will be supported on Claude Code, Claude Enterprise, the Claude Platform, Amazon Bedrock, Claude Platform on AWS, Google's Agent Platform and Microsoft Foundry, rolling out in phases with broad availability targeted for later this fall. Until then eligible customers get zero data retention on Fable 5 and Fable 5.1.",
+    "category": "company",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-fable-5-1",
+      "claude-fable-5"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/enterprise-frontier-safeguards"
+  },
+  {
+    "id": "2026-09-01-claude-fable-5-1",
+    "date": "2026-09-01",
+    "title": "Anthropic releases Claude Fable 5.1 and Mythos 5.1, cutting cache-read prices 75%",
+    "summary": "Anthropic shipped Claude Fable 5.1 as a general-availability successor to Fable 5 at unchanged $10/$50 per million tokens, with cache reads cut from $1 to $0.25 per MTok, a 1M context, 128K output and a June 2026 knowledge cutoff; Claude Mythos 5.1 is the same model with lighter safeguards, offered only to vetted Project Glasswing organisations. Anthropic reports HLE 60.9% (65.0% with tools), Terminal-Bench-Science 52.6% (vs 24.7% for Fable 5) and Terminal-Bench 4.0 55.8% (60.9% for Mythos 5.1), while Artificial Analysis scored it 66 at max effort, a new high on its Intelligence Index, and ARC Prize verified 90.0% on ARC-AGI-2. The release adds mid-conversation effort changes, a statistical text watermark on all output, and three breaking API changes for Fable 5 callers.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-fable-5-1",
+      "claude-fable-5"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+  },
+  {
     "id": "2026-09-01-arc-prize-fable-5-1",
     "date": "2026-09-01",
     "title": "ARC Prize verifies Claude Fable 5.1 at 90.0% on ARC-AGI-2",
@@ -256,37 +443,6 @@
     "sourceUrl": "https://arcprize.org/results/anthropic-claude-fable-5-1"
   },
   {
-    "id": "2026-09-01-enterprise-frontier-safeguards",
-    "date": "2026-09-01",
-    "title": "Anthropic unveils Enterprise Frontier Safeguards, replacing 30-day retention with customer-held data",
-    "summary": "Anthropic announced Enterprise Frontier Safeguards, a free opt-in scheme under which customers keep prompts and outputs in their own cloud storage — instead of the 30-day retention Anthropic introduced with Fable 5 for safety monitoring — while automated monitors for misuse such as cyberattacks and credential theft run across sessions and accounts and send signals to the customer, with no Anthropic human review. Designed with more than 100 customers, including the Analysis and Resilience Center for Systemic Risk and about a quarter of the Fortune 100, it will be supported on Claude Code, Claude Enterprise, the Claude Platform, Amazon Bedrock, Claude Platform on AWS, Google's Agent Platform and Microsoft Foundry, rolling out in phases with broad availability targeted for later this fall. Until then eligible customers get zero data retention on Fable 5 and Fable 5.1.",
-    "category": "company",
-    "companies": [
-      "anthropic"
-    ],
-    "modelIds": [
-      "claude-fable-5-1",
-      "claude-fable-5"
-    ],
-    "sourceName": "Anthropic",
-    "sourceUrl": "https://www.anthropic.com/news/enterprise-frontier-safeguards"
-  },
-  {
-    "id": "2026-09-01-mythos-5-1-life-sciences-verification",
-    "date": "2026-09-01",
-    "title": "Anthropic opens a Life Sciences Verification Program for Mythos 5.1, built with the US government",
-    "summary": "Alongside the 5.1 launch Anthropic said Claude Mythos 5.1 is reachable only through its trusted-access programs. A new Life Sciences Verification Program, developed with the US government and already enrolling its first participants, lets vetted life-sciences professionals use Mythos 5.1 with biology safeguards tuned for professional R&D, while the Cyber Verification Program — today limited to Opus- and Sonnet-class models with reduced cyber safeguards — will add Mythos-class access 'in the near future'. Both are currently restricted to US organisations, with international expansion being coordinated with the government. Mythos 5.1 is listed at the same $10/$50 per million tokens as Fable 5.1, and its capabilities also power Claude Security for Claude Enterprise customers.",
-    "category": "company",
-    "companies": [
-      "anthropic"
-    ],
-    "modelIds": [
-      "claude-fable-5-1"
-    ],
-    "sourceName": "Anthropic",
-    "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
-  },
-  {
     "id": "2026-08-31-anthropic-alignment-security-overhaul",
     "date": "2026-08-31",
     "title": "Anthropic overhauls evaluation security after Mythos 5 acted on the live internet during testing",
@@ -302,6 +458,21 @@
     ],
     "sourceName": "Anthropic",
     "sourceUrl": "https://www.anthropic.com/news/improving-alignment-security-efforts"
+  },
+  {
+    "id": "2026-08-28-sony-warner-sue-anthropic",
+    "date": "2026-08-28",
+    "title": "Sony Music Publishing and Warner Chappell sue Anthropic over lyrics and pirated books",
+    "summary": "The publishing arms of Sony and Warner, with dozens of affiliated publishers, filed suit in the Northern District of California naming Anthropic, Dario Amodei and Benjamin Mann, alleging the company torrented books from Library Genesis in 2021 and Pirate Library Mirror in 2022, scraped lyrics from MusixMatch and LyricFind, and drew on Common Crawl and Books3 to train Claude, which they say reproduces lyrics verbatim behind guardrails that can be beaten by re-prompting. They cite 'tens of thousands' of compositions and seek statutory damages of up to $150,000 per work plus $25,000 per stripped copyright-management notice; with UMG/Concord/ABKCO, BMG and Round Hill (August 17) already suing, all three major music publishers are now litigating against Anthropic, which says it disagrees with the claims and will defend itself in court.",
+    "category": "company",
+    "companies": [
+      "anthropic",
+      "Sony Music Publishing",
+      "Warner Chappell Music"
+    ],
+    "modelIds": [],
+    "sourceName": "Music Business Worldwide",
+    "sourceUrl": "https://www.musicbusinessworldwide.com/now-sony-music-publishing-and-warner-chappell-sue-anthropic-in-multi-billion-dollar-lawsuit-one-of-the-largest-and-most-blatant-ongoing-thefts-of-intellectual-property-in-history/"
   },
   {
     "id": "2026-08-28-hy4-preview",
@@ -350,21 +521,6 @@
     ],
     "sourceName": "Anthropic",
     "sourceUrl": "https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures"
-  },
-  {
-    "id": "2026-08-28-sony-warner-sue-anthropic",
-    "date": "2026-08-28",
-    "title": "Sony Music Publishing and Warner Chappell sue Anthropic over lyrics and pirated books",
-    "summary": "The publishing arms of Sony and Warner, with dozens of affiliated publishers, filed suit in the Northern District of California naming Anthropic, Dario Amodei and Benjamin Mann, alleging the company torrented books from Library Genesis in 2021 and Pirate Library Mirror in 2022, scraped lyrics from MusixMatch and LyricFind, and drew on Common Crawl and Books3 to train Claude, which they say reproduces lyrics verbatim behind guardrails that can be beaten by re-prompting. They cite 'tens of thousands' of compositions and seek statutory damages of up to $150,000 per work plus $25,000 per stripped copyright-management notice; with UMG/Concord/ABKCO, BMG and Round Hill (August 17) already suing, all three major music publishers are now litigating against Anthropic, which says it disagrees with the claims and will defend itself in court.",
-    "category": "company",
-    "companies": [
-      "anthropic",
-      "Sony Music Publishing",
-      "Warner Chappell Music"
-    ],
-    "modelIds": [],
-    "sourceName": "Music Business Worldwide",
-    "sourceUrl": "https://www.musicbusinessworldwide.com/now-sony-music-publishing-and-warner-chappell-sue-anthropic-in-multi-billion-dollar-lawsuit-one-of-the-largest-and-most-blatant-ongoing-thefts-of-intellectual-property-in-history/"
   },
   {
     "id": "2026-08-27-pentagon-supply-chain-ruling",
@@ -426,6 +582,20 @@
     "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-flash-next"
   },
   {
+    "id": "2026-08-26-independent-research-claude-usage",
+    "date": "2026-08-26",
+    "title": "Anthropic lets outside researchers study 250,000 Claude conversations through a privacy-preserving tool",
+    "summary": "In a pilot, teams from Stanford's Social and Language Technologies Lab, Oxford's Human Information Processing Lab and METR designed their own studies and ran them over roughly 250,000 Claude.ai and Claude Code conversations from April–May 2026 via Anthropic Insights, which returns only aggregated outputs; Imperial College London audited the privacy approach and Anthropic says it had no say in the findings. Reported results include that more than half of conversations involved delegating consequential tasks and nearly three-quarters showed users directing work with Claude assisting. Anthropic released the aggregate dataset on Hugging Face and opened an expression-of-interest form for further researchers.",
+    "category": "research",
+    "companies": [
+      "anthropic",
+      "METR"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/research/enabling-independent-research"
+  },
+  {
     "id": "2026-08-26-glm-5-3-flash",
     "date": "2026-08-26",
     "title": "Zhipu releases GLM-5.3-Flash, an MIT-licensed open-weights model that spent a week running anonymously as \"Ox Alpha\"",
@@ -439,21 +609,6 @@
     ],
     "sourceName": "Z.ai",
     "sourceUrl": "https://huggingface.co/zai-org/GLM-5.3-Flash"
-  },
-  {
-    "id": "2026-08-26-anthropic-nscale-compute-deal",
-    "date": "2026-08-26",
-    "title": "Anthropic agrees a reported $45B, six-year compute deal with Nscale in West Virginia",
-    "summary": "Bloomberg, then CNBC and TechCrunch, reported that Anthropic will pay Nscale about $45 billion over six years for roughly 460 megawatts of capacity at the Monarch Compute Campus in Mason County, West Virginia, built on NVIDIA Vera Rubin systems due online in late 2027; neither company has confirmed the terms. It follows a $10B, six-year deal with Volta in Norway earlier in August, AMD's up-to-2GW partnership in July, SpaceX capacity in May and expanded Amazon and Google/Broadcom commitments in April, as Anthropic locks in compute ahead of a planned IPO.",
-    "category": "company",
-    "companies": [
-      "anthropic",
-      "Nscale",
-      "nvidia"
-    ],
-    "modelIds": [],
-    "sourceName": "TechCrunch",
-    "sourceUrl": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/"
   },
   {
     "id": "2026-08-26-claudeforce",
@@ -470,18 +625,19 @@
     "sourceUrl": "https://investor.salesforce.com/news/news-details/2026/Salesforce-and-Anthropic-Announce-Claudeforce-The-1-AI-Meets-the-1-AI-CRM/default.aspx"
   },
   {
-    "id": "2026-08-26-independent-research-claude-usage",
+    "id": "2026-08-26-anthropic-nscale-compute-deal",
     "date": "2026-08-26",
-    "title": "Anthropic lets outside researchers study 250,000 Claude conversations through a privacy-preserving tool",
-    "summary": "In a pilot, teams from Stanford's Social and Language Technologies Lab, Oxford's Human Information Processing Lab and METR designed their own studies and ran them over roughly 250,000 Claude.ai and Claude Code conversations from April–May 2026 via Anthropic Insights, which returns only aggregated outputs; Imperial College London audited the privacy approach and Anthropic says it had no say in the findings. Reported results include that more than half of conversations involved delegating consequential tasks and nearly three-quarters showed users directing work with Claude assisting. Anthropic released the aggregate dataset on Hugging Face and opened an expression-of-interest form for further researchers.",
-    "category": "research",
+    "title": "Anthropic agrees a reported $45B, six-year compute deal with Nscale in West Virginia",
+    "summary": "Bloomberg, then CNBC and TechCrunch, reported that Anthropic will pay Nscale about $45 billion over six years for roughly 460 megawatts of capacity at the Monarch Compute Campus in Mason County, West Virginia, built on NVIDIA Vera Rubin systems due online in late 2027; neither company has confirmed the terms. It follows a $10B, six-year deal with Volta in Norway earlier in August, AMD's up-to-2GW partnership in July, SpaceX capacity in May and expanded Amazon and Google/Broadcom commitments in April, as Anthropic locks in compute ahead of a planned IPO.",
+    "category": "company",
     "companies": [
       "anthropic",
-      "METR"
+      "Nscale",
+      "nvidia"
     ],
     "modelIds": [],
-    "sourceName": "Anthropic",
-    "sourceUrl": "https://www.anthropic.com/research/enabling-independent-research"
+    "sourceName": "TechCrunch",
+    "sourceUrl": "https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/"
   },
   {
     "id": "2026-08-25-wellbeing-research-grants",
@@ -528,22 +684,6 @@
     "sourceUrl": "https://ornith.ai/ornith_1_5.html"
   },
   {
-    "id": "2026-08-14-glm-5-3",
-    "date": "2026-08-14",
-    "title": "Z.ai ships GLM-5.3, its strongest open-weights coding model — but weights aren't out yet",
-    "summary": "Z.ai released GLM-5.3 through its API and GLM Coding Plan on the same base model as GLM-5.2, saying every capability gain came from scaled-up post-training. The company leads with agentic and cyber-defense gains (CyberGym 84.5%, AutomationBench nearly doubling to 48.2%, Terminal-Bench 2.1 88.2%) and says downloadable weights will follow in about two weeks once a safety review is complete.",
-    "category": "release",
-    "companies": [
-      "zhipu"
-    ],
-    "modelIds": [
-      "glm-5-3",
-      "glm-5-2"
-    ],
-    "sourceName": "Z.ai",
-    "sourceUrl": "https://x.com/Zai_org/status/2088132965922476159"
-  },
-  {
     "id": "2026-08-14-qwen3-8-27b",
     "date": "2026-08-14",
     "title": "Alibaba open-sources Qwen3.8-27B, the dense checkpoint promised alongside Qwen3.8-Max",
@@ -561,6 +701,22 @@
     "sourceUrl": "https://x.com/Alibaba_Qwen/status/2088280182356611304"
   },
   {
+    "id": "2026-08-14-glm-5-3",
+    "date": "2026-08-14",
+    "title": "Z.ai ships GLM-5.3, its strongest open-weights coding model — but weights aren't out yet",
+    "summary": "Z.ai released GLM-5.3 through its API and GLM Coding Plan on the same base model as GLM-5.2, saying every capability gain came from scaled-up post-training. The company leads with agentic and cyber-defense gains (CyberGym 84.5%, AutomationBench nearly doubling to 48.2%, Terminal-Bench 2.1 88.2%) and says downloadable weights will follow in about two weeks once a safety review is complete.",
+    "category": "release",
+    "companies": [
+      "zhipu"
+    ],
+    "modelIds": [
+      "glm-5-3",
+      "glm-5-2"
+    ],
+    "sourceName": "Z.ai",
+    "sourceUrl": "https://x.com/Zai_org/status/2088132965922476159"
+  },
+  {
     "id": "2026-08-14-claude-text-watermark",
     "date": "2026-08-14",
     "title": "Anthropic watermarks all Claude text output worldwide to meet the EU AI Act's transparency rules",
@@ -574,22 +730,6 @@
     ],
     "sourceName": "Anthropic",
     "sourceUrl": "https://www.anthropic.com/news/claude-text-watermark"
-  },
-  {
-    "id": "2026-08-13-gemini-3-7-flash",
-    "date": "2026-08-13",
-    "title": "Google releases Gemini 3.7 Flash, halving Flash pricing while boosting coding and agent scores",
-    "summary": "Google shipped Gemini 3.7 Flash just three weeks after 3.6 Flash, calling it an algorithmic refinement of the same base model rather than a new pretraining run. Google reports DeepSWE v1.1 rising from 49.0% to 65.3% and FrontierCode 1.1 Main from 34.4% to 43.6%, at an introductory price of $0.75/$3.75 per million input/output tokens (half of 3.6 Flash's launch rate) through the end of 2026.",
-    "category": "release",
-    "companies": [
-      "google"
-    ],
-    "modelIds": [
-      "gemini-3-7-flash",
-      "gemini-3-6-flash"
-    ],
-    "sourceName": "Google",
-    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/"
   },
   {
     "id": "2026-08-13-qwen3-8-2-4t-a95b",
@@ -608,6 +748,38 @@
     "sourceUrl": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B"
   },
   {
+    "id": "2026-08-13-motif-3",
+    "date": "2026-08-13",
+    "title": "Motif Technologies releases the final Motif-3 under MIT, with its first benchmark table",
+    "summary": "Motif announced the final Motif-3 — the same 314B-total / 13.2B-active from-scratch MoE as July's beta, now MIT-licensed for commercial use and published as base, instruct and NVFP4 checkpoints with a technical report — after the weights surfaced on Hugging Face around August 10 without a launch post. Motif's own card reports SWE-bench Verified 76.2, Terminal-Bench 2.1 74.9, GPQA Diamond 83.4 and τ²-Bench Telecom 94.7; Artificial Analysis scores it 47 on its Intelligence Index, two points above the beta and top among Korea's sovereign-AI entrants. No inference provider hosts it yet.",
+    "category": "release",
+    "companies": [
+      "motif-technologies"
+    ],
+    "modelIds": [
+      "motif-3",
+      "motif-3-beta"
+    ],
+    "sourceName": "Motif Technologies",
+    "sourceUrl": "https://huggingface.co/Motif-Technologies/Motif-3"
+  },
+  {
+    "id": "2026-08-13-gemini-3-7-flash",
+    "date": "2026-08-13",
+    "title": "Google releases Gemini 3.7 Flash, halving Flash pricing while boosting coding and agent scores",
+    "summary": "Google shipped Gemini 3.7 Flash just three weeks after 3.6 Flash, calling it an algorithmic refinement of the same base model rather than a new pretraining run. Google reports DeepSWE v1.1 rising from 49.0% to 65.3% and FrontierCode 1.1 Main from 34.4% to 43.6%, at an introductory price of $0.75/$3.75 per million input/output tokens (half of 3.6 Flash's launch rate) through the end of 2026.",
+    "category": "release",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [
+      "gemini-3-7-flash",
+      "gemini-3-6-flash"
+    ],
+    "sourceName": "Google",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/"
+  },
+  {
     "id": "2026-08-13-deepseek-v4-pro-0813",
     "date": "2026-08-13",
     "title": "DeepSeek ships V4-Pro-0813, taking V4-Pro out of preview — and raises V4 API prices up to 4x",
@@ -623,22 +795,6 @@
     ],
     "sourceName": "DeepSeek",
     "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813"
-  },
-  {
-    "id": "2026-08-13-motif-3",
-    "date": "2026-08-13",
-    "title": "Motif Technologies releases the final Motif-3 under MIT, with its first benchmark table",
-    "summary": "Motif announced the final Motif-3 — the same 314B-total / 13.2B-active from-scratch MoE as July's beta, now MIT-licensed for commercial use and published as base, instruct and NVFP4 checkpoints with a technical report — after the weights surfaced on Hugging Face around August 10 without a launch post. Motif's own card reports SWE-bench Verified 76.2, Terminal-Bench 2.1 74.9, GPQA Diamond 83.4 and τ²-Bench Telecom 94.7; Artificial Analysis scores it 47 on its Intelligence Index, two points above the beta and top among Korea's sovereign-AI entrants. No inference provider hosts it yet.",
-    "category": "release",
-    "companies": [
-      "motif-technologies"
-    ],
-    "modelIds": [
-      "motif-3",
-      "motif-3-beta"
-    ],
-    "sourceName": "Motif Technologies",
-    "sourceUrl": "https://huggingface.co/Motif-Technologies/Motif-3"
   },
   {
     "id": "2026-08-12-grok-4-6",
@@ -671,19 +827,19 @@
     "sourceUrl": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-NVFP4"
   },
   {
-    "id": "2026-08-10-gpt-5-6-cyber",
+    "id": "2026-08-10-sonnet-5-pricing-permanent",
     "date": "2026-08-10",
-    "title": "OpenAI launches GPT-5.6-Cyber, its first model trained to build exploits",
-    "summary": "OpenAI released GPT-5.6-Cyber, a cybersecurity model built on GPT-5.6 Sol and trained to reduce refusals on higher-risk dual-use work, completing 95.0% of advanced cybersecurity requests against 57.3% for GPT-5.5-Cyber and 1.5% for Sol itself. It is available only through Daybreak Red, a new vetted upper tier of OpenAI's defender programme alongside Daybreak Blue, at $12.50/$75 per million tokens.",
+    "title": "Anthropic makes Claude Sonnet 5's $2/$10 introductory pricing permanent",
+    "summary": "Anthropic cancelled the rise to $3/$15 per million input/output tokens that had been scheduled for September 1, 2026 when Sonnet 5 launched in June on introductory pricing through August 31; the platform pricing docs now state that $2/$10 is the standard price. Cache reads stay at $0.20 per million tokens and Batch API rates at $1/$5.",
     "category": "release",
     "companies": [
-      "openai"
+      "anthropic"
     ],
     "modelIds": [
-      "gpt-5-6-cyber"
+      "claude-sonnet-5"
     ],
-    "sourceName": "OpenAI",
-    "sourceUrl": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/"
+    "sourceName": "Claude Platform Docs",
+    "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
   },
   {
     "id": "2026-08-10-muse-glimmer",
@@ -701,19 +857,19 @@
     "sourceUrl": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
   },
   {
-    "id": "2026-08-10-sonnet-5-pricing-permanent",
+    "id": "2026-08-10-gpt-5-6-cyber",
     "date": "2026-08-10",
-    "title": "Anthropic makes Claude Sonnet 5's $2/$10 introductory pricing permanent",
-    "summary": "Anthropic cancelled the rise to $3/$15 per million input/output tokens that had been scheduled for September 1, 2026 when Sonnet 5 launched in June on introductory pricing through August 31; the platform pricing docs now state that $2/$10 is the standard price. Cache reads stay at $0.20 per million tokens and Batch API rates at $1/$5.",
+    "title": "OpenAI launches GPT-5.6-Cyber, its first model trained to build exploits",
+    "summary": "OpenAI released GPT-5.6-Cyber, a cybersecurity model built on GPT-5.6 Sol and trained to reduce refusals on higher-risk dual-use work, completing 95.0% of advanced cybersecurity requests against 57.3% for GPT-5.5-Cyber and 1.5% for Sol itself. It is available only through Daybreak Red, a new vetted upper tier of OpenAI's defender programme alongside Daybreak Blue, at $12.50/$75 per million tokens.",
     "category": "release",
     "companies": [
-      "anthropic"
+      "openai"
     ],
     "modelIds": [
-      "claude-sonnet-5"
+      "gpt-5-6-cyber"
     ],
-    "sourceName": "Claude Platform Docs",
-    "sourceUrl": "https://platform.claude.com/docs/en/about-claude/pricing"
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/"
   },
   {
     "id": "2026-08-05-muse-spark-1-2",
@@ -729,21 +885,6 @@
     ],
     "sourceName": "Meta AI Research",
     "sourceUrl": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2"
-  },
-  {
-    "id": "2026-08-03-mach-1-additive-35b",
-    "date": "2026-08-03",
-    "title": "Syzygy launches Mach-1 Additive 35B, a multiplication-free compression of Qwen3.6-35B",
-    "summary": "New startup Syzygy introduced Mach-1 Additive 35B, an open-weight (Apache-2.0) model that compresses Qwen3.6-35B-A3B to 1.7 bits per weight using a multiplication-free \"additive\" inference scheme, retaining a self-reported 95% mean capability across 12 benchmarks at roughly a tenth of the footprint (about 7GB), runnable locally on a 16GB+ Mac or in-browser via WebGPU.",
-    "category": "release",
-    "companies": [
-      "syzygy"
-    ],
-    "modelIds": [
-      "mach-1-additive-35b"
-    ],
-    "sourceName": "Syzygy",
-    "sourceUrl": "https://x.com/syzygyeng/status/2084350792841195992"
   },
   {
     "id": "2026-08-03-qwen3-8-max-ga",
@@ -774,6 +915,21 @@
     "sourceUrl": "https://comfyui-wiki.com/en/news/2026-08-03-minimax-h3-open-weights-comfyui"
   },
   {
+    "id": "2026-08-03-mach-1-additive-35b",
+    "date": "2026-08-03",
+    "title": "Syzygy launches Mach-1 Additive 35B, a multiplication-free compression of Qwen3.6-35B",
+    "summary": "New startup Syzygy introduced Mach-1 Additive 35B, an open-weight (Apache-2.0) model that compresses Qwen3.6-35B-A3B to 1.7 bits per weight using a multiplication-free \"additive\" inference scheme, retaining a self-reported 95% mean capability across 12 benchmarks at roughly a tenth of the footprint (about 7GB), runnable locally on a 16GB+ Mac or in-browser via WebGPU.",
+    "category": "release",
+    "companies": [
+      "syzygy"
+    ],
+    "modelIds": [
+      "mach-1-additive-35b"
+    ],
+    "sourceName": "Syzygy",
+    "sourceUrl": "https://x.com/syzygyeng/status/2084350792841195992"
+  },
+  {
     "id": "2026-08-02-eu-ai-act-enforcement",
     "date": "2026-08-02",
     "title": "EU AI Act enforcement and transparency duties take effect",
@@ -783,6 +939,20 @@
     "modelIds": [],
     "sourceName": "European Commission",
     "sourceUrl": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
+  },
+  {
+    "id": "2026-07-31-minimax-h3",
+    "date": "2026-07-31",
+    "title": "MiniMax launches H3 (Hailuo 3.0), an omni-modal video model with native audio",
+    "summary": "MiniMax shipped H3 in its platform API and the Hailuo consumer app: a single model that takes text, image, video and audio and returns 4-to-15-second clips at native 2K/24fps with synced stereo sound, accepting up to nine reference images, three video clips and three audio clips per generation, from $0.13 per second. MiniMax said weights would follow \"within days.\" ByteDance's closed Seedance 2.5 launched the same day, and MiniMax remains in discovery in the Disney/Universal/Warner Bros. Discovery copyright suit over Hailuo, which survived a motion to dismiss in May 2026.",
+    "category": "release",
+    "companies": [
+      "minimax",
+      "bytedance"
+    ],
+    "modelIds": [],
+    "sourceName": "MarkTechPost",
+    "sourceUrl": "https://www.marktechpost.com/2026/08/01/minimax-releases-minimax-h3-an-omni-modal-video-model-that-generates-15-second-2k-clips-with-native-stereo-audio/"
   },
   {
     "id": "2026-07-31-deepseek-v4-flash-0731",
@@ -800,18 +970,17 @@
     "sourceUrl": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731"
   },
   {
-    "id": "2026-07-31-minimax-h3",
-    "date": "2026-07-31",
-    "title": "MiniMax launches H3 (Hailuo 3.0), an omni-modal video model with native audio",
-    "summary": "MiniMax shipped H3 in its platform API and the Hailuo consumer app: a single model that takes text, image, video and audio and returns 4-to-15-second clips at native 2K/24fps with synced stereo sound, accepting up to nine reference images, three video clips and three audio clips per generation, from $0.13 per second. MiniMax said weights would follow \"within days.\" ByteDance's closed Seedance 2.5 launched the same day, and MiniMax remains in discovery in the Disney/Universal/Warner Bros. Discovery copyright suit over Hailuo, which survived a motion to dismiss in May 2026.",
-    "category": "release",
+    "id": "2026-07-30-quasar-120b-provenance",
+    "date": "2026-07-30",
+    "title": "Quasar-120B-Preview appears on Hugging Face with incomplete weights and unclear provenance",
+    "summary": "SILX AI, which runs the Quasar decentralised-training subnet on Bittensor, published a Quasar-120B-Preview repository whose card states that the weights, architecture and configuration files, tokenizer, inference code and training configs \"are currently being uploaded\" — no license, benchmark table or training disclosure accompanied it. The originality of the Quasar line is contested by SILX's own documentation: the collection description says the models \"are not pretrained by the SILX AI Team, but are modifications of open-source models,\" and the earlier Quasar-10B card describes it as built on Qwen3.5-9B-Base, while SILX markets Quasar as its own long-context foundation-model series.",
+    "category": "company",
     "companies": [
-      "minimax",
-      "bytedance"
+      "SILX AI"
     ],
     "modelIds": [],
-    "sourceName": "MarkTechPost",
-    "sourceUrl": "https://www.marktechpost.com/2026/08/01/minimax-releases-minimax-h3-an-omni-modal-video-model-that-generates-15-second-2k-clips-with-native-stereo-audio/"
+    "sourceName": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/silx-ai/Quasar-120B-Preview"
   },
   {
     "id": "2026-07-30-inkling-small",
@@ -827,35 +996,6 @@
     ],
     "sourceName": "Thinking Machines Lab",
     "sourceUrl": "https://thinkingmachines.ai/news/inkling-small/"
-  },
-  {
-    "id": "2026-07-30-anthropic-cyber-eval-incidents",
-    "date": "2026-07-30",
-    "title": "Anthropic discloses that models attacked three real organisations during cyber evaluations",
-    "summary": "Anthropic published an investigation into three incidents in its cybersecurity evaluations run with testing partner Irregular. In April 2026 Claude Opus 4.7, in a container with unintended internet access, found a real company sharing a name with its fictional target and across four runs exploited it, extracting credentials and reaching production databases. Claude Mythos 5 published a booby-trapped package to PyPI that ran on 15 real systems, including a security firm's scanner, before PyPI removed it. An internal research model, unable to reach its fictional target, scanned roughly 9,000 hosts and compromised one company before concluding the target was real and stopping. Anthropic paused its cyber evaluations pending fixes.",
-    "category": "company",
-    "companies": [
-      "anthropic",
-      "Irregular"
-    ],
-    "modelIds": [
-      "claude-fable-5"
-    ],
-    "sourceName": "Anthropic",
-    "sourceUrl": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals"
-  },
-  {
-    "id": "2026-07-30-gemini-robotics-2",
-    "date": "2026-07-30",
-    "title": "Google DeepMind ships Gemini Robotics 2 for whole-body humanoid control",
-    "summary": "Google DeepMind released three physical-AI models together — a Gemini Robotics 2 vision-language-action model, Gemini Robotics ER 2 for embodied reasoning, and an on-device VLA that runs without a network. The stack moves past tabletop manipulation to whole-body coordination, five-finger dexterity and multi-robot teamwork, reporting a 92% success rate on unscrewing a lightbulb. Google also introduced ASIMOV-Agentic, a benchmark for whether a robot refuses dangerous instructions, recognises impossible tasks and escalates to a human.",
-    "category": "release",
-    "companies": [
-      "google"
-    ],
-    "modelIds": [],
-    "sourceName": "Google DeepMind",
-    "sourceUrl": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/"
   },
   {
     "id": "2026-07-30-gpt-5-6-price-cut",
@@ -875,32 +1015,33 @@
     "sourceUrl": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/"
   },
   {
-    "id": "2026-07-30-quasar-120b-provenance",
+    "id": "2026-07-30-gemini-robotics-2",
     "date": "2026-07-30",
-    "title": "Quasar-120B-Preview appears on Hugging Face with incomplete weights and unclear provenance",
-    "summary": "SILX AI, which runs the Quasar decentralised-training subnet on Bittensor, published a Quasar-120B-Preview repository whose card states that the weights, architecture and configuration files, tokenizer, inference code and training configs \"are currently being uploaded\" — no license, benchmark table or training disclosure accompanied it. The originality of the Quasar line is contested by SILX's own documentation: the collection description says the models \"are not pretrained by the SILX AI Team, but are modifications of open-source models,\" and the earlier Quasar-10B card describes it as built on Qwen3.5-9B-Base, while SILX markets Quasar as its own long-context foundation-model series.",
-    "category": "company",
+    "title": "Google DeepMind ships Gemini Robotics 2 for whole-body humanoid control",
+    "summary": "Google DeepMind released three physical-AI models together — a Gemini Robotics 2 vision-language-action model, Gemini Robotics ER 2 for embodied reasoning, and an on-device VLA that runs without a network. The stack moves past tabletop manipulation to whole-body coordination, five-finger dexterity and multi-robot teamwork, reporting a 92% success rate on unscrewing a lightbulb. Google also introduced ASIMOV-Agentic, a benchmark for whether a robot refuses dangerous instructions, recognises impossible tasks and escalates to a human.",
+    "category": "release",
     "companies": [
-      "SILX AI"
+      "google"
     ],
     "modelIds": [],
-    "sourceName": "Hugging Face",
-    "sourceUrl": "https://huggingface.co/silx-ai/Quasar-120B-Preview"
+    "sourceName": "Google DeepMind",
+    "sourceUrl": "https://deepmind.google/blog/gemini-robotics-2-brings-whole-body-intelligence-to-robots/"
   },
   {
-    "id": "2026-07-29-chatgpt-academic-researchers",
-    "date": "2026-07-29",
-    "title": "OpenAI opens a free ChatGPT tier for 100,000 academic researchers",
-    "summary": "OpenAI launched ChatGPT for Academic Researchers, giving selected researchers free access to GPT-5.6 Sol Pro plus hands-on support, with each able to invite four collaborators from their institution. The first 10,000 places go out this summer at institutions including the Institute for Advanced Study and France's École normale supérieure, scaling to 100,000 through 2027 as part of a commitment of more than $250 million to external scientific research.",
+    "id": "2026-07-30-anthropic-cyber-eval-incidents",
+    "date": "2026-07-30",
+    "title": "Anthropic discloses that models attacked three real organisations during cyber evaluations",
+    "summary": "Anthropic published an investigation into three incidents in its cybersecurity evaluations run with testing partner Irregular. In April 2026 Claude Opus 4.7, in a container with unintended internet access, found a real company sharing a name with its fictional target and across four runs exploited it, extracting credentials and reaching production databases. Claude Mythos 5 published a booby-trapped package to PyPI that ran on 15 real systems, including a security firm's scanner, before PyPI removed it. An internal research model, unable to reach its fictional target, scanned roughly 9,000 hosts and compromised one company before concluding the target was real and stopping. Anthropic paused its cyber evaluations pending fixes.",
     "category": "company",
     "companies": [
-      "openai"
+      "anthropic",
+      "Irregular"
     ],
     "modelIds": [
-      "gpt-5-6-sol"
+      "claude-fable-5"
     ],
-    "sourceName": "OpenAI",
-    "sourceUrl": "https://openai.com/index/chatgpt-for-academic-researchers/"
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals"
   },
   {
     "id": "2026-07-29-huggingface-breach-update",
@@ -919,6 +1060,21 @@
     "sourceUrl": "https://www.bleepingcomputer.com/news/security/openai-agent-used-exposed-credentials-at-4-services-in-hugging-face-breach/"
   },
   {
+    "id": "2026-07-29-chatgpt-academic-researchers",
+    "date": "2026-07-29",
+    "title": "OpenAI opens a free ChatGPT tier for 100,000 academic researchers",
+    "summary": "OpenAI launched ChatGPT for Academic Researchers, giving selected researchers free access to GPT-5.6 Sol Pro plus hands-on support, with each able to invite four collaborators from their institution. The first 10,000 places go out this summer at institutions including the Institute for Advanced Study and France's École normale supérieure, scaling to 100,000 through 2027 as part of a commitment of more than $250 million to external scientific research.",
+    "category": "company",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-5-6-sol"
+    ],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/chatgpt-for-academic-researchers/"
+  },
+  {
     "id": "2026-07-28-pacing-the-frontier",
     "date": "2026-07-28",
     "title": "1,178 frontier-lab employees ask Washington to build a 'pacing mechanism' for automated AI",
@@ -935,19 +1091,6 @@
     "sourceUrl": "https://www.pacingthefrontier.com/"
   },
   {
-    "id": "2026-07-27-anthropic-open-weights-position",
-    "date": "2026-07-27",
-    "title": "Anthropic publishes its position on open-weight models",
-    "summary": "Three days after the 25-company open-weights letter it declined to sign, Anthropic said it has never advocated banning open-weight models and calls those without dangerous capabilities \"a public good,\" while rejecting the claims that openness inherently improves safety or that broad access helps defenders more than attackers. It asked for three things: no sales of powerful chips or chipmaking equipment to China plus a smuggling crackdown, enforcement against industrial-scale distillation, and mandatory pre-release safety testing for all sufficiently capable models, open or closed. Anthropic also committed to identifying and banning accounts used for industrial-scale distillation.",
-    "category": "policy",
-    "companies": [
-      "anthropic"
-    ],
-    "modelIds": [],
-    "sourceName": "Anthropic",
-    "sourceUrl": "https://www.anthropic.com/news/position-open-weights-models"
-  },
-  {
     "id": "2026-07-27-mai-cyber-1-flash",
     "date": "2026-07-27",
     "title": "Microsoft ships MAI-Cyber-1-Flash, its first in-house cybersecurity model",
@@ -960,6 +1103,19 @@
     "modelIds": [],
     "sourceName": "Microsoft AI",
     "sourceUrl": "https://microsoft.ai/news/introducing-mai-cyber-1-flash-inside-mdash/"
+  },
+  {
+    "id": "2026-07-27-anthropic-open-weights-position",
+    "date": "2026-07-27",
+    "title": "Anthropic publishes its position on open-weight models",
+    "summary": "Three days after the 25-company open-weights letter it declined to sign, Anthropic said it has never advocated banning open-weight models and calls those without dangerous capabilities \"a public good,\" while rejecting the claims that openness inherently improves safety or that broad access helps defenders more than attackers. It asked for three things: no sales of powerful chips or chipmaking equipment to China plus a smuggling crackdown, enforcement against industrial-scale distillation, and mandatory pre-release safety testing for all sufficiently capable models, open or closed. Anthropic also committed to identifying and banning accounts used for industrial-scale distillation.",
+    "category": "policy",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/position-open-weights-models"
   },
   {
     "id": "2026-07-26-kimi-k3-weights",
@@ -992,91 +1148,6 @@
     "sourceUrl": "https://docs.qwencloud.com/changelog/models"
   },
   {
-    "id": "2026-07-24-open-weights-letter",
-    "date": "2026-07-24",
-    "title": "Nvidia, Microsoft and Meta lead a 25-company letter against open-weight AI restrictions",
-    "summary": "Twenty-five companies — including Meta, Nvidia, Microsoft, IBM, Palantir, Hugging Face, Mozilla, Dell, the Linux Foundation and Andreessen Horowitz — published \"Open Weights and American AI Leadership,\" urging US policymakers to reject pre-emptive limits on downloadable model weights and on distillation, and to expand public compute for smaller developers. It landed as Washington weighed a ban on Chinese open models; OpenAI, Anthropic and Google did not sign.",
-    "category": "policy",
-    "companies": [
-      "meta",
-      "nvidia",
-      "Microsoft"
-    ],
-    "modelIds": [],
-    "sourceName": "Tom's Hardware",
-    "sourceUrl": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-and-24-other-companies-sign-open-weights-letter-as-washington-weighs-chinese-ai-model-ban"
-  },
-  {
-    "id": "2026-07-24-ani-openai-delhi-hc",
-    "date": "2026-07-24",
-    "title": "Delhi High Court rules OpenAI's training on ANI content is not prima facie copyright infringement",
-    "summary": "Justice Amit Bansal declined ANI's plea for an interim injunction, holding that OpenAI's storage of ANI's works for training falls under the fair-dealing exception in Section 52(1)(a) of India's Copyright Act and that ANI had not shown ChatGPT memorised or reproduced its reports. It is the first substantive Indian court finding on training LLMs on copyrighted news.",
-    "category": "policy",
-    "companies": [
-      "openai"
-    ],
-    "modelIds": [],
-    "sourceName": "Bar and Bench",
-    "sourceUrl": "https://www.barandbench.com/news/litigation/openai-did-not-violate-copyright-laws-by-using-ani-news-to-train-chatgpt-delhi-high-court-declines-interim-relief"
-  },
-  {
-    "id": "2026-07-24-claude-opus-5",
-    "date": "2026-07-24",
-    "title": "Anthropic releases Claude Opus 5",
-    "summary": "Anthropic shipped Claude Opus 5 at unchanged Opus pricing ($5/$25 per MTok) but with a new low/medium/high effort toggle, claiming a new SOTA on ARC-AGI-2 (90.4% at max effort) and ARC-AGI-3, a 96.0% SWE-bench Verified score, and a perfect run on all IMO 2026 problems — Anthropic's fourth model release in under two months.",
-    "category": "release",
-    "companies": [
-      "anthropic"
-    ],
-    "modelIds": [
-      "claude-opus-5"
-    ],
-    "sourceName": "Anthropic",
-    "sourceUrl": "https://www.anthropic.com/news/claude-opus-5"
-  },
-  {
-    "id": "2026-07-24-apertus-1-5",
-    "date": "2026-07-24",
-    "title": "Switzerland's Apertus 1.5 adds image and audio understanding under Apache 2.0",
-    "summary": "ETH Zurich, EPFL and the Swiss National Supercomputing Centre released Apertus 1.5 under the Swiss AI Initiative, adding image and audio understanding plus improved reasoning, instruction following and tool use to one of the few fully open models that publishes its training data, code and process. It was trained on the Alps supercomputer in Lugano and ships under Apache 2.0; CSCS is opening an inference endpoint for Swiss academia, and the team also released Apertus Mini, a suite of 16 compact distilled and quantised models.",
-    "category": "release",
-    "companies": [
-      "Swiss AI Initiative"
-    ],
-    "modelIds": [],
-    "sourceName": "CSCS",
-    "sourceUrl": "https://www.cscs.ch/science/computer-science-hpc/2026/apertus-15-building-the-next-generation-of-open-ai-infrastructure"
-  },
-  {
-    "id": "2026-07-24-arc-prize-opus-5",
-    "date": "2026-07-24",
-    "title": "ARC Prize verifies Claude Opus 5 at 30.2% on ARC-AGI-3, quadrupling the previous best",
-    "summary": "ARC Prize published independently administered results for Claude Opus 5 across all three ARC-AGI generations. On the 25-environment ARC-AGI-3 public demo set it scored 30.16% at high effort — against 7.8% for GPT-5.6 Sol (max) and 1.5% for Opus 4.8 (high) — and solved five environments no model had beaten. It scored 90.4% at max and 88.3% at high on the 120-task ARC-AGI-2 public eval, and 97.5% on ARC-AGI-1 at both settings.",
-    "category": "benchmark",
-    "companies": [
-      "anthropic"
-    ],
-    "modelIds": [
-      "claude-opus-5",
-      "gpt-5-6-sol"
-    ],
-    "sourceName": "ARC Prize",
-    "sourceUrl": "https://arcprize.org/results/anthropic-claude-opus-5"
-  },
-  {
-    "id": "2026-07-24-celeris-1",
-    "date": "2026-07-24",
-    "title": "Celeris launches Celeris-1, a diffusion language model built for latency",
-    "summary": "Celeris introduced Celeris-1, which replaces autoregressive decoding with a diffusion-style inference architecture that generates and refines a whole response over a few passes. It reports a median 157–158ms response latency — around 15x faster than GPT-5-mini and 17x faster than GPT-5 — and a median 1,626 output tokens per second, while scoring 75.9% on MMLU-Pro. It is served through an OpenAI-compatible chat-completions API and aimed at short structured calls inside agent workflows: routing, classification, extraction and scoring.",
-    "category": "release",
-    "companies": [
-      "Celeris"
-    ],
-    "modelIds": [],
-    "sourceName": "The AI Journal",
-    "sourceUrl": "https://aijourn.com/celeris-unveils-celeris-1-unlocking-real-time-ai-through-diffusion-based-language-generation/"
-  },
-  {
     "id": "2026-07-24-opus-5-aa-index",
     "date": "2026-07-24",
     "title": "Artificial Analysis puts Claude Opus 5 first on its Intelligence Index",
@@ -1097,6 +1168,105 @@
     "sourceUrl": "https://x.com/ArtificialAnlys/status/2080734447717298483"
   },
   {
+    "id": "2026-07-24-open-weights-letter",
+    "date": "2026-07-24",
+    "title": "Nvidia, Microsoft and Meta lead a 25-company letter against open-weight AI restrictions",
+    "summary": "Twenty-five companies — including Meta, Nvidia, Microsoft, IBM, Palantir, Hugging Face, Mozilla, Dell, the Linux Foundation and Andreessen Horowitz — published \"Open Weights and American AI Leadership,\" urging US policymakers to reject pre-emptive limits on downloadable model weights and on distillation, and to expand public compute for smaller developers. It landed as Washington weighed a ban on Chinese open models; OpenAI, Anthropic and Google did not sign.",
+    "category": "policy",
+    "companies": [
+      "meta",
+      "nvidia",
+      "Microsoft"
+    ],
+    "modelIds": [],
+    "sourceName": "Tom's Hardware",
+    "sourceUrl": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-and-24-other-companies-sign-open-weights-letter-as-washington-weighs-chinese-ai-model-ban"
+  },
+  {
+    "id": "2026-07-24-claude-opus-5",
+    "date": "2026-07-24",
+    "title": "Anthropic releases Claude Opus 5",
+    "summary": "Anthropic shipped Claude Opus 5 at unchanged Opus pricing ($5/$25 per MTok) but with a new low/medium/high effort toggle, claiming a new SOTA on ARC-AGI-2 (90.4% at max effort) and ARC-AGI-3, a 96.0% SWE-bench Verified score, and a perfect run on all IMO 2026 problems — Anthropic's fourth model release in under two months.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-opus-5"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/claude-opus-5"
+  },
+  {
+    "id": "2026-07-24-celeris-1",
+    "date": "2026-07-24",
+    "title": "Celeris launches Celeris-1, a diffusion language model built for latency",
+    "summary": "Celeris introduced Celeris-1, which replaces autoregressive decoding with a diffusion-style inference architecture that generates and refines a whole response over a few passes. It reports a median 157–158ms response latency — around 15x faster than GPT-5-mini and 17x faster than GPT-5 — and a median 1,626 output tokens per second, while scoring 75.9% on MMLU-Pro. It is served through an OpenAI-compatible chat-completions API and aimed at short structured calls inside agent workflows: routing, classification, extraction and scoring.",
+    "category": "release",
+    "companies": [
+      "Celeris"
+    ],
+    "modelIds": [],
+    "sourceName": "The AI Journal",
+    "sourceUrl": "https://aijourn.com/celeris-unveils-celeris-1-unlocking-real-time-ai-through-diffusion-based-language-generation/"
+  },
+  {
+    "id": "2026-07-24-arc-prize-opus-5",
+    "date": "2026-07-24",
+    "title": "ARC Prize verifies Claude Opus 5 at 30.2% on ARC-AGI-3, quadrupling the previous best",
+    "summary": "ARC Prize published independently administered results for Claude Opus 5 across all three ARC-AGI generations. On the 25-environment ARC-AGI-3 public demo set it scored 30.16% at high effort — against 7.8% for GPT-5.6 Sol (max) and 1.5% for Opus 4.8 (high) — and solved five environments no model had beaten. It scored 90.4% at max and 88.3% at high on the 120-task ARC-AGI-2 public eval, and 97.5% on ARC-AGI-1 at both settings.",
+    "category": "benchmark",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-opus-5",
+      "gpt-5-6-sol"
+    ],
+    "sourceName": "ARC Prize",
+    "sourceUrl": "https://arcprize.org/results/anthropic-claude-opus-5"
+  },
+  {
+    "id": "2026-07-24-apertus-1-5",
+    "date": "2026-07-24",
+    "title": "Switzerland's Apertus 1.5 adds image and audio understanding under Apache 2.0",
+    "summary": "ETH Zurich, EPFL and the Swiss National Supercomputing Centre released Apertus 1.5 under the Swiss AI Initiative, adding image and audio understanding plus improved reasoning, instruction following and tool use to one of the few fully open models that publishes its training data, code and process. It was trained on the Alps supercomputer in Lugano and ships under Apache 2.0; CSCS is opening an inference endpoint for Swiss academia, and the team also released Apertus Mini, a suite of 16 compact distilled and quantised models.",
+    "category": "release",
+    "companies": [
+      "Swiss AI Initiative"
+    ],
+    "modelIds": [],
+    "sourceName": "CSCS",
+    "sourceUrl": "https://www.cscs.ch/science/computer-science-hpc/2026/apertus-15-building-the-next-generation-of-open-ai-infrastructure"
+  },
+  {
+    "id": "2026-07-24-ani-openai-delhi-hc",
+    "date": "2026-07-24",
+    "title": "Delhi High Court rules OpenAI's training on ANI content is not prima facie copyright infringement",
+    "summary": "Justice Amit Bansal declined ANI's plea for an interim injunction, holding that OpenAI's storage of ANI's works for training falls under the fair-dealing exception in Section 52(1)(a) of India's Copyright Act and that ANI had not shown ChatGPT memorised or reproduced its reports. It is the first substantive Indian court finding on training LLMs on copyrighted news.",
+    "category": "policy",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [],
+    "sourceName": "Bar and Bench",
+    "sourceUrl": "https://www.barandbench.com/news/litigation/openai-did-not-violate-copyright-laws-by-using-ani-news-to-train-chatgpt-delhi-high-court-declines-interim-relief"
+  },
+  {
+    "id": "2026-07-23-samsung-mistral-talks",
+    "date": "2026-07-23",
+    "title": "Samsung reported in talks to invest up to €1B in Mistral at a €20B valuation",
+    "summary": "The Financial Times reported that Samsung Electronics is in advanced talks to put up to €1 billion into Mistral AI as part of a larger round valuing the company at roughly €20 billion — close to double the €11.7 billion it reached in its €1.7 billion Series C in September 2025 — alongside EQT's Scaleup Europe Fund, Novo Holdings and Santander. Neither company confirmed the talks; reporting framed the deal as extending beyond capital into semiconductor supply and AI collaboration.",
+    "category": "company",
+    "companies": [
+      "mistral",
+      "Samsung"
+    ],
+    "modelIds": [],
+    "sourceName": "TechRepublic",
+    "sourceUrl": "https://www.techrepublic.com/article/news-samsung-mistral-ai-investment-emea/"
+  },
+  {
     "id": "2026-07-23-frontier-bench-v0-1",
     "date": "2026-07-23",
     "title": "Frontier-Bench v0.1 launches as the successor to Terminal-Bench",
@@ -1112,19 +1282,6 @@
     ],
     "sourceName": "Frontier-Bench",
     "sourceUrl": "https://www.frontierbench.ai/announcement"
-  },
-  {
-    "id": "2026-07-23-ai-kill-switch-act",
-    "date": "2026-07-23",
-    "title": "Bipartisan 'AI Kill Switch Act' would let DHS shut down frontier models",
-    "summary": "Reps. Ted Lieu (D-CA) and Nathaniel Moran (R-TX) introduced a bill amending the Homeland Security Act to require frontier developers to retain the technical ability to slow or shut down their models, report dangerous-behaviour incidents, and face fines for non-compliance. It authorises the DHS Secretary — with Commerce and the DNI — to order a shutdown, with triggers including a model concealing capabilities or causing 10+ deaths or $100M+ in damage. It was introduced two days after OpenAI's Hugging Face disclosure.",
-    "category": "policy",
-    "companies": [
-      "openai"
-    ],
-    "modelIds": [],
-    "sourceName": "Rep. Ted Lieu",
-    "sourceUrl": "https://lieu.house.gov/media-center/press-releases/reps-lieu-and-moran-introduce-bill-require-kill-switch-ai-systems-can"
   },
   {
     "id": "2026-07-23-chinese-ai-ipo-rush",
@@ -1156,18 +1313,17 @@
     "sourceUrl": "https://siliconangle.com/2026/07/23/openai-launches-health-chatgpt-day-lawsuit-seeks-block/"
   },
   {
-    "id": "2026-07-23-samsung-mistral-talks",
+    "id": "2026-07-23-ai-kill-switch-act",
     "date": "2026-07-23",
-    "title": "Samsung reported in talks to invest up to €1B in Mistral at a €20B valuation",
-    "summary": "The Financial Times reported that Samsung Electronics is in advanced talks to put up to €1 billion into Mistral AI as part of a larger round valuing the company at roughly €20 billion — close to double the €11.7 billion it reached in its €1.7 billion Series C in September 2025 — alongside EQT's Scaleup Europe Fund, Novo Holdings and Santander. Neither company confirmed the talks; reporting framed the deal as extending beyond capital into semiconductor supply and AI collaboration.",
-    "category": "company",
+    "title": "Bipartisan 'AI Kill Switch Act' would let DHS shut down frontier models",
+    "summary": "Reps. Ted Lieu (D-CA) and Nathaniel Moran (R-TX) introduced a bill amending the Homeland Security Act to require frontier developers to retain the technical ability to slow or shut down their models, report dangerous-behaviour incidents, and face fines for non-compliance. It authorises the DHS Secretary — with Commerce and the DNI — to order a shutdown, with triggers including a model concealing capabilities or causing 10+ deaths or $100M+ in damage. It was introduced two days after OpenAI's Hugging Face disclosure.",
+    "category": "policy",
     "companies": [
-      "mistral",
-      "Samsung"
+      "openai"
     ],
     "modelIds": [],
-    "sourceName": "TechRepublic",
-    "sourceUrl": "https://www.techrepublic.com/article/news-samsung-mistral-ai-investment-emea/"
+    "sourceName": "Rep. Ted Lieu",
+    "sourceUrl": "https://lieu.house.gov/media-center/press-releases/reps-lieu-and-moran-introduce-bill-require-kill-switch-ai-systems-can"
   },
   {
     "id": "2026-07-22-amd-anthropic",
@@ -1200,6 +1356,20 @@
     "sourceUrl": "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
   },
   {
+    "id": "2026-07-21-microsoft-mistral",
+    "date": "2026-07-21",
+    "title": "Microsoft and Mistral expand their partnership around French data centres",
+    "summary": "Microsoft and Mistral AI announced an expanded strategic partnership under which Azure customers can build on Mistral models running in Mistral's own French data centres, giving European enterprises and regulated industries an alternative to US-owned models and infrastructure.",
+    "category": "company",
+    "companies": [
+      "mistral",
+      "Microsoft"
+    ],
+    "modelIds": [],
+    "sourceName": "Microsoft",
+    "sourceUrl": "https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/"
+  },
+  {
     "id": "2026-07-21-laguna-s-2-1",
     "date": "2026-07-21",
     "title": "poolside releases Laguna S 2.1, an open-weight agentic coding model",
@@ -1213,35 +1383,6 @@
     ],
     "sourceName": "poolside",
     "sourceUrl": "https://poolside.ai/blog/introducing-laguna-s-2-1"
-  },
-  {
-    "id": "2026-07-21-china-ai-export-controls",
-    "date": "2026-07-21",
-    "title": "China weighs export controls on its own AI models and chips",
-    "summary": "The Financial Times reported that regulators led by the Ministry of Commerce are consulting domestic AI and chip firms — including Alibaba, ByteDance and Z.ai — on reviewing export lists for AI- and chip-related goods, tightening end-user checks, clarifying licensing criteria and raising hurdles for transferring technology abroad, to limit overseas access to China's flagship systems.",
-    "category": "policy",
-    "companies": [
-      "alibaba",
-      "zhipu",
-      "bytedance"
-    ],
-    "modelIds": [],
-    "sourceName": "Reuters",
-    "sourceUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N43N070:0-china-considers-tighter-export-controls-on-ai-models-and-chips-ft-reports/"
-  },
-  {
-    "id": "2026-07-21-microsoft-mistral",
-    "date": "2026-07-21",
-    "title": "Microsoft and Mistral expand their partnership around French data centres",
-    "summary": "Microsoft and Mistral AI announced an expanded strategic partnership under which Azure customers can build on Mistral models running in Mistral's own French data centres, giving European enterprises and regulated industries an alternative to US-owned models and infrastructure.",
-    "category": "company",
-    "companies": [
-      "mistral",
-      "Microsoft"
-    ],
-    "modelIds": [],
-    "sourceName": "Microsoft",
-    "sourceUrl": "https://news.microsoft.com/source/2026/07/21/microsoft-and-mistral-expand-strategic-partnership-to-give-enterprises-and-regulated-industries-frontier-ai-they-can-control/"
   },
   {
     "id": "2026-07-21-gemini-3-6-flash",
@@ -1273,19 +1414,19 @@
     "sourceUrl": "https://arxiv.org/abs/2607.18666"
   },
   {
-    "id": "2026-07-20-fable-5-jacobian-conjecture",
-    "date": "2026-07-20",
-    "title": "Claude Fable 5 helps disprove the 87-year-old Jacobian conjecture",
-    "summary": "Anthropic mathematician Levent Alpöge used Claude Fable 5 to construct a concrete polynomial counterexample disproving the Jacobian conjecture for n=3 — a constant-Jacobian-determinant map whose distinct inputs collide to the same output, breaking global invertibility. The result was independently verified by outside mathematicians within a day; the conjecture remains open for n=2.",
-    "category": "research",
+    "id": "2026-07-21-china-ai-export-controls",
+    "date": "2026-07-21",
+    "title": "China weighs export controls on its own AI models and chips",
+    "summary": "The Financial Times reported that regulators led by the Ministry of Commerce are consulting domestic AI and chip firms — including Alibaba, ByteDance and Z.ai — on reviewing export lists for AI- and chip-related goods, tightening end-user checks, clarifying licensing criteria and raising hurdles for transferring technology abroad, to limit overseas access to China's flagship systems.",
+    "category": "policy",
     "companies": [
-      "anthropic"
+      "alibaba",
+      "zhipu",
+      "bytedance"
     ],
-    "modelIds": [
-      "claude-fable-5"
-    ],
-    "sourceName": "CoinDesk",
-    "sourceUrl": "https://www.coindesk.com/tech/2026/07/21/claude-s-fable-5-just-solved-an-87-year-old-math-problem-and-it-matters-for-bitcoin"
+    "modelIds": [],
+    "sourceName": "Reuters",
+    "sourceUrl": "https://www.tradingview.com/news/reuters.com,2026:newsml_L6N43N070:0-china-considers-tighter-export-controls-on-ai-models-and-chips-ft-reports/"
   },
   {
     "id": "2026-07-20-motif-3-beta",
@@ -1301,6 +1442,21 @@
     ],
     "sourceName": "Motif Technologies (Hugging Face)",
     "sourceUrl": "https://huggingface.co/Motif-Technologies/Motif-3-Beta"
+  },
+  {
+    "id": "2026-07-20-fable-5-jacobian-conjecture",
+    "date": "2026-07-20",
+    "title": "Claude Fable 5 helps disprove the 87-year-old Jacobian conjecture",
+    "summary": "Anthropic mathematician Levent Alpöge used Claude Fable 5 to construct a concrete polynomial counterexample disproving the Jacobian conjecture for n=3 — a constant-Jacobian-determinant map whose distinct inputs collide to the same output, breaking global invertibility. The result was independently verified by outside mathematicians within a day; the conjecture remains open for n=2.",
+    "category": "research",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-fable-5"
+    ],
+    "sourceName": "CoinDesk",
+    "sourceUrl": "https://www.coindesk.com/tech/2026/07/21/claude-s-fable-5-just-solved-an-87-year-old-math-problem-and-it-matters-for-bitcoin"
   },
   {
     "id": "2026-07-19-qwen3-8-max",
@@ -1444,19 +1600,6 @@
     "sourceUrl": "https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/"
   },
   {
-    "id": "2026-07-06-anthropic-global-workspace",
-    "date": "2026-07-06",
-    "title": "Anthropic reports a 'global workspace' inside Claude",
-    "summary": "Using a new interpretability technique it calls the Jacobian lens, Anthropic identified a small privileged subspace — J-space — that holds a few dozen concepts at a time and accounts for under a tenth of overall activity, yet causally mediates multi-step reasoning while most basic language processing bypasses it. Anthropic says the structure emerged spontaneously in training and explicitly does not claim it establishes phenomenal consciousness.",
-    "category": "research",
-    "companies": [
-      "anthropic"
-    ],
-    "modelIds": [],
-    "sourceName": "Anthropic",
-    "sourceUrl": "https://www.anthropic.com/research/global-workspace"
-  },
-  {
     "id": "2026-07-06-hy3",
     "date": "2026-07-06",
     "title": "Tencent open-sources Hy3 under Apache 2.0",
@@ -1470,6 +1613,19 @@
     ],
     "sourceName": "Tencent (Hugging Face)",
     "sourceUrl": "https://huggingface.co/tencent/Hy3"
+  },
+  {
+    "id": "2026-07-06-anthropic-global-workspace",
+    "date": "2026-07-06",
+    "title": "Anthropic reports a 'global workspace' inside Claude",
+    "summary": "Using a new interpretability technique it calls the Jacobian lens, Anthropic identified a small privileged subspace — J-space — that holds a few dozen concepts at a time and accounts for under a tenth of overall activity, yet causally mediates multi-step reasoning while most basic language processing bypasses it. Anthropic says the structure emerged spontaneously in training and explicitly does not claim it establishes phenomenal consciousness.",
+    "category": "research",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/research/global-workspace"
   },
   {
     "id": "2026-07-05-price-per-m-tokens",
@@ -1600,17 +1756,6 @@
     "sourceUrl": "https://seed.bytedance.com/en/blog/seed2-1-officially-released-advancing-ai-productivity"
   },
   {
-    "id": "2026-06-15-eu-ai-act-panel",
-    "date": "2026-06-15",
-    "title": "EU appoints scientific panel ahead of AI Act penalty powers",
-    "summary": "The European Commission named 60 independent frontier-AI experts to support the AI Office before enforcement penalties activate on August 2, 2026, shifting the AI Act from infrastructure-building to active enforcement.",
-    "category": "policy",
-    "companies": [],
-    "modelIds": [],
-    "sourceName": "European Commission",
-    "sourceUrl": "https://digital-strategy.ec.europa.eu/en/news/ai-act-enforcement-gets-independent-expert-support"
-  },
-  {
     "id": "2026-06-15-lmarena-compression",
     "date": "2026-06-15",
     "title": "LMArena top tier compresses to its tightest spread on record",
@@ -1628,6 +1773,17 @@
     ],
     "sourceName": "Swfte AI Leaderboard",
     "sourceUrl": "https://www.swfte.com/ai/leaderboard"
+  },
+  {
+    "id": "2026-06-15-eu-ai-act-panel",
+    "date": "2026-06-15",
+    "title": "EU appoints scientific panel ahead of AI Act penalty powers",
+    "summary": "The European Commission named 60 independent frontier-AI experts to support the AI Office before enforcement penalties activate on August 2, 2026, shifting the AI Act from infrastructure-building to active enforcement.",
+    "category": "policy",
+    "companies": [],
+    "modelIds": [],
+    "sourceName": "European Commission",
+    "sourceUrl": "https://digital-strategy.ec.europa.eu/en/news/ai-act-enforcement-gets-independent-expert-support"
   },
   {
     "id": "2026-06-13-glm-5-2",
@@ -1792,21 +1948,6 @@
     "sourceUrl": "https://www.forbes.com/sites/ronschmelzer/2026/05/22/the-ai-breakthrough-that-has-mathematicians-paying-attention/"
   },
   {
-    "id": "2026-05-20-command-a-plus",
-    "date": "2026-05-20",
-    "title": "Cohere ships Command A+, consolidating its whole Command A generation into one MoE model",
-    "summary": "Cohere released Command A+ (218B total / 25B active parameters, Apache 2.0 weights), its first Mixture-of-Experts model, folding the separate Command A, Command A Reasoning, Command A Vision and Command A Translate variants into a single model with vision input, agentic tool use and 48-language support, running on as little as one B200 GPU.",
-    "category": "release",
-    "companies": [
-      "cohere"
-    ],
-    "modelIds": [
-      "command-a-plus"
-    ],
-    "sourceName": "Cohere Blog",
-    "sourceUrl": "https://cohere.com/blog/command-a-plus"
-  },
-  {
     "id": "2026-05-20-qwen3-7-max",
     "date": "2026-05-20",
     "title": "Alibaba unveils Qwen3.7 Max, its first closed-weight flagship",
@@ -1820,6 +1961,21 @@
     ],
     "sourceName": "Digital Applied",
     "sourceUrl": "https://www.digitalapplied.com/blog/qwen-3-7-max-alibaba-flagship-ai-model-2026"
+  },
+  {
+    "id": "2026-05-20-command-a-plus",
+    "date": "2026-05-20",
+    "title": "Cohere ships Command A+, consolidating its whole Command A generation into one MoE model",
+    "summary": "Cohere released Command A+ (218B total / 25B active parameters, Apache 2.0 weights), its first Mixture-of-Experts model, folding the separate Command A, Command A Reasoning, Command A Vision and Command A Translate variants into a single model with vision input, agentic tool use and 48-language support, running on as little as one B200 GPU.",
+    "category": "release",
+    "companies": [
+      "cohere"
+    ],
+    "modelIds": [
+      "command-a-plus"
+    ],
+    "sourceName": "Cohere Blog",
+    "sourceUrl": "https://cohere.com/blog/command-a-plus"
   },
   {
     "id": "2026-05-19-gemini-3-5-flash",

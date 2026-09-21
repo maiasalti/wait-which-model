@@ -138,6 +138,9 @@ fugu-max · predecessorId · 2026-09-13 · Sakana frames Fugu Max as a new cost-
 fugu-ultra-v2 · predecessorId · 2026-09-13 · Versioned "v2.0" as the successor to Fugu Ultra (launched 2026-06-22, later v1.1 on 2026-07-24) and framed by coverage as "a smaller pool, a higher score" than the prior build — but neither Fugu Ultra v1.0 nor v1.1 is a tracked model in this dataset, so the field stays null. Re-check only if an earlier Fugu Ultra build is ever added.
 fugu-max · retirementDate · 2026-09-13 · No lifecycle/deprecation page found for any Sakana Fugu model at launch. Left null.
 fugu-ultra-v2 · retirementDate · 2026-09-13 · Same — no lifecycle page found. Left null.
+qwen3-8-omni-flash · predecessorId · 2026-09-20 · Launch coverage repeatedly calls Qwen3.5-Omni-Plus this model's "predecessor" by name (e.g. cost comparisons), but Qwen3.5-Omni-Plus is not itself a tracked model in this dataset, so the field stays null. Re-check only if Qwen3.5-Omni-Plus is ever added.
+qwen3-8-omni-flash · retirementDate · 2026-09-20 · No lifecycle/deprecation page found for this checkpoint at launch. Left null.
+qwen3-8-omni-flash · speed · 2026-09-20 · No Artificial Analysis measurement found for this checkpoint at launch.
 jev · speed · 2026-09-21 · No Artificial Analysis measurement; TypeSafe's 70-500 ms figure and priorbench's ~430 ms floor are end-to-end latencies for typed answers, not tokens/sec, so the field does not apply. Left null.
 jev · retirementDate · 2026-09-21 · No lifecycle or deprecation page on docs.typesafe.ai at launch. Left null.
 atria-dawn-preview · predecessorId · 2026-09-22 · Shanghai AI Lab's first Atria model; the card and report describe it as post-trained on GLM-5.2 (lineage, not supersession) and name no InternLM model it replaces. Left null.
