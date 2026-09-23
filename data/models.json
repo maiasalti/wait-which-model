@@ -7,6 +7,7 @@
     "status": "deprecated",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 32768,
     "maxOutput": 8192,
     "pricing": {
@@ -66,6 +67,7 @@
     "status": "deprecated",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 128000,
     "maxOutput": 4096,
     "pricing": {
@@ -120,6 +122,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 128000,
     "maxOutput": 16384,
     "pricing": {
@@ -179,6 +182,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 200000,
     "maxOutput": 100000,
     "pricing": {
@@ -233,6 +237,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 32768,
     "pricing": {
@@ -292,6 +297,7 @@
     "status": "deprecated",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 200000,
     "maxOutput": 100000,
     "pricing": {
@@ -346,6 +352,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 400000,
     "maxOutput": 128000,
     "pricing": {
@@ -405,6 +412,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 400000,
     "maxOutput": 128000,
     "pricing": {
@@ -458,6 +466,7 @@
     "status": "deprecated",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 200000,
     "maxOutput": 4096,
     "pricing": {
@@ -517,6 +526,7 @@
     "status": "deprecated",
     "tier": "balanced",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 200000,
     "maxOutput": 8192,
     "pricing": {
@@ -580,6 +590,7 @@
     "status": "deprecated",
     "tier": "balanced",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 200000,
     "maxOutput": 128000,
     "pricing": {
@@ -646,6 +657,7 @@
     "status": "deprecated",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 200000,
     "maxOutput": 32000,
     "pricing": {
@@ -712,6 +724,7 @@
     "status": "deprecated",
     "tier": "balanced",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 200000,
     "maxOutput": 64000,
     "pricing": {
@@ -778,6 +791,7 @@
     "status": "deprecated",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 200000,
     "maxOutput": 32000,
     "pricing": {
@@ -844,6 +858,7 @@
     "status": "superseded",
     "tier": "balanced",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 200000,
     "maxOutput": 64000,
     "pricing": {
@@ -910,6 +925,7 @@
     "status": "superseded",
     "tier": "fast",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 200000,
     "maxOutput": 64000,
     "pricing": {
@@ -980,6 +996,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 200000,
     "maxOutput": 64000,
     "pricing": {
@@ -1046,6 +1063,7 @@
     "status": "deprecated",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 2000000,
     "maxOutput": 8192,
     "pricing": {
@@ -1100,6 +1118,7 @@
     "status": "superseded",
     "tier": "fast",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 8192,
     "pricing": {
@@ -1162,6 +1181,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 65536,
     "pricing": {
@@ -1221,6 +1241,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 65536,
     "pricing": {
@@ -1280,6 +1301,7 @@
     "status": "deprecated",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 128000,
     "maxOutput": 4096,
     "pricing": {
@@ -1340,6 +1362,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 8192,
     "pricing": {
@@ -1400,6 +1423,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 131072,
     "maxOutput": 16384,
     "pricing": {
@@ -1454,6 +1478,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 256000,
     "maxOutput": 64000,
     "pricing": {
@@ -1513,6 +1538,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 256000,
     "maxOutput": 64000,
     "pricing": {
@@ -1566,6 +1592,7 @@
     "status": "deprecated",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 128000,
     "maxOutput": 8192,
     "pricing": {
@@ -1625,6 +1652,7 @@
     "status": "superseded",
     "tier": "balanced",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 131072,
     "maxOutput": 8192,
     "pricing": {
@@ -1683,6 +1711,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 128000,
     "maxOutput": 8192,
     "pricing": {
@@ -1737,6 +1766,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 128000,
     "maxOutput": 32768,
     "pricing": {
@@ -1797,6 +1827,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 128000,
     "maxOutput": 65536,
     "pricing": {
@@ -1856,6 +1887,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 131072,
     "maxOutput": 32768,
     "pricing": {
@@ -1915,6 +1947,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 262144,
     "maxOutput": 65536,
     "pricing": {
@@ -1968,6 +2001,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 131072,
     "maxOutput": 16384,
     "pricing": {
@@ -2027,6 +2061,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 262144,
     "maxOutput": 65536,
     "pricing": {
@@ -2091,6 +2126,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1048576,
     "maxOutput": 131072,
     "pricing": {
@@ -2151,6 +2187,7 @@
     "status": "unknown",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 262144,
     "maxOutput": 65536,
     "pricing": {
@@ -2215,6 +2252,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 65536,
     "pricing": {
@@ -2269,6 +2307,7 @@
     "status": "unknown",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 262144,
     "maxOutput": 65536,
     "pricing": {
@@ -2328,6 +2367,7 @@
     "status": "unknown",
     "tier": "fast",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 262144,
     "maxOutput": null,
     "pricing": {
@@ -2381,6 +2421,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 262144,
     "maxOutput": null,
     "pricing": {
@@ -2434,6 +2475,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 128000,
     "pricing": {
@@ -2488,6 +2530,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 384000,
     "pricing": {
@@ -2542,6 +2585,7 @@
     "status": "unknown",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": null,
     "pricing": {
@@ -2595,6 +2639,7 @@
     "status": "superseded",
     "tier": "fast",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1048576,
     "maxOutput": 65536,
     "pricing": {
@@ -2654,6 +2699,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 983616,
     "maxOutput": 131072,
     "pricing": {
@@ -2712,6 +2758,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 65536,
     "pricing": {
@@ -2771,6 +2818,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 128000,
     "pricing": {
@@ -2838,6 +2886,7 @@
     "status": "frontier",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 128000,
     "pricing": {
@@ -2902,6 +2951,7 @@
     "status": "superseded",
     "tier": "fast",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 262144,
     "maxOutput": null,
     "pricing": {
@@ -2957,6 +3007,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 128000,
     "pricing": {
@@ -3011,6 +3062,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1050000,
     "maxOutput": 128000,
     "pricing": {
@@ -3070,6 +3122,7 @@
     "status": "frontier",
     "tier": "balanced",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 128000,
     "pricing": {
@@ -3128,6 +3181,7 @@
     "status": "superseded",
     "tier": "fast",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1050000,
     "maxOutput": 128000,
     "pricing": {
@@ -3187,6 +3241,7 @@
     "status": "unknown",
     "tier": "fast",
     "modality": "text",
+    "type": "llm",
     "contextWindow": null,
     "maxOutput": null,
     "pricing": {
@@ -3242,6 +3297,7 @@
     "status": "superseded",
     "tier": "fast",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1048576,
     "maxOutput": 65536,
     "pricing": {
@@ -3300,6 +3356,7 @@
     "status": "superseded",
     "tier": "fast",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1048576,
     "maxOutput": 65536,
     "pricing": {
@@ -3353,6 +3410,7 @@
     "status": "frontier",
     "tier": "balanced",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 128000,
     "pricing": {
@@ -3416,6 +3474,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 500000,
     "maxOutput": null,
     "pricing": {
@@ -3470,6 +3529,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1048576,
     "maxOutput": 128000,
     "pricing": {
@@ -3528,6 +3588,7 @@
     "status": "frontier",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 128000,
     "pricing": {
@@ -3592,6 +3653,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1048576,
     "maxOutput": null,
     "pricing": {
@@ -3652,6 +3714,7 @@
     "status": "unknown",
     "tier": "fast",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 1048576,
     "maxOutput": 131072,
     "pricing": {
@@ -3713,6 +3776,7 @@
     "status": "unknown",
     "tier": "balanced",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": null,
     "pricing": {
@@ -3766,6 +3830,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": null,
     "pricing": {
@@ -3821,6 +3886,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 262144,
     "maxOutput": 128000,
     "pricing": {
@@ -3876,6 +3942,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 262144,
     "pricing": {
@@ -3931,6 +3998,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 262144,
     "maxOutput": null,
     "pricing": {
@@ -3986,6 +4054,7 @@
     "status": "unknown",
     "tier": "fast",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 262144,
     "maxOutput": 32768,
     "pricing": {
@@ -4041,6 +4110,7 @@
     "status": "superseded",
     "tier": "balanced",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1048576,
     "maxOutput": null,
     "pricing": {
@@ -4102,6 +4172,7 @@
     "status": "unknown",
     "tier": "fast",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 65536,
     "pricing": {
@@ -4156,6 +4227,7 @@
     "status": "deprecated",
     "tier": "fast",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 1048576,
     "maxOutput": 393216,
     "pricing": {
@@ -4222,6 +4294,7 @@
     "status": "superseded",
     "tier": "balanced",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 128000,
     "pricing": {
@@ -4289,6 +4362,7 @@
     "status": "unknown",
     "tier": "fast",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 262144,
     "maxOutput": null,
     "pricing": {
@@ -4349,6 +4423,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 262144,
     "maxOutput": 32768,
     "pricing": {
@@ -4409,6 +4484,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 131072,
     "maxOutput": 131072,
     "pricing": {
@@ -4478,6 +4554,7 @@
     "status": "superseded",
     "tier": "fast",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 131072,
     "maxOutput": 131072,
     "pricing": {
@@ -4547,6 +4624,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 204800,
     "maxOutput": null,
     "pricing": {
@@ -4612,6 +4690,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 204800,
     "maxOutput": null,
     "pricing": {
@@ -4677,6 +4756,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": null,
     "pricing": {
@@ -4742,6 +4822,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 256000,
     "maxOutput": 128000,
     "pricing": {
@@ -4801,6 +4882,7 @@
     "status": "unknown",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 256000,
     "maxOutput": null,
     "pricing": {
@@ -4860,6 +4942,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 128000,
     "maxOutput": 65536,
     "pricing": {
@@ -4919,6 +5002,7 @@
     "status": "unknown",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 128000,
     "maxOutput": 65536,
     "pricing": {
@@ -4978,6 +5062,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 25000,
     "pricing": {
@@ -5037,6 +5122,7 @@
     "status": "unknown",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 65536,
     "pricing": {
@@ -5091,6 +5177,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 256000,
     "maxOutput": 8000,
     "pricing": {
@@ -5156,6 +5243,7 @@
     "status": "unknown",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 128000,
     "maxOutput": 64000,
     "pricing": {
@@ -5222,6 +5310,7 @@
     "status": "unknown",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1048576,
     "maxOutput": 131072,
     "pricing": {
@@ -5280,6 +5369,7 @@
     "status": "superseded",
     "tier": "fast",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 131072,
     "maxOutput": null,
     "pricing": {
@@ -5341,6 +5431,7 @@
     "status": "unknown",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 400000,
     "maxOutput": 128000,
     "pricing": {
@@ -5400,6 +5491,7 @@
     "status": "superseded",
     "tier": "fast",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 131072,
     "pricing": {
@@ -5466,6 +5558,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 500000,
     "maxOutput": null,
     "pricing": {
@@ -5525,6 +5618,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 262144,
     "maxOutput": 131072,
     "pricing": {
@@ -5585,6 +5679,7 @@
     "status": "frontier",
     "tier": "fast",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1048576,
     "maxOutput": 65536,
     "pricing": {
@@ -5643,6 +5738,7 @@
     "status": "superseded",
     "tier": "balanced",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 262144,
     "maxOutput": 131072,
     "pricing": {
@@ -5703,6 +5799,7 @@
     "status": "unknown",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 128000,
     "pricing": {
@@ -5768,6 +5865,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 262144,
     "maxOutput": null,
     "pricing": {
@@ -5828,6 +5926,7 @@
     "status": "unknown",
     "tier": "fast",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1048576,
     "maxOutput": 131072,
     "pricing": {
@@ -5893,6 +5992,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 1048576,
     "maxOutput": 64000,
     "pricing": {
@@ -5958,6 +6058,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 1048576,
     "maxOutput": 384000,
     "pricing": {
@@ -6024,6 +6125,7 @@
     "status": "superseded",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 262144,
     "maxOutput": null,
     "pricing": {
@@ -6085,6 +6187,7 @@
     "status": "frontier",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 128000,
     "pricing": {
@@ -6153,6 +6256,7 @@
     "status": "superseded",
     "tier": "fast",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 262144,
     "maxOutput": 131072,
     "pricing": {
@@ -6214,6 +6318,7 @@
     "status": "frontier",
     "tier": "fast",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1048576,
     "maxOutput": 65536,
     "pricing": {
@@ -6273,6 +6378,7 @@
     "status": "unknown",
     "tier": "fast",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": null,
     "maxOutput": null,
     "pricing": {
@@ -6327,6 +6433,7 @@
     "status": "deprecated",
     "tier": "fast",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1048576,
     "maxOutput": 393216,
     "pricing": {
@@ -6393,6 +6500,7 @@
     "status": "unknown",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 131072,
     "pricing": {
@@ -6453,6 +6561,7 @@
     "status": "frontier",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1050000,
     "maxOutput": 128000,
     "pricing": {
@@ -6514,6 +6623,7 @@
     "status": "frontier",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1048576,
     "maxOutput": null,
     "pricing": {
@@ -6578,6 +6688,7 @@
     "status": "frontier",
     "tier": "fast",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 384000,
     "pricing": {
@@ -6645,6 +6756,7 @@
     "status": "unknown",
     "tier": "balanced",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 128000,
     "pricing": {
@@ -6709,6 +6821,7 @@
     "status": "unknown",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 128000,
     "pricing": {
@@ -6773,6 +6886,7 @@
     "status": "unknown",
     "tier": "fast",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 131072,
     "pricing": {
@@ -6832,6 +6946,7 @@
     "status": "unknown",
     "tier": "fast",
     "modality": "text",
+    "type": "system-one",
     "contextWindow": 64000,
     "maxOutput": null,
     "pricing": {
@@ -6897,6 +7012,7 @@
     "status": "unknown",
     "tier": "flagship",
     "modality": "text",
+    "type": "llm",
     "contextWindow": 262144,
     "maxOutput": 65536,
     "pricing": {
@@ -6963,6 +7079,7 @@
     "status": "unknown",
     "tier": "balanced",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1048576,
     "maxOutput": null,
     "pricing": {
@@ -7022,6 +7139,7 @@
     "status": "unknown",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 64000,
     "pricing": {
@@ -7082,6 +7200,7 @@
     "status": "unknown",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 500000,
     "maxOutput": null,
     "pricing": {
@@ -7142,6 +7261,7 @@
     "status": "frontier",
     "tier": "flagship",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1000000,
     "maxOutput": 128000,
     "pricing": {
@@ -7210,6 +7330,7 @@
     "status": "unknown",
     "tier": "balanced",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1050000,
     "maxOutput": 128000,
     "pricing": {
@@ -7270,6 +7391,7 @@
     "status": "unknown",
     "tier": "fast",
     "modality": "multimodal",
+    "type": "llm",
     "contextWindow": 1050000,
     "maxOutput": 128000,
     "pricing": {

@@ -1,4 +1,4 @@
-import type { Model } from "@/lib/types";
+import { MODEL_TYPE_LABEL, type Model } from "@/lib/types";
 import {
   companyById,
   formatContext,
@@ -10,8 +10,8 @@ import {
 /** The spec cells shared by the drawer and the standalone model page. The grid
  *  differs between the two surfaces — both go three-up once there's room, but
  *  the page has a wider text column to do it in — so the caller picks the grid
- *  rather than the component guessing from a viewport it can't see. There are
- *  nine cells, which is why three columns is the target: it fills exactly. */
+ *  rather than the component guessing from a viewport it can't see. Ten cells;
+ *  three columns leaves one short on the last row, which reads fine. */
 export function ModelStatsGrid({
   model,
   className = "",
@@ -27,6 +27,7 @@ export function ModelStatsGrid({
   const cells: [string, string][] = [
     ["Status", capitalize(model.status)],
     ["Location", company?.country ?? "Unknown"],
+    ["Type", MODEL_TYPE_LABEL[model.type]],
     ["Modality", capitalize(model.modality)],
     ["Context window", formatContext(model.contextWindow)],
     ["Max output", formatContext(model.maxOutput)],
