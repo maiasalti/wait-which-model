@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-09-22-claude-opus-5-5",
+    "date": "2026-09-22",
+    "title": "Anthropic releases Claude Opus 5.5, matching Fable 5.1 at 40% lower running cost than Opus 5",
+    "summary": "Anthropic released Claude Opus 5.5 on 2026-09-22 as the first of its 5.5 family, priced at $4/$20 per million tokens (down from Opus 5's $5/$25, with cache reads cut to $0.20) with a 1M context, 128K output, June 2026 knowledge cutoff and output generation more than 30% faster than Opus 5. Its system card reports SWE-bench Pro 89.9%, HLE 64.4% no tools / 67.7% with tools and Terminal-Bench 4.0 66.4%; ARC Prize verifies ARC-AGI-2 at 91.7% at max effort and Artificial Analysis puts it first on its Intelligence Index at 58. Sonnet 5.5 and Haiku 5.5 are promised in the coming weeks.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-opus-5-5"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/claude-opus-5-5"
+  },
+  {
     "id": "2026-09-21-grok-4-7",
     "date": "2026-09-21",
     "title": "xAI ships Grok 4.7, a larger base model held at Grok 4.6's price",

@@ -61,7 +61,7 @@
     "start": "2026-02-11",
     "end": "2026-04-08",
     "dethronedBy": "muse-spark",
-    "composite": 0.7421
+    "composite": 0.7327
   },
   {
     "modelId": "muse-spark",
@@ -69,7 +69,7 @@
     "start": "2026-04-08",
     "end": "2026-04-23",
     "dethronedBy": "gpt-5-5",
-    "composite": 0.7473
+    "composite": 0.7367
   },
   {
     "modelId": "gpt-5-5",
@@ -77,7 +77,7 @@
     "start": "2026-04-23",
     "end": "2026-06-09",
     "dethronedBy": "claude-fable-5",
-    "composite": 0.8178
+    "composite": 0.8075
   },
   {
     "modelId": "claude-fable-5",
@@ -85,15 +85,31 @@
     "start": "2026-06-09",
     "end": "2026-09-01",
     "dethronedBy": "claude-fable-5-1",
-    "composite": 0.9413
+    "composite": 0.9286
   },
   {
     "modelId": "claude-fable-5-1",
     "tier": "flagship",
     "start": "2026-09-01",
+    "end": "2026-09-03",
+    "dethronedBy": "gpt-6-astra",
+    "composite": 0.9568
+  },
+  {
+    "modelId": "gpt-6-astra",
+    "tier": "flagship",
+    "start": "2026-09-03",
+    "end": "2026-09-22",
+    "dethronedBy": "claude-opus-5-5",
+    "composite": 0.9607
+  },
+  {
+    "modelId": "claude-opus-5-5",
+    "tier": "flagship",
+    "start": "2026-09-22",
     "end": null,
     "dethronedBy": null,
-    "composite": 0.9739
+    "composite": 0.9636
   },
   {
     "modelId": "claude-3-5-sonnet",

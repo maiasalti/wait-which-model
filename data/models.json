@@ -3008,7 +3008,7 @@
     "name": "GPT-5.6 Sol",
     "company": "openai",
     "releaseDate": "2026-07-09",
-    "status": "frontier",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 1050000,
@@ -5463,7 +5463,7 @@
     "name": "Grok 4.6",
     "company": "xai",
     "releaseDate": "2026-08-12",
-    "status": "frontier",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
     "contextWindow": 500000,
@@ -7133,5 +7133,73 @@
       "Crossing the 200K-token prompt threshold reprices the whole request at double rate, and the fast variant doubles it again — long-context or low-latency runs cost far more than the headline"
     ],
     "notes": "Announced 2026-09-21 after Musk's 2026-09-02 'ten days' promise slipped twice; xAI says it uses a new, larger base model than Grok 4.6 (the 2.1T-parameter figure is Musk's pre-release claim, not on the card) with a longer RL run on multi-hour tasks. xAI's card reports only CursorBench 4.0 46.3%, DeepSWE v1.1 71.0% (high effort), EEBench 64.0%, AA Briefcase v1.1 1,657, Terminal-Bench 4.0 38.0%, Harvey Legal Agent 19.6% and HealthBench Professional 56.7% — none map to a tracked key, and Terminal-Bench 4.0 is not comparable with the 2.1 this site records, so terminalBench is null; Artificial Analysis independently measures Terminal-Bench 4.0 at 26%. AA scores it 46 on its Intelligence Index at both high (the API default) and xhigh effort, but had published no cost-per-task or speed figures as of 2026-09-22, and rates it 1694 (high) / 1695 (xhigh) on GDPval-AA v2.1 — a rescaled successor to the v2 this site's gdpvalAA key records (Grok 4.6 is 1632 on v2.1 against its recorded 1753 on v2), so that cell stays null. GPQA Diamond, HLE, SWE-bench Verified/Pro, AIME, MMLU-Pro and ARC-AGI-2 are unpublished by xAI and AA; arena.ai's board (last updated 2026-09-13) has no listing. Knowledge cutoff May 2026 per docs.x.ai's models page. Pricing $2/$6 with cached input $0.50 applies below a 200K-token prompt; at or above it every token in the request bills at $4/$12 ($1.00 cached), and the fast variant costs double for twice the output speed. Effort levels low/medium/high/xhigh; batch API unsupported; xAI publishes no max-output figure. predecessorId is null: the card says only that it is 'served at the same price and speed as Grok 4.6', and grok-4.6 remains listed in the API. xAI also claims it is its strongest model on refusals and jailbreak resistance. The company rebranded from xAI to SpaceXAI on 2026-07-06; companies.json still carries the old name."
+  },
+  {
+    "id": "claude-opus-5-5",
+    "name": "Claude Opus 5.5",
+    "company": "anthropic",
+    "releaseDate": "2026-09-22",
+    "status": "frontier",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "contextWindow": 1000000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 4,
+      "outputPerMTok": 20
+    },
+    "costPerTask": {
+      "usd": 5.98,
+      "effort": "max"
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-06",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "anthropic",
+        "id": "claude-opus-5-5"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "anthropic.claude-opus-5-5"
+      },
+      {
+        "provider": "google-vertex",
+        "id": "claude-opus-5-5"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": 89.9,
+      "terminalBench": 87.6,
+      "aime": null,
+      "hle": 64.4,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": 91.7
+    },
+    "strengths": [
+      "Finishes the same coding task in fewer steps and tokens than Opus 5 — its default medium effort matches Opus 5 at high, so most of the gain comes without paying for max",
+      "Reads dense charts, flowcharts and screenshots accurately without crop-and-zoom tooling, so vision scaffolding built for Opus 5 can usually be dropped",
+      "Answers are shorter and lead with the conclusion — the bold-and-bullet 'Claudish' scaffolding Opus 5 leaned on is largely gone",
+      "Holds up over multi-hour unattended runs and resists indirect prompt injection better than any earlier Opus"
+    ],
+    "weaknesses": [
+      "Thinks longer per turn than Opus 5 at the same effort label, and at max it can burn the whole 128K output budget before answering — reserve xhigh and max for measured gains",
+      "Stops to report progress partway through long tasks, ending the turn with text rather than a tool call — unattended loops need a checklist or re-prompt harness to keep it going",
+      "Code review comes back with more findings and roughly half again the tokens of Opus 5 — the extra flags still need a human to triage"
+    ],
+    "notes": "HLE 64.4% no tools / 67.7% with tools, SWE-bench Pro 89.9% and GDPval-AA v2.1 1846 are Anthropic's system-card figures (Table 8.1.A: adaptive thinking at max effort, five-trial average, production safeguards on — cyber tasks routed to Opus 4.8 and bio/frontier-LLM tasks to Opus 5 where they intervened); GDPval-AA stays null here because the tracked key is the v2 scale. Anthropic's launch table leads with Terminal-Bench 4.0 66.4% (xhigh; not comparable with 2.1), FrontierCode v1.1 54.4%, CursorBench 4.0 57.8%, OSWorld 2.0 81.8% partial / 48.7% strict, Terminal-Bench-Science 0.1 58.7% and AutomationBench 40.0%. Terminal-Bench 2.1 87.6% is Vals AI's independent-harness measurement at high effort (vals.ai/models/anthropic_claude-opus-5-5) — third-party, and 26 of 267 tasks needed server-side fallbacks, so it drops to 79.8% if those count as failures. ARC-AGI-2 91.7% is ARC Prize-verified at max effort (arcprize.org/results/anthropic-claude-opus-5-5, 2026-09-22); high effort scores 93.3%, xhigh 92.5%, medium 87.5%, low 70.1%. Anthropic no longer reports SWE-bench Verified, GPQA Diamond, MMLU-Pro or AIME, and the model is not on arena.ai's text leaderboard as of its 2026-09-13 update. Cost per task is Artificial Analysis' max-effort variant, the only one it lists (Intelligence Index 58, first place); AA had no speed measurement at launch. Default effort is medium (Opus 5 defaulted to high), adaptive thinking cannot be disabled, and forced tool_choice is rejected. Cache reads are $0.20/MTok (0.05x input); batch $2/$10; fast mode $8/$40 on the first-party API only; max output rises to 300K via the Message Batches API beta. Also served on Microsoft Foundry as claude-opus-5-5."
   }
 ]
