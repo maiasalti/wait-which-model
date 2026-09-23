@@ -7132,77 +7132,6 @@
     "notes": "Subscription-only mid-tier model served in Kimi Code and Kimi Work from 2026-09-11 through the existing kimi-for-coding alias, which Moonshot upgraded in place from K2.7 Code (a model this site does not track, so predecessorId stays null even though the in-place replacement is explicit). Moonshot's docs give image and video input, a 1,048,576-token window on Plus and above (Andante and above on legacy plans) and low/high/max thinking effort — the models page says high is the default while the what's-new post says max. No benchmark table, model card, knowledge cutoff or per-token price exists: platform.kimi.ai lists K3 ($3/$15) and K2.7 Code ($0.95/$4.00) but no K2.8, and the $0.80-1 / $3.35-4 figures on third-party gateways are unofficial, so pricing is null and availability restricted. Not on Artificial Analysis, arena.ai or ARC Prize. Filed as balanced: Moonshot positions it between K3 and K2.7 Code for cost-effective everyday development."
   },
   {
-    "id": "laya",
-    "name": "Laya",
-    "company": "convai-innovations",
-    "releaseDate": "2026-09-18",
-    "status": "unknown",
-    "tier": "fast",
-    "modality": "text",
-    "contextWindow": 512,
-    "maxOutput": null,
-    "pricing": {
-      "inputPerMTok": null,
-      "outputPerMTok": null
-    },
-    "costPerTask": {
-      "usd": null,
-      "effort": null
-    },
-    "openWeights": true,
-    "availability": "general",
-    "knowledgeCutoff": null,
-    "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
-      "effort": null
-    },
-    "license": {
-      "spdx": "Apache-2.0",
-      "name": "Apache License 2.0",
-      "kind": "permissive",
-      "url": "https://huggingface.co/convaiinnovations/laya",
-      "commercialUse": true
-    },
-    "apiIds": [
-      {
-        "provider": "impossibl",
-        "id": "convaiinnovations/laya"
-      },
-      {
-        "provider": "impossibl",
-        "id": "convaiinnovations/laya-multilingual"
-      }
-    ],
-    "retirementDate": null,
-    "predecessorId": null,
-    "benchmarks": {
-      "mmluPro": null,
-      "gpqaDiamond": null,
-      "sweBench": null,
-      "sweBenchPro": null,
-      "terminalBench": null,
-      "aime": null,
-      "hle": null,
-      "lmarenaElo": null,
-      "gdpvalAA": null,
-      "arcAgi2": null
-    },
-    "strengths": [
-      "Answers a routed question in about 33 ms on a single T4 and 7 ms per question batched, so the whole decision layer fits on a free Colab GPU or an 808 MB download with no API bill",
-      "Weights, training recipe and datasets are open, so calibration can be refit on your own labels — the out-of-the-box expected calibration error of 0.466 drops to 0.081 after per-question temperature fitting",
-      "Speaks the same POST /v1/systemone wire protocol as Jev through laya.serve, so a client written against TypeSafe moves over by changing the base URL and model id",
-      "A built-in router detects script and language before inference and dispatches to the English or multilingual checkpoint, so mixed-language queues need no branching in the caller"
-    ],
-    "weaknesses": [
-      "Near chance zero-shot on typed decisions — 0.362 against a 0.318 random floor and a 0.461 majority baseline — so the 0.766 headline is a fine-tuned checkpoint, and Convai's own card calls the base a fast model to specialise rather than a zero-shot decision engine",
-      "Accuracy falls off sharply past roughly 20 options because each label gets only three or four tokens of the 256-token question budget — a 77-way Banking77 split scored 0.425 where Jev scored 0.870",
-      "Confidence does not track ability off-distribution: the English checkpoint scored 0.000 on Khmer while reporting 0.952 confidence, an independent adversarial set of 100 hand-written English scenarios came in at 40.3% zero-shot, and noul answers can follow the option labels instead of the state",
-      "Behavior is a moving target — eight PyPI releases in its first six days, a quickstart whose documented outputs no longer match the current release, and CPU-only runs that one reviewer clocked at 49 s per prediction against the 193-464 ms Convai publishes"
-    ],
-    "notes": "Not an LLM: an open-weights \"System One\" decision model in the same mould as TypeSafe's Jev — a bidirectional encoder (ModernBERT-large, 421M) with a decision head trained by RLCD against strictly proper scoring rules that takes text state plus typed questions (choice, score, noul) and returns calibrated probabilities in one forward pass, so none of this site's benchmarks apply and every cell is null by design. Filed under the fast tier alongside Jev. Context is 512 tokens on the root convaiinnovations/laya checkpoint (about 320 for state); the laya-multilingual (mmBERT-base, 322M, 100+ languages) and laya-typed-decisions checkpoints take 1,024, the mmBERT encoder can be configured to 8,192, and impossibl's hosted endpoint is widened to 8,192. Convai publishes no API or price, so pricing is null; availability is general because impossibl serves both checkpoints free at api.impossibl.com/v1/systemone (documented in Laya's README from 2026-09-23) and the weights run on a free Colab T4, with a demo Space on Hugging Face. Released as laya 0.1.0 on PyPI and Hugging Face on 2026-09-18, three days after Jev, and at 0.3.7 by 2026-09-23. Convai's Jev comparisons (0.766 vs 0.727 on its typed-decisions set, 32.8 ms vs 236-276 ms, ECE 0.081 vs 0.246) are its own measurements and set a local T4 forward pass against Jev's hosted-API round trip; the zero-shot, Khmer, Banking77, adversarial and CPU figures in weaknesses are from the model card and independent tests (orcarouter, flowtivity, eesel, invidelabs). Founder Nandakishor Mukkunnoth frames Laya as a reply to TypeSafe presenting the concept as new, citing his own arXiv 2503.23303 (March 2025) and 2510.01237 as prior art. No Artificial Analysis coverage; knowledge cutoff unpublished."
-  },
-  {
     "id": "step-5-preview",
     "name": "Step 5 Preview",
     "company": "stepfun",
@@ -7514,5 +7443,77 @@
       "Early users read it as a price cut rather than a capability step over 5.6 Luna, and independent indexes put the two level"
     ],
     "notes": "Budget tier of the GPT-6 family. Context 1,050,000 tokens (922K max input), 128K output, cutoff 2026-05-18, and $0.10/$0.50 per MTok ($0.01 cached input, $0.125 cache writes) are from OpenAI's model docs; prompts over 272K input tokens bill at 2x input/cache and 1.5x output, a fast tier costs 2x, and OpenAI calls the rates permanent. predecessorId stays null: OpenAI's announcement says only that Luna \"also improves substantially\" over its GPT-5.6 counterpart, lineage wording rather than a replacement claim, and GPT-5.6 Luna stays on sale. OpenAI's launch table uses only untracked suites (AutomationBench 1.0.6 20.7%, Agents' Last Exam 50.9%, FrontierCode 1.1 42.4%, DeepSWE v1.1 66.6%, OSWorld 2.0 offline 52.7%, factual error rate 7.6%, all at max) and the model shipped without a system card or Preparedness rating; OpenAI's stress tests put its deception rate at 2.8% (5.6 Luna 9.5%) and failure-to-disclose at 30.2% (78.3%). ARC-AGI-2 59.3% is ARC Prize-verified at max effort (xhigh 41.9%, high 31.4%, medium 18.1%, low 4.6%, none 0.0%), published 2026-09-22 at arcprize.org/results/openai-gpt-6-luna; cost per task not stated there. HLE 39 is Artificial Analysis' no-tools run at max effort, shown to integer precision on AA's comparison page (level with 5.6 Luna). AA's Terminal-Bench run is 4.0 (13% max, not the tracked 2.1), and its GDPval-AA v2.1 ratings — 1367 max / 1218 medium, down from 5.6 Luna's 1443 — are on a different scale from the v2 figure this key records, so gdpvalAA stays null. AA Intelligence Index 37 at max ($0.07 per task) and 29 at medium, the effort the costPerTask and speed figures are taken at; AA measured 51K output tokens per index run against 5.6 Luna's 41K and a hallucination rate down from 93% to 77%. Not on the arena.ai text board (last update 2026-09-13) and absent from Scale's SWE-bench Pro board. Generally available in the API, Bedrock, GitHub Copilot and ChatGPT Work/Codex, with Free and Go users getting it in the desktop app."
+  },
+  {
+    "id": "laya",
+    "name": "Laya",
+    "company": "convai-innovations",
+    "releaseDate": "2026-09-18",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "text",
+    "type": "system-one",
+    "contextWindow": 512,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/convaiinnovations/laya",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "impossibl",
+        "id": "convaiinnovations/laya"
+      },
+      {
+        "provider": "impossibl",
+        "id": "convaiinnovations/laya-multilingual"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Answers a routed question in about 33 ms on a single T4 and 7 ms per question batched, so the whole decision layer fits on a free Colab GPU or an 808 MB download with no API bill",
+      "Weights, training recipe and datasets are open, so calibration can be refit on your own labels — the out-of-the-box expected calibration error of 0.466 drops to 0.081 after per-question temperature fitting",
+      "Speaks the same POST /v1/systemone wire protocol as Jev through laya.serve, so a client written against TypeSafe moves over by changing the base URL and model id",
+      "A built-in router detects script and language before inference and dispatches to the English or multilingual checkpoint, so mixed-language queues need no branching in the caller"
+    ],
+    "weaknesses": [
+      "Near chance zero-shot on typed decisions — 0.362 against a 0.318 random floor and a 0.461 majority baseline — so the 0.766 headline is a fine-tuned checkpoint, and Convai's own card calls the base a fast model to specialise rather than a zero-shot decision engine",
+      "Accuracy falls off sharply past roughly 20 options because each label gets only three or four tokens of the 256-token question budget — a 77-way Banking77 split scored 0.425 where Jev scored 0.870",
+      "Confidence does not track ability off-distribution: the English checkpoint scored 0.000 on Khmer while reporting 0.952 confidence, an independent adversarial set of 100 hand-written English scenarios came in at 40.3% zero-shot, and noul answers can follow the option labels instead of the state",
+      "Behavior is a moving target — eight PyPI releases in its first six days, a quickstart whose documented outputs no longer match the current release, and CPU-only runs that one reviewer clocked at 49 s per prediction against the 193-464 ms Convai publishes"
+    ],
+    "notes": "Not an LLM: an open-weights \"System One\" decision model in the same mould as TypeSafe's Jev — a bidirectional encoder (ModernBERT-large, 421M) with a decision head trained by RLCD against strictly proper scoring rules that takes text state plus typed questions (choice, score, noul) and returns calibrated probabilities in one forward pass, so none of this site's benchmarks apply and every cell is null by design. Filed under the fast tier alongside Jev. Context is 512 tokens on the root convaiinnovations/laya checkpoint (about 320 for state); the laya-multilingual (mmBERT-base, 322M, 100+ languages) and laya-typed-decisions checkpoints take 1,024, the mmBERT encoder can be configured to 8,192, and impossibl's hosted endpoint is widened to 8,192. Convai publishes no API or price, so pricing is null; availability is general because impossibl serves both checkpoints free at api.impossibl.com/v1/systemone (documented in Laya's README from 2026-09-23) and the weights run on a free Colab T4, with a demo Space on Hugging Face. Released as laya 0.1.0 on PyPI and Hugging Face on 2026-09-18, three days after Jev, and at 0.3.7 by 2026-09-23. Convai's Jev comparisons (0.766 vs 0.727 on its typed-decisions set, 32.8 ms vs 236-276 ms, ECE 0.081 vs 0.246) are its own measurements and set a local T4 forward pass against Jev's hosted-API round trip; the zero-shot, Khmer, Banking77, adversarial and CPU figures in weaknesses are from the model card and independent tests (orcarouter, flowtivity, eesel, invidelabs). Founder Nandakishor Mukkunnoth frames Laya as a reply to TypeSafe presenting the concept as new, citing his own arXiv 2503.23303 (March 2025) and 2510.01237 as prior art. No Artificial Analysis coverage; knowledge cutoff unpublished."
   }
 ]
