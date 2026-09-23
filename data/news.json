@@ -46,6 +46,21 @@
     "sourceUrl": "https://x.ai/news/grok-4-7"
   },
   {
+    "id": "2026-09-20-kev-9b",
+    "date": "2026-09-20",
+    "title": "Jared Palmer releases Kev, an Apache-2.0 family of Jev-style decision models on Qwen3.5",
+    "summary": "Jared Palmer published Kev-0.8B, Kev-4B and Kev-9B on 2026-09-20: open-weights System One decision models that take a text state plus typed questions and return calibrated probabilities in one forward pass, built as a rank-16 LoRA adapter and pointer head on Qwen3.5 bases and serving TypeSafe's /v1/systemone contract so the TypeSafe SDK works against a local server. The Qwen3.5 port cost about $95 of H100 time; after a 2026-09-21 second training pass Kev-9B scores 0.852 on its locked out-of-domain test against Jev's 0.857 on the development items, with knowledge questions (MMLU 0.74 against 0.90) the remaining gap. Weights are Apache-2.0 on Hugging Face with an 8,192-token serving context and no hosted endpoint; Palmer says a Qwen3.8-27B scale-up is next.",
+    "category": "release",
+    "companies": [
+      "jared-palmer"
+    ],
+    "modelIds": [
+      "kev-9b"
+    ],
+    "sourceName": "GitHub (jaredpalmer/kev)",
+    "sourceUrl": "https://github.com/jaredpalmer/kev/releases/tag/kev-family"
+  },
+  {
     "id": "2026-09-20-step-5-preview",
     "date": "2026-09-20",
     "title": "StepFun launches Step 5 Preview, a 600B agentic flagship at $1/$2.70 with open weights promised for October 15",
