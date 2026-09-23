@@ -43,7 +43,10 @@ if [ "$DRY_RUN" = 0 ] && [ "$DOW" -gt 5 ]; then
 fi
 
 # ── Guard 2: never clobber work in progress ──────────────────────────────────
-if [ -n "$(git status --porcelain)" ]; then
+# .obsidian/ is excluded: Obsidian rewrites its UI-state files whenever the
+# vault is open, and from 2026-08-27 to 2026-09-23 a modified graph.json made
+# this guard skip 18 of 20 weekday runs.
+if [ -n "$(git status --porcelain -- . ':!.obsidian')" ]; then
   # Only a real run logs. A --dry-run must touch nothing, and writing a dated
   # line here would trip Guard 0 and silently cancel the day's actual sweep —
   # which is what the two 2026-08-06 SKIP lines in the log turned out to be.
