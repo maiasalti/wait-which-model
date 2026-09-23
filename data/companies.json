@@ -268,14 +268,5 @@
     "website": "https://convaiinnovations.com",
     "color": "#3E9F4A",
     "order": 30
-  },
-  {
-    "id": "jared-palmer",
-    "name": "Jared Palmer",
-    "country": "United States",
-    "founded": 2026,
-    "website": "https://github.com/jaredpalmer/kev",
-    "color": "#B565C9",
-    "order": 31
   }
 ]

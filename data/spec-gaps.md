@@ -169,7 +169,3 @@ gpt-6-luna · predecessorId · 2026-09-23 · OpenAI's announcement (openai.com/i
 laya · speed · 2026-09-23 · No Artificial Analysis measurement; Convai's 32.8-39.5 ms T4 figures and 193-464 ms CPU figures are per-question latencies for typed answers, not tokens/sec, so the field does not apply. Left null.
 laya · retirementDate · 2026-09-23 · No lifecycle or deprecation notice on the Hugging Face card, GitHub repo or PyPI. Left null.
 laya · predecessorId · 2026-09-23 · The Hugging Face card, GitHub README and the author's dev.to post name no replaced model; the March 2025 SalesRLAgent work (arXiv 2503.23303) is cited as prior research, not as a model Laya supersedes, and is not on this site. Left null.
-kev-9b · speed · 2026-09-23 · No Artificial Analysis measurement; the README's tens-of-milliseconds H100 figure and the 721 ms-2 s M5 figures are per-request latencies for typed answers, not tokens/sec, so the field does not apply. Left null.
-kev-9b · apiIds · 2026-09-23 · No hosted provider: OpenRouter and impossibl model lists checked, the Hugging Face Space is a demo of Kev-4B/0.8B; the local server's "kev-latest" model string is not a provider id. Left [].
-kev-9b · retirementDate · 2026-09-23 · No lifecycle or deprecation notice on the Hugging Face card, GitHub repo or the kev-family release. Left null.
-kev-9b · predecessorId · 2026-09-23 · The README and model card explicitly name Kev-8B (Qwen3) as the predecessor, but Kev-8B is not on this site; nothing claims Kev replaces Jev or Laya. Left null.
