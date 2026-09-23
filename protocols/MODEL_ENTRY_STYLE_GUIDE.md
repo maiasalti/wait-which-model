@@ -25,6 +25,7 @@ How every record in `data/models.json` is written, so new models added by the re
   "status": "frontier",
   "tier": "flagship",
   "modality": "multimodal",
+  "type": "llm",
   "contextWindow": 1000000,
   "maxOutput": 128000,
   "pricing": { "inputPerMTok": 5, "outputPerMTok": 25 },
@@ -59,6 +60,7 @@ How every record in `data/models.json` is written, so new models added by the re
 | `releaseDate` | `YYYY-MM-DD`, the **announcement** date | preview date if that's when it became usable (see Gemini 3.1 Pro) |
 | `status` | Set by the [Frontier Status Protocol](./FRONTIER_STATUS_PROTOCOL.md) script, not by hand — use `"unknown"` as a placeholder on new entries, then run `node scripts/frontier-status.js --apply` | `"deprecated"` remains manual, for models a lab officially retires; `"unknown"` means "too new/undercovered to judge," not a verdict |
 | `tier` | `flagship` (top-of-line), `balanced` (mid cost/capability, e.g. a "Sonnet"/"Medium"-class model), or `fast` (small/cheap/low-latency, e.g. "Haiku"/"Flash"/"Mini"-class) | drives which models it's compared against when computing `status` |
+| `type` | `llm` for any text-generating language model (the default); `system-one` for a typed-decision model such as TypeSafe's Jev or an open counterpart | Shown as a Type cell in the drawer and a chip on the card; `system-one` models have every benchmark null by design and are excluded from the Which Model recommender |
 | `modality` | `multimodal` if it accepts images (or more); `text` otherwise | UI capitalizes it |
 | `contextWindow` / `maxOutput` | raw token integers, `null` if unpublished | `1000000`, `200000`, `65536` — never strings like "1M" (the UI formats) |
 | `pricing` | USD per million tokens, **base API tier**; numbers not strings; `null` if no public API | surcharges (long-context 2x, fast mode) go in `notes` |

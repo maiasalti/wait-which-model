@@ -72,6 +72,13 @@ export interface ApiId {
   id: string;
 }
 
+export type ModelType = "llm" | "system-one";
+
+export const MODEL_TYPE_LABEL: Record<ModelType, string> = {
+  llm: "LLM",
+  "system-one": "System One",
+};
+
 export interface Model {
   id: string;
   name: string;
@@ -80,6 +87,12 @@ export interface Model {
   status: ModelStatus;
   tier: ModelTier;
   modality: "text" | "multimodal";
+  /** What kind of model this is. `llm` is the default, a text-generating
+   *  language model. `system-one` is a typed-decision model (TypeSafe's Jev
+   *  and its open counterparts): state plus typed questions in, calibrated
+   *  probabilities out, no generated text — so generative benchmarks never
+   *  apply and the recommender must not suggest it for chat work. */
+  type: ModelType;
   contextWindow: number | null;
   maxOutput: number | null;
   pricing: Pricing;

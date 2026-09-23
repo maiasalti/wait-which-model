@@ -31,7 +31,7 @@ Search for and read, in order of preference: the lab's official announcement/mod
 - Exact name, company, announcement date (`YYYY-MM-DD`)
 - API pricing: USD per million input / output tokens (base tier; note fast/long-context surcharges in `notes`)
 - Context window and max output tokens
-- Knowledge cutoff (null if unpublished), modality, open weights or not
+- Knowledge cutoff (null if unpublished), modality, `type` (`llm`, or `system-one` for a typed-decision model that returns probabilities rather than text), open weights or not
 - `availability` — can a person actually go and use it today? `general` (public API, consumer app, or a mainstream host), `restricted` (preview/waitlist/vetted-partner/subscription/app-only), or `self-host` (weights only, no practical hosted option). Check for an aggregator listing before assuming `self-host` — an open-weights model any host serves is `general`
 - Benchmark scores for the keys in `data/benchmarks.json` — the non-`retired` ones are what matter (currently gpqaDiamond, sweBench, sweBenchPro, terminalBench, hle, lmarenaElo, gdpvalAA, arcAgi2); `mmluPro` and `aime` are retired (labs stopped reporting them in 2026) but still get recorded when a lab happens to publish them
 - Which `tier` it belongs to — `flagship` (top-of-line), `balanced` (mid cost/capability, e.g. a "Sonnet"/"Medium"-class release), or `fast` (small/cheap/low-latency, e.g. "Haiku"/"Flash"/"Mini"-class)

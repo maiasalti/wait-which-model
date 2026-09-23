@@ -36,7 +36,9 @@ function isRateLimited(ip: string): boolean {
   return false;
 }
 
-const RECOMMENDABLE_MODELS = models.filter((m) => m.status !== "deprecated");
+// System One decision models (Jev and kin) cannot chat, so they are never a
+// valid answer to "which model should I talk to".
+const RECOMMENDABLE_MODELS = models.filter((m) => m.status !== "deprecated" && m.type === "llm");
 
 // Single source of truth for "recommendable models": the same filtered set backs
 // both what the LLM sees in the prompt (DIRECTORY) and what execute() is allowed
@@ -53,6 +55,7 @@ const DIRECTORY = RECOMMENDABLE_MODELS.map((m) => ({
   status: m.status,
   tier: m.tier,
   modality: m.modality,
+  type: m.type,
   contextWindow: m.contextWindow,
   maxOutput: m.maxOutput,
   pricing: m.pricing,

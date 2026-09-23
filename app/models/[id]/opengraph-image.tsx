@@ -1,3 +1,4 @@
+import { MODEL_TYPE_LABEL } from "@/lib/types";
 import { ImageResponse } from "next/og";
 import {
   companyColor,
@@ -64,7 +65,7 @@ export default async function Image({
   // could silently render a wrong card.
   const subtitle = [
     model.tier,
-    model.modality,
+    model.type === "llm" ? model.modality : `${MODEL_TYPE_LABEL[model.type]} model`,
     model.openWeights ? "Open weights" : "Closed weights",
     `Released ${formatDate(model.releaseDate)}`,
   ].join("  ·  ");

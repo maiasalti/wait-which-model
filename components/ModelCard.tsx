@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import type { Model } from "@/lib/types";
+import { MODEL_TYPE_LABEL, type Model } from "@/lib/types";
 import { companyName, formatContext, formatCostPerTask, formatDate } from "@/lib/data";
 import { CompanyLogo } from "./CompanyLogo";
 
@@ -43,6 +43,11 @@ export function ModelCard({ model }: { model: Model }) {
           >
             {STATUS_LABEL[model.status]}
           </span>
+          {model.type !== "llm" && (
+            <span className="mono rounded border border-line px-1.5 py-0.5 text-[10px] uppercase tracking-wider text-ink-2">
+              {MODEL_TYPE_LABEL[model.type]}
+            </span>
+          )}
           {model.openWeights && (
             <span className="mono rounded bg-white/5 px-1.5 py-0.5 text-[10px] uppercase tracking-wider text-ink-2">
               Open weights

@@ -1,0 +1,34 @@
+# Read-only check of the subscriber segment and broadcast history, for
+# "I never got the email" reports. Prints counts and the one address asked
+# about (masked), never the list. Run from the Actions tab.
+name: Notify diagnostics
+
+on:
+  workflow_dispatch:
+    inputs:
+      email:
+        description: "Address to look up in the segment (printed masked)"
+        required: false
+        default: ""
+      broadcast_id:
+        description: "Broadcast id to inspect"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: node scripts/notify-diagnose.js
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_SEGMENT_ID: ${{ secrets.RESEND_SEGMENT_ID }}
+          EMAIL: ${{ github.event.inputs.email }}
+          BROADCAST_ID: ${{ github.event.inputs.broadcast_id }}
