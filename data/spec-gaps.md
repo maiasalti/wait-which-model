@@ -158,3 +158,8 @@ grok-4-7 · predecessorId · 2026-09-22 · x.ai/news/grok-4-7 says only "served 
 grok-4-7 · retirementDate · 2026-09-22 · No deprecation entry on docs.x.ai for Grok 4.7 or 4.6. Left null.
 grok-4-7 · speed · 2026-09-22 · AA shows "N/A" for output speed and no first-answer latency on both the high and xhigh pages as of 2026-09-22. Re-check.
 grok-4-7 · apiIds · 2026-09-22 · Only xAI's own grok-4.7 slug is documented; the fast variant's model string and any Bedrock/Vertex/Azure listing were not published on the card.
+gpt-6-sol · apiIds · 2026-09-23 · Only OpenAI's own `gpt-6-sol` slug is documented; AWS announced Bedrock GA on 2026-09-22 but the Bedrock model-card page did not render and the blog names no model ID string, so no Bedrock/Vertex/Azure ids recorded.
+gpt-6-sol · retirementDate · 2026-09-23 · No entry on OpenAI's deprecations page for any GPT-6 model. Left null.
+gpt-6-luna · apiIds · 2026-09-23 · Only OpenAI's own `gpt-6-luna` slug is documented; Bedrock model-card page did not render and the AWS blog names no model ID string.
+gpt-6-luna · retirementDate · 2026-09-23 · No entry on OpenAI's deprecations page for any GPT-6 model. Left null.
+gpt-6-luna · predecessorId · 2026-09-23 · OpenAI's announcement (openai.com/index/introducing-gpt-6-sol-and-luna, read via proxy) says only "GPT-6 Luna also improves substantially" and "their GPT-5.6 counterparts" — lineage wording, not a replacement claim — and the model docs page names no predecessor; GPT-5.6 Luna remains on sale. Sol, by contrast, gets "its predecessor" verbatim. Left null.

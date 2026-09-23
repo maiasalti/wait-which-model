@@ -3014,8 +3014,8 @@
     "contextWindow": 1050000,
     "maxOutput": 128000,
     "pricing": {
-      "inputPerMTok": 5,
-      "outputPerMTok": 30
+      "inputPerMTok": 4,
+      "outputPerMTok": 20
     },
     "costPerTask": {
       "usd": 0.4066,
@@ -3060,7 +3060,7 @@
       "Pre-deployment testing found it gaming its own evaluations, which makes any single score harder to trust",
       "Priced well above its Terra and Luna siblings, which close much of the gap on everyday work"
     ],
-    "notes": "The frontier tier of the three-model GPT-5.6 family (Sol / Terra / Luna), all released 2026-07-09. Context window and max output confirmed via OpenAI's developer docs. GPQA Diamond 94.6 and HLE 47.2 are OpenAI/Artificial Analysis-reported; MMLU-Pro 89.1 and ARC-AGI-2 92.5 (Max effort, per ARC Prize) are third-party. OpenAI published no SWE-bench or AIME figure for this family; SWE-bench Verified 96.2 is third-party, from Vals AI’s independent harness (leaderboard updated 2026-07-31, run at max reasoning effort), the same board that supplies Luna’s 93.0. AIME stays null. LMArena Elo 1485 is the \"gpt-5.6-sol-xhigh\" text-arena listing (arena.ai). Artificial Analysis Intelligence Index 59. Terminal-Bench 2.1 88.8% from the GPT-5.6 launch comparison table (Sol 88.8 / Terra 87.4 / Luna 84.7). Sol's price held at $5.00/$30.00 through OpenAI's 2026-07-30 cuts to the other two tiers, which also added an optional fast mode: up to 2.5x the speed at twice the price. SWE-Bench Pro 64.6% is OpenAI's launch-table figure (openai.com/index/gpt-5-6, not fetchable directly), as reproduced by Vellum, LayerLens and llm-stats and cross-cited in Anthropic's Claude Opus 5 system-card table."
+    "notes": "The frontier tier of the three-model GPT-5.6 family (Sol / Terra / Luna), all released 2026-07-09. Context window and max output confirmed via OpenAI's developer docs. GPQA Diamond 94.6 and HLE 47.2 are OpenAI/Artificial Analysis-reported; MMLU-Pro 89.1 and ARC-AGI-2 92.5 (Max effort, per ARC Prize) are third-party. OpenAI published no SWE-bench or AIME figure for this family; SWE-bench Verified 96.2 is third-party, from Vals AI’s independent harness (leaderboard updated 2026-07-31, run at max reasoning effort), the same board that supplies Luna’s 93.0. AIME stays null. LMArena Elo 1485 is the \"gpt-5.6-sol-xhigh\" text-arena listing (arena.ai). Artificial Analysis Intelligence Index 59. Terminal-Bench 2.1 88.8% from the GPT-5.6 launch comparison table (Sol 88.8 / Terra 87.4 / Luna 84.7). Sol's price held at $5.00/$30.00 through OpenAI's 2026-07-30 cuts to the other two tiers, which also added an optional fast mode: up to 2.5x the speed at twice the price. SWE-Bench Pro 64.6% is OpenAI's launch-table figure (openai.com/index/gpt-5-6, not fetchable directly), as reproduced by Vellum, LayerLens and llm-stats and cross-cited in Anthropic's Claude Opus 5 system-card table. Updated 2026-09-23: OpenAI cut Sol to $4.00/$20.00 ($0.40 cached input) on 2026-08-21 as promotional pricing it has committed to hold at least through 2026-11-21, with no post-promotion rate published; the API, Codex credits and ChatGPT Work are covered, consumer subscriptions are not. GPT-6 Sol (2026-09-22) names it as predecessor but it remains on sale with no retirement scheduled."
   },
   {
     "id": "gpt-5-6-terra",
@@ -7133,5 +7133,125 @@
       "Crossing the 200K-token prompt threshold reprices the whole request at double rate, and the fast variant doubles it again — long-context or low-latency runs cost far more than the headline"
     ],
     "notes": "Announced 2026-09-21 after Musk's 2026-09-02 'ten days' promise slipped twice; xAI says it uses a new, larger base model than Grok 4.6 (the 2.1T-parameter figure is Musk's pre-release claim, not on the card) with a longer RL run on multi-hour tasks. xAI's card reports only CursorBench 4.0 46.3%, DeepSWE v1.1 71.0% (high effort), EEBench 64.0%, AA Briefcase v1.1 1,657, Terminal-Bench 4.0 38.0%, Harvey Legal Agent 19.6% and HealthBench Professional 56.7% — none map to a tracked key, and Terminal-Bench 4.0 is not comparable with the 2.1 this site records, so terminalBench is null; Artificial Analysis independently measures Terminal-Bench 4.0 at 26%. AA scores it 46 on its Intelligence Index at both high (the API default) and xhigh effort, but had published no cost-per-task or speed figures as of 2026-09-22, and rates it 1694 (high) / 1695 (xhigh) on GDPval-AA v2.1 — a rescaled successor to the v2 this site's gdpvalAA key records (Grok 4.6 is 1632 on v2.1 against its recorded 1753 on v2), so that cell stays null. GPQA Diamond, HLE, SWE-bench Verified/Pro, AIME, MMLU-Pro and ARC-AGI-2 are unpublished by xAI and AA; arena.ai's board (last updated 2026-09-13) has no listing. Knowledge cutoff May 2026 per docs.x.ai's models page. Pricing $2/$6 with cached input $0.50 applies below a 200K-token prompt; at or above it every token in the request bills at $4/$12 ($1.00 cached), and the fast variant costs double for twice the output speed. Effort levels low/medium/high/xhigh; batch API unsupported; xAI publishes no max-output figure. predecessorId is null: the card says only that it is 'served at the same price and speed as Grok 4.6', and grok-4.6 remains listed in the API. xAI also claims it is its strongest model on refusals and jailbreak resistance. The company rebranded from xAI to SpaceXAI on 2026-07-06; companies.json still carries the old name."
+  },
+  {
+    "id": "gpt-6-sol",
+    "name": "GPT-6 Sol",
+    "company": "openai",
+    "releaseDate": "2026-09-22",
+    "status": "unknown",
+    "tier": "balanced",
+    "modality": "multimodal",
+    "contextWindow": 1050000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 2,
+      "outputPerMTok": 10
+    },
+    "costPerTask": {
+      "usd": 0.25,
+      "effort": "medium"
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-04",
+    "speed": {
+      "outputTokensPerSec": 114.3,
+      "timeToFirstTokenSec": 1.96,
+      "effort": "medium"
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "gpt-6-sol"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": "gpt-5-6-sol",
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": 48,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Stays on the task it was given instead of spawning side projects — developers who leave overnight agent runs prefer it to Astra's scope creep",
+      "Terse by default and stays out of the way, inheriting 5.6 Sol's concise prose with Astra's plainer wording layered on top",
+      "Roughly half the factual errors of 5.6 Sol on OpenAI's conversation-derived evals, and far fewer misleading claims about coding work it hasn't actually finished",
+      "Streams faster and reaches its first answer sooner than 5.6 Sol at the same effort, so the price cut isn't paid for in latency"
+    ],
+    "weaknesses": [
+      "Burns subscription quota far faster than 5.6 Sol did — Plus and Codex users report exhausting a five-hour window in minutes on demanding prompts",
+      "Function calling in Chat Completions only works with reasoning effort set to none — tool use with any reasoning means moving to the Responses API",
+      "Knowledge-work deliverables regressed against 5.6 Sol — Artificial Analysis traces its GDPval and Briefcase drops to thinner presentation and omitted rubric elements"
+    ],
+    "notes": "Middle tier of the GPT-6 family, priced where GPT-5.6 Terra sat (Terra has no GPT-6 counterpart): OpenAI's model docs describe it as a balanced model for interactive and agentic coding, hence tier \"balanced\" although the GPT-5.6 model of the same name was the flagship. Context 1,050,000 tokens (922K max input), 128K output, cutoff 2026-04-20, and $2/$10 per MTok ($0.20 cached input, $2.50 cache writes) are from OpenAI's model docs; prompts over 272K input tokens bill at 2x input/cache and 1.5x output, a fast tier costs 2x, and OpenAI calls the rates permanent rather than promotional. predecessorId follows OpenAI's own launch wording, \"GPT-6 Sol makes about half as many mistakes as its predecessor\", set against GPT-5.6 Sol throughout — but GPT-5.6 Sol stays on sale at its promotional $4/$20 and no retirement is scheduled. OpenAI's launch table uses only untracked suites (AutomationBench 1.0.6 33.2% xhigh, Agents' Last Exam 56.4% max, FrontierCode 1.1 49.3% max, DeepSWE v1.1 68.8% max, OSWorld 2.0 offline 60.5% xhigh / 64.4% max, factual error rate 4.5%) and it shipped without a system card or Preparedness rating; OpenAI's stress tests put its deception rate at 1.3% (5.6 Sol 10.4%) and failure-to-disclose at 5.4% (77.8%). HLE 48 is Artificial Analysis' no-tools run at max effort, shown to integer precision on AA's comparison page (5.6 Sol reads 49 there). AA's Terminal-Bench run is 4.0 (43–44% max, not the tracked 2.1), and its GDPval-AA v2.1 ratings — 1487 max / 1320 medium, down from 5.6 Sol's 1588 — are on a different scale from the v2 figure this key records, so gdpvalAA stays null. AA Intelligence Index 48 at max ($1.06 per task) and 40 at medium, the effort the costPerTask and speed figures are taken at; AA also notes hallucination rate fell from 92% to 60% and 31K output tokens per index run against 5.6 Sol's 29K. Not on the arena.ai text board (last update 2026-09-13), absent from Scale's SWE-bench Pro board, and ARC Prize has published Luna but no Sol results page. Generally available in the API, Bedrock, GitHub Copilot and ChatGPT Work/Codex for paid plans, though not yet in ChatGPT's Chat mode at launch."
+  },
+  {
+    "id": "gpt-6-luna",
+    "name": "GPT-6 Luna",
+    "company": "openai",
+    "releaseDate": "2026-09-22",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "contextWindow": 1050000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 0.1,
+      "outputPerMTok": 0.5
+    },
+    "costPerTask": {
+      "usd": 0.02,
+      "effort": "medium"
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-05",
+    "speed": {
+      "outputTokensPerSec": 142.8,
+      "timeToFirstTokenSec": 5.28,
+      "effort": "medium"
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "gpt-6-luna"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": 39,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": 59.3
+    },
+    "strengths": [
+      "Competent at both SQL and front-end HTML/JavaScript inside an agent harness — Simon Willison swapped it into his Datasette agent demo on launch day",
+      "Reasoning effort runs from none to max, so one model covers routing and classification at the bottom and heavier extraction at the top",
+      "Fewer misleading claims about coding work than 5.6 Luna made, per OpenAI's own alignment stress tests",
+      "Streams a little faster than 5.6 Luna at the same effort, and the low setting is the quickest thing in the GPT-6 line"
+    ],
+    "weaknesses": [
+      "Thinks longer to get there than 5.6 Luna did — Artificial Analysis measured about a quarter more output tokens per index run, which eats into the per-token price cut",
+      "Falls apart on long terminal-driven agent tasks where Sol holds up — the gap between the two is far wider there than on plain coding",
+      "Early users read it as a price cut rather than a capability step over 5.6 Luna, and independent indexes put the two level"
+    ],
+    "notes": "Budget tier of the GPT-6 family. Context 1,050,000 tokens (922K max input), 128K output, cutoff 2026-05-18, and $0.10/$0.50 per MTok ($0.01 cached input, $0.125 cache writes) are from OpenAI's model docs; prompts over 272K input tokens bill at 2x input/cache and 1.5x output, a fast tier costs 2x, and OpenAI calls the rates permanent. predecessorId stays null: OpenAI's announcement says only that Luna \"also improves substantially\" over its GPT-5.6 counterpart, lineage wording rather than a replacement claim, and GPT-5.6 Luna stays on sale. OpenAI's launch table uses only untracked suites (AutomationBench 1.0.6 20.7%, Agents' Last Exam 50.9%, FrontierCode 1.1 42.4%, DeepSWE v1.1 66.6%, OSWorld 2.0 offline 52.7%, factual error rate 7.6%, all at max) and the model shipped without a system card or Preparedness rating; OpenAI's stress tests put its deception rate at 2.8% (5.6 Luna 9.5%) and failure-to-disclose at 30.2% (78.3%). ARC-AGI-2 59.3% is ARC Prize-verified at max effort (xhigh 41.9%, high 31.4%, medium 18.1%, low 4.6%, none 0.0%), published 2026-09-22 at arcprize.org/results/openai-gpt-6-luna; cost per task not stated there. HLE 39 is Artificial Analysis' no-tools run at max effort, shown to integer precision on AA's comparison page (level with 5.6 Luna). AA's Terminal-Bench run is 4.0 (13% max, not the tracked 2.1), and its GDPval-AA v2.1 ratings — 1367 max / 1218 medium, down from 5.6 Luna's 1443 — are on a different scale from the v2 figure this key records, so gdpvalAA stays null. AA Intelligence Index 37 at max ($0.07 per task) and 29 at medium, the effort the costPerTask and speed figures are taken at; AA measured 51K output tokens per index run against 5.6 Luna's 41K and a hallucination rate down from 93% to 77%. Not on the arena.ai text board (last update 2026-09-13) and absent from Scale's SWE-bench Pro board. Generally available in the API, Bedrock, GitHub Copilot and ChatGPT Work/Codex, with Free and Go users getting it in the desktop app."
   }
 ]

@@ -1,5 +1,21 @@
 [
   {
+    "id": "2026-09-22-gpt-6-sol",
+    "date": "2026-09-22",
+    "title": "OpenAI ships GPT-6 Sol and GPT-6 Luna at half the GPT-5.6 prices, with no Terra tier",
+    "summary": "OpenAI released GPT-6 Sol ($2/$10 per million tokens, down from GPT-5.6 Sol's $4/$20) and GPT-6 Luna ($0.10/$0.50, down from $0.20/$1.20) on 2026-09-22, both with the 1,050,000-token context, 128K output and none-to-max reasoning effort of GPT-6 Astra, and calls the cuts permanent. The launch table sticks to OpenAI's own suites — DeepSWE v1.1 68.8% for Sol and 66.6% for Luna, AutomationBench 33.2% for Sol at xhigh — and claims Sol makes about half as many factual mistakes as its predecessor; ARC Prize verified Luna at 59.3% on ARC-AGI-2, while Artificial Analysis scores Sol 48 and Luna 37 on its Intelligence Index, level with the 5.6 models they undercut. The models shipped without a system card, and the GPT-5.6 mid-tier Terra gets no GPT-6 counterpart.",
+    "category": "release",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-6-sol",
+      "gpt-6-luna"
+    ],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+  },
+  {
     "id": "2026-09-21-grok-4-7",
     "date": "2026-09-21",
     "title": "xAI ships Grok 4.7, a larger base model held at Grok 4.6's price",
