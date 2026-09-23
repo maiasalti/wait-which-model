@@ -35,6 +35,10 @@ fire late on Monday and collide with Monday's own sweep.
 | Thu | health · models · **stats** |
 | Fri | health · models |
 
+## Guards
+
+The sweep refuses to run on a dirty working tree, so it never clobbers work in progress. Changes under `.obsidian/` are ignored by that check, because Obsidian rewrites its UI-state files whenever the vault is open and that blocked nearly every run in September 2026.
+
 ## The jobs
 
 | Job | Does | Protocol |
