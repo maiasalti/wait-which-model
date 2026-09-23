@@ -901,3 +901,25 @@ New-model-release sweep on 2026-09-22 (window widened to 2026-09-11 through 2026
 | grok-4-7 | gdpvalAA | 2026-09-22 | AA rates it 1694 (high) / 1695 (xhigh) on GDPval-AA v2.1 — a different scale from the v2 this key records (see sweep note) |
 | grok-4-7 | costPerTask / speed | 2026-09-22 | AA lists both high and xhigh variants with pricing "--" and no speed or cost-per-task figures as of 2026-09-22; re-check |
 | grok-4-7 | maxOutput | 2026-09-22 | docs.x.ai documents context, tiered pricing and rate limits but no output cap (same as 4.5 / 4.6) |
+| claude-opus-5-5 | gpqaDiamond | 2026-09-23 | not in Anthropic's launch post or system card (GPQA dropped from official reporting); no Opus 5.5 variant on Artificial Analysis' gpqa-diamond leaderboard or Vals AI's model page as of 2026-09-23 |
+| claude-opus-5-5 | sweBench | 2026-09-23 | Anthropic's system card reports SWE-bench Pro / Multilingual / Multimodal only; no SWE-bench Verified run on Vals AI or Scale's public board as of 2026-09-23 |
+| claude-opus-5-5 | mmluPro | 2026-09-23 | not in the launch post or system card (only Global MMLU 94.3%); absent from Vals AI's page |
+| claude-opus-5-5 | aime | 2026-09-23 | not published; Anthropic retired AIME from reporting |
+| claude-opus-5-5 | lmarenaElo | 2026-09-23 | arena.ai's text leaderboard (2026-09-13 update) predates the release; no Opus 5.5 listing yet — re-check |
+| claude-opus-5-5 | gdpvalAA | 2026-09-23 | Anthropic's system card reports 1846 on GDPval-AA v2.1 (max effort) — a different scale from the v2 this key records |
+| claude-opus-5-5 | speed | 2026-09-23 | Artificial Analysis lists only a max-effort variant and shows "No data available" for output speed and first-answer latency on its model and providers pages as of 2026-09-23; re-check |
+| gpt-6-sol | gpqaDiamond | 2026-09-23 | not in OpenAI's launch table (which uses AutomationBench, Agents' Last Exam, FrontierCode, DeepSWE, OSWorld only) and absent from Artificial Analysis' GPQA Diamond board and comparison pages; no system card was published |
+| gpt-6-sol | sweBench | 2026-09-23 | OpenAI has not published SWE-bench Verified since February 2026; no launch-table or third-party figure |
+| gpt-6-sol | sweBenchPro | 2026-09-23 | not on Scale's SWE-bench Pro public board as of 2026-09-23 (no GPT-6 or GPT-5.6 rows at all); OpenAI reports DeepSWE v1.1 68.8% instead |
+| gpt-6-sol | terminalBench | 2026-09-23 | only Terminal-Bench 4.0 runs exist (AA 43–44% at max), not the tracked 2.1 |
+| gpt-6-sol | lmarenaElo | 2026-09-23 | not on the arena.ai text board (last update 2026-09-13) the day after launch; re-check |
+| gpt-6-sol | gdpvalAA | 2026-09-23 | AA rates it 1487 (max) / 1320 (medium) on GDPval-AA v2.1 — a different scale from the v2 this key records; migrate the key before using it |
+| gpt-6-sol | arcAgi2 | 2026-09-23 | ARC Prize published a GPT-6 Luna results page on 2026-09-22 but none for Sol (arcprize.org/results index has no Sol entry); re-check |
+| gpt-6-sol | mmluPro / aime | 2026-09-23 | retired benchmarks; not in OpenAI's launch table |
+| gpt-6-luna | gpqaDiamond | 2026-09-23 | not in OpenAI's launch table and absent from Artificial Analysis' GPQA Diamond board and comparison pages; no system card was published |
+| gpt-6-luna | sweBench | 2026-09-23 | OpenAI has not published SWE-bench Verified since February 2026; no launch-table or third-party figure |
+| gpt-6-luna | sweBenchPro | 2026-09-23 | not on Scale's SWE-bench Pro public board as of 2026-09-23; OpenAI reports DeepSWE v1.1 66.6% instead |
+| gpt-6-luna | terminalBench | 2026-09-23 | only a Terminal-Bench 4.0 run exists (AA 13% at max), not the tracked 2.1 |
+| gpt-6-luna | lmarenaElo | 2026-09-23 | not on the arena.ai text board (last update 2026-09-13) the day after launch; re-check |
+| gpt-6-luna | gdpvalAA | 2026-09-23 | AA rates it 1367 (max) / 1218 (medium) on GDPval-AA v2.1 — a different scale from the v2 this key records; migrate the key before using it |
+| gpt-6-luna | mmluPro / aime | 2026-09-23 | retired benchmarks; not in OpenAI's launch table |
