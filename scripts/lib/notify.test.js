@@ -1,7 +1,7 @@
 // scripts/lib/notify.test.js
 const { test } = require("node:test");
 const assert = require("node:assert/strict");
-const { newModelIds, isUsableSha, parseModelIds, encodePending, decodePending, mergePending, cooldownActive } = require("./notify.js");
+const { newModelIds, isUsableSha, parseModelIds, cooldownActive, lastBroadcastSentAt } = require("./notify.js");
 
 const mk = (...ids) => ids.map((id) => ({ id }));
 
@@ -115,17 +115,17 @@ test("escapeHtml covers the five characters", () => {
   assert.equal(escapeHtml(`<a href="x">'&'</a>`), "&lt;a href=&quot;x&quot;&gt;&#39;&amp;&#39;&lt;/a&gt;");
 });
 
-test("encodePending/decodePending round-trip, with '-' standing for an empty queue", () => {
-  assert.equal(encodePending([]), "-");
-  assert.deepEqual(decodePending("-"), []);
-  assert.deepEqual(decodePending(undefined), []);
-  assert.deepEqual(decodePending(encodePending(["a", "b"])), ["a", "b"]);
-});
-
-test("mergePending appends new ids after the queued ones and drops duplicates", () => {
-  assert.deepEqual(mergePending("-", ["x"]), ["x"]);
-  assert.deepEqual(mergePending("a,b", ["b", "c"]), ["a", "b", "c"]);
-  assert.deepEqual(mergePending(undefined, []), []);
+test("lastBroadcastSentAt picks the newest sent broadcast and ignores drafts, other segments and unsent rows", () => {
+  const list = [
+    { id: "1", status: "sent", sent_at: "2026-09-21T19:28:43Z", segment_id: "seg" },
+    { id: "2", status: "draft", sent_at: null, segment_id: "seg" },
+    { id: "3", status: "sent", sent_at: "2026-09-15T10:00:00Z", segment_id: "seg" },
+    { id: "4", status: "sent", sent_at: "2026-09-22T00:00:00Z", segment_id: "other" },
+  ];
+  assert.equal(lastBroadcastSentAt(list, "seg"), "2026-09-21T19:28:43Z");
+  assert.equal(lastBroadcastSentAt(list), "2026-09-22T00:00:00Z");
+  assert.equal(lastBroadcastSentAt([], "seg"), undefined);
+  assert.equal(lastBroadcastSentAt(undefined, "seg"), undefined);
 });
 
 test("cooldownActive is true only inside the window and never for a missing or bad timestamp", () => {
