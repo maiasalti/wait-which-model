@@ -923,3 +923,8 @@ New-model-release sweep on 2026-09-22 (window widened to 2026-09-11 through 2026
 | gpt-6-luna | lmarenaElo | 2026-09-23 | not on the arena.ai text board (last update 2026-09-13) the day after launch; re-check |
 | gpt-6-luna | gdpvalAA | 2026-09-23 | AA rates it 1367 (max) / 1218 (medium) on GDPval-AA v2.1 — a different scale from the v2 this key records; migrate the key before using it |
 | gpt-6-luna | mmluPro / aime | 2026-09-23 | retired benchmarks; not in OpenAI's launch table |
+| laya | gpqaDiamond, sweBench, sweBenchPro, terminalBench, hle, lmarenaElo, gdpvalAA, arcAgi2, mmluPro, aime | 2026-09-23 | not applicable, not merely unpublished: Laya is a typed-decision encoder (ModernBERT/mmBERT + decision head) that cannot generate text, so no generative benchmark can be run on it; the model card and independent tests (orcarouter, flowtivity, eesel) report classification accuracy and calibration only |
+| laya | maxOutput | 2026-09-23 | no output-token limit exists; output is a fixed set of typed values with probabilities, not a token stream |
+| laya | pricing | 2026-09-23 | Convai publishes no API or price list; the only hosted route (impossibl, api.impossibl.com/v1/systemone) is a free third-party endpoint, so no base-tier per-token price can be recorded |
+| laya | knowledgeCutoff | 2026-09-23 | not disclosed on the Hugging Face card, GitHub README, laya.convaiinnovations.com or the author's dev.to announcement; the ModernBERT/mmBERT backbones' pretraining dates are not a published cutoff for Laya |
+| laya | costPerTask | 2026-09-23 | no Artificial Analysis coverage of Laya or any Convai Innovations model as of launch |

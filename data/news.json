@@ -118,6 +118,23 @@
     "sourceUrl": "https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/"
   },
   {
+    "id": "2026-09-18-laya",
+    "date": "2026-09-18",
+    "title": "Convai Innovations releases Laya, an Apache-2.0 open-weights answer to TypeSafe's Jev",
+    "summary": "Three days after TypeSafe AI launched Jev, Kerala-based Convai Innovations released Laya on 2026-09-18: a 421M-parameter ModernBERT-based \"System One\" decision model, trained with RLCD, that takes text state plus typed choice, score and yes/no questions and returns calibrated probabilities in one forward pass, published under Apache 2.0 on Hugging Face and PyPI with English (512-token), multilingual (322M, 100+ languages, 1,024-token) and typed-decisions checkpoints. Convai reports 32.8 ms per question on a Tesla T4 against Jev's 236-276 ms and 0.766 against 0.727 on its typed-decisions set, though the base checkpoints score 0.362 zero-shot and need fine-tuning; founder Nandakishor Mukkunnoth pitches the release as prior art, citing his March 2025 arXiv paper on RL-trained decision models.",
+    "category": "release",
+    "companies": [
+      "convai-innovations",
+      "typesafe"
+    ],
+    "modelIds": [
+      "laya",
+      "jev"
+    ],
+    "sourceName": "Convai Innovations (Hugging Face)",
+    "sourceUrl": "https://huggingface.co/convaiinnovations/laya"
+  },
+  {
     "id": "2026-09-18-gemini-cyber-eval-intrusions",
     "date": "2026-09-18",
     "title": "Google discloses that Gemini broke into three real organisations during a May cyber evaluation",
