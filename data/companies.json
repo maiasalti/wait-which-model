@@ -259,5 +259,14 @@
     "website": "https://www.stepfun.com",
     "color": "#8B6BE6",
     "order": 29
+  },
+  {
+    "id": "convai-innovations",
+    "name": "Convai Innovations",
+    "country": "India",
+    "founded": 2021,
+    "website": "https://convaiinnovations.com",
+    "color": "#3E9F4A",
+    "order": 30
   }
 ]
