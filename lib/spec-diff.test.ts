@@ -22,6 +22,7 @@ function baseModel(overrides: Partial<Model> = {}): Model {
     status: "frontier",
     tier: "flagship",
     modality: "text",
+    type: "llm",
     contextWindow: null,
     maxOutput: null,
     pricing: { inputPerMTok: null, outputPerMTok: null },
