@@ -27,21 +27,17 @@ function parseModelIds(raw) {
   return [...new Set(ids)];
 }
 
-/** The digest queue lives in a GitHub Actions repository variable, which
- *  cannot hold an empty string, so "-" stands for "nothing pending". */
-function encodePending(ids) {
-  return ids.length ? ids.join(",") : "-";
-}
-
-function decodePending(raw) {
-  if (raw === undefined || raw === null || raw === "-") return [];
-  return parseModelIds(String(raw));
-}
-
-/** Ids already waiting plus the ones this push added, deduplicated, queue
- *  order preserved so the oldest announcement leads the email. */
-function mergePending(storedRaw, ids) {
-  return [...new Set([...decodePending(storedRaw), ...ids])];
+/** Latest `sent_at` among broadcasts Resend reports as sent, optionally only
+ *  those to one segment. Resend's own history is the source of truth for
+ *  "when did we last email", so a crash after a send can never resend. */
+function lastBroadcastSentAt(broadcasts, segmentId) {
+  let latest;
+  for (const b of broadcasts || []) {
+    if (b.status !== "sent" || !b.sent_at) continue;
+    if (segmentId && b.segment_id && b.segment_id !== segmentId) continue;
+    if (!latest || Date.parse(b.sent_at) > Date.parse(latest)) latest = b.sent_at;
+  }
+  return latest;
 }
 
 /** True while a broadcast went out less than `cooldownMs` ago. An unparsable
@@ -120,4 +116,4 @@ function buildEmail(models, companies, siteUrl) {
   return { subject, html, text };
 }
 
-module.exports = { newModelIds, isUsableSha, parseModelIds, buildEmail, escapeHtml, TIER_LABELS, encodePending, decodePending, mergePending, cooldownActive };
+module.exports = { newModelIds, isUsableSha, parseModelIds, buildEmail, escapeHtml, TIER_LABELS, cooldownActive, lastBroadcastSentAt };

@@ -6,10 +6,17 @@ on:
   push:
     branches: [main]
     paths: [data/models.json]
-  # Flushes models queued by the cooldown (see scripts/notify-new-models.js) as
-  # one digest, once a day.
+  # Announces anything the cooldown held back (see scripts/notify-new-models.js)
+  # as one digest, once a day.
   schedule:
     - cron: "0 9 * * *"
+  # Manual flush, or a hand-picked announcement via model_ids (bypasses the cooldown).
+  workflow_dispatch:
+    inputs:
+      model_ids:
+        description: "Comma-separated model ids to announce now (blank = digest of everything since the last email)"
+        required: false
+        default: ""
 
 # One run at a time, in order. GitHub keeps at most ONE pending run per group: a third
 # push while one runs and one waits cancels the waiting one, and its models are never
@@ -19,7 +26,6 @@ concurrency: notify-new-models
 
 permissions:
   contents: read
-  actions: write # repository variables hold the digest queue and last-send time
 
 jobs:
   notify:
@@ -39,6 +45,6 @@ jobs:
         env:
           BEFORE_SHA: ${{ github.event.before }}
           AFTER_SHA: ${{ github.sha }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MODEL_IDS: ${{ github.event.inputs.model_ids }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           RESEND_SEGMENT_ID: ${{ secrets.RESEND_SEGMENT_ID }}
