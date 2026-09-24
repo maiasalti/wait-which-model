@@ -7515,5 +7515,149 @@
       "Behavior is a moving target — eight PyPI releases in its first six days, a quickstart whose documented outputs no longer match the current release, and CPU-only runs that one reviewer clocked at 49 s per prediction against the 193-464 ms Convai publishes"
     ],
     "notes": "Not an LLM: an open-weights \"System One\" decision model in the same mould as TypeSafe's Jev — a bidirectional encoder (ModernBERT-large, 421M) with a decision head trained by RLCD against strictly proper scoring rules that takes text state plus typed questions (choice, score, noul) and returns calibrated probabilities in one forward pass, so none of this site's benchmarks apply and every cell is null by design. Filed under the fast tier alongside Jev. Context is 512 tokens on the root convaiinnovations/laya checkpoint (about 320 for state); the laya-multilingual (mmBERT-base, 322M, 100+ languages) and laya-typed-decisions checkpoints take 1,024, the mmBERT encoder can be configured to 8,192, and impossibl's hosted endpoint is widened to 8,192. Convai publishes no API or price, so pricing is null; availability is general because impossibl serves both checkpoints free at api.impossibl.com/v1/systemone (documented in Laya's README from 2026-09-23) and the weights run on a free Colab T4, with a demo Space on Hugging Face. Released as laya 0.1.0 on PyPI and Hugging Face on 2026-09-18, three days after Jev, and at 0.3.7 by 2026-09-23. Convai's Jev comparisons (0.766 vs 0.727 on its typed-decisions set, 32.8 ms vs 236-276 ms, ECE 0.081 vs 0.246) are its own measurements and set a local T4 forward pass against Jev's hosted-API round trip; the zero-shot, Khmer, Banking77, adversarial and CPU figures in weaknesses are from the model card and independent tests (orcarouter, flowtivity, eesel, invidelabs). Founder Nandakishor Mukkunnoth frames Laya as a reply to TypeSafe presenting the concept as new, citing his own arXiv 2503.23303 (March 2025) and 2510.01237 as prior art. No Artificial Analysis coverage; knowledge cutoff unpublished."
+  },
+  {
+    "id": "mimo-v2-6-pro",
+    "name": "MiMo-V2.6-Pro",
+    "company": "xiaomi",
+    "releaseDate": "2026-09-21",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 0.435,
+      "outputPerMTok": 0.87
+    },
+    "costPerTask": {
+      "usd": 0.1332,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": 51.3,
+      "timeToFirstTokenSec": 2.83,
+      "effort": null
+    },
+    "license": {
+      "spdx": "MIT",
+      "name": "MIT License",
+      "kind": "permissive",
+      "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "xiaomi",
+        "id": "mimo-v2.6-pro"
+      },
+      {
+        "provider": "openrouter",
+        "id": "xiaomi/mimo-v2.6-pro"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": 89.9,
+      "aime": null,
+      "hle": 49.4,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Coding skill carries between scaffolds rather than living in one harness — Xiaomi trained across four mini-harnesses and its held-out Codex, Claude Code and mini-swe-agent runs improved in step, so it needs less re-prompting when moved between tools",
+      "One checkpoint takes text, images, video and audio, so screenshot-driven computer use and visual coding go through the same weights as the terminal work — no separate vision endpoint to route to",
+      "Cache reads are priced at effectively nothing, so an agent loop that re-reads a large context every turn costs little more than its fresh tokens — and the whole RL run was livestreamed with the log left public, with the environments and framework being released alongside the weights",
+      "Finishes small, well-specified coding jobs unaided — a hands-on OpenCode run had it complete all three tasks and pass the same hidden checks as Claude Opus 5 at a small fraction of the spend"
+    ],
+    "weaknesses": [
+      "Can fall into repeated tool-call loops in agent harnesses — early Hugging Face reports on the Pro and Flash cards describe it cycling through the same searches hundreds of times in OpenCode without finishing",
+      "Guesses rather than declines when it does not know — Artificial Analysis finds it answers wrongly on roughly four in ten of the knowledge questions it misses, and its knowledge score sits near the bottom of the index",
+      "Thinks at length for its price class — Artificial Analysis calls it somewhat verbose and a single Intelligence Index task takes it around eighteen minutes end to end, so the low per-token rate is partly spent on tokens",
+      "Finds and reproduces vulnerabilities far better than it writes exploits — its own table puts it level with the closed frontier on CyberGym but at well under two-thirds of them on ExploitBench"
+    ],
+    "notes": "Flagship of Xiaomi's V2.6 series: a 1.02T-parameter sparse MoE activating 42B per token, natively omnimodal (text, image, video and audio in; text out), trained with a 30-step, livestreamed RL run Xiaomi costs at $2.62M. Announced 2026-09-21 UTC (Xiaomi's tweet and Artificial Analysis; mimo.mi.com's news page dates it 22 September, Beijing time). Terminal-Bench 2.1 89.9 is Xiaomi's own figure from the Hugging Face card and tech report Table 3, whose baselines run at max effort; HLE 49.4% is Artificial Analysis' independent text-only, no-tools measurement, since Xiaomi publishes none. GDPval-AA is 1673 on v2.1 (Xiaomi's table and AA agree), a different scale from the v2 this key records, so that cell is null. Also reported by Xiaomi: DeepSWE v1.1 71.9, ProgramBench 26.5, AutomationBench v1.0.6 53.1, Toolathlon-Verified 76.9, Agents' Last Exam 31.6, Terminal-Bench 4.0 34.9 (AA measures 34.8), OSWorld-Verified 82.0, JobBench 62.0, CyberGym 94.0, ExploitGym 17.8, ExploitBench 47.9, SEC Bench Pro 66.3 and MiMo Visual Coding 72.3. GPQA Diamond, SWE-bench Verified/Pro, AIME, MMLU-Pro and ARC-AGI-2 are unpublished for Pro and Flash (the report's SWE-bench rows are for the 9B distillation only), and neither is on the arena.ai text board (last update 2026-09-13). AA scores it 46 on Intelligence Index v4.3.2, first among open-weights models; costPerTask ($0.1332) and speed (51.3 tok/s, 2.83 s to first token as AA headlines it) are AA's measurements of its single reasoning variant — the API exposes a thinking on/off switch and no effort levels, so effort is null; launch coverage quoted AA at about 130 tok/s before the page settled. Pricing is Xiaomi's pay-as-you-go rate ($0.435 cache-miss input, $0.0036 cache-hit, $0.87 output, unchanged from V2.5); a Pro-UltraSpeed endpoint at ten times the price ($4.35/$8.70) promises up to 20x faster output and is not a separate entry. Context 1M and max output 128K per the mimo.mi.com model page (OpenRouter lists 1,048,576 and 131K). Weights (MiMo-V2.6-Pro-RL) are MIT on Hugging Face and ModelScope, declared in the card metadata with no separate LICENSE file. Knowledge cutoff is unpublished — the \"December 2024\" string on the model page is a sample system prompt, not a spec. predecessorId is null: no Xiaomi source says V2.6-Pro replaces V2.5-Pro (the V2.5 suite stays on sale) and MiMo-V2.5 is not on this site."
+  },
+  {
+    "id": "mimo-v2-6-flash",
+    "name": "MiMo-V2.6-Flash",
+    "company": "xiaomi",
+    "releaseDate": "2026-09-21",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 0.14,
+      "outputPerMTok": 0.28
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "MIT",
+      "name": "MIT License",
+      "kind": "permissive",
+      "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "xiaomi",
+        "id": "mimo-v2.6-flash"
+      },
+      {
+        "provider": "openrouter",
+        "id": "xiaomi/mimo-v2.6-flash"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": 87.6,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Stays within a few points of Pro on Xiaomi's agent suite while activating about a third of the parameters — it was trained in the same RL run, so the agent behaviour is the same family, just cheaper to serve",
+      "Small enough to run outside a data centre — a GGUF conversion and DGX Spark ports appeared within days, and OpenCode gave it away free for launch week",
+      "Edges Pro at reproducing real-world vulnerabilities — the one place in the family table where the smaller model leads",
+      "Same omnimodal input set, 1M context and thinking on/off switch as Pro, so a pipeline built on Pro can drop to Flash without changing the request shape"
+    ],
+    "weaknesses": [
+      "Runs away in agent harnesses — the first Hugging Face reports on the card describe it issuing thousands of repeated searches in OpenCode and burning tokens on useless work without finishing",
+      "Declares a job done when its own tests pass — a hands-on OpenCode run had it drop a required subcommand from a multi-file feature that its self-written tests never exercised, so check output against the brief rather than its tests",
+      "Offensive security is what shrinks most going down from Pro — its exploit-writing scores fall to roughly a third to a half of Pro's while vulnerability reproduction stays level",
+      "Too new to characterise beyond launch week — Artificial Analysis has not yet run it, so its speed, per-task cost and independent knowledge scores are unmeasured"
+    ],
+    "notes": "The efficiency checkpoint of Xiaomi's V2.6 series: a 309B-parameter sparse MoE activating 15B, natively omnimodal (text, image, video and audio in; text out), trained in the same livestreamed 30-step RL run as Pro at a cost Xiaomi puts at $0.85M. Announced 2026-09-21 UTC (22 September Beijing time on mimo.mi.com). Terminal-Bench 2.1 87.6 is Xiaomi's own figure from the Hugging Face card and tech report Table 3. Also reported by Xiaomi: DeepSWE v1.1 67.9, ProgramBench 26.0, AutomationBench v1.0.6 52.3, Toolathlon-Verified 73.6, Agents' Last Exam 27.6, Terminal-Bench 4.0 28.8, OSWorld-Verified 80.8, JobBench 61.2, CyberGym 95.1, ExploitGym 6.0, ExploitBench 25.3, SEC Bench Pro 47.5 and MiMo Visual Coding 71.5; Xiaomi's table has no GDPval-AA entry for Flash. GPQA Diamond, SWE-bench Verified/Pro, HLE, AIME, MMLU-Pro and ARC-AGI-2 are unpublished, it is not on the arena.ai text board (last update 2026-09-13), and Artificial Analysis has no Flash listing as of 2026-09-24, so costPerTask and speed are null. Pricing is Xiaomi's pay-as-you-go rate ($0.14 cache-miss input, $0.0028 cache-hit, $0.28 output, unchanged from V2.5). Context 1M and max output 128K per the mimo.mi.com model page. Weights (MiMo-V2.6-Flash-RL) are MIT on Hugging Face and ModelScope, declared in the card metadata with no separate LICENSE file; a ggml-org GGUF exists. Knowledge cutoff is unpublished — the \"December 2024\" string on the model page is a sample system prompt. predecessorId is null: no Xiaomi source says it replaces MiMo-V2.5 or V2-Flash, neither of which is on this site."
   }
 ]

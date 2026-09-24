@@ -928,3 +928,12 @@ New-model-release sweep on 2026-09-22 (window widened to 2026-09-11 through 2026
 | laya | pricing | 2026-09-23 | Convai publishes no API or price list; the only hosted route (impossibl, api.impossibl.com/v1/systemone) is a free third-party endpoint, so no base-tier per-token price can be recorded |
 | laya | knowledgeCutoff | 2026-09-23 | not disclosed on the Hugging Face card, GitHub README, laya.convaiinnovations.com or the author's dev.to announcement; the ModernBERT/mmBERT backbones' pretraining dates are not a published cutoff for Laya |
 | laya | costPerTask | 2026-09-23 | no Artificial Analysis coverage of Laya or any Convai Innovations model as of launch |
+| mimo-v2-6-pro | gpqaDiamond, sweBench, sweBenchPro, arcAgi2, mmluPro, aime | 2026-09-24 | not in the Hugging Face card, tech report Table 3 or mimo.mi.com (the report's SWE-bench rows are for MiMo-V2.6-Distill-Qwen-9B only); not on Scale's SWE-bench Pro board or the ARC Prize leaderboard; AA's index v4.3.2 no longer includes GPQA |
+| mimo-v2-6-pro | lmarenaElo | 2026-09-24 | not on the arena.ai text board (last update 2026-09-13, which predates the release); re-check |
+| mimo-v2-6-pro | gdpvalAA | 2026-09-24 | 1673 on GDPval-AA v2.1 (Xiaomi Table 3 and AA's payload agree) — a different scale from the v2 this key records; migrate the key before using it |
+| mimo-v2-6-pro | knowledgeCutoff | 2026-09-24 | unpublished on the HF card, tech report and AA (knowledgeCutoffDate null); the "December 2024" line on the mimo.mi.com model page is a sample system prompt, not a spec |
+| mimo-v2-6-flash | gpqaDiamond, sweBench, sweBenchPro, hle, arcAgi2, mmluPro, aime | 2026-09-24 | not in the Hugging Face card, tech report Table 3 or mimo.mi.com; Artificial Analysis has no Flash listing so no independent HLE; not on Scale's SWE-bench Pro board or the ARC Prize leaderboard |
+| mimo-v2-6-flash | lmarenaElo | 2026-09-24 | not on the arena.ai text board (last update 2026-09-13); re-check |
+| mimo-v2-6-flash | gdpvalAA | 2026-09-24 | Xiaomi's Table 3 has no GDPval-AA entry for Flash and AA has not run it; the key also records v2 while AA now publishes v2.1 |
+| mimo-v2-6-flash | costPerTask | 2026-09-24 | no Artificial Analysis listing for MiMo-V2.6-Flash as of launch week (AA payload carries only mimo-v2-6-pro); re-check |
+| mimo-v2-6-flash | knowledgeCutoff | 2026-09-24 | unpublished on the HF card and tech report; the "December 2024" line on the mimo.mi.com model page is a sample system prompt |

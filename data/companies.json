@@ -268,5 +268,14 @@
     "website": "https://convaiinnovations.com",
     "color": "#3E9F4A",
     "order": 30
+  },
+  {
+    "id": "xiaomi",
+    "name": "Xiaomi (MiMo)",
+    "country": "China",
+    "founded": 2010,
+    "website": "https://mimo.mi.com",
+    "color": "#B44800",
+    "order": 31
   }
 ]

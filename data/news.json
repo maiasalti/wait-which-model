@@ -1,5 +1,21 @@
 [
   {
+    "id": "2026-09-21-mimo-v2-6-pro",
+    "date": "2026-09-21",
+    "title": "Xiaomi open-sources MiMo-V2.6-Pro and Flash under MIT, the top open-weights model on Artificial Analysis' index",
+    "summary": "Xiaomi released MiMo-V2.6-Pro (1.02T parameters, 42B active) and MiMo-V2.6-Flash (309B, 15B active) on 2026-09-21 as MIT-licensed open weights on Hugging Face: natively omnimodal models with a 1M context and 128K output, trained in a 30-step reinforcement-learning run that Xiaomi livestreamed and costs at $2.62M and $0.85M respectively, with the RL environments and framework promised alongside. Xiaomi reports Terminal-Bench 2.1 89.9 (Pro) and 87.6 (Flash), DeepSWE v1.1 71.9 / 67.9 and GDPval-AA v2.1 1673 for Pro; Artificial Analysis scores Pro 46 on its Intelligence Index, first among open-weights models and level with Grok 4.7, at $0.13 per task. API pricing stays at V2.5 levels — $0.435/$0.87 per million tokens for Pro and $0.14/$0.28 for Flash — and a Pro-UltraSpeed endpoint at ten times the price claims up to 20x faster output.",
+    "category": "release",
+    "companies": [
+      "xiaomi"
+    ],
+    "modelIds": [
+      "mimo-v2-6-pro",
+      "mimo-v2-6-flash"
+    ],
+    "sourceName": "Xiaomi MiMo",
+    "sourceUrl": "https://mimo.mi.com/docs/en-US/news/latest/v2-6"
+  },
+  {
     "id": "2026-09-22-gpt-6-sol",
     "date": "2026-09-22",
     "title": "OpenAI ships GPT-6 Sol and GPT-6 Luna at half the GPT-5.6 prices, with no Terra tier",
