@@ -2152,7 +2152,12 @@
       "url": "https://huggingface.co/moonshotai/Kimi-K3/blob/main/LICENSE",
       "commercialUse": true
     },
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "moonshot",
+        "id": "kimi-k3"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -2383,11 +2388,22 @@
     "knowledgeCutoff": null,
     "speed": {
       "outputTokensPerSec": 172.4,
-      "timeToFirstTokenSec": null,
+      "timeToFirstTokenSec": 0.8,
       "effort": null
     },
-    "license": null,
-    "apiIds": [],
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "mistral",
+        "id": "mistral-small-2603"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -2411,7 +2427,7 @@
       "A fast generalist with a real depth ceiling — it won't reason its way out of a hard problem",
       "Merging three previous lines means it is rarely the best at any one of them"
     ],
-    "notes": "256k context and $0.15/$0.60 pricing per Mistral's announcement (earlier trackers listed 128k). MMLU-Pro 78.0 / GPQA 71.2 third-party-reported; LMArena Elo 1358 via BenchLM's Arena tracking. Output speed is Artificial Analysis' Mistral Small 4 (Reasoning) figure on Mistral's API; AA's time to first answer token was not readable and is left null."
+    "notes": "256k context and $0.15/$0.60 pricing per Mistral's announcement (earlier trackers listed 128k). MMLU-Pro 78.0 / GPQA 71.2 third-party-reported; LMArena Elo 1358 via BenchLM's Arena tracking. Output speed and time to first answer token are Artificial Analysis' Mistral Small 4 (Reasoning) figures on Mistral's API."
   },
   {
     "id": "muse-spark",
@@ -2549,7 +2565,13 @@
       "timeToFirstTokenSec": null,
       "effort": null
     },
-    "license": null,
+    "license": {
+      "spdx": "MIT",
+      "name": "MIT License",
+      "kind": "permissive",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/LICENSE",
+      "commercialUse": true
+    },
     "apiIds": [],
     "retirementDate": null,
     "predecessorId": null,
@@ -2967,10 +2989,16 @@
     "knowledgeCutoff": "2025-01",
     "speed": {
       "outputTokensPerSec": 35.3,
-      "timeToFirstTokenSec": null,
+      "timeToFirstTokenSec": 0.98,
       "effort": null
     },
-    "license": null,
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/google/gemma-4-31B-it",
+      "commercialUse": true
+    },
     "apiIds": [],
     "retirementDate": null,
     "predecessorId": null,
@@ -2997,7 +3025,7 @@
       "No first-party hosted endpoint — you run it yourself or trust a third-party host",
       "A component rather than an agent; it isn't built for long autonomous runs"
     ],
-    "notes": "Benchmarks shown are for the 31B Dense variant. LMArena Elo (~1452) and the MMLU-Pro/GPQA/AIME/HLE figures are third-party community-reported, not an official Google table (BenchLM lists GPQA Diamond as 85.7% and HLE as 26.5%, so treat these as approximate). Pricing $0.10/$0.34 per MTok is OpenRouter's listing for google/gemma-4-31b-it — there is no first-party Google API price (Gemma 4 is not on Vertex AI), and other hosts differ (CoreWeave $0.12/$0.35, DeepInfra $0.13/$0.38 per Artificial Analysis). Weights were quietly published March 31, 2026; the formal Google blog announcement followed April 2, 2026. Knowledge cutoff (January 2025) confirmed via Google's official Gemma 4 model card (ai.google.dev). Output speed is Artificial Analysis' Gemma 4 31B (Reasoning) figure on Google's API; AA's time to first answer token was not readable and is left null."
+    "notes": "Benchmarks shown are for the 31B Dense variant. LMArena Elo (~1452) and the MMLU-Pro/GPQA/AIME/HLE figures are third-party community-reported, not an official Google table (BenchLM lists GPQA Diamond as 85.7% and HLE as 26.5%, so treat these as approximate). Pricing $0.10/$0.34 per MTok is OpenRouter's listing for google/gemma-4-31b-it — there is no first-party Google API price (Google hosts it on the Gemini API and a Vertex model-as-a-service page exists for the 26B-A4B variant, but neither lists a per-token price for 31B), and other hosts differ (CoreWeave $0.12/$0.35, DeepInfra $0.13/$0.38 per Artificial Analysis). Weights were quietly published March 31, 2026; the formal Google blog announcement followed April 2, 2026. Knowledge cutoff (January 2025) confirmed via Google's official Gemma 4 model card (ai.google.dev). Output speed and time to first answer token are Artificial Analysis' Gemma 4 31B (Reasoning) figures on Google's API."
   },
   {
     "id": "glm-5-2",
@@ -3026,7 +3054,13 @@
       "timeToFirstTokenSec": 1.61,
       "effort": "max"
     },
-    "license": null,
+    "license": {
+      "spdx": "MIT",
+      "name": "MIT License",
+      "kind": "permissive",
+      "url": "https://huggingface.co/zai-org/GLM-5.2/blob/main/LICENSE",
+      "commercialUse": true
+    },
     "apiIds": [],
     "retirementDate": null,
     "predecessorId": null,
@@ -3376,7 +3410,12 @@
       "effort": null
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "google",
+        "id": "gemini-3.5-flash-lite"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -3494,7 +3533,12 @@
       "effort": "high"
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "xai",
+        "id": "grok-4.5"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -3668,9 +3712,9 @@
     "availability": "general",
     "knowledgeCutoff": "2026-04",
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
-      "effort": null
+      "outputTokensPerSec": 84.2,
+      "timeToFirstTokenSec": 2.57,
+      "effort": "xhigh"
     },
     "license": {
       "spdx": "Apache-2.0",
@@ -3679,7 +3723,12 @@
       "url": "https://huggingface.co/thinkingmachines/Inkling",
       "commercialUse": true
     },
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "thinking-machines",
+        "id": "thinkingmachines/Inkling"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -3795,8 +3844,19 @@
       "timeToFirstTokenSec": 1.8,
       "effort": null
     },
-    "license": null,
-    "apiIds": [],
+    "license": {
+      "spdx": null,
+      "name": "NVIDIA Nemotron Open Model License",
+      "kind": "restricted",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "nvidia",
+        "id": "nvidia/nemotron-3-super-120b-a12b"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -3846,11 +3906,22 @@
     "knowledgeCutoff": "2025-09",
     "speed": {
       "outputTokensPerSec": 95.7,
-      "timeToFirstTokenSec": null,
+      "timeToFirstTokenSec": 2.32,
       "effort": null
     },
-    "license": null,
-    "apiIds": [],
+    "license": {
+      "spdx": null,
+      "name": "OpenMDW-1.1",
+      "kind": "permissive",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "nvidia",
+        "id": "nvidia/nemotron-3-ultra-550b-a55b"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -3876,7 +3947,7 @@
       "Trails the leading Chinese open-weights models on composite intelligence despite its size",
       "NVIDIA published no standard academic benchmark table at launch, so it is hard to place precisely"
     ],
-    "notes": "Largest of the three-model Nemotron 3 family (Nano, Super, Ultra); 550B total / 55B active MoE. Artificial Analysis Intelligence Index 47.7 — ahead of Gemma 4 31B (39.2) and Nemotron 3 Super (36.0), behind Kimi K2.6 (53.9). NVIDIA's technical report contains many ablation and quantisation tables rather than a single headline model table, so nothing was taken from it; the tracked cells filled below come from the model card instead. Pricing is OpenRouter's listing; NVIDIA publishes no first-party per-token price. Context is 1M per NVIDIA, though OpenRouter serves a 512K effective window. Output speed is Artificial Analysis' median across providers serving Nemotron 3 Ultra; AA's median time to first answer token was not readable and is left null. SWE-Bench Verified 70.7, Terminal Bench 2.1 56.4 and HLE 26.7 (no tools; 37.4 with tools) are NVIDIA's own figures from the BF16 model card's evaluation table (huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16, collected via NeMo Evaluator SDK), which supersede the earlier read of the technical report; the card's \"GPQA (no tools)\" 87.0 is left out of gpqaDiamond, matching the Nemotron 3 Super treatment. Knowledge cutoff 2025-09 is the pre-training data cutoff per the card; post-training data runs to May 2026."
+    "notes": "Largest of the three-model Nemotron 3 family (Nano, Super, Ultra); 550B total / 55B active MoE. Artificial Analysis Intelligence Index 47.7 — ahead of Gemma 4 31B (39.2) and Nemotron 3 Super (36.0), behind Kimi K2.6 (53.9). NVIDIA's technical report contains many ablation and quantisation tables rather than a single headline model table, so nothing was taken from it; the tracked cells filled below come from the model card instead. Pricing is OpenRouter's listing; NVIDIA publishes no first-party per-token price. Context is 1M per NVIDIA, though OpenRouter serves a 512K effective window. Output speed and time to first answer token are Artificial Analysis' medians across providers serving Nemotron 3 Ultra. SWE-Bench Verified 70.7, Terminal Bench 2.1 56.4 and HLE 26.7 (no tools; 37.4 with tools) are NVIDIA's own figures from the BF16 model card's evaluation table (huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16, collected via NeMo Evaluator SDK), which supersede the earlier read of the technical report; the card's \"GPQA (no tools)\" 87.0 is left out of gpqaDiamond, matching the Nemotron 3 Super treatment. Knowledge cutoff 2025-09 is the pre-training data cutoff per the card; post-training data runs to May 2026."
   },
   {
     "id": "hy3",
@@ -3905,8 +3976,19 @@
       "timeToFirstTokenSec": 2.69,
       "effort": null
     },
-    "license": null,
-    "apiIds": [],
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/tencent/Hy3/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "tencent-cloud",
+        "id": "hy3"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -3961,8 +4043,19 @@
       "timeToFirstTokenSec": 2.78,
       "effort": null
     },
-    "license": null,
-    "apiIds": [],
+    "license": {
+      "spdx": "MIT",
+      "name": "MIT License",
+      "kind": "permissive",
+      "url": "https://huggingface.co/meituan-longcat/LongCat-2.0/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "longcat",
+        "id": "LongCat-2.0"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -4073,7 +4166,13 @@
       "timeToFirstTokenSec": null,
       "effort": null
     },
-    "license": null,
+    "license": {
+      "spdx": null,
+      "name": "OpenMDW-1.1 License",
+      "kind": "permissive",
+      "url": "https://huggingface.co/poolside/Laguna-XS-2.1/blob/main/LICENSE.md",
+      "commercialUse": true
+    },
     "apiIds": [],
     "retirementDate": null,
     "predecessorId": null,
@@ -4125,8 +4224,8 @@
     "availability": "general",
     "knowledgeCutoff": null,
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
+      "outputTokensPerSec": 146,
+      "timeToFirstTokenSec": 2.11,
       "effort": null
     },
     "license": {
@@ -4136,7 +4235,12 @@
       "url": "https://huggingface.co/thinkingmachines/Inkling-Small",
       "commercialUse": true
     },
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "thinking-machines",
+        "id": "thinkingmachines/Inkling-Small"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -4192,7 +4296,12 @@
       "effort": null
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "Alibaba Cloud Model Studio",
+        "id": "qwen3.7-flash"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -5384,9 +5493,9 @@
     "availability": "general",
     "knowledgeCutoff": "2026-01",
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
-      "effort": null
+      "outputTokensPerSec": 94.3,
+      "timeToFirstTokenSec": 0.96,
+      "effort": "high"
     },
     "license": {
       "spdx": "Apache-2.0",
@@ -5753,9 +5862,9 @@
     "availability": "general",
     "knowledgeCutoff": null,
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
-      "effort": null
+      "outputTokensPerSec": 61.3,
+      "timeToFirstTokenSec": 3.86,
+      "effort": "medium"
     },
     "license": {
       "spdx": "Apache-2.0",
@@ -6515,8 +6624,8 @@
     "availability": "general",
     "knowledgeCutoff": null,
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
+      "outputTokensPerSec": 39.3,
+      "timeToFirstTokenSec": 3.01,
       "effort": null
     },
     "license": null,
@@ -6551,7 +6660,7 @@
       "Alibaba published no standard reasoning or knowledge benchmarks for this snapshot, so any change outside coding and agent work is uncharacterised",
       "Served from Alibaba Cloud under Chinese jurisdiction, which some enterprise buyers rule out regardless of capability"
     ],
-    "notes": "Dated snapshot of Qwen3.8-Max (Model Studio alias qwen3.8-max-2026-09-02): same 2.4T-parameter base and 1M window, further post-trained on coding and cowork. Announced on Qwen's X account on 2026-09-02 China time (it appeared on QwenCloud late on 2026-09-01 US time). Qwen's own table, relayed by CellCog, Lookonchain and wccftech, reports Terminal-Bench 3.0 29.0% (Qwen3.8-Max: 11.3%), DeepSWE 1.1 69.3% (56.6%) and NL2Repo-Bench 64.9% (55.9%), plus ProgramBench, SWE-Marathon, CoWorkBench, JobBench and Toolathlon rows on which Opus 5 stays ahead; none of these are tracked keys and Terminal-Bench 3.0 is not comparable with the 2.1 cell, so every benchmark cell is null. The GPQA Diamond 92.6 / HLE 43.6 / Terminal-Bench 2.1 86.6 figures circulating for it are Alibaba's August Qwen3.8-Max numbers, not re-runs on this snapshot. Arena's Code Arena: WebDev debut was #1 at 1691 (22 above the previous Qwen3.8-Max); no Text Arena score yet. Context is Qwen's own 1M claim — the sibling qwen3-8-max entry records Model Studio's 983,616 usable figure, which was not re-verified for this snapshot. Pricing unchanged at $2/$6 per MTok with cache reads $0.25 (implicit) / $0.17 (explicit); Artificial Analysis had not published a separate 0902 listing when checked. predecessorId is null — Qwen's just-got-upgraded framing is lineage, and the earlier build is still served under its own id. Qwen's X post and the Model Studio / QwenCloud pages were not fetchable this session."
+    "notes": "Dated snapshot of Qwen3.8-Max (Model Studio alias qwen3.8-max-2026-09-02): same 2.4T-parameter base and 1M window, further post-trained on coding and cowork. Announced on Qwen's X account on 2026-09-02 China time (it appeared on QwenCloud late on 2026-09-01 US time). Qwen's own table, relayed by CellCog, Lookonchain and wccftech, reports Terminal-Bench 3.0 29.0% (Qwen3.8-Max: 11.3%), DeepSWE 1.1 69.3% (56.6%) and NL2Repo-Bench 64.9% (55.9%), plus ProgramBench, SWE-Marathon, CoWorkBench, JobBench and Toolathlon rows on which Opus 5 stays ahead; none of these are tracked keys and Terminal-Bench 3.0 is not comparable with the 2.1 cell, so every benchmark cell is null. The GPQA Diamond 92.6 / HLE 43.6 / Terminal-Bench 2.1 86.6 figures circulating for it are Alibaba's August Qwen3.8-Max numbers, not re-runs on this snapshot. Arena's Code Arena: WebDev debut was #1 at 1691 (22 above the previous Qwen3.8-Max); no Text Arena score yet. Context is Qwen's own 1M claim — the sibling qwen3-8-max entry records Model Studio's 983,616 usable figure, which was not re-verified for this snapshot. Pricing unchanged at $2/$6 per MTok with cache reads $0.25 (implicit) / $0.17 (explicit); Artificial Analysis' qwen3-8-max page now carries this snapshot (titled Qwen3.8 Max (0902)), which is where the speed figures come from; cost per task was not readable there. predecessorId is null — Qwen's just-got-upgraded framing is lineage, and the earlier build is still served under its own id. Qwen's X post and the Model Studio / QwenCloud pages were not fetchable this session."
   },
   {
     "id": "gpt-6-astra",
@@ -6576,9 +6685,9 @@
     "availability": "restricted",
     "knowledgeCutoff": "2026-04",
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
-      "effort": null
+      "outputTokensPerSec": 46.7,
+      "timeToFirstTokenSec": 6.19,
+      "effort": "medium"
     },
     "license": null,
     "apiIds": [
@@ -7208,16 +7317,16 @@
       "outputPerMTok": 6
     },
     "costPerTask": {
-      "usd": null,
-      "effort": null
+      "usd": 2.73,
+      "effort": "high"
     },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": "2026-05",
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
-      "effort": null
+      "outputTokensPerSec": 49.8,
+      "timeToFirstTokenSec": 0.85,
+      "effort": "high"
     },
     "license": null,
     "apiIds": [
@@ -7251,7 +7360,7 @@
       "Has picked up a verbose, presumptuous house style — the concise structured findings of 4.5 gave way to forced cadences, per early Cursor feedback, and Artificial Analysis flags it as very verbose on its index run",
       "Crossing the 200K-token prompt threshold reprices the whole request at double rate, and the fast variant doubles it again — long-context or low-latency runs cost far more than the headline"
     ],
-    "notes": "Announced 2026-09-21 after Musk's 2026-09-02 'ten days' promise slipped twice; xAI says it uses a new, larger base model than Grok 4.6 (the 2.1T-parameter figure is Musk's pre-release claim, not on the card) with a longer RL run on multi-hour tasks. xAI's card reports only CursorBench 4.0 46.3%, DeepSWE v1.1 71.0% (high effort), EEBench 64.0%, AA Briefcase v1.1 1,657, Terminal-Bench 4.0 38.0%, Harvey Legal Agent 19.6% and HealthBench Professional 56.7% — none map to a tracked key, and Terminal-Bench 4.0 is not comparable with the 2.1 this site records, so terminalBench is null; Artificial Analysis independently measures Terminal-Bench 4.0 at 26%. AA scores it 46 on its Intelligence Index at both high (the API default) and xhigh effort, but had published no cost-per-task or speed figures as of 2026-09-22, and rates it 1694 (high) / 1695 (xhigh) on GDPval-AA v2.1 — a rescaled successor to the v2 this site's gdpvalAA key records (Grok 4.6 is 1632 on v2.1 against its recorded 1753 on v2), so that cell stays null. GPQA Diamond, HLE, SWE-bench Verified/Pro, AIME, MMLU-Pro and ARC-AGI-2 are unpublished by xAI and AA; arena.ai's board (last updated 2026-09-13) has no listing. Knowledge cutoff May 2026 per docs.x.ai's models page. Pricing $2/$6 with cached input $0.50 applies below a 200K-token prompt; at or above it every token in the request bills at $4/$12 ($1.00 cached), and the fast variant costs double for twice the output speed. Effort levels low/medium/high/xhigh; batch API unsupported; xAI publishes no max-output figure. predecessorId is null: the card says only that it is 'served at the same price and speed as Grok 4.6', and grok-4.6 remains listed in the API. xAI also claims it is its strongest model on refusals and jailbreak resistance. The company rebranded from xAI to SpaceXAI on 2026-07-06; companies.json still carries the old name."
+    "notes": "Announced 2026-09-21 after Musk's 2026-09-02 'ten days' promise slipped twice; xAI says it uses a new, larger base model than Grok 4.6 (the 2.1T-parameter figure is Musk's pre-release claim, not on the card) with a longer RL run on multi-hour tasks. xAI's card reports only CursorBench 4.0 46.3%, DeepSWE v1.1 71.0% (high effort), EEBench 64.0%, AA Briefcase v1.1 1,657, Terminal-Bench 4.0 38.0%, Harvey Legal Agent 19.6% and HealthBench Professional 56.7% — none map to a tracked key, and Terminal-Bench 4.0 is not comparable with the 2.1 this site records, so terminalBench is null; Artificial Analysis independently measures Terminal-Bench 4.0 at 26%. AA scores it 46 on its Intelligence Index at both high (the API default) and xhigh effort; its cost per Intelligence Index task is $2.73 at high (recorded — AA lists no medium variant, and high is the API default) and $3.74 at xhigh, where AA measures 81K output tokens per task (figures first published 2026-09-24, from artificialanalysis.ai/models/grok-4-7-high and /grok-4-7; AA still shows no speed measurement), and it rates it 1694 (high) / 1695 (xhigh) on GDPval-AA v2.1 — a rescaled successor to the v2 this site's gdpvalAA key records (Grok 4.6 is 1632 on v2.1 against its recorded 1753 on v2), so that cell stays null. GPQA Diamond, HLE, SWE-bench Verified/Pro, AIME, MMLU-Pro and ARC-AGI-2 are unpublished by xAI and AA; arena.ai's board (last updated 2026-09-13) has no listing. Knowledge cutoff May 2026 per docs.x.ai's models page. Pricing $2/$6 with cached input $0.50 applies below a 200K-token prompt; at or above it every token in the request bills at $4/$12 ($1.00 cached), and the fast variant costs double for twice the output speed. Effort levels low/medium/high/xhigh; batch API unsupported; xAI publishes no max-output figure. predecessorId is null: the card says only that it is 'served at the same price and speed as Grok 4.6', and grok-4.6 remains listed in the API. xAI also claims it is its strongest model on refusals and jailbreak resistance. The company rebranded from xAI to SpaceXAI on 2026-07-06; companies.json still carries the old name."
   },
   {
     "id": "claude-opus-5-5",
@@ -7276,9 +7385,9 @@
     "availability": "general",
     "knowledgeCutoff": "2026-06",
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
-      "effort": null
+      "outputTokensPerSec": 75.2,
+      "timeToFirstTokenSec": 21.77,
+      "effort": "medium"
     },
     "license": null,
     "apiIds": [
