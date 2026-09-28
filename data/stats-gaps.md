@@ -937,3 +937,12 @@ New-model-release sweep on 2026-09-22 (window widened to 2026-09-11 through 2026
 | mimo-v2-6-flash | gdpvalAA | 2026-09-24 | Xiaomi's Table 3 has no GDPval-AA entry for Flash and AA has not run it; the key also records v2 while AA now publishes v2.1 |
 | mimo-v2-6-flash | costPerTask | 2026-09-24 | no Artificial Analysis listing for MiMo-V2.6-Flash as of launch week (AA payload carries only mimo-v2-6-pro); re-check |
 | mimo-v2-6-flash | knowledgeCutoff | 2026-09-24 | unpublished on the HF card and tech report; the "December 2024" line on the mimo.mi.com model page is a sample system prompt |
+| longcat-2-5-preview | gpqaDiamond, sweBench, sweBenchPro, terminalBench, hle, lmarenaElo, gdpvalAA, arcAgi2, mmluPro, aime | 2026-09-28 | Meituan published no benchmark table, model card or technical report with the preview (X announcement, LongCat API docs/changelog); no Artificial Analysis page as of 2026-09-27; not on arena.ai or ARC Prize; re-check when a card or AA listing appears |
+| longcat-2-5-preview | costPerTask | 2026-09-28 | no Artificial Analysis listing as of launch week; re-check |
+| longcat-2-5-preview | knowledgeCutoff | 2026-09-28 | not stated in the LongCat API docs or the launch posts |
+| longcat-2-5-preview | pricing (standard rate) | 2026-09-28 | $0.30/$1.20 recorded is the vendor's limited-time launch discount; no post-promotion rate is published — re-check longcat.chat/platform/docs/pricing/longcat-2.5 |
+| minimax-m3-1-flash-preview | gpqaDiamond, sweBench, sweBenchPro, terminalBench, hle, lmarenaElo, gdpvalAA, arcAgi2, mmluPro, aime | 2026-09-28 | MiniMax published no benchmark table or model card with the preview (MiniMax_Agent/MiniMax_AI posts, platform.minimax.io text-generation guide); not on Artificial Analysis, arena.ai or ARC Prize; re-check at the full M3.1 release |
+| minimax-m3-1-flash-preview | pricing | 2026-09-28 | Token Plan / MiniMax Code subscription only; no per-token price published, and subscription keys don't work pay-as-you-go |
+| minimax-m3-1-flash-preview | maxOutput | 2026-09-28 | MiniMax's docs give only the 1,000,000-token context window; no output cap stated |
+| minimax-m3-1-flash-preview | costPerTask | 2026-09-28 | no Artificial Analysis listing (no metered API) |
+| minimax-m3-1-flash-preview | knowledgeCutoff | 2026-09-28 | not stated by MiniMax |

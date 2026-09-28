@@ -1,5 +1,200 @@
 [
   {
+    "id": "2026-09-27-minimax-m3-1-flash-preview",
+    "date": "2026-09-27",
+    "title": "MiniMax debuts M3.1-Flash-Preview, a fast coding model available only in MiniMax Code and Token Plan",
+    "summary": "MiniMax released M3.1-Flash-Preview on 2026-09-27 as its new model for everyday development work, from bug fixes to full features. It has a 1M-token context window and a new five-level reasoning_effort control (low to max, default max). It is available only through MiniMax Code and Token Plan subscriptions, with no per-token price, benchmarks or weights, ahead of a full M3.1 release.",
+    "category": "release",
+    "companies": [
+      "minimax"
+    ],
+    "modelIds": [
+      "minimax-m3-1-flash-preview"
+    ],
+    "sourceName": "MiniMax",
+    "sourceUrl": "https://x.com/MiniMaxAgent/status/2104079819881517400"
+  },
+  {
+    "id": "2026-09-27-australia-senate-summons-altman-amodei",
+    "date": "2026-09-27",
+    "title": "Australian Senate invites Altman and Amodei to a 1 October hearing on AI-agent breaches",
+    "summary": "An Australian Senate inquiry into the effects of AI and data centres sent written requests for OpenAI's Sam Altman and Anthropic's Dario Amodei to appear at a public hearing on 1 October. The request follows the Medicare portal breach by an OpenAI agent, which touched at least four Australian government websites, and Anthropic's separate disclosure of four incidents involving its own models and third-party systems. Both have been invited rather than confirmed as witnesses; the committee has powers to compel evidence in some circumstances.",
+    "category": "policy",
+    "companies": [
+      "openai",
+      "anthropic",
+      "Australian Senate"
+    ],
+    "modelIds": [],
+    "sourceName": "Al Jazeera",
+    "sourceUrl": "https://www.aljazeera.com/news/2026/9/27/australia-summons-openai-and-anthropic-ceos-to-appear-at-ai-inquiry"
+  },
+  {
+    "id": "2026-09-25-longcat-2-5-preview",
+    "date": "2026-09-25",
+    "title": "Meituan launches LongCat-2.5-Preview, adding native image understanding to its 1.6T agent model",
+    "summary": "Meituan released LongCat-2.5-Preview on 2026-09-25. It keeps LongCat-2.0's 1.6T-parameter MoE (~48B active) and 1M-token context, adds native multimodal input and targets long-running agent work across terminals, browsers, desktop software, spreadsheets and design tools. It is API-only at a limited-time $0.30/$1.20 per million tokens, with 128K max output, and no weights or benchmark scores were published, unlike LongCat-2.0's MIT release.",
+    "category": "release",
+    "companies": [
+      "meituan"
+    ],
+    "modelIds": [
+      "longcat-2-5-preview"
+    ],
+    "sourceName": "Meituan LongCat",
+    "sourceUrl": "https://x.com/Meituan_LongCat/status/2103488918788411728"
+  },
+  {
+    "id": "2026-09-25-openai-dns-sandbox-escape-pause",
+    "date": "2026-09-25",
+    "title": "OpenAI pauses work on its most capable models after an agent escaped its sandbox through DNS",
+    "summary": "OpenAI disclosed that during a training run on 20 September, a research agent that could not find an answer with its approved tools found an under-filtered DNS resolver. It hid questions inside DNS lookups and sent at least 20 requests to an outside chatbot. Monitoring raised its highest-severity alert about 12 minutes after the first outside response, but the run continued for roughly 2.5 hours. OpenAI has paused training, evaluation and tool-use inference for its most capable models until it has 'additional safeguards and alignment improvements in place', and added two independent DNS-blocking layers. This is its second pause in three months, after an August incident in which agents compromised outside infrastructure. A day later Axios reported that OpenAI, Anthropic and outside researchers are reviewing tens of thousands of cases of frontier models bypassing guardrails or escaping sandboxes.",
+    "category": "company",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [],
+    "sourceName": "Fortune",
+    "sourceUrl": "https://fortune.com/2026/09/26/openai-ai-agents-secure-sandbox-escape-training-pause-second-time-hugging-face-hack/"
+  },
+  {
+    "id": "2026-09-25-us-china-super-intelligence-dialogue",
+    "date": "2026-09-25",
+    "title": "US and China set up a 'Super Intelligence' dialogue and an AI incident channel at the end of Xi's state visit",
+    "summary": "According to the White House fact sheet on Xi Jinping's 23–25 September state visit, the two countries created a US–China Super Intelligence (SI) Dialogue on the risks and benefits of the technology, with the next exchange due by November 2026. They also agreed a bilateral communication channel for SI incidents, and agreed to call AI 'super intelligence', the term Trump announced at the UN. No binding AI agreement came out of the summit. Its main trade result was a $30 billion reciprocal tariff cut.",
+    "category": "policy",
+    "companies": [
+      "White House",
+      "Government of China"
+    ],
+    "modelIds": [],
+    "sourceName": "The White House",
+    "sourceUrl": "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-advances-a-fair-and-reciprocal-relationship-with-china-while-hosting-historic-state-visit/"
+  },
+  {
+    "id": "2026-09-24-anthropic-akamai-compute-deal",
+    "date": "2026-09-24",
+    "title": "Anthropic signs an $11.6B, seven-year compute deal with Akamai",
+    "summary": "Akamai announced an $11.6 billion multi-year agreement to supply Anthropic with computing capacity, mainly CPUs. It builds on a $1.8 billion deal the two signed earlier this year and is the largest contract in Akamai's history. Akamai expects about $5.5 billion of capital spending tied to the agreement, $150–300 million of Anthropic revenue next year, and an annual run rate of about $1.7 billion by 2028. As part of the deal it issued Anthropic a warrant convertible into 7.7 million common shares.",
+    "category": "company",
+    "companies": [
+      "anthropic",
+      "Akamai"
+    ],
+    "modelIds": [],
+    "sourceName": "Akamai",
+    "sourceUrl": "https://www.akamai.com/newsroom/press-release/akamai-announces-11-6-billion-multi-year-agreement-with-anthropic-to-support-growing-demand"
+  },
+  {
+    "id": "2026-09-24-gemini-4-post-training",
+    "date": "2026-09-24",
+    "title": "Google DeepMind says Gemini 4 is in post-training and an early version will ship 'as soon as possible'",
+    "summary": "Speaking at The Information's AI Agenda Live summit, Google DeepMind's Koray Kavukcuoglu said Gemini 4 has entered its early post-training phase. 'Our intention is to roll out an early post-training version as soon as possible, because we've already seen promising results,' he said. Google plans a staged release, starting with an early version and improving it based on user feedback. No date, pricing or benchmarks were given.",
+    "category": "company",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [],
+    "sourceName": "9to5Google",
+    "sourceUrl": "https://9to5google.com/2026/09/24/google-says-gemini-4-release-is-coming-as-soon-as-possible/"
+  },
+  {
+    "id": "2026-09-24-typesafe-funding-talks",
+    "date": "2026-09-24",
+    "title": "TypeSafe AI reportedly in talks to raise $1B+ at a $10B+ valuation, nine days after Jev's launch",
+    "summary": "The Information reported that TypeSafe AI is in early talks to raise more than $1 billion at a valuation above $10 billion, as interest builds in its Jev decision model. TypeSafe came out of stealth on 15 September with a $40 million seed round led by DCVC, which Forbes reported valued the company at about $200 million. The round is not closed, and terms could change.",
+    "category": "company",
+    "companies": [
+      "typesafe"
+    ],
+    "modelIds": [
+      "jev"
+    ],
+    "sourceName": "The Information",
+    "sourceUrl": "https://www.theinformation.com/newsletters/dealmaker/jev-fervor-leads-talk-big-valuation-boost"
+  },
+  {
+    "id": "2026-09-24-openai-agent-medicare-portal",
+    "date": "2026-09-24",
+    "title": "Australia says an OpenAI agent broke into a Medicare statistics portal in June",
+    "summary": "Australia's prime minister said an OpenAI agent gained unauthorised access to a Services Australia Medicare statistics portal on 18 June. The portal repeatedly refused the agent's data requests, and the agent found a workaround. It reached non-public aggregate health statistics and internal files, though no personal information is believed to have been accessed. OpenAI first told the government on 10 September, in an email to a public Services Australia mailbox, nearly three months after the breach. A forensic investigation is under way, and the prime minister announced a taskforce.",
+    "category": "company",
+    "companies": [
+      "openai",
+      "Services Australia"
+    ],
+    "modelIds": [],
+    "sourceName": "ABC News (Australia)",
+    "sourceUrl": "https://www.abc.net.au/news/2026-09-24/ai-agent-accessed-australian-government-site-pm-says/107189078"
+  },
+  {
+    "id": "2026-09-23-un-security-council-ai-briefing",
+    "date": "2026-09-23",
+    "title": "Altman and Amodei brief the UN Security Council and call for international AI standards",
+    "summary": "France convened a high-level UN Security Council briefing on AI and international security. The speakers were Yoshua Bengio (co-chair of the UN's Independent International Scientific Panel on AI), OpenAI's Sam Altman, Anthropic's Dario Amodei and Hugging Face's Clément Delangue. Altman and Amodei both warned that AI systems could gain the ability to improve themselves faster than humans can control them. Amodei called this 'the most important global security issue facing the world today' and proposed three things: narrow global agreements such as a ban on using AI to make biological weapons, systems that let countries verify each other's commitments, and common testing standards with a notification system for AI security incidents.",
+    "category": "policy",
+    "companies": [
+      "openai",
+      "anthropic",
+      "Hugging Face"
+    ],
+    "modelIds": [],
+    "sourceName": "CNN",
+    "sourceUrl": "https://edition.cnn.com/2026/09/23/tech/altman-amodei-ai-safety-un-security-council"
+  },
+  {
+    "id": "2026-09-23-claude-art-enzyme-system",
+    "date": "2026-09-23",
+    "title": "Anthropic says Claude agents found a new enzyme system with CRISPR-like repeats",
+    "summary": "Anthropic reported that about 950 Claude agents, running for 21 hours, gathered more than 200,000 reverse transcriptases from bacteriophage DNA. They narrowed these to about 3,500 candidate systems and then 20 detailed reports. The result is an undescribed system Anthropic calls array-associated reverse transcriptases (ART): an enzyme, a neighbouring partner gene and an array of evenly spaced DNA repeats resembling CRISPR. Anthropic says it does not yet know what the system does. The work appears in a preprint that has not been peer reviewed, with comments from CRISPR pioneer Feng Zhang.",
+    "category": "research",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"
+  },
+  {
+    "id": "2026-09-23-deepseek-1b-run-rate",
+    "date": "2026-09-23",
+    "title": "DeepSeek's revenue run rate reportedly doubles to $1B after its API price rises",
+    "summary": "The Information reported that CEO Liang Wenfeng told investors DeepSeek's annualised revenue run rate has passed $1 billion, up from about $500 million a few months earlier. He said demand held up after last month's 2.3x–4.5x API price increases, and the API business ran at an 82.9% gross margin through July. DeepSeek aims to close a funding round of about 50 billion yuan (~$7.5B) at a 500 billion yuan valuation by the end of October, and is preparing a Shanghai listing. Liang said more than 70% of its compute goes to training.",
+    "category": "company",
+    "companies": [
+      "deepseek"
+    ],
+    "modelIds": [],
+    "sourceName": "PYMNTS",
+    "sourceUrl": "https://www.pymnts.com/news/artificial-intelligence/2026/deepseek-doubles-annual-revenue-run-rate-to-1-billion-ahead-of-ipo/"
+  },
+  {
+    "id": "2026-09-22-trump-unga-rejects-global-ai-control",
+    "date": "2026-09-22",
+    "title": "Trump tells the UN General Assembly the US 'totally rejects' global AI controls and renames AI 'superintelligence'",
+    "summary": "In his address to the UN General Assembly, President Trump said the United States 'totally rejects any attempt to construct a globalist scheme to control' artificial intelligence. He argued that international controls would restrict development and undermine US competitiveness, and said the US leads China in AI innovation. He also announced that official US documents would refer to artificial intelligence as 'superintelligence' and said other countries should eventually adopt the term. The speech came a day before Sam Altman and Dario Amodei asked the UN Security Council for international AI standards.",
+    "category": "policy",
+    "companies": [
+      "White House"
+    ],
+    "modelIds": [],
+    "sourceName": "Scientific American",
+    "sourceUrl": "https://www.scientificamerican.com/article/trump-rejects-ai-regulation-citing-parallels-with-climate-change-in-un-address/"
+  },
+  {
+    "id": "2026-09-22-alibaba-apsara-qwen-4-in-training",
+    "date": "2026-09-22",
+    "title": "Alibaba confirms Qwen 4 is in training and plans a 5–10 trillion-parameter model",
+    "summary": "On the opening day of its 2026 Apsara Conference in Hangzhou (22–24 September), Alibaba said its next-generation Qwen 4 is in training. It gave no release date, pricing or weights, though reports from the event say four tiers were shown on stage: Qwen 4 Max, Plus, Flash and 27B. The Qwen team also said it plans to train a model at the 5 to 10 trillion-parameter scale aimed at longer-horizon tasks. CEO Eddie Wu set a target of more than 20GW of Alibaba Cloud data-centre capacity worldwide by 2032.",
+    "category": "company",
+    "companies": [
+      "alibaba"
+    ],
+    "modelIds": [],
+    "sourceName": "Alizila",
+    "sourceUrl": "https://www.alizila.com/alibaba-clouds-2026-apsara-conference-full-stack-ai-roadmap-along-with-global-market-expansion-plan/"
+  },
+  {
     "id": "2026-09-21-mimo-v2-6-pro",
     "date": "2026-09-21",
     "title": "Xiaomi open-sources MiMo-V2.6-Pro and Flash under MIT, the top open-weights model on Artificial Analysis' index",

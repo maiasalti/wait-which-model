@@ -176,3 +176,12 @@ mimo-v2-6-flash · predecessorId · 2026-09-24 · The Hugging Face card calls it
 mimo-v2-6-flash · retirementDate · 2026-09-24 · No lifecycle or deprecation notice on mimo.mi.com, the Hugging Face card or the tech report. Left null.
 mimo-v2-6-flash · speed · 2026-09-24 · No Artificial Analysis listing for MiMo-V2.6-Flash as of launch week; llm-stats' p95 latency figures are not the AA measurement this field records. Left null.
 mimo-v2-6-flash · apiIds · 2026-09-24 · Xiaomi Open Platform `mimo-v2.6-flash` and OpenRouter `xiaomi/mimo-v2.6-flash` recorded; no Bedrock or Vertex listing found.
+longcat-2-5-preview · predecessorId · 2026-09-28 · Meituan's X announcement and LongCat API docs describe it as retaining LongCat-2.0's architecture and adding multimodality — lineage wording, no replacement claim; LongCat-2.0 remains on the API. Left null.
+longcat-2-5-preview · retirementDate · 2026-09-28 · No lifecycle notice in the LongCat API docs or changelog. Left null.
+longcat-2-5-preview · speed · 2026-09-28 · No Artificial Analysis page as of 2026-09-27. Left null.
+longcat-2-5-preview · license · 2026-09-28 · Not applicable: no weights published (openWeights false). Re-check if Meituan open-sources it as it did LongCat-2.0.
+longcat-2-5-preview · apiIds · 2026-09-28 · LongCat platform `LongCat-2.5-Preview` recorded; OpenRouter, Bedrock and Vertex listings not verified (Vercel AI Gateway and Blackbox listings seen but not recorded).
+minimax-m3-1-flash-preview · predecessorId · 2026-09-28 · MiniMax's launch posts and API docs position it as the latest M-series model and a preview ahead of full M3.1 — no statement that it replaces M3 (M3 remains on pay-as-you-go). Left null.
+minimax-m3-1-flash-preview · retirementDate · 2026-09-28 · No lifecycle notice on platform.minimax.io. Left null.
+minimax-m3-1-flash-preview · speed · 2026-09-28 · Not on Artificial Analysis (subscription-only). Left null.
+minimax-m3-1-flash-preview · apiIds · 2026-09-28 · MiniMax `MiniMax-M3.1-Flash-Preview` (Token Plan endpoints) recorded; no OpenRouter, Bedrock or Vertex listing.
