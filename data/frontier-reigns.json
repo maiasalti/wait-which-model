@@ -125,7 +125,7 @@
     "start": "2025-02-24",
     "end": "2025-09-29",
     "dethronedBy": "claude-sonnet-4-5",
-    "composite": 0.4468
+    "composite": 0.4398
   },
   {
     "modelId": "claude-sonnet-4-5",
@@ -133,7 +133,7 @@
     "start": "2025-09-29",
     "end": "2026-02-17",
     "dethronedBy": "claude-sonnet-4-6",
-    "composite": 0.4619
+    "composite": 0.4443
   },
   {
     "modelId": "claude-sonnet-4-6",
@@ -141,7 +141,7 @@
     "start": "2026-02-17",
     "end": "2026-06-30",
     "dethronedBy": "claude-sonnet-5",
-    "composite": 0.8426
+    "composite": 0.8037
   },
   {
     "modelId": "claude-sonnet-5",
@@ -149,15 +149,23 @@
     "start": "2026-06-30",
     "end": "2026-07-09",
     "dethronedBy": "gpt-5-6-terra",
-    "composite": 0.9363
+    "composite": 0.816
   },
   {
     "modelId": "gpt-5-6-terra",
     "tier": "balanced",
     "start": "2026-07-09",
+    "end": "2026-09-28",
+    "dethronedBy": "claude-sonnet-5-5",
+    "composite": 0.8454
+  },
+  {
+    "modelId": "claude-sonnet-5-5",
+    "tier": "balanced",
+    "start": "2026-09-28",
     "end": null,
     "dethronedBy": null,
-    "composite": 1
+    "composite": 0.9383
   },
   {
     "modelId": "gemini-2-0-flash",

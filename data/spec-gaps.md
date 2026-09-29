@@ -176,3 +176,4 @@ mimo-v2-6-flash · predecessorId · 2026-09-24 · The Hugging Face card calls it
 mimo-v2-6-flash · retirementDate · 2026-09-24 · No lifecycle or deprecation notice on mimo.mi.com, the Hugging Face card or the tech report. Left null.
 mimo-v2-6-flash · speed · 2026-09-24 · No Artificial Analysis listing for MiMo-V2.6-Flash as of launch week; llm-stats' p95 latency figures are not the AA measurement this field records. Left null.
 mimo-v2-6-flash · apiIds · 2026-09-24 · Xiaomi Open Platform `mimo-v2.6-flash` and OpenRouter `xiaomi/mimo-v2.6-flash` recorded; no Bedrock or Vertex listing found.
+claude-sonnet-5-5 · retirementDate · 2026-09-29 · Platform docs list claude-sonnet-5-5 as Active (latest), "Not sooner than September 28, 2027" — a floor, not a retirement announcement. Left null.

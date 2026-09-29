@@ -3119,7 +3119,7 @@
     "name": "GPT-5.6 Terra",
     "company": "openai",
     "releaseDate": "2026-07-09",
-    "status": "frontier",
+    "status": "superseded",
     "tier": "balanced",
     "modality": "multimodal",
     "type": "llm",
@@ -3407,7 +3407,7 @@
     "name": "Claude Sonnet 5",
     "company": "anthropic",
     "releaseDate": "2026-06-30",
-    "status": "frontier",
+    "status": "superseded",
     "tier": "balanced",
     "modality": "multimodal",
     "type": "llm",
@@ -7659,5 +7659,74 @@
       "Too new to characterise beyond launch week — Artificial Analysis has not yet run it, so its speed, per-task cost and independent knowledge scores are unmeasured"
     ],
     "notes": "The efficiency checkpoint of Xiaomi's V2.6 series: a 309B-parameter sparse MoE activating 15B, natively omnimodal (text, image, video and audio in; text out), trained in the same livestreamed 30-step RL run as Pro at a cost Xiaomi puts at $0.85M. Announced 2026-09-21 UTC (22 September Beijing time on mimo.mi.com). Terminal-Bench 2.1 87.6 is Xiaomi's own figure from the Hugging Face card and tech report Table 3. Also reported by Xiaomi: DeepSWE v1.1 67.9, ProgramBench 26.0, AutomationBench v1.0.6 52.3, Toolathlon-Verified 73.6, Agents' Last Exam 27.6, Terminal-Bench 4.0 28.8, OSWorld-Verified 80.8, JobBench 61.2, CyberGym 95.1, ExploitGym 6.0, ExploitBench 25.3, SEC Bench Pro 47.5 and MiMo Visual Coding 71.5; Xiaomi's table has no GDPval-AA entry for Flash. GPQA Diamond, SWE-bench Verified/Pro, HLE, AIME, MMLU-Pro and ARC-AGI-2 are unpublished, it is not on the arena.ai text board (last update 2026-09-13), and Artificial Analysis has no Flash listing as of 2026-09-24, so costPerTask and speed are null. Pricing is Xiaomi's pay-as-you-go rate ($0.14 cache-miss input, $0.0028 cache-hit, $0.28 output, unchanged from V2.5). Context 1M and max output 128K per the mimo.mi.com model page. Weights (MiMo-V2.6-Flash-RL) are MIT on Hugging Face and ModelScope, declared in the card metadata with no separate LICENSE file; a ggml-org GGUF exists. Knowledge cutoff is unpublished — the \"December 2024\" string on the model page is a sample system prompt. predecessorId is null: no Xiaomi source says it replaces MiMo-V2.5 or V2-Flash, neither of which is on this site."
+  },
+  {
+    "id": "claude-sonnet-5-5",
+    "name": "Claude Sonnet 5.5",
+    "company": "anthropic",
+    "releaseDate": "2026-09-28",
+    "status": "frontier",
+    "tier": "balanced",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 2,
+      "outputPerMTok": 10
+    },
+    "costPerTask": {
+      "usd": 7.6,
+      "effort": "max"
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-06",
+    "speed": {
+      "outputTokensPerSec": 138.7,
+      "timeToFirstTokenSec": 327.86,
+      "effort": "max"
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "anthropic",
+        "id": "claude-sonnet-5-5"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "anthropic.claude-sonnet-5-5"
+      },
+      {
+        "provider": "google-vertex",
+        "id": "claude-sonnet-5-5"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": "claude-sonnet-5",
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": 81.3,
+      "terminalBench": 83.2,
+      "aime": null,
+      "hle": 56.9,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Streams noticeably faster than Sonnet 5 and needs fewer tokens per task, so well-scoped bug fixes and everyday coding come back quickly",
+      "Checks its own work on agentic coding — at default effort it runs the project's tests or build before calling a change done",
+      "Tends to add tests and docs that follow the repo's conventions while keeping the requested change itself tight",
+      "The most robust Sonnet yet against indirect prompt injection in coding and browser work"
+    ],
+    "weaknesses": [
+      "The first Sonnet with cyber safeguards — expect refusals even on benign security work, with flagged requests handed to Sonnet 5 when fallback is on",
+      "At low and medium effort it stops to check in partway through multi-part coding tasks — unattended runs need a keep-going instruction or higher effort",
+      "Answers from training knowledge where a search would catch changed details, and hallucinates more than Opus 5.5 on closed-book facts"
+    ],
+    "notes": "HLE 56.9% no tools / 64.5% with tools and SWE-bench Pro 81.3% are Anthropic's system-card figures (Table 8.1.A: adaptive thinking at max effort, five-trial average); the same table gives GDPval-AA v2.1 1844, which stays null here because the tracked key is the v2 scale. Terminal-Bench 2.1 83.2% (83.15%) is Vals AI's independent-harness measurement at high effort (vals.ai/models/anthropic_claude-sonnet-5-5) — third-party, and it drops to 80.5% if fallback-assisted tasks count as failures. Anthropic's launch table leads with Terminal-Bench 4.0 70.6% (max; not comparable with 2.1), FrontierCode v1.1 46.2% at max / 52.1% at xhigh, CursorBench 4.0 55.5%, OSWorld 2.1 80.1% and Chartography 61.6%. Anthropic no longer reports SWE-bench Verified, GPQA Diamond, MMLU-Pro or AIME; ARC Prize has published no result and arena.ai's changelog (through 2026-09-28) has no Sonnet 5.5 text listing. Cost per task and speed are Artificial Analysis' max-effort variant, the only one it lists (Intelligence Index 56, third); first-answer latency is 327.86 s because max-effort thinking runs before the answer. Anthropic claims 30%+ faster output and up to 30% lower cost per task than Sonnet 5. Default effort is high; adaptive thinking is on by default with between_tools (no up-front thinking) as the lowest setting, and forced tool_choice and non-default sampling parameters are rejected. With server-side fallback enabled, cyber and frontier-LLM classifier declines are retried on Sonnet 5. Cache reads $0.20/MTok; batch 50% off; max output rises to 300K via the Message Batches API beta. Also served on Microsoft Foundry and Claude Platform on AWS as claude-sonnet-5-5."
   }
 ]

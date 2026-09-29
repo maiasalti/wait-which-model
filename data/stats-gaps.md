@@ -937,3 +937,10 @@ New-model-release sweep on 2026-09-22 (window widened to 2026-09-11 through 2026
 | mimo-v2-6-flash | gdpvalAA | 2026-09-24 | Xiaomi's Table 3 has no GDPval-AA entry for Flash and AA has not run it; the key also records v2 while AA now publishes v2.1 |
 | mimo-v2-6-flash | costPerTask | 2026-09-24 | no Artificial Analysis listing for MiMo-V2.6-Flash as of launch week (AA payload carries only mimo-v2-6-pro); re-check |
 | mimo-v2-6-flash | knowledgeCutoff | 2026-09-24 | unpublished on the HF card and tech report; the "December 2024" line on the mimo.mi.com model page is a sample system prompt |
+| claude-sonnet-5-5 | gpqaDiamond | 2026-09-29 | not in Anthropic's launch page or system card (GPQA dropped from official reporting); not on Vals AI's model page; Artificial Analysis' model page breaks out no GPQA figure |
+| claude-sonnet-5-5 | sweBench | 2026-09-29 | system card reports SWE-bench Pro / Multilingual / Multimodal only; no SWE-bench Verified run on Vals AI as of 2026-09-29 |
+| claude-sonnet-5-5 | mmluPro | 2026-09-29 | not in the launch page or system card (only Global MMLU 92.1%) |
+| claude-sonnet-5-5 | aime | 2026-09-29 | not published; Anthropic retired AIME from reporting |
+| claude-sonnet-5-5 | arcAgi2 | 2026-09-29 | no ARC Prize results page (arcprize.org/results/anthropic-claude-sonnet-5-5 returns 404) — re-check |
+| claude-sonnet-5-5 | lmarenaElo | 2026-09-29 | arena.ai's leaderboard changelog (through 2026-09-28) has no Sonnet 5.5 text listing — re-check |
+| claude-sonnet-5-5 | gdpvalAA | 2026-09-29 | Anthropic's system card reports 1844 on GDPval-AA v2.1 (max effort, run by Artificial Analysis) — a different scale from the v2 this key records |
