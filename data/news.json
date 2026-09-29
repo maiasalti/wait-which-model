@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-09-28-claude-sonnet-5-5",
+    "date": "2026-09-28",
+    "title": "Anthropic releases Claude Sonnet 5.5 at Sonnet 5's price, with Opus-class cyber safeguards",
+    "summary": "Anthropic shipped Claude Sonnet 5.5, the second Claude 5.5 model, at Sonnet 5's $2/$10 per million tokens with a 1M context, 128K output and a June 2026 knowledge cutoff, saying it runs more than 30% faster and costs up to 30% less per task than its predecessor; it reports Terminal-Bench 4.0 70.6% (Sonnet 5: 10.3%), HLE 64.5% with tools and a GDPval-AA v2.1 rating two points below Opus 5.5. It is the first Sonnet to ship with cyber safeguards that fall back to Sonnet 5 on higher-risk requests and classifiers that block reasoning extraction; Haiku 5.5 is to follow in the coming weeks.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-sonnet-5-5"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/claude-sonnet-5-5"
+  },
+  {
     "id": "2026-09-21-mimo-v2-6-pro",
     "date": "2026-09-21",
     "title": "Xiaomi open-sources MiMo-V2.6-Pro and Flash under MIT, the top open-weights model on Artificial Analysis' index",

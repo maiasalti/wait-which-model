@@ -427,12 +427,21 @@
     "availability": "general",
     "knowledgeCutoff": "2024-10",
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
-      "effort": null
+      "outputTokensPerSec": 84.7,
+      "timeToFirstTokenSec": 47.7,
+      "effort": "high"
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "gpt-5.1"
+      },
+      {
+        "provider": "openai",
+        "id": "gpt-5.1-2025-11-13"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -456,7 +465,7 @@
       "Still misjudges ambiguous prompts, occasionally answering a hard question from the fast path",
       "The gains are in feel and pacing rather than capability — easier to work with, not smarter"
     ],
-    "notes": "Shipped as Instant and Thinking variants."
+    "notes": "Shipped as Instant and Thinking variants. Speed is Artificial Analysis' GPT-5.1 (high) measurement."
   },
   {
     "id": "claude-3-opus",
@@ -1011,8 +1020,8 @@
     "availability": "general",
     "knowledgeCutoff": "2025-08",
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
+      "outputTokensPerSec": 48.4,
+      "timeToFirstTokenSec": 10.59,
       "effort": null
     },
     "license": null,
@@ -1053,7 +1062,7 @@
       "Context felt tight for whole-repository work by the standards of its own moment",
       "Verbose by default — explains its reasoning even when you only wanted the answer"
     ],
-    "notes": "SWE-bench Pro 45.89% is Scale's public-set leaderboard figure for claude-opus-4-5-20251101 — third-party, not Anthropic-reported."
+    "notes": "SWE-bench Pro 45.89% is Scale's public-set leaderboard figure for claude-opus-4-5-20251101 — third-party, not Anthropic-reported. Speed is Artificial Analysis' Claude Opus 4.5 (Reasoning) measurement."
   },
   {
     "id": "gemini-1-5-pro",
@@ -2152,7 +2161,12 @@
       "url": "https://huggingface.co/moonshotai/Kimi-K3/blob/main/LICENSE",
       "commercialUse": true
     },
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "moonshot",
+        "id": "kimi-k3"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -2202,8 +2216,8 @@
     "availability": "general",
     "knowledgeCutoff": null,
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
+      "outputTokensPerSec": 77.1,
+      "timeToFirstTokenSec": 1.05,
       "effort": null
     },
     "license": {
@@ -2242,7 +2256,7 @@
       "Pattern-matches rather than reasons — it doesn't improve if you let it think longer",
       "Context feels short for the long-document work it is otherwise best at"
     ],
-    "notes": "Official pricing $0.50/$1.50; some trackers list hosted rates of $2/$6. GPQA Diamond 67.17 per Mistral's HF model card; not a dedicated reasoning model, so most 2026 reasoning benchmarks are unreported."
+    "notes": "Official pricing $0.50/$1.50; some trackers list hosted rates of $2/$6. GPQA Diamond 67.17 per Mistral's HF model card; not a dedicated reasoning model, so most 2026 reasoning benchmarks are unreported. Speed is Artificial Analysis' measurement."
   },
   {
     "id": "gemini-3-1-pro",
@@ -2272,7 +2286,16 @@
       "effort": null
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "google",
+        "id": "gemini-3.1-pro-preview"
+      },
+      {
+        "provider": "google-vertex",
+        "id": "gemini-3.1-pro-preview"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -2386,8 +2409,19 @@
       "timeToFirstTokenSec": null,
       "effort": null
     },
-    "license": null,
-    "apiIds": [],
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/mistralai/Mistral-Small-4-119B-2603",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "mistral",
+        "id": "mistral-small-2603"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -2495,7 +2529,20 @@
       "effort": "medium"
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "gpt-5.5"
+      },
+      {
+        "provider": "openai",
+        "id": "gpt-5.5-2026-04-23"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "openai.gpt-5.5"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -2549,7 +2596,13 @@
       "timeToFirstTokenSec": null,
       "effort": null
     },
-    "license": null,
+    "license": {
+      "spdx": "MIT",
+      "name": "MIT License",
+      "kind": "permissive",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro/blob/main/LICENSE",
+      "commercialUse": true
+    },
     "apiIds": [],
     "retirementDate": null,
     "predecessorId": null,
@@ -2605,7 +2658,16 @@
       "effort": "high"
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "xai",
+        "id": "grok-4.3"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "xai.grok-4.3"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -2714,7 +2776,7 @@
     "availability": "restricted",
     "knowledgeCutoff": null,
     "speed": {
-      "outputTokensPerSec": null,
+      "outputTokensPerSec": 37.3,
       "timeToFirstTokenSec": null,
       "effort": null
     },
@@ -2748,7 +2810,7 @@
       "No model card or active-parameter count published, so its real speed and cost profile are unknown",
       "Reachable only through subscription plans rather than a per-token endpoint"
     ],
-    "notes": "Announced 2026-07-19 at WAIC Shanghai as a preview, then given a general-availability launch with standard API pricing on 2026-08-03 (Alibaba Cloud Model Studio blog: \"Qwen3.8-Max: A New Bar for Coding and Cowork\"). Alibaba's own release benchmark table (self-reported, published as an image and not independently re-derivable) claims GPQA Diamond 92.6, Terminal-Bench 2.1 86.6, HLE 43.6, and SWE-bench Pro 67.7 — relayed via MarkTechPost and OfficeChai coverage of the announcement. Artificial Analysis's own independent evaluation (artificialanalysis.ai/models/qwen3-8-max and its per-benchmark leaderboards) measured GPQA Diamond 92.7 (close to Alibaba's claim) but Terminal-Bench v2.1 81.3 and HLE 41.4 — both notably below Alibaba's self-reported figures — so the AA-measured numbers are recorded here as the more independently verifiable source, with the discrepancy noted. Pricing ($2.00/$6.00 per 1M input/output tokens) is Alibaba Cloud Model Studio's Singapore/international rate; the China Beijing, Frankfurt, Virginia, Tokyo and Hong Kong regions price lower at $1.65/$4.951. Open weights, promised \"next week\" as of the Aug 3 announcement, arrived on 2026-08-13 — but as `qwen3-8-2-4t-a95b`, a reduced text-only variant with a 262K native window rather than this multimodal 1M-context Max build, which stays closed. Context window (983,616) and max output (131,072) match Alibaba Cloud Model Studio's official model-info page (context 1,000,000, max input 991,808 with 1,000,000 minus max-output overhead, max output 131,072); some coverage rounds context down to \"1M tokens.\""
+    "notes": "Announced 2026-07-19 at WAIC Shanghai as a preview, then given a general-availability launch with standard API pricing on 2026-08-03 (Alibaba Cloud Model Studio blog: \"Qwen3.8-Max: A New Bar for Coding and Cowork\"). Alibaba's own release benchmark table (self-reported, published as an image and not independently re-derivable) claims GPQA Diamond 92.6, Terminal-Bench 2.1 86.6, HLE 43.6, and SWE-bench Pro 67.7 — relayed via MarkTechPost and OfficeChai coverage of the announcement. Artificial Analysis's own independent evaluation (artificialanalysis.ai/models/qwen3-8-max and its per-benchmark leaderboards) measured GPQA Diamond 92.7 (close to Alibaba's claim) but Terminal-Bench v2.1 81.3 and HLE 41.4 — both notably below Alibaba's self-reported figures — so the AA-measured numbers are recorded here as the more independently verifiable source, with the discrepancy noted. Pricing ($2.00/$6.00 per 1M input/output tokens) is Alibaba Cloud Model Studio's Singapore/international rate; the China Beijing, Frankfurt, Virginia, Tokyo and Hong Kong regions price lower at $1.65/$4.951. Open weights, promised \"next week\" as of the Aug 3 announcement, arrived on 2026-08-13 — but as `qwen3-8-2-4t-a95b`, a reduced text-only variant with a 262K native window rather than this multimodal 1M-context Max build, which stays closed. Context window (983,616) and max output (131,072) match Alibaba Cloud Model Studio's official model-info page (context 1,000,000, max input 991,808 with 1,000,000 minus max-output overhead, max output 131,072); some coverage rounds context down to \"1M tokens.\" Output speed is from Artificial Analysis' page for the August build (qwen3-8-max-0803); its time to first answer token was not readable and is left null."
   },
   {
     "id": "qwen3-7-max",
@@ -2970,7 +3032,13 @@
       "timeToFirstTokenSec": null,
       "effort": null
     },
-    "license": null,
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/google/gemma-4-31B-it",
+      "commercialUse": true
+    },
     "apiIds": [],
     "retirementDate": null,
     "predecessorId": null,
@@ -3026,7 +3094,13 @@
       "timeToFirstTokenSec": 1.61,
       "effort": "max"
     },
-    "license": null,
+    "license": {
+      "spdx": "MIT",
+      "name": "MIT License",
+      "kind": "permissive",
+      "url": "https://huggingface.co/zai-org/GLM-5.2/blob/main/LICENSE",
+      "commercialUse": true
+    },
     "apiIds": [],
     "retirementDate": null,
     "predecessorId": null,
@@ -3376,7 +3450,12 @@
       "effort": null
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "google",
+        "id": "gemini-3.5-flash-lite"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -3494,7 +3573,12 @@
       "effort": "high"
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "xai",
+        "id": "grok-4.5"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -3679,7 +3763,16 @@
       "url": "https://huggingface.co/thinkingmachines/Inkling",
       "commercialUse": true
     },
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "tinker",
+        "id": "thinkingmachines/Inkling"
+      },
+      {
+        "provider": "openrouter",
+        "id": "thinkingmachines/inkling"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -3740,7 +3833,12 @@
       "url": "https://huggingface.co/poolside/Laguna-S-2.1",
       "commercialUse": true
     },
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "openrouter",
+        "id": "poolside/laguna-s-2.1"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -3796,7 +3894,12 @@
       "effort": null
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "nvidia",
+        "id": "nvidia/nemotron-3-super-120b-a12b"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -3849,8 +3952,19 @@
       "timeToFirstTokenSec": null,
       "effort": null
     },
-    "license": null,
-    "apiIds": [],
+    "license": {
+      "spdx": null,
+      "name": "OpenMDW-1.1 License",
+      "kind": "permissive",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "nvidia",
+        "id": "nvidia/nemotron-3-ultra-550b-a55b"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -3905,8 +4019,19 @@
       "timeToFirstTokenSec": 2.69,
       "effort": null
     },
-    "license": null,
-    "apiIds": [],
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/tencent/Hy3/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "tencent-cloud",
+        "id": "hy3"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -3961,8 +4086,23 @@
       "timeToFirstTokenSec": 2.78,
       "effort": null
     },
-    "license": null,
-    "apiIds": [],
+    "license": {
+      "spdx": "MIT",
+      "name": "MIT License",
+      "kind": "permissive",
+      "url": "https://huggingface.co/meituan-longcat/LongCat-2.0",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "meituan",
+        "id": "LongCat-2.0"
+      },
+      {
+        "provider": "openrouter",
+        "id": "meituan/longcat-2.0"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -4073,7 +4213,13 @@
       "timeToFirstTokenSec": null,
       "effort": null
     },
-    "license": null,
+    "license": {
+      "spdx": null,
+      "name": "OpenMDW-1.1 License",
+      "kind": "permissive",
+      "url": "https://huggingface.co/poolside/Laguna-XS-2.1/blob/main/LICENSE.md",
+      "commercialUse": true
+    },
     "apiIds": [],
     "retirementDate": null,
     "predecessorId": null,
@@ -4136,7 +4282,12 @@
       "url": "https://huggingface.co/thinkingmachines/Inkling-Small",
       "commercialUse": true
     },
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "tinker",
+        "id": "thinkingmachines/Inkling-Small"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -4192,7 +4343,12 @@
       "effort": null
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "Alibaba Cloud Model Studio",
+        "id": "qwen3.7-flash"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -4764,7 +4920,7 @@
       "outputPerMTok": 1.2
     },
     "costPerTask": {
-      "usd": null,
+      "usd": 0.51,
       "effort": null
     },
     "openWeights": true,
@@ -4812,7 +4968,7 @@
       "Multimodal input is new to this generation, so image/video handling is comparatively less battle-tested than its text/coding path",
       "Early hands-on reception is cautiously optimistic rather than settled — reliability on production agent loops still needs workload-specific testing"
     ],
-    "notes": "Officially announced 2026-06-01 (minimax.io/blog/minimax-m3); some third-party trackers (e.g. OpenRouter) list 2026-05-31, likely the weights-availability date. Total/active parameters ~428B/23B per the Hugging Face model card. SWE-bench Verified 80.5% and Terminal-Bench 2.1 66.0% are corroborated across the Hugging Face README and MiniMax's own blog. GPQA Diamond, AIME, HLE, MMLU-Pro and ARC-AGI-2 were not extractable — MiniMax's benchmark table at launch is an embedded image rather than machine-readable text, and no independent source reproduced these specific figures. Licensed under the bespoke 'MiniMax Community License': free for non-commercial use; commercial use under $20M annual revenue requires only a notice email and a 'Built with MiniMax' attribution label, above that threshold prior written authorization is required. Third-party framing calls M3 a 'successor to M2.7' (not tracked here), but MiniMax's own material explicitly keeps M2.5 available as a cheaper option for some workloads rather than deprecating it, so predecessorId is left null. Pricing is the standard tier for inputs up to 512K tokens; above that the rate doubles to $0.60/$2.40 per MTok. LMArena Elo 1441 is the \"minimax-m3\" text-arena listing (arena.ai, 2026-09-13 update). SWE-Bench Pro 59.0% is MiniMax's own launch figure (the benchmark table is an image), as reproduced by VentureBeat, CodingFleet and llm-stats."
+    "notes": "Officially announced 2026-06-01 (minimax.io/blog/minimax-m3); some third-party trackers (e.g. OpenRouter) list 2026-05-31, likely the weights-availability date. Total/active parameters ~428B/23B per the Hugging Face model card. SWE-bench Verified 80.5% and Terminal-Bench 2.1 66.0% are corroborated across the Hugging Face README and MiniMax's own blog. GPQA Diamond, AIME, HLE, MMLU-Pro and ARC-AGI-2 were not extractable — MiniMax's benchmark table at launch is an embedded image rather than machine-readable text, and no independent source reproduced these specific figures. Licensed under the bespoke 'MiniMax Community License': free for non-commercial use; commercial use under $20M annual revenue requires only a notice email and a 'Built with MiniMax' attribution label, above that threshold prior written authorization is required. Third-party framing calls M3 a 'successor to M2.7' (not tracked here), but MiniMax's own material explicitly keeps M2.5 available as a cheaper option for some workloads rather than deprecating it, so predecessorId is left null. Pricing is the standard tier for inputs up to 512K tokens; above that the rate doubles to $0.60/$2.40 per MTok. LMArena Elo 1441 is the \"minimax-m3\" text-arena listing (arena.ai, 2026-09-13 update). SWE-Bench Pro 59.0% is MiniMax's own launch figure (the benchmark table is an image), as reproduced by VentureBeat, CodingFleet and llm-stats. Cost per task is Artificial Analysis' figure for its single, unlabelled MiniMax-M3 variant."
   },
   {
     "id": "seed-2-0-pro",
@@ -5377,16 +5533,16 @@
       "outputPerMTok": 1.5
     },
     "costPerTask": {
-      "usd": null,
-      "effort": null
+      "usd": 0.06,
+      "effort": "high"
     },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": "2026-01",
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
-      "effort": null
+      "outputTokensPerSec": 141.3,
+      "timeToFirstTokenSec": 1.37,
+      "effort": "high"
     },
     "license": {
       "spdx": "Apache-2.0",
@@ -5421,7 +5577,7 @@
       "No audio input or output, and video is sampled as individual frames rather than processed natively",
       "Launched compared only against Meta's own chosen size-class peers (Gemma4-31B, Qwen3.6-27B) — no independent LMArena or Artificial Analysis leaderboard placement yet"
     ],
-    "notes": "Distilled from Muse Spark via logit distillation, but Meta's model card doesn't state it replaces Muse Spark, which stays on as Meta's separate, closed flagship. Benchmarks are Meta's own reported 'High Reasoning' figures except GPQA Diamond (83.5) and HLE Text-only (22.0), which the model card itself attributes to Artificial Analysis measurement rather than Meta's own eval. Terminal-Bench 2.1 (51.7%) was run 'with terminus2' scaffold; SWE-bench Pro 51.2% was also reported. MMLU-Pro, LMArena Elo and ARC-AGI-2 are unpublished; Artificial Analysis hadn't indexed the model for its Intelligence Index or speed benchmarks as of this check (released 2026-08-10), so costPerTask and speed are null. Pricing shown ($0.35/$1.50 per MTok) is OpenRouter's hosted rate — Meta offers no official API for this open-weight release; Together AI and Fireworks AI also host it."
+    "notes": "Distilled from Muse Spark via logit distillation, but Meta's model card doesn't state it replaces Muse Spark, which stays on as Meta's separate, closed flagship. Benchmarks are Meta's own reported 'High Reasoning' figures except GPQA Diamond (83.5) and HLE Text-only (22.0), which the model card itself attributes to Artificial Analysis measurement rather than Meta's own eval. Terminal-Bench 2.1 (51.7%) was run 'with terminus2' scaffold; SWE-bench Pro 51.2% was also reported. MMLU-Pro, LMArena Elo and ARC-AGI-2 are unpublished; Artificial Analysis has since indexed it at high effort: $0.06 per Intelligence Index task, and 141.3 tok/s with 1.37 s to first answer token as the median across providers. Pricing shown ($0.35/$1.50 per MTok) is OpenRouter's hosted rate — Meta offers no official API for this open-weight release; Together AI and Fireworks AI also host it."
   },
   {
     "id": "gpt-5-6-cyber",
@@ -5555,7 +5711,7 @@
     "name": "Grok 4.6",
     "company": "xai",
     "releaseDate": "2026-08-12",
-    "status": "superseded",
+    "status": "frontier",
     "tier": "flagship",
     "modality": "multimodal",
     "type": "llm",
@@ -5588,7 +5744,7 @@
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
-      "gpqaDiamond": null,
+      "gpqaDiamond": 94.9,
       "sweBench": null,
       "sweBenchPro": null,
       "terminalBench": 88.4,
@@ -5608,7 +5764,7 @@
       "Weakest on terminal and command-line work, well behind its scores on other agentic tasks",
       "Crossing the 200K-token prompt threshold reprices the whole request at double rate, so long-context runs cost more than the headline suggests"
     ],
-    "notes": "Reuses Grok 4.5's 1.5T-parameter base, with the gains from supervised fine-tuning on regenerated trajectories and reinforcement learning rather than a new pre-train. Terminal-Bench 2.1 88.4% is Artificial Analysis-measured; xAI's own card leads with Terminal-Bench 3.0 (26.5%), a different and much harder version that is not comparable to the 2.1 figure this site tracks. GPQA Diamond, MMLU-Pro, HLE, SWE-bench Verified and AIME are unpublished by both xAI and AA (ARC-AGI-2 was later verified by ARC Prize, below), and the model has no arena.ai listing, so lmarenaElo is null — note that the widely-quoted \"1753 Elo\" is GDPval-AA v2, not LMArena. AA Intelligence Index 61 (joint third at release, level with GPT-5.6 Sol), cost per task $0.84 and speed measured at high effort. Pricing $2/$6 applies below a 200K-token prompt; above it every token in the request bills at $4/$12, and a fast variant costs double. xAI publishes no max-output figure. The company rebranded from xAI to SpaceXAI on 2026-07-06 after merging into SpaceX; companies.json still carries the old name. ARC-AGI-2 67.1% is ARC Prize-verified at xhigh effort ($0.76/task; high 65.1%, medium 61.3%), published 2026-08-11 at arcprize.org/results/xai-grok-4-6."
+    "notes": "Reuses Grok 4.5's 1.5T-parameter base, with the gains from supervised fine-tuning on regenerated trajectories and reinforcement learning rather than a new pre-train. Terminal-Bench 2.1 88.4% is Artificial Analysis-measured; xAI's own card leads with Terminal-Bench 3.0 (26.5%), a different and much harder version that is not comparable to the 2.1 figure this site tracks. GPQA Diamond 94.9% is Artificial Analysis' measurement at high effort, not xAI's; MMLU-Pro, HLE, SWE-bench Verified and AIME are unpublished by both xAI and AA (ARC-AGI-2 was later verified by ARC Prize, below), and the model has no arena.ai listing, so lmarenaElo is null — note that the widely-quoted \"1753 Elo\" is GDPval-AA v2, not LMArena. AA Intelligence Index 61 (joint third at release, level with GPT-5.6 Sol), cost per task $0.84 and speed measured at high effort. Pricing $2/$6 applies below a 200K-token prompt; above it every token in the request bills at $4/$12, and a fast variant costs double. xAI publishes no max-output figure. The company rebranded from xAI to SpaceXAI on 2026-07-06 after merging into SpaceX; companies.json still carries the old name. ARC-AGI-2 67.1% is ARC Prize-verified at xhigh effort ($0.76/task; high 65.1%, medium 61.3%), published 2026-08-11 at arcprize.org/results/xai-grok-4-6."
   },
   {
     "id": "qwen3-8-2-4t-a95b",
@@ -5626,7 +5782,7 @@
       "outputPerMTok": 6
     },
     "costPerTask": {
-      "usd": null,
+      "usd": 2.16,
       "effort": null
     },
     "openWeights": true,
@@ -5669,7 +5825,7 @@
       "Thinking mode cannot be switched off, so a one-line factual question still pays the full reasoning cost",
       "Licence pulls large deployments back into a negotiated agreement once revenue or user thresholds are crossed"
     ],
-    "notes": "Qwen's own model card describes this as the post-trained base that Qwen3.8-Max is built on, with Max adding vision and a non-thinking mode — so it is a distinct, reduced artefact rather than the tracked qwen3-8-max entry going open. 2.4T total / 95B active MoE. Context is 262,144 native, extensible to ~1,010,000; max output is the 131,072 final-response cap (reasoning content may run to 262,144). Benchmarks are Alibaba's own self-reported card figures (GPQA Diamond 92.6, Terminal-Bench 2.1 86.6, HLE 43.6) — note Artificial Analysis independently measured the closely-related Max at 92.7 / 81.3 / 41.4, so the Terminal-Bench and HLE claims here should be read as unverified. SWE-bench Pro 67.7 is Alibaba's own figure. MMLU-Pro, AIME, LMArena Elo and ARC-AGI-2 are unpublished, and AA had not indexed this variant separately at the time of this check, so costPerTask and speed are null. Pricing is OpenRouter's hosted rate; Alibaba publishes no first-party price for the open-weight release, which is also served by Together AI and Fireworks AI. The licence permits commercial use but requires prominent model-name attribution above 100M MAU or $20M monthly revenue, and a separate agreement for Model-as-a-Service or AI-assistant products above $50M annual revenue."
+    "notes": "Qwen's own model card describes this as the post-trained base that Qwen3.8-Max is built on, with Max adding vision and a non-thinking mode — so it is a distinct, reduced artefact rather than the tracked qwen3-8-max entry going open. 2.4T total / 95B active MoE. Context is 262,144 native, extensible to ~1,010,000; max output is the 131,072 final-response cap (reasoning content may run to 262,144). Benchmarks are Alibaba's own self-reported card figures (GPQA Diamond 92.6, Terminal-Bench 2.1 86.6, HLE 43.6) — note Artificial Analysis independently measured the closely-related Max at 92.7 / 81.3 / 41.4, so the Terminal-Bench and HLE claims here should be read as unverified. SWE-bench Pro 67.7 is Alibaba's own figure. MMLU-Pro, AIME, LMArena Elo and ARC-AGI-2 are unpublished, AA has since indexed this variant at $2.16 per Intelligence Index task with no effort label; speed is still null. Pricing is OpenRouter's hosted rate; Alibaba publishes no first-party price for the open-weight release, which is also served by Together AI and Fireworks AI. The licence permits commercial use but requires prominent model-name attribution above 100M MAU or $20M monthly revenue, and a separate agreement for Model-as-a-Service or AI-assistant products above $50M annual revenue."
   },
   {
     "id": "gemini-3-7-flash",
@@ -5746,8 +5902,8 @@
       "outputPerMTok": 3.2
     },
     "costPerTask": {
-      "usd": null,
-      "effort": null
+      "usd": 1.01,
+      "effort": "xhigh"
     },
     "openWeights": true,
     "availability": "general",
@@ -5789,7 +5945,7 @@
       "Trails the closed frontier flagships on the hardest science and knowledge questions — a 27.8B dense model has a real ceiling",
       "No technical report or knowledge cutoff disclosed at launch, so training-data freshness and provenance are unclear"
     ],
-    "notes": "27.8B dense (not MoE) multimodal model — distinct from the 2.4T-parameter MoE flagship qwen3-8-2-4t-a95b (2026-08-13) and the closed qwen3-8-max, and is the smaller open checkpoint Alibaba promised alongside Qwen3.8-Max's 2026-08-03 GA announcement. GPQA Diamond 89.2% and Terminal-Bench 2.1 73.0% (up from 63.4% for Qwen3.6-27B) are from Alibaba's own release material; SWE-bench Pro 61.7% and OSWorld-Verified 84.3% were also reported. Qwen's own announcement (X/@Alibaba_Qwen) says it 'outperforms Qwen3.7-Plus overall' — comparison language, not a replacement statement, so predecessorId is left null. Pricing is OpenRouter's hosted rate ($0.45/$3.20 per 1M in/out); Alibaba has not published a first-party DashScope price for this open-weight checkpoint. Context is 262,144 native, extendable to roughly 1M via YaRN; max output is the 131,072 cap."
+    "notes": "27.8B dense (not MoE) multimodal model — distinct from the 2.4T-parameter MoE flagship qwen3-8-2-4t-a95b (2026-08-13) and the closed qwen3-8-max, and is the smaller open checkpoint Alibaba promised alongside Qwen3.8-Max's 2026-08-03 GA announcement. GPQA Diamond 89.2% and Terminal-Bench 2.1 73.0% (up from 63.4% for Qwen3.6-27B) are from Alibaba's own release material; SWE-bench Pro 61.7% and OSWorld-Verified 84.3% were also reported. Qwen's own announcement (X/@Alibaba_Qwen) says it 'outperforms Qwen3.7-Plus overall' — comparison language, not a replacement statement, so predecessorId is left null. Pricing is OpenRouter's hosted rate ($0.45/$3.20 per 1M in/out); Alibaba has not published a first-party DashScope price for this open-weight checkpoint. Context is 262,144 native, extendable to roughly 1M via YaRN; max output is the 131,072 cap. Cost per task is Artificial Analysis' xhigh-effort figure."
   },
   {
     "id": "glm-5-3",
@@ -5807,8 +5963,8 @@
       "outputPerMTok": 4.4
     },
     "costPerTask": {
-      "usd": null,
-      "effort": null
+      "usd": 2.01,
+      "effort": "max"
     },
     "openWeights": true,
     "availability": "general",
@@ -5855,7 +6011,7 @@
       "Good at finding exploitable bugs but weaker at writing the exploits itself — defensive security strength doesn't carry over to offensive tasks",
       "Reasoning is always-on with only a low/high/max budget dial, and Artificial Analysis measures it at max — every call carries thinking overhead you cannot switch off"
     ],
-    "notes": "Same ~744B-parameter (~40B active) MoE base as GLM-5.2 — Z.ai's own framing is 'scaling post-training is all we did for GLM-5.3' — so predecessorId is left null per this site's rule against lineage/build-upon language as replacement evidence, even though several outlets call GLM-5.2 its 'predecessor.' Z.ai's launch benchmark table is entirely agentic/coding/cyber (Terminal-Bench 2.1 88.2%, Terminal-Bench 3.0 4.6%→28.3%, DeepSWE v1.1 46.2%→66.9%, SWE-Marathon v1.1 19.4%→42.5%, AutomationBench 26.2%→48.2%, Agents' Last Exam 23.8%→28.5%, CyberGym 84.5% — ahead of Claude Mythos 5's 83.8% and GPT-5.6 Sol's 83.6% by Z.ai's account) and doesn't touch the site's tracked knowledge/reasoning keys, consistent with the unchanged-base-model claim. Context window and max output are carried over unchanged from GLM-5.2 (1M / 128K) pending a dedicated 5.3 model card. Weights have since been published on Hugging Face (zai-org/GLM-5.3) under a bespoke \"GLM-5.3 License\" rather than the MIT terms used for GLM-5.2 and GLM-5.3-Flash: an MIT-style grant covering weights, code and derivative works, with one added condition — any Model-as-a-Service operator whose group revenue exceeds US$10B in a 12-month period must pass a Z.ai security review before commercial use. Z.ai's API now lists the model as glm-5.3 at $1.40/$4.40 per M input/output tokens (cached input $0.26); Artificial Analysis measures the max-effort variant at 72 tok/s and 1.63 s to first answer token, but its per-task cost figure could not be read. The exact weights-publication date (reported as 2026-08-28 by several trackers) could not be confirmed from a primary page. LMArena Elo 1483 is the \"glm-5.3-max\" text-arena listing (arena.ai, 2026-09-13 update, rank 19)."
+    "notes": "Same ~744B-parameter (~40B active) MoE base as GLM-5.2 — Z.ai's own framing is 'scaling post-training is all we did for GLM-5.3' — so predecessorId is left null per this site's rule against lineage/build-upon language as replacement evidence, even though several outlets call GLM-5.2 its 'predecessor.' Z.ai's launch benchmark table is entirely agentic/coding/cyber (Terminal-Bench 2.1 88.2%, Terminal-Bench 3.0 4.6%→28.3%, DeepSWE v1.1 46.2%→66.9%, SWE-Marathon v1.1 19.4%→42.5%, AutomationBench 26.2%→48.2%, Agents' Last Exam 23.8%→28.5%, CyberGym 84.5% — ahead of Claude Mythos 5's 83.8% and GPT-5.6 Sol's 83.6% by Z.ai's account) and doesn't touch the site's tracked knowledge/reasoning keys, consistent with the unchanged-base-model claim. Context window and max output are carried over unchanged from GLM-5.2 (1M / 128K) pending a dedicated 5.3 model card. Weights have since been published on Hugging Face (zai-org/GLM-5.3) under a bespoke \"GLM-5.3 License\" rather than the MIT terms used for GLM-5.2 and GLM-5.3-Flash: an MIT-style grant covering weights, code and derivative works, with one added condition — any Model-as-a-Service operator whose group revenue exceeds US$10B in a 12-month period must pass a Z.ai security review before commercial use. Z.ai's API now lists the model as glm-5.3 at $1.40/$4.40 per M input/output tokens (cached input $0.26); Artificial Analysis measures the max-effort variant at 72 tok/s and 1.63 s to first answer token, and gives $2.01 per Intelligence Index task at that effort ($0.85 for the low variant). The exact weights-publication date (reported as 2026-08-28 by several trackers) could not be confirmed from a primary page. LMArena Elo 1483 is the \"glm-5.3-max\" text-arena listing (arena.ai, 2026-09-13 update, rank 19)."
   },
   {
     "id": "ornith-1-5-397b",
@@ -6066,8 +6222,8 @@
       "outputPerMTok": 3.96
     },
     "costPerTask": {
-      "usd": null,
-      "effort": null
+      "usd": 0.67,
+      "effort": "max"
     },
     "openWeights": true,
     "availability": "general",
@@ -6115,7 +6271,7 @@
       "Multi-turn thinking mode requires replaying the previous turn's reasoning verbatim — the most common cause of 400 errors when migrating existing agent loops",
       "Landed as a stealth update with no launch post (the brief notice on DeepSeek's site was pulled within a day), so documentation is thin and behavior is still being characterised"
     ],
-    "notes": "The production release of DeepSeek-V4-Pro, superseding April's preview per DeepSeek's own model card: same 1.6T/49B MoE with a DSpark speculative-decoding module, all gains from re-post-training. Pricing is the peak-hour rate that took effect 2026-08-16 (peak = 01:00–04:00 and 06:00–10:00 UTC); off-peak is 50% lower at $0.66/$1.98 and cache-hit input is cheaper still — roughly a 3–4x rise from the preview's $0.435/$0.87. Terminal-Bench 2.1 87.9 and HLE 42.7% (60.0% with tools) are DeepSeek's own figures at max effort in its minimal-mode harness; independent runs on the Terminus 2 reference harness report 54.68 (V4-Flash-0731: 67.04). GPQA Diamond 93 is Artificial Analysis' measurement as displayed on its charts, not lab-reported — DeepSeek's own 0813 card figure could not be confirmed directly (one unofficial site cites 92.8; the 90.1 many aggregators list is April's preview). SWE-bench Verified 96.4 is third-party (Vals AI, #2 on its board behind Claude Opus 5) — DeepSeek published no SWE-bench figure and the 80.6 some trackers carry is the preview's. Also reported by DeepSeek: DeepSWE 62.7, CyberGym 83.3, NL2Repo 61.5, Toolathlon 74.1, Agents' Last Exam 25.7, AutomationBench 31.8. Artificial Analysis scores it 53 on its Intelligence Index — 8 points above April's preview but only 1 above V4-Flash-0731 on the current index version — measuring 78.1 tok/s and 25.67 s to first answer token on DeepSeek's endpoint at max effort; its per-task cost figure could not be retrieved. MMLU-Pro and AIME are unpublished; the arena.ai listing and ARC Prize result arrived after launch (below). Max output is the 384K DeepSeek recommends for high/max effort. The API went live 2026-08-12 under the unchanged `deepseek-v4-pro` id; the Hugging Face card and DeepSeek's release notice followed on 2026-08-13. Updated 2026-09-15: DeepSeek's V4.1-Flash launch post (2026-09-10) said all `deepseek-v4-pro` requests would route to V4.1-Flash from 2026-09-14 04:00 UTC until V4.1-Pro ships, but the API change log and pricing page then reversed this \"in response to user demand\" — V4 Pro service continues after 2026-09-14 with billing unchanged, so no retirement is recorded. ARC-AGI-2 61.3% is ARC Prize-verified at max effort ($0.60/task; high 59.7%, low 56.3%), published 2026-08-13 at arcprize.org/results/deepseek-v4-pro-0813. LMArena Elo 1463 is the \"deepseek-v4-pro-high-20260813\" text-arena listing (arena.ai, 2026-09-13 update); the undated \"deepseek-v4-pro\" listing sits at 1457."
+    "notes": "The production release of DeepSeek-V4-Pro, superseding April's preview per DeepSeek's own model card: same 1.6T/49B MoE with a DSpark speculative-decoding module, all gains from re-post-training. Pricing is the peak-hour rate that took effect 2026-08-16 (peak = 01:00–04:00 and 06:00–10:00 UTC); off-peak is 50% lower at $0.66/$1.98 and cache-hit input is cheaper still — roughly a 3–4x rise from the preview's $0.435/$0.87. Terminal-Bench 2.1 87.9 and HLE 42.7% (60.0% with tools) are DeepSeek's own figures at max effort in its minimal-mode harness; independent runs on the Terminus 2 reference harness report 54.68 (V4-Flash-0731: 67.04). GPQA Diamond 93 is Artificial Analysis' measurement as displayed on its charts, not lab-reported — DeepSeek's own 0813 card figure could not be confirmed directly (one unofficial site cites 92.8; the 90.1 many aggregators list is April's preview). SWE-bench Verified 96.4 is third-party (Vals AI, #2 on its board behind Claude Opus 5) — DeepSeek published no SWE-bench figure and the 80.6 some trackers carry is the preview's. Also reported by DeepSeek: DeepSWE 62.7, CyberGym 83.3, NL2Repo 61.5, Toolathlon 74.1, Agents' Last Exam 25.7, AutomationBench 31.8. Artificial Analysis scores it 53 on its Intelligence Index — 8 points above April's preview but only 1 above V4-Flash-0731 on the current index version — measuring 78.1 tok/s and 25.67 s to first answer token on DeepSeek's endpoint at max effort; its cost per Intelligence Index task at max effort is $0.67. MMLU-Pro and AIME are unpublished; the arena.ai listing and ARC Prize result arrived after launch (below). Max output is the 384K DeepSeek recommends for high/max effort. The API went live 2026-08-12 under the unchanged `deepseek-v4-pro` id; the Hugging Face card and DeepSeek's release notice followed on 2026-08-13. Updated 2026-09-15: DeepSeek's V4.1-Flash launch post (2026-09-10) said all `deepseek-v4-pro` requests would route to V4.1-Flash from 2026-09-14 04:00 UTC until V4.1-Pro ships, but the API change log and pricing page then reversed this \"in response to user demand\" — V4 Pro service continues after 2026-09-14 with billing unchanged, so no retirement is recorded. ARC-AGI-2 61.3% is ARC Prize-verified at max effort ($0.60/task; high 59.7%, low 56.3%), published 2026-08-13 at arcprize.org/results/deepseek-v4-pro-0813. LMArena Elo 1463 is the \"deepseek-v4-pro-high-20260813\" text-arena listing (arena.ai, 2026-09-13 update); the undated \"deepseek-v4-pro\" listing sits at 1457."
   },
   {
     "id": "motif-3",
@@ -6508,15 +6664,15 @@
       "outputPerMTok": 6
     },
     "costPerTask": {
-      "usd": null,
+      "usd": 5.41,
       "effort": null
     },
     "openWeights": false,
     "availability": "general",
     "knowledgeCutoff": null,
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
+      "outputTokensPerSec": 39.1,
+      "timeToFirstTokenSec": 2.98,
       "effort": null
     },
     "license": null,
@@ -6551,7 +6707,7 @@
       "Alibaba published no standard reasoning or knowledge benchmarks for this snapshot, so any change outside coding and agent work is uncharacterised",
       "Served from Alibaba Cloud under Chinese jurisdiction, which some enterprise buyers rule out regardless of capability"
     ],
-    "notes": "Dated snapshot of Qwen3.8-Max (Model Studio alias qwen3.8-max-2026-09-02): same 2.4T-parameter base and 1M window, further post-trained on coding and cowork. Announced on Qwen's X account on 2026-09-02 China time (it appeared on QwenCloud late on 2026-09-01 US time). Qwen's own table, relayed by CellCog, Lookonchain and wccftech, reports Terminal-Bench 3.0 29.0% (Qwen3.8-Max: 11.3%), DeepSWE 1.1 69.3% (56.6%) and NL2Repo-Bench 64.9% (55.9%), plus ProgramBench, SWE-Marathon, CoWorkBench, JobBench and Toolathlon rows on which Opus 5 stays ahead; none of these are tracked keys and Terminal-Bench 3.0 is not comparable with the 2.1 cell, so every benchmark cell is null. The GPQA Diamond 92.6 / HLE 43.6 / Terminal-Bench 2.1 86.6 figures circulating for it are Alibaba's August Qwen3.8-Max numbers, not re-runs on this snapshot. Arena's Code Arena: WebDev debut was #1 at 1691 (22 above the previous Qwen3.8-Max); no Text Arena score yet. Context is Qwen's own 1M claim — the sibling qwen3-8-max entry records Model Studio's 983,616 usable figure, which was not re-verified for this snapshot. Pricing unchanged at $2/$6 per MTok with cache reads $0.25 (implicit) / $0.17 (explicit); Artificial Analysis had not published a separate 0902 listing when checked. predecessorId is null — Qwen's just-got-upgraded framing is lineage, and the earlier build is still served under its own id. Qwen's X post and the Model Studio / QwenCloud pages were not fetchable this session."
+    "notes": "Dated snapshot of Qwen3.8-Max (Model Studio alias qwen3.8-max-2026-09-02): same 2.4T-parameter base and 1M window, further post-trained on coding and cowork. Announced on Qwen's X account on 2026-09-02 China time (it appeared on QwenCloud late on 2026-09-01 US time). Qwen's own table, relayed by CellCog, Lookonchain and wccftech, reports Terminal-Bench 3.0 29.0% (Qwen3.8-Max: 11.3%), DeepSWE 1.1 69.3% (56.6%) and NL2Repo-Bench 64.9% (55.9%), plus ProgramBench, SWE-Marathon, CoWorkBench, JobBench and Toolathlon rows on which Opus 5 stays ahead; none of these are tracked keys and Terminal-Bench 3.0 is not comparable with the 2.1 cell, so every benchmark cell is null. The GPQA Diamond 92.6 / HLE 43.6 / Terminal-Bench 2.1 86.6 figures circulating for it are Alibaba's August Qwen3.8-Max numbers, not re-runs on this snapshot. Arena's Code Arena: WebDev debut was #1 at 1691 (22 above the previous Qwen3.8-Max); no Text Arena score yet. Context is Qwen's own 1M claim — the sibling qwen3-8-max entry records Model Studio's 983,616 usable figure, which was not re-verified for this snapshot. Pricing unchanged at $2/$6 per MTok with cache reads $0.25 (implicit) / $0.17 (explicit); Artificial Analysis now lists the snapshot separately as 'Qwen3.8 Max (0902)', at $5.41 per Intelligence Index task with no effort label, 39.1 tok/s and 2.98 s to first answer token on Alibaba's API. predecessorId is null — Qwen's just-got-upgraded framing is lineage, and the earlier build is still served under its own id. Qwen's X post and the Model Studio / QwenCloud pages were not fetchable this session."
   },
   {
     "id": "gpt-6-astra",
@@ -7208,8 +7364,8 @@
       "outputPerMTok": 6
     },
     "costPerTask": {
-      "usd": null,
-      "effort": null
+      "usd": 2.73,
+      "effort": "high"
     },
     "openWeights": false,
     "availability": "general",
@@ -7251,7 +7407,7 @@
       "Has picked up a verbose, presumptuous house style — the concise structured findings of 4.5 gave way to forced cadences, per early Cursor feedback, and Artificial Analysis flags it as very verbose on its index run",
       "Crossing the 200K-token prompt threshold reprices the whole request at double rate, and the fast variant doubles it again — long-context or low-latency runs cost far more than the headline"
     ],
-    "notes": "Announced 2026-09-21 after Musk's 2026-09-02 'ten days' promise slipped twice; xAI says it uses a new, larger base model than Grok 4.6 (the 2.1T-parameter figure is Musk's pre-release claim, not on the card) with a longer RL run on multi-hour tasks. xAI's card reports only CursorBench 4.0 46.3%, DeepSWE v1.1 71.0% (high effort), EEBench 64.0%, AA Briefcase v1.1 1,657, Terminal-Bench 4.0 38.0%, Harvey Legal Agent 19.6% and HealthBench Professional 56.7% — none map to a tracked key, and Terminal-Bench 4.0 is not comparable with the 2.1 this site records, so terminalBench is null; Artificial Analysis independently measures Terminal-Bench 4.0 at 26%. AA scores it 46 on its Intelligence Index at both high (the API default) and xhigh effort, but had published no cost-per-task or speed figures as of 2026-09-22, and rates it 1694 (high) / 1695 (xhigh) on GDPval-AA v2.1 — a rescaled successor to the v2 this site's gdpvalAA key records (Grok 4.6 is 1632 on v2.1 against its recorded 1753 on v2), so that cell stays null. GPQA Diamond, HLE, SWE-bench Verified/Pro, AIME, MMLU-Pro and ARC-AGI-2 are unpublished by xAI and AA; arena.ai's board (last updated 2026-09-13) has no listing. Knowledge cutoff May 2026 per docs.x.ai's models page. Pricing $2/$6 with cached input $0.50 applies below a 200K-token prompt; at or above it every token in the request bills at $4/$12 ($1.00 cached), and the fast variant costs double for twice the output speed. Effort levels low/medium/high/xhigh; batch API unsupported; xAI publishes no max-output figure. predecessorId is null: the card says only that it is 'served at the same price and speed as Grok 4.6', and grok-4.6 remains listed in the API. xAI also claims it is its strongest model on refusals and jailbreak resistance. The company rebranded from xAI to SpaceXAI on 2026-07-06; companies.json still carries the old name."
+    "notes": "Announced 2026-09-21 after Musk's 2026-09-02 'ten days' promise slipped twice; xAI says it uses a new, larger base model than Grok 4.6 (the 2.1T-parameter figure is Musk's pre-release claim, not on the card) with a longer RL run on multi-hour tasks. xAI's card reports only CursorBench 4.0 46.3%, DeepSWE v1.1 71.0% (high effort), EEBench 64.0%, AA Briefcase v1.1 1,657, Terminal-Bench 4.0 38.0%, Harvey Legal Agent 19.6% and HealthBench Professional 56.7% — none map to a tracked key, and Terminal-Bench 4.0 is not comparable with the 2.1 this site records, so terminalBench is null; Artificial Analysis independently measures Terminal-Bench 4.0 at 26%. AA scores it 46 on its Intelligence Index at both high (the API default) and xhigh effort; it had published no speed figures as of 2026-09-22, gave $2.73 per Intelligence Index task at high effort by 2026-09-29 ($3.74 at xhigh, about 81K output tokens per task against Grok 4.6's 36K), and rates it 1694 (high) / 1695 (xhigh) on GDPval-AA v2.1 — a rescaled successor to the v2 this site's gdpvalAA key records (Grok 4.6 is 1632 on v2.1 against its recorded 1753 on v2), so that cell stays null. GPQA Diamond, HLE, SWE-bench Verified/Pro, AIME, MMLU-Pro and ARC-AGI-2 are unpublished by xAI and AA; arena.ai's board (last updated 2026-09-13) has no listing. Knowledge cutoff May 2026 per docs.x.ai's models page. Pricing $2/$6 with cached input $0.50 applies below a 200K-token prompt; at or above it every token in the request bills at $4/$12 ($1.00 cached), and the fast variant costs double for twice the output speed. Effort levels low/medium/high/xhigh; batch API unsupported; xAI publishes no max-output figure. predecessorId is null: the card says only that it is 'served at the same price and speed as Grok 4.6', and grok-4.6 remains listed in the API. xAI also claims it is its strongest model on refusals and jailbreak resistance. The company rebranded from xAI to SpaceXAI on 2026-07-06; companies.json still carries the old name."
   },
   {
     "id": "claude-opus-5-5",
@@ -7659,5 +7815,66 @@
       "Too new to characterise beyond launch week — Artificial Analysis has not yet run it, so its speed, per-task cost and independent knowledge scores are unmeasured"
     ],
     "notes": "The efficiency checkpoint of Xiaomi's V2.6 series: a 309B-parameter sparse MoE activating 15B, natively omnimodal (text, image, video and audio in; text out), trained in the same livestreamed 30-step RL run as Pro at a cost Xiaomi puts at $0.85M. Announced 2026-09-21 UTC (22 September Beijing time on mimo.mi.com). Terminal-Bench 2.1 87.6 is Xiaomi's own figure from the Hugging Face card and tech report Table 3. Also reported by Xiaomi: DeepSWE v1.1 67.9, ProgramBench 26.0, AutomationBench v1.0.6 52.3, Toolathlon-Verified 73.6, Agents' Last Exam 27.6, Terminal-Bench 4.0 28.8, OSWorld-Verified 80.8, JobBench 61.2, CyberGym 95.1, ExploitGym 6.0, ExploitBench 25.3, SEC Bench Pro 47.5 and MiMo Visual Coding 71.5; Xiaomi's table has no GDPval-AA entry for Flash. GPQA Diamond, SWE-bench Verified/Pro, HLE, AIME, MMLU-Pro and ARC-AGI-2 are unpublished, it is not on the arena.ai text board (last update 2026-09-13), and Artificial Analysis has no Flash listing as of 2026-09-24, so costPerTask and speed are null. Pricing is Xiaomi's pay-as-you-go rate ($0.14 cache-miss input, $0.0028 cache-hit, $0.28 output, unchanged from V2.5). Context 1M and max output 128K per the mimo.mi.com model page. Weights (MiMo-V2.6-Flash-RL) are MIT on Hugging Face and ModelScope, declared in the card metadata with no separate LICENSE file; a ggml-org GGUF exists. Knowledge cutoff is unpublished — the \"December 2024\" string on the model page is a sample system prompt. predecessorId is null: no Xiaomi source says it replaces MiMo-V2.5 or V2-Flash, neither of which is on this site."
+  },
+  {
+    "id": "claude-sonnet-5-5",
+    "name": "Claude Sonnet 5.5",
+    "company": "anthropic",
+    "releaseDate": "2026-09-28",
+    "status": "unknown",
+    "tier": "balanced",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 2,
+      "outputPerMTok": 10
+    },
+    "costPerTask": {
+      "usd": 0.59,
+      "effort": "medium"
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-06",
+    "speed": {
+      "outputTokensPerSec": 114.6,
+      "timeToFirstTokenSec": null,
+      "effort": "medium"
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "anthropic",
+        "id": "claude-sonnet-5-5"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": "claude-sonnet-5",
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": 83.2,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Gets through the same work in far fewer tokens than Sonnet 5 — at low or medium effort it often matches what Sonnet 5 needed its top setting for",
+      "Streams output noticeably faster than any earlier Sonnet, which suits quick iterate-and-check loops on well-scoped tasks",
+      "Writes more clearly than the previous Claude generation, and early testers found it a better collaborator than Sonnet 5",
+      "Carries multi-step tasks through to the end where earlier Sonnets gave up partway, and checks its own work without being asked"
+    ],
+    "weaknesses": [
+      "At max effort it can spend the whole 128K output budget thinking and never answer — the same failure early users hit on Opus 5.5",
+      "Higher-risk cyber requests visibly fall back to Sonnet 5 and new classifiers refuse reasoning extraction — security tooling and pipelines that harvest its thinking need to handle both",
+      "Runs long at the top effort settings, spending far more output tokens per task than the typical model — the per-task savings come from the lower settings"
+    ],
+    "notes": "Released 2026-09-28 as the second Claude 5.5 model; Anthropic's announcement (anthropic.com/claude-sonnet-5-5) keeps Sonnet 5's $2/$10 price ($0.20 cache reads) and says it 'costs up to 30% less per task than its predecessor', with Sonnet 5 as the named antecedent, which is the basis for predecessorId. Context 1M, max output 128K (300K via the Message Batches API beta) and a June 2026 knowledge cutoff per the platform docs; default effort is high on the API and medium in Claude Code and the apps. Anthropic's launch figures (Terminal-Bench 4.0 70.6%, HLE 64.5% with tools, GDPval-AA v2.1 1844) do not map to tracked keys: Terminal-Bench 4.0 is not comparable with 2.1, the no-tools HLE figure was not retrievable, and GDPval-AA v2.1 is a different scale from the v2 this key records. A SWE-bench Pro 81.3% figure circulates on third-party write-ups but could not be confirmed against Anthropic's own page or system card, so it is not recorded. Terminal-Bench 2.1 83.2% is Vals AI's independent measurement at high effort (vals.ai/models/anthropic_claude-sonnet-5-5) — third-party, run with Sonnet 5 as a server-side fallback for refusals, and 80.5% if the 10 fallback-assisted tasks count as failures. Cost per task and output speed are Artificial Analysis' medium-effort variant (Intelligence Index 41; the max variant scores 56 at $7.60 per task); AA's first-answer latency for the medium variant was not retrievable. Also on Amazon Bedrock (global cross-region profile global.anthropic.claude-sonnet-5-5), Google Cloud and Microsoft Foundry."
   }
 ]
