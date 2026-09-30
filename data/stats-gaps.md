@@ -945,3 +945,10 @@ Stats-filler sweep on 2026-09-24 (daily sweep, unattended). WebFetch was denied 
 | gemini-3-8-flash | arcAgi2 | 2026-09-24 | re-checked three weeks after launch: arcprize.org/results still lists Gemini 3.7 Flash (84.6%, $0.25/task) as the newest Google Flash entry and no google-gemini-3-8-flash page surfaces in search; not on the ARC Prize leaderboard — re-check |
 | gpt-6-sol | arcAgi2 | 2026-09-24 | re-checked: ARC Prize's results index still carries GPT-6 Astra and GPT-6 Luna pages but no openai-gpt-6-sol page; the only "Sol" ARC results in circulation are GPT-5.6 Sol's (92%, $1.44/task) — re-check |
 | mimo-v2-6-flash | costPerTask | 2026-09-24 | re-checked: Artificial Analysis still has no MiMo-V2.6-Flash model page (only mimo-v2-6-pro and the February MiMo-V2-Flash listing), so no Intelligence Index cost-per-task figure exists — re-check |
+| claude-sonnet-5-5 | sweBenchPro | 2026-09-30 | 81.3% seen only in third-party write-ups (Vellum, ComputingForGeeks, kingy.ai) relaying the system card; an anthropic.com-restricted search did not surface it and the system card PDF could not be fetched in the unattended run — confirm against the card, then fill |
+| claude-sonnet-5-5 | hle | 2026-09-30 | only a with-tools figure (64.5%) is in circulation, via third-party relays; the no-tools figure the key tracks was not found — read the system card |
+| claude-sonnet-5-5 | terminalBench | 2026-09-30 | Anthropic reports Terminal-Bench 4.0 70.6% only (not comparable with 2.1); no Vals AI 2.1 run found yet — re-check |
+| claude-sonnet-5-5 | gdpvalAA | 2026-09-30 | only a GDPval-AA v2.1 rating (1844, relayed by third parties) exists; tracked key is the v2 scale |
+| claude-sonnet-5-5 | arcAgi2 | 2026-09-30 | no arcprize.org results page for Sonnet 5.5 found — re-check |
+| claude-sonnet-5-5 | lmarenaElo | 2026-09-30 | not found on arena.ai text leaderboard two days after launch — re-check |
+| claude-sonnet-5-5 | gpqaDiamond / sweBench / mmluPro / aime | 2026-09-30 | Anthropic no longer reports these; no primary figure found |
