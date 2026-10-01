@@ -967,3 +967,10 @@ New-model release run on 2026-10-01 (Gemini 4 Argon, GPT-6.1 Sol). Sources: Goog
 | gemini-4-argon | hle | 2026-10-01 | no HLE row in Google's evaluation PDF; AA's comparison page shows 57% (high), but AA runs a 2,158-question text-only subset and its methodology doesn't state the tool setting, so the configuration can't be pinned to a primary source. Left null — fill if Google publishes a no-tools figure |
 | gpt-6-1-sol | hle | 2026-10-01 | not in OpenAI's launch material; AA's comparison page shows 53% (max) on the same unstated-tools 2,158-question subset. Left null for the same reason as gemini-4-argon |
 | gpt-6-sol | hle | 2026-10-01 | OpenAI published no HLE figure; the former value 48 was AA's max-effort run on its 2,158-question text-only subset with an unstated tool setting, so it was nulled for the same reason as gemini-4-argon |
+| ling-3-1-flash | gpqaDiamond / sweBench / sweBenchPro / terminalBench / hle / arcAgi2 | 2026-10-01 | Ant's launch post reports only GDPval-AA v2.1, FrontierSWE and HealthBench Professional; no tracked benchmark published, no third-party evaluation yet |
+| ling-3-1-flash | gdpvalAA | 2026-10-01 | Ant reports GDPval-AA v2.1 Elo 1673, but the key records v2; kept in notes. AA has no Ling-3.1-flash page yet (404) — re-check for a v2 figure |
+| ling-3-1-flash | lmarenaElo | 2026-10-01 | not listed on LMArena at launch |
+| ling-3-1-flash | pricing | 2026-10-01 | two-week free trial only ($0 on Novita/Vercel/Command Code); no list price — left null, not $0. Re-check when the trial ends (~2026-10-14) |
+| ling-3-1-flash | costPerTask | 2026-10-01 | Artificial Analysis has not run the Intelligence Index on it (model page 404) |
+| ling-3-1-flash | knowledgeCutoff | 2026-10-01 | not published by Ant or the provider listings |
+| ling-3-1-flash | mmluPro / aime | 2026-10-01 | retired benchmarks; not in Ant's launch material |

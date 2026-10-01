@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-09-30-ling-3-1-flash",
+    "date": "2026-09-30",
+    "title": "Ant Group releases Ling-3.1-flash as a free trial, with open weights promised",
+    "summary": "Ant Group's Ling team announced Ling-3.1-flash on 2026-09-30, a roughly 560B-total / 25B-active mixture-of-experts model aimed at agents, search, office work and specialist domains, with up to a 1M-token context. It launched as a two-week free trial capped at 256K tokens via Vercel AI Gateway and Novita, with the full window and an open-source release promised afterwards; Ant reports GDPval-AA v2.1 Elo 1673, FrontierSWE 75.16 and HealthBench Professional 65.35.",
+    "category": "release",
+    "companies": [
+      "ant-group"
+    ],
+    "modelIds": [
+      "ling-3-1-flash"
+    ],
+    "sourceName": "Ant Ling (X)",
+    "sourceUrl": "https://x.com/AntLingAGI/status/2105335205741596911"
+  },
+  {
     "id": "2026-09-30-gemini-4-argon",
     "date": "2026-09-30",
     "title": "Google releases Gemini 4 Argon, its first Gemini 4 model, to cyber defenders first",

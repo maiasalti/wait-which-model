@@ -7884,5 +7884,69 @@
       "At max effort it can deliberate for minutes before the first answer token appears, so the top setting suits batch work rather than interactive use"
     ],
     "notes": "Announced at OpenAI DevDay on 2026-09-29, one week after GPT-6 Sol, as the newer Sol model; GPT-6 Sol stays available and no OpenAI source found says 6.1 replaces it, so predecessorId is null and tier follows GPT-6 Sol's \"balanced\". Context 1,050,000 tokens, 128K output, cutoff 2026-04-30, low/medium (default)/high/xhigh/max reasoning effort, and $2/$10 per MTok ($0.10 cached input, $2.50 cache writes) are from OpenAI's model docs; prompts over 272K input tokens bill at 2x input/cache and 1.5x output, batch is half price and a fast mode costs 2x. Generally available in the API and in ChatGPT Work and Codex for Plus, Pro, Business, Enterprise and Edu, but not yet in ChatGPT's Chat mode at launch. OpenAI's launch material uses only untracked suites (DeepSWE v1.1 75.2% high / 71.9% max, OSWorld 2.0 71.4% max, GDP.pdf 32.0% high, AutomationBench 1.0.6 36.1% max, Terminal-Bench Science 0.1 57.0% max, low-effort factual error rate 7.7% against GPT-6 Sol's 11.4%); it is rated Critical in cybersecurity and High in biological/chemical under the Preparedness Framework and ships with Astra's safeguards, with a coding-deception rate of 1.50% (GPT-6 Sol 1.30%). hle is null: OpenAI's launch material has no HLE figure, and Artificial Analysis' 53% (max) comes from its own 2,158-question text-only subset whose tool setting its methodology doesn't state, so it can't be pinned to a primary source. AA scores it 52 on its Intelligence Index at max ($0.72 per task) and 48 at medium, the effort the costPerTask and speed figures are taken at; at max AA measures 65.3 tok/s but 281.94 s to the first answer token. AA rates it 1575 on GDPval-AA v2.1 (max), a different scale from the v2 this key records, so gdpvalAA stays null. Added to Arena's Agent Arena on 2026-09-30 but absent from the text board; not on ARC Prize's results index or Scale's SWE-bench Pro board at launch."
+  },
+  {
+    "id": "ling-3-1-flash",
+    "name": "Ling-3.1-flash",
+    "company": "ant-group",
+    "releaseDate": "2026-09-30",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "text",
+    "type": "llm",
+    "contextWindow": 262144,
+    "maxOutput": 32768,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "vercel-ai-gateway",
+        "id": "inclusionai/ling-3.1-flash"
+      },
+      {
+        "provider": "novita",
+        "id": "inclusionai/ling-3.1-flash"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Hybrid reasoning in one model, so the same endpoint serves quick replies and longer agentic tool-calling runs",
+      "Pitched by Ant at practical work rather than puzzles — agents, search, office documents and specialist domains such as healthcare",
+      "Function calling and reasoning come through standard OpenAI-compatible endpoints, so it drops into existing agent stacks"
+    ],
+    "weaknesses": [
+      "Launched as a two-week free trial with no list price and a 256K cap, so what it will cost and how the promised 1M window behaves are both unknown",
+      "Open weights are promised but not shipped — nothing to self-host or inspect yet, and no independent evaluation exists",
+      "Too new to characterise: Ant's three launch scores are all self-reported, with no hands-on reception yet"
+    ],
+    "notes": "Announced by Ant Group's Ling (Bailing) team on 2026-09-30 as a roughly 560B-total / 25B-active MoE with up to a 1M-token context; the two-week free trial serves 262,144 tokens (32,768 max output per the Vercel AI Gateway and Novita listings), and Ant says the full window and an open-source release follow the trial, so openWeights is false and licence null until weights publish. Pricing is null rather than $0 because only the free trial exists and no list price is published. Ant reported only GDPval-AA v2.1 Elo 1673, FrontierSWE 75.16 and HealthBench Professional 65.35; none is a tracked key, and gdpvalAA records v2, so the v2.1 figure is kept here rather than in that cell. Tier is fast on Ant's own lineup, where flash sits below the 1T flagship line. Also free inside Command Code (inclusionai/ling-3.1-flash:free) and on Vercel as inclusionai/ling-3.1-flash-free."
   }
 ]
