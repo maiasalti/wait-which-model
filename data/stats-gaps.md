@@ -912,7 +912,6 @@ New-model-release sweep on 2026-09-22 (window widened to 2026-09-11 through 2026
 | gpt-6-sol | sweBench | 2026-09-23 | OpenAI has not published SWE-bench Verified since February 2026; no launch-table or third-party figure |
 | gpt-6-sol | sweBenchPro | 2026-09-23 | not on Scale's SWE-bench Pro public board as of 2026-09-23 (no GPT-6 or GPT-5.6 rows at all); OpenAI reports DeepSWE v1.1 68.8% instead |
 | gpt-6-sol | terminalBench | 2026-09-23 | only Terminal-Bench 4.0 runs exist (AA 43–44% at max), not the tracked 2.1 |
-| gpt-6-sol | lmarenaElo | 2026-09-23 | not on the arena.ai text board (last update 2026-09-13) the day after launch; re-check |
 | gpt-6-sol | gdpvalAA | 2026-09-23 | AA rates it 1487 (max) / 1320 (medium) on GDPval-AA v2.1 — a different scale from the v2 this key records; migrate the key before using it |
 | gpt-6-sol | arcAgi2 | 2026-09-23 | ARC Prize published a GPT-6 Luna results page on 2026-09-22 but none for Sol (arcprize.org/results index has no Sol entry); re-check |
 | gpt-6-sol | mmluPro / aime | 2026-09-23 | retired benchmarks; not in OpenAI's launch table |
@@ -945,3 +944,23 @@ Stats-filler sweep on 2026-09-24 (daily sweep, unattended). WebFetch was denied 
 | gemini-3-8-flash | arcAgi2 | 2026-09-24 | re-checked three weeks after launch: arcprize.org/results still lists Gemini 3.7 Flash (84.6%, $0.25/task) as the newest Google Flash entry and no google-gemini-3-8-flash page surfaces in search; not on the ARC Prize leaderboard — re-check |
 | gpt-6-sol | arcAgi2 | 2026-09-24 | re-checked: ARC Prize's results index still carries GPT-6 Astra and GPT-6 Luna pages but no openai-gpt-6-sol page; the only "Sol" ARC results in circulation are GPT-5.6 Sol's (92%, $1.44/task) — re-check |
 | mimo-v2-6-flash | costPerTask | 2026-09-24 | re-checked: Artificial Analysis still has no MiMo-V2.6-Flash model page (only mimo-v2-6-pro and the February MiMo-V2-Flash listing), so no Intelligence Index cost-per-task figure exists — re-check |
+
+New-model release run on 2026-10-01 (Gemini 4 Argon, GPT-6.1 Sol). Sources: Google's launch blog and evaluation PDF, OpenAI's model docs (developers.openai.com; the openai.com announcement returned 403 to fetch), Artificial Analysis model and comparison pages, the arena.ai text board (2026-09-30 update, 410 models) and its changelog, the arcprize.org results index. Also resolved: `gpt-6-sol` lmarenaElo filled at 1456 from the 2026-09-30 board ("gpt-6-sol-max", rank 66), and its 2026-09-23 re-check row removed.
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| gemini-4-argon | gpqaDiamond | 2026-10-01 | not in Google's evaluation PDF and not shown on Artificial Analysis' model or comparison pages |
+| gemini-4-argon | sweBench / sweBenchPro | 2026-10-01 | Google reports DeepSWE v1.1 77.9% and FrontierSWE v2 55.0% instead; no SWE-bench Verified or Pro figure anywhere primary |
+| gemini-4-argon | terminalBench | 2026-10-01 | only Terminal-Bench 4.0 exists (Google 57.4%, AA 57%), not the tracked 2.1 |
+| gemini-4-argon | gdpvalAA | 2026-10-01 | AA rates it 1611 (high) on GDPval-AA v2.1 — a different scale from the v2 this key records; migrate the key before using it |
+| gemini-4-argon | arcAgi2 | 2026-10-01 | not on arcprize.org/results the day after launch; restricted rollout — re-check |
+| gemini-4-argon | contextWindow | 2026-10-01 | Google has not disclosed the input context window; AA's "1M" is not an official figure — re-check once a Gemini API model page exists |
+| gemini-4-argon | knowledgeCutoff | 2026-10-01 | not stated in Google's announcement; no model card published — re-check |
+| gemini-4-argon | mmluPro / aime | 2026-10-01 | retired benchmarks; not in Google's table |
+| gpt-6-1-sol | gpqaDiamond | 2026-10-01 | not in OpenAI's launch material or on AA's pages; an 88% figure on aggregator sites is untraceable to a primary source |
+| gpt-6-1-sol | sweBench / sweBenchPro | 2026-10-01 | OpenAI reports DeepSWE v1.1 instead; not on Scale's SWE-bench Pro board |
+| gpt-6-1-sol | terminalBench | 2026-10-01 | only Terminal-Bench 4.0 (AA 56% max) and Terminal-Bench Science 0.1 exist, not the tracked 2.1 |
+| gpt-6-1-sol | lmarenaElo | 2026-10-01 | gpt-6.1-sol-max was added to Arena's Agent Arena on 2026-09-30 but has no row on the text board (2026-09-30 update) — re-check |
+| gpt-6-1-sol | gdpvalAA | 2026-10-01 | AA rates it 1575 (max) on GDPval-AA v2.1 — a different scale from v2; migrate the key before using it |
+| gpt-6-1-sol | arcAgi2 | 2026-10-01 | no arcprize.org results page; a 27% figure on aggregator sites is untraceable to ARC Prize — re-check |
+| gpt-6-1-sol | mmluPro / aime | 2026-10-01 | retired benchmarks; not in OpenAI's launch material |
