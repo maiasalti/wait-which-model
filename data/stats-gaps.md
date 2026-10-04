@@ -945,3 +945,16 @@ Stats-filler sweep on 2026-09-24 (daily sweep, unattended). WebFetch was denied 
 | gemini-3-8-flash | arcAgi2 | 2026-09-24 | re-checked three weeks after launch: arcprize.org/results still lists Gemini 3.7 Flash (84.6%, $0.25/task) as the newest Google Flash entry and no google-gemini-3-8-flash page surfaces in search; not on the ARC Prize leaderboard — re-check |
 | gpt-6-sol | arcAgi2 | 2026-09-24 | re-checked: ARC Prize's results index still carries GPT-6 Astra and GPT-6 Luna pages but no openai-gpt-6-sol page; the only "Sol" ARC results in circulation are GPT-5.6 Sol's (92%, $1.44/task) — re-check |
 | mimo-v2-6-flash | costPerTask | 2026-09-24 | re-checked: Artificial Analysis still has no MiMo-V2.6-Flash model page (only mimo-v2-6-pro and the February MiMo-V2-Flash listing), so no Intelligence Index cost-per-task figure exists — re-check |
+
+New-model-release research on 2026-10-04, scoped to `claude-sonnet-5-5`. Sources checked: anthropic.com/claude-sonnet-5-5 (official announcement, fetched directly), platform.claude.com/docs/en/models/sonnet-5-5/overview, /whats-new-sonnet-5-5 and /migration-guide (fetched directly), Artificial Analysis model pages (relayed via WebSearch — direct fetch EGRESS_BLOCKED), vals.ai/models/anthropic_claude-sonnet-5-5 (relayed via WebSearch — direct fetch EGRESS_BLOCKED), arena.ai text leaderboard (relayed via WebSearch), ARC Prize results (relayed via WebSearch). The system card PDF (www-cdn.anthropic.com) and benchlm.ai/llm-stats.com/kingy.ai/codersera.com were all EGRESS_BLOCKED all session; findings on those rest on WebSearch-synthesized excerpts, cross-checked across at least two independent outlets where possible.
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| claude-sonnet-5-5 | mmluPro | 2026-10-04 | Anthropic has stopped reporting MMLU-Pro in system cards; vals.ai lists its MMLU-Pro row as "Coming soon" |
+| claude-sonnet-5-5 | gpqaDiamond | 2026-10-04 | not reported by Anthropic; vals.ai lists its GPQA Diamond row as "Coming soon" |
+| claude-sonnet-5-5 | sweBench | 2026-10-04 | Anthropic's system card reports SWE-bench Pro (81.3%) instead of SWE-bench Verified; no official Verified figure found |
+| claude-sonnet-5-5 | terminalBench | 2026-10-04 | Anthropic's own headline figure is Terminal-Bench **4.0** (70.6%), not the tracked 2.1 version; vals.ai's independent-harness page covers Terminal-Bench 4.0 and Terminal-Bench Science for this model but not 2.1 — no comparable figure found |
+| claude-sonnet-5-5 | aime | 2026-10-04 | not reported; Anthropic has moved off AIME in its 5.x-era system cards |
+| claude-sonnet-5-5 | lmarenaElo | 2026-10-04 | not listed on arena.ai's text leaderboard as of 2026-10-04 (one week post-launch); only Claude Sonnet 5 (1461) and Claude Opus 5.5 (1509 high) appear |
+| claude-sonnet-5-5 | arcAgi2 | 2026-10-04 | not found on ARC Prize's verified-results pages or any tracker checked as of one week post-launch |
+| claude-sonnet-5-5 | hle (no-tools) | 2026-10-04 | only a with-tools figure (64.5%) surfaced in official material and secondary coverage; no no-tools figure located. Recorded 64.5% in the tracked field per house convention for with-tools-only figures (see claude-fable-5, muse-spark, muse-spark-1-1), flagged "with tools" in notes |
