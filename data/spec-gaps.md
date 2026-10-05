@@ -218,3 +218,4 @@ kolibri-1 · predecessorId · 2026-10-05 · The launch post describes Kolibri Or
 kolibri-1 · speed · 2026-10-05 · No Artificial Analysis listing as of release week. Left null.
 kolibri-1 · apiIds · 2026-10-05 · No hosted API: no Aleph Alpha API SKU, no OpenRouter listing, no Bedrock or Vertex listing found; weights only at Aleph-Alpha/Kolibri-1 (and -BF16) on Hugging Face. Left [].
 kolibri-1 · retirementDate · 2026-10-05 · No lifecycle notice on the model card or launch post. Left null.
+claude-sonnet-5-5 · retirementDate · 2026-10-04 · Official model page (platform.claude.com/docs/en/models/sonnet-5-5/overview) lists status "Active (latest)", retirement "Not sooner than September 28, 2027" — a floor, not an announced retirement. Left null.

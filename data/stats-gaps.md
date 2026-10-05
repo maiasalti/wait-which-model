@@ -984,3 +984,15 @@ New-model release protocol, 2026-10-05: Kolibri-1 (Aleph Alpha).
 | kolibri-1 | costPerTask | 2026-10-05 | no Artificial Analysis listing as of 2026-10-04 (per launch coverage) and none found; re-check |
 | kolibri-1 | pricing | 2026-10-05 | open weights only; no Aleph Alpha API SKU and no OpenRouter listing, so no per-token price exists |
 | kolibri-1 | maxOutput | 2026-10-05 | unpublished on the model card and launch post; the card's max_tokens=1024 is a pre-training eval setting, not an output limit |
+
+New-model-release research on 2026-10-04, scoped to `claude-sonnet-5-5`. Sources checked: anthropic.com/claude-sonnet-5-5 (official announcement, fetched directly), platform.claude.com/docs/en/models/sonnet-5-5/overview, /whats-new-sonnet-5-5 and /migration-guide (fetched directly), Artificial Analysis model pages (relayed via WebSearch — direct fetch EGRESS_BLOCKED), vals.ai/models/anthropic_claude-sonnet-5-5 (relayed via WebSearch — direct fetch EGRESS_BLOCKED), arena.ai text leaderboard (relayed via WebSearch), ARC Prize results (relayed via WebSearch). The system card PDF (www-cdn.anthropic.com) and benchlm.ai/llm-stats.com/kingy.ai/codersera.com were all EGRESS_BLOCKED all session; findings on those rest on WebSearch-synthesized excerpts, cross-checked across at least two independent outlets where possible.
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| claude-sonnet-5-5 | mmluPro | 2026-10-04 | Anthropic has stopped reporting MMLU-Pro in system cards; vals.ai lists its MMLU-Pro row as "Coming soon" |
+| claude-sonnet-5-5 | gpqaDiamond | 2026-10-04 | not reported by Anthropic; vals.ai lists its GPQA Diamond row as "Coming soon" |
+| claude-sonnet-5-5 | sweBench | 2026-10-04 | Anthropic's system card reports SWE-bench Pro (81.3%) instead of SWE-bench Verified; no official Verified figure found |
+| claude-sonnet-5-5 | terminalBench | 2026-10-04 | Anthropic's own headline figure is Terminal-Bench **4.0** (70.6%), not the tracked 2.1 version; vals.ai's independent-harness page covers Terminal-Bench 4.0 and Terminal-Bench Science for this model but not 2.1 — no comparable figure found |
+| claude-sonnet-5-5 | aime | 2026-10-04 | not reported; Anthropic has moved off AIME in its 5.x-era system cards |
+| claude-sonnet-5-5 | arcAgi2 | 2026-10-04 | not found on ARC Prize's verified-results pages or any tracker checked as of one week post-launch |
+| claude-sonnet-5-5 | terminalBench | 2026-10-05 | re-checked: 83.2 circulating for Terminal-Bench 2.1 is Vals AI's third-party run (83.15%, high effort), not a primary source; tbench.ai's 2.1 leaderboard doesn't list Sonnet 5.5 |

@@ -3153,7 +3153,7 @@
     "name": "GPT-5.6 Terra",
     "company": "openai",
     "releaseDate": "2026-07-09",
-    "status": "frontier",
+    "status": "superseded",
     "tier": "balanced",
     "modality": "multimodal",
     "type": "llm",
@@ -3446,7 +3446,7 @@
     "name": "Claude Sonnet 5",
     "company": "anthropic",
     "releaseDate": "2026-06-30",
-    "status": "frontier",
+    "status": "superseded",
     "tier": "balanced",
     "modality": "multimodal",
     "type": "llm",
@@ -7430,6 +7430,75 @@
       "Code review comes back with more findings and roughly half again the tokens of Opus 5 — the extra flags still need a human to triage"
     ],
     "notes": "HLE 64.4% no tools / 67.7% with tools, SWE-bench Pro 89.9% and GDPval-AA v2.1 1846 are Anthropic's system-card figures (Table 8.1.A: adaptive thinking at max effort, five-trial average, production safeguards on — cyber tasks routed to Opus 4.8 and bio/frontier-LLM tasks to Opus 5 where they intervened); GDPval-AA stays null here because the tracked key is the v2 scale. Anthropic's launch table leads with Terminal-Bench 4.0 66.4% (xhigh; not comparable with 2.1), FrontierCode v1.1 54.4%, CursorBench 4.0 57.8%, OSWorld 2.0 81.8% partial / 48.7% strict, Terminal-Bench-Science 0.1 58.7% and AutomationBench 40.0%. Terminal-Bench 2.1 87.6% is Vals AI's independent-harness measurement at high effort (vals.ai/models/anthropic_claude-opus-5-5) — third-party, and 26 of 267 tasks needed server-side fallbacks, so it drops to 79.8% if those count as failures. ARC-AGI-2 91.7% is ARC Prize-verified at max effort (arcprize.org/results/anthropic-claude-opus-5-5, 2026-09-22); high effort scores 93.3%, xhigh 92.5%, medium 87.5%, low 70.1%. Anthropic no longer reports SWE-bench Verified, GPQA Diamond, MMLU-Pro or AIME, and the model is not on arena.ai's text leaderboard as of its 2026-09-13 update. Cost per task is Artificial Analysis' max-effort variant, the only one it lists (Intelligence Index 58, first place); AA had no speed measurement at launch. Default effort is medium (Opus 5 defaulted to high), adaptive thinking cannot be disabled, and forced tool_choice is rejected. Cache reads are $0.20/MTok (0.05x input); batch $2/$10; fast mode $8/$40 on the first-party API only; max output rises to 300K via the Message Batches API beta. Also served on Microsoft Foundry as claude-opus-5-5."
+  },
+  {
+    "id": "claude-sonnet-5-5",
+    "name": "Claude Sonnet 5.5",
+    "company": "anthropic",
+    "releaseDate": "2026-09-28",
+    "status": "frontier",
+    "tier": "balanced",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 2,
+      "outputPerMTok": 10
+    },
+    "costPerTask": {
+      "usd": 0.59,
+      "effort": "medium"
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-06",
+    "speed": {
+      "outputTokensPerSec": 91.1,
+      "timeToFirstTokenSec": 1.93,
+      "effort": "medium"
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "anthropic",
+        "id": "claude-sonnet-5-5"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "anthropic.claude-sonnet-5-5"
+      },
+      {
+        "provider": "google-vertex",
+        "id": "claude-sonnet-5-5"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": "claude-sonnet-5",
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": 81.3,
+      "terminalBench": null,
+      "aime": null,
+      "hle": 56.9,
+      "lmarenaElo": 1471,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Batches tool calls more aggressively than Sonnet 5 — testers watched it close a multi-bug fix in three tool calls where Sonnet 5 needed twelve",
+      "Writes more clearly and reads a new codebase faster; early testers rated it a better collaborator than Sonnet 5",
+      "First Sonnet to beat Pokémon Red from screenshots alone, and carries that visual sense into UI polish and slide-deck work that needs little editing",
+      "Needs far fewer tokens than Sonnet 5 for comparable work, so its speed holds up even with adaptive thinking on"
+    ],
+    "weaknesses": [
+      "Opus 5.5 remains clearly stronger on complex, open-ended work needing sustained judgment — Anthropic's own line on where Sonnet 5.5 stops",
+      "Verbose on Artificial Analysis' Intelligence Index despite the speed gains, generating far more tokens per task than its effort-level cost would suggest",
+      "Progress notes written between tool calls now arrive as empty 'thinking' blocks by default — an interface that streamed that commentary goes quiet unless it explicitly asks for the updates"
+    ],
+    "notes": "SWE-bench Pro 81.3% and GDPval-AA v2.1 1844 are Anthropic's own system-card figures; a widely-repeated 89.9% SWE-bench Pro figure for 'Sonnet 5.5' in some aggregator roundups is actually Claude Opus 5.5's score on the same benchmark, not a second Sonnet 5.5 measurement — GDPval-AA stays null here because the tracked key is the v2 scale. HLE 56.9 is the system card's no-tools figure (Table 8.1.A); 64.5% is with tools. Anthropic's launch table leads with Terminal-Bench 4.0 70.6% (up from Sonnet 5's 10.3%; not comparable with the tracked 2.1 metric), CursorBench 4.0 55.5%, OSWorld 2.1 80.1% partial, FrontierCode 1.1 46.2% (max effort), Chartography 61.6% no tools and AA-Briefcase v1.1 1811. No independent Terminal-Bench 2.1 measurement was found at launch (vals.ai covers only 4.0 and Terminal-Bench Science for this model), so terminalBench stays null. Anthropic no longer reports SWE-bench Verified, GPQA Diamond, MMLU-Pro or AIME, and the model was not on ARC Prize's verified results as of 2026-10-04. LMArena Elo 1471 (±~10, 3,145 votes) is the \"claude-sonnet-5.5-xhigh\" text-arena listing, rank 45 on 2026-10-05; the listing is new and its vote count still low. Cost per task and speed are Artificial Analysis' medium-effort figures (Intelligence Index 41, $0.59/task, 91.1 tok/s and 1.93s to first answer token as of 2026-10-05); at max effort AA scores it 56 on the Intelligence Index, second only to Opus 5.5's 58 and its highest-ever output-tokens-per-task figure. Cache reads are $0.20/MTok; 5-minute cache writes $2.50/MTok, 1-hour writes $4/MTok; batch is 50% off input/output; max output rises to 300K via the Message Batches API beta. Default effort is high, adaptive thinking cannot be fully disabled (the lowest setting, between_tools, still runs between tool calls), and forced tool_choice is rejected. Anthropic says its cybersecurity capability is comparable to Opus 5.5. Also served on Microsoft Foundry and Claude Platform on AWS as claude-sonnet-5-5. predecessorId follows Anthropic's own lineage wording: the announcement calls it \"a clear upgrade over Claude Sonnet 5\" and the system card measures it against \"its predecessor, Claude Sonnet 5\"; Sonnet 5 stays live as the fallback for safeguard blocks."
   },
   {
     "id": "gpt-6-sol",

@@ -60,6 +60,21 @@
     "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-sol/"
   },
   {
+    "id": "2026-09-28-claude-sonnet-5-5",
+    "date": "2026-09-28",
+    "title": "Anthropic releases Claude Sonnet 5.5, 30%+ faster at unchanged Sonnet 5 pricing",
+    "summary": "Anthropic released Claude Sonnet 5.5 on 2026-09-28 at Sonnet 5's existing $2/$10 per million tokens, with a 1M context, 128K output and June 2026 knowledge cutoff; output generation is 30%+ faster and typically needs far fewer tokens than Sonnet 5. Its system card reports SWE-bench Pro 81.3% and HLE 64.5% with tools, and Anthropic leads with Terminal-Bench 4.0 70.6% (up from Sonnet 5's 10.3%) and GDPval-AA v2.1 1844; Artificial Analysis scores it 56 on its Intelligence Index at max effort, second only to Opus 5.5. Anthropic calls it the first Sonnet to beat Pokémon Red from screenshots alone, with cybersecurity capability comparable to Opus 5.5.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-sonnet-5-5"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/claude-sonnet-5-5"
+  },
+  {
     "id": "2026-09-21-mimo-v2-6-pro",
     "date": "2026-09-21",
     "title": "Xiaomi open-sources MiMo-V2.6-Pro and Flash under MIT, the top open-weights model on Artificial Analysis' index",
