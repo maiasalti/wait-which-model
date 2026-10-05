@@ -206,3 +206,7 @@ soofi-s-30b-a3b · speed · 2026-09-24 · Gated preview; no AA measurement. Left
 soofi-s-30b-a3b · apiIds · 2026-09-24 · Gated preview; no API. Left [].
 mach-1-additive-35b · speed · 2026-09-24 · No AA page; Syzygy's "up to 120 tokens per second" is a local-laptop figure, not an AA measurement. Left null.
 mach-1-additive-35b · apiIds · 2026-09-24 · No hosted API — runs in-browser or locally via mach-serve; weights at SyzygyResearch/Mach-1-Additive-35B only. Left [].
+kolibri-1 · predecessorId · 2026-10-05 · The launch post describes Kolibri Origin (30B-A3B, pre-training finished 11 June 2026) as the model that validated the training pipeline and says Kolibri is "much better", but never says Kolibri replaces it; the Hugging Face card only uses Origin as a comparison baseline. Origin is not on this site. Left null.
+kolibri-1 · speed · 2026-10-05 · No Artificial Analysis listing as of release week. Left null.
+kolibri-1 · apiIds · 2026-10-05 · No hosted API: no Aleph Alpha API SKU, no OpenRouter listing, no Bedrock or Vertex listing found; weights only at Aleph-Alpha/Kolibri-1 (and -BF16) on Hugging Face. Left [].
+kolibri-1 · retirementDate · 2026-10-05 · No lifecycle notice on the model card or launch post. Left null.

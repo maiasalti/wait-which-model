@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-10-03-kolibri-1",
+    "date": "2026-10-03",
+    "title": "Aleph Alpha releases Kolibri, a sovereign English-German open-weight model under Apache 2.0",
+    "summary": "Aleph Alpha released Kolibri-1 on 2026-10-03 as Apache 2.0 weights on Hugging Face: a 78.1B-parameter mixture-of-experts reasoning model with 3.46B active per token, a 1M-token context extended from 262K native, and a tokenizer built for German, developed in Germany and pitched at on-premise use in public administration, industry and aerospace. Aleph Alpha reports GPQA Diamond 84.3%, SWE-bench Verified 66.4%, HLE 21.5% and Terminal-Bench 2.1 27.7% at high reasoning effort, and says it trained the model to abstain when the answer isn't in context. There is no hosted API; it is self-hosted through Aleph Alpha's vLLM plugin on two or more A100 80GB-class GPUs.",
+    "category": "release",
+    "companies": [
+      "aleph-alpha"
+    ],
+    "modelIds": [
+      "kolibri-1"
+    ],
+    "sourceName": "Aleph Alpha",
+    "sourceUrl": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/"
+  },
+  {
     "id": "2026-09-21-mimo-v2-6-pro",
     "date": "2026-09-21",
     "title": "Xiaomi open-sources MiMo-V2.6-Pro and Flash under MIT, the top open-weights model on Artificial Analysis' index",

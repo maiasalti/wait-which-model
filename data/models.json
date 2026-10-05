@@ -2189,7 +2189,7 @@
     "name": "Mistral Large 3",
     "company": "mistral",
     "releaseDate": "2025-12-01",
-    "status": "unknown",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "text",
     "type": "llm",
@@ -5228,7 +5228,7 @@
     "name": "Nova 2 Pro",
     "company": "amazon",
     "releaseDate": "2025-12-02",
-    "status": "unknown",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
     "type": "llm",
@@ -7768,5 +7768,67 @@
       "Too new to characterise beyond launch week — Artificial Analysis has not yet run it, so its speed, per-task cost and independent knowledge scores are unmeasured"
     ],
     "notes": "The efficiency checkpoint of Xiaomi's V2.6 series: a 309B-parameter sparse MoE activating 15B, natively omnimodal (text, image, video and audio in; text out), trained in the same livestreamed 30-step RL run as Pro at a cost Xiaomi puts at $0.85M. Announced 2026-09-21 UTC (22 September Beijing time on mimo.mi.com). Terminal-Bench 2.1 87.6 is Xiaomi's own figure from the Hugging Face card and tech report Table 3. Also reported by Xiaomi: DeepSWE v1.1 67.9, ProgramBench 26.0, AutomationBench v1.0.6 52.3, Toolathlon-Verified 73.6, Agents' Last Exam 27.6, Terminal-Bench 4.0 28.8, OSWorld-Verified 80.8, JobBench 61.2, CyberGym 95.1, ExploitGym 6.0, ExploitBench 25.3, SEC Bench Pro 47.5 and MiMo Visual Coding 71.5; Xiaomi's table has no GDPval-AA entry for Flash. GPQA Diamond, SWE-bench Verified/Pro, HLE, AIME, MMLU-Pro and ARC-AGI-2 are unpublished, it is not on the arena.ai text board (last update 2026-09-13), and Artificial Analysis has no Flash listing as of 2026-09-24, so costPerTask and speed are null. Pricing is Xiaomi's pay-as-you-go rate ($0.14 cache-miss input, $0.0028 cache-hit, $0.28 output, unchanged from V2.5). Context 1M and max output 128K per the mimo.mi.com model page. Weights (MiMo-V2.6-Flash-RL) are MIT on Hugging Face and ModelScope, declared in the card metadata with no separate LICENSE file; a ggml-org GGUF exists. Knowledge cutoff is unpublished — the \"December 2024\" string on the model page is a sample system prompt. predecessorId is null: no Xiaomi source says it replaces MiMo-V2.5 or V2-Flash, neither of which is on this site."
+  },
+  {
+    "id": "kolibri-1",
+    "name": "Kolibri-1",
+    "company": "aleph-alpha",
+    "releaseDate": "2026-10-03",
+    "status": "superseded",
+    "tier": "fast",
+    "modality": "text",
+    "type": "llm",
+    "contextWindow": 1048576,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "self-host",
+    "knowledgeCutoff": "2026-06",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": 80,
+      "gpqaDiamond": 84.3,
+      "sweBench": 66.4,
+      "sweBenchPro": null,
+      "terminalBench": 27.7,
+      "aime": 96.9,
+      "hle": 21.5,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Trained to say it doesn't know when the answer isn't in the supplied context — Aleph Alpha built training examples where abstaining is the only correct reply, aimed at document work where a wrong answer costs more than none",
+      "Bilingual tokenizer built around German compound words, so German documents split into fewer tokens and leave more of the window free than on English-centric models",
+      "Reasoning effort is selectable from none to high, so quick lookups and harder problems can share one deployment",
+      "Apache 2.0 weights sized for on-premise use — a single B200 or a pair of H100s holds the FP8 checkpoint, so sensitive documents never have to leave the building"
+    ],
+    "weaknesses": [
+      "Not a drop-in for stock vLLM — reasoning and tool calling need Aleph Alpha's own inference plugin, an extra dependency in any self-hosted stack",
+      "No hosted endpoint at launch — trying it at all means pulling roughly 78 GB of weights onto data-centre GPUs",
+      "Too new to characterise — there are no independent evaluations or hands-on reports yet, so its behaviour rests on Aleph Alpha's own claims"
+    ],
+    "notes": "Aleph Alpha's English-German reasoning model, a sparse MoE with 78.1B total and 3.46B active parameters (384 routed experts per layer, 6 active), developed in Germany and trained on infrastructure in Germany and Finland. Announced and released on Hugging Face on 2026-10-03; the blog brands it simply \"Kolibri\" and the repo is Kolibri-1 (FP8, with a BF16 variant). Context is 262,144 tokens natively, extended to 1,048,576 by extrapolation, which the blog advertises as \"up to 1M\". Every score is Aleph Alpha's own, from the model card and launch post at high reasoning effort: GPQA Diamond 84.3 (81.3 in German), AIME 2025 96.9 (AIME 2026 96.0), MMLU-Pro CoT 80.0, SWE-bench Verified 66.4 (scaffold unstated), HLE 21.5 (tool use unstated), Terminal-Bench 2.1 27.7, plus tau2-Bench Telecom 94.7, BFCL v4 61.4 and BrowseComp 29.4. Availability is self-host: there is no Aleph Alpha API SKU and no OpenRouter listing, and serving needs the aleph-alpha-inference vLLM plugin on at least two A100 80GB GPUs. No pricing, max output or Artificial Analysis entry as of 2026-10-05. Knowledge cutoff is 18 June 2026 for both languages. predecessorId is null: the launch post presents Kolibri Origin (30B-A3B, finished June 2026) as the model that validated the training pipeline, not as one Kolibri replaces, and Origin is not on this site."
   }
 ]

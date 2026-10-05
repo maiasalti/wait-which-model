@@ -945,3 +945,13 @@ Stats-filler sweep on 2026-09-24 (daily sweep, unattended). WebFetch was denied 
 | gemini-3-8-flash | arcAgi2 | 2026-09-24 | re-checked three weeks after launch: arcprize.org/results still lists Gemini 3.7 Flash (84.6%, $0.25/task) as the newest Google Flash entry and no google-gemini-3-8-flash page surfaces in search; not on the ARC Prize leaderboard — re-check |
 | gpt-6-sol | arcAgi2 | 2026-09-24 | re-checked: ARC Prize's results index still carries GPT-6 Astra and GPT-6 Luna pages but no openai-gpt-6-sol page; the only "Sol" ARC results in circulation are GPT-5.6 Sol's (92%, $1.44/task) — re-check |
 | mimo-v2-6-flash | costPerTask | 2026-09-24 | re-checked: Artificial Analysis still has no MiMo-V2.6-Flash model page (only mimo-v2-6-pro and the February MiMo-V2-Flash listing), so no Intelligence Index cost-per-task figure exists — re-check |
+
+New-model release protocol, 2026-10-05: Kolibri-1 (Aleph Alpha).
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| kolibri-1 | sweBenchPro, gdpvalAA, arcAgi2 | 2026-10-05 | not in the Hugging Face model card or the launch post's benchmark tables; no third-party run found |
+| kolibri-1 | lmarenaElo | 2026-10-05 | not on the arena.ai text board two days after release; re-check |
+| kolibri-1 | costPerTask | 2026-10-05 | no Artificial Analysis listing as of 2026-10-04 (per launch coverage) and none found; re-check |
+| kolibri-1 | pricing | 2026-10-05 | open weights only; no Aleph Alpha API SKU and no OpenRouter listing, so no per-token price exists |
+| kolibri-1 | maxOutput | 2026-10-05 | unpublished on the model card and launch post; the card's max_tokens=1024 is a pre-training eval setting, not an output limit |
