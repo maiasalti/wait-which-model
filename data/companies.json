@@ -277,5 +277,14 @@
     "website": "https://mimo.mi.com",
     "color": "#B44800",
     "order": 31
+  },
+  {
+    "id": "aleph-alpha",
+    "name": "Aleph Alpha",
+    "country": "Germany",
+    "founded": 2019,
+    "website": "https://aleph-alpha.com",
+    "color": "#5B6CD9",
+    "order": 32
   }
 ]

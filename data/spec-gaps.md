@@ -214,3 +214,7 @@ ling-3-1-flash · predecessorId · 2026-10-01 · Ant's launch post (x.com/AntLin
 ling-3-1-flash · speed · 2026-10-01 · Artificial Analysis has no Ling-3.1-flash page (artificialanalysis.ai/models/ling-3-1-flash returns 404). Left null — re-check.
 ling-3-1-flash · license · 2026-10-01 · Not applicable — openWeights false; Ant promises an open-source release after the two-week trial, and the inclusionAI Hugging Face org has no Ling-3.1-flash repo yet. Re-check once weights publish.
 ling-3-1-flash · retirementDate · 2026-10-01 · No lifecycle notice; brand-new release. Not chased further.
+kolibri-1 · predecessorId · 2026-10-05 · The launch post describes Kolibri Origin (30B-A3B, pre-training finished 11 June 2026) as the model that validated the training pipeline and says Kolibri is "much better", but never says Kolibri replaces it; the Hugging Face card only uses Origin as a comparison baseline. Origin is not on this site. Left null.
+kolibri-1 · speed · 2026-10-05 · No Artificial Analysis listing as of release week. Left null.
+kolibri-1 · apiIds · 2026-10-05 · No hosted API: no Aleph Alpha API SKU, no OpenRouter listing, no Bedrock or Vertex listing found; weights only at Aleph-Alpha/Kolibri-1 (and -BF16) on Hugging Face. Left [].
+kolibri-1 · retirementDate · 2026-10-05 · No lifecycle notice on the model card or launch post. Left null.

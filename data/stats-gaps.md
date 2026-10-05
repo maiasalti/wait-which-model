@@ -974,3 +974,13 @@ New-model release run on 2026-10-01 (Gemini 4 Argon, GPT-6.1 Sol). Sources: Goog
 | ling-3-1-flash | costPerTask | 2026-10-01 | Artificial Analysis has not run the Intelligence Index on it (model page 404) |
 | ling-3-1-flash | knowledgeCutoff | 2026-10-01 | not published by Ant or the provider listings |
 | ling-3-1-flash | mmluPro / aime | 2026-10-01 | retired benchmarks; not in Ant's launch material |
+
+New-model release protocol, 2026-10-05: Kolibri-1 (Aleph Alpha).
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| kolibri-1 | sweBenchPro, gdpvalAA, arcAgi2 | 2026-10-05 | not in the Hugging Face model card or the launch post's benchmark tables; no third-party run found |
+| kolibri-1 | lmarenaElo | 2026-10-05 | not on the arena.ai text board two days after release; re-check |
+| kolibri-1 | costPerTask | 2026-10-05 | no Artificial Analysis listing as of 2026-10-04 (per launch coverage) and none found; re-check |
+| kolibri-1 | pricing | 2026-10-05 | open weights only; no Aleph Alpha API SKU and no OpenRouter listing, so no per-token price exists |
+| kolibri-1 | maxOutput | 2026-10-05 | unpublished on the model card and launch post; the card's max_tokens=1024 is a pre-training eval setting, not an output limit |

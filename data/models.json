@@ -7948,5 +7948,67 @@
       "Too new to characterise: Ant's three launch scores are all self-reported, with no hands-on reception yet"
     ],
     "notes": "Announced by Ant Group's Ling (Bailing) team on 2026-09-30 as a roughly 560B-total / 25B-active MoE with up to a 1M-token context; the two-week free trial serves 262,144 tokens (32,768 max output per the Vercel AI Gateway and Novita listings), and Ant says the full window and an open-source release follow the trial, so openWeights is false and licence null until weights publish. Pricing is null rather than $0 because only the free trial exists and no list price is published. Ant reported only GDPval-AA v2.1 Elo 1673, FrontierSWE 75.16 and HealthBench Professional 65.35; none is a tracked key, and gdpvalAA records v2, so the v2.1 figure is kept here rather than in that cell. Tier is fast on Ant's own lineup, where flash sits below the 1T flagship line. Also free inside Command Code (inclusionai/ling-3.1-flash:free) and on Vercel as inclusionai/ling-3.1-flash-free."
+  },
+  {
+    "id": "kolibri-1",
+    "name": "Kolibri-1",
+    "company": "aleph-alpha",
+    "releaseDate": "2026-10-03",
+    "status": "superseded",
+    "tier": "fast",
+    "modality": "text",
+    "type": "llm",
+    "contextWindow": 1048576,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "self-host",
+    "knowledgeCutoff": "2026-06",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": 80,
+      "gpqaDiamond": 84.3,
+      "sweBench": 66.4,
+      "sweBenchPro": null,
+      "terminalBench": 27.7,
+      "aime": 96.9,
+      "hle": 21.5,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Trained to say it doesn't know when the answer isn't in the supplied context — Aleph Alpha built training examples where abstaining is the only correct reply, aimed at document work where a wrong answer costs more than none",
+      "Bilingual tokenizer built around German compound words, so German documents split into fewer tokens and leave more of the window free than on English-centric models",
+      "Reasoning effort is selectable from none to high, so quick lookups and harder problems can share one deployment",
+      "Apache 2.0 weights sized for on-premise use — a single B200 or a pair of H100s holds the FP8 checkpoint, so sensitive documents never have to leave the building"
+    ],
+    "weaknesses": [
+      "Not a drop-in for stock vLLM — reasoning and tool calling need Aleph Alpha's own inference plugin, an extra dependency in any self-hosted stack",
+      "No hosted endpoint at launch — trying it at all means pulling roughly 78 GB of weights onto data-centre GPUs",
+      "Too new to characterise — there are no independent evaluations or hands-on reports yet, so its behaviour rests on Aleph Alpha's own claims"
+    ],
+    "notes": "Aleph Alpha's English-German reasoning model, a sparse MoE with 78.1B total and 3.46B active parameters (384 routed experts per layer, 6 active), developed in Germany and trained on infrastructure in Germany and Finland. Announced and released on Hugging Face on 2026-10-03; the blog brands it simply \"Kolibri\" and the repo is Kolibri-1 (FP8, with a BF16 variant). Context is 262,144 tokens natively, extended to 1,048,576 by extrapolation, which the blog advertises as \"up to 1M\". Every score is Aleph Alpha's own, from the model card and launch post at high reasoning effort: GPQA Diamond 84.3 (81.3 in German), AIME 2025 96.9 (AIME 2026 96.0), MMLU-Pro CoT 80.0, SWE-bench Verified 66.4 (scaffold unstated), HLE 21.5 (tool use unstated), Terminal-Bench 2.1 27.7, plus tau2-Bench Telecom 94.7, BFCL v4 61.4 and BrowseComp 29.4. Availability is self-host: there is no Aleph Alpha API SKU and no OpenRouter listing, and serving needs the aleph-alpha-inference vLLM plugin on at least two A100 80GB GPUs. No pricing, max output or Artificial Analysis entry as of 2026-10-05. Knowledge cutoff is 18 June 2026 for both languages. predecessorId is null: the launch post presents Kolibri Origin (30B-A3B, finished June 2026) as the model that validated the training pipeline, not as one Kolibri replaces, and Origin is not on this site."
   }
 ]
