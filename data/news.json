@@ -1,5 +1,50 @@
 [
   {
+    "id": "2026-09-30-ling-3-1-flash",
+    "date": "2026-09-30",
+    "title": "Ant Group releases Ling-3.1-flash as a free trial, with open weights promised",
+    "summary": "Ant Group's Ling team announced Ling-3.1-flash on 2026-09-30, a roughly 560B-total / 25B-active mixture-of-experts model aimed at agents, search, office work and specialist domains, with up to a 1M-token context. It launched as a two-week free trial capped at 256K tokens via Vercel AI Gateway and Novita, with the full window and an open-source release promised afterwards; Ant reports GDPval-AA v2.1 Elo 1673, FrontierSWE 75.16 and HealthBench Professional 65.35.",
+    "category": "release",
+    "companies": [
+      "ant-group"
+    ],
+    "modelIds": [
+      "ling-3-1-flash"
+    ],
+    "sourceName": "Ant Ling (X)",
+    "sourceUrl": "https://x.com/AntLingAGI/status/2105335205741596911"
+  },
+  {
+    "id": "2026-09-30-gemini-4-argon",
+    "date": "2026-09-30",
+    "title": "Google releases Gemini 4 Argon, its first Gemini 4 model, to cyber defenders first",
+    "summary": "Google announced Gemini 4 Argon on 2026-09-30, rolling it out first to trusted cyber defenders through its Fairwind Program while it takes part in the U.S. government's pre-release testing, with paid API customers and Google AI Ultra subscribers promised access 'as soon as possible'. It raises Gemini's output limit from 64K to 1M tokens, is priced at an introductory $2/$10 per million tokens (rising to $4/$20), and leads Google's own table on DeepSWE v1.1 (77.9%) and the Vals Index (68.9%) while trailing on FrontierSWE v2 and Terminal-Bench 4.0; it debuted first on the LMArena text board at a preliminary 1525 and scores 53 on Artificial Analysis' Intelligence Index.",
+    "category": "release",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [
+      "gemini-4-argon"
+    ],
+    "sourceName": "Google",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+  },
+  {
+    "id": "2026-09-29-gpt-6-1-sol",
+    "date": "2026-09-29",
+    "title": "OpenAI releases GPT-6.1 Sol at DevDay, near-Astra coding at a fifth of Astra's price",
+    "summary": "OpenAI released GPT-6.1 Sol at DevDay on 2026-09-29, a week after GPT-6 Sol, at the same $2/$10 per million tokens with cached input halved to $0.10 and the same 1,050,000-token context and 128K output. OpenAI says it nearly matches GPT-6 Astra on agentic coding, computer use and professional work — DeepSWE v1.1 75.2% at high effort, OSWorld 2.0 71.4% at max — and Artificial Analysis scores it 52 on its Intelligence Index; it is available in the API and in ChatGPT Work and Codex.",
+    "category": "release",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-6-1-sol"
+    ],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-sol/"
+  },
+  {
     "id": "2026-09-21-mimo-v2-6-pro",
     "date": "2026-09-21",
     "title": "Xiaomi open-sources MiMo-V2.6-Pro and Flash under MIT, the top open-weights model on Artificial Analysis' index",

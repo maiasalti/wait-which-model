@@ -206,3 +206,11 @@ soofi-s-30b-a3b · speed · 2026-09-24 · Gated preview; no AA measurement. Left
 soofi-s-30b-a3b · apiIds · 2026-09-24 · Gated preview; no API. Left [].
 mach-1-additive-35b · speed · 2026-09-24 · No AA page; Syzygy's "up to 120 tokens per second" is a local-laptop figure, not an AA measurement. Left null.
 mach-1-additive-35b · apiIds · 2026-09-24 · No hosted API — runs in-browser or locally via mach-serve; weights at SyzygyResearch/Mach-1-Additive-35B only. Left [].
+gemini-4-argon · predecessorId · 2026-10-01 · Google's launch blog and evaluation PDF name no model Argon replaces (it is the first Gemini 4 model; Gemini 3.x Flash models stay on sale). Left null.
+gemini-4-argon · apiIds · 2026-10-01 · Restricted Fairwind rollout; the Gemini API docs have no Argon model page (ai.google.dev/gemini-api/docs/models/gemini-4-argon returns 404) and no official model string was published. Left [] — re-check at broad release.
+gemini-4-argon · speed · 2026-10-01 · AA's model page lists speed as unknown (high-effort variant only). Left null — re-check.
+gpt-6-1-sol · predecessorId · 2026-10-01 · OpenAI's model docs and ChatGPT models page describe it as near-Astra at lower cost and recommend it, but neither says it replaces GPT-6 Sol; "replacement for GPT-6 Sol" appears only in third-party guides, and GPT-6 Sol remains available. Left null.
+ling-3-1-flash · predecessorId · 2026-10-01 · Ant's launch post (x.com/AntLingAGI/status/2105335205741596911) and TechNode's coverage (EN and CN) name no model it replaces; "succeeds Ling-3.0-flash" appears only in third-party blogs (orcarouter.ai), and Ling-3.0-flash is not in models.json anyway. Left null.
+ling-3-1-flash · speed · 2026-10-01 · Artificial Analysis has no Ling-3.1-flash page (artificialanalysis.ai/models/ling-3-1-flash returns 404). Left null — re-check.
+ling-3-1-flash · license · 2026-10-01 · Not applicable — openWeights false; Ant promises an open-source release after the two-week trial, and the inclusionAI Hugging Face org has no Ling-3.1-flash repo yet. Re-check once weights publish.
+ling-3-1-flash · retirementDate · 2026-10-01 · No lifecycle notice; brand-new release. Not chased further.
