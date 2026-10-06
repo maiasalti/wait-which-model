@@ -15,6 +15,40 @@
     "sourceUrl": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/"
   },
   {
+    "id": "2026-10-01-clef",
+    "date": "2026-10-01",
+    "title": "Cloudflare releases Clef and Clef-flash, open-weight decision models compatible with Jev's API",
+    "summary": "Cloudflare's Workers AI team released its first in-house models on 2026-10-01: Clef (27B, post-trained from Qwen3.8-27B) and Clef-flash (9B, from Qwen3.5-9B), \"System One\" decision models that read text, JSON, images or video and return a probability for every allowed answer to typed questions, under Apache 2.0 on Hugging Face and hosted on Workers AI at $0.24 and $0.09 per million input tokens. Both are drop-in compatible with TypeSafe's Jev API; Cloudflare reports median latencies of 209 ms and 39 ms against Jev's 524 ms and says the pair lead 7 of 10 decision benchmarks, while trailing Jev on knowledge-heavy sets such as GPQA Diamond. It also announced an RL fine-tuning platform for decision models.",
+    "category": "release",
+    "companies": [
+      "cloudflare",
+      "typesafe"
+    ],
+    "modelIds": [
+      "clef",
+      "clef-flash",
+      "jev"
+    ],
+    "sourceName": "Cloudflare",
+    "sourceUrl": "https://blog.cloudflare.com/clef-decision-models/"
+  },
+  {
+    "id": "2026-10-01-strands-decider-2b",
+    "date": "2026-10-01",
+    "title": "AWS releases Strands Decider 2B, an open-source decision model small enough to run locally",
+    "summary": "AWS's Strands Labs released Strands Decider 2B on 2026-10-01: a LoRA adapter on Qwen3.5-2B-Base with a roughly 1M-parameter pointer head in place of the language-model head, which picks or scores options for typed questions with a confidence instead of generating text. Weights, training scripts, data inventory and evaluations are Apache 2.0 on Hugging Face and GitHub, with no hosted endpoint. AWS reports a 115 ms median per question on an RTX 3090 and 0.723 on JevBench's public set; a hobson-v21 checkpoint followed on 2026-10-05.",
+    "category": "release",
+    "companies": [
+      "amazon",
+      "typesafe"
+    ],
+    "modelIds": [
+      "strands-decider-2b"
+    ],
+    "sourceName": "Strands Agents",
+    "sourceUrl": "https://strandsagents.com/blog/introducing-strands-decider/"
+  },
+  {
     "id": "2026-09-30-ling-3-1-flash",
     "date": "2026-09-30",
     "title": "Ant Group releases Ling-3.1-flash as a free trial, with open weights promised",

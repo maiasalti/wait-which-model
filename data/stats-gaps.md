@@ -635,7 +635,7 @@ Stats-filler sweep on 2026-09-03 (daily sweep), two batches: (a) recent/unknown/
 | gpt-4 | terminalBench | 2026-09-03 | predates Terminal-Bench (all versions); never evaluated on any board excerpt |
 | gpt-6-astra | sweBench | 2026-09-04 | OpenAI stopped publishing SWE-bench Verified in Feb 2026; no Verified score in the launch table or system card |
 | gpt-6-astra | sweBenchPro | 2026-09-04 | Not on the Scale/SWE-bench Pro public leaderboard as of 2026-09-04; OpenAI reported DeepSWE v1.1 74.1 instead |
-| gpt-6-astra | terminalBench | 2026-09-04 | OpenAI reports Terminal-Bench 4.0 (57.7%); no 2.1 run published, and versions are not comparable |
+| gpt-6-astra | terminalBench | 2026-09-04 | OpenAI reports Terminal-Bench 4.0 (57.7%); no 2.1 run published, and versions are not comparable — **superseded 2026-10-06: Vals AI TB 2.1 lists gpt-6-astra at 87.27% (max) — filled as third-party** |
 | gpt-6-astra | hle | 2026-09-04 | Only a with-tools figure published (57.2%); no no-tools score from OpenAI or AA |
 | gpt-6-astra | lmarenaElo | 2026-09-04 | Not yet rated on LMArena/Arena text leaderboard — **superseded 2026-09-22: arena.ai now lists gpt-6-astra-max at 1480±12 — filled** |
 | gpt-6-astra | gdpvalAA | 2026-09-04 | AA's launch article cites only a ~80 Elo regression vs GPT-5.6 Sol, no absolute rating |
@@ -905,7 +905,7 @@ New-model-release sweep on 2026-09-22 (window widened to 2026-09-11 through 2026
 | claude-opus-5-5 | sweBench | 2026-09-23 | Anthropic's system card reports SWE-bench Pro / Multilingual / Multimodal only; no SWE-bench Verified run on Vals AI or Scale's public board as of 2026-09-23 |
 | claude-opus-5-5 | mmluPro | 2026-09-23 | not in the launch post or system card (only Global MMLU 94.3%); absent from Vals AI's page |
 | claude-opus-5-5 | aime | 2026-09-23 | not published; Anthropic retired AIME from reporting |
-| claude-opus-5-5 | lmarenaElo | 2026-09-23 | arena.ai's text leaderboard (2026-09-13 update) predates the release; no Opus 5.5 listing yet — re-check |
+| claude-opus-5-5 | lmarenaElo | 2026-09-23 | arena.ai's text leaderboard (2026-09-13 update) predates the release; no Opus 5.5 listing yet — re-check — **superseded 2026-10-06: Arena announced Claude Opus 5.5 (High) #1 on Text Arena at 1509±12 — filled** |
 | claude-opus-5-5 | gdpvalAA | 2026-09-23 | Anthropic's system card reports 1846 on GDPval-AA v2.1 (max effort) — a different scale from the v2 this key records |
 | claude-opus-5-5 | speed | 2026-09-23 | Artificial Analysis lists only a max-effort variant and shows "No data available" for output speed and first-answer latency on its model and providers pages as of 2026-09-23; re-check |
 | gpt-6-sol | gpqaDiamond | 2026-09-23 | not in OpenAI's launch table (which uses AutomationBench, Agents' Last Exam, FrontierCode, DeepSWE, OSWorld only) and absent from Artificial Analysis' GPQA Diamond board and comparison pages; no system card was published |
@@ -996,3 +996,36 @@ New-model-release research on 2026-10-04, scoped to `claude-sonnet-5-5`. Sources
 | claude-sonnet-5-5 | aime | 2026-10-04 | not reported; Anthropic has moved off AIME in its 5.x-era system cards |
 | claude-sonnet-5-5 | arcAgi2 | 2026-10-04 | not found on ARC Prize's verified-results pages or any tracker checked as of one week post-launch |
 | claude-sonnet-5-5 | terminalBench | 2026-10-05 | re-checked: 83.2 circulating for Terminal-Bench 2.1 is Vals AI's third-party run (83.15%, high effort), not a primary source; tbench.ai's 2.1 leaderboard doesn't list Sonnet 5.5 |
+
+Stats-filler sweep on 2026-10-06 (daily sweep, unattended). WebFetch was denied for every URL; findings rest on WebSearch excerpts of arena.ai and Arena's X posts, arcprize.org and ARC Prize's X posts, vals.ai model/benchmark pages, and launch coverage. Every open cell on models released since 2026-09-01 was already in this ledger; only re-check rows were revisited. Fills: claude-opus-5-5 lmarenaElo 1509 (Arena's own post, "Opus 5.5 (High)"), gpt-6-astra terminalBench 87.3 (Vals AI TB 2.1, max).
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| gpt-6-1-sol | arcAgi2 | 2026-10-06 | ARC Prize's own X post (x.com/arcprize/status/2105391846067249649) gives ARC-AGI-2 94.2% at $0.25/task but names no reasoning effort, and no arcprize.org/results/openai-gpt-6-1-sol page surfaced to show the per-effort breakdown; this site records max effort, and ARC's headline is not always the max-effort run (Opus 5.5's headline 93.3% was high; max is 91.7%) — re-check for the results page |
+| gpt-6-1-sol | lmarenaElo | 2026-10-06 | Arena has published Agent Arena (#5) and Code Arena: WebDev results for GPT-6.1 Sol (Max) but no text-board figure; Arena's 2026-10-01 post said text scores were "coming soon" — re-check |
+| gpt-6-sol | terminalBench | 2026-10-06 | conflicting: one search excerpt of vals.ai/models/openai_gpt-6-sol gives Terminal-Bench 2.1 83.15% (#6/73), but the same 83.15% is credited to Claude Sonnet 5.5 on vals.ai/models/anthropic_claude-sonnet-5-5; excerpts can't settle which is right — re-check with direct page access |
+| gpt-6-luna | lmarenaElo | 2026-10-06 | re-checked: Arena has published Agent Arena (#23) and Code Arena: WebDev (1593) figures for GPT-6 Luna (Max) but no text-board score — re-check |
+| mimo-v2-6-pro | lmarenaElo | 2026-10-06 | re-checked: one search summary gave a text-arena score of 1480 but tied it to no source page; Arena's own posts cover only Code Arena: WebDev (1628, AutoEval) and Agent Arena — unverified, re-check |
+| kolibri-1 | lmarenaElo | 2026-10-06 | re-checked: no arena.ai listing or Arena post found |
+| gemini-4-argon | contextWindow | 2026-10-06 | re-checked: Google still has not published an input context window (coverage stresses only the 1M *output* limit); AA's 1M remains unofficial and no Gemini API model page exists — re-check |
+| gemini-4-argon | knowledgeCutoff | 2026-10-06 | re-checked: still no model card; third-party pages state the cutoff is unpublished |
+| gemini-4-argon | arcAgi2 | 2026-10-06 | re-checked: no ARC Prize result or post found |
+| claude-sonnet-5-5 | arcAgi2 | 2026-10-06 | re-checked: ARC Prize has posted Opus 5.5 (93.3% high) but nothing for Sonnet 5.5 |
+| grok-4-7 | arcAgi2 / lmarenaElo / terminalBench | 2026-10-06 | re-checked: ARC Prize pages exist for Grok 4.5 and 4.6 only; no arena text listing; not on Vals' TB 2.1 board (Vals no longer runs 2.1 on new releases) |
+| step-5-preview | terminalBench | 2026-10-06 | DataLearner/BenchLM claim "Terminal-Bench v2.1 85.0%", but StepFun's launch table lists Terminal-Bench 4.0 33.3% and no 2.1 row; the tracker figure has no traceable primary or leaderboard source — rejected |
+| clef | all benchmarks | 2026-10-06 | not applicable, not merely unpublished: Clef is a typed-decision model that cannot generate text; Cloudflare's 48.0 GPQA Diamond is a decision-format run in its Decision Index suite, not comparable with generative scores |
+| clef | pricing.outputPerMTok | 2026-10-06 | Workers AI model page lists only an input rate ($0.24/M, 21,818 neurons); press says output is unbilled but no Cloudflare page seen states it (WebFetch denied; search excerpts only) |
+| clef | maxOutput | 2026-10-06 | no output-token limit exists; output is typed probabilities, not a token stream |
+| clef | knowledgeCutoff | 2026-10-06 | not disclosed on the blog, changelog, Workers AI page or Hugging Face card |
+| clef | costPerTask | 2026-10-06 | no Artificial Analysis coverage as of launch |
+| clef-flash | all benchmarks | 2026-10-06 | not applicable, not merely unpublished: typed-decision model that cannot generate text; Cloudflare's 51.0 GPQA Diamond is a decision-format run, not comparable |
+| clef-flash | pricing.outputPerMTok | 2026-10-06 | Workers AI lists only an input rate ($0.09/M, 8,182 neurons); no official output rate seen |
+| clef-flash | maxOutput | 2026-10-06 | no output-token limit exists; output is typed probabilities, not a token stream |
+| clef-flash | knowledgeCutoff | 2026-10-06 | not disclosed on the blog, changelog, Workers AI page or Hugging Face card |
+| clef-flash | costPerTask | 2026-10-06 | no Artificial Analysis coverage as of launch |
+| strands-decider-2b | all benchmarks | 2026-10-06 | not applicable, not merely unpublished: typed-decision model that cannot generate text; AWS reports JevBench accuracy and calibration only |
+| strands-decider-2b | contextWindow | 2026-10-06 | AWS evaluates at 4,096 tokens (results also at 3,072) but publishes no maximum on the blog, Hugging Face card or GitHub README |
+| strands-decider-2b | pricing | 2026-10-06 | no hosted API or price from AWS; weights only |
+| strands-decider-2b | maxOutput | 2026-10-06 | no output-token limit exists; output is typed probabilities, not a token stream |
+| strands-decider-2b | knowledgeCutoff | 2026-10-06 | not disclosed; Qwen3.5-2B-Base pretraining is not a published cutoff for the adapter |
+| strands-decider-2b | costPerTask | 2026-10-06 | no Artificial Analysis coverage as of launch |

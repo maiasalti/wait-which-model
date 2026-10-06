@@ -286,5 +286,14 @@
     "website": "https://aleph-alpha.com",
     "color": "#5B6CD9",
     "order": 32
+  },
+  {
+    "id": "cloudflare",
+    "name": "Cloudflare",
+    "country": "United States",
+    "founded": 2009,
+    "website": "https://www.cloudflare.com",
+    "color": "#D9720F",
+    "order": 33
   }
 ]

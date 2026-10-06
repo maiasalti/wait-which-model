@@ -91,17 +91,9 @@
     "modelId": "claude-fable-5-1",
     "tier": "flagship",
     "start": "2026-09-01",
-    "end": "2026-09-03",
-    "dethronedBy": "gpt-6-astra",
-    "composite": 0.9568
-  },
-  {
-    "modelId": "gpt-6-astra",
-    "tier": "flagship",
-    "start": "2026-09-03",
     "end": "2026-09-22",
     "dethronedBy": "claude-opus-5-5",
-    "composite": 0.9607
+    "composite": 0.9568
   },
   {
     "modelId": "claude-opus-5-5",
@@ -109,7 +101,7 @@
     "start": "2026-09-22",
     "end": null,
     "dethronedBy": null,
-    "composite": 0.9636
+    "composite": 0.9709
   },
   {
     "modelId": "claude-3-5-sonnet",
