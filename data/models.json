@@ -1730,7 +1730,13 @@
       "timeToFirstTokenSec": null,
       "effort": null
     },
-    "license": null,
+    "license": {
+      "spdx": null,
+      "name": "DeepSeek License Agreement (Version 1.0)",
+      "kind": "restricted",
+      "url": "https://github.com/deepseek-ai/DeepSeek-V3/blob/main/LICENSE-MODEL",
+      "commercialUse": true
+    },
     "apiIds": [],
     "retirementDate": null,
     "predecessorId": null,
@@ -1792,7 +1798,12 @@
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1/blob/main/LICENSE",
       "commercialUse": true
     },
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "aws-bedrock",
+        "id": "deepseek.r1-v1:0"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -2999,7 +3010,12 @@
       "url": "https://huggingface.co/google/gemma-4-31B-it",
       "commercialUse": true
     },
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "aws-bedrock",
+        "id": "google.gemma-4-31b"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -3120,6 +3136,10 @@
       {
         "provider": "openai",
         "id": "gpt-5.6-sol"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "openai.gpt-5.6-sol"
       }
     ],
     "retirementDate": null,
@@ -5691,6 +5711,10 @@
       {
         "provider": "xai",
         "id": "grok-4.6"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "xai.grok-4.6"
       }
     ],
     "retirementDate": null,
@@ -5938,6 +5962,10 @@
       {
         "provider": "zhipu",
         "id": "glm-5.3"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "zai.glm-5.3"
       }
     ],
     "retirementDate": null,
@@ -6694,6 +6722,10 @@
       {
         "provider": "openai",
         "id": "gpt-6-astra"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "openai.gpt-6-astra"
       }
     ],
     "retirementDate": null,
@@ -6703,7 +6735,7 @@
       "gpqaDiamond": 96,
       "sweBench": null,
       "sweBenchPro": null,
-      "terminalBench": null,
+      "terminalBench": 87.3,
       "aime": null,
       "hle": null,
       "lmarenaElo": 1480,
@@ -6722,7 +6754,7 @@
       "Gated at every layer — trusted-access first, enterprise workspaces off until an admin opts in, cybersecurity capability behind the Daybreak programme — so it can't simply be picked up and trialled",
       "Behavior is a moving target this early: no hands-on reviews of voice, verbosity or agentic stamina exist yet, and independent leaderboards haven't placed it"
     ],
-    "notes": "OpenAI's first model designated Critical for cybersecurity under its Preparedness Framework, launched via staged rollout (trusted-access enterprises first, then ChatGPT Plus/Pro/Business/Enterprise and the wider API), hence availability \"restricted\". Context 1,050,000 tokens (922K max input) and 128K output, cutoff 2026-04-30, and $10/$50 per MTok ($1 cached input, $12.50 cache writes) are from OpenAI's own model docs; prompts over 272K input tokens bill at 2x input/cache and 1.5x output for the whole request, and a fast tier costs 2x ($20/$100). GPQA Diamond 96.0 is from OpenAI's launch table; the rest of that table uses benchmarks this site doesn't track (Terminal-Bench 4.0 57.7% — not the tracked 2.1 metric — DeepSWE v1.1 74.1%, FrontierMath Tier 4 v2 97.6%, OSWorld 2.0 72.6%, ScreenSpot-Pro 92.7%, BrowseComp 91.5%, ExploitBench 100%, MRCR v2 8-needle 100% at 256K-512K and 96.3% at 512K-1M). HLE is left null because the only published figure, 57.2%, is with tools and so isn't comparable to the no-tools scores recorded here. OpenAI has not published SWE-bench Verified since February 2026 and Astra is absent from the SWE-bench Pro leaderboard; the arena.ai listing and ARC Prize's ARC-AGI-2 result arrived after launch (below). ARC Prize measured ARC-AGI-3 (62.7% on its standard harness, 99.9% via a provider-adapter harness ARC Prize warns is not comparable to human testing) but published no ARC-AGI-2 figure. Artificial Analysis scores it 61 on the Intelligence Index at max effort (level with GPT-5.6 Sol, 5 below Claude Fable 5.1) at $1.67 per task, and $0.75 per task at medium effort, the figure recorded here; AA reports no speed measurements yet, and flags a ~80 Elo regression on GDPval-AA v2 against Sol without publishing the absolute rating. ARC-AGI-2 95.0% is ARC Prize-verified at max effort (xhigh 93.3%, high/medium 92.1%, low 85.4%), published 2026-09-02 at arcprize.org/results/openai-gpt-6-astra; cost per task not stated on that page. LMArena Elo 1480 (±12) is the \"gpt-6-astra-max\" text-arena listing (arena.ai, 2026-09-13 update, rank 24)."
+    "notes": "OpenAI's first model designated Critical for cybersecurity under its Preparedness Framework, launched via staged rollout (trusted-access enterprises first, then ChatGPT Plus/Pro/Business/Enterprise and the wider API), hence availability \"restricted\". Context 1,050,000 tokens (922K max input) and 128K output, cutoff 2026-04-30, and $10/$50 per MTok ($1 cached input, $12.50 cache writes) are from OpenAI's own model docs; prompts over 272K input tokens bill at 2x input/cache and 1.5x output for the whole request, and a fast tier costs 2x ($20/$100). GPQA Diamond 96.0 is from OpenAI's launch table; the rest of that table uses benchmarks this site doesn't track (Terminal-Bench 4.0 57.7% — not the tracked 2.1 metric — DeepSWE v1.1 74.1%, FrontierMath Tier 4 v2 97.6%, OSWorld 2.0 72.6%, ScreenSpot-Pro 92.7%, BrowseComp 91.5%, ExploitBench 100%, MRCR v2 8-needle 100% at 256K-512K and 96.3% at 512K-1M). HLE is left null because the only published figure, 57.2%, is with tools and so isn't comparable to the no-tools scores recorded here. OpenAI has not published SWE-bench Verified since February 2026 and Astra is absent from the SWE-bench Pro leaderboard; the arena.ai listing and ARC Prize's ARC-AGI-2 result arrived after launch (below). ARC Prize measured ARC-AGI-3 (62.7% on its standard harness, 99.9% via a provider-adapter harness ARC Prize warns is not comparable to human testing) but published no ARC-AGI-2 figure. Artificial Analysis scores it 61 on the Intelligence Index at max effort (level with GPT-5.6 Sol, 5 below Claude Fable 5.1) at $1.67 per task, and $0.75 per task at medium effort, the figure recorded here; AA reports no speed measurements yet, and flags a ~80 Elo regression on GDPval-AA v2 against Sol without publishing the absolute rating. ARC-AGI-2 95.0% is ARC Prize-verified at max effort (xhigh 93.3%, high/medium 92.1%, low 85.4%), published 2026-09-02 at arcprize.org/results/openai-gpt-6-astra; cost per task not stated on that page. LMArena Elo 1480 (±12) is the \"gpt-6-astra-max\" text-arena listing (arena.ai, 2026-09-13 update, rank 24). Terminal-Bench 2.1 87.3% (87.27%) is Vals AI's independent-harness measurement at max reasoning (Terminus 2 harness; vals.ai/models/openai_gpt-6-astra) — third-party, not lab-reported."
   },
   {
     "id": "muse-spark-1-3",
@@ -7333,6 +7365,10 @@
       {
         "provider": "xai",
         "id": "grok-4.7"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "xai.grok-4.7"
       }
     ],
     "retirementDate": null,
@@ -7414,7 +7450,7 @@
       "terminalBench": 87.6,
       "aime": null,
       "hle": 64.4,
-      "lmarenaElo": null,
+      "lmarenaElo": 1509,
       "gdpvalAA": null,
       "arcAgi2": 91.7
     },
@@ -7429,7 +7465,7 @@
       "Stops to report progress partway through long tasks, ending the turn with text rather than a tool call — unattended loops need a checklist or re-prompt harness to keep it going",
       "Code review comes back with more findings and roughly half again the tokens of Opus 5 — the extra flags still need a human to triage"
     ],
-    "notes": "HLE 64.4% no tools / 67.7% with tools, SWE-bench Pro 89.9% and GDPval-AA v2.1 1846 are Anthropic's system-card figures (Table 8.1.A: adaptive thinking at max effort, five-trial average, production safeguards on — cyber tasks routed to Opus 4.8 and bio/frontier-LLM tasks to Opus 5 where they intervened); GDPval-AA stays null here because the tracked key is the v2 scale. Anthropic's launch table leads with Terminal-Bench 4.0 66.4% (xhigh; not comparable with 2.1), FrontierCode v1.1 54.4%, CursorBench 4.0 57.8%, OSWorld 2.0 81.8% partial / 48.7% strict, Terminal-Bench-Science 0.1 58.7% and AutomationBench 40.0%. Terminal-Bench 2.1 87.6% is Vals AI's independent-harness measurement at high effort (vals.ai/models/anthropic_claude-opus-5-5) — third-party, and 26 of 267 tasks needed server-side fallbacks, so it drops to 79.8% if those count as failures. ARC-AGI-2 91.7% is ARC Prize-verified at max effort (arcprize.org/results/anthropic-claude-opus-5-5, 2026-09-22); high effort scores 93.3%, xhigh 92.5%, medium 87.5%, low 70.1%. Anthropic no longer reports SWE-bench Verified, GPQA Diamond, MMLU-Pro or AIME, and the model is not on arena.ai's text leaderboard as of its 2026-09-13 update. Cost per task is Artificial Analysis' max-effort variant, the only one it lists (Intelligence Index 58, first place); AA had no speed measurement at launch. Default effort is medium (Opus 5 defaulted to high), adaptive thinking cannot be disabled, and forced tool_choice is rejected. Cache reads are $0.20/MTok (0.05x input); batch $2/$10; fast mode $8/$40 on the first-party API only; max output rises to 300K via the Message Batches API beta. Also served on Microsoft Foundry as claude-opus-5-5."
+    "notes": "HLE 64.4% no tools / 67.7% with tools, SWE-bench Pro 89.9% and GDPval-AA v2.1 1846 are Anthropic's system-card figures (Table 8.1.A: adaptive thinking at max effort, five-trial average, production safeguards on — cyber tasks routed to Opus 4.8 and bio/frontier-LLM tasks to Opus 5 where they intervened); GDPval-AA stays null here because the tracked key is the v2 scale. Anthropic's launch table leads with Terminal-Bench 4.0 66.4% (xhigh; not comparable with 2.1), FrontierCode v1.1 54.4%, CursorBench 4.0 57.8%, OSWorld 2.0 81.8% partial / 48.7% strict, Terminal-Bench-Science 0.1 58.7% and AutomationBench 40.0%. Terminal-Bench 2.1 87.6% is Vals AI's independent-harness measurement at high effort (vals.ai/models/anthropic_claude-opus-5-5) — third-party, and 26 of 267 tasks needed server-side fallbacks, so it drops to 79.8% if those count as failures. ARC-AGI-2 91.7% is ARC Prize-verified at max effort (arcprize.org/results/anthropic-claude-opus-5-5, 2026-09-22); high effort scores 93.3%, xhigh 92.5%, medium 87.5%, low 70.1%. Anthropic no longer reports SWE-bench Verified, GPQA Diamond, MMLU-Pro or AIME. LMArena Elo 1509 (±12) is the \"Claude Opus 5.5 (High)\" text-arena listing, #1 on debut per Arena's own announcement (x.com/arena/status/2103893011164017018) — the High-effort listing, not max. Cost per task is Artificial Analysis' max-effort variant, the only one it lists (Intelligence Index 58, first place); AA had no speed measurement at launch. Default effort is medium (Opus 5 defaulted to high), adaptive thinking cannot be disabled, and forced tool_choice is rejected. Cache reads are $0.20/MTok (0.05x input); batch $2/$10; fast mode $8/$40 on the first-party API only; max output rises to 300K via the Message Batches API beta. Also served on Microsoft Foundry as claude-opus-5-5."
   },
   {
     "id": "claude-sonnet-5-5",
@@ -7532,6 +7568,10 @@
       {
         "provider": "openai",
         "id": "gpt-6-sol"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "openai.gpt-6-sol"
       }
     ],
     "retirementDate": null,
@@ -7593,6 +7633,10 @@
       {
         "provider": "openai",
         "id": "gpt-6-luna"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "openai.gpt-6-luna"
       }
     ],
     "retirementDate": null,
@@ -7925,6 +7969,10 @@
       {
         "provider": "openai",
         "id": "gpt-6.1-sol"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "openai.gpt-6.1-sol"
       }
     ],
     "retirementDate": null,
@@ -8079,5 +8127,198 @@
       "Too new to characterise — there are no independent evaluations or hands-on reports yet, so its behaviour rests on Aleph Alpha's own claims"
     ],
     "notes": "Aleph Alpha's English-German reasoning model, a sparse MoE with 78.1B total and 3.46B active parameters (384 routed experts per layer, 6 active), developed in Germany and trained on infrastructure in Germany and Finland. Announced and released on Hugging Face on 2026-10-03; the blog brands it simply \"Kolibri\" and the repo is Kolibri-1 (FP8, with a BF16 variant). Context is 262,144 tokens natively, extended to 1,048,576 by extrapolation, which the blog advertises as \"up to 1M\". Every score is Aleph Alpha's own, from the model card and launch post at high reasoning effort: GPQA Diamond 84.3 (81.3 in German), AIME 2025 96.9 (AIME 2026 96.0), MMLU-Pro CoT 80.0, SWE-bench Verified 66.4 (scaffold unstated), HLE 21.5 (tool use unstated), Terminal-Bench 2.1 27.7, plus tau2-Bench Telecom 94.7, BFCL v4 61.4 and BrowseComp 29.4. Availability is self-host: there is no Aleph Alpha API SKU and no OpenRouter listing, and serving needs the aleph-alpha-inference vLLM plugin on at least two A100 80GB GPUs. No pricing, max output or Artificial Analysis entry as of 2026-10-05. Knowledge cutoff is 18 June 2026 for both languages. predecessorId is null: the launch post presents Kolibri Origin (30B-A3B, finished June 2026) as the model that validated the training pipeline, not as one Kolibri replaces, and Origin is not on this site."
+  },
+  {
+    "id": "clef",
+    "name": "Clef",
+    "company": "cloudflare",
+    "releaseDate": "2026-10-01",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "type": "system-one",
+    "contextWindow": 65536,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 0.24,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/Cloudflare/clef",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "cloudflare",
+        "id": "@cf/cloudflare/clef"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Speaks the same System One API as Jev, so an existing Jev integration moves over by changing the endpoint and model name",
+      "Reads images and video as well as text and JSON — up to four images go in ahead of the state, so a screenshot or photo can be part of the decision",
+      "Scores every allowed option in one non-autoregressive pass with no intermediate text, so there is nothing to parse and no reasoning tokens to wait for",
+      "Open weights plus a hosted Workers AI endpoint, and Cloudflare launched an RL fine-tuning platform for decision models alongside it"
+    ],
+    "weaknesses": [
+      "Weaker than Jev on knowledge-heavy multiple choice — Cloudflare's own table has Jev ahead on GPQA Diamond, MMLU-Pro, BBH and When2Call, so its wins are in routing, classification and grounding tasks",
+      "A user on Cloudflare's community forum reports hosted calls appearing to stop counting state at about 2,048 tokens despite the advertised 65,536-token window — test long inputs before relying on the full context",
+      "Calibration is Cloudflare's claim, not yet independently audited — confidence has to be measured on your own traffic before setting an automation threshold"
+    ],
+    "notes": "Not an LLM: a \"System One\" decision model, Cloudflare's first trained in-house by the Workers AI team, post-trained from Qwen3.8-27B with a joint schema head that returns a probability for every allowed option of typed noul, choice and score questions in one forward pass, so none of this site's benchmarks apply and every cell is null by design (Cloudflare's 48.0 GPQA Diamond is a decision-format run, not comparable). Filed under the fast tier alongside Jev and Laya. Workers AI lists $0.24 per M input tokens (21,818 neurons) and publishes no output rate; press reports say output is unbilled, but no Cloudflare page seen states that, so outputPerMTok is null. Images are capped at 4 per request, 4 MiB and 16 MP each. Cloudflare reports a 209.3 ms median latency against Jev's 524.1 ms and says the pair lead 7 of 10 benchmarks in Jev's Decision Index 0.2.1 suite; all of these are its own figures. Calibration training pairs label-smoothed cross-entropy with a Brier loss. Released with Clef-flash on 2026-10-01 (blog.cloudflare.com/clef-decision-models). No Artificial Analysis coverage; knowledge cutoff unpublished."
+  },
+  {
+    "id": "clef-flash",
+    "name": "Clef-flash",
+    "company": "cloudflare",
+    "releaseDate": "2026-10-01",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "type": "system-one",
+    "contextWindow": 65536,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 0.09,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/Cloudflare/clef-flash",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "cloudflare",
+        "id": "@cf/cloudflare/clef-flash"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Answers in a few tens of milliseconds at the median, fast enough to sit inline on a request path rather than in a background queue",
+      "Same Jev-compatible API and typed-question schema as Clef, so the two can be swapped per call to trade accuracy for latency",
+      "Takes images and video as state, not just text and JSON"
+    ],
+    "weaknesses": [
+      "Shares the user-reported hosted-API state plateau of about 2,048 tokens seen on Clef, well short of the advertised window",
+      "Calibration is Cloudflare's own claim with no independent audit yet"
+    ],
+    "notes": "Not an LLM: the 9B sibling of Clef, post-trained from Qwen3.5-9B with the same schema head, returning probabilities for typed noul, choice and score questions in one forward pass, so none of this site's benchmarks apply and every cell is null by design (Cloudflare reports a decision-format GPQA Diamond of 51.0, not comparable). Workers AI lists $0.09 per M input tokens (8,182 neurons) and no output rate; outputPerMTok is null for the reason given on Clef. Cloudflare reports a 38.8 ms median latency against Jev's 524.1 ms, its own figure. Released with Clef on 2026-10-01. No Artificial Analysis coverage; knowledge cutoff unpublished."
+  },
+  {
+    "id": "strands-decider-2b",
+    "name": "Strands Decider 2B",
+    "company": "amazon",
+    "releaseDate": "2026-10-01",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "text",
+    "type": "system-one",
+    "contextWindow": null,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "self-host",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/StrandsAgents/strands-decider-2B-hobson-v19",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Small enough to run on a laptop or a single consumer GPU, answering a typed question in a little over a tenth of a second at the median on an RTX 3090",
+      "The whole recipe is open — training data inventory, scripts and evaluations ship alongside the weights, so the model can be retrained rather than just fine-tuned",
+      "Swaps the language-model head for a pointer head of about a million parameters that scores each option directly, so there is no generated text to parse"
+    ],
+    "weaknesses": [
+      "Calibration is a single temperature per question type fitted on short classification tasks — AWS's own card says to measure confidence on your own traffic before trusting a threshold",
+      "Tail latency is uneven off a discrete GPU: AWS measures a 95th percentile in the seconds on an M3 Pro, against a sub-quarter-second median",
+      "Behaviour is a moving target — the launch checkpoint was hobson-v19 and AWS had already published hobson-v21 four days later"
+    ],
+    "notes": "Not an LLM: a \"System One\" decision model from AWS's Strands Labs, a LoRA adapter on Qwen3.5-2B-Base plus a roughly 1M-parameter pointer head that scores the options of typed noul, choice and score questions, so none of this site's benchmarks apply and every cell is null by design. Filed under the fast tier alongside Jev and Laya. Released on Hugging Face (StrandsAgents/strands-decider-2B-hobson-v19) and GitHub (strands-labs/strands-decider) on 2026-10-01 under Apache 2.0; v21 followed on 2026-10-05. Availability is self-host: AWS offers no hosted endpoint or price, and the community ONNX and WebGPU ports are not a hosted service. AWS evaluates it with a 4,096-token context but publishes no maximum, so contextWindow is null. AWS reports 0.723 (167/231) on JevBench public, with medians of 115 ms on an RTX 3090 (p95 299 ms) and 234 ms warm on an M3 Pro (p95 2,628 ms); all are its own figures, not independently reproduced. Training drew on ContractNLI, MuSiQue, synthetic rows generated by open-weight models, and distillation from Qwen3.5-4B. The v21 card documents an opt-in vision mode that keeps the base model's vision tower without any image training; modality stays text for the launch checkpoint. No Artificial Analysis coverage; knowledge cutoff unpublished."
   }
 ]
