@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-10-06-mistral-large-4",
+    "date": "2026-10-06",
+    "title": "Mistral releases Mistral Large 4 in public preview, with open weights promised for late October",
+    "summary": "Mistral opened a public API preview of Mistral Large 4 on 2026-10-06: a natively multimodal mixture-of-experts model of about 1.05T total and 52B active parameters with a 1M-token context, trained across more than 160 languages and aimed at coding, cybersecurity, finance, manufacturing and visual grounding. It is listed at $1.36 / $4.18 per million input/output tokens, half that for the first two weeks, and Mistral plans to publish the weights on 2026-10-27.",
+    "category": "release",
+    "companies": [
+      "mistral"
+    ],
+    "modelIds": [
+      "mistral-large-4"
+    ],
+    "sourceName": "Mistral AI",
+    "sourceUrl": "https://mistral.ai/news/mistral-large-4/"
+  },
+  {
     "id": "2026-10-03-kolibri-1",
     "date": "2026-10-03",
     "title": "Aleph Alpha releases Kolibri, a sovereign English-German open-weight model under Apache 2.0",

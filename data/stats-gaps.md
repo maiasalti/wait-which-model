@@ -996,3 +996,16 @@ New-model-release research on 2026-10-04, scoped to `claude-sonnet-5-5`. Sources
 | claude-sonnet-5-5 | aime | 2026-10-04 | not reported; Anthropic has moved off AIME in its 5.x-era system cards |
 | claude-sonnet-5-5 | arcAgi2 | 2026-10-04 | not found on ARC Prize's verified-results pages or any tracker checked as of one week post-launch |
 | claude-sonnet-5-5 | terminalBench | 2026-10-05 | re-checked: 83.2 circulating for Terminal-Bench 2.1 is Vals AI's third-party run (83.15%, high effort), not a primary source; tbench.ai's 2.1 leaderboard doesn't list Sonnet 5.5 |
+| mistral-large-4 | gpqaDiamond | 2026-10-07 | not in Mistral's launch figures as relayed by search excerpts; no official number found |
+| mistral-large-4 | sweBench | 2026-10-07 | Mistral reported DeepSWE v1.1 and SWE-Atlas-QnA, not SWE-bench Verified |
+| mistral-large-4 | sweBenchPro | 2026-10-07 | not reported at launch |
+| mistral-large-4 | terminalBench | 2026-10-07 | Mistral's figure is Terminal-Bench 4 (28.3%), not the tracked 2.1; kept in notes |
+| mistral-large-4 | hle | 2026-10-07 | not reported at launch |
+| mistral-large-4 | lmarenaElo | 2026-10-07 | no arena listing found in the first day of the preview |
+| mistral-large-4 | gdpvalAA | 2026-10-07 | not reported; no Artificial Analysis listing found |
+| mistral-large-4 | arcAgi2 | 2026-10-07 | no ARC Prize entry found |
+| mistral-large-4 | mmluPro | 2026-10-07 | retired key; not reported |
+| mistral-large-4 | aime | 2026-10-07 | retired key; not reported |
+| mistral-large-4 | costPerTask | 2026-10-07 | no Artificial Analysis page found (search returns only Large 2/3); re-check |
+| mistral-large-4 | maxOutput | 2026-10-07 | not given in any docs.mistral.ai excerpt; WebFetch blocked so the docs page could not be read directly |
+| mistral-large-4 | knowledgeCutoff | 2026-10-07 | unpublished in announcement and docs excerpts |
