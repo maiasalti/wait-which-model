@@ -513,7 +513,7 @@ Release-protocol research on 2026-09-03, scoped to `gemini-3-8-flash` and `gemin
 | gemini-3-8-flash | sweBench | 2026-09-03 | Google published no SWE-bench Verified figure (DeepSWE v1.1 73.7% instead); not on any Verified leaderboard found |
 | gemini-3-8-flash | sweBenchPro | 2026-09-03 | not in Google's evaluation table or model card; DataCamp quotes 61.6% (and 60.4% for 3.7 Flash) alongside a Terminal-Bench 90.8% that contradicts Google's own 89.4%, so the DataCamp figures are not traceable to a primary source — rejected |
 | gemini-3-8-flash | aime | 2026-09-03 | not reported by Google; no tracker figure found |
-| gemini-3-8-flash | arcAgi2 | 2026-09-03 | arcprize.org/results/google-gemini-3-8-flash returns 404 one day after launch; not on the ARC Prize leaderboard yet — re-check (3.7 Flash was verified on its launch day) |
+| gemini-3-8-flash | arcAgi2 | 2026-09-03 | arcprize.org/results/google-gemini-3-8-flash returns 404 one day after launch; not on the ARC Prize leaderboard yet — re-check (3.7 Flash was verified on its launch day) — **superseded 2026-10-08: ARC Prize results page now gives 89.2% at high effort; filled** |
 | gemini-3-8-flash | gdpvalAA (3.7 Flash conflict) | 2026-09-03 | for the record: Google's 3.8 Flash table cites 3.7 Flash at 1482 while AA's gdpval-aa board lists 3.7 Flash (high) at 1516, (medium) 1492, (low) 1446 — 3.7 Flash's cell left null pending a stable AA figure; 3.8 Flash's 1545 agrees across both sources |
 | gemini-3-8-flash-cyber | mmluPro / gpqaDiamond / sweBench / sweBenchPro / terminalBench / aime / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-09-03 | Google reports only cyber evals (CWE-Bench 47.2% pass@1, CyberGym "surpasses 3.5 Flash Cyber", >70% internal 20-language discovery, Chrome 2.6x patches, Wiz recall); no model card exists (deepmind.google/models/model-cards/gemini-3-8-flash-cyber/ 404) and Google does not state that 3.8 Flash's scores apply; Fairwind gating rules out third-party indexing |
 | gemini-3-8-flash-cyber | contextWindow / maxOutput / knowledgeCutoff | 2026-09-03 | no model card or docs page publishes them; Google says only that both models share 'the same foundational intelligence' — not copied from 3.8 Flash |
@@ -524,7 +524,7 @@ Release-protocol research on 2026-09-03 (daily sweep), scoped to `gemini-3-8-fla
 | gemini-3-8-flash | mmluPro | 2026-09-03 | not in Google's launch table (Terminal-Bench 2.1/4.0, HLE-Verified, DeepSWE v1, OSWorld-2.0, Vals Finance Agent, Harvey legal, CharXiv, LVBench); AA's index no longer carries MMLU-Pro; no tracker figure found |
 | gemini-3-8-flash | sweBench | 2026-09-03 | Google reports SWE-Bench Pro ("barely moved" from 3.7 Flash) and DeepSWE v1 71.0%, not Verified; BenchmarkList's 68.70% has no stated source and looks like an older Flash model's figure — rejected |
 | gemini-3-8-flash | aime | 2026-09-03 | not reported by Google; not on any AIME tracker found |
-| gemini-3-8-flash | arcAgi2 | 2026-09-03 | ARC Prize has published no 3.8 Flash result (arcprize.org/results shows 3.7 Flash only); BenchmarkList's 33.60% is Gemini 3 Flash Preview's December 2025 score, misattributed |
+| gemini-3-8-flash | arcAgi2 | 2026-09-03 | ARC Prize has published no 3.8 Flash result (arcprize.org/results shows 3.7 Flash only); BenchmarkList's 33.60% is Gemini 3 Flash Preview's December 2025 score, misattributed — **superseded 2026-10-08: ARC Prize results page now gives 89.2% at high effort; filled** |
 | deepseek-v4-flash-vision-exp | mmluPro | 2026-09-03 | not in DeepSeek's eleven-benchmark launch table; not on any tracker found |
 | deepseek-v4-flash-vision-exp | gpqaDiamond | 2026-09-03 | not published by DeepSeek; AA folds it into the model's Intelligence Index (51, max effort) but the per-eval figure was not readable via search snippets |
 | deepseek-v4-flash-vision-exp | sweBench | 2026-09-03 | DeepSeek reports DeepSWE 59.3, not SWE-bench Verified |
@@ -684,7 +684,7 @@ Weekly release-scan sweep on 2026-09-15, scoped to `deepseek-v4-1-flash` (2026-0
 | deepseek-v4-1-flash | sweBench | 2026-09-15 | DeepSeek reports DeepSWE v1.1 (74.2), not SWE-bench Verified; Vals AI's model page lists no SWE-bench Verified run for it |
 | deepseek-v4-1-flash | sweBenchPro | 2026-09-15 | not in DeepSeek's launch table; not on the Scale SWE-bench Pro public leaderboard as of 2026-09-15 |
 | deepseek-v4-1-flash | aime | 2026-09-15 | not published by DeepSeek (reports MathArena Apex 65.6 and Codeforces 3471 instead); AA's index no longer carries AIME |
-| deepseek-v4-1-flash | lmarenaElo | 2026-09-15 | no V4.1-Flash listing on arena.ai's text leaderboard (only deepseek-v4-pro variants, ranks 50/57); Design Arena's 1347 is a different arena |
+| deepseek-v4-1-flash | lmarenaElo | 2026-09-15 | no V4.1-Flash listing on arena.ai's text leaderboard (only deepseek-v4-pro variants, ranks 50/57); Design Arena's 1347 is a different arena — **superseded 2026-10-08: arena.ai text board now lists deepseek-v4.1-flash-max at 1474 ±7; filled** |
 | deepseek-v4-1-flash | arcAgi2 | 2026-09-15 | ARC Prize has verified V4-Flash-0731 (61.4%) but has no V4.1-Flash results page (arcprize.org/results/deepseek-v4-1-flash returns 404) |
 | deepseek-v4-1-flash | knowledgeCutoff | 2026-09-15 | not disclosed in DeepSeek's HF card, API docs or launch post; AA's model page records knowledgeCutoffDate null |
 | jev | gpqaDiamond, sweBench, sweBenchPro, terminalBench, hle, lmarenaElo, gdpvalAA, arcAgi2, mmluPro, aime | 2026-09-21 | not applicable, not merely unpublished: Jev is a typed-decision model that cannot generate text, so no generative benchmark can be run on it; independent evals (priorbench/jev, scienthoon/jev-ood-calibration, beri.net) measure classification accuracy and calibration only |
@@ -911,9 +911,9 @@ New-model-release sweep on 2026-09-22 (window widened to 2026-09-11 through 2026
 | gpt-6-sol | gpqaDiamond | 2026-09-23 | not in OpenAI's launch table (which uses AutomationBench, Agents' Last Exam, FrontierCode, DeepSWE, OSWorld only) and absent from Artificial Analysis' GPQA Diamond board and comparison pages; no system card was published |
 | gpt-6-sol | sweBench | 2026-09-23 | OpenAI has not published SWE-bench Verified since February 2026; no launch-table or third-party figure |
 | gpt-6-sol | sweBenchPro | 2026-09-23 | not on Scale's SWE-bench Pro public board as of 2026-09-23 (no GPT-6 or GPT-5.6 rows at all); OpenAI reports DeepSWE v1.1 68.8% instead |
-| gpt-6-sol | terminalBench | 2026-09-23 | only Terminal-Bench 4.0 runs exist (AA 43–44% at max), not the tracked 2.1 |
+| gpt-6-sol | terminalBench | 2026-09-23 | only Terminal-Bench 4.0 runs exist (AA 43–44% at max), not the tracked 2.1 — **superseded 2026-10-08: Vals AI Terminal-Bench 2.1 run, 83.15%; filled as 83.2 with provenance in notes** |
 | gpt-6-sol | gdpvalAA | 2026-09-23 | AA rates it 1487 (max) / 1320 (medium) on GDPval-AA v2.1 — a different scale from the v2 this key records; migrate the key before using it |
-| gpt-6-sol | arcAgi2 | 2026-09-23 | ARC Prize published a GPT-6 Luna results page on 2026-09-22 but none for Sol (arcprize.org/results index has no Sol entry); re-check |
+| gpt-6-sol | arcAgi2 | 2026-09-23 | ARC Prize published a GPT-6 Luna results page on 2026-09-22 but none for Sol (arcprize.org/results index has no Sol entry); re-check — **superseded 2026-10-08: arcprize.org/results/openai-gpt-6-sol gives 89.6% at max; filled** |
 | gpt-6-sol | mmluPro / aime | 2026-09-23 | retired benchmarks; not in OpenAI's launch table |
 | gpt-6-luna | gpqaDiamond | 2026-09-23 | not in OpenAI's launch table and absent from Artificial Analysis' GPQA Diamond board and comparison pages; no system card was published |
 | gpt-6-luna | sweBench | 2026-09-23 | OpenAI has not published SWE-bench Verified since February 2026; no launch-table or third-party figure |
@@ -928,7 +928,7 @@ New-model-release sweep on 2026-09-22 (window widened to 2026-09-11 through 2026
 | laya | knowledgeCutoff | 2026-09-23 | not disclosed on the Hugging Face card, GitHub README, laya.convaiinnovations.com or the author's dev.to announcement; the ModernBERT/mmBERT backbones' pretraining dates are not a published cutoff for Laya |
 | laya | costPerTask | 2026-09-23 | no Artificial Analysis coverage of Laya or any Convai Innovations model as of launch |
 | mimo-v2-6-pro | gpqaDiamond, sweBench, sweBenchPro, arcAgi2, mmluPro, aime | 2026-09-24 | not in the Hugging Face card, tech report Table 3 or mimo.mi.com (the report's SWE-bench rows are for MiMo-V2.6-Distill-Qwen-9B only); not on Scale's SWE-bench Pro board or the ARC Prize leaderboard; AA's index v4.3.2 no longer includes GPQA |
-| mimo-v2-6-pro | lmarenaElo | 2026-09-24 | not on the arena.ai text board (last update 2026-09-13, which predates the release); re-check |
+| mimo-v2-6-pro | lmarenaElo | 2026-09-24 | not on the arena.ai text board (last update 2026-09-13, which predates the release); re-check — **superseded 2026-10-08: arena.ai text board now lists mimo-v2.6-pro at 1480 ±9; filled** |
 | mimo-v2-6-pro | gdpvalAA | 2026-09-24 | 1673 on GDPval-AA v2.1 (Xiaomi Table 3 and AA's payload agree) — a different scale from the v2 this key records; migrate the key before using it |
 | mimo-v2-6-pro | knowledgeCutoff | 2026-09-24 | unpublished on the HF card, tech report and AA (knowledgeCutoffDate null); the "December 2024" line on the mimo.mi.com model page is a sample system prompt, not a spec |
 | mimo-v2-6-flash | gpqaDiamond, sweBench, sweBenchPro, hle, arcAgi2, mmluPro, aime | 2026-09-24 | not in the Hugging Face card, tech report Table 3 or mimo.mi.com; Artificial Analysis has no Flash listing so no independent HLE; not on Scale's SWE-bench Pro board or the ARC Prize leaderboard |
@@ -941,8 +941,8 @@ Stats-filler sweep on 2026-09-24 (daily sweep, unattended). WebFetch was denied 
 
 | model-id | field | checked | reason |
 |---|---|---|---|
-| gemini-3-8-flash | arcAgi2 | 2026-09-24 | re-checked three weeks after launch: arcprize.org/results still lists Gemini 3.7 Flash (84.6%, $0.25/task) as the newest Google Flash entry and no google-gemini-3-8-flash page surfaces in search; not on the ARC Prize leaderboard — re-check |
-| gpt-6-sol | arcAgi2 | 2026-09-24 | re-checked: ARC Prize's results index still carries GPT-6 Astra and GPT-6 Luna pages but no openai-gpt-6-sol page; the only "Sol" ARC results in circulation are GPT-5.6 Sol's (92%, $1.44/task) — re-check |
+| gemini-3-8-flash | arcAgi2 | 2026-09-24 | re-checked three weeks after launch: arcprize.org/results still lists Gemini 3.7 Flash (84.6%, $0.25/task) as the newest Google Flash entry and no google-gemini-3-8-flash page surfaces in search; not on the ARC Prize leaderboard — re-check — **superseded 2026-10-08: ARC Prize results page now gives 89.2% at high effort; filled** |
+| gpt-6-sol | arcAgi2 | 2026-09-24 | re-checked: ARC Prize's results index still carries GPT-6 Astra and GPT-6 Luna pages but no openai-gpt-6-sol page; the only "Sol" ARC results in circulation are GPT-5.6 Sol's (92%, $1.44/task) — re-check — **superseded 2026-10-08: arcprize.org/results/openai-gpt-6-sol gives 89.6% at max; filled** |
 | mimo-v2-6-flash | costPerTask | 2026-09-24 | re-checked: Artificial Analysis still has no MiMo-V2.6-Flash model page (only mimo-v2-6-pro and the February MiMo-V2-Flash listing), so no Intelligence Index cost-per-task figure exists — re-check |
 
 New-model release run on 2026-10-01 (Gemini 4 Argon, GPT-6.1 Sol). Sources: Google's launch blog and evaluation PDF, OpenAI's model docs (developers.openai.com; the openai.com announcement returned 403 to fetch), Artificial Analysis model and comparison pages, the arena.ai text board (2026-09-30 update, 410 models) and its changelog, the arcprize.org results index. Also resolved: `gpt-6-sol` lmarenaElo filled at 1456 from the 2026-09-30 board ("gpt-6-sol-max", rank 66), and its 2026-09-23 re-check row removed.
@@ -962,7 +962,7 @@ New-model release run on 2026-10-01 (Gemini 4 Argon, GPT-6.1 Sol). Sources: Goog
 | gpt-6-1-sol | terminalBench | 2026-10-01 | only Terminal-Bench 4.0 (AA 56% max) and Terminal-Bench Science 0.1 exist, not the tracked 2.1 |
 | gpt-6-1-sol | lmarenaElo | 2026-10-01 | gpt-6.1-sol-max was added to Arena's Agent Arena on 2026-09-30 but has no row on the text board (2026-09-30 update) — re-check |
 | gpt-6-1-sol | gdpvalAA | 2026-10-01 | AA rates it 1575 (max) on GDPval-AA v2.1 — a different scale from v2; migrate the key before using it |
-| gpt-6-1-sol | arcAgi2 | 2026-10-01 | no arcprize.org results page; a 27% figure on aggregator sites is untraceable to ARC Prize — re-check |
+| gpt-6-1-sol | arcAgi2 | 2026-10-01 | no arcprize.org results page; a 27% figure on aggregator sites is untraceable to ARC Prize — re-check — **superseded 2026-10-08: arcprize.org/results/openai-gpt-6-1-sol gives 94.2% at max; filled** |
 | gpt-6-1-sol | mmluPro / aime | 2026-10-01 | retired benchmarks; not in OpenAI's launch material |
 | gemini-4-argon | hle | 2026-10-01 | no HLE row in Google's evaluation PDF; AA's comparison page shows 57% (high), but AA runs a 2,158-question text-only subset and its methodology doesn't state the tool setting, so the configuration can't be pinned to a primary source. Left null — fill if Google publishes a no-tools figure |
 | gpt-6-1-sol | hle | 2026-10-01 | not in OpenAI's launch material; AA's comparison page shows 53% (max) on the same unstated-tools 2,158-question subset. Left null for the same reason as gemini-4-argon |
@@ -992,7 +992,25 @@ New-model-release research on 2026-10-04, scoped to `claude-sonnet-5-5`. Sources
 | claude-sonnet-5-5 | mmluPro | 2026-10-04 | Anthropic has stopped reporting MMLU-Pro in system cards; vals.ai lists its MMLU-Pro row as "Coming soon" |
 | claude-sonnet-5-5 | gpqaDiamond | 2026-10-04 | not reported by Anthropic; vals.ai lists its GPQA Diamond row as "Coming soon" |
 | claude-sonnet-5-5 | sweBench | 2026-10-04 | Anthropic's system card reports SWE-bench Pro (81.3%) instead of SWE-bench Verified; no official Verified figure found |
-| claude-sonnet-5-5 | terminalBench | 2026-10-04 | Anthropic's own headline figure is Terminal-Bench **4.0** (70.6%), not the tracked 2.1 version; vals.ai's independent-harness page covers Terminal-Bench 4.0 and Terminal-Bench Science for this model but not 2.1 — no comparable figure found |
+| claude-sonnet-5-5 | terminalBench | 2026-10-04 | Anthropic's own headline figure is Terminal-Bench **4.0** (70.6%), not the tracked 2.1 version; vals.ai's independent-harness page covers Terminal-Bench 4.0 and Terminal-Bench Science for this model but not 2.1 — no comparable figure found — **superseded 2026-10-08: Vals AI Terminal-Bench 2.1 run (83.15%, high effort) accepted as third-party with provenance, same as gpt-6-astra; filled** |
 | claude-sonnet-5-5 | aime | 2026-10-04 | not reported; Anthropic has moved off AIME in its 5.x-era system cards |
 | claude-sonnet-5-5 | arcAgi2 | 2026-10-04 | not found on ARC Prize's verified-results pages or any tracker checked as of one week post-launch |
-| claude-sonnet-5-5 | terminalBench | 2026-10-05 | re-checked: 83.2 circulating for Terminal-Bench 2.1 is Vals AI's third-party run (83.15%, high effort), not a primary source; tbench.ai's 2.1 leaderboard doesn't list Sonnet 5.5 |
+| claude-sonnet-5-5 | terminalBench | 2026-10-05 | re-checked: 83.2 circulating for Terminal-Bench 2.1 is Vals AI's third-party run (83.15%, high effort), not a primary source; tbench.ai's 2.1 leaderboard doesn't list Sonnet 5.5 — **superseded 2026-10-08: Vals AI Terminal-Bench 2.1 run (83.15%, high effort) accepted as third-party with provenance, same as gpt-6-astra; filled** |
+
+Daily sweep 2026-10-08 (unattended; WebFetch denied except AWS and Claude docs, so the rest rests on WebSearch excerpts of arena.ai, arcprize.org, vals.ai, artificialanalysis.ai and anthropic.com).
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| claude-haiku-5-5 | mmluPro, gpqaDiamond, sweBench, aime | 2026-10-08 | not in Anthropic's launch material; Anthropic has stopped reporting these in 5.x-era cards |
+| claude-haiku-5-5 | sweBenchPro | 2026-10-08 | the research agent quoted 64.8% from a system-card excerpt, but two anthropic.com-scoped searches surfaced the HLE figure and not this one; left null until the system card PDF can be read — re-check |
+| claude-haiku-5-5 | terminalBench | 2026-10-08 | Anthropic's figure is Terminal-Bench 4.0, not the tracked 2.1; no 2.1 run found |
+| claude-haiku-5-5 | gdpvalAA | 2026-10-08 | only a GDPval-AA v2.1 figure is reported; the tracked key is v2 |
+| claude-haiku-5-5 | lmarenaElo | 2026-10-08 | not on the arena.ai text board one day after launch — re-check |
+| claude-haiku-5-5 | arcAgi2 | 2026-10-08 | no arcprize.org results page one day after launch — re-check |
+| gpt-6-1-sol | lmarenaElo | 2026-10-08 | conflicting: excerpts attribute "gpt-6.1-sol-max 1483 ±11" to both the default and the no-style-control text board, and a mirror shows 1445.6; default-board figure not pinned — re-check |
+| gpt-6-luna | lmarenaElo | 2026-10-08 | arena.ai's changelog says gpt-6-luna-max joined the Text Arena (2026-09-30), but only a Coding-category score surfaced — re-check |
+| grok-4-7 | lmarenaElo | 2026-10-08 | arena.ai's changelog says grok-4.7-xhigh joined the Text Arena (2026-09-30), but no score surfaced — re-check |
+| kolibri-1 | lmarenaElo | 2026-10-08 | still no Kolibri listing on arena.ai five days after release — re-check |
+| gemini-4-argon | contextWindow, knowledgeCutoff | 2026-10-08 | re-checked: Google still publishes no model card, context or cutoff (Fairwind-only access) — re-check at broader rollout |
+| gemini-4-argon | arcAgi2 | 2026-10-08 | re-checked: no arcprize.org results page for Argon |
+| claude-sonnet-5-5 | arcAgi2 | 2026-10-08 | re-checked: ARC Prize has posted Opus 5.5 but no Sonnet 5.5 results page |

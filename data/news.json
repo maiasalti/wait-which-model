@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-10-07-claude-haiku-5-5",
+    "date": "2026-10-07",
+    "title": "Anthropic releases Claude Haiku 5.5 with a 1M-token context and effort control",
+    "summary": "Anthropic released Claude Haiku 5.5 on the Claude API, Amazon Bedrock, Google Cloud and Microsoft Foundry. It costs $0.10 / $0.50 per million input / output tokens for prompts up to 100K tokens ($0.50 / $2.50 above that), down from $1 / $5 for Haiku 4.5, and has a 1M-token context with 128K output. It is the first Haiku with the effort parameter, and Anthropic now lists Haiku 4.5 as a legacy model.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-haiku-5-5"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://platform.claude.com/docs/en/models/haiku-5-5/overview"
+  },
+  {
     "id": "2026-10-03-kolibri-1",
     "date": "2026-10-03",
     "title": "Aleph Alpha releases Kolibri, a sovereign English-German open-weight model under Apache 2.0",
