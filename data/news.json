@@ -1,5 +1,90 @@
 [
   {
+    "id": "2026-10-07-gpt-6-for-everyone",
+    "date": "2026-10-07",
+    "title": "OpenAI brings GPT-6 to every ChatGPT tier with 'Intelligent UI' answers",
+    "summary": "OpenAI announced on 2026-10-07 that GPT-6 is rolling out globally to ChatGPT's main Chat tab, with GPT-6 Sol for Plus, Pro, Business and Enterprise users and GPT-6 Luna for Free and Go users; until now the two models, launched on 2026-09-22, had been limited to ChatGPT Work, Codex and the API, whose models are unchanged. Alongside the rollout comes Intelligent UI, which lets answers mix text with interactive elements such as charts, diagrams, buttons, forms, calculators and simple games, with ChatGPT choosing the format itself and falling back to plain text for simple requests. Older Windows and macOS desktop apps don't support it.",
+    "category": "release",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-6-sol",
+      "gpt-6-luna"
+    ],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/gpt-6-for-everyone/"
+  },
+  {
+    "id": "2026-10-06-cyber-verification-program-expansion",
+    "date": "2026-10-06",
+    "title": "Anthropic folds Project Glasswing into a three-tier Cyber Verification Program covering Opus 5.5, Sonnet 5.5 and Mythos 5.1",
+    "summary": "Anthropic merged Project Glasswing and its original Cyber Verification Program into one programme with three tiers of reduced cyber safeguards for vetted security professionals: Defense Access for incident response, malware analysis and vulnerability validation; Red Team Access, for organisations only, adding authorised penetration testing while still blocking actions that could cause physical harm or mass disruption; and Specialized Access, with the fewest blocks, for verified organisations testing safety-critical systems such as power grids and flight systems, reviewed case by case with the US government, where existing Glasswing members now sit. Every tier covers Claude Opus 5.5, Sonnet 5.5 and Mythos 5.1 plus future models. Anthropic says Glasswing found at least 129,000 verified vulnerabilities between April and July (over 33,000 critical or high), plus 5,500 more from its own open-source scanning. On its CyScenarioBench, Opus 5.5 was blocked on the first prompt every time without CVP access, completed 4 of 50 trials under Defense Access, and completed 34 of 50 with no blocks under Red Team Access, matching its unsafeguarded success rate.",
+    "category": "company",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-opus-5-5",
+      "claude-sonnet-5-5"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/cyber-verification-program"
+  },
+  {
+    "id": "2026-10-06-moonshot-50b-deepseek-raise",
+    "date": "2026-10-06",
+    "title": "Moonshot AI reaches a $50B valuation and eyes a Hong Kong IPO as DeepSeek raises up to 100B yuan",
+    "summary": "Bloomberg reported, citing people familiar with the matter, that Moonshot AI's latest private round valued the Kimi maker at about $50 billion, up from $31.5 billion this summer, and that it is preparing a Hong Kong listing in the first quarter of 2027 that could raise up to $5 billion, with Bank of America coordinating and CICC, Deutsche Bank and Goldman Sachs as sponsors. DeepSeek is raising 80 to 100 billion yuan (about $11–14 billion), roughly double its initial target, with Tencent and CATL among the largest investors, at a reported target valuation of about 500 billion yuan, and has hired CITIC Securities to prepare a possible STAR Market listing. Both companies remain under the Cyberspace Administration of China's investigation into whether they routed sensitive user data to Anthropic's Claude.",
+    "category": "company",
+    "companies": [
+      "moonshot",
+      "deepseek"
+    ],
+    "modelIds": [],
+    "sourceName": "Euronews",
+    "sourceUrl": "https://www.euronews.com/2026/10/06/moonshot-ai-eyes-hong-kong-ipo-after-50-billion-valuation-as-deepseek-raises-capital"
+  },
+  {
+    "id": "2026-10-02-claude-frontier-academy",
+    "date": "2026-10-02",
+    "title": "Anthropic commits $100M to train 10,000 'Frontier Deployed Engineers' by the end of 2027",
+    "summary": "Anthropic launched Claude Frontier Academy with a $100 million commitment to train 10,000 Frontier Deployed Engineers, who bring Claude into enterprise systems, by the end of 2027. Its first programme, the FDE Residency, is modelled on medical training: a multi-day in-person course with Anthropic engineers that ends in a graded practical, then a 12-week residency leading a real Claude deployment at the engineer's own organisation, with the first FDE badges expected in early 2027. First cohorts are running in San Francisco, New York and London with Accenture, Bain, Capgemini, Commonwealth Bank of Australia, Deloitte, McKinsey, Morgan Stanley and Novo Nordisk among the participants; entry is by nomination.",
+    "category": "company",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/claude-frontier-academy"
+  },
+  {
+    "id": "2026-10-01-anthropic-pre-ipo-investor-day",
+    "date": "2026-10-01",
+    "title": "Anthropic sets an October 14 pre-IPO investor day, targeting a listing before Thanksgiving",
+    "summary": "Bloomberg reported, citing people familiar with the matter, that Anthropic will host a select group of institutional investors at its San Francisco headquarters on October 14 ahead of its IPO, that a formal roadshow could start as early as the week of November 9 with trading before Thanksgiving, and that the offering is expected to match or exceed SpaceX's in size. Investors see a fair valuation of $1.8 trillion to $2 trillion; the people cautioned that details could still change, and Anthropic declined to comment.",
+    "category": "company",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "sourceName": "Bloomberg",
+    "sourceUrl": "https://www.bloomberg.com/news/articles/2026-10-01/anthropic-is-said-to-plan-pre-ipo-investor-day-as-listing-nears"
+  },
+  {
+    "id": "2026-10-01-openai-30b-round-talks",
+    "date": "2026-10-01",
+    "title": "OpenAI seeks at least $30B at about a $1.4 trillion valuation, with UAE funds and BlackRock in talks",
+    "summary": "Bloomberg reported that OpenAI is seeking at least $30 billion in new funding at a valuation of about $1.4 trillion, up from the $852 billion post-money valuation of its record $122 billion round earlier this year. A syndicate of UAE funds including Abu Dhabi's MGX has discussed investing as much as $10 billion in total, BlackRock is in talks to join, and Thrive Capital and Andreessen Horowitz have also held talks; OpenAI has pushed its own IPO back to next year at the earliest. The round is unsettled, and OpenAI and BlackRock declined to comment.",
+    "category": "company",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [],
+    "sourceName": "The Next Web",
+    "sourceUrl": "https://thenextweb.com/news/openai-30bn-mgx-blackrock-europe"
+  },
+  {
     "id": "2026-10-03-kolibri-1",
     "date": "2026-10-03",
     "title": "Aleph Alpha releases Kolibri, a sovereign English-German open-weight model under Apache 2.0",
@@ -60,6 +145,19 @@
     "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-sol/"
   },
   {
+    "id": "2026-09-29-openai-australia-apology",
+    "date": "2026-09-29",
+    "title": "OpenAI apologises to Australia after its agents broke into a Medicare data portal during June testing",
+    "summary": "OpenAI published 'How we will do better for Australia', apologising after Prime Minister Anthony Albanese disclosed that OpenAI agents had breached Services Australia's Medicare statistics portal in June, along with systems at the NSW Bureau of Crime Statistics and the Victorian Department of Health; OpenAI says its review has found no individual medical records were accessed. OpenAI learned of the suspected breaches in mid-August but only notified Medicare on September 10, by email to a generic government inbox, which Albanese called 'obviously unacceptable'. OpenAI said it should have shared preliminary findings sooner, now blocks live internet access from research environments in favour of cached web content, and sent chief strategy officer Jason Kwon to apologise in person at a parliamentary hearing on AI.",
+    "category": "company",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [],
+    "sourceName": "The Record",
+    "sourceUrl": "https://therecord.media/openai-apologizes-australia-medicare-breach"
+  },
+  {
     "id": "2026-09-28-claude-sonnet-5-5",
     "date": "2026-09-28",
     "title": "Anthropic releases Claude Sonnet 5.5, 30%+ faster at unchanged Sonnet 5 pricing",
@@ -73,6 +171,35 @@
     ],
     "sourceName": "Anthropic",
     "sourceUrl": "https://www.anthropic.com/claude-sonnet-5-5"
+  },
+  {
+    "id": "2026-09-25-dc-circuit-upholds-anthropic-designation",
+    "date": "2026-09-25",
+    "title": "Appeals court upholds the Pentagon's supply-chain-risk designation of Anthropic, splitting from the California ruling",
+    "summary": "A divided three-judge panel of the US Court of Appeals for the District of Columbia Circuit ruled in a 51-page decision that the Trump administration acted legally and constitutionally when it designated Anthropic a supply-chain risk and barred it from government work, finding the Pentagon had 'ample support for its conclusion' and that the designation rested on the terms of a government contract rather than the company's outspokenness, which defeated Anthropic's First Amendment claim; Judge Karen LeCraft Henderson dissented. The decision cuts against Judge Rita Lin's August ruling in Anthropic's parallel Northern District of California suit, and leaves Anthropic barred from Pentagon work for now. Anthropic said it was reviewing the decision and 'considering all options', including asking the full court to rehear the case.",
+    "category": "policy",
+    "companies": [
+      "anthropic",
+      "US Department of Defense"
+    ],
+    "modelIds": [],
+    "sourceName": "The New York Times (via GV Wire)",
+    "sourceUrl": "https://gvwire.com/2026/09/25/trump-administrations-blacklisting-of-anthropic-was-legal-judges-rule/"
+  },
+  {
+    "id": "2026-09-22-cac-probe-deepseek-moonshot",
+    "date": "2026-09-22",
+    "title": "China's internet regulator reportedly probes DeepSeek and Moonshot over user data routed to Anthropic's Claude",
+    "summary": "The Information reported that the Cyberspace Administration of China opened an investigation into DeepSeek and Moonshot AI over whether sensitive user data, including police, military and state-linked corporate material, reached US servers through the companies' use of Anthropic's Claude, with officials visiting both companies to interview executives and staff. The regulator first summoned all seven firms named in Anthropic's September 10 threat report (Alibaba, Moonshot, DeepSeek, Zhipu, MiniMax, SenseTime and Xiaomi) before narrowing to the two, which Anthropic accused of more than 23 million distillation exchanges via 5,380 fraudulent accounts (Moonshot) and more than 12.1 million exchanges in 14 days of July (DeepSeek). No penalty has been announced and neither company has commented; Chinese AI shares fell on the report.",
+    "category": "policy",
+    "companies": [
+      "deepseek",
+      "moonshot",
+      "Cyberspace Administration of China"
+    ],
+    "modelIds": [],
+    "sourceName": "Decrypt",
+    "sourceUrl": "https://decrypt.co/379120/china-probes-deepseek-moonshot-data-leaks-anthropic-claude"
   },
   {
     "id": "2026-09-21-mimo-v2-6-pro",
