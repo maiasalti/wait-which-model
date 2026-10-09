@@ -129,7 +129,12 @@ export interface Company {
   country: string;
   founded: number;
   website: string;
-  color: string;
+  /** Null for companies without a palette slot (non-notable); render
+   *  through companyColor(), which falls back to neutral grey. */
+  color: string | null;
+  /** Has a Notable entry (or is an existing tracked lab). Only notable
+   *  companies may hold a palette colour. */
+  notable: boolean;
   order: number;
 }
 

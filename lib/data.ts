@@ -6,6 +6,8 @@ import methodologyJson from "@/data/methodology.json";
 import reignsJson from "@/data/frontier-reigns.json";
 import type { BenchmarkMeta, Company, Methodology, Model, NewsItem } from "./types";
 import type { Reign } from "./reigns";
+import { companiesWithEntries, type DirectoryKey } from "./directory";
+import { resolveColor } from "./format";
 
 export const models = (modelsJson as Model[]).slice().sort(
   (a, b) => b.releaseDate.localeCompare(a.releaseDate)
@@ -14,6 +16,22 @@ export const models = (modelsJson as Model[]).slice().sort(
 export const companies = (companiesJson as Company[]).slice().sort(
   (a, b) => a.order - b.order
 );
+
+/** Companies with at least one model. Model-scoped UI (directory chips,
+ *  Compare's rail, location list) uses this, not `companies`, because the
+ *  shared company list will also hold image, video and harness developers. */
+export const modelCompanies = companiesWithEntries(companies, models);
+
+/** Entry counts that decide which Directory tabs are visible. Each later
+ *  stage replaces its 0 with its file's length when it adds a loader. */
+export const directoryCounts: Record<DirectoryKey, number> = {
+  models: models.length,
+  "image-models": 0,
+  "video-models": 0,
+  harnesses: 0,
+  agents: 0,
+  features: 0,
+};
 
 export const benchmarks = benchmarksJson as BenchmarkMeta[];
 
@@ -35,7 +53,7 @@ export const modelById = new Map(models.map((m) => [m.id, m]));
 export const benchmarkByKey = new Map(benchmarks.map((b) => [b.key, b]));
 
 export function companyColor(companyId: string): string {
-  return companyById.get(companyId)?.color ?? "#8A93A6";
+  return resolveColor(companyById.get(companyId)?.color);
 }
 
 export function companyName(companyId: string): string {

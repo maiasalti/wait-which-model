@@ -6,6 +6,7 @@
     "founded": 2023,
     "website": "https://x.ai",
     "color": "#6383D1",
+    "notable": true,
     "order": 1
   },
   {
@@ -15,6 +16,7 @@
     "founded": 2021,
     "website": "https://www.anthropic.com",
     "color": "#C96A42",
+    "notable": true,
     "order": 2
   },
   {
@@ -24,6 +26,7 @@
     "founded": 2010,
     "website": "https://deepmind.google",
     "color": "#5B8DEF",
+    "notable": true,
     "order": 3
   },
   {
@@ -33,6 +36,7 @@
     "founded": 2015,
     "website": "https://openai.com",
     "color": "#189E77",
+    "notable": true,
     "order": 4
   },
   {
@@ -42,6 +46,7 @@
     "founded": 2013,
     "website": "https://ai.meta.com",
     "color": "#1E81BF",
+    "notable": true,
     "order": 5
   },
   {
@@ -51,6 +56,7 @@
     "founded": 2023,
     "website": "https://mistral.ai",
     "color": "#C27C0A",
+    "notable": true,
     "order": 6
   },
   {
@@ -60,6 +66,7 @@
     "founded": 2023,
     "website": "https://www.deepseek.com",
     "color": "#7168E8",
+    "notable": true,
     "order": 7
   },
   {
@@ -69,6 +76,7 @@
     "founded": 2023,
     "website": "https://www.moonshot.ai",
     "color": "#7E9C26",
+    "notable": true,
     "order": 8
   },
   {
@@ -78,6 +86,7 @@
     "founded": 2023,
     "website": "https://qwen.ai",
     "color": "#AC45B7",
+    "notable": true,
     "order": 9
   },
   {
@@ -87,6 +96,7 @@
     "founded": 2019,
     "website": "https://z.ai",
     "color": "#0EA0A8",
+    "notable": true,
     "order": 10
   },
   {
@@ -96,6 +106,7 @@
     "founded": 2026,
     "website": "https://www.soofi.info",
     "color": "#9C8A16",
+    "notable": true,
     "order": 11
   },
   {
@@ -105,6 +116,7 @@
     "founded": 2023,
     "website": "https://poolside.ai",
     "color": "#5A4FCF",
+    "notable": true,
     "order": 12
   },
   {
@@ -114,6 +126,7 @@
     "founded": 2025,
     "website": "https://thinkingmachines.ai",
     "color": "#D5455D",
+    "notable": true,
     "order": 13
   },
   {
@@ -123,6 +136,7 @@
     "founded": 1993,
     "website": "https://www.nvidia.com",
     "color": "#69A600",
+    "notable": true,
     "order": 14
   },
   {
@@ -132,6 +146,7 @@
     "founded": 1998,
     "website": "https://hunyuan.tencent.com",
     "color": "#0F59E0",
+    "notable": true,
     "order": 15
   },
   {
@@ -141,6 +156,7 @@
     "founded": 2010,
     "website": "https://longcat.ai",
     "color": "#B08E00",
+    "notable": true,
     "order": 16
   },
   {
@@ -150,6 +166,7 @@
     "founded": 2025,
     "website": "https://motiftech.io",
     "color": "#6690E9",
+    "notable": true,
     "order": 17
   },
   {
@@ -159,6 +176,7 @@
     "founded": 2026,
     "website": "https://withsyzygy.com",
     "color": "#3B9E7C",
+    "notable": true,
     "order": 18
   },
   {
@@ -168,6 +186,7 @@
     "founded": 2014,
     "website": "https://www.antgroup.com",
     "color": "#8A5FD9",
+    "notable": true,
     "order": 19
   },
   {
@@ -177,6 +196,7 @@
     "founded": 2021,
     "website": "https://www.minimax.io",
     "color": "#E73562",
+    "notable": true,
     "order": 20
   },
   {
@@ -186,6 +206,7 @@
     "founded": 2012,
     "website": "https://seed.bytedance.com",
     "color": "#3C8CFF",
+    "notable": true,
     "order": 21
   },
   {
@@ -195,6 +216,7 @@
     "founded": 2000,
     "website": "https://ernie.baidu.com",
     "color": "#7849E2",
+    "notable": true,
     "order": 22
   },
   {
@@ -204,6 +226,7 @@
     "founded": 1994,
     "website": "https://aws.amazon.com/ai/generative-ai/nova/",
     "color": "#C86A00",
+    "notable": true,
     "order": 23
   },
   {
@@ -213,6 +236,7 @@
     "founded": 2019,
     "website": "https://cohere.com",
     "color": "#DB4F8A",
+    "notable": true,
     "order": 24
   },
   {
@@ -222,6 +246,7 @@
     "founded": 2025,
     "website": "https://deepreinforce.ai",
     "color": "#2E86C1",
+    "notable": true,
     "order": 25
   },
   {
@@ -231,6 +256,7 @@
     "founded": 2023,
     "website": "https://sakana.ai",
     "color": "#B8842E",
+    "notable": true,
     "order": 26
   },
   {
@@ -240,6 +266,7 @@
     "founded": 2024,
     "website": "https://typesafe.ai",
     "color": "#2E9E8F",
+    "notable": true,
     "order": 27
   },
   {
@@ -249,6 +276,7 @@
     "founded": 2020,
     "website": "https://www.shlab.org.cn",
     "color": "#D2782A",
+    "notable": true,
     "order": 28
   },
   {
@@ -258,6 +286,7 @@
     "founded": 2023,
     "website": "https://www.stepfun.com",
     "color": "#8B6BE6",
+    "notable": true,
     "order": 29
   },
   {
@@ -267,6 +296,7 @@
     "founded": 2021,
     "website": "https://convaiinnovations.com",
     "color": "#3E9F4A",
+    "notable": true,
     "order": 30
   },
   {
@@ -276,6 +306,7 @@
     "founded": 2010,
     "website": "https://mimo.mi.com",
     "color": "#B44800",
+    "notable": true,
     "order": 31
   },
   {
@@ -285,6 +316,7 @@
     "founded": 2019,
     "website": "https://aleph-alpha.com",
     "color": "#5B6CD9",
+    "notable": true,
     "order": 32
   }
 ]
