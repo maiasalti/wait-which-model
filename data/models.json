@@ -8079,5 +8079,69 @@
       "Too new to characterise — there are no independent evaluations or hands-on reports yet, so its behaviour rests on Aleph Alpha's own claims"
     ],
     "notes": "Aleph Alpha's English-German reasoning model, a sparse MoE with 78.1B total and 3.46B active parameters (384 routed experts per layer, 6 active), developed in Germany and trained on infrastructure in Germany and Finland. Announced and released on Hugging Face on 2026-10-03; the blog brands it simply \"Kolibri\" and the repo is Kolibri-1 (FP8, with a BF16 variant). Context is 262,144 tokens natively, extended to 1,048,576 by extrapolation, which the blog advertises as \"up to 1M\". Every score is Aleph Alpha's own, from the model card and launch post at high reasoning effort: GPQA Diamond 84.3 (81.3 in German), AIME 2025 96.9 (AIME 2026 96.0), MMLU-Pro CoT 80.0, SWE-bench Verified 66.4 (scaffold unstated), HLE 21.5 (tool use unstated), Terminal-Bench 2.1 27.7, plus tau2-Bench Telecom 94.7, BFCL v4 61.4 and BrowseComp 29.4. Availability is self-host: there is no Aleph Alpha API SKU and no OpenRouter listing, and serving needs the aleph-alpha-inference vLLM plugin on at least two A100 80GB GPUs. No pricing, max output or Artificial Analysis entry as of 2026-10-05. Knowledge cutoff is 18 June 2026 for both languages. predecessorId is null: the launch post presents Kolibri Origin (30B-A3B, finished June 2026) as the model that validated the training pipeline, not as one Kolibri replaces, and Origin is not on this site."
+  },
+  {
+    "id": "mistral-large-4",
+    "name": "Mistral Large 4",
+    "company": "mistral",
+    "releaseDate": "2026-10-06",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 1.36,
+      "outputPerMTok": 4.18
+    },
+    "costPerTask": {
+      "usd": 1.1318,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": 116.1,
+      "timeToFirstTokenSec": 18.69,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "mistral",
+        "id": "mistral-large-4"
+      },
+      {
+        "provider": "mistral",
+        "id": "mistral-large-4-0"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Trained across more than 160 languages including every official EU language, so it is built for multilingual European deployments rather than English-first work",
+      "Strong at visual grounding — it locates and verifies objects in dense scenes, technical drawings, PDFs and very large satellite images rather than only describing them",
+      "Takes on vulnerability reproduction and patching work that refusal-prone closed models decline — useful for defensive security teams"
+    ],
+    "weaknesses": [
+      "A public preview whose reinforcement-learning run is still in flight — Mistral expects large improvements in the coming weeks, so behaviour is a moving target, not a fixed release",
+      "Reasons before every answer, so replies take a long time to start even on simple prompts",
+      "Weights are promised for the end of October but not yet out, so self-hosting has to wait"
+    ],
+    "notes": "Public preview announced 2026-10-06 on Mistral Studio; Mistral says the weights will be released by the end of October and names no licence yet, so openWeights is false and license null until they ship. Mistral's two official pages disagree on size: the announcement says 1T total / 49B active parameters, while the docs model page says 1.05T total / 52B active plus a 1.6B vision encoder. Context is 1M per Mistral's docs (Artificial Analysis lists 524,288). Pricing is the $1.36 / $4.18 list rate ($0.14 cached input); the docs page currently shows exactly half ($0.68 / $2.09 / $0.07 cached) with the list price struck through, and gives no end date for the discount. Mistral reported none of the tracked benchmark keys: its launch figures are DeepSWE v1.1 61.7%, SWE-Atlas-QnA 59.4%, Terminal-Bench 4 28.3% (not the 2.1 this site tracks), Coding Agent Index 49.8%, AutomationBench 59.9% and Cybench 93%. hle is null: Mistral reports no HLE figure, and Artificial Analysis' 35% comes from its own text-only subset with an unstated tool setting. AA also lists GDPval-AA v2.1 at 1424, which is not the v2 this site tracks. AA measures a single reasoning configuration with no effort levels named, so costPerTask and speed carry no effort."
   }
 ]

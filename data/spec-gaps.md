@@ -219,3 +219,6 @@ kolibri-1 · speed · 2026-10-05 · No Artificial Analysis listing as of release
 kolibri-1 · apiIds · 2026-10-05 · No hosted API: no Aleph Alpha API SKU, no OpenRouter listing, no Bedrock or Vertex listing found; weights only at Aleph-Alpha/Kolibri-1 (and -BF16) on Hugging Face. Left [].
 kolibri-1 · retirementDate · 2026-10-05 · No lifecycle notice on the model card or launch post. Left null.
 claude-sonnet-5-5 · retirementDate · 2026-10-04 · Official model page (platform.claude.com/docs/en/models/sonnet-5-5/overview) lists status "Active (latest)", retirement "Not sooner than September 28, 2027" — a floor, not an announced retirement. Left null.
+mistral-large-4 · predecessorId · 2026-10-07 · Announcement (mistral.ai/news/mistral-large-4) and docs model page read directly: neither mentions Mistral Large 3, a predecessor or a replacement — only 'our largest and most capable model to date'. The models overview still lists Large 3 as active. Left null.
+mistral-large-4 · license · 2026-10-07 · Not applicable yet: openWeights false; Mistral says weights will be released by the end of October and names no licence. Re-check when weights publish.
+mistral-large-4 · retirementDate · 2026-10-07 · Brand-new preview; no lifecycle notice. Left null.
