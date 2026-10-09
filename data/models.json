@@ -8079,5 +8079,183 @@
       "Too new to characterise — there are no independent evaluations or hands-on reports yet, so its behaviour rests on Aleph Alpha's own claims"
     ],
     "notes": "Aleph Alpha's English-German reasoning model, a sparse MoE with 78.1B total and 3.46B active parameters (384 routed experts per layer, 6 active), developed in Germany and trained on infrastructure in Germany and Finland. Announced and released on Hugging Face on 2026-10-03; the blog brands it simply \"Kolibri\" and the repo is Kolibri-1 (FP8, with a BF16 variant). Context is 262,144 tokens natively, extended to 1,048,576 by extrapolation, which the blog advertises as \"up to 1M\". Every score is Aleph Alpha's own, from the model card and launch post at high reasoning effort: GPQA Diamond 84.3 (81.3 in German), AIME 2025 96.9 (AIME 2026 96.0), MMLU-Pro CoT 80.0, SWE-bench Verified 66.4 (scaffold unstated), HLE 21.5 (tool use unstated), Terminal-Bench 2.1 27.7, plus tau2-Bench Telecom 94.7, BFCL v4 61.4 and BrowseComp 29.4. Availability is self-host: there is no Aleph Alpha API SKU and no OpenRouter listing, and serving needs the aleph-alpha-inference vLLM plugin on at least two A100 80GB GPUs. No pricing, max output or Artificial Analysis entry as of 2026-10-05. Knowledge cutoff is 18 June 2026 for both languages. predecessorId is null: the launch post presents Kolibri Origin (30B-A3B, finished June 2026) as the model that validated the training pipeline, not as one Kolibri replaces, and Origin is not on this site."
+  },
+  {
+    "id": "beam",
+    "name": "Beam",
+    "company": "reflection",
+    "releaseDate": "2026-10-05",
+    "status": "superseded",
+    "tier": "flagship",
+    "modality": "text",
+    "type": "llm",
+    "contextWindow": 256000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "restricted",
+    "knowledgeCutoff": "2026-06",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 90.5,
+      "sweBench": 80.9,
+      "sweBenchPro": 65.5,
+      "terminalBench": 80.1,
+      "aime": 97.8,
+      "hle": 36.2,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Pitched on inference efficiency rather than raw capability — Reflection says it reaches the reasoning level of larger open models on a fraction of the compute",
+      "Reasoning effort is adjustable, so short economical answers and longer deliberate ones can share one deployment",
+      "Tool calling and structured outputs over an OpenAI-compatible endpoint, so existing OpenAI clients work by changing the base URL"
+    ],
+    "weaknesses": [
+      "Always reasons — there is no non-thinking mode for quick lookups, only a lower effort setting",
+      "Waitlisted API beta with no published price, and Reflection warns that behaviour and limits may change while it lasts",
+      "Too new to characterise — no hands-on or independent evaluations yet, and the promised open weights had not shipped at launch"
+    ],
+    "notes": "Reflection AI's first public model, a sparse MoE with 501B total and 23B active parameters (Beam-501B-A23B in Reflection's developer docs), announced 2026-10-05 as a waitlisted, OpenAI-compatible API beta; availability is restricted for that reason. Reflection says the weights, technical report and model card follow later in October under Apache 2.0, so openWeights is false and license null until they ship. Every score is from Reflection's own launch table and was unverified independently at launch: SWE-bench Verified 80.9, SWE-bench Pro (v1) 65.5, GPQA Diamond 90.5, HLE 36.2 without tools, Terminal-Bench 2.1 80.1 and AIME 2026 97.8, at an unstated reasoning effort. The developer docs give a 256K context window and 128K max output (exact token counts unpublished; input and output share the window) and a 30 June 2026 knowledge cutoff, while the launch post says midtraining extends effective context to 1M. No price, API id, LMArena or Artificial Analysis entry recorded as of 2026-10-09; every figure rests on search excerpts of reflection.ai/blog/introducing-beam and developers.reflection.ai, not pages read directly."
+  },
+  {
+    "id": "d1-3b",
+    "name": "d1-3B",
+    "company": "liquid-ai",
+    "releaseDate": "2026-10-07",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "type": "system-one",
+    "contextWindow": 32768,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "self-host",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": null,
+      "name": "LFM Open License v1.0",
+      "kind": "restricted",
+      "url": "https://www.liquid.ai/lfm-license",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Answers in one forward pass with no generated tokens, so a routing or moderation check costs a single prefill rather than a decode loop",
+      "Judges images as well as text in the state, so screenshots and photos can be classified without a captioning step first",
+      "Returns calibrated probabilities for yes/no, pick-from-options and ordered-score questions, so a confidence threshold can decide what escalates to a larger model",
+      "Sized for edge hardware — Liquid quotes millisecond-scale latency on a single consumer GPU and ships an INT8 variant for newer NVIDIA devices"
+    ],
+    "weaknesses": [
+      "Cannot write text at all — Liquid's card is explicit that it is not a chat model, so anything needing an explanation has to go elsewhere",
+      "Vision decisions are unbenchmarked — Liquid held back its private vision split and only checked that the backbone's vision carried over",
+      "Free commercial use stops at US$10M annual revenue under the LFM Open License, and above that any production use needs a paid licence from Liquid"
+    ],
+    "notes": "Not an LLM: an open-weights \"System One\" decision model in the same mould as Jev and Laya, 3.12B parameters on Liquid's LFM2.5-VL-3B with a SigLIP2 NaFlex vision encoder, that takes text or image state plus typed questions and returns calibrated probabilities in one forward pass, so none of this site's benchmarks apply and every cell is null by design. Released on Hugging Face with d1-omni-600M on 2026-10-07 under the LFM Open License v1.0, with a 32,768-token context per the model card; Liquid's seven-dataset text mean of 82.9 is its own measurement. Availability is self-host: Liquid's hosted decision API serves a separately announced model called d1 (2026-10-05, not on this site), and no hosted provider served this checkpoint at release. No price, knowledge cutoff or Artificial Analysis entry; sources are search excerpts of liquid.ai/blog/d1-open, huggingface.co/LiquidAI/d1-3B, docs.liquid.ai and liquid.ai/lfm-license, not pages read directly."
+  },
+  {
+    "id": "d1-omni-600m",
+    "name": "d1-omni-600M",
+    "company": "liquid-ai",
+    "releaseDate": "2026-10-07",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "type": "system-one",
+    "contextWindow": 16384,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "self-host",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": null,
+      "name": "LFM Open License v1.0",
+      "kind": "restricted",
+      "url": "https://www.liquid.ai/lfm-license",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Takes audio as well as images alongside text, so spoken input can be classified without a separate transcription step",
+      "Small enough for phones and embedded boards where the 3B sibling won't fit — community CoreML and LiteRT ports appeared within days",
+      "Same one-pass, zero-output-token design as d1-3B, returning calibrated probabilities for yes/no, choice and score questions"
+    ],
+    "weaknesses": [
+      "Liquid calls it an experimental checkpoint, an early research release rather than a production model",
+      "Takes text with images or text with audio, not all three together, and image inputs cut the state and question text to 896 tokens as trained",
+      "Audio decisions have no benchmark yet — Liquid calls audio decision evaluation an open problem and publishes no speed figures for this model"
+    ],
+    "notes": "Not an LLM: the smaller of Liquid AI's two open \"System One\" decision models released on Hugging Face on 2026-10-07, 587M parameters built on LFM2.5-Encoder-350M, returning calibrated probabilities for typed questions in one forward pass, so none of this site's benchmarks apply and every cell is null by design. Context is 16,384 tokens covering text, image and audio positions per the model card (its 65,536 figure is vocabulary size, not context). Same LFM Open License v1.0 terms as d1-3B; Liquid's seven-dataset text mean of 78.4 is its own measurement. Availability is self-host: weights only, with community GGUF, CoreML and LiteRT conversions but no hosted endpoint. Sources are search excerpts of liquid.ai/blog/d1-open, huggingface.co/LiquidAI/d1-omni-600M and docs.liquid.ai, not pages read directly."
   }
 ]
