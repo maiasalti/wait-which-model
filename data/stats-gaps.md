@@ -996,3 +996,15 @@ New-model-release research on 2026-10-04, scoped to `claude-sonnet-5-5`. Sources
 | claude-sonnet-5-5 | aime | 2026-10-04 | not reported; Anthropic has moved off AIME in its 5.x-era system cards |
 | claude-sonnet-5-5 | arcAgi2 | 2026-10-04 | not found on ARC Prize's verified-results pages or any tracker checked as of one week post-launch |
 | claude-sonnet-5-5 | terminalBench | 2026-10-05 | re-checked: 83.2 circulating for Terminal-Bench 2.1 is Vals AI's third-party run (83.15%, high effort), not a primary source; tbench.ai's 2.1 leaderboard doesn't list Sonnet 5.5 |
+| mistral-large-4 | gpqaDiamond | 2026-10-07 | not in Mistral's announcement (mistral.ai/news/mistral-large-4) or docs page; Artificial Analysis lists GPQA as null for this model |
+| mistral-large-4 | sweBench | 2026-10-07 | Mistral reported DeepSWE v1.1 and SWE-Atlas-QnA, not SWE-bench Verified (announcement read directly) |
+| mistral-large-4 | sweBenchPro | 2026-10-07 | not in the announcement; Mistral says additional benchmarks come with the weights by end of October |
+| mistral-large-4 | terminalBench | 2026-10-07 | Mistral's figure is Terminal-Bench 4 (28.3%) and AA's is Terminal-Bench 4.0 (26.8%); AA lists terminalBench21 as null — no 2.1 figure |
+| mistral-large-4 | lmarenaElo | 2026-10-07 | not on arena.ai's text leaderboard one day into the preview; re-check |
+| mistral-large-4 | gdpvalAA | 2026-10-07 | Artificial Analysis lists GDPval-AA v2.1 (1424), not the tracked v2; kept in notes |
+| mistral-large-4 | arcAgi2 | 2026-10-07 | no ARC Prize entry found |
+| mistral-large-4 | mmluPro | 2026-10-07 | retired key; not reported |
+| mistral-large-4 | aime | 2026-10-07 | retired key; not reported |
+| mistral-large-4 | maxOutput | 2026-10-07 | docs.mistral.ai/models/mistral-large-4-0 read directly: shows context (1M) but no max-output value; announcement silent |
+| mistral-large-4 | knowledgeCutoff | 2026-10-07 | absent from the announcement and docs model page; Artificial Analysis lists knowledgeCutoffDate null |
+| mistral-large-4 | hle | 2026-10-07 | not reported by Mistral; AA's 35.0% is its own text-only-subset run with an unstated tool setting, nulled for the same reason as gemini-4-argon |
