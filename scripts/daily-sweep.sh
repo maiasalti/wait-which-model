@@ -57,15 +57,22 @@ if [ -n "$(git status --porcelain -- . ':!.obsidian')" ]; then
   exit 0
 fi
 
+# ── Guard 3: only from main ──────────────────────────────────────────────────
+# Started on a working branch, the sweep checked out its own branch, committed
+# that session's edits as "Daily sweep 2026-10-01" and opened a PR with them.
+GUARD_REASON="$(node scripts/lib/sweep-jobs.js guard "$(git rev-parse --abbrev-ref HEAD)")"
+if [ -n "$GUARD_REASON" ]; then
+  if [ "$DRY_RUN" = 0 ]; then log "SKIP  $GUARD_REASON"; fi
+  say "$GUARD_REASON; a real run would stop here"
+  exit 0
+fi
+
 START_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 
 # ── Which jobs run today ─────────────────────────────────────────────────────
-# Every weekday: health + new-model scan. Tue/Thu: stats fill. Mon: news sweep.
-# Written as explicit ifs rather than `[ ] && x` chains: those return non-zero
-# on the false branch, which is a footgun waiting for someone to add `set -e`.
-JOBS="health models"
-if [ "$DOW" = 2 ] || [ "$DOW" = 4 ]; then JOBS="$JOBS stats"; fi
-if [ "$DOW" = 1 ]; then JOBS="$JOBS news"; fi
+# Every weekday: health + new-model scan. Tue/Thu: stats. Mon: news. Plus one
+# directory per weekday once its stage ships — see scripts/lib/sweep-jobs.js.
+JOBS="$(node scripts/lib/sweep-jobs.js jobs "$DOW")"
 
 say "jobs for today (dow=$DOW): $JOBS"
 if [ "$DRY_RUN" = 1 ]; then

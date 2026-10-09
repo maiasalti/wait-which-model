@@ -27,17 +27,17 @@ PR's `models.json` additions before merging.
 Weekdays only. The laptop is shut at weekends, so a Saturday job would either never run or
 fire late on Monday and collide with Monday's own sweep.
 
-| Day | Jobs |
-|---|---|
-| Mon | health · models · **news** |
-| Tue | health · models · **stats** |
-| Wed | health · models |
-| Thu | health · models · **stats** |
-| Fri | health · models |
+| Day | Jobs | Directory job |
+|---|---|---|
+| Mon | health · models · **news** | image-models (from Stage 3) |
+| Tue | health · models · **stats** | video-models (from Stage 3) |
+| Wed | health · models | agents (from Stage 4) |
+| Thu | health · models · **stats** | harnesses (from Stage 4) |
+| Fri | health · models | features (from Stage 2) |
 
-## Guards
-
-The sweep refuses to run on a dirty working tree, so it never clobbers work in progress. Changes under `.obsidian/` are ignored by that check, because Obsidian rewrites its UI-state files whenever the vault is open and that blocked nearly every run in September 2026.
+Job selection lives in `scripts/lib/sweep-jobs.js` (tested). A directory job runs only once its
+key is listed in `ENABLED_DIRECTORY_JOBS` there, which the stage that ships its protocol and data
+switches on (design: `docs/superpowers/specs/2026-10-09-directory-expansion-design.md`).
 
 ## The jobs
 
@@ -61,6 +61,13 @@ The run stops, quietly and without changing anything, when:
 2. **It is a weekend.**
 3. **The working tree is dirty.** Maia may have work in progress. A scheduled job must
    never stash, reset, or commit over it. This is the guard most worth preserving.
+   Changes under `.obsidian/` are ignored by that check, because Obsidian rewrites its
+   UI-state files whenever the vault is open and that blocked nearly every run in
+   September 2026.
+4. **The checkout is not on `main`** (Guard 3). The sweep checks out its own branch and
+   restores the starting one afterwards. Started from a clean working branch on 2026-10-01,
+   it committed that session's edits as a sweep and opened a PR with them. It now never runs
+   from anything but `main`.
 
 ## Waiting for the network
 
