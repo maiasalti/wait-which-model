@@ -6,6 +6,7 @@ import type { Model, ModelStatus } from "@/lib/types";
 import { ModelCard } from "@/components/ModelCard";
 import { CompanyLogo } from "@/components/CompanyLogo";
 import { CompanySelect } from "@/components/CompanySelect";
+import { DirectoryTabs } from "@/components/directory/DirectoryTabs";
 
 type SortKey =
   | "newest"
@@ -92,6 +93,7 @@ export default function DirectoryPage() {
 
   return (
     <div>
+      <DirectoryTabs />
       <section className="pt-10 pb-8">
         <p className="mono text-xs uppercase tracking-[0.25em] text-ink-3">
           Models Directory
