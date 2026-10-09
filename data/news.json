@@ -1,5 +1,36 @@
 [
   {
+    "id": "2026-10-07-liquid-ai-open-d1",
+    "date": "2026-10-07",
+    "title": "Liquid AI releases open d1 decision models for text, vision and audio",
+    "summary": "Liquid AI released two open-weight decision models on Hugging Face on 2026-10-07: d1-3B, built on its LFM2.5-VL-3B vision-language model with a 32K context, and d1-omni-600M, an experimental 587M-parameter checkpoint that also takes audio. Like TypeSafe's Jev, they return calibrated probabilities for yes/no, choice and score questions in a single forward pass instead of generating text, and ship under the LFM Open License v1.0, which allows free commercial use below US$10M annual revenue.",
+    "category": "release",
+    "companies": [
+      "liquid-ai"
+    ],
+    "modelIds": [
+      "d1-3b",
+      "d1-omni-600m"
+    ],
+    "sourceName": "Liquid AI",
+    "sourceUrl": "https://www.liquid.ai/blog/d1-open"
+  },
+  {
+    "id": "2026-10-05-beam",
+    "date": "2026-10-05",
+    "title": "Reflection AI launches Beam, a 501B open-weight model, in waitlisted beta",
+    "summary": "Reflection AI announced Beam on 2026-10-05, its first public model: a 501B-total / 23B-active mixture-of-experts reasoning model for coding and agentic work, served through a waitlisted OpenAI-compatible API beta with a 256K context. Reflection reports SWE-bench Verified 80.9%, SWE-bench Pro 65.5%, GPQA Diamond 90.5% and Terminal-Bench 2.1 80.1%, and says the weights will follow under Apache 2.0 later in October.",
+    "category": "release",
+    "companies": [
+      "reflection"
+    ],
+    "modelIds": [
+      "beam"
+    ],
+    "sourceName": "Reflection AI",
+    "sourceUrl": "https://reflection.ai/blog/introducing-beam"
+  },
+  {
     "id": "2026-10-03-kolibri-1",
     "date": "2026-10-03",
     "title": "Aleph Alpha releases Kolibri, a sovereign English-German open-weight model under Apache 2.0",
