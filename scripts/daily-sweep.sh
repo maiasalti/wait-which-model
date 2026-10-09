@@ -110,7 +110,7 @@ Read AGENTS.md first, then run ONLY the jobs listed here, following each protoco
 
 JOBS TODAY: $JOBS
 
-- health : run the integrity check in AGENTS.md, then 'node scripts/frontier-status.js --apply'
+- health : run 'node scripts/integrity.js', then 'node scripts/frontier-status.js --apply'
            and 'node scripts/frontier-reigns.js --apply'. Report any status or reign changes.
            Also flag anything that looks internally inconsistent or unsourced.
 - models : follow protocols/NEW_MODEL_RELEASE_PROTOCOL.md. Search the tracked companies for
@@ -179,7 +179,7 @@ cells are left null and logged to the gap ledgers.
 
 # ── Validate before asking for review ────────────────────────────────────────
 FAILED=""
-bash -c "$(grep '^node -e' AGENTS.md | head -1)" > /tmp/sweep-integrity.log 2>&1 || FAILED="$FAILED integrity"
+node scripts/integrity.js > /tmp/sweep-integrity.log 2>&1 || FAILED="$FAILED integrity"
 npm test  > /tmp/sweep-test.log  2>&1 || FAILED="$FAILED tests"
 npm run build > /tmp/sweep-build.log 2>&1 || FAILED="$FAILED build"
 
