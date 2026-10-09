@@ -71,6 +71,7 @@ Then run `node scripts/frontier-reigns.js` and, if the diff looks right, `--appl
 
 ```bash
 node scripts/integrity.js
+npm run build
 ```
 
 ### 7. Verify in the browser

@@ -93,3 +93,9 @@ test("duplicate news ids are caught", () => {
 test("the repo's real data passes", () => {
   assert.deepEqual(checkData(loadData(path.join(__dirname, "..", "data"))), []);
 });
+
+test("a news item without a modelIds array is caught (model pages call .includes on it)", () => {
+  const d = base();
+  d.news.push({ id: "n2" });
+  assert.match(checkData(d).join("\n"), /news n2: modelIds missing/);
+});

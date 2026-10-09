@@ -87,6 +87,8 @@ function checkData({ models, news, companies, reigns, directory = {} }) {
   for (const n of news) {
     if (newsIds.has(n.id)) err(`duplicate news id ${n.id}`);
     newsIds.add(n.id);
+    // Required, not optional: model pages call n.modelIds.includes() unguarded.
+    if (!Array.isArray(n.modelIds)) err(`news ${n.id}: modelIds missing`);
     for (const id of n.modelIds ?? []) if (!modelIds.has(id)) err(`unknown modelId ${id} in news ${n.id}`);
     for (const ref of n.refs ?? []) {
       if (!Object.values(DIRECTORY_FILES).includes(ref.type)) err(`news ${n.id}: unknown ref type ${ref.type}`);

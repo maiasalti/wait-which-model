@@ -11,7 +11,7 @@
 #
 set -uo pipefail
 
-REPO="/Users/maia/Desktop/Projects/frontier-models-website"
+REPO="${SWEEP_REPO:-/Users/maia/Desktop/Projects/frontier-models-website}"   # SWEEP_REPO: tests only
 LOG="$REPO/logs/daily-sweep.log"
 TODAY="$(date +%Y-%m-%d)"
 DOW="$(date +%u)"            # 1=Mon .. 7=Sun
@@ -60,11 +60,17 @@ fi
 # ── Guard 3: only from main ──────────────────────────────────────────────────
 # Started on a working branch, the sweep checked out its own branch, committed
 # that session's edits as "Daily sweep 2026-10-01" and opened a PR with them.
-GUARD_REASON="$(node scripts/lib/sweep-jobs.js guard "$(git rev-parse --abbrev-ref HEAD)")"
-if [ -n "$GUARD_REASON" ]; then
+# Decided on the helper's exit code, never on its output: a helper that crashes
+# prints nothing, and "no output" must not read as "on main" (fail closed).
+GUARD_REASON="$(node scripts/lib/sweep-jobs.js guard "$(git rev-parse --abbrev-ref HEAD)")"; GUARD_RC=$?
+if [ "$GUARD_RC" = 3 ]; then
   if [ "$DRY_RUN" = 0 ]; then log "SKIP  $GUARD_REASON"; fi
   say "$GUARD_REASON; a real run would stop here"
   exit 0
+elif [ "$GUARD_RC" != 0 ]; then
+  if [ "$DRY_RUN" = 0 ]; then log "FAIL  scripts/lib/sweep-jobs.js guard exited $GUARD_RC — refusing to run unguarded"; fi
+  say "sweep-jobs.js guard exited $GUARD_RC; a real run would stop here"
+  exit 1
 fi
 
 START_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
@@ -72,7 +78,12 @@ START_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 # ── Which jobs run today ─────────────────────────────────────────────────────
 # Every weekday: health + new-model scan. Tue/Thu: stats. Mon: news. Plus one
 # directory per weekday once its stage ships — see scripts/lib/sweep-jobs.js.
-JOBS="$(node scripts/lib/sweep-jobs.js jobs "$DOW")"
+JOBS="$(node scripts/lib/sweep-jobs.js jobs "$DOW")"; JOBS_RC=$?
+if [ "$JOBS_RC" != 0 ] || [ -z "$JOBS" ]; then
+  if [ "$DRY_RUN" = 0 ]; then log "FAIL  scripts/lib/sweep-jobs.js jobs exited $JOBS_RC with jobs '$JOBS' — not running a sweep with no instructions"; fi
+  say "sweep-jobs.js jobs exited $JOBS_RC (jobs: '$JOBS'); a real run would stop here"
+  exit 1
+fi
 
 say "jobs for today (dow=$DOW): $JOBS"
 if [ "$DRY_RUN" = 1 ]; then

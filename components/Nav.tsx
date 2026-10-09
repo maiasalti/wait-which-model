@@ -53,6 +53,11 @@ function NavGroup({
           <Link
             key={t.href}
             href={t.href}
+            // The pathname effect only closes menus on navigation; a click on
+            // the page you're already on (Directory → Models on /) changes nothing.
+            onClick={() => {
+              if (detailsRef.current) detailsRef.current.open = false;
+            }}
             className="block px-3 py-2 text-sm text-ink-2 hover:bg-white/5 hover:text-ink"
           >
             {t.label}
