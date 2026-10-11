@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-10-07-claude-haiku-5-5",
+    "date": "2026-10-07",
+    "title": "Anthropic releases Claude Haiku 5.5, its first Haiku with an adjustable effort dial",
+    "summary": "Anthropic shipped Claude Haiku 5.5 on 2026-10-07 for high-volume, latency-sensitive work: a 1M-token context, 128K max output, and pricing of $0.10/$0.50 per million input/output tokens for prompts up to 100,000 tokens (roughly 75% cheaper on average than Haiku 4.5). It's the first Haiku-class model with adjustable reasoning effort, and Anthropic reports a sharp jump in computer-use reliability (OSWorld 2.1 offline from 15.7% to 72.4%) over its predecessor.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-haiku-5-5"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/claude-haiku-5-5"
+  },
+  {
     "id": "2026-10-06-mistral-large-4",
     "date": "2026-10-06",
     "title": "Mistral releases Mistral Large 4 in public preview, with open weights promised by the end of October",
