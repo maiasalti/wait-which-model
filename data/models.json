@@ -8143,5 +8143,73 @@
       "Weights are promised for the end of October but not yet out, so self-hosting has to wait"
     ],
     "notes": "Public preview announced 2026-10-06 on Mistral Studio; Mistral says the weights will be released by the end of October and names no licence yet, so openWeights is false and license null until they ship. Mistral's two official pages disagree on size: the announcement says 1T total / 49B active parameters, while the docs model page says 1.05T total / 52B active plus a 1.6B vision encoder. Context is 1M per Mistral's docs (Artificial Analysis lists 524,288). Pricing is the $1.36 / $4.18 list rate ($0.14 cached input); the docs page currently shows exactly half ($0.68 / $2.09 / $0.07 cached) with the list price struck through, and gives no end date for the discount. Mistral reported none of the tracked benchmark keys: its launch figures are DeepSWE v1.1 61.7%, SWE-Atlas-QnA 59.4%, Terminal-Bench 4 28.3% (not the 2.1 this site tracks), Coding Agent Index 49.8%, AutomationBench 59.9% and Cybench 93%. hle is null: Mistral reports no HLE figure, and Artificial Analysis' 35% comes from its own text-only subset with an unstated tool setting. AA also lists GDPval-AA v2.1 at 1424, which is not the v2 this site tracks. AA measures a single reasoning configuration with no effort levels named, so costPerTask and speed carry no effort."
+  },
+  {
+    "id": "claude-haiku-5-5",
+    "name": "Claude Haiku 5.5",
+    "company": "anthropic",
+    "releaseDate": "2026-10-07",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 0.1,
+      "outputPerMTok": 0.5
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-06",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "anthropic",
+        "id": "claude-haiku-5-5"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "anthropic.claude-haiku-5-5"
+      },
+      {
+        "provider": "google-vertex",
+        "id": "claude-haiku-5-5"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": 45.9,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "First Haiku release with an adjustable effort dial, so the same model can idle through routing calls and spend more on a harder subagent step",
+      "Computer-use tasks that Haiku 4.5 mostly failed now mostly complete — testers describe a step change rather than an incremental bump",
+      "Holds up as Opus and Sonnet's coding subagent, handing back usable diffs rather than needing a bigger model to clean up after it"
+    ],
+    "weaknesses": [
+      "The newer tokenizer counts roughly 30% more tokens for the same text than Haiku 4.5 — prompts tuned to the old count burn through budget faster than the sticker price implies",
+      "Still a clear step below Sonnet and Opus 5.5 on demanding agentic coding work, even pushed to max effort",
+      "Thinking blocks are locked to the account that produced them, so they can't be replayed or inspected from a different account or integration"
+    ],
+    "notes": "HLE 45.9% no tools / 57.4% with tools, Anthropic's own figures at max effort. Anthropic's launch table also reports GDPval-AA v2.1 1620 (tracked key stays null — this site only records the v2 scale, matching the convention used for Claude Sonnet 5.5), AA-Briefcase v1.1 1578, OSWorld 2.1 offline 72.4%, Terminal-Bench 4.0 39.2% (not comparable with the tracked 2.1 metric) and Chartography no-tools 46.4%. Anthropic published no SWE-bench Verified, SWE-bench Pro, GPQA Diamond, AIME, MMLU-Pro, ARC-AGI-2 or LMArena figure for this model; a SWE-bench Pro 64.8% figure circulating in third-party coverage is unconfirmed against the official announcement and left out. Pricing is $0.10/$0.50 per MTok for prompts up to 100,000 tokens, rising to $0.50/$2.50 above that. Retirement is only Anthropic's standard \"not sooner than October 7, 2027\" floor, not an announced date. Also served on Microsoft Foundry and Claude Platform on AWS as claude-haiku-5-5. Cost-per-task and output-speed figures from Artificial Analysis could not be independently verified in this pass (artificialanalysis.ai was unreachable) and are left null — see stats-gaps.md."
   }
 ]
