@@ -286,5 +286,32 @@
     "website": "https://aleph-alpha.com",
     "color": "#5B6CD9",
     "order": 32
+  },
+  {
+    "id": "liquid-ai",
+    "name": "Liquid AI",
+    "country": "United States",
+    "founded": 2023,
+    "website": "https://www.liquid.ai",
+    "color": "#2F9E6E",
+    "order": 34
+  },
+  {
+    "id": "reflection",
+    "name": "Reflection AI",
+    "country": "United States",
+    "founded": 2024,
+    "website": "https://reflection.ai",
+    "color": "#B85FD6",
+    "order": 35
+  },
+  {
+    "id": "cloudflare",
+    "name": "Cloudflare",
+    "country": "United States",
+    "founded": 2009,
+    "website": "https://www.cloudflare.com",
+    "color": "#D9720F",
+    "order": 33
   }
 ]
