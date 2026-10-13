@@ -1086,3 +1086,15 @@ Daily sweep 2026-10-08 (unattended; WebFetch denied except AWS and Claude docs, 
 | gemini-4-argon | contextWindow, knowledgeCutoff | 2026-10-08 | re-checked: Google still publishes no model card, context or cutoff (Fairwind-only access) — re-check at broader rollout |
 | gemini-4-argon | arcAgi2 | 2026-10-08 | re-checked: no arcprize.org results page for Argon |
 | claude-sonnet-5-5 | arcAgi2 | 2026-10-08 | re-checked: ARC Prize has posted Opus 5.5 but no Sonnet 5.5 results page |
+
+New-model release protocol, 2026-10-09 sweep: Beam (Reflection AI), d1-3B and d1-omni-600M (Liquid AI). WebFetch denied all session; sources are WebSearch excerpts.
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| beam | pricing | 2026-10-09 | waitlisted API beta; no per-token price on reflection.ai or developers.reflection.ai |
+| beam | costPerTask | 2026-10-09 | no Artificial Analysis listing found |
+| beam | lmarenaElo | 2026-10-09 | not on the arena text board four days after launch; re-check |
+| beam | gdpvalAA / arcAgi2 / mmluPro | 2026-10-09 | not in Reflection's launch table; no third-party run found |
+| beam | contextWindow / maxOutput | 2026-10-09 | docs give "256K" / "128K" only; recorded as 256000 / 128000 — replace with exact counts if the docs or model card publish them |
+| d1-3b | pricing / costPerTask / knowledgeCutoff / maxOutput | 2026-10-09 | weights-only checkpoint with no hosted price; decision model (no output tokens); no cutoff published |
+| d1-omni-600m | pricing / costPerTask / knowledgeCutoff / maxOutput | 2026-10-09 | same as d1-3b |

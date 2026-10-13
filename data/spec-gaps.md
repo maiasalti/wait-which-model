@@ -256,3 +256,14 @@ kolibri-1 · speed · 2026-10-08 · Re-checked: no Artificial Analysis page for 
 gpt-5-6-cyber · retirementDate · 2026-10-08 · Bedrock card (docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-56-cyber.html, read directly) gives "EOL no sooner than: August 12, 2027" and "Model EOL date: N/A" — a floor, not an announced retirement. Left null.
 claude-haiku-5-5 · retirementDate · 2026-10-08 · Anthropic's overview (platform.claude.com/docs/en/models/haiku-5-5/overview, read directly) gives retirement "Not sooner than October 7, 2027" and the Bedrock card "EOL no sooner than: October 7, 2027" — a floor, not an announced retirement. Left null.
 claude-haiku-5-5 · speed.timeToFirstTokenSec · 2026-10-08 · Artificial Analysis excerpts conflict for the medium variant: 12.63s on the model page vs 13.40s for Anthropic on the providers page (WebFetch denied). outputTokensPerSec 136.8 filled; this half left null — re-check.
+beam · apiIds · 2026-10-09 · Search excerpts of developers.reflection.ai name the model "Beam-501B-A23B", but the docs page could not be read and the exact case-sensitive API string is unconfirmed. Left [] — re-check with page access.
+beam · license · 2026-10-09 · Not applicable yet — openWeights false; Reflection promises Apache 2.0 weights "later this month". Set license and openWeights when the Hugging Face repo publishes.
+beam · speed · 2026-10-09 · No Artificial Analysis listing. Left null.
+beam · predecessorId · 2026-10-09 · Reflection's first public model; nothing to replace. Left null.
+beam · retirementDate · 2026-10-09 · Brand-new beta; no lifecycle notice. Left null.
+d1-3b · apiIds · 2026-10-09 · Weights only at LiquidAI/d1-3B; Liquid's hosted API serves "d1", which the sources do not equate with this checkpoint. Left [].
+d1-3b · speed · 2026-10-09 · Decision model; no Artificial Analysis listing. Left null.
+d1-3b · predecessorId · 2026-10-09 · Liquid compares against other decision models but names nothing d1-3B replaces. Left null.
+d1-omni-600m · apiIds · 2026-10-09 · Weights only at LiquidAI/d1-omni-600M; no hosted endpoint. Left [].
+d1-omni-600m · speed · 2026-10-09 · Liquid publishes no speed figures for it; no AA listing. Left null.
+d1-omni-600m · predecessorId · 2026-10-09 · No replacement claim. Left null.
