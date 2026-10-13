@@ -1,5 +1,21 @@
 [
   {
+    "id": "2026-10-12-muse-wonder",
+    "date": "2026-10-12",
+    "title": "Meta releases Muse Wonder and Muse Wonder Full, its first frontier-class Muse models",
+    "summary": "Meta Superintelligence Labs shipped Muse Wonder on the Meta Model API at $4/$20 per million tokens with a 1M-token context window, and Muse Wonder Full exclusively for Muse Code subscribers. Artificial Analysis scores them 52 and 56 on its Intelligence Index v4.3 at max effort, up from Muse Spark 1.3's 48.",
+    "category": "release",
+    "companies": [
+      "meta"
+    ],
+    "modelIds": [
+      "muse-wonder",
+      "muse-wonder-full"
+    ],
+    "sourceName": "Meta AI Research",
+    "sourceUrl": "https://research.meta.ai/blog/muse-wonder"
+  },
+  {
     "id": "2026-10-06-mistral-large-4",
     "date": "2026-10-06",
     "title": "Mistral releases Mistral Large 4 in public preview, with open weights promised by the end of October",
