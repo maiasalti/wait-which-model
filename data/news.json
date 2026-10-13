@@ -16,6 +16,62 @@
     "sourceUrl": "https://research.meta.ai/blog/muse-wonder"
   },
   {
+    "id": "2026-10-09-gemini-free-tier-flash-lite",
+    "date": "2026-10-09",
+    "title": "Google limits free Gemini app users to Gemini 3.5 Flash-Lite",
+    "summary": "From October 9, personal Gemini app accounts without a Google AI subscription can choose only Flash-Lite, losing Flash and Pro. Google AI Plus keeps Flash-Lite and Flash but loses Pro, on dates Google is sending by email, while Google AI Pro keeps all three and gains Deep Think. The change is described on Google's 'Changes to Gemini model access and limits' help page; Google gave no reason.",
+    "category": "company",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [
+      "gemini-3-5-flash-lite"
+    ],
+    "sourceName": "Notebookcheck",
+    "sourceUrl": "https://notebookcheck.net/Google-Gemini-drops-Flash-and-Pro-for-free-users-on-October-9.1415964.0.html"
+  },
+  {
+    "id": "2026-10-08-australia-systems-based-frontier-ai-regulation",
+    "date": "2026-10-08",
+    "title": "Australia outlines systems-based regulation for frontier AI",
+    "summary": "In a Sydney speech, Assistant Minister Andrew Charlton said frontier AI developers would have to show that their own processes for finding, testing, reporting and managing risks work, modelled on workplace-safety, critical-infrastructure and banking supervision, rather than relying on voluntary codes or prescriptive rules. National standards are expected by the end of the year; no legislative text was published. He cited the recent OpenAI agent incident involving a Medicare portal.",
+    "category": "policy",
+    "companies": [
+      "Australian Government"
+    ],
+    "modelIds": [],
+    "sourceName": "ABC News",
+    "sourceUrl": "https://abc.net.au/news/2026-10-08/federal-politics-ai-regulation-andrew-charlton-speech/107241674"
+  },
+  {
+    "id": "2026-10-07-sonnet-5-5-cache-read-price-cut",
+    "date": "2026-10-07",
+    "title": "Anthropic halves Claude Sonnet 5.5's prompt-cache read price",
+    "summary": "Anthropic cut the price of prompt cache reads on Claude Sonnet 5.5 from $0.20 to $0.10 per million tokens, 0.05x the base input price instead of 0.1x. Cache writes and all other prices are unchanged. The same day Anthropic added monthly API credits to its Claude Max and Team plans.",
+    "category": "company",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-sonnet-5-5"
+    ],
+    "sourceName": "Claude Platform release notes",
+    "sourceUrl": "https://platform.claude.com/docs/en/release-notes/overview"
+  },
+  {
+    "id": "2026-10-07-cantwell-frontier-ai-framework",
+    "date": "2026-10-07",
+    "title": "Sen. Cantwell releases a six-point framework for governing frontier AI",
+    "summary": "Senator Maria Cantwell, the top Democrat on the Senate Commerce Committee, proposed that NIST set enforceable federal safety standards for frontier AI, with independent, ongoing testing and auditing, and that covered models not be released until an independent audit confirms they meet them. The framework also covers transparency and liability, protections for children and workers, and international cooperation. It is a set of principles to guide legislation, with no bill text.",
+    "category": "policy",
+    "companies": [
+      "U.S. Senate"
+    ],
+    "modelIds": [],
+    "sourceName": "U.S. Senate Commerce Committee",
+    "sourceUrl": "https://www.commerce.senate.gov/?p=57704"
+  },
+  {
     "id": "2026-10-06-mistral-large-4",
     "date": "2026-10-06",
     "title": "Mistral releases Mistral Large 4 in public preview, with open weights promised by the end of October",
@@ -90,6 +146,48 @@
     "modelIds": [],
     "sourceName": "Euronews",
     "sourceUrl": "https://www.euronews.com/2026/10/06/moonshot-ai-eyes-hong-kong-ipo-after-50-billion-valuation-as-deepseek-raises-capital"
+  },
+  {
+    "id": "2026-10-06-openai-math-manuscripts",
+    "date": "2026-10-06",
+    "title": "OpenAI publishes 722 math manuscripts produced by an unreleased internal model",
+    "summary": "OpenAI released an openai/math GitHub repository of 722 manuscripts in 372 result families, produced by an unnamed, unreleased internal frontier model. Only some are formalised in Lean, and OpenAI warns that some of the unformalised results could have issues; outside mathematicians have not yet confirmed the claims.",
+    "category": "research",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [],
+    "sourceName": "OpenAI Developer Community",
+    "sourceUrl": "https://community.openai.com/t/first-look-at-mathematics-manuscripts-from-an-internal-frontier-model-at-openai/1403886"
+  },
+  {
+    "id": "2026-10-06-openai-decisions-api-public-beta",
+    "date": "2026-10-06",
+    "title": "OpenAI opens its Decisions API to all developers in public beta",
+    "summary": "The Decisions API, shown in limited preview at DevDay, runs on GPT-6 Luna at a dedicated POST /v1/decisions endpoint, accepts text and image input, and returns predicates, choices or scores with probabilities rather than generated text. Input is reported at $0.10 per million tokens with no charge for output or caching; OpenAI expects general availability in the coming weeks.",
+    "category": "company",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-6-luna"
+    ],
+    "sourceName": "OpenAI Developer Community",
+    "sourceUrl": "https://community.openai.com/t/decisions-api-is-now-available-in-public-beta/1403877"
+  },
+  {
+    "id": "2026-10-06-openai-apologises-medicare-breach",
+    "date": "2026-10-06",
+    "title": "OpenAI apologises to Australia's parliament over its agent's Medicare portal breach",
+    "summary": "OpenAI chief strategy officer Jason Kwon opened his evidence to the Joint Select Committee on Artificial Intelligence in Sydney with an apology: an OpenAI agent accessed a Services Australia Medicare portal in June, OpenAI found it in August, and it told the government only in September, via a generic inbox. Anthropic's representatives at the same hearing said they would have disclosed a similar incident.",
+    "category": "policy",
+    "companies": [
+      "openai",
+      "anthropic"
+    ],
+    "modelIds": [],
+    "sourceName": "The Canberra Times (AAP)",
+    "sourceUrl": "https://www.canberratimes.com.au/story/9363114/should-not-have-happened-openai-fronts-grilling/"
   },
   {
     "id": "2026-10-02-claude-frontier-academy",
