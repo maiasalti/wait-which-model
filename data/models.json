@@ -6729,7 +6729,7 @@
     "name": "Muse Spark 1.3",
     "company": "meta",
     "releaseDate": "2026-09-02",
-    "status": "frontier",
+    "status": "superseded",
     "tier": "flagship",
     "modality": "multimodal",
     "type": "llm",
@@ -8143,5 +8143,125 @@
       "Weights are promised for the end of October but not yet out, so self-hosting has to wait"
     ],
     "notes": "Public preview announced 2026-10-06 on Mistral Studio; Mistral says the weights will be released by the end of October and names no licence yet, so openWeights is false and license null until they ship. Mistral's two official pages disagree on size: the announcement says 1T total / 49B active parameters, while the docs model page says 1.05T total / 52B active plus a 1.6B vision encoder. Context is 1M per Mistral's docs (Artificial Analysis lists 524,288). Pricing is the $1.36 / $4.18 list rate ($0.14 cached input); the docs page currently shows exactly half ($0.68 / $2.09 / $0.07 cached) with the list price struck through, and gives no end date for the discount. Mistral reported none of the tracked benchmark keys: its launch figures are DeepSWE v1.1 61.7%, SWE-Atlas-QnA 59.4%, Terminal-Bench 4 28.3% (not the 2.1 this site tracks), Coding Agent Index 49.8%, AutomationBench 59.9% and Cybench 93%. hle is null: Mistral reports no HLE figure, and Artificial Analysis' 35% comes from its own text-only subset with an unstated tool setting. AA also lists GDPval-AA v2.1 at 1424, which is not the v2 this site tracks. AA measures a single reasoning configuration with no effort levels named, so costPerTask and speed carry no effort."
+  },
+  {
+    "id": "muse-wonder",
+    "name": "Muse Wonder",
+    "company": "meta",
+    "releaseDate": "2026-10-12",
+    "status": "frontier",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1048576,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 4,
+      "outputPerMTok": 20
+    },
+    "costPerTask": {
+      "usd": 4.5157,
+      "effort": "max"
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": 85.4,
+      "timeToFirstTokenSec": 60.82,
+      "effort": "max"
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "meta",
+        "id": "muse-wonder-1.0"
+      },
+      {
+        "provider": "openrouter",
+        "id": "meta/muse-wonder"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Carries what it learns about you across conversations and pulls it back in when a later task needs it — memory is trained behaviour rather than a bolt-on retrieval layer",
+      "Keeps working through blockers on long agent runs, trying another route instead of stalling, and checks in before important actions",
+      "Reasoning effort runs from minimal to max on one model id, so quick lookups and multi-hour agent work share the same endpoint",
+      "Makes up answers less often than Muse Spark 1.3 when it doesn't know"
+    ],
+    "weaknesses": [
+      "Long silence before the first answer token at max effort — the reasoning phase runs about a minute",
+      "Visual and spatial reasoning, especially 3D, is a limitation Meta's own model card tells developers to validate",
+      "Still a preview with no hands-on reception yet, and every launch figure was run at max effort — behaviour at the cheaper settings is undocumented"
+    ],
+    "notes": "Preview on the Meta Model API (muse-wonder-1.0, Standard mode only, no Contributor tier) and in Muse Code; cached input is $0.20/M and there is no long-context premium. Meta published none of the tracked benchmarks: its launch table (all max effort, with competitor runs Meta itself calls best-effort) reports its own suite — Terminal-Bench 4.0-AA 52.0% (not the tracked 2.1), DeepSWE 1.1 78.8%, SWE-Marathon 53.1%, ProgramBench 50.0%, MemoryBench 85.6%, Personal Superintelligence Index 54.3. Artificial Analysis scores it 52 on Intelligence Index v4.3 at max effort (the only variant it lists); AA's HLE 50.1% comes from its own text-only subset with an unstated tool setting and its GDPval-AA 1770 is v2.1, a different scale from the tracked v2, so hle and gdpvalAA stay null. costPerTask and speed are AA's max-effort measurements on Meta's first-party endpoint. maxOutput is unpublished by Meta (OpenRouter's 943,718 max-completion figure is not official); knowledge cutoff undisclosed. Coverage disagreed on the comparison set: TechCrunch named only Claude Fable 5.1 and GPT-6 Astra, but Meta's model card also compares Claude Opus 5.5, which leads Wonder on AA's index. predecessorId is null: Meta says the release 'builds on' Muse Spark but names no model it replaces, and its docs keep recommending Muse Spark for latency- and cost-sensitive work."
+  },
+  {
+    "id": "muse-wonder-full",
+    "name": "Muse Wonder Full",
+    "company": "meta",
+    "releaseDate": "2026-10-12",
+    "status": "frontier",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "restricted",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Holds up better on unfamiliar tasks than its post-training targets would predict — Meta credits a larger base model rather than benchmark tuning",
+      "Gets more done per token than the standard Wonder, so the stronger model is also the less wasteful one on long agent runs",
+      "Built for multi-hour coding inside Muse Code, sustaining whole-project work rather than single-file edits"
+    ],
+    "weaknesses": [
+      "No API at all — reachable only inside Muse Code on the top two subscription plans, so it can't be built into your own product",
+      "Ships behind CBRN classifiers after Meta couldn't rule out the unmitigated model reaching its high-risk threshold, so dual-use biology requests draw heavy refusals",
+      "Too new for hands-on reception — beyond Meta's launch materials its day-to-day behaviour is undocumented"
+    ],
+    "notes": "Subscription-only: Muse Code's Power Usage ($50/month) and Maximum Usage ($200/month) plans, in Standard or Contributor mode, so pricing is null — there is no per-token rate. Meta's pricing table lists the string muse-wonder-full-1.0 but it is not served on the Meta Model API (setting max effort on Muse Wonder does not select it), so apiIds is empty and availability is restricted; CNBC's $20/$100 monthly tiers are for the separate Muse consumer agent app. Meta states only '1M tokens' of context (its docs give 1,048,576 for Muse Wonder but no exact Full figure). Meta published none of the tracked benchmarks: its launch table (max effort, competitor runs best-effort) reports Terminal-Bench 4.0-AA 57.1% (not the tracked 2.1), DeepSWE 1.1 79.0%, SWE-Marathon 57.5% (at xhigh), ProgramBench 59.0%, Harvey LAB-AA 13.1% and Personal Superintelligence Index 59.1. Artificial Analysis scores it 56 on Intelligence Index v4.3 at max effort, behind Claude Opus 5.5's 58; its HLE 53.6% (own text-only subset, tool setting unstated) and GDPval-AA v2.1 1857 (not the tracked v2) are left null, and AA publishes no cost per task (not priced per token) or speed (no hosted endpoint). maxOutput and knowledge cutoff are unpublished; predecessorId is null because Meta names no model it replaces."
   }
 ]

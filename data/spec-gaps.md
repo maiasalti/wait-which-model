@@ -222,3 +222,9 @@ claude-sonnet-5-5 · retirementDate · 2026-10-04 · Official model page (platfo
 mistral-large-4 · predecessorId · 2026-10-07 · Announcement (mistral.ai/news/mistral-large-4) and docs model page read directly: neither mentions Mistral Large 3, a predecessor or a replacement — only 'our largest and most capable model to date'. The models overview still lists Large 3 as active. Left null.
 mistral-large-4 · license · 2026-10-07 · Not applicable yet: openWeights false; Mistral says weights will be released by the end of October and names no licence. Re-check when weights publish.
 mistral-large-4 · retirementDate · 2026-10-07 · Brand-new preview; no lifecycle notice. Left null.
+muse-wonder · predecessorId · 2026-10-13 · Meta's announcement (research.meta.ai/blog/muse-wonder) says the release "builds on" Muse Spark and calls it "the next step on our scaling ladder", but names no model it replaces; the model card is silent and dev.meta.ai/docs/models presents Wonder and Spark side by side ("Choose Muse Wonder or Muse Spark"). SiliconANGLE's "takes over the top of the Muse lineup from Muse Spark 1.3" is coverage, not Meta. Left null.
+muse-wonder · retirementDate · 2026-10-13 · Brand-new preview; no lifecycle notice. Left null.
+muse-wonder-full · predecessorId · 2026-10-13 · Same sources as muse-wonder: no explicit replacement statement from Meta. Left null.
+muse-wonder-full · apiIds · 2026-10-13 · Not served on the Meta Model API (dev.meta.ai/docs/models: Muse Code Power/Maximum plans only); Meta's pricing table shows the string muse-wonder-full-1.0 for Muse Code only, no OpenRouter/Bedrock/Vertex listing. Left [].
+muse-wonder-full · speed · 2026-10-13 · AA model page has no performance data (hostModelCount 0 — no hosted endpoint to measure). Left null.
+muse-wonder-full · retirementDate · 2026-10-13 · Brand-new release; no lifecycle notice. Left null.

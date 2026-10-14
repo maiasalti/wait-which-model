@@ -1008,3 +1008,29 @@ New-model-release research on 2026-10-04, scoped to `claude-sonnet-5-5`. Sources
 | mistral-large-4 | maxOutput | 2026-10-07 | docs.mistral.ai/models/mistral-large-4-0 read directly: shows context (1M) but no max-output value; announcement silent |
 | mistral-large-4 | knowledgeCutoff | 2026-10-07 | absent from the announcement and docs model page; Artificial Analysis lists knowledgeCutoffDate null |
 | mistral-large-4 | hle | 2026-10-07 | not reported by Mistral; AA's 35.0% is its own text-only-subset run with an unstated tool setting, nulled for the same reason as gemini-4-argon |
+| muse-wonder | gpqaDiamond | 2026-10-13 | not in Meta's launch table (dev.meta.ai/models/muse-wonder), blog or model card; Artificial Analysis lists gpqa null |
+| muse-wonder | sweBench | 2026-10-13 | Meta reports DeepSWE 1.1, SWE-Marathon and ProgramBench instead of SWE-bench Verified |
+| muse-wonder | sweBenchPro | 2026-10-13 | not reported by Meta; not on AA's model page |
+| muse-wonder | terminalBench | 2026-10-13 | Meta's and AA's figure is Terminal-Bench 4.0 (52.0%); AA lists terminalBench21 null — no 2.1 figure |
+| muse-wonder | hle | 2026-10-13 | not reported by Meta; AA's 50.1% is its own text-only-subset run with an unstated tool setting, nulled as for gemini-4-argon |
+| muse-wonder | lmarenaElo | 2026-10-13 | no arena.ai text-leaderboard listing found one day after launch (arena.ai returned 403 to fetches; searches found none); re-check |
+| muse-wonder | gdpvalAA | 2026-10-13 | AA lists GDPval-AA v2.1 (1770), not the tracked v2; kept in notes |
+| muse-wonder | arcAgi2 | 2026-10-13 | no ARC Prize entry found |
+| muse-wonder | mmluPro | 2026-10-13 | retired key; not reported |
+| muse-wonder | aime | 2026-10-13 | retired key; not reported |
+| muse-wonder | maxOutput | 2026-10-13 | dev.meta.ai/docs/models, the model page and model card give context (1,048,576) but no max-output value; OpenRouter's 943,718 is not an official figure |
+| muse-wonder | knowledgeCutoff | 2026-10-13 | absent from the blog, model card and docs; AA lists knowledgeCutoffDate null |
+| muse-wonder-full | gpqaDiamond | 2026-10-13 | not in Meta's launch table, blog or model card; AA lists gpqa null |
+| muse-wonder-full | sweBench | 2026-10-13 | Meta reports DeepSWE 1.1, SWE-Marathon and ProgramBench instead of SWE-bench Verified |
+| muse-wonder-full | sweBenchPro | 2026-10-13 | not reported by Meta; not on AA's model page |
+| muse-wonder-full | terminalBench | 2026-10-13 | Meta's and AA's figure is Terminal-Bench 4.0 (57.1%); AA lists terminalBench21 null — no 2.1 figure |
+| muse-wonder-full | hle | 2026-10-13 | not reported by Meta; AA's 53.6% is its own text-only-subset run with an unstated tool setting, nulled as for gemini-4-argon |
+| muse-wonder-full | lmarenaElo | 2026-10-13 | no arena.ai listing found; subscription-only in Muse Code, so an Arena listing may never appear |
+| muse-wonder-full | gdpvalAA | 2026-10-13 | AA lists GDPval-AA v2.1 (1857), not the tracked v2; kept in notes |
+| muse-wonder-full | arcAgi2 | 2026-10-13 | no ARC Prize entry found |
+| muse-wonder-full | mmluPro | 2026-10-13 | retired key; not reported |
+| muse-wonder-full | aime | 2026-10-13 | retired key; not reported |
+| muse-wonder-full | pricing | 2026-10-13 | no per-token price: dev.meta.ai lists "-" for muse-wonder-full-1.0; access only via Muse Code Power ($50/mo) and Maximum ($200/mo) plans |
+| muse-wonder-full | costPerTask | 2026-10-13 | AA's launch article: "not priced per token, so no Cost per Task figure is available" |
+| muse-wonder-full | maxOutput | 2026-10-13 | not published anywhere by Meta |
+| muse-wonder-full | knowledgeCutoff | 2026-10-13 | absent from the blog, model card and docs; AA lists knowledgeCutoffDate null |
