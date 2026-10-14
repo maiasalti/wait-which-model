@@ -1,0 +1,660 @@
+[
+  {
+    "id": "openai-dots",
+    "name": "dots",
+    "company": "openai",
+    "releaseDate": "2026-09-29",
+    "notable": true,
+    "description": "Always-on ChatGPT agents that keep working on a user's goals in the background, each with its own cloud computer and browser, and ask for input when a decision is needed.",
+    "strengths": [
+      "Runs on GPT-6 Astra with its own cloud computer and browser",
+      "Connects to 4,000+ apps via plugins",
+      "Keeps working after the user logs off; message it from ChatGPT mobile, desktop or browser"
+    ],
+    "weaknesses": [
+      "Pro tiers only (from $100/mo) for individuals; excluded from EEA, UK and Switzerland on Pro",
+      "Gradual rollout; Enterprise off by default until an admin enables it"
+    ],
+    "links": {
+      "official": "https://openai.com/index/introducing-dots/",
+      "docs": "https://learn.chatgpt.com/docs/dots"
+    },
+    "domain": "general",
+    "underlyingModels": [
+      "gpt-6-astra"
+    ],
+    "access": "ga",
+    "pricing": {
+      "plan": "Pro from $100/mo",
+      "notes": "Available on Pro 100/200/500 (18+, outside EEA/UK/CH), Business Premium, and Enterprise (admin-enabled). Rolling out gradually to eligible accounts."
+    },
+    "notes": "Notable: frontier-lab developer (OpenAI). Announced at DevDay 2026 on 2026-09-29 (date from openai.com search snippet; openai.com returned 403 to direct fetch, details confirmed on learn.chatgpt.com/docs/dots). OpenAI newsroom also lists 'Introducing dots' under Oct 7, 2026 — purpose of the second listing not determined. Access set to 'ga' because Pro rollout is not labelled beta; Enterprise is described as beta in search snippets."
+  },
+  {
+    "id": "manus",
+    "name": "Manus",
+    "company": "manus",
+    "releaseDate": "2026-09-28",
+    "notable": false,
+    "description": "General-purpose autonomous agent that plans and completes multi-step tasks (research, slides, websites, video, apps) in Agent Mode; current version is Manus 2.0.",
+    "strengths": [
+      "Manus 2.0 adds the Cascade engine, Manus Studio (local files), Cloud Computer, event-triggered Automations",
+      "Vendor-reported 23.2% fewer tokens and 32% lower cost vs previous system in one tested configuration",
+      "Free tier with daily credits"
+    ],
+    "weaknesses": [
+      "Free users limited to Manus 2.0 Lite in Agent Mode",
+      "Credit-based usage",
+      "Ownership in flux: Meta-owned since 2025-12-29, separation announced Aug 2026 with deletion of some user data"
+    ],
+    "links": {
+      "official": "https://manus.im/",
+      "docs": "https://manus.im/docs/introduction/welcome"
+    },
+    "domain": "general",
+    "underlyingModels": [],
+    "access": "ga",
+    "pricing": {
+      "plan": "Pro from $20/mo",
+      "notes": "Free ($0, 300 daily refresh credits); Pro from $20/mo (4,000 credits) or $40/mo (8,000 credits); Team from $20/seat/mo; 17% off annual. Cloud Computer add-on $30 or $50/mo."
+    },
+    "notes": "releaseDate is Manus 2.0 (2026-09-28, post dated 'Monday, September 28', footer 2026). Original Manus launched March 2025 per Manus's own GAIA page (exact day not confirmed on a primary page). Not notable: Manus' GAIA SOTA claim (March 2025) compared against figures from OpenAI's blog, not a placement on the official GAIA leaderboard; no 2.0 benchmarks. Developer company left as 'manus' rather than 'meta': Meta acquired Manus 2025-12-29, but Manus's 2026-08-11 note says it will soon return to operating independently for regulatory reasons — if Maia counts Meta ownership as 'frontier-lab developer', flip notable. No underlying LLM named."
+  },
+  {
+    "id": "meta-muse",
+    "name": "Muse",
+    "company": "meta",
+    "releaseDate": "2026-09-08",
+    "notable": true,
+    "description": "Meta's personal AI agent that proactively works toward a user's goals on a dedicated per-user virtual machine, reachable in the Muse app, muse.ai or WhatsApp.",
+    "strengths": [
+      "Dedicated virtual machine per person",
+      "Message it in the Muse app or directly in WhatsApp",
+      "Free for most use, per Meta"
+    ],
+    "weaknesses": [
+      "US only at launch",
+      "Meta states the architecture does not prevent Meta from accessing data when necessary to operate the service"
+    ],
+    "links": {
+      "official": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+      "docs": null
+    },
+    "domain": "general",
+    "underlyingModels": [],
+    "access": "ga",
+    "pricing": {
+      "plan": null,
+      "notes": "'Free for most of what people need, with subscription plans for people who want to do more' — no plan names or prices published."
+    },
+    "notes": "Notable: frontier-lab developer (Meta). Meta says Muse runs on 'Muse Spark' without a version number, so it is not mapped to a specific muse-spark-1-x id. Meta's 2026-10-12 Muse Wonder post says Muse Wonder 'will soon power experiences in Muse', rolling out first to subscribers — once confirmed live, muse-wonder could be added. Announcement updated 2026-09-30. Separate from the July 2026 Meta AI app task features (Muse Spark 1.1)."
+  },
+  {
+    "id": "grok-bot",
+    "name": "Grok Bot",
+    "company": "xai",
+    "releaseDate": "2026-08-11",
+    "notable": true,
+    "description": "Always-on agents that each get a persistent cloud computer (browser, filesystem, terminal), sign into the user's tools and finish multi-step jobs; several Bots can run in parallel under a coordinating 'chief of staff' Bot.",
+    "strengths": [
+      "Persistent cloud computer keeps working with the laptop closed",
+      "Multi-Bot setups with role specialisation; can hand coding to Cursor Cloud Agents",
+      "Each user's work isolated in a Firecracker microVM; sensitive actions need approval"
+    ],
+    "weaknesses": [
+      "Beta",
+      "Model not disclosed",
+      "Separate Bots share one computer and are not a security boundary, per xAI FAQ"
+    ],
+    "links": {
+      "official": "https://x.ai/news/introducing-grok-bot",
+      "docs": "https://docs.x.ai/grok-bot/overview"
+    },
+    "domain": "general",
+    "underlyingModels": [],
+    "access": "beta",
+    "pricing": {
+      "plan": "Included with SuperGrok and Cursor Pro plans",
+      "notes": "Included with all SuperGrok tiers and Cursor Pro/Pro+/Ultra and Teams plans (expanded 2026-08-26). Weekly usage allowance; on-demand usage billed by model and token cost. Enterprise waitlist/rolling out."
+    },
+    "notes": "Notable: frontier-lab developer (xAI). Runs on Cursor's cloud infrastructure; onboarding and plans route through Cursor. No model named on any xAI page fetched."
+  },
+  {
+    "id": "claude-tag",
+    "name": "Claude Tag",
+    "company": "anthropic",
+    "releaseDate": "2026-06-23",
+    "notable": true,
+    "description": "Claude joins Slack channels as a team member; anyone in the channel can tag @Claude and delegate a task to it.",
+    "strengths": [
+      "Works inside existing Slack channels",
+      "Admins can cap token spend per org and per channel and review an activity log"
+    ],
+    "weaknesses": [
+      "Team and Enterprise only — not on Free, Pro or Max",
+      "Beta"
+    ],
+    "links": {
+      "official": "https://www.anthropic.com/news/introducing-claude-tag",
+      "docs": "https://support.claude.com/en/articles/15594475-what-is-claude-tag"
+    },
+    "domain": "general",
+    "underlyingModels": [
+      "claude-opus-4-8"
+    ],
+    "access": "beta",
+    "pricing": {
+      "plan": "Team/Enterprise, usage-based",
+      "notes": "No list price; token spend with admin caps; introductory launch credit for eligible orgs."
+    },
+    "notes": "Notable: frontier-lab developer (Anthropic). Launch post says 'Claude Tag works with Opus 4.8' — may have moved to newer models since; not verified. Replaced the legacy Claude in Slack app (switched 2026-08-03; legacy bot retired 2026-10-05 per Claude Code docs search snippet)."
+  },
+  {
+    "id": "microsoft-copilot-autopilot",
+    "name": "Copilot Autopilot",
+    "company": "microsoft",
+    "releaseDate": "2026-06-02",
+    "notable": false,
+    "description": "Persistent cloud agent in Microsoft Copilot that keeps working while the user is away — scheduling meetings, blocking time for deliverables, flagging risks; launched as Microsoft Scout and renamed Autopilot.",
+    "strengths": [
+      "Runs in the cloud and continues when the user is away",
+      "Built on OpenClaw open-source technology (per Scout launch post)"
+    ],
+    "weaknesses": [
+      "Private preview only",
+      "No plans, prices or model disclosed"
+    ],
+    "links": {
+      "official": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+      "docs": null
+    },
+    "domain": "general",
+    "underlyingModels": [],
+    "access": "waitlist",
+    "pricing": {
+      "plan": "Usage-based",
+      "notes": "Microsoft says Cowork, Code and Autopilot run on usage-based billing; no rates published."
+    },
+    "notes": "Not notable: Microsoft is not in the frontier-lab list and no benchmark published. Launched 2026-06-02 as 'Microsoft Scout' (experimental, Frontier program + select private-preview customers); renamed Autopilot in the 2026-09-25 'new Copilot' announcement, which says it is 'expanding to private preview at the end of the month'. Mapped to 'waitlist' as the closest schema value for private preview."
+  },
+  {
+    "id": "minimax-mavis",
+    "name": "Mavis (MiniMax Agent)",
+    "company": "minimax",
+    "releaseDate": "2026-05-27",
+    "notable": false,
+    "description": "MiniMax's general agent, renamed Mavis in May 2026, adding Agent Teams: parallel Leader, Worker and Verifier agents that collaborate on long-running tasks in the desktop app.",
+    "strengths": [
+      "Agent Teams with planner/worker/verifier roles",
+      "One subscription shares credits between the Agent and MiniMax API (Token Plan)"
+    ],
+    "weaknesses": [
+      "Model powering Mavis not disclosed",
+      "Pricing tiers inconsistent across MiniMax's own pages"
+    ],
+    "links": {
+      "official": "https://agent.minimax.io/",
+      "docs": null
+    },
+    "domain": "general",
+    "underlyingModels": [],
+    "access": "ga",
+    "pricing": {
+      "plan": null,
+      "notes": "Agent Plan and Token Plan merged into one subscription. Token Plan docs list Plus $22, Max $55, Ultra $132/mo; the M3 launch post gives $20/$50/$120 for the same tiers — conflict unresolved."
+    },
+    "notes": "Not notable: non-frontier developer, no vendor-published agent benchmark result. History: MiniMax's 2025-10-27 post says it 'launched our M2-powered Agent product in China and upgraded the overseas version' (so an earlier MiniMax Agent existed; its first launch date not confirmed). releaseDate is the Mavis rename/upgrade. Open-source release planned alongside MiniMax M3."
+  },
+  {
+    "id": "gemini-spark",
+    "name": "Gemini Spark (Tasks)",
+    "company": "google",
+    "releaseDate": "2026-05-19",
+    "notable": true,
+    "description": "Google's 24/7 cloud-based personal agent in the Gemini app that runs multi-step, scheduled and Workspace-connected tasks under the user's direction; Google's help page now calls it Tasks.",
+    "strengths": [
+      "Keeps working with the phone locked or laptop closed",
+      "Workspace actions plus connected apps (Canva, Instacart, OpenTable, Dropbox, Zillow) and custom MCP servers",
+      "Can drive Chrome auto browse from desktop Chrome"
+    ],
+    "weaknesses": [
+      "Requires Google AI Pro or Ultra; 18+",
+      "Not available in EEA, UK, Switzerland, Nigeria"
+    ],
+    "links": {
+      "official": "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/",
+      "docs": "https://support.google.com/gemini/answer/17094507"
+    },
+    "domain": "general",
+    "underlyingModels": [
+      "gemini-3-7-flash"
+    ],
+    "access": "ga",
+    "pricing": {
+      "plan": "Google AI Pro or Ultra subscription",
+      "notes": "Launched as beta for US Ultra; US Pro added 2026-07-16; Ultra expanded to all Gemini languages 2026-07-14."
+    },
+    "notes": "Notable: frontier-lab developer (Google). Launched 2026-05-19 running 'on Gemini 3.5' with the Antigravity harness; Google's 2026-08-13 Gemini 3.7 Flash post says Spark 'will be using Gemini 3.7 Flash starting today'. The current Gemini help page heads it 'Gemini Spark (now called Task)' and says 'Since May, we've been testing Spark in beta' — access set to 'ga' on that basis, but Google has not published a rename/GA announcement; the 'What's new for Gemini Spark' page (to 2026-07-17) does not mention a rename. Help page also says the user can change Gemini model from the model menu. Relationship to the Nov 2025 'Gemini Agent' (agent mode) is not stated anywhere I found."
+  },
+  {
+    "id": "replit-agent",
+    "name": "Replit Agent 4",
+    "company": "replit",
+    "releaseDate": "2026-03-11",
+    "notable": false,
+    "description": "Replit's app-building agent that creates and deploys web and mobile apps, decks and data apps from prompts, with a design canvas and parallel agents.",
+    "strengths": [
+      "Design canvas and code in one environment",
+      "Parallel agents on separate parts of a project (Pro/Enterprise)",
+      "Free Mode for no-cost everyday agent work"
+    ],
+    "weaknesses": [
+      "Paid modes use effort-based pricing that varies by request complexity",
+      "Models not named — only 'powerful' / 'best frontier' tiers"
+    ],
+    "links": {
+      "official": "https://replit.com/agent4",
+      "docs": "https://docs.replit.com/replitai/agent"
+    },
+    "domain": "coding",
+    "underlyingModels": [],
+    "access": "ga",
+    "pricing": {
+      "plan": "Core $20/mo; Pro $100/mo",
+      "notes": "Core $18/mo and Pro $90/mo billed annually; Enterprise custom. Agent modes: Free, Auto, Power, Max."
+    },
+    "notes": "Not notable: non-frontier developer, no benchmark placement. Original Replit Agent launched in Sept 2024 (the 2024-09-16 'Introducing Replit Agent' post says 'last week'); Agent v2 early access 2025-02-25; Agent 4 2026-03-11. releaseDate is Agent 4 because the original day is not stated on a primary page. Vendor picks models ('Auto' does automatic model selection)."
+  },
+  {
+    "id": "perplexity-computer",
+    "name": "Perplexity Computer",
+    "company": "perplexity",
+    "releaseDate": "2026-02-25",
+    "notable": false,
+    "description": "Perplexity's general-purpose 'digital worker' that breaks projects into subtasks and delegates them to specialised sub-agents across 20+ models, covering research, design, code and deployment.",
+    "strengths": [
+      "Orchestrates many models in parallel with a lead reasoning model",
+      "Available in web, iOS, Slack and email"
+    ],
+    "weaknesses": [
+      "Credit-based (Max launched with 10,000 credits/mo)",
+      "Model lineup changes frequently"
+    ],
+    "links": {
+      "official": "https://www.perplexity.ai/hub/blog/introducing-perplexity-computer",
+      "docs": null
+    },
+    "domain": "general",
+    "underlyingModels": [
+      "gpt-5-6-terra"
+    ],
+    "access": "ga",
+    "pricing": {
+      "plan": "Perplexity Pro or Max",
+      "notes": "Launched for Max; extended to all Pro subscribers on web and iOS in March 2026. Credit-based usage."
+    },
+    "notes": "Not notable: non-frontier developer; launch post cites only Perplexity's own DRACO benchmark. Borderline harness: users can choose the orchestrator model and prompt it to use any of the 20+ models for subagents. underlyingModels reflects the 2026-08-24 changelog: GPT-5.6 Terra is the default subagent model (also selectable as orchestrator); GPT-5.6 Luna (gpt-5-6-luna) handles scheduled automations. Launch orchestrator was Opus 4.6 (not in models.json); GPT-5.5 became default orchestrator in May 2026."
+  },
+  {
+    "id": "chrome-auto-browse",
+    "name": "Gemini in Chrome auto browse",
+    "company": "google",
+    "releaseDate": "2026-01-28",
+    "notable": true,
+    "description": "Agentic mode of Gemini in Chrome that carries out multi-step web chores (shopping, bookings, forms) in the user's browser, pausing for confirmation before purchases or posts.",
+    "strengths": [
+      "Built on Gemini 3 per Google",
+      "Pauses for confirmation on purchases and social posts",
+      "Up to 200 tasks/day on AI Ultra"
+    ],
+    "weaknesses": [
+      "US only, 18+, English, personal accounts only",
+      "Pro capped at 20 tasks/day",
+      "Desktop-first; preview rollout"
+    ],
+    "links": {
+      "official": "https://blog.google/products-and-platforms/products/chrome/gemini-3-auto-browse/",
+      "docs": "https://support.google.com/chrome/answer/16821166"
+    },
+    "domain": "browser",
+    "underlyingModels": [],
+    "access": "beta",
+    "pricing": {
+      "plan": "Google AI Pro or Ultra subscription",
+      "notes": "Pro: up to 20 requests/day; Ultra: up to 200/day."
+    },
+    "notes": "Notable: frontier-lab developer (Google). releaseDate 2026-01-28 comes from news coverage — the Google blog post itself shows no date (one outlet implies Jan 29); treat the day as approximate. Google says 'Built on Gemini 3' without a variant, so not mapped to a models.json id. Footnote labels it 'rolling out in preview'. Later expanded to Android (US) and India per Google blog. Project Mariner is no longer listed among AI Ultra benefits; auto browse appears to be Google's current browser agent."
+  },
+  {
+    "id": "qwen-task-assistant",
+    "name": "Qwen App Task Assistant",
+    "company": "alibaba",
+    "releaseDate": "2026-01-15",
+    "notable": false,
+    "description": "Agentic mode in Alibaba's Qwen app that completes end-to-end tasks: phoning restaurants, booking multi-stop travel, batch-processing up to 100 documents, research and lightweight web apps.",
+    "strengths": [
+      "Makes real phone calls and returns transcripts",
+      "Integrated with Alibaba ecosystem services (food, payments, travel)",
+      "Free, per Alibaba"
+    ],
+    "weaknesses": [
+      "Invite-only beta",
+      "China-focused; broader agentic features in public testing in China"
+    ],
+    "links": {
+      "official": "https://www.alibabagroup.com/document-1948497434959151104",
+      "docs": null
+    },
+    "domain": "general",
+    "underlyingModels": [],
+    "access": "waitlist",
+    "pricing": {
+      "plan": "Free",
+      "notes": "Alibaba says it is making these capabilities freely available."
+    },
+    "notes": "Not notable: Alibaba is not in the frontier-lab list for this rule; no agent benchmark published. Powered by 'Alibaba's most advanced Qwen3 foundation model' — no version, so not mapped. Status after January 2026 not confirmed on a primary page (June/Aug 2026 ecosystem openings reported by Caixin only)."
+  },
+  {
+    "id": "claude-cowork",
+    "name": "Claude Cowork",
+    "company": "anthropic",
+    "releaseDate": "2026-01-12",
+    "notable": true,
+    "description": "Anthropic's agent mode for knowledge work: hand Claude a multi-step task across files, apps and the browser and review the finished output; being folded into a single Claude experience from 2026-09-16.",
+    "strengths": [
+      "Desktop app works with local folders and apps; computer use (research preview)",
+      "Scheduled and on-demand tasks that run in the cloud with no device online",
+      "Web, mobile and Chrome side panel surfaces"
+    ],
+    "weaknesses": [
+      "Consumes plan limits faster than chat",
+      "Web/mobile still beta; cloud sessions beta on Team/Enterprise"
+    ],
+    "links": {
+      "official": "https://claude.com/product/cowork",
+      "docs": "https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork"
+    },
+    "domain": "general",
+    "underlyingModels": [],
+    "access": "ga",
+    "pricing": {
+      "plan": "Pro $20/mo",
+      "notes": "Pro $20/mo ($17/mo annual); Max 5x $100/mo; Max 20x $200/mo; Team $20/seat/mo; Enterprise contact sales."
+    },
+    "notes": "Notable: frontier-lab developer (Anthropic). Launched 2026-01-12 (Max, macOS) as a research preview; GA on macOS and Windows 2026-04-09; web and mobile 2026-07-07. Per the 2026-09-16 release note and product page, Cowork is 'now simply Claude' — its capabilities available from any conversation, rolling out to Pro and Max. Product page does not name a model (user can pick among Claude models)."
+  },
+  {
+    "id": "kimi-agent",
+    "name": "Kimi Agent",
+    "company": "moonshot",
+    "releaseDate": "2025-09-26",
+    "notable": false,
+    "description": "Moonshot's agent mode in Kimi (launched as 'OK Computer') that plans and completes multi-step work with 20+ built-in tools, plus an Agent Swarm mode running many sub-agents in parallel.",
+    "strengths": [
+      "20+ built-in tools; end-to-end from research to front-end build",
+      "Agent Swarm (K2.6 allowed up to 300 sub-agents)",
+      "Runs on open-weight Kimi K3"
+    ],
+    "weaknesses": [
+      "Credit-metered; plan naming differs by region and some plans are legacy"
+    ],
+    "links": {
+      "official": "https://www.kimi.com/agent",
+      "docs": "https://www.kimi.com/en/help/agent/agent-overview"
+    },
+    "domain": "general",
+    "underlyingModels": [
+      "kimi-k3"
+    ],
+    "access": "ga",
+    "pricing": {
+      "plan": "Moderato $19/mo",
+      "notes": "International pricing page lists Moderato/Allegretto/Allegro/Vivace at $19/$39/$99/$199 per month (agent credits 60/150/360/720 per help center), but another help page calls these legacy plans; China plans Go/Plus/Pro/Max ¥49/¥99/¥199/¥699."
+    },
+    "notes": "Not notable: no vendor-published agent-product benchmark placement found (Kimi's BrowseComp-type results are model results, not this product). Agent overview says K3 (2026-07-16) powers Agent Swarm and is selectable in the app; a forum post reports automation runs use K2.6 Agent — not a primary source."
+  },
+  {
+    "id": "claude-in-chrome",
+    "name": "Claude in Chrome",
+    "company": "anthropic",
+    "releaseDate": "2025-08-25",
+    "notable": true,
+    "description": "Chrome extension that lets Claude navigate sites, fill forms and complete tasks autonomously in the user's browser, with a safety classifier checking each action.",
+    "strengths": [
+      "GA on every paid Claude plan",
+      "Prompt-injection attack success 0% for Sonnet 5 / Opus 5 / Mythos 5 with probes and classifier (0.3% for Fable 5), per Anthropic",
+      "Admin controls with domain allow/blocklists"
+    ],
+    "weaknesses": [
+      "Google Chrome only — not other Chromium browsers or mobile",
+      "Uses plan limits faster than chat"
+    ],
+    "links": {
+      "official": "https://claude.com/claude-in-chrome",
+      "docs": "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome"
+    },
+    "domain": "browser",
+    "underlyingModels": [],
+    "access": "ga",
+    "pricing": {
+      "plan": "Pro $20/mo",
+      "notes": "All paid plans (Pro, Max, Team, Enterprise). Enterprise admin-controlled. Side panel runs as a Cowork session on Max/Team, rolling out to Pro."
+    },
+    "notes": "Notable: frontier-lab developer (Anthropic). Pilot 2025-08-25 (1,000 Max users), beta for all Max 2025-11-24, Pro/Team/Enterprise 2025-12-18, GA 2026-08-26. GA post names several Claude models only in its prompt-injection evals, not as the model the product runs on, so underlyingModels left empty (user chooses the Claude model)."
+  },
+  {
+    "id": "jules",
+    "name": "Jules",
+    "company": "google",
+    "releaseDate": "2025-08-06",
+    "notable": true,
+    "description": "Google's asynchronous coding agent that clones a GitHub repo into a cloud VM, plans and makes changes, and opens pull requests.",
+    "strengths": [
+      "Auto-fixes CI failures on its own PRs",
+      "Planning Critic cut task failure rate 9.5% (Google)",
+      "MCP integrations and REST API; scheduled tasks"
+    ],
+    "weaknesses": [
+      "Paid tiers only for personal @gmail.com accounts",
+      "Free tier 15 tasks/day, 3 concurrent"
+    ],
+    "links": {
+      "official": "https://jules.google/",
+      "docs": "https://jules.google/docs/"
+    },
+    "domain": "coding",
+    "underlyingModels": [
+      "gemini-3-1-pro"
+    ],
+    "access": "ga",
+    "pricing": {
+      "plan": "Free; higher limits with Google AI Pro/Ultra",
+      "notes": "Free 15 tasks/day (3 concurrent); Pro 100/day (15); Ultra 300/day (60)."
+    },
+    "notes": "Notable: frontier-lab developer (Google). Out of public beta 2025-08-06 (public beta from Google I/O May 2025, day not confirmed). Changelog: Gemini 3 Flash base model for all tiers (2026-01-30, no models.json id); Gemini 3.1 Pro default for Pro users (2026-03-09). Limits page still lists older models (Gemini 2.5 Pro / 3 Pro) — stale. No 2026 changelog entry later than March found."
+  },
+  {
+    "id": "chatgpt-agent",
+    "name": "ChatGPT agent",
+    "company": "openai",
+    "releaseDate": "2025-07-17",
+    "notable": true,
+    "description": "Agent mode in ChatGPT that researches and acts using a visual browser, terminal, code interpreter and connected apps; absorbed the standalone Operator.",
+    "strengths": [
+      "Combines browser, terminal, code and app connectors in one agent",
+      "Typical tasks finish in 5–30 minutes",
+      "Can be scheduled"
+    ],
+    "weaknesses": [
+      "Paid plans only; runs count against monthly limits",
+      "Some sites blocked; Lockdown Mode disables it"
+    ],
+    "links": {
+      "official": "https://openai.com/index/introducing-chatgpt-agent/",
+      "docs": "https://help.openai.com/en/articles/11752874-chatgpt-agent"
+    },
+    "domain": "general",
+    "underlyingModels": [],
+    "access": "ga",
+    "pricing": {
+      "plan": "Plus $20/mo",
+      "notes": "Pro, Plus and Team at launch; Enterprise/Edu from 2025-08-08. Subject to rate limits per plan."
+    },
+    "notes": "Notable: frontier-lab developer (OpenAI). Launch facts from help.openai.com release notes via search snippets (openai.com/help.openai.com return 403 to direct fetch). The launch post is now marked outdated; no 2026 page names the model behind agent mode, so underlyingModels empty. Overlaps with the newer dots product; Atlas (browser with agent mode) is being retired with browser-agent capabilities moving into ChatGPT and Codex."
+  },
+  {
+    "id": "perplexity-comet-assistant",
+    "name": "Comet Assistant",
+    "company": "perplexity",
+    "releaseDate": "2025-07-09",
+    "notable": false,
+    "description": "The agent built into Perplexity's Comet browser that browses on the user's behalf, works across tabs and completes multi-step tasks, pausing for permission on logins and checkouts.",
+    "strengths": [
+      "Comet browser is free for everyone",
+      "Multi-tab tasks; Max users can run background assistants in parallel",
+      "Asks permission before high-stakes steps; passwords and payment data not accessible"
+    ],
+    "weaknesses": [
+      "Background assistants Max-only",
+      "Model defaults differ by plan and change often"
+    ],
+    "links": {
+      "official": "https://www.perplexity.ai/comet",
+      "docs": "https://www.perplexity.ai/help-center/comet/en"
+    },
+    "domain": "browser",
+    "underlyingModels": [
+      "claude-sonnet-4-6"
+    ],
+    "access": "ga",
+    "pricing": {
+      "plan": "Free (higher tiers on Pro/Max)",
+      "notes": "Comet free worldwide from 2025-10-02; Background Assistants Max-only. Comet Plus publisher content $5 standalone, included in Pro/Max."
+    },
+    "notes": "Not notable: non-frontier developer; only claim is an internal '23% better' test (2025-11-06 relaunch). releaseDate is the Comet launch for Max subscribers (2025-07-09). underlyingModels from the 2026-02-20 changelog: Sonnet 4.6 default for Pro (Opus 4.6 default for Max — not in models.json); may be superseded. Max users can choose the agent model (borderline harness)."
+  },
+  {
+    "id": "lovable",
+    "name": "Lovable",
+    "company": "lovable",
+    "releaseDate": "2025-06-30",
+    "notable": false,
+    "description": "AI app builder whose agent (Build mode, formerly Agent mode) plans, writes and deploys full-stack web apps from chat; Lovable chooses the models.",
+    "strengths": [
+      "Vendor-selected models; incorporates Claude Opus 5 since 2026-07-30",
+      "Plan mode at 1 credit per message",
+      "Free plan with daily build credits"
+    ],
+    "weaknesses": [
+      "Credit-based; Default Mode prompts 0.5–1.7 credits each",
+      "From 2026-09-09 may train on Free and Pro customer data"
+    ],
+    "links": {
+      "official": "https://lovable.dev/",
+      "docs": "https://docs.lovable.dev/"
+    },
+    "domain": "coding",
+    "underlyingModels": [
+      "claude-opus-5"
+    ],
+    "access": "ga",
+    "pricing": {
+      "plan": null,
+      "notes": "Free, Pro, Business, Enterprise; priced by monthly credits. Dollar prices not visible on lovable.dev/pricing when fetched (third-party $25/$50 figures not used). Top-ups $15/50 credits (Pro), $30/50 (Business)."
+    },
+    "notes": "Not notable: non-frontier developer, no benchmark placement. releaseDate is Agent Mode beta rollout (from 2025-06-30); it became default for new users 2025-07-23 and legacy mode sunset 2025-09-01. Lovable the product predates agent mode. Changelog 2026-07-30: 'Lovable now incorporates Claude Opus 5' — not explicitly scoped to Build mode."
+  },
+  {
+    "id": "openai-codex-cloud",
+    "name": "Codex (cloud)",
+    "company": "openai",
+    "releaseDate": "2025-05-16",
+    "notable": true,
+    "description": "OpenAI's cloud software-engineering agent: runs many tasks in parallel, each in its own sandbox with the user's repo, and proposes pull requests.",
+    "strengths": [
+      "Parallel cloud tasks in isolated sandboxes",
+      "Available on web, CLI, IDE extension and iOS with one ChatGPT plan",
+      "Token-based credit billing since 2026-04-02"
+    ],
+    "weaknesses": [
+      "Not available on Free/Go or API-key accounts",
+      "OpenAI estimates ~$100–200 per developer per month average Codex cost"
+    ],
+    "links": {
+      "official": "https://openai.com/codex/",
+      "docs": "https://learn.chatgpt.com/docs/pricing"
+    },
+    "domain": "coding",
+    "underlyingModels": [
+      "gpt-6-1-sol",
+      "gpt-6-luna"
+    ],
+    "access": "ga",
+    "pricing": {
+      "plan": "Plus $20/mo",
+      "notes": "Plus $20; Pro $100/$200/$500; Business $20–25/user/mo; Enterprise/Edu contact sales. Business Codex seats credit-based."
+    },
+    "notes": "Notable: frontier-lab developer (OpenAI). Research preview 2025-05-16 on codex-1 (o3-based). underlyingModels are the models the current pricing page lists for Plus (GPT-6.1 Sol, GPT-6 Luna); GPT-6 Astra and others also listed for higher plans; GPT-5.5 retires from Codex 2026-10-14. Users choose among OpenAI models (vendor-only lineup). Codex CLI is a separate harness entry."
+  },
+  {
+    "id": "genspark-super-agent",
+    "name": "Genspark Super Agent",
+    "company": "genspark",
+    "releaseDate": "2025-04-02",
+    "notable": false,
+    "description": "Genspark's general-purpose 'mixture-of-agents' system that routes tasks across many models, tools and datasets to produce research, slides, docs, media and more.",
+    "strengths": [
+      "Standard-mode Super Agent tasks covered by a weekly Free Quota on Plus/Pro",
+      "Calls many third-party models with in-house tools"
+    ],
+    "weaknesses": [
+      "Pro is $249.99/mo monthly",
+      "Credits don't roll over"
+    ],
+    "links": {
+      "official": "https://www.genspark.ai/",
+      "docs": "https://www.genspark.ai/helpcenter/super-agent"
+    },
+    "domain": "general",
+    "underlyingModels": [],
+    "access": "ga",
+    "pricing": {
+      "plan": "Plus $24.99/mo",
+      "notes": "Plus $24.99/mo ($19.99/mo annual), 10,000 credits; Pro $249.99/mo ($199.99 annual), 125,000 credits; Team $35/seat/mo; Enterprise custom; Free 100 daily credits."
+    },
+    "notes": "Not notable: launch blog lists GAIA but gives no score and no official-leaderboard placement was found. Launch date from Genspark blog index (blog page itself returned 403). Help center names no specific models for Super Agent; marketing pages claim '80+ models' — not used."
+  },
+  {
+    "id": "devin",
+    "name": "Devin",
+    "company": "cognition",
+    "releaseDate": "2024-12-10",
+    "notable": false,
+    "description": "Cognition's autonomous cloud software engineer that takes tickets from Slack, Linear or the web app and works in its own environment to produce pull requests.",
+    "strengths": [
+      "Ultra mode pairs Claude Fable 5.1 and GPT-6 Astra",
+      "Integrations with Slack, Linear and MCP",
+      "Pro tier from $20/mo"
+    ],
+    "weaknesses": [
+      "Quota-limited; Max needed for no daily cap",
+      "Sleeping sessions now resumable for 14 days (down from 30)"
+    ],
+    "links": {
+      "official": "https://devin.ai/",
+      "docs": "https://docs.devin.ai/"
+    },
+    "domain": "coding",
+    "underlyingModels": [
+      "claude-fable-5-1",
+      "gpt-6-astra",
+      "claude-opus-5"
+    ],
+    "access": "ga",
+    "pricing": {
+      "plan": "Pro $20/mo",
+      "notes": "Free (limited); Pro $20/mo; Max $200/mo; Teams $80/mo minimum with $40/mo full seats. Quotas shared with Devin CLI and Devin Desktop; on-demand credits beyond."
+    },
+    "notes": "Not notable: non-frontier developer; no official-leaderboard top-3 placement confirmed. GA 2024-12-10 (announced March 2024). Models per 2026-09-23 release notes: Ultra = Fable 5.1 + GPT-6 Astra; Normal lists Fable 5.1, Opus 5, GPT-6 Astra. Cognition's own SWE-2 is in research preview in the agent selector (not in models.json). Devin Desktop (ex-Windsurf, 2026-06-02) is an IDE where users pick models — harness, not covered here."
+  }
+]

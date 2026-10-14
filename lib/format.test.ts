@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { formatSpeed } from "./format.ts";
+import { formatSpeed, resolveColor } from "./format.ts";
 
 test("formats both figures when present", () => {
   assert.equal(formatSpeed(120.4, 0.42), "120 tok/s · 0.42s to first answer token");
@@ -21,4 +21,10 @@ test("drops false precision on long reasoning latencies", () => {
   assert.equal(formatSpeed(83, 202.22), "83 tok/s · 202s to first answer token");
   assert.equal(formatSpeed(null, 9.99), "9.99s to first answer token");
   assert.equal(formatSpeed(null, 10.4), "10s to first answer token");
+});
+
+test("a company without a palette slot renders neutral grey", () => {
+  assert.equal(resolveColor(null), "#8A93A6");
+  assert.equal(resolveColor(undefined), "#8A93A6");
+  assert.equal(resolveColor("#D97757"), "#D97757");
 });

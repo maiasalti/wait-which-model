@@ -15,7 +15,7 @@ import {
   useXAxisScale,
   useYAxisScale,
 } from "recharts";
-import { activeBenchmarks, benchmarkByKey, companies, companyColor, companyName, formatDate, formatPrice } from "@/lib/data";
+import { activeBenchmarks, benchmarkByKey, companyColor, modelCompanies, companyName, formatDate, formatPrice } from "@/lib/data";
 import { hasActiveHighlight, isHighlighted } from "@/lib/filter";
 import { LOGO_PATHS } from "@/lib/logos";
 import { CompanyLogo } from "./CompanyLogo";
@@ -217,7 +217,7 @@ function buildSeries(
   x: (m: Model) => number | null,
   y: (m: Model) => number | null
 ) {
-  return companies
+  return modelCompanies
     .map((c) => ({
       company: c,
       points: shown
@@ -269,7 +269,7 @@ function ChartTooltip({
 }
 
 function CompanyLegend({ shown }: { shown: Model[] }) {
-  const present = companies.filter((c) => shown.some((m) => m.company === c.id));
+  const present = modelCompanies.filter((c) => shown.some((m) => m.company === c.id));
   return (
     <div className="flex flex-wrap gap-x-3 gap-y-1 px-1 pt-2">
       {present.map((c) => (
@@ -363,7 +363,7 @@ export function TimelineScatter({
               name={s.company.name}
               data={s.points}
               isAnimationActive={false}
-              shape={logoShape(s.company.color, LOGO_PATHS[s.company.id]?.path, dimming)}
+              shape={logoShape(companyColor(s.company.id), LOGO_PATHS[s.company.id]?.path, dimming)}
             />
           ))}
           {showLabels && <LabelLayer points={all} dimming={dimming} />}
@@ -439,7 +439,7 @@ export function CostPerfScatter({
               name={s.company.name}
               data={s.points}
               isAnimationActive={false}
-              shape={logoShape(s.company.color, LOGO_PATHS[s.company.id]?.path, dimming)}
+              shape={logoShape(companyColor(s.company.id), LOGO_PATHS[s.company.id]?.path, dimming)}
             />
           ))}
           {showLabels && <LabelLayer points={all} dimming={dimming} />}
