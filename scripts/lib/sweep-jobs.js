@@ -4,18 +4,25 @@
  * Cadence: protocols/DAILY_SWEEP_PROTOCOL.md.
  */
 
-// One directory per weekday, each scanned weekly (spec 2026-10-09).
-const ROTATION = { 1: "image-models", 2: "video-models", 3: "agents", 4: "harnesses", 5: "features" };
+// Each directory is scanned once a week (spec 2026-10-09). World models joined
+// later and share Wednesday, the one weekday with no stats or news job.
+const ROTATION = {
+  1: ["image-models"],
+  2: ["video-models"],
+  3: ["agents", "world-models"],
+  4: ["harnesses"],
+  5: ["features"],
+};
 
 // A directory's job switches on in the stage that ships its protocol and data.
-const ENABLED_DIRECTORY_JOBS = [];
+const ENABLED_DIRECTORY_JOBS = ["image-models", "video-models", "world-models", "harnesses", "agents", "features"];
 
 function jobsFor(dow, enabled) {
   if (dow < 1 || dow > 5) return [];
   const jobs = ["health", "models"];
   if (dow === 2 || dow === 4) jobs.push("stats");
   if (dow === 1) jobs.push("news");
-  if (enabled.includes(ROTATION[dow])) jobs.push(ROTATION[dow]);
+  for (const dir of ROTATION[dow]) if (enabled.includes(dir)) jobs.push(dir);
   return jobs;
 }
 

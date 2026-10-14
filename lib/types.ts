@@ -164,6 +164,16 @@ export interface NewsItem {
   modelIds: string[];
   sourceName: string;
   sourceUrl: string;
+  /** Directory entries the item is about, beside modelIds (which stays
+   *  models-only so nothing that reads it breaks). */
+  refs?: NewsRef[];
+}
+
+export type NewsRefType = "image-model" | "video-model" | "world-model" | "harness" | "agent" | "feature";
+
+export interface NewsRef {
+  type: NewsRefType;
+  id: string;
 }
 
 export type TimeWindow = "3m" | "6m" | "1y" | "2y" | "3y" | "all";
@@ -205,3 +215,121 @@ export type Highlight =
   | { kind: "none" }
   | { kind: "models"; ids: string[] }
   | { kind: "company"; companyId: string };
+
+// ── Directory entries (data/<kind>.json). None of these feed frontier status,
+// reigns, Compare or the recommender; they are catalog records only.
+
+export interface EntryLinks {
+  official: string;
+  docs: string | null;
+}
+
+interface EntryBase {
+  id: string;
+  name: string;
+  company: string;
+  description: string;
+  strengths: string[];
+  weaknesses: string[];
+  links: EntryLinks;
+  notes: string;
+}
+
+interface ReleasedEntry extends EntryBase {
+  releaseDate: string; // YYYY-MM-DD
+  /** Top 10 on the type's main leaderboard, or a frontier lab's (see the protocol). */
+  notable: boolean;
+}
+
+export type ImageCapability = "text-to-image" | "editing" | "inpainting" | "text-rendering" | "reference-images";
+
+export interface ImageModelEntry extends ReleasedEntry {
+  pricing: { perImageUsd: number | null; notes: string };
+  maxResolution: string | null;
+  capabilities: ImageCapability[];
+  openWeights: boolean;
+  license: License | null;
+  apiIds: ApiId[];
+  scores: { aaImageArenaElo: number | null; lmarenaImageElo: number | null };
+}
+
+export type VideoCapability = "text-to-video" | "image-to-video" | "video-editing" | "extension";
+
+export interface VideoModelEntry extends ReleasedEntry {
+  pricing: { perSecondUsd: number | null; notes: string };
+  maxDurationSec: number | null;
+  maxResolution: string | null;
+  nativeAudio: boolean | null;
+  capabilities: VideoCapability[];
+  openWeights: boolean;
+  license: License | null;
+  apiIds: ApiId[];
+  scores: { aaVideoArenaElo: number | null; lmarenaVideoElo: number | null };
+}
+
+export type WorldModelAccess = "ga" | "beta" | "waitlist" | "research-preview" | "research-only";
+
+export interface WorldModelEntry extends ReleasedEntry {
+  /** The user can move or act inside the world in real time. */
+  interactive: boolean | null;
+  inputs: ("text" | "image" | "video" | "actions")[];
+  output: "video-stream" | "3d-scene" | "simulation-video";
+  /** How long one world/session stays coherent. */
+  maxSessionSec: number | null;
+  maxResolution: string | null;
+  fps: number | null;
+  access: WorldModelAccess;
+  openWeights: boolean;
+  license: License | null;
+  apiIds: ApiId[];
+  pricing: { notes: string };
+}
+
+export interface HarnessScore {
+  benchmark: "terminalBench";
+  /** A harness score is meaningless without the model it ran, so this is required. */
+  modelId: string;
+  score: number;
+}
+
+export interface HarnessEntry extends ReleasedEntry {
+  interface: ("cli" | "ide" | "desktop" | "web")[];
+  openSource: boolean;
+  license: License | null;
+  repo: string | null;
+  /** "any" model, the vendor's own models, or specific models.json ids. */
+  supportedModels: "any" | "vendor" | string[];
+  pricing: { model: "free" | "subscription" | "byo-key" | "usage"; notes: string };
+  scores: HarnessScore[];
+}
+
+export type Access = "ga" | "beta" | "waitlist";
+
+export interface AgentEntry extends ReleasedEntry {
+  domain: "coding" | "browser" | "research" | "general";
+  /** models.json ids, only where the vendor names them. */
+  underlyingModels: string[];
+  access: Access;
+  pricing: { plan: string | null; notes: string };
+}
+
+export interface FeatureEntry extends EntryBase {
+  launchDate: string; // YYYY-MM-DD
+  surface: "app" | "api" | "dev-tool" | "hardware";
+  availability: "ga" | "beta" | "preview" | "waitlist" | "region-limited";
+  plans: string[];
+  modelIds: string[];
+  retiredDate: string | null;
+}
+
+export interface DirectoryEntries {
+  "image-models": ImageModelEntry;
+  "video-models": VideoModelEntry;
+  "world-models": WorldModelEntry;
+  harnesses: HarnessEntry;
+  agents: AgentEntry;
+  features: FeatureEntry;
+}
+
+export type EntryKind = keyof DirectoryEntries;
+export type AnyEntry = DirectoryEntries[EntryKind];

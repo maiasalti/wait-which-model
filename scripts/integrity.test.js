@@ -14,6 +14,9 @@ const base = () => ({
   directory: {},
 });
 
+// A directory entry that passes every per-entry rule, for tests that break one.
+const entry = (extra) => ({ releaseDate: "2026-01-01", notable: false, links: { official: "https://x" }, ...extra });
+
 test("clean data passes", () => assert.deepEqual(checkData(base()), []));
 
 test("missing directory files are fine (none exist until their stage ships)", () => {
@@ -76,7 +79,7 @@ test("features are limited to the five frontier labs", () => {
 
 test("news refs must resolve to their type's file", () => {
   const d = base();
-  d.directory.agents = [{ id: "a1", company: "anthropic", underlyingModels: [] }];
+  d.directory.agents = [entry({ id: "a1", company: "anthropic", underlyingModels: [] })];
   d.news[0].refs = [{ type: "agent", id: "a1" }, { type: "agent", id: "a2" }, { type: "widget", id: "x" }];
   const errs = checkData(d).join("\n");
   assert.match(errs, /news n1: unknown agent a2/);
@@ -98,4 +101,22 @@ test("a news item without a modelIds array is caught (model pages call .includes
   const d = base();
   d.news.push({ id: "n2" });
   assert.match(checkData(d).join("\n"), /news n2: modelIds missing/);
+});
+
+test("directory entries need a date, a notable flag, an official link, and no leftover sources", () => {
+  const d = base();
+  d.directory["image-models"] = [
+    { id: "i1", company: "anthropic", releaseDate: "Oct 2026", links: {}, sources: [], scores: { aaImageArenaElo: 1100 } },
+  ];
+  d.directory.features = [entry({ id: "f1", company: "anthropic", modelIds: [], releaseDate: undefined, launchDate: "2026-02-01" })];
+  const errs = checkData(d).join("\n");
+  for (const s of ["i1: releaseDate is not YYYY-MM-DD", "i1: notable must be a boolean", "i1: links.official missing", 'i1: research-only "sources"'])
+    assert.ok(errs.includes(s), s);
+  assert.doesNotMatch(errs, /f1/);
+});
+
+test("harness scores must name their model", () => {
+  const d = base();
+  d.directory.harnesses = [entry({ id: "h1", company: "anthropic", supportedModels: "any", scores: [{ benchmark: "terminalBench", score: 50 }] })];
+  assert.match(checkData(d).join("\n"), /h1: score without modelId/);
 });

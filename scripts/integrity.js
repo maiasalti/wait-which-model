@@ -9,12 +9,14 @@
 const fs = require("fs");
 const path = require("path");
 
+const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 const ALLOWED_FEATURE_COMPANIES = ["anthropic", "openai", "google", "xai", "meta"];
 
 // Directory file key → the `type` news refs use for it.
 const DIRECTORY_FILES = {
   "image-models": "image-model",
   "video-models": "video-model",
+  "world-models": "world-model",
   harnesses: "harness",
   agents: "agent",
   features: "feature",
@@ -75,8 +77,16 @@ function checkData({ models, news, companies, reigns, directory = {} }) {
         ...(e.modelIds ?? []),
         ...(e.underlyingModels ?? []),
         ...(Array.isArray(e.supportedModels) ? e.supportedModels : []),
-        ...(e.scores ?? []).map((s) => s.modelId).filter(Boolean),
+        // Harness scores are a list of pairings; image/video scores are an object of Elos.
+        ...(Array.isArray(e.scores) ? e.scores.map((s) => s.modelId) : []),
       ];
+      if (Array.isArray(e.scores))
+        for (const s of e.scores) if (!s.modelId) err(`${file} ${e.id}: score without modelId`);
+      const dateField = file === "features" ? "launchDate" : "releaseDate";
+      if (!ISO_DATE.test(e[dateField] ?? "")) err(`${file} ${e.id}: ${dateField} is not YYYY-MM-DD`);
+      if (file !== "features" && typeof e.notable !== "boolean") err(`${file} ${e.id}: notable must be a boolean`);
+      if (!e.links?.official) err(`${file} ${e.id}: links.official missing`);
+      if ("sources" in e) err(`${file} ${e.id}: research-only "sources" field left in`);
       for (const id of refs) if (!modelIds.has(id)) err(`${file} ${e.id}: unknown model ${id}`);
       if (e.openWeights === false && e.license) err(`${file} ${e.id}: closed entry with license`);
     }

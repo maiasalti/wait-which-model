@@ -1,8 +1,8 @@
 ---
 type: Design Spec
 title: Directory expansion
-description: Design for turning the Models Directory into a "Directory" nav group with six child tabs (Models, Image models,
-  Video models, Harnesses, Agents, Frontier Features), each backed by its own data file, protocol section and weekly sweep slot.
+description: Design for turning the Models Directory into a "Directory" nav group with seven child tabs (Models, Image models,
+  Video models, World models, Harnesses, Agents, Frontier Features), each backed by its own data file, protocol section and weekly sweep slot.
 tags:
 - docs
 - superpowers
@@ -13,6 +13,17 @@ generated:
 ---
 
 # Directory expansion
+
+> **Amendment 2026-10-14: World models.** Maia added world models as a seventh tab, between
+> Video models and Harnesses: `data/world-models.json`, `/world-models`, `/world-models/[id]`.
+> Fields: `interactive`, `inputs[]` (text, image, video, actions), `output` (video-stream,
+> 3d-scene, simulation-video), `maxSessionSec`, `maxResolution`, `fps`, `access` (ga, beta,
+> waitlist, research-preview, research-only), `openWeights`, `license`, `apiIds`,
+> `pricing.notes`. No shared leaderboard exists, so Notable clause 1 is "publicly usable"
+> (access ga or beta). Its sweep job shares Wednesday with agents. News refs type:
+> `world-model`. Stages 2–4 then shipped together in one PR rather than three, since the
+> generic components serve every type alike; the style guide is a section of
+> `DIRECTORY_RELEASE_PROTOCOL.md` rather than its own file.
 
 **Date:** 2026-10-09
 **Status:** approved in conversation, awaiting spec review

@@ -29,11 +29,11 @@ fire late on Monday and collide with Monday's own sweep.
 
 | Day | Jobs | Directory job |
 |---|---|---|
-| Mon | health · models · **news** | image-models (from Stage 3) |
-| Tue | health · models · **stats** | video-models (from Stage 3) |
-| Wed | health · models | agents (from Stage 4) |
-| Thu | health · models · **stats** | harnesses (from Stage 4) |
-| Fri | health · models | features (from Stage 2) |
+| Mon | health · models · **news** | image-models |
+| Tue | health · models · **stats** | video-models |
+| Wed | health · models | agents · world-models |
+| Thu | health · models · **stats** | harnesses |
+| Fri | health · models | features |
 
 Job selection lives in `scripts/lib/sweep-jobs.js` (tested). A directory job runs only once its
 key is listed in `ENABLED_DIRECTORY_JOBS` there, which the stage that ships its protocol and data
@@ -47,6 +47,7 @@ switches on (design: `docs/superpowers/specs/2026-10-09-directory-expansion-desi
 | `models` | Finds frontier models released since the newest `releaseDate` and not yet tracked. Adds the company too if the lab is untracked — colour must pass `palette-check.js`, logo per `lib/logos.ts` conventions. | `NEW_MODEL_RELEASE_PROTOCOL.md` |
 | `stats` | Fills null cells, skipping anything already in the gap ledgers. | `STATS_FILLER_PROTOCOL.md`, `MODEL_SPECS_PROTOCOL.md` |
 | `news` | All tracked companies, all categories, since the newest date in `news.json`. | `NEWS_SCAN_PROTOCOL.md` |
+| `image-models` … `features` | One directory: adds entries released since its newest date, re-evaluates `notable`, re-checks null cells not already in `data/directory-gaps.md`. | `DIRECTORY_RELEASE_PROTOCOL.md` |
 
 The news-scan protocol normally interviews Maia for scope. It cannot at 09:00, so the
 scheduled scope is fixed as above.
