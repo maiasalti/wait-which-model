@@ -83,7 +83,13 @@ function checkData({ models, news, companies, reigns, directory = {} }) {
       if (Array.isArray(e.scores))
         for (const s of e.scores) if (!s.modelId) err(`${file} ${e.id}: score without modelId`);
       const dateField = file === "features" ? "launchDate" : "releaseDate";
-      if (!ISO_DATE.test(e[dateField] ?? "")) err(`${file} ${e.id}: ${dateField} is not YYYY-MM-DD`);
+      // releaseDate may be null (no primary source for the day); launchDate may not,
+      // since the features timeline is grouped by it.
+      const date = e[dateField];
+      if (!(file !== "features" && date === null) && !ISO_DATE.test(date ?? ""))
+        err(`${file} ${e.id}: ${dateField} is not YYYY-MM-DD${file === "features" ? "" : " or null"}`);
+      if (Array.isArray(e.scores))
+        for (const s of e.scores) if (!s.version) err(`${file} ${e.id}: score without leaderboard version`);
       if (file !== "features" && typeof e.notable !== "boolean") err(`${file} ${e.id}: notable must be a boolean`);
       if (!e.links?.official) err(`${file} ${e.id}: links.official missing`);
       if ("sources" in e) err(`${file} ${e.id}: research-only "sources" field left in`);

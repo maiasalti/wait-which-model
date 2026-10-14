@@ -126,8 +126,9 @@ export interface Model {
 export interface Company {
   id: string;
   name: string;
-  country: string;
-  founded: number;
+  /** Null when no primary source gives it (directory-only developers). */
+  country: string | null;
+  founded: number | null;
   website: string;
   /** Null for companies without a palette slot (non-notable); render
    *  through companyColor(), which falls back to neutral grey. */
@@ -236,7 +237,8 @@ interface EntryBase {
 }
 
 interface ReleasedEntry extends EntryBase {
-  releaseDate: string; // YYYY-MM-DD
+  /** YYYY-MM-DD, or null when no primary source gives the day (sorts last). */
+  releaseDate: string | null;
   /** Top 10 on the type's main leaderboard, or a frontier lab's (see the protocol). */
   notable: boolean;
 }
@@ -290,6 +292,8 @@ export interface HarnessScore {
   /** A harness score is meaningless without the model it ran, so this is required. */
   modelId: string;
   score: number;
+  /** Leaderboard version the score was read from, e.g. "4.0"; versions aren't comparable. */
+  version: string;
 }
 
 export interface HarnessEntry extends ReleasedEntry {

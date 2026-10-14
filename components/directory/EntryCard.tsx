@@ -46,7 +46,7 @@ export function EntryCard({ entry, config }: { entry: AnyEntry; config: KindConf
       <dl className="mono grid grid-cols-3 gap-x-2 gap-y-1 text-xs">
         <div>
           <dt className="text-[10px] uppercase tracking-wider text-ink-3">Released</dt>
-          <dd className="text-ink-2">{formatDate(entryDate(entry))}</dd>
+          <dd className="text-ink-2">{entryDate(entry) ? formatDate(entryDate(entry)) : "Undated"}</dd>
         </div>
         {config.cardFacts(entry).slice(0, 2).map((f) => (
           <div key={f.label} className="min-w-0">

@@ -33,7 +33,7 @@ const SORTS: { key: SortKey; label: string }[] = [
 const countriesOf = (country: string) => country.split("/").map((s) => s.trim());
 
 const LOCATIONS = Array.from(
-  new Set(modelCompanies.flatMap((c) => countriesOf(c.country)))
+  new Set(modelCompanies.flatMap((c) => countriesOf(c.country ?? "")))
 ).sort();
 
 export default function DirectoryPage() {

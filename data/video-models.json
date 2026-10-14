@@ -1,1 +1,768 @@
-[]
+[
+  {
+    "id": "utopai-x",
+    "name": "Utopai X",
+    "company": "utopai-studios",
+    "releaseDate": "2026-09-30",
+    "notable": true,
+    "description": "Utopai Studios' video generation model, used inside its PAI production-intelligence platform for film and television. Filmmakers select it to generate and compare takes for a shot.",
+    "strengths": [
+      "No. 2 on Artificial Analysis' text-to-video leaderboard with audio (Elo 1149)",
+      "Developer cites reflections, caustics, world understanding and high-level spatial consistency"
+    ],
+    "weaknesses": [
+      "No API available (Artificial Analysis); usable only inside the PAI platform",
+      "No published specs for duration, resolution or audio"
+    ],
+    "links": {
+      "official": "https://www.utopaistudios.com/en/news/utopai-studios-defining-production-intelligence-for-film-and-television",
+      "docs": null
+    },
+    "notes": "releaseDate is the date of the developer's announcement page (Sep 30, 2026); AA lists release as 'Sep 2026'. The developer page gives Elo 1,150 (nine points behind Wan 3.0); the live AA board today shows 1149, which is used. The AA row carries a MiniMax logo, and third-party coverage (orcarouter.ai, Chinese press) says it is a post-train of MiniMax H3, but the developer page does not say so, so this is unconfirmed. nativeAudio left null: it ranks on AA's with-audio board, but the developer does not state that it generates audio. PAI is billed usage-based (about page); no per-second price is published. Not on LMArena's video board.",
+    "pricing": {
+      "perSecondUsd": null,
+      "notes": "No API; Artificial Analysis lists 'No API available'. PAI uses usage-based billing, with no published per-second rate."
+    },
+    "maxDurationSec": null,
+    "maxResolution": null,
+    "nativeAudio": null,
+    "capabilities": [
+      "text-to-video"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [],
+    "scores": {
+      "aaVideoArenaElo": 1149,
+      "lmarenaVideoElo": null
+    }
+  },
+  {
+    "id": "gemini-omni-flash-1-1",
+    "name": "Gemini Omni Flash 1.1",
+    "company": "google",
+    "releaseDate": "2026-08-27",
+    "notable": true,
+    "description": "Google's updated Omni video generation and editing model, adding scene extension, first-and-last-frame control and 1080p/4K upscaled output to Gemini Omni Flash.",
+    "strengths": [
+      "Scene extension in 10-second increments up to 40 seconds cumulative, using up to 10 seconds of prior context",
+      "First-and-last-frame control for camera orbits, zoom transitions and seamless loops",
+      "360p draft mode renders up to 60% faster than 720p at about a third of the cost",
+      "Text, image and video inputs with conversational video editing and native sound (speech, music, effects)"
+    ],
+    "weaknesses": [
+      "Single generation capped at 10 seconds",
+      "1080p and 4K are upscaled, not native",
+      "No free tier on the Gemini API"
+    ],
+    "links": {
+      "official": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/",
+      "docs": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-1-flash"
+    },
+    "pricing": {
+      "perSecondUsd": 0.1,
+      "notes": "Gemini API pricing page bills Omni video as output tokens: $17.50 per 1M video output tokens, 5,792 tokens per second of 720p video, 'an effective price of approximately $0.10 per second' (720p, the default). Input $1.50/1M tokens, text output $9.00/1M. Google's launch post says 360p drafts cost about a third of 720p. No official per-second price for 1080p/4K found on Google pages (reseller figures ignored). No free tier."
+    },
+    "maxDurationSec": 10,
+    "maxResolution": "4K",
+    "nativeAudio": true,
+    "capabilities": [
+      "text-to-video",
+      "image-to-video",
+      "video-editing",
+      "extension"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "google-gemini-api",
+        "id": "gemini-omni-1.1-flash"
+      },
+      {
+        "provider": "google-vertex",
+        "id": "gemini-omni-1.1-flash-preview"
+      }
+    ],
+    "scores": {
+      "aaVideoArenaElo": 1115,
+      "lmarenaVideoElo": 1516
+    },
+    "notes": "maxDurationSec is one generation (Vertex model page: 10 s with or without audio); scene extension reaches 40 s cumulative per Google's launch post. Status is inconsistent across Google pages: the Gemini API models page lists it under 'Preview' with id gemini-omni-1.1-flash, the Vertex/Gemini Enterprise Agent Platform page lists launch stage 'Preview' with id gemini-omni-1.1-flash-preview, and the launch post calls it 'production-ready'. Resolutions 360p/720p/1080p/4K (Vertex page); 1080p and 4K via upscaling (launch post). Video references limited to 3 seconds. The Gemini API pricing page labels the entry 'Gemini Omni Flash' with id gemini-omni-1.1-flash. Leaderboard names: LMArena 'gemini-omni-1.1-flash' (#1, Sep 21 2026); Artificial Analysis 'Gemini Omni Flash 1.1' (#8, AA-Video-T2V v2.0 with audio)."
+  },
+  {
+    "id": "minimax-h3-max",
+    "name": "MiniMax H3 Max",
+    "company": "minimax",
+    "releaseDate": "2026-08-27",
+    "notable": true,
+    "description": "Speed-oriented variant of MiniMax H3, post-trained by fal on top of the open H3 weights and released jointly by MiniMax and fal; MiniMax's API exposes it as a separate model ID.",
+    "strengths": [
+      "Generates a 5-second clip in under 3 seconds (fal-reported, ~35x the throughput of the official H3 endpoint)",
+      "Cheaper than H3: $0.05/s at 480P, $0.08/s at 768P on MiniMax's API",
+      "Text-to-video, image-to-video and reference generation"
+    ],
+    "weaknesses": [
+      "No 2K output on MiniMax's API (480P/768P only)",
+      "Minimum clip length 5 s (H3 allows 4 s)"
+    ],
+    "links": {
+      "official": "https://blog.fal.ai/introducing-h3-max-by-fal/",
+      "docs": "https://platform.minimax.io/docs/guides/video-generation"
+    },
+    "notes": "Separate model, not just a mode: MiniMax's video guide says MiniMax-H3-Max was 'jointly released by MiniMax and fal.ai', post-trained by fal on MiniMax H3 and optimised for speed; the API enum lists it next to MiniMax-H3. Release date is the fal blog post date (2026-08-27); MiniMax's docs give none. Max resolution: MiniMax API offers 480P/768P only, but fal's own endpoint also offers 1080p ($0.16/s list), hence maxResolution 1080p. fal list prices: $0.05/s 480p, $0.08/s 768p, $0.16/s 1080p (fal page showed a 40%-off promo until Oct 15). nativeAudio left null: neither MiniMax's docs nor fal's pages state audio output explicitly for H3 Max (it sits in AA's with-audio T2V arena, which suggests it does). No H3 Max weights found on Hugging Face (MiniMaxAI org lists only MiniMax-H3), and fal does not say any were released, so openWeights false. fal's claims of #1 in its own human-preference evals and on AA/Design Arena are vendor-reported.",
+    "pricing": {
+      "perSecondUsd": 0.08,
+      "notes": "MiniMax API list price at the default 768P. 480P $0.05/s. Input images: the first 2 are free, then $0.074 each. fal: $0.05 (480p) / $0.08 (768p) / $0.16 (1080p) per second list."
+    },
+    "maxDurationSec": 15,
+    "maxResolution": "1080p",
+    "nativeAudio": null,
+    "capabilities": [
+      "text-to-video",
+      "image-to-video"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "minimax",
+        "id": "MiniMax-H3-Max"
+      },
+      {
+        "provider": "fal",
+        "id": "minimax/h3-max/text-to-video"
+      },
+      {
+        "provider": "fal",
+        "id": "minimax/h3-max/image-to-video"
+      }
+    ],
+    "scores": {
+      "aaVideoArenaElo": 1134,
+      "lmarenaVideoElo": null
+    }
+  },
+  {
+    "id": "wan-3-0",
+    "name": "Wan 3.0",
+    "company": "alibaba",
+    "releaseDate": "2026-08-24",
+    "notable": true,
+    "description": "Alibaba's closed, API-only Wan video model: up to 30-second clips at up to 1080p with audio, from text, images, audio, video and documents or web pages.",
+    "strengths": [
+      "30-second single-pass generation (2-30 s; Wan 2.7 topped out at 15 s)",
+      "Omni-reference input: images, video, audio, plus documents (PDF, DOC, XLS, PPT) and web pages",
+      "Editing and extension of existing videos via reference_video",
+      "Audio on by default, can be switched off"
+    ],
+    "weaknesses": [
+      "API-only, no open weights",
+      "1080p maximum",
+      "Model Studio API reference still marks it as preview"
+    ],
+    "links": {
+      "official": "https://www.alibabacloud.com/blog/wan3-0-at-general-availability-capabilities-benchmarks-pricing-and-the-workflows-it-changes_603505",
+      "docs": "https://www.alibabacloud.com/help/en/model-studio/wan3-video-generation-api-reference"
+    },
+    "notes": "releaseDate is general availability (2026-08-24, per Alibaba Cloud's GA blog post). A public beta came earlier in August: Alibaba Cloud's 2026-08-13 blog already describes it, and press reports put the beta at 2026-08-06, but no primary page gives that date. A faster 'wan3.0-video-prime' variant ($0.068/$0.14/$0.28 per second in Singapore) shares the entry. The pricing page labels the wan3.0-video rates 'Limited-time 30% off'. Alibaba's GA post calls $0.05/$0.10/$0.20 the standard rates 'before any promotional discount'. Open weights: Alibaba's pages say nothing, and Wan-AI on Hugging Face has no Wan 3.0 repo (latest are Wan2.2 variants), so openWeights false.",
+    "pricing": {
+      "perSecondUsd": 0.2,
+      "notes": "Singapore list price at the default 1080P. 720P $0.10/s, 480P $0.05/s. Beijing/global regions are cheaper: $0.165/$0.083/$0.041. wan3.0-video-prime (fast) costs $0.28/$0.14/$0.068 in Singapore. Turning audio off does not change the price."
+    },
+    "maxDurationSec": 30,
+    "maxResolution": "1080p",
+    "nativeAudio": true,
+    "capabilities": [
+      "text-to-video",
+      "image-to-video",
+      "video-editing",
+      "extension"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "alibaba-model-studio",
+        "id": "wan3.0-video"
+      },
+      {
+        "provider": "alibaba-model-studio",
+        "id": "wan3.0-video-prime"
+      }
+    ],
+    "scores": {
+      "aaVideoArenaElo": 1158,
+      "lmarenaVideoElo": 1476
+    }
+  },
+  {
+    "id": "agnes-video-2-5",
+    "name": "Agnes Video 2.5",
+    "company": "sapiens-ai",
+    "releaseDate": null,
+    "notable": true,
+    "description": "Sapiens AI's video generation model, served through the Agnes AI platform's OpenAI Videos-compatible API. It supports text-to-video, first/last-frame keyframe control and multimodal reference generation.",
+    "strengths": [
+      "Lowest price in AA's text-to-video top 10 ($2.40/min at 1080p)",
+      "Text, keyframe and reference modes, with image, video and audio references",
+      "Outputs from 720P to 2K across six aspect ratios"
+    ],
+    "weaknesses": [
+      "Clips run 4 to 12 seconds",
+      "No published release date or changelog"
+    ],
+    "links": {
+      "official": "https://agnes-ai.com/en/docs/agnes-video-25",
+      "docs": "https://agnes-ai.com/en/docs/agnes-video-25"
+    },
+    "notes": "Release day not published by the developer. Artificial Analysis lists 'Aug 2026', so releaseDate is null. The v2.0 docs say agnes-video-v2.0 was retired Sep 25, 2026 in favour of the 2.5 series (2.5 and 2.5 Flash). nativeAudio left null: the docs document audio only as a reference input ('Use audio or a video soundtrack as a reference'). A third-party ArcReel PR describes 2.5 audio as always-on, which is unconfirmed. The docs do not say which resolution is the default. AA's $2.40/min at 1080p matches the developer's $0.040/s 1080P rate. A sibling 'agnes-video-2.5-flash' (720P only) exists and is not an entry here. 'image-to-video' is mapped from the keyframe (first/last frame) and reference-image modes. Not on LMArena's video board.",
+    "pricing": {
+      "perSecondUsd": 0.025,
+      "notes": "720P list price. 1080P $0.040/s, 1K (1024x1024) $0.040/s, 2K $0.055/s (developer docs)."
+    },
+    "maxDurationSec": 12,
+    "maxResolution": "2K",
+    "nativeAudio": null,
+    "capabilities": [
+      "text-to-video",
+      "image-to-video"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "agnes-ai",
+        "id": "agnes-video-2.5"
+      }
+    ],
+    "scores": {
+      "aaVideoArenaElo": 1058,
+      "lmarenaVideoElo": null
+    }
+  },
+  {
+    "id": "seedance-2-5",
+    "name": "Seedance 2.5",
+    "company": "bytedance",
+    "releaseDate": "2026-07-31",
+    "notable": true,
+    "description": "ByteDance Seed's audio-video generation model, sold as Dreamina Seedance 2.5: up to 30-second clips, up to 50 omni-reference assets, and timestamp-based editing and extension.",
+    "strengths": [
+      "30-second single generation (up from 15 s in Seedance 2.0), extendable over multiple rounds",
+      "Up to 50 reference assets (30 images, 10 videos, 10 audio clips), including audio-only references",
+      "Video editing and forward/backward extension in the same model",
+      "Native multilingual audio generation in 11 languages"
+    ],
+    "weaknesses": [
+      "1080p maximum output (Seedance 2.0 offered 4K)",
+      "Not available in the United States at launch, per Dreamina's launch post",
+      "Activating it on BytePlus needs a USD 30+ balance, a savings plan or a resource pack"
+    ],
+    "links": {
+      "official": "https://seed.bytedance.com/en/seedance2_5",
+      "docs": "https://docs.byteplus.com/en/docs/ModelArk/seedance-2-5"
+    },
+    "notes": "releaseDate is the Dreamina debut (Dreamina launch post dated 2026-07-31; ByteDance's PR Newswire release of 2026-08-03 says it debuted on Dreamina on July 31). Third-party sites say API access came on 2026-08-07; BytePlus's model-release page lists dreamina-seedance-2-5-260628 as a new release but I could not tie it to a date. Price is per token, not per second: BytePlus ModelArk charges USD per million tokens ($10.70 at 480p/720p without video input, $6.40 with video input; 1080p $11.7 / $7.0), so perSecondUsd is null and nothing was converted. Max output resolution per the BytePlus tutorial: 480p, 720p (default), 1080p (10-bit HEVC). The 4K that some press reports claim is not on the official docs. No Volcano Engine (China) model ID verified. No open weights.",
+    "pricing": {
+      "perSecondUsd": null,
+      "notes": "Token-billed on BytePlus ModelArk (USD per million output tokens): 480p/720p $10.70 without video input, $6.40 with video input; 1080p $11.7 / $7.0. Only successful generations are charged. Not converted to per-second."
+    },
+    "maxDurationSec": 30,
+    "maxResolution": "1080p",
+    "nativeAudio": true,
+    "capabilities": [
+      "text-to-video",
+      "image-to-video",
+      "video-editing",
+      "extension"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "byteplus-modelark",
+        "id": "dreamina-seedance-2-5-260628"
+      }
+    ],
+    "scores": {
+      "aaVideoArenaElo": 1144,
+      "lmarenaVideoElo": 1474
+    }
+  },
+  {
+    "id": "minimax-h3",
+    "name": "MiniMax H3",
+    "company": "minimax",
+    "releaseDate": "2026-07-31",
+    "notable": true,
+    "description": "MiniMax's omni-modal video model: it reads text, images, video and audio as one context and generates video with native stereo audio, up to 2K and 15 seconds. The 768p base model's weights are on Hugging Face.",
+    "strengths": [
+      "Native 32 kHz stereo audio with dialogue in 11 languages",
+      "2K output via the hosted H3-Regenerate-2K stage",
+      "Open weights (two checkpoints, FL2VA and Ref2VA) under a community licence",
+      "$0.08/s at 768P, $0.13/s at 2K"
+    ],
+    "weaknesses": [
+      "Open release is partial: the H3-Context-IR prompt stage and the 2K regeneration stage stay hosted, so local runs are 768p",
+      "The licence excludes the EU, UK, South Korea and US, and products above US$20M annual revenue need written authorisation",
+      "15-second maximum"
+    ],
+    "links": {
+      "official": "https://www.minimax.io/blog/minimax-h3",
+      "docs": "https://platform.minimax.io/docs/guides/video-generation"
+    },
+    "notes": "Launch post dated 2026-07-31 said the weights would follow 'in the coming days'. The Hugging Face repo MiniMaxAI/MiniMax-H3 now holds the H3-Base FL2VA (text/first-last-frame) and Ref2VA (reference) checkpoints, licence 'minimax-h3-community-license-agreement', matching the LMArena licence tag. The model card says H3-Context-IR is not open-sourced, H3-Regenerate-2K is 'not yet open-sourced', and sparse attention is to come. The licence grants rights only in the 'Applicable Territory', which is worldwide minus the EU, UK, Republic of Korea and USA. Commercial use is allowed there, with 'Powered by MiniMax H3' and 'MiniMax H3' display requirements and prior authorisation above US$20M annual revenue. API audio is an input (reference_audio); output audio is native per the launch post and model card. H3-Omni-Transformer is 33B dense (model card).",
+    "pricing": {
+      "perSecondUsd": 0.08,
+      "notes": "MiniMax API list price at the default 768P. 2K costs $0.13/s. The first 5 input images are free, then $0.04 per image."
+    },
+    "maxDurationSec": 15,
+    "maxResolution": "2K",
+    "nativeAudio": true,
+    "capabilities": [
+      "text-to-video",
+      "image-to-video"
+    ],
+    "openWeights": true,
+    "license": {
+      "spdx": null,
+      "name": "MiniMax H3 Community License Agreement",
+      "kind": "restricted",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "minimax",
+        "id": "MiniMax-H3"
+      }
+    ],
+    "scores": {
+      "aaVideoArenaElo": 1141,
+      "lmarenaVideoElo": 1460
+    }
+  },
+  {
+    "id": "flux-3-video",
+    "name": "FLUX 3",
+    "company": "black-forest-labs",
+    "releaseDate": "2026-07-23",
+    "notable": true,
+    "description": "Black Forest Labs' multimodal foundation model, trained jointly on images, video and audio. This entry covers its video generation (FLUX 3 Video), which makes clips of up to 20 seconds with native audio from text, images, keyframes or an input clip.",
+    "strengths": [
+      "Clips up to 20 s with native audio, including multilingual dialogue and lip-sync",
+      "Outputs up to 4K (uhd, 3840x2176 at 16:9) at 24 fps",
+      "Keyframes, multi-shot sequences and video continuation",
+      "Cheap draft mode ($0.06/s) that can be enhanced to full quality"
+    ],
+    "weaknesses": [
+      "BFL docs still label FLUX 3 a preview model",
+      "No open weights yet (FLUX 3 Dev is announced but unreleased)"
+    ],
+    "links": {
+      "official": "https://bfl.ai/blog/flux-3-video",
+      "docs": "https://docs.bfl.ai/flux_3"
+    },
+    "notes": "FLUX 3 is a single multimodal family (video, image, action). This entry is its video generation only, and FLUX 3 Image is separate. releaseDate is the Jul 23, 2026 announcement, which opened FLUX 3 Video in Early Access (AA lists 'Jul 2026'). General availability via the BFL API and partners was announced Aug 4, 2026 (bfl.ai/blog/flux-3-video). The docs still say 'FLUX 3 is a preview model'. Audio is on by default and can be disabled. Duration is 5 to 20 s or auto. The blog's own internal Elo chart lists FLUX 3 T2V at 1135, which is not used. AA silent board: 1091 (#5). LMArena score is the preliminary 'flux-3-video' row (#3) from the board dated Sep 21, 2026. The blog mentions video-to-video generation from a reference clip, and editing ships as a separate product (FLUX Video Edit [fast], /v1/flux-tools/video-edit-v1, $0.03/s), so 'video-editing' is not claimed. fal ids come from fal's own model pages. fal also has first-last-frame-to-video, keyframes-to-video, /draft twins and draft-enhance endpoints.",
+    "pricing": {
+      "perSecondUsd": 0.17,
+      "notes": "Default resolution hd (720p), text- or image-to-video full render. fhd $0.29/s, qhd $0.40/s, uhd $0.80/s. Video continuation $0.41/$0.53/$0.65/$0.95 per s. Drafts $0.06/s (t2v/i2v) and $0.12/s (continuation). Enterprise volume discounts on request."
+    },
+    "maxDurationSec": 20,
+    "maxResolution": "4K",
+    "nativeAudio": true,
+    "capabilities": [
+      "text-to-video",
+      "image-to-video",
+      "extension"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "bfl",
+        "id": "flux-3-video"
+      },
+      {
+        "provider": "fal",
+        "id": "blackforestlabs/flux-3/text-to-video"
+      },
+      {
+        "provider": "fal",
+        "id": "blackforestlabs/flux-3/image-to-video"
+      },
+      {
+        "provider": "fal",
+        "id": "blackforestlabs/flux-3/extend-video"
+      }
+    ],
+    "scores": {
+      "aaVideoArenaElo": 1131,
+      "lmarenaVideoElo": 1493
+    }
+  },
+  {
+    "id": "muse-video",
+    "name": "Muse Video",
+    "company": "meta",
+    "releaseDate": "2026-07-07",
+    "notable": true,
+    "description": "Meta Superintelligence Labs' video generation model with native audio, built on the same pretraining base as Muse Image and shown as an early preview.",
+    "strengths": [
+      "Native audio support",
+      "Meta cites competitive prompt adherence, visual fidelity and temporal consistency",
+      "Meta reported a No. 3 text-to-video Elo on Arena at announcement"
+    ],
+    "weaknesses": [
+      "Early preview only: 'coming soon to creators and in Meta AI', no public access or API",
+      "Meta names gaps in audio-video synchronization and physically accurate fast motion"
+    ],
+    "links": {
+      "official": "https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/",
+      "docs": null
+    },
+    "pricing": {
+      "perSecondUsd": null,
+      "notes": "No pricing announced; not publicly available."
+    },
+    "maxDurationSec": null,
+    "maxResolution": null,
+    "nativeAudio": true,
+    "capabilities": [
+      "text-to-video"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [],
+    "scores": {
+      "aaVideoArenaElo": null,
+      "lmarenaVideoElo": 1456
+    },
+    "notes": "releaseDate is the preview announcement (Meta AI blog, July 7 2026); the model is not generally available. Meta's developer models page (dev.meta.ai/models) lists Muse Image but no Muse Video, so no API id exists. Only text-to-video is listed because Meta cites a text-to-video Arena rank; image-to-video, editing, duration and resolution are not stated. openWeights false is inferred from the absence of any release of weights (no HF/GitHub page found), not from an explicit statement. Not on Artificial Analysis' board. LMArena name 'muse-video' (#9, Sep 21 2026)."
+  },
+  {
+    "id": "grok-imagine-video-1-5",
+    "name": "Grok Imagine Video 1.5",
+    "company": "xai",
+    "releaseDate": "2026-06-16",
+    "notable": true,
+    "description": "xAI's video generation model, generally available on the Imagine API, generating video with sound effects, ambience and lip-synced dialogue in a single pass.",
+    "strengths": [
+      "Native 1080p for text-to-video and image-to-video",
+      "Single-pass audio with lip-synced speech",
+      "Up to 15-second clips with first, last and mid-video keyframes",
+      "Reference-to-video with preset voices for up to 3 speakers"
+    ],
+    "weaknesses": [
+      "No video editing or extension (the older grok-imagine-video model still handles those)",
+      "Reference-to-video limited to 720p"
+    ],
+    "links": {
+      "official": "https://x.ai/news/grok-imagine-video-1-5",
+      "docs": "https://docs.x.ai/developers/model-capabilities/video/generation"
+    },
+    "pricing": {
+      "perSecondUsd": 0.08,
+      "notes": "xAI models page lists a single rate: grok-imagine-video-1.5 $0.080/sec, grok-imagine-video-1.5-lite $0.020/sec. xAI docs say duration and resolution both affect cost, but no per-resolution rates appear on xAI pages fetched (third-party listings quote 480p $0.08 / 720p $0.14 / 1080p $0.25 per second; not used), so $0.08 is most likely the lowest-resolution rate. Lite: 1080p output upscaled from 720p, same 15 s cap and lip-synced audio. Video 1.5 Fast is a consumer-app variant (grok.com/imagine, iOS, Android) that makes a 6 s 720p clip in about 25 s."
+    },
+    "maxDurationSec": 15,
+    "maxResolution": "1080p",
+    "nativeAudio": true,
+    "capabilities": [
+      "text-to-video",
+      "image-to-video"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "xai",
+        "id": "grok-imagine-video-1.5"
+      },
+      {
+        "provider": "xai",
+        "id": "grok-imagine-video-1.5-lite"
+      }
+    ],
+    "scores": {
+      "aaVideoArenaElo": 1047,
+      "lmarenaVideoElo": 1492
+    },
+    "notes": "releaseDate is the GA post on x.ai (June 16 2026); a grok-imagine-video-1.5-preview preceded it per third-party listings only. The launch post describes it as image-to-video; text-to-video and reference-to-video were added in July 2026 per xAI's API release notes. Lite release date not found on an xAI page (third-party listings disagree: Oct 1 vs Oct 8 2026). Leaderboards: LMArena entry is 'grok-imagine-video-1.5-agent' (#4, preliminary, Sep 21 2026), an agent configuration rather than the plain API model, and the leaderboard lists the creator as 'SpaceXAI'; company kept as xai. Artificial Analysis: Grok Imagine Video 1.5 1047 (#11); Grok Imagine Video 1.5 Lite 993."
+  },
+  {
+    "id": "gemini-omni-flash",
+    "name": "Gemini Omni Flash",
+    "company": "google",
+    "releaseDate": "2026-05-20",
+    "notable": true,
+    "description": "The first model in Google's Omni family: a multimodal model that generates video from mixed text, image, audio and video inputs and edits it conversationally over multiple turns.",
+    "strengths": [
+      "Conversational multi-turn video editing (element replacement, perspective changes)",
+      "Combines text, image, video and voice references in one prompt",
+      "Native sound generation: speech, music and sound effects",
+      "Free for users 18+ in YouTube Shorts Remix and the YouTube Create app"
+    ],
+    "weaknesses": [
+      "10-second generations",
+      "No scene extension (added in Omni Flash 1.1)",
+      "API still a preview model"
+    ],
+    "links": {
+      "official": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni/",
+      "docs": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-flash-preview"
+    },
+    "pricing": {
+      "perSecondUsd": 0.1,
+      "notes": "Google's developer launch post: 'priced competitively at $0.10 per second of video output'. Gemini API pricing page bills it at $17.50 per 1M video output tokens (5,792 tokens per 720p second, ~$0.10/s), $1.50/1M input, $9.00/1M text output. No free tier."
+    },
+    "maxDurationSec": 10,
+    "maxResolution": null,
+    "nativeAudio": true,
+    "capabilities": [
+      "text-to-video",
+      "video-editing"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "google-gemini-api",
+        "id": "gemini-omni-flash-preview"
+      },
+      {
+        "provider": "google-vertex",
+        "id": "gemini-omni-flash-preview"
+      }
+    ],
+    "scores": {
+      "aaVideoArenaElo": null,
+      "lmarenaVideoElo": 1513
+    },
+    "notes": "releaseDate is the consumer launch (Gemini app, Flow, YouTube) announced in Google's I/O 2026 roundup dated May 20 2026; the 'Introducing Gemini Omni' post itself carries no date. API public preview followed on June 30 2026 (gemini-omni-flash-preview; Vertex retirement date June 30 2027). Image-to-video conflict: the developer blog says it takes text, image and video inputs, but the Vertex model page marks 'Image to video' as not supported, so image inputs are treated as references and image-to-video is left out. maxResolution null: the Vertex page shows 720p only under image specifications and no video output resolution is stated; Gemini API pricing is computed per 720p second. Not on Artificial Analysis' board. LMArena name 'gemini-omni-flash' (#2, Sep 21 2026)."
+  },
+  {
+    "id": "happyhorse-1-0",
+    "name": "HappyHorse 1.0",
+    "company": "alibaba",
+    "releaseDate": "2026-04-28",
+    "notable": true,
+    "description": "Video-and-audio generation model from Alibaba's ATH (Alibaba Token Hub) business unit: multi-shot clips up to 15 seconds at 1080p with synchronized audio, including lip-synced dialogue.",
+    "strengths": [
+      "Synchronized audio, including lip-synced dialogue and ambient sound",
+      "Text-, image- and subject/reference-to-video, plus video editing",
+      "Character consistency across multi-shot cuts"
+    ],
+    "weaknesses": [
+      "15-second maximum",
+      "720P/1080P only on 1.0 (1.1 adds 480P)",
+      "API-only, no open weights found"
+    ],
+    "links": {
+      "official": "https://www.alibabacloud.com/blog/alibaba-rolls-out-happyhorse-1-0-in-limited-beta_603068",
+      "docs": "https://www.alibabacloud.com/help/en/model-studio/happyhorse-text-to-video-api-reference"
+    },
+    "notes": "Developed by Alibaba's ATH (Alibaba Token Hub) business unit, per Alibaba's own post; filed under the existing 'alibaba' company id. releaseDate is the limited-beta launch in Alibaba's 2026-04-28 post (originally on Alizila). Press reports say it first appeared anonymously on the Artificial Analysis Video Arena around 2026-04-07 and that Alibaba confirmed it about 2026-04-10; no primary source verified. A newer HappyHorse 1.1 (happyhorse-1.1-t2v/i2v/r2v) is on Model Studio and is the version Alibaba's docs now use in their examples. It ranks outside the AA top 10, so it is skipped. Model Studio lists 1.0 output as '720P, 1080P. 3-15s. 24 fps', with audio. No Hugging Face repo found, so openWeights false.",
+    "pricing": {
+      "perSecondUsd": 0.24,
+      "notes": "Alibaba Model Studio Singapore list price at the default 1080P. 720P costs $0.14/s. Beijing/global regions charge $0.220 (1080P) / $0.124 (720P). happyhorse-1.0-video-edit is priced the same, with input and output both billed."
+    },
+    "maxDurationSec": 15,
+    "maxResolution": "1080p",
+    "nativeAudio": true,
+    "capabilities": [
+      "text-to-video",
+      "image-to-video",
+      "video-editing"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "alibaba-model-studio",
+        "id": "happyhorse-1.0-t2v"
+      },
+      {
+        "provider": "alibaba-model-studio",
+        "id": "happyhorse-1.0-i2v"
+      },
+      {
+        "provider": "alibaba-model-studio",
+        "id": "happyhorse-1.0-r2v"
+      },
+      {
+        "provider": "alibaba-model-studio",
+        "id": "happyhorse-1.0-video-edit"
+      }
+    ],
+    "scores": {
+      "aaVideoArenaElo": 1023,
+      "lmarenaVideoElo": 1427
+    }
+  },
+  {
+    "id": "skyreels-v4",
+    "name": "SkyReels V4",
+    "company": "skywork-ai",
+    "releaseDate": "2026-02-25",
+    "notable": true,
+    "description": "Skywork AI's joint video-audio model (dual-stream MMDiT) that generates, inpaints and edits video from text, images, video clips, masks and audio references, at up to 1080p, 32 FPS and 15 seconds.",
+    "strengths": [
+      "Joint video and audio generation",
+      "One model for text-to-video, image-to-video, extension and mask-guided editing",
+      "Multimodal references: text, images, video, masks, audio"
+    ],
+    "weaknesses": [
+      "15-second maximum",
+      "Most expensive here at 1080p std: $0.35/s",
+      "API 'fast' mode cannot generate audio yet; no open weights"
+    ],
+    "links": {
+      "official": "https://www.skyreels.ai/api-platform",
+      "docs": "https://www.skyreels.ai/dev/document"
+    },
+    "notes": "releaseDate is arXiv v1 of the SkyReels-V4 paper (2602.21818, submitted 2026-02-25). No primary page gives a public API launch date; third-party sites suggest API access came in March 2026. Official API pricing is in credits (1 USD = 100 credits): without video input, V4 Std costs 35/14/11 credits per second and V4 Fast 27.5/11/8 at 1080P/720P/480P; with video input, Std costs 62.5/25/18 and Fast 50/20/15. The API's default is 1080p std. The API has no model-name string: V4 is called through endpoints such as https://api-gateway.skyreels.ai/api/v1/video/text2video/submit with mode 'std' or 'fast', so apiIds is empty. In the API, sound is an opt-in parameter (default False), and 'fast' mode does not support audio yet. No V4 weights on Hugging Face (Skywork has V2/V3 only) or GitHub (SkyworkAI/SkyReels-V3 is the latest), so openWeights false. skyreels-v4.ai is not verifiably official and was not used.",
+    "pricing": {
+      "perSecondUsd": 0.35,
+      "notes": "Official SkyReels API, V4 Std at the default 1080P without video input (35 credits/s, 1 USD = 100 credits). Std 720P $0.14, 480P $0.11. Fast 1080P $0.275, 720P $0.11, 480P $0.08. Requests with video input cost more: Std $0.625/$0.25/$0.18."
+    },
+    "maxDurationSec": 15,
+    "maxResolution": "1080p",
+    "nativeAudio": true,
+    "capabilities": [
+      "text-to-video",
+      "image-to-video",
+      "video-editing",
+      "extension"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [],
+    "scores": {
+      "aaVideoArenaElo": 1077,
+      "lmarenaVideoElo": null
+    }
+  },
+  {
+    "id": "seedance-2-0",
+    "name": "Seedance 2.0",
+    "company": "bytedance",
+    "releaseDate": "2026-02-12",
+    "notable": true,
+    "description": "ByteDance Seed's joint audio-video generation model, sold as Dreamina Seedance 2.0: takes text, image, audio and video inputs for multimodal reference, editing and extension, at 4-15 seconds.",
+    "strengths": [
+      "Joint audio-video generation from text, image, audio and video inputs",
+      "Video editing and extension, plus omni-reference (up to 9 images, 3 videos, 3 audio clips)",
+      "4K output (10-bit HEVC) on BytePlus ModelArk",
+      "Seedance 2.0 Fast variant for low latency"
+    ],
+    "weaknesses": [
+      "15-second maximum",
+      "Text + audio and audio-only inputs not supported",
+      "4K is heavily rate-limited (15 RPM, concurrency 1)"
+    ],
+    "links": {
+      "official": "https://seed.bytedance.com/en/seedance2_0",
+      "docs": "https://docs.byteplus.com/en/docs/ModelArk/seedance-2-0"
+    },
+    "notes": "ByteDance Seed's own paper page says Seedance 2.0 was 'officially released in China in early February 2026'. The exact date, 2026-02-12, comes from IT Home's report of the official ByteDance Seed WeChat announcement; Seed's English pages give no day. Resolution conflict: the Seed paper says native 480p/720p, but BytePlus ModelArk's model list offers 480p/720p/1080p (8-bit) and 4K (10-bit), so maxResolution is 4K per the API docs. Price is per token: ModelArk charges USD per million tokens (480p/720p $7.0 without video input, $4.3 with; 1080p $7.7 / $4.7; 4K $4.0 / $2.4 as listed), so perSecondUsd is null and nothing was converted. dreamina-seedance-2-0-fast-260128 is the Fast variant (480p/720p $5.6 / $3.3). No Volcano Engine (China) model ID verified. No open weights.",
+    "pricing": {
+      "perSecondUsd": null,
+      "notes": "Token-billed on BytePlus ModelArk (USD per million tokens): 480p/720p $7.0 without video input, $4.3 with; 1080p $7.7 / $4.7; 4K $4.0 / $2.4 (as listed on the pricing page). Fast variant: $5.6 / $3.3. Not converted to per-second."
+    },
+    "maxDurationSec": 15,
+    "maxResolution": "4K",
+    "nativeAudio": true,
+    "capabilities": [
+      "text-to-video",
+      "image-to-video",
+      "video-editing",
+      "extension"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "byteplus-modelark",
+        "id": "dreamina-seedance-2-0-260128"
+      },
+      {
+        "provider": "byteplus-modelark",
+        "id": "dreamina-seedance-2-0-fast-260128"
+      }
+    ],
+    "scores": {
+      "aaVideoArenaElo": 1120,
+      "lmarenaVideoElo": 1479
+    }
+  },
+  {
+    "id": "veo-3-1",
+    "name": "Veo 3.1",
+    "company": "google",
+    "releaseDate": "2025-10-15",
+    "notable": true,
+    "description": "Google DeepMind's Veo video model with native audio, adding reference images, first/last-frame transitions and scene extension; offered with Fast and Lite variants.",
+    "strengths": [
+      "Up to 4K output (Veo 3.1 and Fast)",
+      "Native audio on every generation",
+      "Up to 3 reference images, first/last-frame interpolation",
+      "Extension by 7 s up to 20 times, output up to 148 s"
+    ],
+    "weaknesses": [
+      "Clips of 4, 6 or 8 seconds; 1080p, 4K, extension and references require 8 s",
+      "Extension limited to 720p",
+      "Standard tier is $0.40/s, four times Gemini Omni Flash"
+    ],
+    "links": {
+      "official": "https://deepmind.google/models/veo/",
+      "docs": "https://ai.google.dev/gemini-api/docs/veo"
+    },
+    "pricing": {
+      "perSecondUsd": 0.4,
+      "notes": "Gemini API, per second with audio: Veo 3.1 Standard $0.40 (720p), $0.40 (1080p), $0.60 (4K). Veo 3.1 Fast $0.10 / $0.12 / $0.30. Veo 3.1 Lite $0.05 / $0.08 / 4K not supported. No free tier. Vertex pricing not checked."
+    },
+    "maxDurationSec": 8,
+    "maxResolution": "4K",
+    "nativeAudio": true,
+    "capabilities": [
+      "text-to-video",
+      "image-to-video",
+      "extension"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "google-gemini-api",
+        "id": "veo-3.1-generate-preview"
+      },
+      {
+        "provider": "google-gemini-api",
+        "id": "veo-3.1-fast-generate-preview"
+      },
+      {
+        "provider": "google-gemini-api",
+        "id": "veo-3.1-lite-generate-preview"
+      },
+      {
+        "provider": "google-vertex",
+        "id": "veo-3.1-generate-001"
+      },
+      {
+        "provider": "google-vertex",
+        "id": "veo-3.1-fast-generate-001"
+      },
+      {
+        "provider": "google-vertex",
+        "id": "veo-3.1-lite-generate-001"
+      }
+    ],
+    "scores": {
+      "aaVideoArenaElo": 965,
+      "lmarenaVideoElo": 1364
+    },
+    "notes": "releaseDate is the Gemini API paid-preview launch (Google Developers Blog, Oct 15 2025); Vertex GA ids veo-3.1-generate-001 and veo-3.1-fast-generate-001 released Nov 17 2025 (retirement 'November 17, 2026 or later'). Veo 3.1 Lite launched Mar 31 2026 (Vertex preview id dated Apr 2 2026). maxDurationSec is a single generation; extension reaches 148 s. Fast: up to 4K on Gemini API docs but Vertex lists 720p/1080p only. Lite: 1080p max, no reference images or extension. No newer Veo found: Google's Gemini API docs and DeepMind's Veo page still present Veo 3.1, and Google now recommends Gemini Omni Flash as the default video model. Scores: LMArena 'veo-3.1-audio' 1364 (other rows: veo-3.1-audio-1080p 1362, veo-3.1-fast-audio 1362); AA Veo 3.1 965, Veo 3.1 Fast 960, Veo 3.1 Lite 946."
+  }
+]

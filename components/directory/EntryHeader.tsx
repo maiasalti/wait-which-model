@@ -20,7 +20,9 @@ export function EntryHeader({ entry, as: H = "h1" }: { entry: AnyEntry; as?: "h1
         {entry.name}
       </H>
       <p className="mono mt-1 text-xs text-ink-3">
-        {"launchDate" in entry ? "Launched" : "Released"} {formatDate(entryDate(entry))}
+        {entryDate(entry)
+          ? `${"launchDate" in entry ? "Launched" : "Released"} ${formatDate(entryDate(entry))}`
+          : "Release date unpublished"}
       </p>
     </div>
   );

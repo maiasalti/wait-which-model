@@ -1,1 +1,2353 @@
-[]
+[
+  {
+    "id": "claude-dashboards",
+    "name": "Claude Dashboards",
+    "company": "anthropic",
+    "launchDate": "2026-10-08",
+    "description": "Turns questions about company data into a dashboard that stays current, connecting to data platforms (BigQuery, Databricks, Snowflake) or CRMs such as Salesforce.",
+    "strengths": [
+      "Each chart shows its query and last-refresh time",
+      "Connects to BigQuery, Databricks, Snowflake and Salesforce"
+    ],
+    "weaknesses": [
+      "Off by default on Enterprise",
+      "Several integrations (Databricks Genie, Looker, Tableau, monday.com) listed as coming soon"
+    ],
+    "links": {
+      "official": "https://claude.com/resources/articles/dashboards-and-motion",
+      "docs": null
+    },
+    "notes": "Source says 'beta on paid plans'; plans list expands that to Claude's paid tiers. Launch article names no model.",
+    "surface": "app",
+    "availability": "beta",
+    "plans": [
+      "Pro",
+      "Max",
+      "Team",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "claude-motion",
+    "name": "Claude Motion",
+    "company": "anthropic",
+    "launchDate": "2026-10-08",
+    "description": "Builds short animated explainers from a prompt as code that animates text, charts, shapes and images; edit in the editor or through Claude and download as MP4.",
+    "strengths": [
+      "No video-generation model: no generated footage or AI-generated people",
+      "MP4 export",
+      "Editable in an editor or by asking Claude"
+    ],
+    "weaknesses": [
+      "Team and Enterprise only",
+      "Off by default on Enterprise until an owner enables it"
+    ],
+    "links": {
+      "official": "https://claude.com/resources/articles/dashboards-and-motion",
+      "docs": "https://support.claude.com/en/articles/17454997-get-started-with-claude-motion"
+    },
+    "notes": "Launched alongside Claude Dashboards. On by default on Team plans. Launch article names no model.",
+    "surface": "app",
+    "availability": "beta",
+    "plans": [
+      "Team",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "chatgpt-intelligent-ui",
+    "name": "Intelligent UI (ChatGPT)",
+    "company": "openai",
+    "launchDate": "2026-10-07",
+    "description": "ChatGPT combines text, visuals and interactive elements (comparisons, diagrams, calculators, bill splitters, games) to fit the question, and can start answering while still thinking or using tools.",
+    "strengths": [
+      "Chooses format automatically",
+      "Streams partial answers while still working"
+    ],
+    "weaknesses": [
+      "Not supported on the Pro reasoning option (GPT-6 Astra)"
+    ],
+    "links": {
+      "official": "https://openai.com/index/gpt-6-for-everyone/",
+      "docs": null
+    },
+    "notes": "Shipped with GPT-6 in the Chat tab: Plus/Pro/Business/Enterprise use GPT-6 Sol, Free and Go use GPT-6 Luna (from the next day). openai.com blocks direct fetch; page text retrieved via a reader proxy.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Free",
+      "Go",
+      "Plus",
+      "Pro",
+      "Business",
+      "Enterprise"
+    ],
+    "modelIds": [
+      "gpt-6-sol",
+      "gpt-6-luna"
+    ],
+    "retiredDate": null
+  },
+  {
+    "id": "gemini-skills",
+    "name": "Skills in Gemini",
+    "company": "google",
+    "launchDate": "2026-09-30",
+    "description": "Reusable instruction sets in Gemini chat that run automatically on matching prompts and can be stacked; Gemini can build them from your chats.",
+    "strengths": [
+      "Stack multiple skills at once",
+      "Auto-runs on matching prompts"
+    ],
+    "weaknesses": [
+      "18+ only at launch",
+      "Will replace Gems"
+    ],
+    "links": {
+      "official": "https://gemini.google/release-notes/",
+      "docs": null
+    },
+    "notes": "Gems will be migrated to skills when Gems are removed. A Customize menu for skills and 40+ connected apps followed 2026-10-13.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "muse-for-small-business",
+    "name": "Muse for Small Business",
+    "company": "meta",
+    "launchDate": "2026-09-29",
+    "description": "Business skills and connectors inside Muse that link Instagram professional analytics, Facebook Pages, Meta ad accounts and tools like Canva.",
+    "strengths": [
+      "Connects Meta business accounts in a few clicks",
+      "Custom connectors supported"
+    ],
+    "weaknesses": [
+      "US and Canada only"
+    ],
+    "links": {
+      "official": "https://about.fb.com/news/2026/09/introducing-muse-small-business/",
+      "docs": null
+    },
+    "notes": "Free for most use with subscription plans; plan names not given on the page.",
+    "surface": "app",
+    "availability": "region-limited",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "chatgpt-space-and-pages",
+    "name": "ChatGPT Space and Pages",
+    "company": "openai",
+    "launchDate": "2026-09-29",
+    "description": "Space gathers Pages, files and related work in ChatGPT and can be shared; Pages are collaborative documents created from a conversation, a template or from scratch, with charts and interactive content.",
+    "strengths": [
+      "Multiplayer editing and comments on Pages",
+      "Sharing a Page doesn't expose private chats or memory"
+    ],
+    "weaknesses": [
+      "Pro, Business and Enterprise only",
+      "Enterprise sharing is an opt-in preview"
+    ],
+    "links": {
+      "official": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "docs": null
+    },
+    "notes": "Space replaces Library for accounts with access; Projects remain separate. Facts from the ChatGPT release notes (2026-09-29).",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Pro",
+      "Business",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "openai-dots",
+    "name": "Dots",
+    "company": "openai",
+    "launchDate": "2026-09-29",
+    "description": "Always-on agents in ChatGPT with their own cloud computer and browser that take on ongoing responsibilities, keep working between conversations and message you when they need a decision.",
+    "strengths": [
+      "Powered by GPT-6 Astra",
+      "Reach 4,000+ apps via plugins; reachable in ChatGPT, Slack and Teams, including voice calls",
+      "User-defined rules for acting alone vs asking"
+    ],
+    "weaknesses": [
+      "Pro access excludes the EEA, Switzerland and UK at launch",
+      "Enterprise is an off-by-default beta",
+      "Usage terms after the first month not yet published"
+    ],
+    "links": {
+      "official": "https://openai.com/index/introducing-dots/",
+      "docs": "https://help.openai.com/en/articles/20001530-getting-started-with-your-dot"
+    },
+    "notes": "Blog: rolling out across Pro, Business Premium and Enterprise in eligible markets. Release notes: Pro and Business Premium users 18+; Enterprise beta off by default. Create a dot on desktop app or desktop web. openai.com blocks direct fetch; page text retrieved via a reader proxy.",
+    "surface": "app",
+    "availability": "region-limited",
+    "plans": [
+      "Pro",
+      "Business Premium",
+      "Enterprise"
+    ],
+    "modelIds": [
+      "gpt-6-astra"
+    ],
+    "retiredDate": null
+  },
+  {
+    "id": "grok-team-bots",
+    "name": "Team Bots",
+    "company": "xai",
+    "launchDate": "2026-09-28",
+    "description": "Shared Grok Bots built around a team role with shared context, plugins, credentials and memories, usable individually or in Slack.",
+    "strengths": [
+      "Each person's conversations stay private",
+      "Slack handle per bot"
+    ],
+    "weaknesses": [
+      "Public beta on Teams and Enterprise plans only"
+    ],
+    "links": {
+      "official": "https://x.ai/news/team-bots",
+      "docs": null
+    },
+    "notes": "",
+    "surface": "app",
+    "availability": "beta",
+    "plans": [
+      "Teams",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "ray-ban-meta-audio",
+    "name": "Ray-Ban Meta Audio",
+    "company": "meta",
+    "launchDate": "2026-09-23",
+    "description": "Meta's first audio-only AI glasses: 43 g frames with speakers and mics for music, calls and hands-free AI assistant use, connecting to Muse.",
+    "strengths": [
+      "43 g, lightest Meta AI glasses",
+      "Up to 12 h battery plus 48 h from the case"
+    ],
+    "weaknesses": [
+      "No camera or display mentioned"
+    ],
+    "links": {
+      "official": "https://about.fb.com/news/2026/09/introducing-ray-ban-meta-audio-glasses-new-styles-plus-muse/",
+      "docs": null
+    },
+    "notes": "Pre-order from $349 at announcement, shipping October 13. Ray-Ban Meta (Gen 3) from $449 announced the same day. Muse on glasses is 'coming in the coming months', not launched.",
+    "surface": "hardware",
+    "availability": "ga",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "claude-docs-and-slides",
+    "name": "Claude Docs and Claude Slides",
+    "company": "anthropic",
+    "launchDate": "2026-09-16",
+    "description": "Rich-text documents and slide decks created in any Claude conversation, editable by hand or by Claude, presentable from Claude and exportable to PowerPoint or PDF.",
+    "strengths": [
+      "Works from any conversation with existing context, skills and connectors",
+      "Export to PowerPoint or PDF",
+      "Present directly from Claude"
+    ],
+    "weaknesses": [
+      "Enterprise: off by default until an owner enables it"
+    ],
+    "links": {
+      "official": "https://claude.com/blog/cowork-is-now-claude",
+      "docs": "https://support.claude.com/en/articles/16923645-get-started-with-claude-docs"
+    },
+    "notes": "Launched in beta on paid plans (Pro and Max first) on 2026-09-16 alongside the Cowork/chat merge; the 2026-10-08 Dashboards/Motion article says Docs, Slides and Design are out of beta and on every plan including Free. Availability/plans reflect that later state.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Free",
+      "Pro",
+      "Max",
+      "Team",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "meta-muse",
+    "name": "Muse",
+    "company": "meta",
+    "launchDate": "2026-09-08",
+    "description": "Meta's personal AI agent that completes tasks (email, travel, forms, shopping) on a dedicated cloud VM, works in the background and checks with you before sensitive actions; reachable in the Muse app and WhatsApp.",
+    "strengths": [
+      "Powered by Muse Spark",
+      "Separate Sentinel agent approves all internet traffic",
+      "Cannot see passwords or payment methods"
+    ],
+    "weaknesses": [
+      "US (later US and Canada) only",
+      "Encrypted Confidential VM not yet shipped"
+    ],
+    "links": {
+      "official": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+      "docs": "https://ai.meta.com/muse/"
+    },
+    "notes": "iOS, Android and muse.ai. Free for most use with subscription plans; the fetched Meta page names no tiers (third-party reports of 'Power' $20 and 'Maximum' $100 were not verified). Connect 2026 (2026-09-24) added more shopping connectors and announced Muse on AI glasses and a Muse Charm device, neither launched yet. Muse Wonder models to power Muse soon (2026-10-12).",
+    "surface": "app",
+    "availability": "region-limited",
+    "plans": [],
+    "modelIds": [
+      "muse-spark"
+    ],
+    "retiredDate": null
+  },
+  {
+    "id": "grok-bot",
+    "name": "Grok Bot",
+    "company": "xai",
+    "launchDate": "2026-08-11",
+    "description": "Always-on AI teammates with their own cloud computer that sign into your tools, work across apps and inboxes, and come back only when they need approval.",
+    "strengths": [
+      "Works on sites with no API or MCP",
+      "Separate usage from Grok/Cursor plans"
+    ],
+    "weaknesses": [
+      "Beta",
+      "Enterprise on a waitlist at launch"
+    ],
+    "links": {
+      "official": "https://x.ai/news/introducing-grok-bot",
+      "docs": null
+    },
+    "notes": "Desktop and iOS. Also available to Cursor Pro, Pro+, Ultra and Cursor Teams Standard/Premium subscribers. A later 'Grok Bot for Enterprise' post (listed on x.ai/news, date not captured) opened it to enterprises.",
+    "surface": "app",
+    "availability": "beta",
+    "plans": [
+      "SuperGrok",
+      "SuperGrok Plus",
+      "SuperGrok Heavy"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "grok-build-mode",
+    "name": "Build Mode",
+    "company": "xai",
+    "launchDate": "2026-07-28",
+    "description": "Grok builds working websites, apps, games and dashboards live in the chat and publishes them to a shareable link.",
+    "strengths": [
+      "No install or configuration",
+      "Publish to a link"
+    ],
+    "weaknesses": [
+      "Early beta for SuperGrok Heavy only"
+    ],
+    "links": {
+      "official": "https://x.ai/news/grok-build-mode",
+      "docs": null
+    },
+    "notes": "Web, iOS and Android.",
+    "surface": "app",
+    "availability": "beta",
+    "plans": [
+      "SuperGrok Heavy"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "meta-ai-agentic-features",
+    "name": "Meta AI tasks, connectors and research deep dives",
+    "company": "meta",
+    "launchDate": "2026-07-24",
+    "description": "Meta AI gained email and calendar connections, daily briefings, slide generation, web research deep dives and ongoing tasks it follows through on without new prompts.",
+    "strengths": [
+      "Powered by Muse Spark 1.1",
+      "Research synthesis across papers and creator posts"
+    ],
+    "weaknesses": [
+      "Select markets only at launch"
+    ],
+    "links": {
+      "official": "https://about.fb.com/news/2026/07/meta-ai-muse-spark-doesnt-just-think-it-acts/",
+      "docs": null
+    },
+    "notes": "Closest Meta equivalent to Deep Research ('research deep dives'); not a separately named mode. No plans stated. WhatsApp and more countries promised.",
+    "surface": "app",
+    "availability": "region-limited",
+    "plans": [],
+    "modelIds": [
+      "muse-spark-1-1"
+    ],
+    "retiredDate": null
+  },
+  {
+    "id": "grok-for-excel",
+    "name": "Grok for Microsoft Office",
+    "company": "xai",
+    "launchDate": "2026-07-20",
+    "description": "Free Microsoft 365 add-ins that bring Grok into Excel (formulas, scenarios, cited answers), with matching add-ins for Word, PowerPoint and Outlook.",
+    "strengths": [
+      "Free add-in",
+      "Answers cite source cells",
+      "Can pull context via connectors"
+    ],
+    "weaknesses": [],
+    "links": {
+      "official": "https://x.ai/news/introducing-excel-addin",
+      "docs": null
+    },
+    "notes": "launchDate is the Excel add-in; xAI news also lists PowerPoint (2026-06-16), Word (2026-06-18) and Outlook (2026-07-21) add-ins and a Google Workspace add-on (2026-07-24).",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "grok-automations",
+    "name": "Automations (Grok)",
+    "company": "xai",
+    "launchDate": "2026-07-16",
+    "description": "Grok runs jobs on a schedule or when a matching email arrives, opening a full conversation for each run and reporting back.",
+    "strengths": [
+      "Email triggers",
+      "Create from chat or templates"
+    ],
+    "weaknesses": [
+      "Email triggers need SuperGrok"
+    ],
+    "links": {
+      "official": "https://x.ai/news/grok-automations",
+      "docs": null
+    },
+    "notes": "Scheduled automations available to everyone; email triggers included with SuperGrok.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "meta-model-api",
+    "name": "Meta Model API",
+    "company": "meta",
+    "launchDate": "2026-07-09",
+    "description": "Meta's developer API for its Muse models, launched as a public preview with Muse Spark 1.1.",
+    "strengths": [
+      "Serves Muse Spark, Muse Wonder and other Muse models",
+      "Generally available globally since Connect 2026"
+    ],
+    "weaknesses": [],
+    "links": {
+      "official": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/",
+      "docs": "https://dev.meta.ai/products/meta-model-api/"
+    },
+    "notes": "Public preview 2026-07-09; GA announced in the Meta Connect 2026 developer recap (page undated; Connect news post 2026-09-24). Succeeds the Llama API preview.",
+    "surface": "api",
+    "availability": "ga",
+    "plans": [],
+    "modelIds": [
+      "muse-spark-1-1"
+    ],
+    "retiredDate": null
+  },
+  {
+    "id": "chatgpt-sites",
+    "name": "ChatGPT Sites",
+    "company": "openai",
+    "launchDate": "2026-07-09",
+    "description": "Turns work or ideas into an interactive website or lightweight app (dashboards, trackers, prototypes, portals) inside ChatGPT, previewed privately and then published to a URL.",
+    "strengths": [
+      "Public publishing via URL",
+      "Editing and recurring cloud schedules (2026-09-29)"
+    ],
+    "weaknesses": [
+      "Not on Free or Go",
+      "Public publishing and expanded beta excluded from the EEA, Switzerland and UK at launch"
+    ],
+    "links": {
+      "official": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "docs": "https://help.openai.com/articles/20001339"
+    },
+    "notes": "launchDate is the public-beta date; release notes say Business and Enterprise 'already have access' then, without an earlier date.",
+    "surface": "app",
+    "availability": "beta",
+    "plans": [
+      "Plus",
+      "Pro",
+      "Pro Lite",
+      "Business",
+      "Enterprise",
+      "Edu"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "chatgpt-work",
+    "name": "ChatGPT Work",
+    "company": "openai",
+    "launchDate": "2026-07-09",
+    "description": "An agent in ChatGPT for longer tasks that researches, works across connected apps and files, and produces finished documents, spreadsheets, presentations, reports and Sites, with Scheduled Tasks.",
+    "strengths": [
+      "Approve important actions as it works",
+      "Scheduled, triggered or monitoring tasks",
+      "Desktop version can use local files and apps"
+    ],
+    "weaknesses": [
+      "Not on Free or Go"
+    ],
+    "links": {
+      "official": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "docs": "https://help.openai.com/articles/20001275"
+    },
+    "notes": "Same day: App Directory replaced by the Plugin Directory, and a new desktop app combining Chat, Work and Codex. Enterprise/Edu had a two-week off-by-default preview. Later: GPT-6.1 Sol in Work (2026-09-29).",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Plus",
+      "Pro",
+      "Pro Lite",
+      "Business",
+      "Enterprise",
+      "Edu"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "grok-voice-agent-builder",
+    "name": "Voice Agent Builder",
+    "company": "xai",
+    "launchDate": "2026-07-01",
+    "description": "A no-code platform for configuring production voice agents on Grok Voice, with telephony, retrieval, tools, guardrails, MCP and observability.",
+    "strengths": [
+      "Bring existing numbers over SIP",
+      "Single speech-to-speech path"
+    ],
+    "weaknesses": [
+      "Beta"
+    ],
+    "links": {
+      "official": "https://x.ai/news/grok-voice-agent-builder",
+      "docs": null
+    },
+    "notes": "Benchmark claims (τ-voice Bench) on the page are xAI's own.",
+    "surface": "dev-tool",
+    "availability": "beta",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "claude-tag",
+    "name": "Claude Tag",
+    "company": "anthropic",
+    "launchDate": "2026-06-23",
+    "description": "Claude joins Slack channels as a team member: people tag it to delegate tasks and it replies in thread, working under its own identity. Replaces the earlier Claude in Slack app.",
+    "strengths": [
+      "Works with Opus 4.8",
+      "Builds context from the channels it is in",
+      "No extra per-seat charge"
+    ],
+    "weaknesses": [
+      "Team and Enterprise only",
+      "Slack only at launch"
+    ],
+    "links": {
+      "official": "https://www.anthropic.com/news/introducing-claude-tag",
+      "docs": "https://support.claude.com/en/articles/15594475-what-is-claude-tag"
+    },
+    "notes": "Eligible orgs received a launch credit; admins could opt in to migrate from Claude in Slack within 30 days.",
+    "surface": "app",
+    "availability": "beta",
+    "plans": [
+      "Team",
+      "Enterprise"
+    ],
+    "modelIds": [
+      "claude-opus-4-8"
+    ],
+    "retiredDate": null
+  },
+  {
+    "id": "gemini-daily-brief",
+    "name": "Daily Brief",
+    "company": "google",
+    "launchDate": "2026-05-19",
+    "description": "A personalised daily overview built from connected apps (Gmail, Calendar) and Gemini chats, with 'Top of Mind' priorities and a 'Look Ahead' section.",
+    "strengths": [
+      "Powered by Personal Intelligence",
+      "Suggests next steps"
+    ],
+    "weaknesses": [
+      "US only, subscribers 18+"
+    ],
+    "links": {
+      "official": "https://gemini.google/release-notes/",
+      "docs": null
+    },
+    "notes": "Source says 'all Google AI subscribers 18 and over in the United States'; plans list expands that to Google's AI subscription tiers.",
+    "surface": "app",
+    "availability": "region-limited",
+    "plans": [
+      "Google AI Plus",
+      "Google AI Pro",
+      "Google AI Ultra"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "gemini-spark",
+    "name": "Gemini Spark",
+    "company": "google",
+    "launchDate": "2026-05-19",
+    "description": "A 24/7 personal AI agent in the Gemini app that works on tasks on your behalf; the macOS version can organise folders and use local files.",
+    "strengths": [
+      "Works across Google Workspace",
+      "macOS app can use local files (2026-06-30)"
+    ],
+    "weaknesses": [
+      "Google AI Ultra subscribers 18+ only",
+      "US only at launch"
+    ],
+    "links": {
+      "official": "https://gemini.google/release-notes/",
+      "docs": null
+    },
+    "notes": "Trusted testers at launch, beta for US Ultra subscribers 'in the coming weeks'. macOS availability 2026-06-30 in supported countries.",
+    "surface": "app",
+    "availability": "beta",
+    "plans": [
+      "Google AI Ultra"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "grok-skills",
+    "name": "Skills (Grok)",
+    "company": "xai",
+    "launchDate": "2026-05-18",
+    "description": "Persistent instructions Grok remembers across conversations, including built-in skills for Word, PowerPoint, Excel and PDF output.",
+    "strengths": [
+      "Built-in Office document skills",
+      "Create skills from conversation"
+    ],
+    "weaknesses": [],
+    "links": {
+      "official": "https://x.ai/news/grok-skills",
+      "docs": null
+    },
+    "notes": "Live on Grok 4.3 on grok.com, iOS and Android.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [],
+    "modelIds": [
+      "grok-4-3"
+    ],
+    "retiredDate": null
+  },
+  {
+    "id": "chatgpt-finances",
+    "name": "Personal finances in ChatGPT",
+    "company": "openai",
+    "launchDate": "2026-05-15",
+    "description": "Connect financial accounts via Plaid to see spending, bills, subscriptions, net worth and investments in a dashboard and ask questions grounded in that data.",
+    "strengths": [
+      "Dashboard plus grounded Q&A",
+      "Web and iOS at launch"
+    ],
+    "weaknesses": [
+      "Cannot move money, pay bills, trade or give regulated advice",
+      "US Pro only at launch"
+    ],
+    "links": {
+      "official": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "docs": null
+    },
+    "notes": "Expanded to Plus and Android (2026-06-26) and to Free and Go (2026-10-02); credit scores added 2026-09-21. Plans reflect the latest expansion.",
+    "surface": "app",
+    "availability": "region-limited",
+    "plans": [
+      "Free",
+      "Go",
+      "Plus",
+      "Pro"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "grok-connectors",
+    "name": "Connectors (Grok)",
+    "company": "xai",
+    "launchDate": "2026-05-06",
+    "description": "Deep integrations that let Grok read and act in everyday apps such as email, calendars, slides, spreadsheets and SharePoint.",
+    "strengths": [
+      "Write access (e.g. SharePoint) when enabled",
+      "Web, iOS and Android"
+    ],
+    "weaknesses": [],
+    "links": {
+      "official": "https://x.ai/news/grok-connectors",
+      "docs": null
+    },
+    "notes": "Advanced document editing 'powered by Grok 4.3'.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [],
+    "modelIds": [
+      "grok-4-3"
+    ],
+    "retiredDate": null
+  },
+  {
+    "id": "claude-design",
+    "name": "Claude Design",
+    "company": "anthropic",
+    "launchDate": "2026-04-17",
+    "description": "An Anthropic Labs product for making designs, prototypes, slides and one-pagers with Claude through conversation, inline comments, direct edits and adjustment controls, with hand-off to Claude Code.",
+    "strengths": [
+      "Hand-off to Claude Code",
+      "Export to other tools, starting with Canva",
+      "Refine via comments, direct edits and generated sliders"
+    ],
+    "weaknesses": [
+      "Counts against subscription limits",
+      "Off by default on Enterprise at launch"
+    ],
+    "links": {
+      "official": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+      "docs": "https://claude.com/product/design"
+    },
+    "notes": "Launched as a research preview for Pro, Max, Team and Enterprise, powered by Claude Opus 4.7 (no models.json id, so modelIds is empty). From 2026-09-16 it also works inside conversations; the 2026-10-08 article says Design is out of beta and on every plan including Free, which availability/plans reflect.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Free",
+      "Pro",
+      "Max",
+      "Team",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "gemini-mac-app",
+    "name": "Gemini desktop app",
+    "company": "google",
+    "launchDate": "2026-04-15",
+    "description": "Native Gemini apps for Mac (Option+Space) and later Windows (Alt+Space) that summon Gemini alongside any app and can share your window for context.",
+    "strengths": [
+      "Free",
+      "Screen/window sharing for context",
+      "Antigravity coding agent built into the macOS app (2026-10-13)"
+    ],
+    "weaknesses": [
+      "macOS 15+ required"
+    ],
+    "links": {
+      "official": "https://gemini.google/release-notes/",
+      "docs": null
+    },
+    "notes": "Mac 2026-04-15; Windows 10+ 2026-09-10; voice dictation anywhere on macOS 2026-07-29.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "gemini-notebooks",
+    "name": "Notebooks in Gemini",
+    "company": "google",
+    "launchDate": "2026-04-08",
+    "description": "Project-style personal knowledge bases in Gemini that group chats and files with custom instructions and sync with NotebookLM.",
+    "strengths": [
+      "Syncs sources with NotebookLM",
+      "Custom instructions per notebook"
+    ],
+    "weaknesses": [
+      "Web only at launch; not for under-18, Workspace or Education accounts"
+    ],
+    "links": {
+      "official": "https://blog.google/innovation-and-ai/products/gemini-app/notebooks-gemini-notebooklm/",
+      "docs": null
+    },
+    "notes": "Google's equivalent of Projects. Free users, mobile and more European countries planned 'in the coming weeks'.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Google AI Plus",
+      "Google AI Pro",
+      "Google AI Ultra"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "meta-ai-muse-spark-upgrade",
+    "name": "New Meta AI app (Instant and Thinking modes)",
+    "company": "meta",
+    "launchDate": "2026-04-08",
+    "description": "Redesigned Meta AI app and meta.ai on Muse Spark with Instant and Thinking modes, parallel subagents, multimodal perception, health answers and visual coding of sites and mini-games.",
+    "strengths": [
+      "Parallel subagents for complex questions",
+      "Build and share websites and mini-games from a prompt"
+    ],
+    "weaknesses": [
+      "US only at launch"
+    ],
+    "links": {
+      "official": "https://about.fb.com/news/2026/04/introducing-muse-spark-meta-superintelligence-labs/",
+      "docs": null
+    },
+    "notes": "Later update on the same page: live AI camera in the app, Marketplace-aware shopping mode, and Muse Spark rolling out to Ray-Ban Meta and Oakley Meta glasses in the US and Canada.",
+    "surface": "app",
+    "availability": "region-limited",
+    "plans": [],
+    "modelIds": [
+      "muse-spark"
+    ],
+    "retiredDate": null
+  },
+  {
+    "id": "claude-dispatch-computer-use",
+    "name": "Dispatch and computer use in Cowork",
+    "company": "anthropic",
+    "launchDate": "2026-03-23",
+    "description": "Lets Claude use your computer (browser, mouse, keyboard, screen) in Claude Cowork and Claude Code when no connector exists, with Dispatch for assigning tasks from your phone while it keeps working on the desktop.",
+    "strengths": [
+      "Uses connectors first, screen control only as fallback",
+      "Asks permission before acting or opening new apps",
+      "macOS and Windows"
+    ],
+    "weaknesses": [
+      "Research preview that 'won't always work perfectly'",
+      "Desktop app must be running and awake"
+    ],
+    "links": {
+      "official": "https://claude.com/blog/dispatch-and-computer-use",
+      "docs": null
+    },
+    "notes": "Release notes list a persistent phone-to-Cowork thread (Dispatch) as a research preview on 2026-03-17 (Max first, then Pro) and computer use in Cowork/Claude Code on 2026-03-23.",
+    "surface": "app",
+    "availability": "preview",
+    "plans": [
+      "Pro",
+      "Max"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "gemini-personal-intelligence",
+    "name": "Personal Intelligence",
+    "company": "google",
+    "launchDate": "2026-01-20",
+    "description": "Connect Gemini to Gmail, Photos, YouTube and Search for more proactive, personalised answers.",
+    "strengths": [
+      "Off by default; choose which apps to connect",
+      "Web, Android and iOS"
+    ],
+    "weaknesses": [
+      "US only beta",
+      "Not for Workspace business or education plans"
+    ],
+    "links": {
+      "official": "https://gemini.google/release-notes/",
+      "docs": null
+    },
+    "notes": "Later brought to AI Mode in Search and powers Daily Brief.",
+    "surface": "app",
+    "availability": "beta",
+    "plans": [
+      "Google AI Pro",
+      "Google AI Ultra"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "claude-cowork",
+    "name": "Claude Cowork",
+    "company": "anthropic",
+    "launchDate": "2026-01-12",
+    "description": "An agentic mode for non-coding knowledge work: describe a goal and Claude works in the folders and tools you choose to complete multi-step tasks.",
+    "strengths": [
+      "Scheduled tasks and plugins",
+      "Built-in browser (added 2026-08-26)",
+      "Merged into every Claude conversation from 2026-09-16"
+    ],
+    "weaknesses": [
+      "Uses limits faster than chat (per pricing page)"
+    ],
+    "links": {
+      "official": "https://claude.com/blog/cowork-research-preview",
+      "docs": null
+    },
+    "notes": "Release notes: research preview for Max on macOS 2026-01-12; Pro 2026-01-16; generally available on macOS and Windows 2026-04-09; web and mobile from 2026-07-07; merged with chat ('one Claude') 2026-09-16. The original launch post URL now serves a product page without a date, so the launch date comes from the release notes.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Pro",
+      "Max",
+      "Team",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "chatgpt-health",
+    "name": "ChatGPT Health",
+    "company": "openai",
+    "launchDate": "2026-01-07",
+    "description": "A dedicated space in ChatGPT for health conversations that can connect medical records, Apple Health and wellness apps, kept separate from other chats and not used for training.",
+    "strengths": [
+      "Health chats, memory and files kept separate",
+      "Connect medical records and wellness apps"
+    ],
+    "weaknesses": [
+      "Waitlist and small early group at launch",
+      "Excludes EEA, Switzerland and UK; medical records US only"
+    ],
+    "links": {
+      "official": "https://openai.com/index/introducing-chatgpt-health/",
+      "docs": "https://help.openai.com/en/articles/20001036-what-is-chatgpt-health"
+    },
+    "notes": "Web and iOS at launch, Android coming. openai.com blocks direct fetch; page text retrieved via a reader proxy.",
+    "surface": "app",
+    "availability": "waitlist",
+    "plans": [
+      "Free",
+      "Go",
+      "Plus",
+      "Pro"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "grok-business-enterprise",
+    "name": "Grok Business and Grok Enterprise",
+    "company": "xai",
+    "launchDate": "2025-12-30",
+    "description": "Team and enterprise tiers of Grok with no training on customer data, shared workspaces, Google Drive apps and Collections-backed Projects; Enterprise adds SSO, SCIM and an Enterprise Vault.",
+    "strengths": [
+      "No training on business data",
+      "Permission-aware Google Drive search with citations"
+    ],
+    "weaknesses": [],
+    "links": {
+      "official": "https://x.ai/news/grok-business",
+      "docs": null
+    },
+    "notes": "Business is self-serve; Enterprise and Enterprise Vault via sales.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Business",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "grok-collections-api",
+    "name": "Collections API",
+    "company": "xai",
+    "launchDate": "2025-12-22",
+    "description": "A hosted RAG system in the xAI API: upload PDFs, spreadsheets or codebases and search them semantically, by keyword or hybrid.",
+    "strengths": [
+      "Layout-aware parsing and OCR",
+      "$2.50 per 1,000 searches"
+    ],
+    "weaknesses": [],
+    "links": {
+      "official": "https://x.ai/news/grok-collections-api",
+      "docs": null
+    },
+    "notes": "Indexing and storage free for the first week at launch.",
+    "surface": "api",
+    "availability": "ga",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "grok-voice-agent-api",
+    "name": "Grok Voice Agent API",
+    "company": "xai",
+    "launchDate": "2025-12-17",
+    "description": "An API for building multilingual voice agents that call tools and search real-time data, on the stack behind Grok Voice in the apps and Tesla vehicles.",
+    "strengths": [
+      "Flat $0.05 per minute",
+      "Under 1 s average time-to-first-audio (xAI figure)"
+    ],
+    "weaknesses": [],
+    "links": {
+      "official": "https://x.ai/news/grok-voice-agent-api",
+      "docs": null
+    },
+    "notes": "Ranking claims (Big Bench Audio #1) are xAI's own, citing Artificial Analysis.",
+    "surface": "api",
+    "availability": "ga",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "claude-for-excel",
+    "name": "Claude for Excel",
+    "company": "anthropic",
+    "launchDate": "2025-11-24",
+    "description": "Claude working inside Microsoft Excel, launched in beta alongside Claude Opus 4.5 and later extended to PowerPoint (2026-02-05) and cross-app work across Excel and PowerPoint (2026-03-11).",
+    "strengths": [
+      "Works inside the workbook",
+      "Extended to PowerPoint and cross-app Office work"
+    ],
+    "weaknesses": [
+      "Beta at launch",
+      "Max, Team and Enterprise only at launch"
+    ],
+    "links": {
+      "official": "https://support.claude.com/en/articles/12138966-release-notes",
+      "docs": null
+    },
+    "notes": "Facts from the Claude release notes only; launch blog post not fetched.",
+    "surface": "app",
+    "availability": "beta",
+    "plans": [
+      "Max",
+      "Team",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "grok-agent-tools-api",
+    "name": "Agent Tools API",
+    "company": "xai",
+    "launchDate": "2025-11-19",
+    "description": "Server-side tools in the xAI API giving agents real-time X data, web search, remote code execution and more.",
+    "strengths": [
+      "Built-in X search",
+      "Remote code execution"
+    ],
+    "weaknesses": [],
+    "links": {
+      "official": "https://x.ai/news/grok-4-1-fast",
+      "docs": null
+    },
+    "notes": "Launched with Grok 4.1 Fast, which has no models.json id.",
+    "surface": "api",
+    "availability": "ga",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "gemini-agent",
+    "name": "Gemini Agent",
+    "company": "google",
+    "launchDate": "2025-11-18",
+    "description": "An experimental tool that completes multi-step tasks using Gmail, Calendar, Deep Research, Canvas and live web browsing.",
+    "strengths": [
+      "Confirms before critical actions like sending email or purchases",
+      "Pause or take over anytime"
+    ],
+    "weaknesses": [
+      "Experimental",
+      "Ultra subscribers 18+ in the US only"
+    ],
+    "links": {
+      "official": "https://gemini.google/release-notes/",
+      "docs": null
+    },
+    "notes": "Launched with Gemini 3; release notes say 'Gemini 3' without naming Pro, so modelIds left empty.",
+    "surface": "app",
+    "availability": "preview",
+    "plans": [
+      "Google AI Ultra"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "gemini-dynamic-view",
+    "name": "Visual layout and dynamic view",
+    "company": "google",
+    "launchDate": "2025-11-18",
+    "description": "Gemini Labs features that answer with immersive visual layouts or with a custom interactive interface that Gemini designs and codes for the prompt.",
+    "strengths": [
+      "Generative UI per prompt"
+    ],
+    "weaknesses": [
+      "Experimental Labs feature rolled out to subsets of users"
+    ],
+    "links": {
+      "official": "https://gemini.google/release-notes/",
+      "docs": null
+    },
+    "notes": "Richer interactive responses (multi-layer images, video overviews) followed in the main chat 2026-05-19.",
+    "surface": "app",
+    "availability": "preview",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "chatgpt-group-chats",
+    "name": "Group chats in ChatGPT",
+    "company": "openai",
+    "launchDate": "2025-11-13",
+    "description": "Shared conversations where several people and ChatGPT plan, decide and collaborate in one thread.",
+    "strengths": [
+      "Powered by GPT-5.1 Auto",
+      "Search, images, file upload and dictation enabled"
+    ],
+    "weaknesses": [
+      "Pilot in NZ, Japan, South Korea and Taiwan at launch",
+      "Creation of new group chats ended 2026-07-09"
+    ],
+    "links": {
+      "official": "https://openai.com/index/group-chats-in-chatgpt/",
+      "docs": null
+    },
+    "notes": "Retirement began 2026-07-09: no new group chats, but existing ones remain usable 'for now' and later become read-only, so retiredDate is left null.",
+    "surface": "app",
+    "availability": "region-limited",
+    "plans": [
+      "Free",
+      "Go",
+      "Plus",
+      "Pro"
+    ],
+    "modelIds": [
+      "gpt-5-1"
+    ],
+    "retiredDate": null
+  },
+  {
+    "id": "chatgpt-atlas",
+    "name": "ChatGPT Atlas",
+    "company": "openai",
+    "launchDate": "2025-10-21",
+    "description": "A web browser built around ChatGPT, with browser memories and an agent mode that can work in tabs on your behalf.",
+    "strengths": [
+      "Agent mode using browsing context",
+      "User-controlled browser memories"
+    ],
+    "weaknesses": [
+      "macOS only at launch",
+      "Retired 2026-08-09"
+    ],
+    "links": {
+      "official": "https://openai.com/index/introducing-chatgpt-atlas/",
+      "docs": null
+    },
+    "notes": "Launched worldwide on macOS for Free, Plus, Pro and Go; beta for Business; Enterprise/Edu if admin-enabled. Agent mode in preview for Plus, Pro and Business. Deprecated 2026-07-09; scheduled to stop working 2026-08-09.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Free",
+      "Go",
+      "Plus",
+      "Pro",
+      "Business",
+      "Enterprise",
+      "Edu"
+    ],
+    "modelIds": [],
+    "retiredDate": "2026-08-09"
+  },
+  {
+    "id": "claude-agent-skills",
+    "name": "Agent Skills",
+    "company": "anthropic",
+    "launchDate": "2025-10-16",
+    "description": "Folders of instructions, scripts and resources that Claude loads only when relevant, usable in the Claude apps, the Claude Developer Platform (API) and Claude Code.",
+    "strengths": [
+      "Claude invokes relevant skills automatically",
+      "Same skills work across apps, API and Claude Code",
+      "Published as an open standard (2025-12-18 update)"
+    ],
+    "weaknesses": [
+      "Requires the Code Execution Tool beta",
+      "Team/Enterprise admins must enable org-wide"
+    ],
+    "links": {
+      "official": "https://claude.com/blog/skills",
+      "docs": null
+    },
+    "notes": "Spans app, API and Claude Code; surface set to 'app' because plans are stated for the apps. API exposes a /v1/skills endpoint.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Pro",
+      "Max",
+      "Team",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "openai-agentkit",
+    "name": "AgentKit",
+    "company": "openai",
+    "launchDate": "2025-10-06",
+    "description": "A developer toolset for building, deploying and optimising agents: visual Agent Builder, ChatKit for embedding chat UIs, Connector Registry and expanded Evals.",
+    "strengths": [
+      "ChatKit and Evals generally available at launch",
+      "Visual workflow builder with versioning"
+    ],
+    "weaknesses": [
+      "Agent Builder in beta at launch",
+      "Agent Builder and Evals being wound down from 2026-11-30"
+    ],
+    "links": {
+      "official": "https://openai.com/index/introducing-agentkit/",
+      "docs": null
+    },
+    "notes": "2026-06-03 update: OpenAI is winding down Agent Builder and Evals; unavailable from 2026-11-30 (future date, so retiredDate left null). Recommends the Agents SDK instead.",
+    "surface": "dev-tool",
+    "availability": "ga",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "chatgpt-apps-sdk",
+    "name": "Apps in ChatGPT and the Apps SDK",
+    "company": "openai",
+    "launchDate": "2025-10-06",
+    "description": "Interactive third-party apps that run inside ChatGPT conversations, plus the Apps SDK (built on MCP) for developers to build them.",
+    "strengths": [
+      "Apps SDK is an open standard built on MCP",
+      "Launch partners included Booking.com, Canva, Figma, Spotify, Zillow"
+    ],
+    "weaknesses": [
+      "Excluded the EEA, Switzerland and UK at launch"
+    ],
+    "links": {
+      "official": "https://openai.com/index/introducing-apps-in-chatgpt/",
+      "docs": null
+    },
+    "notes": "Business, Enterprise and Edu got apps in preview 2025-11-13. App directory opened 2025-12-18; replaced by the Plugin Directory 2026-07-09.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Free",
+      "Go",
+      "Plus",
+      "Pro"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "sora-app",
+    "name": "Sora app",
+    "company": "openai",
+    "launchDate": "2025-09-30",
+    "description": "A social iOS app powered by Sora 2 for creating and remixing short videos, with a feed and 'characters' that drop users into scenes.",
+    "strengths": [
+      "Characters (cameo-style self insertion)",
+      "Remix and customizable feed"
+    ],
+    "weaknesses": [
+      "iOS only at launch",
+      "Product discontinued"
+    ],
+    "links": {
+      "official": "https://openai.com/index/sora-2/",
+      "docs": null
+    },
+    "notes": "The Sora 2 page now states: 'As of April 26, 2026, the Sora product is no longer available.' Sora 2 itself is a video model (no models.json id).",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": "2026-04-26"
+  },
+  {
+    "id": "chatgpt-instant-checkout",
+    "name": "Instant Checkout",
+    "company": "openai",
+    "launchDate": "2025-09-29",
+    "description": "Buy products directly from merchants inside ChatGPT, powered by the open Agentic Commerce Protocol built with Stripe.",
+    "strengths": [
+      "Organic, unsponsored product results",
+      "Open Agentic Commerce Protocol for merchants"
+    ],
+    "weaknesses": [
+      "US only, single-item purchases from Etsy sellers at launch"
+    ],
+    "links": {
+      "official": "https://openai.com/index/buy-it-in-chatgpt/",
+      "docs": "https://help.openai.com/en/articles/12440090-instant-checkout"
+    },
+    "notes": "Shopify merchants started rolling out 2025-11-20.",
+    "surface": "app",
+    "availability": "region-limited",
+    "plans": [
+      "Free",
+      "Plus",
+      "Pro"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "meta-ai-vibes",
+    "name": "Vibes",
+    "company": "meta",
+    "launchDate": "2025-09-25",
+    "description": "A feed of short AI-generated videos in the Meta AI app and meta.ai where people create, remix and share clips, including cross-posting to Instagram and Facebook.",
+    "strengths": [
+      "Remix any video in the feed",
+      "Cross-post to Instagram and Facebook Stories and Reels"
+    ],
+    "weaknesses": [
+      "Early preview at launch"
+    ],
+    "links": {
+      "official": "https://about.fb.com/news/2025/09/introducing-vibes-ai-videos/",
+      "docs": null
+    },
+    "notes": "Expanded to Europe in November 2025.",
+    "surface": "app",
+    "availability": "preview",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "chatgpt-pulse",
+    "name": "ChatGPT Pulse",
+    "company": "openai",
+    "launchDate": "2025-09-25",
+    "description": "ChatGPT did asynchronous research overnight based on chats, memory, feedback and connected apps and delivered a daily set of visual update cards.",
+    "strengths": [
+      "Proactive daily briefings",
+      "Curate topics by feedback"
+    ],
+    "weaknesses": [
+      "Pro on mobile only at launch",
+      "Sunset in favour of scheduled tasks"
+    ],
+    "links": {
+      "official": "https://openai.com/index/introducing-chatgpt-pulse/",
+      "docs": null
+    },
+    "notes": "Web added 2025-10-29. Release notes 2026-06-17: Pulse is being sunset; Pro users keep access for 14 days, so retiredDate is computed as 2026-07-01.",
+    "surface": "app",
+    "availability": "preview",
+    "plans": [
+      "Pro"
+    ],
+    "modelIds": [],
+    "retiredDate": "2026-07-01"
+  },
+  {
+    "id": "meta-ray-ban-display",
+    "name": "Meta Ray-Ban Display",
+    "company": "meta",
+    "launchDate": "2025-09-17",
+    "description": "AI glasses with a full-colour in-lens display, bundled with the Meta Neural Band EMG wristband for gesture control; shows Meta AI answers, messages, calls and a camera viewfinder.",
+    "strengths": [
+      "EMG wristband control via subtle finger movements",
+      "Neural Band: 18 h battery, IPX7"
+    ],
+    "weaknesses": [
+      "$799 with Neural Band",
+      "US limited retail at launch"
+    ],
+    "links": {
+      "official": "https://about.fb.com/news/2025/09/meta-ray-ban-display-ai-glasses-emg-wristband/",
+      "docs": null
+    },
+    "notes": "Announced at Connect 2025 (post timestamp 2025-09-18 UTC); on sale 2025-09-30 in the US. Connect 2026 added online ordering and expansion to the UK, Canada, France, Italy and Germany.",
+    "surface": "hardware",
+    "availability": "region-limited",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "claude-memory",
+    "name": "Memory (Claude)",
+    "company": "anthropic",
+    "launchDate": "2025-09-11",
+    "description": "Claude remembers your and your team's projects and preferences across chats, with separate memory per project, an editable memory summary and incognito chats that don't save.",
+    "strengths": [
+      "Project-scoped memory",
+      "Editable memory summary",
+      "Incognito chats"
+    ],
+    "weaknesses": [
+      "Off by default for Team and Enterprise members (later help pages)"
+    ],
+    "links": {
+      "official": "https://claude.com/blog/memory",
+      "docs": null
+    },
+    "notes": "Team and Enterprise first (2025-09-11); Pro and Max 2025-10-23; free users 2026-03-02 (release notes). Chat search across past conversations preceded it on 2025-08-11. Reworked memory 2026-07-10.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Free",
+      "Pro",
+      "Max",
+      "Team",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "claude-file-creation",
+    "name": "File creation (Claude)",
+    "company": "anthropic",
+    "launchDate": "2025-09-09",
+    "description": "Claude creates and edits Excel spreadsheets, Word documents, PowerPoint decks and PDFs in Claude.ai and the desktop app, using a private computer environment to write and run code.",
+    "strengths": [
+      "Spreadsheets with working formulas",
+      "Converts between formats, e.g. PDF report to slides"
+    ],
+    "weaknesses": [
+      "Started as a preview behind an experimental setting"
+    ],
+    "links": {
+      "official": "https://claude.com/blog/create-files",
+      "docs": "https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude"
+    },
+    "notes": "Preview for Max, Team and Enterprise at launch, Pro 'in the coming weeks' (release notes: Pro and mobile 2025-09-29). Post update: generally available for paid plans with network and egress controls on 2025-10-21.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Pro",
+      "Max",
+      "Team",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "claude-in-chrome",
+    "name": "Claude in Chrome",
+    "company": "anthropic",
+    "launchDate": "2025-08-25",
+    "description": "A Chrome extension in which Claude takes actions in the browser on the user's behalf.",
+    "strengths": [
+      "Prompt-injection mitigations cut attack success from 23.6% to 11.2% (Anthropic's figure)",
+      "Org-wide admin enable/disable"
+    ],
+    "weaknesses": [
+      "Started as a 1,000-user Max research preview via waitlist"
+    ],
+    "links": {
+      "official": "https://claude.com/blog/claude-for-chrome",
+      "docs": null
+    },
+    "notes": "Blog dated 2025-08-25; release notes list it on 2025-08-26. Beta for all Max subscribers 2025-11-24; Pro, Team and Enterprise 2025-12-18.",
+    "surface": "app",
+    "availability": "beta",
+    "plans": [
+      "Pro",
+      "Max",
+      "Team",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "gemini-guided-learning",
+    "name": "Guided Learning",
+    "company": "google",
+    "launchDate": "2025-08-06",
+    "description": "A Gemini mode that guides users through subjects step by step instead of giving a single answer.",
+    "strengths": [
+      "Open to all users"
+    ],
+    "weaknesses": [],
+    "links": {
+      "official": "https://gemini.google/release-notes/",
+      "docs": null
+    },
+    "notes": "",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "gemini-deep-think",
+    "name": "Deep Think",
+    "company": "google",
+    "launchDate": "2025-08-01",
+    "description": "Gemini's most advanced reasoning mode, using parallel streams of thought and returning answers after a few minutes.",
+    "strengths": [
+      "Parallel hypotheses for hard math, science and coding problems"
+    ],
+    "weaknesses": [
+      "Google AI Ultra only",
+      "Responses take minutes"
+    ],
+    "links": {
+      "official": "https://gemini.google/release-notes/",
+      "docs": null
+    },
+    "notes": "Launched as Gemini 2.5 Deep Think (early, limited access); Gemini 3 Deep Think 2025-12-04; major upgrade 2026-02-12. A reasoning mode rather than a separate model id.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Google AI Ultra"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "chatgpt-study-mode",
+    "name": "Study mode",
+    "company": "openai",
+    "launchDate": "2025-07-29",
+    "description": "A learning mode that walks users through problems step by step instead of giving the answer.",
+    "strengths": [
+      "Available on Free",
+      "Built from educator-informed system instructions"
+    ],
+    "weaknesses": [
+      "Implemented with custom system instructions, so behaviour can be inconsistent (per OpenAI)"
+    ],
+    "links": {
+      "official": "https://openai.com/index/chatgpt-study-mode/",
+      "docs": null
+    },
+    "notes": "Edu availability promised 'in the next few weeks' at launch.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Free",
+      "Plus",
+      "Pro",
+      "Team"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "chatgpt-agent",
+    "name": "ChatGPT agent",
+    "company": "openai",
+    "launchDate": "2025-07-17",
+    "description": "Agent mode combining Operator's website interaction, deep research's synthesis and ChatGPT's conversation on its own virtual computer, producing slides and spreadsheets.",
+    "strengths": [
+      "Asks permission before consequential actions",
+      "Uses connectors"
+    ],
+    "weaknesses": [
+      "400 messages/month on Pro, 40 on other paid plans at launch",
+      "Slide generation in beta at launch"
+    ],
+    "links": {
+      "official": "https://openai.com/index/introducing-chatgpt-agent/",
+      "docs": "https://help.openai.com/en/articles/11752874-chatgpt-agent"
+    },
+    "notes": "The help centre now says ChatGPT agent is no longer available and points to ChatGPT Work (launched 2026-07-09); no exact retirement date found, so retiredDate is null.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Plus",
+      "Pro",
+      "Team",
+      "Enterprise",
+      "Edu"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "oakley-meta-hstn",
+    "name": "Oakley Meta HSTN",
+    "company": "meta",
+    "launchDate": "2025-06-20",
+    "description": "Meta's first performance AI glasses for athletes, with a built-in camera, open-ear audio and Meta AI.",
+    "strengths": [
+      "Up to 8 h typical use",
+      "50% charge in 20 minutes"
+    ],
+    "weaknesses": [
+      "Limited edition $499; rest of line from $399"
+    ],
+    "links": {
+      "official": "https://about.fb.com/news/2025/06/introducing-oakley-meta-glasses-a-new-category-of-performance-ai-glasses/",
+      "docs": null
+    },
+    "notes": "Announced 2025-06-20; pre-orders from 2025-07-11 in 15 countries.",
+    "surface": "hardware",
+    "availability": "region-limited",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "gemini-scheduled-actions",
+    "name": "Scheduled actions",
+    "company": "google",
+    "launchDate": "2025-06-19",
+    "description": "Schedule one-time or recurring tasks in the Gemini app, such as a daily summary of calendar and unread email.",
+    "strengths": [
+      "Recurring and one-off tasks"
+    ],
+    "weaknesses": [
+      "Paid plans and qualifying Workspace plans only"
+    ],
+    "links": {
+      "official": "https://gemini.google/release-notes/",
+      "docs": null
+    },
+    "notes": "",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Google AI Pro",
+      "Google AI Ultra"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "meta-ai-video-editing",
+    "name": "AI video editing in Meta AI",
+    "company": "meta",
+    "launchDate": "2025-06-11",
+    "description": "Preset-prompt AI video editing that restyles 10 seconds of a short video (outfit, location, style) in the Meta AI app, meta.ai and Edits.",
+    "strengths": [
+      "50+ preset prompts",
+      "Free for a limited time"
+    ],
+    "weaknesses": [
+      "Preset prompts only at launch",
+      "10-second clips"
+    ],
+    "links": {
+      "official": "https://about.fb.com/news/2025/06/edit-videos-with-meta-ai/",
+      "docs": null
+    },
+    "notes": "Available in the US and more than a dozen other countries. Inspired by Movie Gen.",
+    "surface": "app",
+    "availability": "region-limited",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "google-ai-mode",
+    "name": "AI Mode in Search",
+    "company": "google",
+    "launchDate": "2025-05-20",
+    "description": "A conversational AI search mode in Google Search, rolled out to everyone in the US without Labs sign-up.",
+    "strengths": [
+      "No sign-up in the US",
+      "Custom version of Gemini 2.5"
+    ],
+    "weaknesses": [
+      "US only at launch"
+    ],
+    "links": {
+      "official": "https://blog.google/products-and-platforms/products/search/google-search-ai-mode-update/",
+      "docs": null
+    },
+    "notes": "Earlier available through Search Labs. Custom Gemini 2.5 isn't mapped to a models.json id.",
+    "surface": "app",
+    "availability": "region-limited",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "google-flow",
+    "name": "Flow",
+    "company": "google",
+    "launchDate": "2025-05-20",
+    "description": "Google's AI filmmaking tool built for Veo, Imagen and Gemini, with camera controls, Scenebuilder and asset management.",
+    "strengths": [
+      "Scenebuilder for editing and extending shots",
+      "Ultra got early Veo 3 with native audio"
+    ],
+    "weaknesses": [
+      "US only at launch",
+      "Pro tier capped at 100 generations/month"
+    ],
+    "links": {
+      "official": "https://blog.google/innovation-and-ai/products/google-flow-veo-ai-filmmaking-tool/",
+      "docs": null
+    },
+    "notes": "Evolved from the VideoFX Labs experiment.",
+    "surface": "app",
+    "availability": "region-limited",
+    "plans": [
+      "Google AI Pro",
+      "Google AI Ultra"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "gemini-in-chrome",
+    "name": "Gemini in Chrome",
+    "company": "google",
+    "launchDate": "2025-05-20",
+    "description": "Gemini inside Chrome that uses the current page as context, later rebuilt with a side panel, Google app integrations, Nano Banana editing and an 'auto browse' agent preview.",
+    "strengths": [
+      "Page-aware help without switching tabs",
+      "Auto browse agent (preview, 2026-01-28)"
+    ],
+    "weaknesses": [
+      "US only",
+      "Not for Workspace business/education plans (2026 update)"
+    ],
+    "links": {
+      "official": "https://gemini.google/release-notes/",
+      "docs": "https://support.google.com/gemini?p=gemini_chrome"
+    },
+    "notes": "First launched 2025-05-20; major update on Gemini 3 2026-01-28 for Windows, macOS and Chromebook Plus in the US, with auto browse in preview for Pro and Ultra.",
+    "surface": "app",
+    "availability": "region-limited",
+    "plans": [
+      "Google AI Pro",
+      "Google AI Ultra"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "claude-integrations",
+    "name": "Integrations (Claude)",
+    "company": "anthropic",
+    "launchDate": "2025-05-01",
+    "description": "Connects remote apps and tools to Claude, launched together with an advanced Research mode.",
+    "strengths": [
+      "Pairs with advanced Research",
+      "Expanded to Pro within a month"
+    ],
+    "weaknesses": [
+      "Beta at launch on Max, Team and Enterprise only"
+    ],
+    "links": {
+      "official": "https://claude.com/blog/integrations",
+      "docs": null
+    },
+    "notes": "June 3, 2025 update: Integrations and Research available on Pro, Max, Team and Enterprise. The page doesn't say when beta ended, so availability stays 'beta'.",
+    "surface": "app",
+    "availability": "beta",
+    "plans": [
+      "Pro",
+      "Max",
+      "Team",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "llama-api",
+    "name": "Llama API",
+    "company": "meta",
+    "launchDate": "2025-04-29",
+    "description": "Meta's developer platform for Llama models, announced at LlamaCon, with one-click API keys and playgrounds.",
+    "strengths": [
+      "Free limited preview",
+      "Models and weights not locked in"
+    ],
+    "weaknesses": [
+      "Limited preview"
+    ],
+    "links": {
+      "official": "https://ai.meta.com/blog/llamacon-llama-news/",
+      "docs": null
+    },
+    "notes": "Superseded in practice by the Meta Model API (2026-07-09); no retirement date found.",
+    "surface": "api",
+    "availability": "preview",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "meta-ai-app",
+    "name": "Meta AI app",
+    "company": "meta",
+    "launchDate": "2025-04-29",
+    "description": "A standalone voice-first Meta AI app built with Llama 4, with memory, personalisation from Facebook/Instagram, a Discover feed and Ray-Ban Meta glasses support (replacing Meta View).",
+    "strengths": [
+      "Full-duplex voice demo",
+      "Merged with the glasses companion app"
+    ],
+    "weaknesses": [
+      "Voice limited to US, Canada, Australia and NZ at launch"
+    ],
+    "links": {
+      "official": "https://about.fb.com/news/2025/04/introducing-meta-ai-app-new-way-access-ai-assistant/",
+      "docs": null
+    },
+    "notes": "'Llama 4' is not mapped to a specific models.json id. Rebuilt on Muse Spark in April 2026 (separate entry).",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "claude-research",
+    "name": "Research (Claude)",
+    "company": "anthropic",
+    "launchDate": "2025-04-15",
+    "description": "Anthropic's deep-research mode, launched together with a Google Workspace integration so research can draw on web and work sources.",
+    "strengths": [
+      "Combines web and Google Workspace sources",
+      "Advanced mode added 2025-05-01"
+    ],
+    "weaknesses": [
+      "Early beta at launch, limited to US, Japan and Brazil"
+    ],
+    "links": {
+      "official": "https://claude.com/blog/research",
+      "docs": null
+    },
+    "notes": "Anthropic's equivalent of 'Deep Research' (named Research). Launch: early beta for Max, Team and Enterprise in the US, Japan and Brazil; Pro added by the 2025-06-03 update on the Integrations post.",
+    "surface": "app",
+    "availability": "beta",
+    "plans": [
+      "Pro",
+      "Max",
+      "Team",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "chatgpt-4o-image-generation",
+    "name": "4o image generation",
+    "company": "openai",
+    "launchDate": "2025-03-25",
+    "description": "Native GPT-4o image generation became ChatGPT's default image generator, replacing DALL·E in the main chat.",
+    "strengths": [
+      "Default for Free, Plus, Pro and Team users",
+      "Also in Sora"
+    ],
+    "weaknesses": [
+      "API access came weeks later"
+    ],
+    "links": {
+      "official": "https://openai.com/index/introducing-4o-image-generation/",
+      "docs": null
+    },
+    "notes": "DALL·E remained via a dedicated GPT until it was retired 2026-07-31. ChatGPT Images 2.0 (2026-04-21) and 2.5 (2026-09-08) followed.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Free",
+      "Plus",
+      "Pro",
+      "Team"
+    ],
+    "modelIds": [
+      "gpt-4o"
+    ],
+    "retiredDate": null
+  },
+  {
+    "id": "claude-web-search",
+    "name": "Web search (Claude)",
+    "company": "anthropic",
+    "launchDate": "2025-03-20",
+    "description": "Claude searches the web and cites sources directly in its answers.",
+    "strengths": [
+      "Direct citations",
+      "Available on all plans globally since 2025-05-27"
+    ],
+    "weaknesses": [
+      "Launched as a US-only feature preview for paid users"
+    ],
+    "links": {
+      "official": "https://claude.com/blog/web-search",
+      "docs": null
+    },
+    "notes": "Launched with Claude 3.7 Sonnet as a US feature preview for paid users; 2025-05-27 update: available globally on all Claude plans.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Free",
+      "Pro",
+      "Max",
+      "Team",
+      "Enterprise"
+    ],
+    "modelIds": [
+      "claude-3-7-sonnet"
+    ],
+    "retiredDate": null
+  },
+  {
+    "id": "gemini-audio-overview",
+    "name": "Audio Overview in Gemini",
+    "company": "google",
+    "launchDate": "2025-03-18",
+    "description": "Podcast-style conversations between two AI hosts generated from documents, slides and Deep Research reports.",
+    "strengths": [
+      "Same technology as NotebookLM Audio Overviews"
+    ],
+    "weaknesses": [],
+    "links": {
+      "official": "https://gemini.google/release-notes/",
+      "docs": null
+    },
+    "notes": "",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "gemini-canvas",
+    "name": "Canvas (Gemini)",
+    "company": "google",
+    "launchDate": "2025-03-18",
+    "description": "An interactive space for co-writing documents and generating and previewing code (React, HTML) with Gemini.",
+    "strengths": [
+      "Available globally in all Gemini languages",
+      "Create menu for web pages, infographics, quizzes (2025-05-20)"
+    ],
+    "weaknesses": [],
+    "links": {
+      "official": "https://gemini.google/release-notes/",
+      "docs": null
+    },
+    "notes": "Launched with Gemini 2.0 Flash.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [],
+    "modelIds": [
+      "gemini-2-0-flash"
+    ],
+    "retiredDate": null
+  },
+  {
+    "id": "openai-responses-api",
+    "name": "Responses API and Agents SDK",
+    "company": "openai",
+    "launchDate": "2025-03-11",
+    "description": "API building blocks for agents: the Responses API with built-in web search, file search and computer use tools, plus the open-source Agents SDK.",
+    "strengths": [
+      "Built-in web search tool with citations",
+      "File search at $2.50 per 1,000 queries"
+    ],
+    "weaknesses": [
+      "Web search tool in preview at launch"
+    ],
+    "links": {
+      "official": "https://openai.com/index/new-tools-for-building-agents/",
+      "docs": null
+    },
+    "notes": "Web search tool available with gpt-4o and gpt-4o-mini at launch.",
+    "surface": "api",
+    "availability": "ga",
+    "plans": [],
+    "modelIds": [
+      "gpt-4o"
+    ],
+    "retiredDate": null
+  },
+  {
+    "id": "grok-deepsearch",
+    "name": "DeepSearch",
+    "company": "xai",
+    "launchDate": "2025-02-19",
+    "description": "xAI's first agent: searches across the web and X, reasons about conflicting sources and synthesises a report.",
+    "strengths": [
+      "Includes real-time news and X content"
+    ],
+    "weaknesses": [
+      "X Premium+ only at launch"
+    ],
+    "links": {
+      "official": "https://x.ai/news/grok-3",
+      "docs": null
+    },
+    "notes": "xAI's Deep Research equivalent. Launched with Grok 3 (models.json lists grok-3 as 2025-02-17; the xAI post is dated Feb 19, 2025). Think mode (reasoning) launched in the same post.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "X Premium+"
+    ],
+    "modelIds": [
+      "grok-3"
+    ],
+    "retiredDate": null
+  },
+  {
+    "id": "openai-deep-research",
+    "name": "Deep research (ChatGPT)",
+    "company": "openai",
+    "launchDate": "2025-02-02",
+    "description": "An agent in ChatGPT that does multi-step internet research for 5-30 minutes and returns a cited report.",
+    "strengths": [
+      "Cites specific passages",
+      "Connect to MCP/apps and restrict to trusted sites (2026-02-10)"
+    ],
+    "weaknesses": [
+      "Pro only with 100 queries/month at launch",
+      "Can hallucinate and is poorly calibrated on uncertainty (per OpenAI)"
+    ],
+    "links": {
+      "official": "https://openai.com/index/introducing-deep-research/",
+      "docs": null
+    },
+    "notes": "Powered by a version of o3 optimised for browsing; not mapped to the o3 id because the post describes a distinct fine-tune. Plus access 2025-02-25; Free (5/month) by April 2025. Legacy deep research mode deprecation notice 2026-03-19.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Free",
+      "Plus",
+      "Pro",
+      "Team",
+      "Enterprise",
+      "Edu"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "openai-operator",
+    "name": "Operator",
+    "company": "openai",
+    "launchDate": "2025-01-23",
+    "description": "A research-preview agent with its own browser that types, clicks and scrolls to complete web tasks.",
+    "strengths": [
+      "Built on the Computer-Using Agent model"
+    ],
+    "weaknesses": [
+      "US Pro only",
+      "Struggled with complex interfaces (per OpenAI)"
+    ],
+    "links": {
+      "official": "https://openai.com/index/introducing-operator/",
+      "docs": null
+    },
+    "notes": "Folded into ChatGPT agent on 2025-07-17; the help centre says the Operator website is no longer accessible. No exact shutdown date on a primary page, so retiredDate is null.",
+    "surface": "app",
+    "availability": "preview",
+    "plans": [
+      "Pro"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "chatgpt-tasks",
+    "name": "Scheduled tasks (ChatGPT)",
+    "company": "openai",
+    "launchDate": "2025-01-14",
+    "description": "Ask ChatGPT to do things at a future time: one-time reminders or recurring actions.",
+    "strengths": [
+      "Recurring and one-off tasks",
+      "Webhook triggers and sharing (2026-08-25)"
+    ],
+    "weaknesses": [
+      "Early beta at launch"
+    ],
+    "links": {
+      "official": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "docs": null
+    },
+    "notes": "Relaunched 2026-06-17 with a Scheduled page and monitoring tasks for Plus, Pro, Business and Enterprise; Free users got scheduled tasks 2026-08-25.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Free",
+      "Plus",
+      "Pro",
+      "Business",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "chatgpt-projects",
+    "name": "Projects (ChatGPT)",
+    "company": "openai",
+    "launchDate": "2024-12-13",
+    "description": "Groups files and chats with custom instructions so conversations in the project share that context.",
+    "strengths": [
+      "Shared projects for collaborators (2025-10-23)",
+      "Project-only memory"
+    ],
+    "weaknesses": [
+      "File limits by plan (5 on Free to 40 on Pro)"
+    ],
+    "links": {
+      "official": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "docs": "https://help.openai.com/en/articles/10169521-projects-in-chatgpt"
+    },
+    "notes": "Predates 2025; included because Maia named it. Launched for Plus, Team and Pro using GPT-4o; Free tier 2025-09-03; sharing for all users 2025-10-23.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Free",
+      "Go",
+      "Plus",
+      "Pro",
+      "Business",
+      "Enterprise",
+      "Edu"
+    ],
+    "modelIds": [
+      "gpt-4o"
+    ],
+    "retiredDate": null
+  },
+  {
+    "id": "gemini-deep-research",
+    "name": "Deep Research (Gemini)",
+    "company": "google",
+    "launchDate": "2024-12-11",
+    "description": "Gemini breaks a prompt into research questions, analyses sites and writes multi-page reports that can be opened in Google Docs.",
+    "strengths": [
+      "Reports open in Google Docs",
+      "Upload your own files as sources (2025-05-20)"
+    ],
+    "weaknesses": [
+      "Gemini Advanced only and English only at launch"
+    ],
+    "links": {
+      "official": "https://gemini.google/release-notes/",
+      "docs": null
+    },
+    "notes": "Predates 2025 but is a named Deep Research feature. Launched as 'Gemini 1.5 Pro with Deep Research'; opened to free users on Gemini 2.0 Flash Thinking 2025-03-13; on 2.5 Flash for everyone 2025-05-20.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [],
+    "modelIds": [
+      "gemini-1-5-pro"
+    ],
+    "retiredDate": null
+  },
+  {
+    "id": "claude-computer-use",
+    "name": "Computer use (Claude API)",
+    "company": "anthropic",
+    "launchDate": "2024-10-22",
+    "description": "An API capability that lets Claude operate a computer by looking at the screen, moving the cursor, clicking and typing.",
+    "strengths": [
+      "First frontier model offering computer use in public beta (per Anthropic)",
+      "Available on Anthropic API, Amazon Bedrock and Vertex AI"
+    ],
+    "weaknesses": [
+      "Described as experimental at launch"
+    ],
+    "links": {
+      "official": "https://www.anthropic.com/news/3-5-models-and-computer-use",
+      "docs": null
+    },
+    "notes": "Predates 2025; included because it is a named, foundational feature. Launched with the upgraded Claude 3.5 Sonnet.",
+    "surface": "api",
+    "availability": "beta",
+    "plans": [],
+    "modelIds": [
+      "claude-3-5-sonnet"
+    ],
+    "retiredDate": null
+  },
+  {
+    "id": "chatgpt-canvas",
+    "name": "Canvas (ChatGPT)",
+    "company": "openai",
+    "launchDate": "2024-10-03",
+    "description": "A side-by-side workspace for writing and coding with ChatGPT, with inline edits and shortcuts.",
+    "strengths": [
+      "Python execution in canvas (2024-12-10)",
+      "Sharing (2025-02-06)"
+    ],
+    "weaknesses": [
+      "Plus and Team only during beta"
+    ],
+    "links": {
+      "official": "https://openai.com/index/introducing-canvas/",
+      "docs": null
+    },
+    "notes": "Predates 2025; included as a named feature. Beta for Plus and Team at launch, built with GPT-4o; available to all users by default 2024-12-10.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Free",
+      "Plus",
+      "Pro",
+      "Team",
+      "Enterprise",
+      "Edu"
+    ],
+    "modelIds": [
+      "gpt-4o"
+    ],
+    "retiredDate": null
+  },
+  {
+    "id": "gemini-gems",
+    "name": "Gems",
+    "company": "google",
+    "launchDate": "2024-08-28",
+    "description": "Custom Gemini experts built from instructions, details and workflows.",
+    "strengths": [
+      "Free to all users since 2025-03-13",
+      "Shareable since 2025-09-18"
+    ],
+    "weaknesses": [
+      "Being replaced by skills"
+    ],
+    "links": {
+      "official": "https://gemini.google/release-notes/",
+      "docs": null
+    },
+    "notes": "Predates 2025; included for context because skills replace it. Launched for Gemini Advanced and Workspace add-on users.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "gemini-live",
+    "name": "Gemini Live",
+    "company": "google",
+    "launchDate": "2024-08-13",
+    "description": "Natural, interruptible voice conversations with Gemini on your phone, later with camera and screen sharing and app connections.",
+    "strengths": [
+      "Interruptible real-time conversation",
+      "Integrated into chat with app connections (2026-05-19)"
+    ],
+    "weaknesses": [
+      "Launched English-only on Android for Gemini Advanced"
+    ],
+    "links": {
+      "official": "https://blog.google/products-and-platforms/products/gemini/made-by-google-gemini-ai-updates/",
+      "docs": null
+    },
+    "notes": "Predates 2025; included as a named feature. Release notes list 'Go Live with Gemini' on 2024-09-04; the Made by Google post (2024-08-13) is the launch. Integrated into chat on Android and iOS 2026-05-19.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "claude-projects",
+    "name": "Projects (Claude)",
+    "company": "anthropic",
+    "launchDate": "2024-06-25",
+    "description": "Organises chats with their own knowledge base and instructions on Claude.ai, with Team users able to make their best chats viewable by teammates.",
+    "strengths": [
+      "200K context per project",
+      "Team sharing"
+    ],
+    "weaknesses": [
+      "Pro and Team only at launch"
+    ],
+    "links": {
+      "official": "https://www.anthropic.com/news/projects",
+      "docs": null
+    },
+    "notes": "Predates 2025; included because Maia named it. Project sharing for Team/Enterprise added 2025-08-01 (release notes). Plans reflect launch.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Pro",
+      "Team"
+    ],
+    "modelIds": [
+      "claude-3-5-sonnet"
+    ],
+    "retiredDate": null
+  },
+  {
+    "id": "claude-artifacts",
+    "name": "Artifacts",
+    "company": "anthropic",
+    "launchDate": "2024-06-21",
+    "description": "A window beside the Claude.ai conversation that shows and lets you iterate on generated content such as code, documents and designs.",
+    "strengths": [
+      "Live preview beside the chat",
+      "Embeddable shared artifacts (2025-08-21)"
+    ],
+    "weaknesses": [],
+    "links": {
+      "official": "https://www.anthropic.com/news/claude-3-5-sonnet",
+      "docs": null
+    },
+    "notes": "Predates 2025; included as a named feature. Announced in the Claude 3.5 Sonnet post, which the fetched page dates Jun 21, 2024 (often cited as June 20). Launch post doesn't name plans.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [],
+    "modelIds": [
+      "claude-3-5-sonnet"
+    ],
+    "retiredDate": null
+  },
+  {
+    "id": "chatgpt-memory",
+    "name": "Memory (ChatGPT)",
+    "company": "openai",
+    "launchDate": "2024-02-13",
+    "description": "ChatGPT remembers details across conversations, later extended to reference all past chats.",
+    "strengths": [
+      "References chat history (2025-04-10)",
+      "Automatic memory management (2025-10-15)"
+    ],
+    "weaknesses": [
+      "Small test group at launch"
+    ],
+    "links": {
+      "official": "https://openai.com/index/memory-and-new-controls-for-chatgpt/",
+      "docs": null
+    },
+    "notes": "Predates 2025; included as a named feature. Tested with a small portion of Free and Plus users at launch; available to Free, Plus, Team and Enterprise 2024-09-05; chat-history referencing 2025-04-10 for Plus and Pro.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Free",
+      "Plus",
+      "Pro",
+      "Team",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  }
+]

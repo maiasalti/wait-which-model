@@ -318,5 +318,325 @@
     "color": "#5B6CD9",
     "notable": true,
     "order": 32
+  },
+  {
+    "id": "microsoft",
+    "name": "Microsoft",
+    "country": "US",
+    "founded": null,
+    "website": "https://www.microsoft.com",
+    "color": "#CD5535",
+    "notable": true,
+    "order": 33
+  },
+  {
+    "id": "black-forest-labs",
+    "name": "Black Forest Labs",
+    "country": "DE",
+    "founded": null,
+    "website": "https://bfl.ai",
+    "color": "#1F78B2",
+    "notable": true,
+    "order": 34
+  },
+  {
+    "id": "reve",
+    "name": "Reve",
+    "country": "US",
+    "founded": null,
+    "website": "https://reve.com",
+    "color": "#AD448B",
+    "notable": true,
+    "order": 35
+  },
+  {
+    "id": "skywork-ai",
+    "name": "Skywork AI",
+    "country": "Singapore",
+    "founded": null,
+    "website": "https://www.skyreels.ai",
+    "color": "#CA7057",
+    "notable": true,
+    "order": 36
+  },
+  {
+    "id": "utopai-studios",
+    "name": "Utopai Studios",
+    "country": "United States",
+    "founded": 2022,
+    "website": "https://www.utopaistudios.com",
+    "color": "#358FE9",
+    "notable": true,
+    "order": 37
+  },
+  {
+    "id": "sapiens-ai",
+    "name": "Sapiens AI",
+    "country": "Singapore",
+    "founded": null,
+    "website": "https://agnes-ai.com",
+    "color": "#96458B",
+    "notable": true,
+    "order": 38
+  },
+  {
+    "id": "world-labs",
+    "name": "World Labs",
+    "country": null,
+    "founded": null,
+    "website": "https://www.worldlabs.ai",
+    "color": "#C65A51",
+    "notable": true,
+    "order": 39
+  },
+  {
+    "id": "runway",
+    "name": "Runway",
+    "country": null,
+    "founded": null,
+    "website": "https://runway.com",
+    "color": null,
+    "notable": false,
+    "order": 40
+  },
+  {
+    "id": "odyssey",
+    "name": "Odyssey",
+    "country": null,
+    "founded": 2023,
+    "website": "https://odyssey.systems",
+    "color": null,
+    "notable": false,
+    "order": 41
+  },
+  {
+    "id": "decart",
+    "name": "Decart",
+    "country": null,
+    "founded": 2023,
+    "website": "https://decart.ai",
+    "color": "#3774B5",
+    "notable": true,
+    "order": 42
+  },
+  {
+    "id": "overworld",
+    "name": "Overworld",
+    "country": null,
+    "founded": null,
+    "website": "https://over.world",
+    "color": "#B3417D",
+    "notable": true,
+    "order": 43
+  },
+  {
+    "id": "alaya-lab",
+    "name": "Alaya Lab",
+    "country": null,
+    "founded": null,
+    "website": "https://huggingface.co/AlayaLab",
+    "color": "#5189EC",
+    "notable": true,
+    "order": 44
+  },
+  {
+    "id": "spaitial",
+    "name": "SpAItial",
+    "country": "United Kingdom",
+    "founded": 2025,
+    "website": "https://spaitial.ai",
+    "color": "#A34942",
+    "notable": true,
+    "order": 45
+  },
+  {
+    "id": "anysphere",
+    "name": "Anysphere (Cursor)",
+    "country": null,
+    "founded": null,
+    "website": "https://cursor.com",
+    "color": null,
+    "notable": false,
+    "order": 46
+  },
+  {
+    "id": "github",
+    "name": "GitHub",
+    "country": null,
+    "founded": null,
+    "website": "https://github.com",
+    "color": null,
+    "notable": false,
+    "order": 47
+  },
+  {
+    "id": "swe-agent",
+    "name": "SWE-agent",
+    "country": null,
+    "founded": null,
+    "website": "https://github.com/SWE-agent",
+    "color": "#AD5AB5",
+    "notable": true,
+    "order": 48
+  },
+  {
+    "id": "cline",
+    "name": "Cline Bot Inc.",
+    "country": null,
+    "founded": null,
+    "website": "https://cline.bot",
+    "color": null,
+    "notable": false,
+    "order": 49
+  },
+  {
+    "id": "aider-ai",
+    "name": "Aider",
+    "country": null,
+    "founded": null,
+    "website": "https://aider.chat",
+    "color": null,
+    "notable": false,
+    "order": 50
+  },
+  {
+    "id": "all-hands-ai",
+    "name": "All Hands AI (OpenHands)",
+    "country": null,
+    "founded": null,
+    "website": "https://github.com/OpenHands",
+    "color": null,
+    "notable": false,
+    "order": 51
+  },
+  {
+    "id": "anomaly",
+    "name": "Anomaly (OpenCode)",
+    "country": null,
+    "founded": null,
+    "website": "https://opencode.ai",
+    "color": null,
+    "notable": false,
+    "order": 52
+  },
+  {
+    "id": "zed-industries",
+    "name": "Zed Industries",
+    "country": null,
+    "founded": null,
+    "website": "https://zed.dev",
+    "color": null,
+    "notable": false,
+    "order": 53
+  },
+  {
+    "id": "warp",
+    "name": "Warp",
+    "country": null,
+    "founded": null,
+    "website": "https://www.warp.dev",
+    "color": null,
+    "notable": false,
+    "order": 54
+  },
+  {
+    "id": "agentic-ai-foundation",
+    "name": "Agentic AI Foundation (Linux Foundation)",
+    "country": null,
+    "founded": null,
+    "website": "https://github.com/aaif-goose",
+    "color": null,
+    "notable": false,
+    "order": 55
+  },
+  {
+    "id": "factory",
+    "name": "Factory",
+    "country": null,
+    "founded": null,
+    "website": "https://factory.com",
+    "color": null,
+    "notable": false,
+    "order": 56
+  },
+  {
+    "id": "kilo",
+    "name": "Kilo Code",
+    "country": null,
+    "founded": null,
+    "website": "https://kilo.ai",
+    "color": null,
+    "notable": false,
+    "order": 57
+  },
+  {
+    "id": "jetbrains",
+    "name": "JetBrains",
+    "country": null,
+    "founded": null,
+    "website": "https://www.jetbrains.com",
+    "color": null,
+    "notable": false,
+    "order": 58
+  },
+  {
+    "id": "cognition",
+    "name": "Cognition",
+    "country": null,
+    "founded": null,
+    "website": "https://devin.ai",
+    "color": null,
+    "notable": false,
+    "order": 59
+  },
+  {
+    "id": "manus",
+    "name": "Manus AI",
+    "country": "Singapore",
+    "founded": null,
+    "website": "https://manus.im",
+    "color": null,
+    "notable": false,
+    "order": 60
+  },
+  {
+    "id": "genspark",
+    "name": "Genspark",
+    "country": null,
+    "founded": null,
+    "website": "https://www.genspark.ai",
+    "color": null,
+    "notable": false,
+    "order": 61
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "country": null,
+    "founded": null,
+    "website": "https://www.perplexity.ai",
+    "color": null,
+    "notable": false,
+    "order": 62
+  },
+  {
+    "id": "replit",
+    "name": "Replit",
+    "country": null,
+    "founded": null,
+    "website": "https://replit.com",
+    "color": null,
+    "notable": false,
+    "order": 63
+  },
+  {
+    "id": "lovable",
+    "name": "Lovable",
+    "country": null,
+    "founded": null,
+    "website": "https://lovable.dev",
+    "color": null,
+    "notable": false,
+    "order": 64
   }
 ]

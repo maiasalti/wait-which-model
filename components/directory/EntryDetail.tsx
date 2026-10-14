@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { AnyEntry, EntryKind } from "@/lib/types";
-import { entryModelIds, formatDate, modelById, newsForEntry } from "@/lib/data";
+import { alsoListedIn, entryModelIds, formatDate, modelById, newsForEntry } from "@/lib/data";
 import { Collapsible } from "../Collapsible";
 import { KINDS } from "./kinds";
 
@@ -31,10 +31,22 @@ export function EntryDetail({ kind, entry, compact = false }: { kind: EntryKind;
   return (
     <div>
       <p className="text-ink-2">{entry.description}</p>
+      {alsoListedIn(kind, entry.id).map((k) => (
+        <Link
+          key={k}
+          href={`${KINDS[k].href}/${entry.id}`}
+          className="mono mt-2 inline-block text-xs text-ink-3 underline hover:text-ink"
+        >
+          Also in {KINDS[k].title} →
+        </Link>
+      ))}
 
-      <dl className={`mono mt-6 grid gap-px overflow-hidden rounded-lg border border-line bg-line text-sm ${compact ? "grid-cols-2" : "grid-cols-2 sm:grid-cols-3"}`}>
+      {/* Each cell draws its own right and bottom rule, pulled 1px outward so the
+          container's clipped border hides the outer ones: a short last row then
+          leaves blank surface rather than a grey hole. */}
+      <dl className={`mono mt-6 grid overflow-hidden rounded-lg border border-line bg-surface text-sm ${compact ? "grid-cols-2" : "grid-cols-2 sm:grid-cols-3"}`}>
         {config.detailFacts(entry).map((f) => (
-          <div key={f.label} className="bg-surface p-3">
+          <div key={f.label} className="-mb-px -mr-px border-b border-r border-line p-3">
             <dt className="text-[10px] uppercase tracking-wider text-ink-3">{f.label}</dt>
             <dd className={f.value ? "mt-1 text-ink" : "mt-1 text-ink-3"}>{f.value ?? "—"}</dd>
           </div>
@@ -62,7 +74,7 @@ export function EntryDetail({ kind, entry, compact = false }: { kind: EntryKind;
 
       <div className="mt-8">
         {scores.length > 0 && (
-          <Collapsible title="Terminal-Bench" meta="per harness + model pairing" defaultOpen>
+          <Collapsible title="Terminal-Bench" meta={`v${[...new Set(scores.map((s) => s.version))].join(", v")} · per harness + model pairing`} defaultOpen>
             <table className="mono w-full text-sm">
               <tbody>
                 {scores

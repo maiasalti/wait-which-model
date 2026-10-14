@@ -32,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           { url: `${BASE}${KINDS[kind].href}`, changeFrequency: "weekly" as const, priority: 0.8 },
           ...entries[kind].map((e) => ({
             url: `${BASE}${KINDS[kind].href}/${e.id}`,
-            lastModified: new Date(entryDate(e)),
+            ...(entryDate(e) ? { lastModified: new Date(entryDate(e)) } : {}),
             changeFrequency: "monthly" as const,
             priority: 0.5,
           })),

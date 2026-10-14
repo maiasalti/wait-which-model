@@ -60,7 +60,7 @@ export interface Dated {
   name: string;
   company: string;
   description: string;
-  releaseDate?: string;
+  releaseDate?: string | null;
   launchDate?: string;
   notable?: boolean;
 }
@@ -95,9 +95,14 @@ export type EntrySort = "newest" | "oldest" | "name";
 export function sortEntries<E extends Dated>(entries: E[], sort: EntrySort): E[] {
   const out = entries.slice();
   if (sort === "name") return out.sort((a, b) => a.name.localeCompare(b.name));
-  // Ties break on name so the order is stable across builds.
-  out.sort((a, b) => entryDate(b).localeCompare(entryDate(a)) || a.name.localeCompare(b.name));
-  return sort === "oldest" ? out.reverse() : out;
+  const dir = sort === "oldest" ? -1 : 1;
+  // Undated entries go last either way; ties break on name so the order is
+  // stable across builds.
+  return out.sort((a, b) => {
+    const da = entryDate(a), db = entryDate(b);
+    if (!da !== !db) return da ? -1 : 1;
+    return dir * db.localeCompare(da) || a.name.localeCompare(b.name);
+  });
 }
 
 /** Newest-first month buckets ("2026-10") for the features timeline. Input

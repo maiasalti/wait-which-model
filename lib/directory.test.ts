@@ -69,8 +69,14 @@ test("sortEntries reads launchDate when releaseDate is absent, breaks ties by na
   const f = { id: "f", name: "F", company: "x", description: "", launchDate: "2026-03-01" };
   const list = [E("b", "2026-01-01"), E("a", "2026-01-01"), f];
   assert.deepEqual(sortEntries(list, "newest").map((e) => e.id), ["f", "a", "b"]);
-  assert.deepEqual(sortEntries(list, "oldest").map((e) => e.id), ["b", "a", "f"]);
+  assert.deepEqual(sortEntries(list, "oldest").map((e) => e.id), ["a", "b", "f"]);
   assert.deepEqual(sortEntries(list, "name").map((e) => e.id), ["a", "b", "f"]);
+});
+
+test("undated entries sort last whichever way dates run", () => {
+  const list = [E("u", null as unknown as string), E("a", "2026-01-01"), E("b", "2026-02-01")];
+  assert.deepEqual(sortEntries(list, "newest").map((e) => e.id), ["b", "a", "u"]);
+  assert.deepEqual(sortEntries(list, "oldest").map((e) => e.id), ["a", "b", "u"]);
 });
 
 test("groupByMonth buckets consecutive entries by YYYY-MM", () => {

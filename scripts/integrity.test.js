@@ -110,13 +110,24 @@ test("directory entries need a date, a notable flag, an official link, and no le
   ];
   d.directory.features = [entry({ id: "f1", company: "anthropic", modelIds: [], releaseDate: undefined, launchDate: "2026-02-01" })];
   const errs = checkData(d).join("\n");
-  for (const s of ["i1: releaseDate is not YYYY-MM-DD", "i1: notable must be a boolean", "i1: links.official missing", 'i1: research-only "sources"'])
+  for (const s of ["i1: releaseDate is not YYYY-MM-DD or null", "i1: notable must be a boolean", "i1: links.official missing", 'i1: research-only "sources"'])
     assert.ok(errs.includes(s), s);
   assert.doesNotMatch(errs, /f1/);
+});
+
+test("a null releaseDate is allowed, a null launchDate is not", () => {
+  const d = base();
+  d.directory.agents = [entry({ id: "a1", company: "anthropic", underlyingModels: [], releaseDate: null })];
+  d.directory.features = [entry({ id: "f1", company: "anthropic", modelIds: [], releaseDate: undefined, launchDate: null })];
+  const errs = checkData(d).join("\n");
+  assert.doesNotMatch(errs, /a1/);
+  assert.match(errs, /f1: launchDate is not YYYY-MM-DD$/m);
 });
 
 test("harness scores must name their model", () => {
   const d = base();
   d.directory.harnesses = [entry({ id: "h1", company: "anthropic", supportedModels: "any", scores: [{ benchmark: "terminalBench", score: 50 }] })];
-  assert.match(checkData(d).join("\n"), /h1: score without modelId/);
+  const errs = checkData(d).join("\n");
+  assert.match(errs, /h1: score without modelId/);
+  assert.match(errs, /h1: score without leaderboard version/);
 });

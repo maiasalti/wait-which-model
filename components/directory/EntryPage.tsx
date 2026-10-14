@@ -15,7 +15,8 @@ export const entryMetadata =
   async ({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> => {
     const entry = entryById(kind, (await params).id);
     if (!entry) return {};
-    const description = `${companyName(entry.company)} · ${formatDate(entryDate(entry))} · ${entry.description}`;
+    const when = entryDate(entry) ? ` · ${formatDate(entryDate(entry))}` : "";
+    const description = `${companyName(entry.company)}${when} · ${entry.description}`;
     return {
       title: entry.name,
       description,

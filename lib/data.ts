@@ -130,6 +130,13 @@ export function formatDate(iso: string): string {
 
 export { formatSpeed } from "./format";
 
+/** The same product listed in another directory, matched by id: e.g. ChatGPT
+ *  agent is both an agent and a Frontier Feature. Derived, so the two records
+ *  never need to point at each other. */
+export function alsoListedIn(kind: EntryKind, id: string): EntryKind[] {
+  return (Object.keys(entries) as EntryKind[]).filter((k) => k !== kind && entries[k].some((e) => e.id === id));
+}
+
 export function newsForEntry(kind: EntryKind, id: string): NewsItem[] {
   const type = REF_TYPE[kind];
   return news.filter((n) => n.refs?.some((r) => r.type === type && r.id === id));

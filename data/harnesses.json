@@ -1,1 +1,1082 @@
-[]
+[
+  {
+    "id": "muse-code",
+    "name": "Muse Code",
+    "company": "meta",
+    "releaseDate": "2026-08-05",
+    "notable": true,
+    "description": "Meta's terminal coding agent, launched in beta with Muse Spark 1.2; it runs a main agent alongside persistent background subagents.",
+    "strengths": [
+      "Approval modes and an OS sandbox on by default",
+      "Subagents, skills, hooks and MCP; event log lets sessions resume after a crash",
+      "Headless `muse exec`, session protocol and TypeScript SDK"
+    ],
+    "weaknesses": [
+      "Muse Spark 1.3 scores 14.6% on Terminal-Bench 4.0",
+      "Workflows unavailable on some builds/platforms; Windows lacks voice input and session messaging",
+      "Default contributor mode lets Meta train on your content (can be turned off)"
+    ],
+    "links": {
+      "official": "https://dev.meta.ai/docs/muse-code",
+      "docs": "https://dev.meta.ai/docs/muse-code"
+    },
+    "interface": [
+      "cli"
+    ],
+    "openSource": false,
+    "license": null,
+    "repo": null,
+    "supportedModels": "vendor",
+    "pricing": {
+      "model": "subscription",
+      "notes": "Four subscription tiers (Everyday, High 5x, Power 20x, Maximum 80x; Power adds Muse Wonder Full) or pay-as-you-go per token with a Meta Model API key; prices shown only at checkout."
+    },
+    "scores": [
+      {
+        "benchmark": "terminalBench",
+        "modelId": "muse-spark-1-3",
+        "score": 14.55,
+        "version": "4.0"
+      }
+    ],
+    "notes": "Notable: appears on the official Terminal-Bench leaderboard (tbench.ai, Terminal-Bench 4.0 — the only version tbench.ai currently shows), best rank #32; only five distinct agents are listed there, so every one is top-10. Scores are TB 4.0 resolution rates (best per model across reasoning efforts), fetched 2026-10-14 — not comparable with older Terminal-Bench 2.x figures. Default model muse-spark-1.2; the changelog names Muse Spark 1.2 and 1.3 and allows any model id 'on the same provider', hence 'vendor'. No licence or repo stated, so openSource=false."
+  },
+  {
+    "id": "mistral-vibe",
+    "name": "Mistral Vibe",
+    "company": "mistral",
+    "releaseDate": "2025-12-09",
+    "notable": false,
+    "description": "Mistral's open-source command-line coding assistant, launched with Devstral 2 and usable in IDEs over the Agent Client Protocol.",
+    "strengths": [
+      "Apache-2.0",
+      "Agent profiles (ask, plan, accept-edits, auto-approve) and a per-run --max-price cap",
+      "Programmatic mode for scripting"
+    ],
+    "weaknesses": [
+      "Requires a Mistral API key; Mistral models only",
+      "Officially targets UNIX"
+    ],
+    "links": {
+      "official": "https://mistral.ai/news/devstral-2-vibe-cli",
+      "docs": "https://github.com/mistralai/mistral-vibe"
+    },
+    "interface": [
+      "cli"
+    ],
+    "openSource": true,
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://github.com/mistralai/mistral-vibe/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "repo": "https://github.com/mistralai/mistral-vibe",
+    "supportedModels": "vendor",
+    "pricing": {
+      "model": "usage",
+      "notes": "Billed at Mistral API rates (e.g. Devstral 2 $0.40/$2.00 per M tokens after its free period)."
+    },
+    "scores": [],
+    "notes": ""
+  },
+  {
+    "id": "antigravity",
+    "name": "Google Antigravity",
+    "company": "google",
+    "releaseDate": "2025-11-18",
+    "notable": true,
+    "description": "Google's agentic development platform: a desktop app for running several agents, an agentic IDE, a CLI and a Python SDK.",
+    "strengths": [
+      "Free for individual developers",
+      "Model menu spans Gemini, Claude Opus/Sonnet 5.5 and GPT-OSS 120B",
+      "Agents work across editor, terminal and browser and report via artifacts"
+    ],
+    "weaknesses": [
+      "Gemini 4 Argon only on Ultra/Enterprise and not in the IDE",
+      "Claude 5.5 models need a paid (non-trial) Pro plan or higher"
+    ],
+    "links": {
+      "official": "https://antigravity.google",
+      "docs": "https://antigravity.google/docs/models"
+    },
+    "interface": [
+      "desktop",
+      "ide",
+      "cli"
+    ],
+    "openSource": false,
+    "license": null,
+    "repo": null,
+    "supportedModels": [
+      "gemini-4-argon",
+      "gemini-3-8-flash",
+      "gemini-3-7-flash",
+      "gemini-3-6-flash",
+      "gemini-3-1-pro",
+      "claude-opus-5-5",
+      "claude-sonnet-5-5",
+      "claude-sonnet-4-6",
+      "gpt-oss-120b"
+    ],
+    "pricing": {
+      "model": "free",
+      "notes": "Individuals $0 with weekly rate limits; Google AI Pro/Ultra raise limits and add a credit pool; Business from $30/seat/mo or pay-as-you-go via Google Cloud."
+    },
+    "scores": [],
+    "notes": "Notable: frontier-lab developer (Google). Launched as a free public preview alongside Gemini 3. Model list also includes Claude Opus 4.6 (not in models.json); Sonnet 4.6, Opus 4.6 and GPT-OSS 120B are scheduled for removal 2026-11-02."
+  },
+  {
+    "id": "factory-droid",
+    "name": "Factory Droid",
+    "company": "factory",
+    "releaseDate": "2025-09-25",
+    "notable": false,
+    "description": "Factory's model-agnostic software development agent, available in a desktop app, CLI and SDK with cloud and local background agents.",
+    "strengths": [
+      "Model-agnostic: frontier and open-weight models, including custom ones",
+      "Topped the Terminal-Bench 1 (Core v0.1.1) leaderboard at launch with 58.8% (Opus 4.1)",
+      "Cloud 'Droid Computers' for remote agents on Plus and up"
+    ],
+    "weaknesses": [
+      "Not on the current Terminal-Bench 4.0 leaderboard",
+      "Subscriptions start at $20/mo"
+    ],
+    "links": {
+      "official": "https://factory.com",
+      "docs": "https://factory.com/pricing"
+    },
+    "interface": [
+      "desktop",
+      "cli"
+    ],
+    "openSource": false,
+    "license": null,
+    "repo": null,
+    "supportedModels": "any",
+    "pricing": {
+      "model": "subscription",
+      "notes": "Pro $20/mo; Plus $100/mo; Max $200/mo; Teams $60/mo + $40/seat; Business/Enterprise contact sales."
+    },
+    "scores": [],
+    "notes": "releaseDate from Factory's 2025-09-25 post saying Droid is 'available across all interfaces today'. Its 58.75% (Opus 4.1), 52.5% (GPT-5), 50.5% (Sonnet 4) were on the older Terminal-Bench Core v0.1.1 board and are not on tbench.ai's current 4.0 leaderboard, so not in scores. factory.ai now redirects to factory.com."
+  },
+  {
+    "id": "mini-swe-agent",
+    "name": "mini-SWE-agent",
+    "company": "swe-agent",
+    "releaseDate": "2025-07-21",
+    "notable": true,
+    "description": "A minimal open-source coding agent from the SWE-agent team: a roughly 100-line agent class whose only tool is bash, used widely as a benchmark baseline.",
+    "strengths": [
+      "Works with any model via LiteLLM, OpenRouter, Portkey and more",
+      "Tiny, readable codebase with a linear message history",
+      "Runs locally or in Docker/Podman, Singularity, bubblewrap and other sandboxes"
+    ],
+    "weaknesses": [
+      "Bash is its only tool; no IDE integration",
+      "Best Terminal-Bench 4.0 result is 19.1% (Gemini 3.8 Flash)"
+    ],
+    "links": {
+      "official": "https://github.com/SWE-agent/mini-swe-agent",
+      "docs": null
+    },
+    "interface": [
+      "cli"
+    ],
+    "openSource": true,
+    "license": {
+      "spdx": "MIT",
+      "name": "MIT License",
+      "kind": "permissive",
+      "url": "https://github.com/SWE-agent/mini-swe-agent/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "repo": "https://github.com/SWE-agent/mini-swe-agent",
+    "supportedModels": "any",
+    "pricing": {
+      "model": "byo-key",
+      "notes": "Free software; you pay your model provider."
+    },
+    "scores": [
+      {
+        "benchmark": "terminalBench",
+        "modelId": "gemini-3-8-flash",
+        "score": 19.09,
+        "version": "4.0"
+      },
+      {
+        "benchmark": "terminalBench",
+        "modelId": "gemini-3-7-flash",
+        "score": 11.21,
+        "version": "4.0"
+      }
+    ],
+    "notes": "Notable: appears on the official Terminal-Bench leaderboard (tbench.ai, Terminal-Bench 4.0 — the only version tbench.ai currently shows), best rank #29; only five distinct agents are listed there, so every one is top-10. Scores are TB 4.0 resolution rates (best per model across reasoning efforts), fetched 2026-10-14 — not comparable with older Terminal-Bench 2.x figures. releaseDate is the earliest GitHub release (v1.0.0.dev4); the repo was created 2025-06-28. Now at v2."
+  },
+  {
+    "id": "kiro",
+    "name": "Kiro",
+    "company": "amazon",
+    "releaseDate": "2025-07-14",
+    "notable": false,
+    "description": "AWS's spec-driven agentic IDE, also available as a CLI and on the web, with an Auto router or a manually chosen model.",
+    "strengths": [
+      "Spec-driven workflow: requirements, design and tasks before code",
+      "Pick Auto or a specific Claude, GPT-5.6 or open-weight model",
+      "IDE, CLI, web and ACP-compatible IDEs share one credit pool"
+    ],
+    "weaknesses": [
+      "Third-party harnesses routing outside Kiro's interfaces are not permitted",
+      "Credit cost varies by model"
+    ],
+    "links": {
+      "official": "https://kiro.dev",
+      "docs": "https://kiro.dev/pricing/"
+    },
+    "interface": [
+      "ide",
+      "cli",
+      "web"
+    ],
+    "openSource": false,
+    "license": null,
+    "repo": null,
+    "supportedModels": [
+      "claude-opus-5",
+      "claude-opus-4-8",
+      "claude-sonnet-5",
+      "claude-sonnet-4-6",
+      "claude-sonnet-4-5",
+      "claude-haiku-4-5",
+      "deepseek-v3-2",
+      "minimax-m2-5"
+    ],
+    "pricing": {
+      "model": "subscription",
+      "notes": "Free 50 credits; Pro $20; Pro+ $40; Pro Max $100; Power $200 per user/month; add-on credits $0.04."
+    },
+    "scores": [],
+    "notes": "supportedModels partial: GPT-5.6 variants (unspecified), GLM-5 and Qwen3 Coder Next are offered but don't map to models.json ids. Launched in preview 2025-07-14."
+  },
+  {
+    "id": "gemini-cli",
+    "name": "Gemini CLI",
+    "company": "google",
+    "releaseDate": "2025-06-25",
+    "notable": true,
+    "description": "Google's open-source terminal agent for Gemini models, with Search grounding, file and shell tools, and MCP support.",
+    "strengths": [
+      "Apache-2.0 open source",
+      "Free tier with a Google account: 60 requests/min, 1,000/day",
+      "Non-interactive mode with JSON/streaming output and a GitHub Action"
+    ],
+    "weaknesses": [
+      "Gemini models only",
+      "Not on the Terminal-Bench 4.0 leaderboard"
+    ],
+    "links": {
+      "official": "https://github.com/google-gemini/gemini-cli",
+      "docs": "https://github.com/google-gemini/gemini-cli"
+    },
+    "interface": [
+      "cli"
+    ],
+    "openSource": true,
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://github.com/google-gemini/gemini-cli/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "repo": "https://github.com/google-gemini/gemini-cli",
+    "supportedModels": "vendor",
+    "pricing": {
+      "model": "free",
+      "notes": "Free tier with Google sign-in or Gemini API key (1,000 requests/day); usage-based billing beyond via API key or Vertex AI; Code Assist Standard/Enterprise licences."
+    },
+    "scores": [],
+    "notes": "Notable: frontier-lab developer (Google). Google also ships an Antigravity CLI (separate entry)."
+  },
+  {
+    "id": "opencode",
+    "name": "OpenCode",
+    "company": "anomaly",
+    "releaseDate": "2025-05-14",
+    "notable": false,
+    "description": "An open-source coding agent for the terminal, desktop and IDE that connects to 75+ model providers, including local models.",
+    "strengths": [
+      "MIT licence; about 213k GitHub stars",
+      "75+ providers via Models.dev, plus sign-in with GitHub Copilot or ChatGPT Plus/Pro",
+      "Free models included; parallel sessions and shareable session links"
+    ],
+    "weaknesses": [
+      "Desktop app still in beta"
+    ],
+    "links": {
+      "official": "https://opencode.ai",
+      "docs": null
+    },
+    "interface": [
+      "cli",
+      "desktop",
+      "ide"
+    ],
+    "openSource": true,
+    "license": {
+      "spdx": "MIT",
+      "name": "MIT License",
+      "kind": "permissive",
+      "url": "https://github.com/anomalyco/opencode/blob/dev/LICENSE",
+      "commercialUse": true
+    },
+    "repo": "https://github.com/anomalyco/opencode",
+    "supportedModels": "any",
+    "pricing": {
+      "model": "byo-key",
+      "notes": "Free with included free models or your own keys; paid Zen (curated models) and Go offerings — prices not on the homepage."
+    },
+    "scores": [],
+    "notes": "Repo moved from sst/opencode to anomalyco/opencode; company id 'anomaly' is a guess from the GitHub org name — no company page fetched. releaseDate is the earliest GitHub release (0.0.45)."
+  },
+  {
+    "id": "claude-code",
+    "name": "Claude Code",
+    "company": "anthropic",
+    "releaseDate": "2025-02-24",
+    "notable": true,
+    "description": "Anthropic's agentic coding tool: reads a codebase, edits files and runs commands, available in the terminal, IDE extensions, a desktop app and the browser.",
+    "strengths": [
+      "#1 and #2 on Terminal-Bench 4.0 (Opus 5.5 64.8%, Sonnet 5.5 61.8%)",
+      "Runs on terminal, VS Code, JetBrains, desktop app, web and mobile",
+      "Subagents, skills, hooks and MCP integration",
+      "Third-party providers supported on the CLI, VS Code and JetBrains"
+    ],
+    "weaknesses": [
+      "Not open source: the public repo is 'All rights reserved', under Anthropic's Commercial Terms",
+      "Most surfaces require a paid Claude plan or Console account"
+    ],
+    "links": {
+      "official": "https://claude.com/product/claude-code",
+      "docs": "https://code.claude.com/docs/en/overview"
+    },
+    "interface": [
+      "cli",
+      "ide",
+      "desktop",
+      "web"
+    ],
+    "openSource": false,
+    "license": null,
+    "repo": "https://github.com/anthropics/claude-code",
+    "supportedModels": "vendor",
+    "pricing": {
+      "model": "subscription",
+      "notes": "Pro $20/mo ($17/mo annual), Max 5x $100/mo, Max 20x $200/mo, Team/Enterprise; or Claude Console account billed at API rates."
+    },
+    "scores": [
+      {
+        "benchmark": "terminalBench",
+        "modelId": "claude-opus-5-5",
+        "score": 64.85,
+        "version": "4.0"
+      },
+      {
+        "benchmark": "terminalBench",
+        "modelId": "claude-sonnet-5-5",
+        "score": 61.82,
+        "version": "4.0"
+      },
+      {
+        "benchmark": "terminalBench",
+        "modelId": "claude-fable-5-1",
+        "score": 57.88,
+        "version": "4.0"
+      },
+      {
+        "benchmark": "terminalBench",
+        "modelId": "claude-opus-5",
+        "score": 53.94,
+        "version": "4.0"
+      },
+      {
+        "benchmark": "terminalBench",
+        "modelId": "claude-fable-5",
+        "score": 44.55,
+        "version": "4.0"
+      },
+      {
+        "benchmark": "terminalBench",
+        "modelId": "glm-5-3",
+        "score": 41.82,
+        "version": "4.0"
+      },
+      {
+        "benchmark": "terminalBench",
+        "modelId": "glm-5-3-flash",
+        "score": 35.76,
+        "version": "4.0"
+      },
+      {
+        "benchmark": "terminalBench",
+        "modelId": "qwen3-8-max-0902",
+        "score": 26.97,
+        "version": "4.0"
+      },
+      {
+        "benchmark": "terminalBench",
+        "modelId": "claude-opus-4-8",
+        "score": 23.64,
+        "version": "4.0"
+      },
+      {
+        "benchmark": "terminalBench",
+        "modelId": "claude-sonnet-5",
+        "score": 12.42,
+        "version": "4.0"
+      }
+    ],
+    "notes": "Notable: appears on the official Terminal-Bench leaderboard (tbench.ai, Terminal-Bench 4.0 — the only version tbench.ai currently shows), best rank #1; only five distinct agents are listed there, so every one is top-10. Scores are TB 4.0 resolution rates (best per model across reasoning efforts), fetched 2026-10-14 — not comparable with older Terminal-Bench 2.x figures. releaseDate is the limited research preview announced with Claude 3.7 Sonnet. supportedModels='vendor' per Anthropic's docs (Claude models, incl. via Bedrock/Vertex-style third-party providers), although tbench.ai also lists Claude Code runs on non-Anthropic models (GLM-5.3, GLM-5.3-Flash, Qwen3.8-Max-0902) — included in scores since they are official leaderboard rows."
+  },
+  {
+    "id": "goose",
+    "name": "goose",
+    "company": "agentic-ai-foundation",
+    "releaseDate": "2024-09-10",
+    "notable": false,
+    "description": "An open-source, Rust-built AI agent with a desktop app, CLI and API, working with 15+ model providers and 70+ MCP extensions.",
+    "strengths": [
+      "Apache-2.0, under the Linux Foundation's Agentic AI Foundation",
+      "15+ providers incl. Anthropic, OpenAI, Google, Ollama, OpenRouter, Azure, Bedrock",
+      "Can use existing Claude, ChatGPT or Gemini subscriptions through ACP"
+    ],
+    "weaknesses": [],
+    "links": {
+      "official": "https://github.com/aaif-goose/goose",
+      "docs": null
+    },
+    "interface": [
+      "desktop",
+      "cli"
+    ],
+    "openSource": true,
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://github.com/aaif-goose/goose/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "repo": "https://github.com/aaif-goose/goose",
+    "supportedModels": "any",
+    "pricing": {
+      "model": "byo-key",
+      "notes": "Free software; you pay your model provider or use an existing subscription."
+    },
+    "scores": [],
+    "notes": "Originally from Block (not mentioned on the current repo page). releaseDate is the earliest GitHub release (v0.9.0); repo created 2024-08-23."
+  },
+  {
+    "id": "cline",
+    "name": "Cline",
+    "company": "cline",
+    "releaseDate": "2024-07-28",
+    "notable": false,
+    "description": "An open-source coding agent available as a VS Code extension, JetBrains plugin, CLI, desktop app and SDK, not tied to any one model provider.",
+    "strengths": [
+      "Apache-2.0 open source",
+      "Providers include Anthropic, OpenAI, Google, OpenRouter, Bedrock, Vertex, Groq, Ollama, LM Studio and any OpenAI-compatible API",
+      "Free for individuals: pay only for inference"
+    ],
+    "weaknesses": [
+      "JetBrains extension listed under the Enterprise tier on the pricing page"
+    ],
+    "links": {
+      "official": "https://cline.bot",
+      "docs": null
+    },
+    "interface": [
+      "ide",
+      "cli",
+      "desktop"
+    ],
+    "openSource": true,
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://github.com/cline/cline/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "repo": "https://github.com/cline/cline",
+    "supportedModels": "any",
+    "pricing": {
+      "model": "byo-key",
+      "notes": "Open-source tier free; bring your own provider keys. Enterprise custom pricing."
+    },
+    "scores": [],
+    "notes": "releaseDate is the earliest GitHub release (v1.0.4); repo created 2024-07-06."
+  },
+  {
+    "id": "openhands",
+    "name": "OpenHands",
+    "company": "all-hands-ai",
+    "releaseDate": "2024-06-04",
+    "notable": false,
+    "description": "An open-source, self-hostable platform for running coding agents, with a web UI, CLI and Docker sandboxes.",
+    "strengths": [
+      "MIT licence",
+      "Bring your own model: works with any LLM",
+      "Can also orchestrate Claude Code, Codex, Gemini CLI, OpenCode and other ACP agents"
+    ],
+    "weaknesses": [
+      "Cloud pricing not stated on the repo"
+    ],
+    "links": {
+      "official": "https://github.com/OpenHands/OpenHands",
+      "docs": null
+    },
+    "interface": [
+      "web",
+      "cli"
+    ],
+    "openSource": true,
+    "license": {
+      "spdx": "MIT",
+      "name": "MIT License",
+      "kind": "permissive",
+      "url": "https://github.com/OpenHands/OpenHands/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "repo": "https://github.com/OpenHands/OpenHands",
+    "supportedModels": "any",
+    "pricing": {
+      "model": "byo-key",
+      "notes": "Self-hosted is free with your own model keys; optional OpenHands Cloud/Enterprise (pricing not on the repo)."
+    },
+    "scores": [],
+    "notes": "The repo README now brands the product 'Agent Canvas' (agent-canvas CLI, v1.27.1 image); the GitHub repo moved from All-Hands-AI/OpenHands to OpenHands/OpenHands. releaseDate is the earliest GitHub release (0.6.1, when the project was OpenDevin)."
+  },
+  {
+    "id": "aider",
+    "name": "Aider",
+    "company": "aider-ai",
+    "releaseDate": "2023-06-07",
+    "notable": false,
+    "description": "An open-source AI pair-programming tool for the terminal that edits code in your local git repo.",
+    "strengths": [
+      "Apache-2.0 open source",
+      "Connects to almost any LLM, including local models",
+      "Works from inside editors, accepts images and web pages as context, supports voice"
+    ],
+    "weaknesses": [
+      "Terminal-first; no first-party IDE extension"
+    ],
+    "links": {
+      "official": "https://aider.chat",
+      "docs": "https://aider.chat/docs/"
+    },
+    "interface": [
+      "cli"
+    ],
+    "openSource": true,
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://github.com/Aider-AI/aider/blob/main/LICENSE.txt",
+      "commercialUse": true
+    },
+    "repo": "https://github.com/Aider-AI/aider",
+    "supportedModels": "any",
+    "pricing": {
+      "model": "byo-key",
+      "notes": "Free software; you pay your model provider."
+    },
+    "scores": [],
+    "notes": "releaseDate is the earliest GitHub release (v0.5.0); repo created 2023-05-09."
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "company": "github",
+    "releaseDate": "2022-06-21",
+    "notable": false,
+    "description": "GitHub's AI coding assistant, with agent mode in VS Code, Visual Studio, JetBrains, Eclipse and Xcode, the Copilot CLI and a cloud agent that opens pull requests.",
+    "strengths": [
+      "Agent mode and Copilot CLI on every plan, including Free",
+      "Models from Anthropic, OpenAI, Google, xAI, Moonshot and Microsoft",
+      "Cloud agent turns assigned issues into pull requests (Pro and up)"
+    ],
+    "weaknesses": [
+      "Usage metered in AI credits; cost varies by model",
+      "Delegating to third-party agents (Claude, Codex) needs Pro+ or Max"
+    ],
+    "links": {
+      "official": "https://github.com/features/copilot",
+      "docs": "https://github.com/features/copilot/plans"
+    },
+    "interface": [
+      "ide",
+      "cli",
+      "web"
+    ],
+    "openSource": false,
+    "license": null,
+    "repo": "https://github.com/github/copilot-cli",
+    "supportedModels": [],
+    "pricing": {
+      "model": "subscription",
+      "notes": "Free $0; Pro $10; Pro+ $39; Max $100 per month (credits at $0.01); Business/Enterprise for orgs."
+    },
+    "scores": [],
+    "notes": "releaseDate is Copilot's general availability (2022-06-21); Copilot CLI entered public preview Sept 2025 and went GA 2026-02-25 per GitHub's changelog. supportedModels left [] because the plans page names model families (Claude Haiku/Sonnet/Opus, GPT-5/6, Gemini Flash, Grok, Kimi, MAI-Code-1.1-Flash) without exact versions. GitHub is a Microsoft subsidiary; not a frontier lab under the rule. copilot-cli repo licence is not an OSI licence (GitHub reports NOASSERTION)."
+  },
+  {
+    "id": "codex",
+    "name": "Codex",
+    "company": "openai",
+    "releaseDate": null,
+    "notable": true,
+    "description": "OpenAI's coding agent, available as the open-source Codex CLI, an IDE extension, a desktop app and Codex Cloud on the web.",
+    "strengths": [
+      "#3 on Terminal-Bench 4.0 (GPT-6 Astra and GPT-6.1 Sol, both 58.2%)",
+      "CLI is open source (Apache-2.0)",
+      "Included in every ChatGPT plan from Free upward",
+      "Custom providers via any Responses-API-compatible gateway, incl. Amazon Bedrock"
+    ],
+    "weaknesses": [
+      "Custom providers must expose a Responses API endpoint; Chat Completions-only endpoints are unsupported",
+      "Free and Go plans limited to lighter use on GPT-6 Luna"
+    ],
+    "links": {
+      "official": "https://openai.com/codex/",
+      "docs": "https://learn.chatgpt.com/docs"
+    },
+    "interface": [
+      "cli",
+      "ide",
+      "desktop",
+      "web"
+    ],
+    "openSource": true,
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://github.com/openai/codex/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "repo": "https://github.com/openai/codex",
+    "supportedModels": "vendor",
+    "pricing": {
+      "model": "subscription",
+      "notes": "ChatGPT Free $0, Go $8, Plus $20, Pro from $100 ($100/$200/$500), Business $20/user/mo annual; API-key use billed at API rates."
+    },
+    "scores": [
+      {
+        "benchmark": "terminalBench",
+        "modelId": "gpt-6-astra",
+        "score": 58.18,
+        "version": "4.0"
+      },
+      {
+        "benchmark": "terminalBench",
+        "modelId": "gpt-6-1-sol",
+        "score": 58.18,
+        "version": "4.0"
+      },
+      {
+        "benchmark": "terminalBench",
+        "modelId": "gpt-6-sol",
+        "score": 49.39,
+        "version": "4.0"
+      },
+      {
+        "benchmark": "terminalBench",
+        "modelId": "gpt-5-6-sol",
+        "score": 37.27,
+        "version": "4.0"
+      },
+      {
+        "benchmark": "terminalBench",
+        "modelId": "gpt-5-6-terra",
+        "score": 21.52,
+        "version": "4.0"
+      },
+      {
+        "benchmark": "terminalBench",
+        "modelId": "gpt-5-6-luna",
+        "score": 17.27,
+        "version": "4.0"
+      },
+      {
+        "benchmark": "terminalBench",
+        "modelId": "gpt-6-luna",
+        "score": 16.36,
+        "version": "4.0"
+      }
+    ],
+    "notes": "Notable: appears on the official Terminal-Bench leaderboard (tbench.ai, Terminal-Bench 4.0 — the only version tbench.ai currently shows), best rank #3; only five distinct agents are listed there, so every one is top-10. Scores are TB 4.0 resolution rates (best per model across reasoning efforts), fetched 2026-10-14 — not comparable with older Terminal-Bench 2.x figures. releaseDate null: Codex CLI launched 2025-04-16 per launch coverage (TechCrunch) and the GitHub repo was created 2025-04-13, but no OpenAI page confirming the date could be fetched (openai.com returned 403). Open source applies to the CLI; the app and cloud are proprietary."
+  },
+  {
+    "id": "grok-build",
+    "name": "Grok Build",
+    "company": "xai",
+    "releaseDate": null,
+    "notable": true,
+    "description": "xAI's coding agent: a terminal TUI, headless mode and Agent Client Protocol integration, plus an app-building mode in the Grok web and mobile apps.",
+    "strengths": [
+      "Interactive TUI, headless (`grok -p`) and ACP modes",
+      "Accepts any custom model via a base URL in ~/.grok/config.toml",
+      "Available on every Grok plan since 2026-08-19"
+    ],
+    "weaknesses": [
+      "Grok 4.7 scores 37.6% on Terminal-Bench 4.0, well behind Claude Code and Codex",
+      "No open-source licence or repo published"
+    ],
+    "links": {
+      "official": "https://x.ai/build",
+      "docs": "https://docs.x.ai/build/overview"
+    },
+    "interface": [
+      "cli",
+      "web"
+    ],
+    "openSource": false,
+    "license": null,
+    "repo": null,
+    "supportedModels": "any",
+    "pricing": {
+      "model": "subscription",
+      "notes": "Included on every Grok plan since 2026-08-19 (Early Beta was SuperGrok Heavy only); XAI_API_KEY sign-in for non-browser environments. No prices on the docs page."
+    },
+    "scores": [
+      {
+        "benchmark": "terminalBench",
+        "modelId": "grok-4-7",
+        "score": 37.58,
+        "version": "4.0"
+      },
+      {
+        "benchmark": "terminalBench",
+        "modelId": "grok-4-6",
+        "score": 20.3,
+        "version": "4.0"
+      },
+      {
+        "benchmark": "terminalBench",
+        "modelId": "grok-4-5",
+        "score": 12.42,
+        "version": "4.0"
+      }
+    ],
+    "notes": "Notable: appears on the official Terminal-Bench leaderboard (tbench.ai, Terminal-Bench 4.0 — the only version tbench.ai currently shows), best rank #21; only five distinct agents are listed there, so every one is top-10. Scores are TB 4.0 resolution rates (best per model across reasoning efforts), fetched 2026-10-14 — not comparable with older Terminal-Bench 2.x figures. releaseDate null: x.ai's 2026-08-19 post says Grok Build was introduced 'in July' as an Early Beta without giving a day. x.ai/build itself returned 403. 'web' covers the in-chat app builder on web/iOS/Android described in the same post."
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "company": "anysphere",
+    "releaseDate": null,
+    "notable": false,
+    "description": "An AI code editor with a CLI and cloud agents, offering models from OpenAI, Anthropic, Google, SpaceXAI and its own Composer models.",
+    "strengths": [
+      "Broad model menu: Grok, Claude, Gemini, GPT, GLM, Kimi, Muse and Composer",
+      "Desktop editor, CLI, cloud agents, Slack and GitHub PR review",
+      "Plans from a free tier up to $200/mo Ultra"
+    ],
+    "weaknesses": [
+      "Third-party models need Premium ($30/mo) or higher, billed at API list price on top of the plan",
+      "Plus ($8) plan is Grok-only",
+      "Not on the Terminal-Bench 4.0 leaderboard"
+    ],
+    "links": {
+      "official": "https://cursor.com",
+      "docs": "https://cursor.com/docs/models"
+    },
+    "interface": [
+      "ide",
+      "cli",
+      "web"
+    ],
+    "openSource": false,
+    "license": null,
+    "repo": null,
+    "supportedModels": [
+      "grok-4-7",
+      "grok-4-6",
+      "grok-4-5",
+      "claude-opus-5-5",
+      "claude-sonnet-5-5",
+      "claude-fable-5-1",
+      "claude-fable-5",
+      "claude-opus-5",
+      "claude-sonnet-5",
+      "claude-opus-4-8",
+      "claude-sonnet-4-6",
+      "claude-opus-4-5",
+      "claude-sonnet-4-5",
+      "claude-haiku-4-5",
+      "claude-sonnet-4",
+      "gemini-4-argon",
+      "gemini-3-8-flash",
+      "gemini-3-7-flash",
+      "gemini-3-6-flash",
+      "gemini-3-5-flash",
+      "gemini-3-1-pro",
+      "gemini-3-pro",
+      "gpt-5-6-sol",
+      "gpt-5-6-terra",
+      "gpt-5-6-luna",
+      "gpt-5-5",
+      "gpt-5",
+      "glm-5-3",
+      "glm-5-3-flash",
+      "glm-5-2",
+      "kimi-k3",
+      "muse-spark-1-3"
+    ],
+    "pricing": {
+      "model": "subscription",
+      "notes": "Free $0; Plus $8 (Grok only); Premium $30 (adds third-party models at API list price); Super $100; Ultra $200; Teams $30+/user; Enterprise custom."
+    },
+    "scores": [],
+    "notes": "Notable by the frontier-lab rule only if SpaceX ownership counts: Cursor says it was acquired by SpaceX (post dated 2026-08-14) after an April partnership with SpaceXAI, and its footer still reads Anysphere, Inc. — kept a separate company id; reviewer should decide whether notable applies. releaseDate null: no launch date found on a Cursor page. Models list omits GPT-6-family models; not mapped: Composer 2.5, Kimi K2.7 Code, GPT-5.x Codex variants and others absent from models.json. Not Notable: Anysphere is not one of the five frontier labs, whatever its ownership, and Cursor is not on the Terminal-Bench leaderboard."
+  },
+  {
+    "id": "zed",
+    "name": "Zed",
+    "company": "zed-industries",
+    "releaseDate": null,
+    "notable": false,
+    "description": "An open-source code editor with a built-in agent panel that runs hosted or bring-your-own-key models and external agents such as Claude Agent and Codex CLI.",
+    "strengths": [
+      "Open source (GPL-3.0-or-later, some Apache-2.0)",
+      "Personal plan free forever with your own keys or external agents",
+      "BYOK providers include Bedrock, Anthropic, Google, OpenAI, OpenRouter, Ollama and GitHub Copilot"
+    ],
+    "weaknesses": [
+      "Zed-hosted model usage billed at API list price plus 10%"
+    ],
+    "links": {
+      "official": "https://zed.dev",
+      "docs": "https://zed.dev/pricing"
+    },
+    "interface": [
+      "ide"
+    ],
+    "openSource": true,
+    "license": {
+      "spdx": "GPL-3.0-or-later",
+      "name": "GNU GPL v3 or later (Apache-2.0 components where marked)",
+      "kind": "copyleft",
+      "url": "https://github.com/zed-industries/zed/blob/main/LICENSE-GPL",
+      "commercialUse": true
+    },
+    "repo": "https://github.com/zed-industries/zed",
+    "supportedModels": "any",
+    "pricing": {
+      "model": "byo-key",
+      "notes": "Personal $0 with own keys; Pro $10/mo with $5 tokens then usage; Business $30/seat/mo."
+    },
+    "scores": [],
+    "notes": "releaseDate null: no launch date for Zed's agent features found on a Zed page. license.kind 'restricted' used for copyleft (commercial use allowed)."
+  },
+  {
+    "id": "warp",
+    "name": "Warp",
+    "company": "warp",
+    "releaseDate": null,
+    "notable": false,
+    "description": "An agentic development environment built around a terminal, with a built-in coding agent, an agent CLI for any terminal and cloud agents.",
+    "strengths": [
+      "Client is open source (AGPL-3.0; UI crates MIT)",
+      "Switch models per task or run different models in parallel",
+      "Can host third-party CLI agents (Claude Code, Codex, Gemini CLI)"
+    ],
+    "weaknesses": [
+      "BYO API keys/custom endpoints on Business and Enterprise; Free tier BYO inference is footnoted"
+    ],
+    "links": {
+      "official": "https://www.warp.dev",
+      "docs": "https://www.warp.dev/pricing"
+    },
+    "interface": [
+      "desktop",
+      "cli"
+    ],
+    "openSource": true,
+    "license": {
+      "spdx": "AGPL-3.0",
+      "name": "GNU AGPL v3 (UI framework crates MIT)",
+      "kind": "copyleft",
+      "url": "https://github.com/warpdotdev/warp",
+      "commercialUse": true
+    },
+    "repo": "https://github.com/warpdotdev/warp",
+    "supportedModels": [
+      "claude-opus-5",
+      "gemini-3-1-pro",
+      "glm-5-2",
+      "kimi-k3"
+    ],
+    "pricing": {
+      "model": "subscription",
+      "notes": "Free $0; Build $20/mo (incl. $20 agent usage); Max $200/mo; Business $50/user/mo; Enterprise custom."
+    },
+    "scores": [],
+    "notes": "supportedModels is partial: the pricing page names Claude Opus 5, 'GPT-5.6' (variant unspecified, so unmapped), Gemini 3.1 Pro, GLM 5.2, Kimi K3 'and more'. releaseDate null; earliest release in the open-source repo is 2026-04-29, which is not the product launch. AGPL is copyleft (kind 'restricted', commercial use allowed); spdx 'AGPL-3.0' as GitHub reports it — -only vs -or-later not stated."
+  },
+  {
+    "id": "kilo-code",
+    "name": "Kilo Code",
+    "company": "kilo",
+    "releaseDate": null,
+    "notable": false,
+    "description": "An open-source coding agent for VS Code, JetBrains, the CLI and a cloud agent, with access to 500+ models.",
+    "strengths": [
+      "MIT licence",
+      "500+ models, switchable mid-task; BYOK or local via Ollama/LM Studio",
+      "Provider rates with no markup on the Kilo Gateway (5% credit purchase fee)"
+    ],
+    "weaknesses": [
+      "Cloud agent compute billed separately per second"
+    ],
+    "links": {
+      "official": "https://kilo.ai",
+      "docs": "https://kilo.ai/pricing"
+    },
+    "interface": [
+      "ide",
+      "cli",
+      "web"
+    ],
+    "openSource": true,
+    "license": {
+      "spdx": "MIT",
+      "name": "MIT License",
+      "kind": "permissive",
+      "url": "https://github.com/Kilo-Org/kilocode/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "repo": "https://github.com/Kilo-Org/kilocode",
+    "supportedModels": "any",
+    "pricing": {
+      "model": "byo-key",
+      "notes": "Platform free for individuals with own keys or pay-as-you-go gateway credits; optional Kilo Pass $19/$49/$199 per month; Teams $15/user/mo."
+    },
+    "scores": [],
+    "notes": "releaseDate null: earliest GitHub release visible (v1.0.25, 2026-02-23) postdates repo creation (2025-03-10), so it is not the launch."
+  },
+  {
+    "id": "junie",
+    "name": "Junie",
+    "company": "jetbrains",
+    "releaseDate": null,
+    "notable": false,
+    "description": "JetBrains' coding agent, available as a CLI, inside JetBrains IDEs, and in GitHub Actions and GitLab CI/CD.",
+    "strengths": [
+      "Works with any model you choose: 10+ via BYOK, plus local models",
+      "Free Junie Lite model with every JetBrains account",
+      "Uses IDE code intelligence across multiple projects"
+    ],
+    "weaknesses": [
+      "Regular use recommended on AI Ultimate ($25/user/mo)"
+    ],
+    "links": {
+      "official": "https://junie.jetbrains.com/",
+      "docs": null
+    },
+    "interface": [
+      "cli",
+      "ide"
+    ],
+    "openSource": false,
+    "license": null,
+    "repo": "https://github.com/JetBrains/junie",
+    "supportedModels": "any",
+    "pricing": {
+      "model": "subscription",
+      "notes": "Free Junie Lite or BYOK at provider rates; AI Pro $8.33/user/mo (10 credits); AI Ultimate $25/user/mo (35 credits)."
+    },
+    "scores": [],
+    "notes": "Open-source status unconfirmed: a public repo exists but GitHub reports no recognised licence (NOASSERTION); set openSource=false. releaseDate null: none on the product page."
+  },
+  {
+    "id": "qwen-code",
+    "name": "Qwen Code",
+    "company": "alibaba",
+    "releaseDate": null,
+    "notable": false,
+    "description": "Alibaba's open-source terminal coding agent, with a desktop app, editor plugins and SDKs, supporting Qwen, OpenAI, Anthropic, Gemini and local models.",
+    "strengths": [
+      "Apache-2.0",
+      "Any third-party provider or local model (Ollama/vLLM); switch at runtime",
+      "Desktop app, VS Code/Zed/JetBrains plugins, TypeScript/Python/Java SDKs"
+    ],
+    "weaknesses": [
+      "Web UI and daemon mode are experimental"
+    ],
+    "links": {
+      "official": "https://github.com/QwenLM/qwen-code",
+      "docs": null
+    },
+    "interface": [
+      "cli",
+      "desktop",
+      "ide",
+      "web"
+    ],
+    "openSource": true,
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://github.com/QwenLM/qwen-code/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "repo": "https://github.com/QwenLM/qwen-code",
+    "supportedModels": "any",
+    "pricing": {
+      "model": "byo-key",
+      "notes": "Free software; costs depend on the chosen provider."
+    },
+    "scores": [],
+    "notes": "releaseDate null: repo created 2025-06-26; earliest GitHub release visible is v0.0.1-alpha.14 (2025-08-01), so earlier alphas likely existed."
+  },
+  {
+    "id": "devin-desktop",
+    "name": "Devin Desktop",
+    "company": "cognition",
+    "releaseDate": null,
+    "notable": false,
+    "description": "Cognition's AI IDE (formerly the Windsurf Editor), with the local Devin agent, delegation to cloud Devin and an agent command center.",
+    "strengths": [
+      "Runs Devin Local, the same harness as Devin CLI",
+      "Hands tasks to cloud Devin and manages all agents in one place",
+      "Adaptive router or a chosen model (SWE-2, Claude, GPT)"
+    ],
+    "weaknesses": [
+      "Exact model list and prices not confirmed on fetched pages"
+    ],
+    "links": {
+      "official": "https://docs.devin.ai/desktop/getting-started",
+      "docs": "https://docs.devin.ai/desktop/getting-started"
+    },
+    "interface": [
+      "ide"
+    ],
+    "openSource": false,
+    "license": null,
+    "repo": null,
+    "supportedModels": [],
+    "pricing": {
+      "model": "subscription",
+      "notes": "Free, Pro, Teams and Enterprise with daily/weekly quotas; prices not confirmed."
+    },
+    "scores": [],
+    "notes": "windsurf.com now 308-redirects to devin.ai/desktop. The rename date (2026-06-02) comes only from secondary sources (Coder docs), so releaseDate is null. Devin itself (cloud agent, vendor picks the model) is an agent, not a harness."
+  }
+]

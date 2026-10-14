@@ -154,7 +154,7 @@ const supported = (s: HarnessEntry["supportedModels"]) =>
 export function bestHarnessScore(e: HarnessEntry): string | null {
   const best = e.scores.slice().sort((a, b) => b.score - a.score)[0];
   if (!best) return null;
-  return `${best.score}% · ${modelById.get(best.modelId)?.name ?? best.modelId}`;
+  return `${best.score}% (v${best.version}) · ${modelById.get(best.modelId)?.name ?? best.modelId}`;
 }
 
 const harness: KindConfig<HarnessEntry> = {
