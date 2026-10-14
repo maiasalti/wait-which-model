@@ -36,8 +36,8 @@ function isRateLimited(ip: string): boolean {
   return false;
 }
 
-// System One decision models (Jev and kin) cannot chat, so they are never a
-// valid answer to "which model should I talk to".
+// System One decision models (Jev and kin) and world models (HelixWorld) cannot
+// chat, so they are never a valid answer to "which model should I talk to".
 const RECOMMENDABLE_MODELS = models.filter((m) => m.status !== "deprecated" && m.type === "llm");
 
 // Single source of truth for "recommendable models": the same filtered set backs

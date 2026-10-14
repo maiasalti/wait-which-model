@@ -228,3 +228,7 @@ muse-wonder-full · predecessorId · 2026-10-13 · Same sources as muse-wonder: 
 muse-wonder-full · apiIds · 2026-10-13 · Not served on the Meta Model API (dev.meta.ai/docs/models: Muse Code Power/Maximum plans only); Meta's pricing table shows the string muse-wonder-full-1.0 for Muse Code only, no OpenRouter/Bedrock/Vertex listing. Left [].
 muse-wonder-full · speed · 2026-10-13 · AA model page has no performance data (hostModelCount 0 — no hosted endpoint to measure). Left null.
 muse-wonder-full · retirementDate · 2026-10-13 · Brand-new release; no lifecycle notice. Left null.
+helixworld · predecessorId · 2026-10-14 · Noiz AI's first world model; the GitHub README, Hugging Face card, arXiv 2609.38123 and QbitAI launch coverage name no model it replaces. Left null.
+helixworld · apiIds · 2026-10-14 · No public API (QbitAI 2026-08-17: API in internal testing); Hugging Face card lists no inference provider; no OpenRouter listing found. Weights only at NoizAI/HelixWorld-preview. Left [].
+helixworld · speed · 2026-10-14 · Not applicable — a world model, not covered by Artificial Analysis' LLM speed measurements. Left null.
+helixworld · retirementDate · 2026-10-14 · Preview checkpoint; no lifecycle notice. Left null.
