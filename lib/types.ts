@@ -72,12 +72,13 @@ export interface ApiId {
   id: string;
 }
 
-export type ModelType = "llm" | "system-one" | "world-model";
+export type ModelType = "llm" | "system-one" | "world-model" | "voice";
 
 export const MODEL_TYPE_LABEL: Record<ModelType, string> = {
   llm: "LLM",
   "system-one": "System One",
   "world-model": "World Model",
+  voice: "Voice",
 };
 
 export interface Model {
@@ -95,7 +96,10 @@ export interface Model {
    *  apply and the recommender must not suggest it for chat work.
    *  `world-model` is an interactive world generator (Noiz AI's HelixWorld):
    *  a starting image plus camera moves and actions in, a streamed explorable
-   *  scene out — no text, so the same exclusions apply. */
+   *  scene out — no text, so the same exclusions apply.
+   *  `voice` is a speech-to-speech model (xAI's Grok Voice 3.0): live audio
+   *  in, spoken audio out, priced per minute rather than per token — the text
+   *  benchmarks don't apply, so it is excluded the same way. */
   type: ModelType;
   contextWindow: number | null;
   maxOutput: number | null;

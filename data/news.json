@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-10-14-grok-voice-3-0",
+    "date": "2026-10-14",
+    "title": "xAI releases Grok Voice 3.0, a speech-to-speech model for voice agents",
+    "summary": "xAI shipped Grok Voice 3.0 on its Voice Agent API at $0.08 per minute, unchanged from Grok Voice 2.0, which is now deprecated; agents on the grok-voice-latest alias moved over automatically. xAI cites a first-place 86.9 on Artificial Analysis' Speech-to-Speech Index (up from 81.3) and 71.6% on τ-Voice support calls, behind GPT-Live-1's 74.5%.",
+    "category": "release",
+    "companies": [
+      "xai"
+    ],
+    "modelIds": [
+      "grok-voice-3-0"
+    ],
+    "sourceName": "xAI",
+    "sourceUrl": "https://x.ai/news/grok-voice-3"
+  },
+  {
     "id": "2026-10-12-muse-wonder",
     "date": "2026-10-12",
     "title": "Meta releases Muse Wonder and Muse Wonder Full, its first frontier-class Muse models",
