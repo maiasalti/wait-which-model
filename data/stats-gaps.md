@@ -954,8 +954,8 @@ New-model release run on 2026-10-01 (Gemini 4 Argon, GPT-6.1 Sol). Sources: Goog
 | gemini-4-argon | terminalBench | 2026-10-01 | only Terminal-Bench 4.0 exists (Google 57.4%, AA 57%), not the tracked 2.1 |
 | gemini-4-argon | gdpvalAA | 2026-10-01 | AA rates it 1611 (high) on GDPval-AA v2.1 — a different scale from the v2 this key records; migrate the key before using it |
 | gemini-4-argon | arcAgi2 | 2026-10-01 | not on arcprize.org/results the day after launch; restricted rollout — re-check |
-| gemini-4-argon | contextWindow | 2026-10-01 | Google has not disclosed the input context window; AA's "1M" is not an official figure — re-check once a Gemini API model page exists |
-| gemini-4-argon | knowledgeCutoff | 2026-10-01 | not stated in Google's announcement; no model card published — re-check |
+| gemini-4-argon | contextWindow | 2026-10-01 | Google has not disclosed the input context window; AA's "1M" is not an official figure — re-check once a Gemini API model page exists — **superseded 2026-10-15: Gemini 4 Argon went GA on 2026-10-13; the Gemini API model page gives a unified 1,048,576-token window (filled)** |
+| gemini-4-argon | knowledgeCutoff | 2026-10-01 | not stated in Google's announcement; no model card published — re-check — **superseded 2026-10-15: the DeepMind model card now states a March 2026 cutoff (filled as 2026-03)** |
 | gemini-4-argon | mmluPro / aime | 2026-10-01 | retired benchmarks; not in Google's table |
 | gpt-6-1-sol | gpqaDiamond | 2026-10-01 | not in OpenAI's launch material or on AA's pages; an 88% figure on aggregator sites is untraceable to a primary source |
 | gpt-6-1-sol | sweBench / sweBenchPro | 2026-10-01 | OpenAI reports DeepSWE v1.1 instead; not on Scale's SWE-bench Pro board |
@@ -1034,3 +1034,6 @@ New-model-release research on 2026-10-04, scoped to `claude-sonnet-5-5`. Sources
 | muse-wonder-full | costPerTask | 2026-10-13 | AA's launch article: "not priced per token, so no Cost per Task figure is available" |
 | muse-wonder-full | maxOutput | 2026-10-13 | not published anywhere by Meta |
 | muse-wonder-full | knowledgeCutoff | 2026-10-13 | absent from the blog, model card and docs; AA lists knowledgeCutoffDate null |
+
+| claude-sonnet-5-5 | gdpvalAA | 2026-10-15 | re-checked: AA publishes only GDPval-AA v2.1 for Sonnet 5.5 — no v2 figure exists, and v2.1 is a different scale. Left null |
+| ling-3-1-flash | pricing | 2026-10-15 | re-checked after the trial: Ant's own pricing page (developer.ant-ling.com/en/docs/models/price/, excerpt only) shows a limited-time 75% discount with no end date — ¥0.50/¥1.50 per MTok (list ¥2/¥6); a USD row of $0.075/$0.225 (list $0.30/$0.90) may be Ant's OpenRouter channel rather than its direct API. Left null — candidate list price $0.30/$0.90 pending a direct read |
