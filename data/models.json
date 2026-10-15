@@ -8324,5 +8324,65 @@
       "A preview checkpoint with no independent hands-on testing yet — every quality claim, including the blind user study, is Noiz's own, and Noiz lists long-horizon consistency as future work"
     ],
     "notes": "Not an LLM: an interactive audio-visual world model that takes a first-frame image, a text prompt and a stream of camera/keyboard actions and generates 768x512 video at 24 FPS with 48 kHz camera-aligned stereo sound, so none of this site's benchmarks apply and every cell is null by design; context, output and pricing are likewise not applicable. Built by Noiz AI with HKUST on the open LTX-2.3 backbone (Gemma 3 12B text encoder), as a bidirectional teacher distilled into a few-step streaming student; Noiz reports a steady-state real-time factor of 0.77 on one H800 including decoding, about 70 GB VRAM in BF16, and has published no parameter count. Announced as HelixWorld 1.0 on 2026-08-17 (QbitAI) with weights promised 'in the coming weeks' and the API in internal testing; releaseDate is 2026-09-03, when Preview v1 inference code (Apache 2.0, GitHub NoizAI/HelixWorld) and checkpoint (Hugging Face NoizAI/HelixWorld-preview) shipped alongside a browser demo at helixworld.org. The checkpoint's LICENSE is Apache 2.0, though the card also calls it a 'private inference checkpoint' and says repository access 'does not replace acceptance of the applicable model license'; the technical report (arXiv 2609.38123, 2026-09-29) is CC BY-NC-SA 4.0, which covers the paper only. availability is self-host because there is no public API, no Hugging Face inference provider, and the helixworld.org demo states no access terms. Noiz's HelixBench (released 2026-10-12) and WBench comparisons are self-reported and given only as figures. Company details conflict: Pedaily names the registered entity as Shenzhen-based and founded in 2025, while Dealroom gives Hong Kong, 2024; the registered-entity figures are used."
+  },
+  {
+    "id": "grok-voice-3-0",
+    "name": "Grok Voice 3.0",
+    "company": "xai",
+    "releaseDate": "2026-10-14",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "type": "voice",
+    "contextWindow": null,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "xai",
+        "id": "grok-voice-3.0"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "A drop-in upgrade — same endpoint, session parameters and events as Grok Voice 2.0, and agents on the grok-voice-latest alias moved over without a code change",
+      "Built for support and sales calls with tools and policies, not just chat — xAI already runs it on Starlink's phone lines and in Tesla cars",
+      "Holds up through pauses, turn-taking and callers talking over it, the full-duplex behavior voice agents most often fumble"
+    ],
+    "weaknesses": [
+      "Reasoning is on at high effort by default, and the first audio arrives slightly later than on Grok Voice 2.0 — the quality gain costs a beat of responsiveness",
+      "Anyone on the grok-voice-latest alias was moved to the new model automatically, so production agents changed behavior on launch day unless their owners had pinned a version",
+      "Behavior is a moving target this early: every quality claim, including the Starlink resolution rate, is xAI's own, and no independent hands-on testing exists yet"
+    ],
+    "notes": "Not an LLM: a speech-to-speech model served through xAI's Voice Agent API, so none of this site's text benchmarks apply and every cell is null by design; it is priced per minute of conversation ($0.08/min, $4.80/hr, unchanged from Grok Voice 2.0), not per token, so pricing is null, and context/output limits are unpublished. xAI's launch figures are cited from Artificial Analysis: Speech-to-Speech Index 86.9 (first; Grok Voice 2.0 81.3), Big Bench Audio 98.5%, Speech Agent Arena Elo 1070, Full Duplex Bench 97.0%, τ-Voice 71.6% (below GPT-Live-1 Astra Medium at 74.5%), plus 74% accuracy on ServiceNow's EVA-Bench; Kingy.ai reads Artificial Analysis' time to first audio as 0.81s, up from 0.70s on 2.0. xAI's docs mark grok-voice-2.0 deprecated and direct users to grok-voice-3.0, but no retirement date is given and Grok Voice 2.0 has no entry here, so predecessorId is null."
   }
 ]
