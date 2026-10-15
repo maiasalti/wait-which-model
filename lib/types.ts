@@ -72,11 +72,12 @@ export interface ApiId {
   id: string;
 }
 
-export type ModelType = "llm" | "system-one";
+export type ModelType = "llm" | "system-one" | "world-model";
 
 export const MODEL_TYPE_LABEL: Record<ModelType, string> = {
   llm: "LLM",
   "system-one": "System One",
+  "world-model": "World Model",
 };
 
 export interface Model {
@@ -91,7 +92,10 @@ export interface Model {
    *  language model. `system-one` is a typed-decision model (TypeSafe's Jev
    *  and its open counterparts): state plus typed questions in, calibrated
    *  probabilities out, no generated text — so generative benchmarks never
-   *  apply and the recommender must not suggest it for chat work. */
+   *  apply and the recommender must not suggest it for chat work.
+   *  `world-model` is an interactive world generator (Noiz AI's HelixWorld):
+   *  a starting image plus camera moves and actions in, a streamed explorable
+   *  scene out — no text, so the same exclusions apply. */
   type: ModelType;
   contextWindow: number | null;
   maxOutput: number | null;

@@ -460,6 +460,21 @@
     "sourceUrl": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/"
   },
   {
+    "id": "2026-09-03-helixworld",
+    "date": "2026-09-03",
+    "title": "Noiz AI releases HelixWorld, an open-weights real-time audio-visual world model",
+    "summary": "Noiz AI and HKUST released the HelixWorld Preview v1 code and checkpoint under Apache 2.0. It turns a single image and prompt into a steerable world at 24 FPS, with stereo sound generated alongside the video that follows camera movement. Noiz says one 80 GB-class GPU runs it in real time.",
+    "category": "release",
+    "companies": [
+      "noiz"
+    ],
+    "modelIds": [
+      "helixworld"
+    ],
+    "sourceName": "Noiz AI (GitHub)",
+    "sourceUrl": "https://github.com/NoizAI/HelixWorld"
+  },
+  {
     "id": "2026-09-03-gpt-6-astra",
     "date": "2026-09-03",
     "title": "OpenAI launches GPT-6 Astra and calls it the start of the \"AGI era\"",

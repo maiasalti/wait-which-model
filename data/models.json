@@ -8263,5 +8263,66 @@
       "Too new for hands-on reception — beyond Meta's launch materials its day-to-day behaviour is undocumented"
     ],
     "notes": "Subscription-only: Muse Code's Power Usage ($50/month) and Maximum Usage ($200/month) plans, in Standard or Contributor mode, so pricing is null — there is no per-token rate. Meta's pricing table lists the string muse-wonder-full-1.0 but it is not served on the Meta Model API (setting max effort on Muse Wonder does not select it), so apiIds is empty and availability is restricted; CNBC's $20/$100 monthly tiers are for the separate Muse consumer agent app. Meta states only '1M tokens' of context (its docs give 1,048,576 for Muse Wonder but no exact Full figure). Meta published none of the tracked benchmarks: its launch table (max effort, competitor runs best-effort) reports Terminal-Bench 4.0-AA 57.1% (not the tracked 2.1), DeepSWE 1.1 79.0%, SWE-Marathon 57.5% (at xhigh), ProgramBench 59.0%, Harvey LAB-AA 13.1% and Personal Superintelligence Index 59.1. Artificial Analysis scores it 56 on Intelligence Index v4.3 at max effort, behind Claude Opus 5.5's 58; its HLE 53.6% (own text-only subset, tool setting unstated) and GDPval-AA v2.1 1857 (not the tracked v2) are left null, and AA publishes no cost per task (not priced per token) or speed (no hosted endpoint). maxOutput and knowledge cutoff are unpublished; predecessorId is null because Meta names no model it replaces."
+  },
+  {
+    "id": "helixworld",
+    "name": "HelixWorld",
+    "company": "noiz",
+    "releaseDate": "2026-09-03",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "type": "world-model",
+    "contextWindow": null,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "self-host",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/NoizAI/HelixWorld-preview/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Sound is generated with the picture rather than dubbed on afterwards — a drummer who pauses on screen goes quiet instead of playing on, which post-hoc video-to-audio pipelines get wrong",
+      "The stereo field turns with the camera, so a source you pan past moves from one ear to the other instead of staying fixed in the mix",
+      "Steered like a game from a single starting image and prompt — WASD and arrow-key actions, combinable, rather than re-prompting for every shot"
+    ],
+    "weaknesses": [
+      "Running the open checkpoint takes a single 80 GB-class datacentre GPU, so it is out of reach of consumer cards",
+      "Controls land a beat late — input binds to the next generated chunk of world, so turns and prompt changes arrive a moment after you press them",
+      "A preview checkpoint with no independent hands-on testing yet — every quality claim, including the blind user study, is Noiz's own, and Noiz lists long-horizon consistency as future work"
+    ],
+    "notes": "Not an LLM: an interactive audio-visual world model that takes a first-frame image, a text prompt and a stream of camera/keyboard actions and generates 768x512 video at 24 FPS with 48 kHz camera-aligned stereo sound, so none of this site's benchmarks apply and every cell is null by design; context, output and pricing are likewise not applicable. Built by Noiz AI with HKUST on the open LTX-2.3 backbone (Gemma 3 12B text encoder), as a bidirectional teacher distilled into a few-step streaming student; Noiz reports a steady-state real-time factor of 0.77 on one H800 including decoding, about 70 GB VRAM in BF16, and has published no parameter count. Announced as HelixWorld 1.0 on 2026-08-17 (QbitAI) with weights promised 'in the coming weeks' and the API in internal testing; releaseDate is 2026-09-03, when Preview v1 inference code (Apache 2.0, GitHub NoizAI/HelixWorld) and checkpoint (Hugging Face NoizAI/HelixWorld-preview) shipped alongside a browser demo at helixworld.org. The checkpoint's LICENSE is Apache 2.0, though the card also calls it a 'private inference checkpoint' and says repository access 'does not replace acceptance of the applicable model license'; the technical report (arXiv 2609.38123, 2026-09-29) is CC BY-NC-SA 4.0, which covers the paper only. availability is self-host because there is no public API, no Hugging Face inference provider, and the helixworld.org demo states no access terms. Noiz's HelixBench (released 2026-10-12) and WBench comparisons are self-reported and given only as figures. Company details conflict: Pedaily names the registered entity as Shenzhen-based and founded in 2025, while Dealroom gives Hong Kong, 2024; the registered-entity figures are used."
   }
 ]

@@ -286,5 +286,14 @@
     "website": "https://aleph-alpha.com",
     "color": "#5B6CD9",
     "order": 32
+  },
+  {
+    "id": "noiz",
+    "name": "Noiz AI",
+    "country": "China",
+    "founded": 2025,
+    "website": "https://noiz.ai",
+    "color": "#C8701E",
+    "order": 33
   }
 ]

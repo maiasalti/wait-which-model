@@ -65,7 +65,11 @@ export default async function Image({
   // could silently render a wrong card.
   const subtitle = [
     model.tier,
-    model.type === "llm" ? model.modality : `${MODEL_TYPE_LABEL[model.type]} model`,
+    model.type === "llm"
+      ? model.modality
+      : model.type === "world-model"
+        ? MODEL_TYPE_LABEL[model.type]
+        : `${MODEL_TYPE_LABEL[model.type]} model`,
     model.openWeights ? "Open weights" : "Closed weights",
     `Released ${formatDate(model.releaseDate)}`,
   ].join("  ·  ");
