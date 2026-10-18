@@ -8324,5 +8324,70 @@
       "A preview checkpoint with no independent hands-on testing yet — every quality claim, including the blind user study, is Noiz's own, and Noiz lists long-horizon consistency as future work"
     ],
     "notes": "Not an LLM: an interactive audio-visual world model that takes a first-frame image, a text prompt and a stream of camera/keyboard actions and generates 768x512 video at 24 FPS with 48 kHz camera-aligned stereo sound, so none of this site's benchmarks apply and every cell is null by design; context, output and pricing are likewise not applicable. Built by Noiz AI with HKUST on the open LTX-2.3 backbone (Gemma 3 12B text encoder), as a bidirectional teacher distilled into a few-step streaming student; Noiz reports a steady-state real-time factor of 0.77 on one H800 including decoding, about 70 GB VRAM in BF16, and has published no parameter count. Announced as HelixWorld 1.0 on 2026-08-17 (QbitAI) with weights promised 'in the coming weeks' and the API in internal testing; releaseDate is 2026-09-03, when Preview v1 inference code (Apache 2.0, GitHub NoizAI/HelixWorld) and checkpoint (Hugging Face NoizAI/HelixWorld-preview) shipped alongside a browser demo at helixworld.org. The checkpoint's LICENSE is Apache 2.0, though the card also calls it a 'private inference checkpoint' and says repository access 'does not replace acceptance of the applicable model license'; the technical report (arXiv 2609.38123, 2026-09-29) is CC BY-NC-SA 4.0, which covers the paper only. availability is self-host because there is no public API, no Hugging Face inference provider, and the helixworld.org demo states no access terms. Noiz's HelixBench (released 2026-10-12) and WBench comparisons are self-reported and given only as figures. Company details conflict: Pedaily names the registered entity as Shenzhen-based and founded in 2025, while Dealroom gives Hong Kong, 2024; the registered-entity figures are used."
+  },
+  {
+    "id": "deepseek-v4-1-flash-1017",
+    "name": "DeepSeek-V4.1-Flash-1017",
+    "company": "deepseek",
+    "releaseDate": "2026-10-17",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": 384000,
+    "pricing": {
+      "inputPerMTok": 0.15,
+      "outputPerMTok": 0.6
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "MIT",
+      "name": "MIT License",
+      "kind": "permissive",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "deepseek",
+        "id": "deepseek-flash"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": "deepseek-v4-1-flash",
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": 42.6,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Agentic task-completion and tool-use loops reportedly hold together longer than the September checkpoint, per DeepSeek's own evaluation harness",
+      "Shorter, less sprawling answers than V4.1-Flash on the same tasks, per DeepSeek's own release notes",
+      "Same MIT weights land on Hugging Face and third-party hosts (DeepInfra, Baseten) the day of the announcement, continuing V4.1-Flash's day-one multi-host availability"
+    ],
+    "weaknesses": [
+      "Shipped as a same-day checkpoint swap under the existing deepseek-flash API alias rather than a standalone announcement — every reported gain so far is DeepSeek's own harness output relayed by trackers, with no independent eval yet",
+      "Still ships without a Jinja chat template, inheriting V4.1-Flash's reliance on DeepSeek's own Python/Rust prompt-encoding tooling"
+    ],
+    "notes": "A same-architecture dated refresh of DeepSeek-V4.1-Flash (2026-09-10), released 2026-10-17 under the same deepseek-flash API alias, MIT license and 1M-token context; DeepSeek's own figures (relayed by MindStudio, OfficeChai, Kingy AI, MarkTechPost and aiweekly.co, none independently verified) report Humanity's Last Exam at 42.6% without tools (up from 36.8%), Terminal-Bench 4.0 at 42.3 (not comparable to this site's Terminal-Bench 2.1 field, left null) and DeepSWE v1.1 at 77.0; GPQA Diamond, SWE-bench, LMArena and ARC-AGI-2 were not reported for this checkpoint specifically and are left null pending a dedicated eval. contextWindow, maxOutput, pricing and license are carried over from the shared V4.1-Flash deployment since every source describes this as an in-place checkpoint swap on the same endpoint, not a new context/pricing tier; costPerTask and speed are null because Artificial Analysis had not measured this specific checkpoint as of this writing."
   }
 ]

@@ -1034,3 +1034,13 @@ New-model-release research on 2026-10-04, scoped to `claude-sonnet-5-5`. Sources
 | muse-wonder-full | costPerTask | 2026-10-13 | AA's launch article: "not priced per token, so no Cost per Task figure is available" |
 | muse-wonder-full | maxOutput | 2026-10-13 | not published anywhere by Meta |
 | muse-wonder-full | knowledgeCutoff | 2026-10-13 | absent from the blog, model card and docs; AA lists knowledgeCutoffDate null |
+| deepseek-v4-1-flash-1017 | gpqaDiamond | 2026-10-18 | not reported for this checkpoint specifically in DeepSeek's release coverage (MindStudio, OfficeChai, Kingy AI, MarkTechPost, aiweekly.co); only agentic/coding benchmarks and HLE were given |
+| deepseek-v4-1-flash-1017 | sweBench | 2026-10-18 | not reported; coverage gives DeepSWE v1.1, Terminal-Bench 4.0, ProgramBench, ApexBench instead of SWE-bench Verified |
+| deepseek-v4-1-flash-1017 | sweBenchPro | 2026-10-18 | not reported anywhere found |
+| deepseek-v4-1-flash-1017 | terminalBench | 2026-10-18 | only a Terminal-Bench 4.0 score (42.3) was reported; this field is Terminal-Bench 2.1 only per style guide, so left null and the 4.0 figure recorded in notes instead |
+| deepseek-v4-1-flash-1017 | lmarenaElo | 2026-10-18 | not reported; not yet on LMArena's leaderboard as of 2026-10-18 |
+| deepseek-v4-1-flash-1017 | gdpvalAA | 2026-10-18 | Artificial Analysis had not measured this specific checkpoint as of 2026-10-18 |
+| deepseek-v4-1-flash-1017 | arcAgi2 | 2026-10-18 | not reported anywhere found |
+| deepseek-v4-1-flash-1017 | costPerTask | 2026-10-18 | Artificial Analysis had not published an Intelligence Index cost figure for this checkpoint as of 2026-10-18 |
+| deepseek-v4-1-flash-1017 | speed | 2026-10-18 | Artificial Analysis had not measured this specific checkpoint as of 2026-10-18 |
+| deepseek-v4-1-flash-1017 | knowledgeCutoff | 2026-10-18 | not published by DeepSeek for this checkpoint; DataLearner also lists "no data" |

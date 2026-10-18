@@ -232,3 +232,4 @@ helixworld · predecessorId · 2026-10-14 · Noiz AI's first world model; the Gi
 helixworld · apiIds · 2026-10-14 · No public API (QbitAI 2026-08-17: API in internal testing); Hugging Face card lists no inference provider; no OpenRouter listing found. Weights only at NoizAI/HelixWorld-preview. Left [].
 helixworld · speed · 2026-10-14 · Not applicable — a world model, not covered by Artificial Analysis' LLM speed measurements. Left null.
 helixworld · retirementDate · 2026-10-14 · Preview checkpoint; no lifecycle notice. Left null.
+deepseek-v4-1-flash-1017 · retirementDate · 2026-10-18 · Brand-new checkpoint (released 2026-10-17); no lifecycle notice. Left null.

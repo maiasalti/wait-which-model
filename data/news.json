@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-10-17-deepseek-v4-1-flash-1017",
+    "date": "2026-10-17",
+    "title": "DeepSeek releases DeepSeek-V4.1-Flash-1017, a dated refresh of V4.1-Flash",
+    "summary": "DeepSeek shipped V4.1-Flash-1017 under the same deepseek-flash API alias, MIT license and 1M-token context as September's V4.1-Flash. DeepSeek's own figures (not yet independently verified) report Humanity's Last Exam up to 42.6% without tools from 36.8%, with gains on Terminal-Bench 4.0 and DeepSWE v1.1.",
+    "category": "release",
+    "companies": [
+      "deepseek"
+    ],
+    "modelIds": [
+      "deepseek-v4-1-flash-1017"
+    ],
+    "sourceName": "MarkTechPost",
+    "sourceUrl": "https://www.marktechpost.com/2026/10/17/deepseek-just-released-v4-1-flash-1017-scores-77-0-on-deepswe-opens-search-api/"
+  },
+  {
     "id": "2026-10-12-muse-wonder",
     "date": "2026-10-12",
     "title": "Meta releases Muse Wonder and Muse Wonder Full, its first frontier-class Muse models",
