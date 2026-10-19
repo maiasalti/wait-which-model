@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import { companies } from "@/lib/data";
+import { modelCompanies } from "@/lib/data";
 import { CompanyLogo } from "./CompanyLogo";
 
 /**
@@ -42,7 +42,7 @@ export function CompanySelect({
     selected.length === 0
       ? "All companies"
       : selected.length === 1
-        ? (companies.find((c) => c.id === selected[0])?.name ?? "1 company")
+        ? (modelCompanies.find((c) => c.id === selected[0])?.name ?? "1 company")
         : `${selected.length} companies`;
 
   return (
@@ -83,7 +83,7 @@ export function CompanySelect({
           >
             All companies
           </button>
-          {companies.map((c) => (
+          {modelCompanies.map((c) => (
             <label
               key={c.id}
               className="flex cursor-pointer items-center gap-2 rounded px-2 py-1.5 text-sm text-ink-2 hover:bg-surface hover:text-ink"

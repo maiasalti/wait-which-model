@@ -27,17 +27,17 @@ PR's `models.json` additions before merging.
 Weekdays only. The laptop is shut at weekends, so a Saturday job would either never run or
 fire late on Monday and collide with Monday's own sweep.
 
-| Day | Jobs |
-|---|---|
-| Mon | health · models · **news** |
-| Tue | health · models · **stats** |
-| Wed | health · models |
-| Thu | health · models · **stats** |
-| Fri | health · models |
+| Day | Jobs | Directory job |
+|---|---|---|
+| Mon | health · models · **news** | image-models |
+| Tue | health · models · **stats** | video-models |
+| Wed | health · models | agents · world-models |
+| Thu | health · models · **stats** | harnesses |
+| Fri | health · models | features |
 
-## Guards
-
-The sweep refuses to run on a dirty working tree, so it never clobbers work in progress. Changes under `.obsidian/` are ignored by that check, because Obsidian rewrites its UI-state files whenever the vault is open and that blocked nearly every run in September 2026.
+Job selection lives in `scripts/lib/sweep-jobs.js` (tested). A directory job runs only once its
+key is listed in `ENABLED_DIRECTORY_JOBS` there, which the stage that ships its protocol and data
+switches on (design: `docs/superpowers/specs/2026-10-09-directory-expansion-design.md`).
 
 ## The jobs
 
@@ -47,6 +47,7 @@ The sweep refuses to run on a dirty working tree, so it never clobbers work in p
 | `models` | Finds frontier models released since the newest `releaseDate` and not yet tracked. Adds the company too if the lab is untracked — colour must pass `palette-check.js`, logo per `lib/logos.ts` conventions. | `NEW_MODEL_RELEASE_PROTOCOL.md` |
 | `stats` | Fills null cells, skipping anything already in the gap ledgers. | `STATS_FILLER_PROTOCOL.md`, `MODEL_SPECS_PROTOCOL.md` |
 | `news` | All tracked companies, all categories, since the newest date in `news.json`. | `NEWS_SCAN_PROTOCOL.md` |
+| `image-models` … `features` | One directory: adds entries released since its newest date, re-evaluates `notable`, re-checks null cells not already in `data/directory-gaps.md`. | `DIRECTORY_RELEASE_PROTOCOL.md` |
 
 The news-scan protocol normally interviews Maia for scope. It cannot at 09:00, so the
 scheduled scope is fixed as above.
@@ -61,6 +62,13 @@ The run stops, quietly and without changing anything, when:
 2. **It is a weekend.**
 3. **The working tree is dirty.** Maia may have work in progress. A scheduled job must
    never stash, reset, or commit over it. This is the guard most worth preserving.
+   Changes under `.obsidian/` are ignored by that check, because Obsidian rewrites its
+   UI-state files whenever the vault is open and that blocked nearly every run in
+   September 2026.
+4. **The checkout is not on `main`** (Guard 3). The sweep checks out its own branch and
+   restores the starting one afterwards. Started from a clean working branch on 2026-10-01,
+   it committed that session's edits as a sweep and opened a PR with them. It now never runs
+   from anything but `main`.
 
 ## Waiting for the network
 

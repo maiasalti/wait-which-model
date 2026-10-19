@@ -1,0 +1,809 @@
+[
+  {
+    "id": "odyssey-3",
+    "name": "Odyssey-3",
+    "company": "odyssey",
+    "releaseDate": "2026-10-08",
+    "notable": false,
+    "description": "Odyssey's foundation world model, an autoregressive diffusion transformer that predicts in real time how a text-prompted environment changes as a person or agent acts in it; also used to drive robot, vehicle, drone and game policies.",
+    "strengths": [
+      "Real-time interaction via a distilled few-step variant",
+      "Odyssey-3 Pro scores 66.1 on Physics-IQ Verified video-to-video (vendor-reported; claimed highest reported score)",
+      "First- and third-person navigation plus agent-introduced events in the preview"
+    ],
+    "weaknesses": [
+      "Research preview only; no published developer pricing or API",
+      "Low base resolution (832x480; 1280x720 only for Pro)"
+    ],
+    "interactive": true,
+    "inputs": [
+      "text",
+      "actions"
+    ],
+    "output": "video-stream",
+    "maxSessionSec": null,
+    "maxResolution": "1280x720",
+    "fps": null,
+    "access": "research-preview",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [],
+    "pricing": {
+      "notes": "No product pricing published; developers asked to get in touch. Preview at experience.odyssey.systems (press coverage says free; not stated on Odyssey's page)."
+    },
+    "links": {
+      "official": "https://odyssey.systems/meet-odyssey-3",
+      "docs": null
+    },
+    "notes": "Announced 2026-09-15 ('Introducing Odyssey-3', said public release 'in the coming weeks'); research preview made available 2026-10-08 ('Our research preview is available now'), used as releaseDate. maxResolution is the Pro variant (base Odyssey-3 is 832x480, per a benchmark footnote). Physics-IQ and WorldMark figures are Odyssey's own evaluations. openWeights false = no weights mentioned anywhere. Predecessor Odyssey-2 Max (2026-04-21) was private beta for partners only. Odyssey also lists Agora-2 (multi-agent world model, 2026-09-24) with a demo at agora.odyssey.systems — not added as a separate entry. Notable=false only because access is 'research preview', not ga/beta, though the preview appears open to anyone — caller may wish to override."
+  },
+  {
+    "id": "runway-gwm-worlds-2",
+    "name": "GWM Worlds 2",
+    "company": "runway",
+    "releaseDate": "2026-09-03",
+    "notable": false,
+    "description": "Runway's real-time interactive world model that turns video-and-audio generation into a steerable simulation: users define environment, subjects, style, physical rules and ambience, then steer with free-form text actions and continuous camera motion.",
+    "strengths": [
+      "Continuous 720p video at 24 fps with generated 48 kHz audio, including matched speech and lip movement",
+      "No preset session length; Runway says it 'can generate indefinitely'",
+      "Free-form text actions addressed to subjects or the scene, bindable to keys"
+    ],
+    "weaknesses": [
+      "Research preview gated behind a contact form; no pricing or API",
+      "Runway notes real-time generation trades fidelity for speed; fast camera rotations degrade detail",
+      "Long-term memory is imperfect"
+    ],
+    "interactive": true,
+    "inputs": [
+      "text",
+      "image",
+      "actions"
+    ],
+    "output": "video-stream",
+    "maxSessionSec": null,
+    "maxResolution": "720p",
+    "fps": 24,
+    "access": "research-preview",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [],
+    "pricing": {
+      "notes": "Not published. Access by contact form."
+    },
+    "links": {
+      "official": "https://runway.com/research/introducing-gwm-worlds-2",
+      "docs": null
+    },
+    "notes": "maxSessionSec null because Runway states sessions have 'no preset length' rather than a cap. Image input = a first frame (image references beyond the first frame not supported). Builds on GWM-1 (2025-12-11; GWM Worlds/Avatars/Robotics variants) — GWM Worlds v1 not added separately; its current availability is not stated on Runway's pages. openWeights false = none mentioned."
+  },
+  {
+    "id": "world-labs-atlas",
+    "name": "Atlas",
+    "company": "world-labs",
+    "releaseDate": "2026-09-01",
+    "notable": false,
+    "description": "World Labs' 'omni' world model, trained from scratch on text, images, video and 3D, that generates and reconstructs scenes as video or as point clouds / 3D Gaussian splats with precise camera control.",
+    "strengths": [
+      "Outputs up to 1 minute of video at 1440p",
+      "Exports worlds as point clouds or 3D Gaussian splats (same representation as Marble)",
+      "Single model covers generation and reconstruction from one to dozens of images"
+    ],
+    "weaknesses": [
+      "Early access with select partners only",
+      "No real-time generation claimed"
+    ],
+    "interactive": null,
+    "inputs": [
+      "text",
+      "image",
+      "video"
+    ],
+    "output": "3d-scene",
+    "maxSessionSec": 60,
+    "maxResolution": "1440p",
+    "fps": null,
+    "access": "waitlist",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [],
+    "pricing": {
+      "notes": "Not published."
+    },
+    "links": {
+      "official": "https://www.worldlabs.ai/blog/atlas",
+      "docs": null
+    },
+    "notes": "Also accepts 3D inputs and depth maps (not in the inputs enum). maxSessionSec 60 = maximum video output length, not an interactive session. interactive null: the page describes camera control but not real-time interaction. World Labs says Atlas will power future versions of Marble. World Labs announced on 2026-09-28 that it agreed to be acquired by AMD (expected to close by end of 2026); product plans not stated."
+  },
+  {
+    "id": "alaya-evoke",
+    "name": "Alaya-EVOKE",
+    "company": "alaya-lab",
+    "releaseDate": "2026-08-13",
+    "notable": true,
+    "description": "Open-weight, three-step, CFG-free interactive video world model from Alaya Lab with camera control and mid-rollout prompt switching, aimed at endless long-horizon rollouts.",
+    "strengths": [
+      "Open weights (Apache-2.0) with training and inference code",
+      "Camera-controlled rollouts with per-chunk prompt switching",
+      "Faster than playback in the Director UI on five H200s (1.5 s chunks in 1.34 s)"
+    ],
+    "weaknesses": [
+      "Low resolution (384x640)",
+      "Slower than real time on a single H200 (1.5 s of video every 2.11 s)",
+      "Required depth backend is CC-BY-NC-4.0, which restricts commercial use"
+    ],
+    "interactive": true,
+    "inputs": [
+      "text",
+      "image",
+      "video",
+      "actions"
+    ],
+    "output": "video-stream",
+    "maxSessionSec": null,
+    "maxResolution": "384x640",
+    "fps": 24,
+    "access": "ga",
+    "openWeights": true,
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://github.com/AlayaLab/Evoke",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "huggingface",
+        "id": "AlayaLab/Evoke"
+      },
+      {
+        "provider": "huggingface",
+        "id": "AlayaLab/Evoke-Turbo"
+      }
+    ],
+    "pricing": {
+      "notes": "Free open weights; self-hosted."
+    },
+    "links": {
+      "official": "https://evoke-world.github.io/Evoke",
+      "docs": "https://github.com/AlayaLab/Evoke"
+    },
+    "notes": "releaseDate = paper date on Hugging Face (arXiv 2608.13546, 'Published Aug 13'); GitHub news has a Day-0 WBench entry 2026-08-14, Evoke-Turbo (14B, controllability-tuned) 2026-09-11 and interactive UI 2026-09-12. Repo is Apache-2.0 but the required ViGeo depth model (and optional Depth-Anything-3) is CC-BY-NC-4.0, so commercialUse true applies to the repo only. 'actions' = camera pose tracks / movement and look controls. Documented coherence is 30 s rollouts; 'hour-scale' rollouts are described but no measured result (a third-party report's 65-minute figure was not found on primary pages). Predecessor AlayaWorld (2026-07-08, HF AlayaLab/AlayaWorld) not added separately. Alaya Lab's affiliation: paper lists USTC, Shanghai Innovation Institute and Alaya Lab; no lab website found."
+  },
+  {
+    "id": "abot-world-0",
+    "name": "ABot-World-0",
+    "company": "alibaba",
+    "releaseDate": "2026-07-09",
+    "notable": true,
+    "description": "Open-weight 5B action-conditioned interactive video world model from Alibaba's AMAP CV Lab that streams open-ended worlds on a single consumer GPU.",
+    "strengths": [
+      "720p at up to 16 FPS on a single RTX 5090 (~19 GiB peak VRAM)",
+      "1.2 s action-to-first-frame latency",
+      "Apache-2.0 open weights plus browser studio and HF Space demo",
+      "Experimental 24-hour uninterrupted rollout demo published"
+    ],
+    "weaknesses": [
+      "16 FPS ceiling relies on optimized low-bit configurations"
+    ],
+    "interactive": true,
+    "inputs": [
+      "text",
+      "image",
+      "actions"
+    ],
+    "output": "video-stream",
+    "maxSessionSec": null,
+    "maxResolution": "720p",
+    "fps": 16,
+    "access": "ga",
+    "openWeights": true,
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/acvlab/ABot-World-0-5B-LF",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "huggingface",
+        "id": "acvlab/ABot-World-0-5B-LF"
+      }
+    ],
+    "pricing": {
+      "notes": "Free open weights; ABot World Studio at abot-world.amap.com."
+    },
+    "links": {
+      "official": "https://abot-world.amap.com",
+      "docs": "https://github.com/amap-cvlab/ABot-World"
+    },
+    "notes": "Developer is AMAP (Alibaba's mapping/location unit) CV Lab — mapped to company 'alibaba' (companies.json name is 'Alibaba (Qwen)'; caller may prefer a separate id). releaseDate = HF news log 'We release the causal student model' 2026-07-09; paper arXiv 2607.19191 submitted 2026-07-21. maxSessionSec null: the model claims open-ended generation; the 24-hour run is described as an experimental demo, not a limit."
+  },
+  {
+    "id": "lingbot-world-2",
+    "name": "LingBot-World 2.0 (Infinity)",
+    "company": "ant-group",
+    "releaseDate": "2026-07-09",
+    "notable": true,
+    "description": "Open-weight real-time interactive world model from Robbyant, Ant Group's embodied-AI unit, with an unbounded interaction horizon, rich in-world actions, and Pilot/Director agents.",
+    "strengths": [
+      "Real-time model claimed sufficient to drive 720p streams at 60 fps",
+      "Unbounded interaction horizon; Robbyant's release claims hour-long continuous generation",
+      "Rich actions (attacking, archery, spell-casting, shooting) plus text-driven events",
+      "Playable online via Reactor (international) and LingGuang (China)"
+    ],
+    "weaknesses": [
+      "Non-commercial licence (CC BY-NC-SA 4.0)",
+      "Example inference runs at 480P on 8 GPUs; real-time hardware not specified"
+    ],
+    "interactive": true,
+    "inputs": [
+      "text",
+      "image",
+      "actions"
+    ],
+    "output": "video-stream",
+    "maxSessionSec": null,
+    "maxResolution": "720p",
+    "fps": 60,
+    "access": "ga",
+    "openWeights": true,
+    "license": {
+      "spdx": "CC-BY-NC-SA-4.0",
+      "name": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0",
+      "kind": "restricted",
+      "url": "https://huggingface.co/robbyant/lingbot-world-v2",
+      "commercialUse": false
+    },
+    "apiIds": [
+      {
+        "provider": "huggingface",
+        "id": "robbyant/lingbot-world-v2-14b-causal-fast"
+      }
+    ],
+    "pricing": {
+      "notes": "Free open weights (non-commercial). Hosted play on Reactor; Reactor pricing not checked."
+    },
+    "links": {
+      "official": "https://github.com/Robbyant/lingbot-world-v2",
+      "docs": "https://huggingface.co/robbyant/lingbot-world-v2"
+    },
+    "notes": "Initial release 2026-07-09 (tech report, inference code, 14B causal-fast); GitHub says remaining variants (14B causal-pretrain, 14B bidirectional, 1.3B causal) followed 2026-09-10, though its TODO list was still unchecked. 720p/60fps is the developer's claim for the real-time model; the published inference example is 480x832. Hour-long figure comes from Robbyant's own Business Wire press release, not the repo (repo says 'unbounded interaction horizon'; only a 1-minute rollout demo is listed). Robbyant mapped to 'ant-group'."
+  },
+  {
+    "id": "decart-oasis-3",
+    "name": "Oasis 3",
+    "company": "decart",
+    "releaseDate": "2026-06-10",
+    "notable": true,
+    "description": "Decart's real-time, action-conditioned world model for physical AI that streams three synchronized camera views of one continuous environment, sold by the second through Decart's API.",
+    "strengths": [
+      "Available by public API from launch ('the first world model accessible by API, live from day one')",
+      "Sub-200 ms end-to-end latency at 22 FPS",
+      "Closed-loop interaction of 'unbounded length'"
+    ],
+    "weaknesses": [
+      "Low per-view resolution (512x768)",
+      "Billed as a 'Preview' model"
+    ],
+    "interactive": true,
+    "inputs": [
+      "text",
+      "actions"
+    ],
+    "output": "video-stream",
+    "maxSessionSec": null,
+    "maxResolution": "768x512",
+    "fps": 22,
+    "access": "beta",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "decart",
+        "id": "oasis-3-preview"
+      }
+    ],
+    "pricing": {
+      "notes": "$0.02 per second of generation (a 60 s session = $1.20); enterprise pricing on request."
+    },
+    "links": {
+      "official": "https://decart.ai/publications/introducing-oasis-3-first-interactive-world-model-for-physical-ai",
+      "docs": "https://docs.platform.decart.ai/"
+    },
+    "notes": "Resolution conflict: launch post says 512x768x3 (three synchronized views); the pricing page says the $0.02/s rate is 'at 720p'. access set to 'beta' because the API model id and pricing page label it 'Oasis 3 Preview'. Positioned for robotics/AV simulation rather than consumer play. Decart's Lucy 2.5 (real-time video editing) excluded as not a world model."
+  },
+  {
+    "id": "cosmos-3",
+    "name": "Cosmos 3",
+    "company": "nvidia",
+    "releaseDate": "2026-05-31",
+    "notable": true,
+    "description": "NVIDIA's open omnimodal world foundation model family for physical AI that reasons about and generates text, images, video, ambient sound and actions, usable as a world/video model, VLM, or backbone for robot policies.",
+    "strengths": [
+      "Open weights under a commercial-use licence (OpenMDW 1.1)",
+      "Action-conditioned forward-dynamics generation as well as inverse-dynamics and policy modes",
+      "Two sizes released: Nano (16B) for workstation GPUs, Super (64B) for large-scale synthetic data",
+      "NVIDIA reports first place among open models on Physics-IQ and RoboArena"
+    ],
+    "weaknesses": [
+      "Not a real-time interactive generator; produces clips of 5-400 frames",
+      "Edge variant for real-time inference not yet released"
+    ],
+    "interactive": false,
+    "inputs": [
+      "text",
+      "image",
+      "video",
+      "actions"
+    ],
+    "output": "simulation-video",
+    "maxSessionSec": null,
+    "maxResolution": "720p",
+    "fps": null,
+    "access": "ga",
+    "openWeights": true,
+    "license": {
+      "spdx": null,
+      "name": "OpenMDW 1.1",
+      "kind": "permissive",
+      "url": "https://openmdw.ai/license/1-1/",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "huggingface",
+        "id": "nvidia/Cosmos3-Nano"
+      },
+      {
+        "provider": "huggingface",
+        "id": "nvidia/Cosmos3-Super"
+      }
+    ],
+    "pricing": {
+      "notes": "Free open weights; also via build.nvidia.com, NVIDIA NIM, and cloud partners (Baseten, CoreWeave, Azure, Nebius, Deep Infra, Classmethod) — partner pricing not checked."
+    },
+    "links": {
+      "official": "https://nvidianews.nvidia.com/news/nvidia-launches-cosmos-3-the-open-frontier-foundation-model-for-physical-ai",
+      "docs": "https://github.com/nvidia/cosmos"
+    },
+    "notes": "Announced at GTC Taipei; press release and model cards date it 2026-05-31 (some coverage says June 1). Output resolution/fps follow the input request; 720p is the maximum listed input resolution and the examples use 1280x720 at 24 fps, so fps left null. Clip length 5-400 frames (default 189); maxSessionSec left null as no duration is stated (400 frames ≈ 16.7 s at 24 fps, my arithmetic). Super is listed as 64B in NVIDIA's HF blog and 65B on the HF page. Audio input supported (max 0.5 s) — not in the inputs enum. A third variant, Cosmos 3 Edge, is 'coming soon'. OpenMDW SPDX id not confirmed, so spdx null."
+  },
+  {
+    "id": "spaitial-echo-2",
+    "name": "Echo-2",
+    "company": "spaitial",
+    "releaseDate": "2026-04-28",
+    "notable": true,
+    "description": "SpAItial's 3D world generation model that turns a text prompt or image into a persistent, explorable 3D Gaussian-splat scene (with semantic segmentation) rather than a video.",
+    "strengths": [
+      "Persistent 3D scene, rendered in real time in the browser on any device",
+      "Exports SPZ, PLY, SOG and collision meshes",
+      "Public API with a free tier (800 credits/month)",
+      "Vendor reports it beats Marble 1.1 on WorldScore scene-quality metrics"
+    ],
+    "weaknesses": [
+      "Static scenes: dynamics and physics-based behaviour are listed as future work"
+    ],
+    "interactive": true,
+    "inputs": [
+      "text",
+      "image"
+    ],
+    "output": "3d-scene",
+    "maxSessionSec": null,
+    "maxResolution": null,
+    "fps": null,
+    "access": "ga",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "spaitial",
+        "id": "Echo 2"
+      }
+    ],
+    "pricing": {
+      "notes": "API: 1 credit = $0.01; Echo-2 world = 160 credits (~$1.60), Echo HQ = 800 credits (~$8). Plans: Free 800 credits/mo, Standard 7,500, Pro 15,000 (plan prices not listed on the docs page)."
+    },
+    "links": {
+      "official": "https://spaitial.ai/blog/echo-2-release",
+      "docs": "https://docs.spaitial.ai/api/getting-started"
+    },
+    "notes": "interactive true = user navigates the generated static scene in real time; generation itself is asynchronous. Also accepts 360° panoramas and floor plans. apiIds value is the example string from the docs ('model': 'Echo 2'); exact ids should be confirmed via GET /v1/models. Docs also mention Echo HQ (May 2026 checkpoint) and an 'Echo-3' whose API access requires Enterprise — no Echo-3 announcement found, so not added. WorldScore comparison is vendor-run."
+  },
+  {
+    "id": "hy-world-2",
+    "name": "HY-World 2.0",
+    "company": "tencent",
+    "releaseDate": "2026-04-16",
+    "notable": true,
+    "description": "Tencent HY's open multimodal 3D world model that generates, reconstructs and simulates editable 3D worlds (meshes, 3D Gaussian splats, point clouds) from text, images or video, exportable to game engines.",
+    "strengths": [
+      "Editable 3D outputs (mesh, 3DGS, point cloud) rather than transient video",
+      "Open weights and inference code; free online trial",
+      "Generated worlds support first/third-person navigation with physics-based collision; render in real time on consumer GPUs"
+    ],
+    "weaknesses": [
+      "Licence excludes the EU, UK and South Korea and needs Tencent's permission above 1M MAU",
+      "Components were released in stages (full world-generation code only from 2026-05-18)"
+    ],
+    "interactive": true,
+    "inputs": [
+      "text",
+      "image",
+      "video"
+    ],
+    "output": "3d-scene",
+    "maxSessionSec": null,
+    "maxResolution": null,
+    "fps": null,
+    "access": "ga",
+    "openWeights": true,
+    "license": {
+      "spdx": null,
+      "name": "Tencent HY-World 2.0 Community License Agreement",
+      "kind": "restricted",
+      "url": "https://github.com/Tencent-Hunyuan/HY-World-2.0/blob/main/License.txt",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "huggingface",
+        "id": "tencent/HY-World-2.0"
+      }
+    ],
+    "pricing": {
+      "notes": "Free open weights; free trial at 3d.hunyuan.tencent.com/sceneTo3D."
+    },
+    "links": {
+      "official": "https://github.com/Tencent-Hunyuan/HY-World-2.0",
+      "docs": "https://huggingface.co/tencent/HY-World-2.0"
+    },
+    "notes": "Staged release: 2026-04-16 tech report + WorldMirror 2.0 weights; 2026-05-11 HY-Pano 2.0; 2026-05-18 world-generation code + WorldStereo 2.0 weights. GitHub README announces an 'HY World 2.1' update (July 2026) linked to the product page, with no model card or weights — not added as a separate entry. commercialUse true with conditions: licence grant is royalty-free within the Territory (worldwide excl. EU/UK/South Korea) and >1M MAU requires a licence from Tencent. interactive true = navigation of generated scene; generation is not real-time."
+  },
+  {
+    "id": "happy-oyster",
+    "name": "Happy Oyster",
+    "company": "alibaba",
+    "releaseDate": "2026-04-16",
+    "notable": true,
+    "description": "Real-time open-ended world model from Alibaba's ATH (Alibaba Token Hub) unit with joint audio-video generation, offering a Directing mode to steer a live scene and a Wandering mode to explore a world in first person.",
+    "strengths": [
+      "Directing mode: steer a live scene for up to 3 minutes at 480p or 720p via text, voice or images",
+      "Wandering mode: first-person exploration with WASD and camera controls",
+      "Continuous joint audio-video generation",
+      "Pay-per-second API on fal"
+    ],
+    "weaknesses": [
+      "Wandering mode limited to 1 minute at 480p",
+      "Official site access still by application; closed weights"
+    ],
+    "interactive": true,
+    "inputs": [
+      "text",
+      "image",
+      "actions"
+    ],
+    "output": "video-stream",
+    "maxSessionSec": 180,
+    "maxResolution": "720p",
+    "fps": null,
+    "access": "beta",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "fal",
+        "id": "alibaba/happy-oyster/text-to-world"
+      },
+      {
+        "provider": "fal",
+        "id": "alibaba/happy-oyster/image-to-world"
+      }
+    ],
+    "pricing": {
+      "notes": "fal: billed per second of generated world, no minimums; per-second rate not shown on fal's pages."
+    },
+    "links": {
+      "official": "https://happyoyster.cn/",
+      "docs": "https://fal.ai/happy-oyster"
+    },
+    "notes": "Exact day (2026-04-16) is from press coverage (Bloomberg/SCMP); fal's official partner page says only 'unveiled in April 2026'. access 'beta': limited early access by application on happyoyster.cn, but fal (official API partner) lists it as 'available now'. maxSessionSec 180 = Directing mode; Wandering is 60 s at 480p. Voice input also supported. A third fal path /explore exists but its API id is unconfirmed. A 'Happy Oyster 2 Preview' for the 2026 Yunqi conference is reported by a third-party listing only — not confirmed on any Alibaba page, not added."
+  },
+  {
+    "id": "nvidia-lyra-2",
+    "name": "Lyra 2.0",
+    "company": "nvidia",
+    "releaseDate": "2026-04-14",
+    "notable": false,
+    "description": "NVIDIA research framework that turns a single image plus a camera path into a large, persistent, walkable 3D Gaussian scene by generating camera-controlled video and lifting it to 3D.",
+    "strengths": [
+      "Outputs 3D Gaussian scenes (.ply), exportable as splats or meshes",
+      "Per-frame 3D geometry used to retrieve past frames and limit spatial forgetting/drift",
+      "Isaac Sim integration demonstrated for robot simulation"
+    ],
+    "weaknesses": [
+      "Weights licensed for internal scientific research only — no production or commercial use",
+      "Single-image input at 480x832"
+    ],
+    "interactive": true,
+    "inputs": [
+      "image"
+    ],
+    "output": "3d-scene",
+    "maxSessionSec": null,
+    "maxResolution": null,
+    "fps": null,
+    "access": "research-only",
+    "openWeights": true,
+    "license": {
+      "spdx": null,
+      "name": "NVIDIA Internal Scientific Research and Development Model License",
+      "kind": "restricted",
+      "url": "https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-internal-scientific-research-and-development-model-license/",
+      "commercialUse": false
+    },
+    "apiIds": [
+      {
+        "provider": "huggingface",
+        "id": "nvidia/Lyra-2.0"
+      }
+    ],
+    "pricing": {
+      "notes": "Free weights for research use; self-hosted."
+    },
+    "links": {
+      "official": "https://research.nvidia.com/labs/sil/projects/lyra2/",
+      "docs": "https://huggingface.co/nvidia/Lyra-2.0"
+    },
+    "notes": "Model card release date 04/14/2026 (GitHub). 14B parameters, built on Wan-14B per secondary coverage. Code is Apache-2.0 on GitHub (nv-tlabs/lyra) but weights are research-only. Camera-pose input not in the inputs enum. interactive true = navigation of the generated static scene. Borderline inclusion: a research release, but weights are publicly downloadable."
+  },
+  {
+    "id": "overworld-waypoint-1-5",
+    "name": "Waypoint-1.5",
+    "company": "overworld",
+    "releaseDate": "2026-04-09",
+    "notable": true,
+    "description": "Overworld's open-weight real-time world model that runs locally on consumer GPUs or streams in the browser, generating a playable first-person world that reacts to keyboard and mouse input.",
+    "strengths": [
+      "Up to 720p at 60 FPS on high-end consumer GPUs; a 360p tier for wider gaming-PC support",
+      "Apache-2.0 open weights",
+      "Runs locally via the Biome installer or in-browser via Overworld.stream"
+    ],
+    "weaknesses": [
+      "512-frame context length",
+      "No text prompting listed on the model card (image/video conditioning only)"
+    ],
+    "interactive": true,
+    "inputs": [
+      "image",
+      "video",
+      "actions"
+    ],
+    "output": "video-stream",
+    "maxSessionSec": null,
+    "maxResolution": "720p",
+    "fps": 60,
+    "access": "ga",
+    "openWeights": true,
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/Overworld/Waypoint-1.5-1B-360P",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "huggingface",
+        "id": "Overworld/Waypoint-1.5-1B"
+      },
+      {
+        "provider": "huggingface",
+        "id": "Overworld/Waypoint-1.5-1B-360P"
+      }
+    ],
+    "pricing": {
+      "notes": "Free open weights; whether Overworld.stream is free is not stated."
+    },
+    "links": {
+      "official": "https://over.world/blog/waypoint-1-5",
+      "docs": "https://huggingface.co/Overworld/Waypoint-1.5-1B-360P"
+    },
+    "notes": "Parameter count inconsistent on the model card (1.2B in text vs 2B in HF metadata). Successor Waypoint 2 ('latest frontier world model', text or image input) is invite-only beta with no date or specs published — not added. 60 FPS quoted for the 720p tier as 'up to'."
+  },
+  {
+    "id": "world-labs-marble-1-1",
+    "name": "Marble 1.1 / 1.1 Plus",
+    "company": "world-labs",
+    "releaseDate": "2026-04-07",
+    "notable": true,
+    "description": "World Labs' generally available multimodal world model that turns text, images, multi-view images, panoramas or video into navigable, editable 3D worlds (Gaussian splats and meshes), with a Plus variant for larger worlds.",
+    "strengths": [
+      "Exports Gaussian splats (SPZ/PLY), collider and high-quality GLB meshes, and panoramas",
+      "Broad input set: text, single image, multi-image with azimuths, 360° panoramas, video",
+      "In-app editing, world expansion, composition and Chisel 3D layout sculpting",
+      "Public World API alongside a consumer app with a free tier"
+    ],
+    "weaknesses": [
+      "Generation takes about 5 minutes per world",
+      "Static scenes, not a real-time simulation"
+    ],
+    "interactive": true,
+    "inputs": [
+      "text",
+      "image",
+      "video"
+    ],
+    "output": "3d-scene",
+    "maxSessionSec": null,
+    "maxResolution": null,
+    "fps": null,
+    "access": "ga",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "worldlabs",
+        "id": "marble-1.1"
+      },
+      {
+        "provider": "worldlabs",
+        "id": "marble-1.1-plus"
+      }
+    ],
+    "pricing": {
+      "notes": "API: $1 per 1,250 credits; marble-1.1 world = 1,500-1,600 credits (~$1.20-1.28); marble-1.1-plus 1,500-3,100 credits depending on world size; HQ mesh export 3,500 credits. App plans: Free (up to 4 worlds), Standard $20/mo (20,000 credits), Pro $35/mo, Max (up to 75 worlds), Enterprise custom; app and API credits are separate."
+    },
+    "links": {
+      "official": "https://www.worldlabs.ai/blog/marble-world-model",
+      "docs": "https://docs.worldlabs.ai/api"
+    },
+    "notes": "Date conflict: Marble release notes list 1.1 and 1.1 Plus under 2026-04-02; World Labs' X post saying 'rolling out ... today' is timestamped 2026-04-07 (used). Marble itself went GA 2025-11-12; World API launched 2026-01-21. Marble 1.0 / 1.0 Draft remain selectable (marble-1.0, marble-1.0-draft) but not added separately. interactive true = navigation/editing of generated static scene. Max plan price not on the docs page (a stale-indexed pricing page shows $95/mo; unverified). World Labs agreed to be acquired by AMD (announced 2026-09-28). RTFM (real-time frame model research preview, 2025-10-16) not added."
+  },
+  {
+    "id": "matrix-game-3",
+    "name": "Matrix-Game 3.0",
+    "company": "skywork-ai",
+    "releaseDate": "2026-03-27",
+    "notable": true,
+    "description": "Skywork AI's open-source real-time streaming interactive world model with camera-aware long-horizon memory, fine-tuned from Wan2.2-TI2V-5B.",
+    "strengths": [
+      "720p at 40 FPS real-time generation with the 5B model (developer claim)",
+      "Stable memory consistency over minute-long sequences",
+      "Open weights (Apache-2.0) and MIT-licensed code"
+    ],
+    "weaknesses": [
+      "Larger 28B MoE (2x14B) version described but no download link",
+      "Multi-GPU inference setup in examples; hardware for real-time not specified"
+    ],
+    "interactive": true,
+    "inputs": [
+      "text",
+      "image",
+      "actions"
+    ],
+    "output": "video-stream",
+    "maxSessionSec": null,
+    "maxResolution": "720p",
+    "fps": 40,
+    "access": "ga",
+    "openWeights": true,
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/Skywork/Matrix-Game-3.0",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "huggingface",
+        "id": "Skywork/Matrix-Game-3.0"
+      }
+    ],
+    "pricing": {
+      "notes": "Free open weights; self-hosted. No hosted product found."
+    },
+    "links": {
+      "official": "https://matrix-game-v3.github.io/",
+      "docs": "https://github.com/SkyworkAI/Matrix-Game"
+    },
+    "notes": "Weights card says Apache-2.0; GitHub repo (code) says MIT. Release date 2026-03-27 from GitHub news; HF card says only '2026-03'. Input device for actions not named on the card ('--interactive' mode with user actions)."
+  },
+  {
+    "id": "genie-3",
+    "name": "Genie 3 (Project Genie)",
+    "company": "google",
+    "releaseDate": "2026-01-29",
+    "notable": true,
+    "description": "Google DeepMind's general-purpose real-time world model, available to consumers through the Project Genie prototype (with Nano Banana Pro and Gemini) to sketch, explore and remix playable worlds from text and images.",
+    "strengths": [
+      "Real-time navigable photorealistic worlds at 720p, 20-24 fps",
+      "Environments stay largely consistent for several minutes, with visual memory of about a minute",
+      "Street View-grounded worlds of real U.S. places (since 2026-05-19)",
+      "Available to Google AI Ultra subscribers globally (18+)"
+    ],
+    "weaknesses": [
+      "Project Genie generations capped at 60 seconds",
+      "Requires the $200 Google AI Ultra plan; not available on Ultra for Business; no API",
+      "Google notes higher control latency and imperfect prompt/physics adherence; promptable world events not in the prototype"
+    ],
+    "interactive": true,
+    "inputs": [
+      "text",
+      "image",
+      "actions"
+    ],
+    "output": "video-stream",
+    "maxSessionSec": 60,
+    "maxResolution": "720p",
+    "fps": 24,
+    "access": "research-preview",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [],
+    "pricing": {
+      "notes": "Included with Google AI Ultra ($200 tier), 18+."
+    },
+    "links": {
+      "official": "https://deepmind.google/models/genie/",
+      "docs": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/project-genie/"
+    },
+    "notes": "Genie 3 was announced 2025-08-05 as a limited research preview for select academics/creators; releaseDate is the first public launch via Project Genie (2026-01-29, U.S. Ultra subscribers), expanded to Ultra subscribers globally on 2026-05-19. Google calls Project Genie 'an experimental research prototype', hence access 'research-preview' even though any eligible paying subscriber can use it. fps: DeepMind model page says 20-24 fps, the Genie 3 blog says 24. maxSessionSec 60 = Project Genie cap; the model itself supports 'a few minutes' of continuous interaction. No Genie 4 found."
+  },
+  {
+    "id": "hy-world-1-5",
+    "name": "HY-World 1.5 (WorldPlay)",
+    "company": "tencent",
+    "releaseDate": "2025-12-17",
+    "notable": true,
+    "description": "Tencent HY's open-source real-time interactive streaming video world model with long-term geometric consistency, responding to keyboard and mouse input; the video-stream counterpart to HY-World 2.0's 3D output.",
+    "strengths": [
+      "Real-time streaming at 24 FPS with keyboard/mouse control",
+      "Reconstituted context memory for long-term geometric consistency",
+      "Open training code, inference code and weights; online demo"
+    ],
+    "weaknesses": [
+      "Only a 480p model released",
+      "Licence excludes the EU, UK and South Korea and needs Tencent's permission above 1M MAU"
+    ],
+    "interactive": true,
+    "inputs": [
+      "text",
+      "image",
+      "actions"
+    ],
+    "output": "video-stream",
+    "maxSessionSec": null,
+    "maxResolution": "480p",
+    "fps": 24,
+    "access": "ga",
+    "openWeights": true,
+    "license": {
+      "spdx": null,
+      "name": "Tencent HY-WorldPlay Community License Agreement",
+      "kind": "restricted",
+      "url": "https://github.com/Tencent-Hunyuan/HY-WorldPlay/blob/main/License.txt",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "huggingface",
+        "id": "tencent/HY-WorldPlay"
+      }
+    ],
+    "pricing": {
+      "notes": "Free open weights; online demo at 3d.hunyuan.tencent.com/sceneTo3D."
+    },
+    "links": {
+      "official": "https://github.com/Tencent-Hunyuan/HY-WorldPlay",
+      "docs": "https://huggingface.co/tencent/HY-WorldPlay"
+    },
+    "notes": "Included alongside HY-World 2.0 because it is a separate, still-offered line (real-time video stream vs 3D asset generation). HF card: 'Now we only provide the 480p model' (secondary coverage claims 720p — not on primary pages). No max length stated ('infinite world extension'; default 125 frames). Built on HunyuanVideo 1.5. commercialUse true with the same territory/MAU conditions as HY-World 2.0."
+  }
+]

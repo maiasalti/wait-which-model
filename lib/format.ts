@@ -23,3 +23,12 @@ export function formatSpeed(
   }
   return parts.length ? parts.join(" · ") : "—";
 }
+
+/** Only notable companies get a palette slot; everyone else is null in
+ *  companies.json and renders in this neutral grey, never as the string
+ *  "null" inside a CSS colour. */
+export const NEUTRAL_COMPANY_COLOR = "#8A93A6";
+
+export function resolveColor(color: string | null | undefined): string {
+  return color ?? NEUTRAL_COMPANY_COLOR;
+}

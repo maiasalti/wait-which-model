@@ -1,6 +1,6 @@
 "use client";
 
-import { activeBenchmarks, companies, models } from "@/lib/data";
+import { activeBenchmarks, modelCompanies, models } from "@/lib/data";
 import { CompanyLogo } from "./CompanyLogo";
 import { WINDOW_LABELS } from "@/lib/filter";
 import type { BenchmarkKey, Filters, Highlight, TimeWindow } from "@/lib/types";
@@ -65,7 +65,7 @@ export function FilterRail({
           Companies
         </h3>
         <div className="mt-2 flex flex-wrap gap-1" role="group" aria-label="Company filter">
-          {companies.map((c) => {
+          {modelCompanies.map((c) => {
             const active =
               filters.companies.length === 0 || filters.companies.includes(c.id);
             return (
@@ -196,7 +196,7 @@ export function FilterRail({
         >
           <option value="none">No highlight</option>
           <option value="models">Pick specific models…</option>
-          {companies.map((c) => (
+          {modelCompanies.map((c) => (
             <option key={c.id} value={`co:${c.id}`}>
               All {c.name} models
             </option>

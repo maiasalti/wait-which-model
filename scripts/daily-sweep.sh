@@ -11,7 +11,7 @@
 #
 set -uo pipefail
 
-REPO="/Users/maia/Desktop/Projects/frontier-models-website"
+REPO="${SWEEP_REPO:-/Users/maia/Desktop/Projects/frontier-models-website}"   # SWEEP_REPO: tests only
 LOG="$REPO/logs/daily-sweep.log"
 TODAY="$(date +%Y-%m-%d)"
 DOW="$(date +%u)"            # 1=Mon .. 7=Sun
@@ -57,15 +57,33 @@ if [ -n "$(git status --porcelain -- . ':!.obsidian')" ]; then
   exit 0
 fi
 
+# ── Guard 3: only from main ──────────────────────────────────────────────────
+# Started on a working branch, the sweep checked out its own branch, committed
+# that session's edits as "Daily sweep 2026-10-01" and opened a PR with them.
+# Decided on the helper's exit code, never on its output: a helper that crashes
+# prints nothing, and "no output" must not read as "on main" (fail closed).
+GUARD_REASON="$(node scripts/lib/sweep-jobs.js guard "$(git rev-parse --abbrev-ref HEAD)")"; GUARD_RC=$?
+if [ "$GUARD_RC" = 3 ]; then
+  if [ "$DRY_RUN" = 0 ]; then log "SKIP  $GUARD_REASON"; fi
+  say "$GUARD_REASON; a real run would stop here"
+  exit 0
+elif [ "$GUARD_RC" != 0 ]; then
+  if [ "$DRY_RUN" = 0 ]; then log "FAIL  scripts/lib/sweep-jobs.js guard exited $GUARD_RC — refusing to run unguarded"; fi
+  say "sweep-jobs.js guard exited $GUARD_RC; a real run would stop here"
+  exit 1
+fi
+
 START_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
 
 # ── Which jobs run today ─────────────────────────────────────────────────────
-# Every weekday: health + new-model scan. Tue/Thu: stats fill. Mon: news sweep.
-# Written as explicit ifs rather than `[ ] && x` chains: those return non-zero
-# on the false branch, which is a footgun waiting for someone to add `set -e`.
-JOBS="health models"
-if [ "$DOW" = 2 ] || [ "$DOW" = 4 ]; then JOBS="$JOBS stats"; fi
-if [ "$DOW" = 1 ]; then JOBS="$JOBS news"; fi
+# Every weekday: health + new-model scan. Tue/Thu: stats. Mon: news. Plus one
+# directory per weekday once its stage ships — see scripts/lib/sweep-jobs.js.
+JOBS="$(node scripts/lib/sweep-jobs.js jobs "$DOW")"; JOBS_RC=$?
+if [ "$JOBS_RC" != 0 ] || [ -z "$JOBS" ]; then
+  if [ "$DRY_RUN" = 0 ]; then log "FAIL  scripts/lib/sweep-jobs.js jobs exited $JOBS_RC with jobs '$JOBS' — not running a sweep with no instructions"; fi
+  say "sweep-jobs.js jobs exited $JOBS_RC (jobs: '$JOBS'); a real run would stop here"
+  exit 1
+fi
 
 say "jobs for today (dow=$DOW): $JOBS"
 if [ "$DRY_RUN" = 1 ]; then
@@ -110,7 +128,7 @@ Read AGENTS.md first, then run ONLY the jobs listed here, following each protoco
 
 JOBS TODAY: $JOBS
 
-- health : run the integrity check in AGENTS.md, then 'node scripts/frontier-status.js --apply'
+- health : run 'node scripts/integrity.js', then 'node scripts/frontier-status.js --apply'
            and 'node scripts/frontier-reigns.js --apply'. Report any status or reign changes.
            Also flag anything that looks internally inconsistent or unsourced.
 - models : follow protocols/NEW_MODEL_RELEASE_PROTOCOL.md. Search the tracked companies for
@@ -124,6 +142,9 @@ JOBS TODAY: $JOBS
 - news   : follow protocols/NEWS_SCAN_PROTOCOL.md for ALL tracked companies, covering the period
            since the newest date in data/news.json, all categories. Do not interview anyone —
            that scope is fixed for scheduled runs.
+- image-models | video-models | world-models | harnesses | agents | features :
+           follow the 'Sweep job' section of protocols/DIRECTORY_RELEASE_PROTOCOL.md for that
+           directory (its data/<name>.json file). Skip cells already in data/directory-gaps.md.
 
 ABSOLUTE RULES:
 - Never add a figure from memory. Unverifiable cells stay null and are logged to the gap ledgers.
@@ -179,7 +200,7 @@ cells are left null and logged to the gap ledgers.
 
 # ── Validate before asking for review ────────────────────────────────────────
 FAILED=""
-bash -c "$(grep '^node -e' AGENTS.md | head -1)" > /tmp/sweep-integrity.log 2>&1 || FAILED="$FAILED integrity"
+node scripts/integrity.js > /tmp/sweep-integrity.log 2>&1 || FAILED="$FAILED integrity"
 npm test  > /tmp/sweep-test.log  2>&1 || FAILED="$FAILED tests"
 npm run build > /tmp/sweep-build.log 2>&1 || FAILED="$FAILED build"
 
