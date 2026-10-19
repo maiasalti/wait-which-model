@@ -7,6 +7,7 @@ import { ModelBenchmarks } from "@/components/model/ModelBenchmarks";
 import { benchmarkCoverage } from "@/components/model/benchmarkCoverage";
 import { ModelProsCons } from "@/components/model/ModelProsCons";
 import { ModelNewsList } from "@/components/model/ModelNewsList";
+import { ModelUsedBy, usedByCount } from "@/components/model/ModelUsedBy";
 import { Collapsible } from "@/components/Collapsible";
 import { ModelDeveloperDetails } from "@/components/model/ModelDeveloperDetails";
 import {
@@ -104,6 +105,11 @@ export default async function ModelPage({
           <Collapsible title="For developers">
             <ModelDeveloperDetails model={model} />
           </Collapsible>
+          {usedByCount(model) > 0 && (
+            <Collapsible title="Used by" meta="harnesses, agents and features that name it">
+              <ModelUsedBy model={model} />
+            </Collapsible>
+          )}
           <Collapsible title="News">
             <ModelNewsList model={model} />
           </Collapsible>

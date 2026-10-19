@@ -82,7 +82,11 @@ const cvdMin = (a, b) => Math.min(deltaE(a, b, "protan"), deltaE(a, b, "deutan")
 
 const companies = JSON.parse(
   fs.readFileSync(path.join(__dirname, "..", "data", "companies.json"), "utf8")
-).sort((a, b) => a.order - b.order);
+)
+  // Non-notable companies hold no palette slot (color: null) and render grey;
+  // the CVD rules apply only to the colours actually in the palette.
+  .filter((c) => c.color != null)
+  .sort((a, b) => a.order - b.order);
 
 const fails = [];
 const say = (ok, check, detail) => {

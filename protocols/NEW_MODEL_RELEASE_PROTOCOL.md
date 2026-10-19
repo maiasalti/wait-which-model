@@ -70,14 +70,7 @@ Then run `node scripts/frontier-reigns.js` and, if the diff looks right, `--appl
 ### 6. Validate
 
 ```bash
-node -e "
-const m=require('./data/models.json'),n=require('./data/news.json'),c=require('./data/companies.json');
-const cids=new Set(c.map(x=>x.id)), ids=new Set(m.map(x=>x.id));
-if(m.length!==ids.size) throw 'duplicate model id';
-for(const x of m) if(!cids.has(x.company)) throw 'unknown company '+x.company;
-for(const x of n) for(const i of x.modelIds) if(!ids.has(i)) throw 'unknown modelId '+i;
-console.log('OK', m.length, 'models,', n.length, 'news');
-"
+node scripts/integrity.js
 npm run build
 ```
 

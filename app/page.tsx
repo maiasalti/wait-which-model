@@ -1,11 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { companies, companyById, models } from "@/lib/data";
+import { companyById, companyColor, modelCompanies, models } from "@/lib/data";
 import type { Model, ModelStatus } from "@/lib/types";
 import { ModelCard } from "@/components/ModelCard";
 import { CompanyLogo } from "@/components/CompanyLogo";
 import { CompanySelect } from "@/components/CompanySelect";
+import { DirectoryTabs } from "@/components/directory/DirectoryTabs";
 
 type SortKey =
   | "newest"
@@ -32,7 +33,7 @@ const SORTS: { key: SortKey; label: string }[] = [
 const countriesOf = (country: string) => country.split("/").map((s) => s.trim());
 
 const LOCATIONS = Array.from(
-  new Set(companies.flatMap((c) => countriesOf(c.country)))
+  new Set(modelCompanies.flatMap((c) => countriesOf(c.country ?? "")))
 ).sort();
 
 export default function DirectoryPage() {
@@ -92,6 +93,7 @@ export default function DirectoryPage() {
 
   return (
     <div>
+      <DirectoryTabs />
       <section className="pt-10 pb-8">
         <p className="mono text-xs uppercase tracking-[0.25em] text-ink-3">
           Models Directory
@@ -100,7 +102,7 @@ export default function DirectoryPage() {
           AI Model Directory
         </h1>
         <p className="mt-3 max-w-2xl text-sm text-ink-2">
-          {models.length} models from {companies.length} labs, {startYear} to today —{" "}
+          {models.length} models from {modelCompanies.length} labs, {startYear} to today —{" "}
           {frontierCount} currently at the frontier. Click a card for full
           stats, strengths and weaknesses, and related news.
         </p>
@@ -116,7 +118,7 @@ export default function DirectoryPage() {
           aria-label="Search models"
         />
         <div className="flex flex-wrap gap-1.5" role="group" aria-label="Filter by company (multi-select)">
-          {companies.map((c) => {
+          {modelCompanies.map((c) => {
             const active = companyIds.includes(c.id);
             return (
               <div key={c.id} className="group relative">
@@ -130,8 +132,8 @@ export default function DirectoryPage() {
                       : "border-line opacity-80 hover:opacity-100"
                   }`}
                   style={{
-                    background: `${c.color}${active ? "3D" : "14"}`,
-                    borderColor: active ? c.color : undefined,
+                    background: `${companyColor(c.id)}${active ? "3D" : "14"}`,
+                    borderColor: active ? companyColor(c.id) : undefined,
                   }}
                 >
                   <CompanyLogo companyId={c.id} size={17} />

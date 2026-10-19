@@ -9,6 +9,7 @@ import { ModelStatsGrid } from "./model/ModelStatsGrid";
 import { ModelBenchmarks } from "./model/ModelBenchmarks";
 import { ModelProsCons } from "./model/ModelProsCons";
 import { ModelNewsList } from "./model/ModelNewsList";
+import { ModelUsedBy, usedByCount } from "./model/ModelUsedBy";
 import { Collapsible } from "./Collapsible";
 import { ModelDeveloperDetails } from "./model/ModelDeveloperDetails";
 import { benchmarkCoverage } from "./model/benchmarkCoverage";
@@ -68,6 +69,11 @@ export function ModelDrawer({ model }: { model: Model }) {
           <Collapsible title="For developers">
             <ModelDeveloperDetails model={model} />
           </Collapsible>
+          {usedByCount(model) > 0 && (
+            <Collapsible title="Used by" meta="harnesses, agents and features that name it">
+              <ModelUsedBy model={model} />
+            </Collapsible>
+          )}
           <Collapsible title="News">
             <ModelNewsList model={model} />
           </Collapsible>

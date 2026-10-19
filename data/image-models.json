@@ -1,0 +1,647 @@
+[
+  {
+    "id": "gemini-nano-banana-2-1",
+    "name": "Nano Banana 2.1",
+    "company": "google",
+    "releaseDate": "2026-10-06",
+    "notable": true,
+    "description": "Google's newest Flash-tier Gemini image model for generation and conversational editing, released as the replacement for Nano Banana 2.",
+    "strengths": [
+      "About half the 1K price of Nano Banana 2 ($0.0336 vs $0.067)",
+      "Up to 14 reference images (10 object, 4 character)",
+      "Web Search and Google Image Search grounding",
+      "Text rendering described as improved over Nano Banana 2"
+    ],
+    "weaknesses": [
+      "No 0.5K (512px) output tier, unlike Nano Banana 2"
+    ],
+    "links": {
+      "official": "https://deepmind.google/models/gemini-image/",
+      "docs": "https://ai.google.dev/gemini-api/docs/image-generation"
+    },
+    "pricing": {
+      "perImageUsd": 0.0336,
+      "notes": "Gemini API standard tier: $0.0336 per 1K image, $0.0504 per 2K, $0.113 per 4K. Batch is roughly half."
+    },
+    "maxResolution": "4096x4096",
+    "capabilities": [
+      "text-to-image",
+      "editing",
+      "text-rendering",
+      "reference-images"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "google",
+        "id": "gemini-nano-banana-2.1"
+      }
+    ],
+    "scores": {
+      "aaImageArenaElo": 1159,
+      "lmarenaImageElo": 1328
+    },
+    "notes": "GA on the Gemini API 2026-10-06 per the changelog. The changelog deprecates gemini-3.1-flash-image the same day and names this model as the migration target. LMArena score is marked Preliminary (±9). The deepmind.google Gemini Image page did not list 2.1 yet when checked. maxResolution is the 1:1 4K size from the Gemini image-generation guide's resolution table."
+  },
+  {
+    "id": "flux-3-image",
+    "name": "FLUX 3 Image",
+    "company": "black-forest-labs",
+    "releaseDate": "2026-10-01",
+    "notable": true,
+    "description": "The image mode of Black Forest Labs' FLUX 3 multimodal model: text-to-image, targeted editing and multi-reference composition through one API endpoint.",
+    "strengths": [
+      "Up to ten reference images in one request",
+      "Bounding-box layout control written into the prompt",
+      "Pixel-exact local edits (recolor, replace, move, remove) that leave the rest unchanged",
+      "Native 2K and 4K output"
+    ],
+    "weaknesses": [
+      "4K output costs $0.607 per image, more than 12x the 1K price"
+    ],
+    "links": {
+      "official": "https://bfl.ai/models/flux-3-image",
+      "docs": "https://docs.bfl.ai/flux_3/flux3_image_overview"
+    },
+    "pricing": {
+      "perImageUsd": 0.048,
+      "notes": "BFL API, priced per image by resolution: 768sq $0.041, 1k (~1 MP) $0.048, 2k (~4 MP) $0.100, 4k (~16 MP) $0.607."
+    },
+    "maxResolution": null,
+    "capabilities": [
+      "text-to-image",
+      "editing",
+      "reference-images"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "bfl",
+        "id": "flux-3-image"
+      }
+    ],
+    "scores": {
+      "aaImageArenaElo": 1115,
+      "lmarenaImageElo": null
+    },
+    "notes": "Release date from the BFL release notes entry dated October 1, 2026 (the FLUX 3 family was announced 2026-07-23, but Image shipped later). The API id is the endpoint path POST https://api.bfl.ai/v1/flux-3-image. Max resolution is only given as a \"4k\" tier of about 16 MP, with no pixel dimensions, so maxResolution is null. The model page shows a 5456x3072 example. Not open weights: BFL offers FLUX 3 Image under a commercial weights licence through sales. Open weights are promised only for the \"FLUX 3 Dev multimodal backbone\", which is \"coming soon\". Not on the LMArena text-to-image table as of 2026-10-14. Text rendering is not claimed as a feature, so it is not listed, though the examples contain typography."
+  },
+  {
+    "id": "gpt-image-2-5-sunburst",
+    "name": "GPT Image 2.5 Sunburst",
+    "company": "openai",
+    "releaseDate": "2026-09-08",
+    "notable": true,
+    "description": "OpenAI's precision-tier image model from the Images 2.5 launch, aimed at detailed creative work and tight control across edits, at the cost of longer generation times.",
+    "strengths": [
+      "#1 on both the Artificial Analysis and LMArena text-to-image leaderboards (2026-10-14)",
+      "Better at preserving reference subjects and earlier edits across turns",
+      "Adds xhigh and max quality levels above high",
+      "Custom sizes up to 3840px on the long edge"
+    ],
+    "weaknesses": [
+      "Longer generation times than Flare",
+      "Prompt-based masking, so the model may not follow the exact mask shape",
+      "OpenAI says it can still struggle with precise text placement"
+    ],
+    "links": {
+      "official": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+      "docs": "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst"
+    },
+    "pricing": {
+      "perImageUsd": null,
+      "notes": "Token-priced: $5/1M text input, $8/1M image input, $30/1M image output (batch output $15/1M). Same token rates as GPT Image 2. OpenAI publishes no per-image table for 2.5. Artificial Analysis lists $210.7 per 1k images at 1024x1024 on max quality (AA estimate, not an OpenAI figure)."
+    },
+    "maxResolution": "3840x2160",
+    "capabilities": [
+      "text-to-image",
+      "editing",
+      "inpainting",
+      "reference-images"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "gpt-image-2.5-sunburst"
+      },
+      {
+        "provider": "openai",
+        "id": "gpt-image-2.5-sunburst-2026-09-08"
+      }
+    ],
+    "scores": {
+      "aaImageArenaElo": 1199,
+      "lmarenaImageElo": 1425
+    },
+    "notes": "Size limits are from the OpenAI image-generation guide: max edge 3840px, total pixels 655,360 to 8,294,400, aspect ratio between 1:3 and 3:1. OpenAI calls anything above 2560x1440 experimental. AA scored it at \"max\" quality. The LMArena score is marked Preliminary. The model page marks the Responses endpoint unsupported but also says the model can be selected for the Responses image tool, and the two statements conflict."
+  },
+  {
+    "id": "gpt-image-2-5-flare",
+    "name": "GPT Image 2.5 Flare",
+    "company": "openai",
+    "releaseDate": "2026-09-08",
+    "notable": true,
+    "description": "OpenAI's default image model from the Images 2.5 launch, the faster sibling of Sunburst for everyday high-quality generation and editing.",
+    "strengths": [
+      "OpenAI says it beats GPT Image 2 on quality at 50% lower latency",
+      "#2 on both the Artificial Analysis and LMArena text-to-image leaderboards (2026-10-14)",
+      "Better at preserving reference subjects and editing only what is asked",
+      "Custom sizes up to 3840px on the long edge"
+    ],
+    "weaknesses": [
+      "Prompt-based masking, so the model may not follow the exact mask shape",
+      "OpenAI says it can still struggle with precise text placement"
+    ],
+    "links": {
+      "official": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+      "docs": "https://developers.openai.com/api/docs/models/gpt-image-2.5-flare"
+    },
+    "pricing": {
+      "perImageUsd": null,
+      "notes": "Token-priced: $5/1M text input, $8/1M image input, $30/1M image output (batch output $15/1M). Same token rates as GPT Image 2. OpenAI publishes no per-image table for 2.5. Artificial Analysis lists $210.7 per 1k images at 1024x1024 on max quality (AA estimate)."
+    },
+    "maxResolution": "3840x2160",
+    "capabilities": [
+      "text-to-image",
+      "editing",
+      "inpainting",
+      "reference-images"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "gpt-image-2.5-flare"
+      },
+      {
+        "provider": "openai",
+        "id": "gpt-image-2.5-flare-2026-09-08"
+      }
+    ],
+    "scores": {
+      "aaImageArenaElo": 1192,
+      "lmarenaImageElo": 1398
+    },
+    "notes": "Same size limits as Sunburst (max edge 3840px, 8,294,400 total pixels; above 2560x1440 is experimental). AA scored it at \"max\" quality. The LMArena score is marked Preliminary."
+  },
+  {
+    "id": "mai-image-2-6",
+    "name": "MAI-Image-2.6",
+    "company": "microsoft",
+    "releaseDate": "2026-08-10",
+    "notable": true,
+    "description": "Microsoft AI's in-house flagship image model for generation and image-to-image editing, sold through Microsoft Foundry.",
+    "strengths": [
+      "Microsoft reports text rendering up 91 Arena Elo over MAI-Image-2.5",
+      "Optional Bing web grounding and model-chosen aspect ratio",
+      "Edits accept up to five reference images",
+      "Edits include object removal, replacement, inpainting and text updates"
+    ],
+    "weaknesses": [
+      "Public preview only in Foundry (no SLA)",
+      "Output capped at 2,359,296 total pixels (1536x1536 equivalent)"
+    ],
+    "links": {
+      "official": "https://microsoft.ai/models/mai-image-2-6/",
+      "docs": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/how-to/use-foundry-models-mai-image"
+    },
+    "pricing": {
+      "perImageUsd": null,
+      "notes": "Token-priced in Foundry: from $5/1M text input, $8/1M image input, $38/1M image output. Artificial Analysis lists $38.9 per 1k images at 1024x1024 (AA estimate)."
+    },
+    "maxResolution": "1536x1536",
+    "capabilities": [
+      "text-to-image",
+      "editing",
+      "inpainting",
+      "text-rendering",
+      "reference-images"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "azure-foundry",
+        "id": "MAI-Image-2.6"
+      }
+    ],
+    "scores": {
+      "aaImageArenaElo": 1152,
+      "lmarenaImageElo": 1332
+    },
+    "notes": "Announced 2026-08-10 (microsoft.ai post, updated 2026-09-04). Foundry public preview was announced 2026-09-04, and the Foundry model version is 2026-07-31. maxResolution is the square equivalent of the 2,359,296-pixel cap. Either side may be longer if the total stays within it, and each side must be at least 768px. The Foundry API id is the catalog model name. Callers address their own deployment name. The sibling MAI-Image-2.6-Flash ranked #11 on AA and is not included."
+  },
+  {
+    "id": "grok-imagine-image-2-0",
+    "name": "Grok Imagine Image 2.0",
+    "company": "xai",
+    "releaseDate": "2026-08-07",
+    "notable": true,
+    "description": "xAI's second-generation image model, built around editing, that powers Quality Mode in Grok Imagine and is available in the API.",
+    "strengths": [
+      "Multi-reference editing with up to five input images",
+      "Region editing (magic wand), segmentation and background removal in the Grok app",
+      "xAI says it plans typography and layout so small text comes out sharp",
+      "Flat $0.04 per image"
+    ],
+    "weaknesses": [
+      "API resolution limited to \"1k\" and \"2k\" tiers",
+      "API quality levels are only low and medium (no high)"
+    ],
+    "links": {
+      "official": "https://x.ai/news/grok-imagine-image-2",
+      "docs": "https://docs.x.ai/developers/model-capabilities/images/generation"
+    },
+    "pricing": {
+      "perImageUsd": 0.04,
+      "notes": "xAI pricing page: $0.04 per image, flat. Artificial Analysis lists $60 per 1k images, which disagrees with xAI's $0.04."
+    },
+    "maxResolution": null,
+    "capabilities": [
+      "text-to-image",
+      "editing",
+      "inpainting",
+      "text-rendering",
+      "reference-images"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "xai",
+        "id": "grok-imagine-image-2.0"
+      }
+    ],
+    "scores": {
+      "aaImageArenaElo": 1155,
+      "lmarenaImageElo": 1294
+    },
+    "notes": "Both leaderboards credit the creator as \"SpaceXAI\", mapped here to the existing xai company id. LMArena has two entries: \"grok-imagine-image-2.0 (20260801)\" at 1294 (used here, rank 8) and \"grok-imagine-image-2.0 (canvas)\" at 1334 (Preliminary, rank 4). Inpainting refers to the magic-wand region edit in the Grok app. The API docs mention no mask parameter. Resolution is given only as \"1k\"/\"2k\" with no pixel dimensions, so maxResolution is null. grok-imagine-image-quality is retired 2026-11-02 and its requests are routed to this model at low quality."
+  },
+  {
+    "id": "reve-2-1",
+    "name": "Reve 2.1",
+    "company": "reve",
+    "releaseDate": "2026-07-09",
+    "notable": true,
+    "description": "Reve's layout-first image model: it plans a structured scene layout before rendering, so individual elements can be edited and re-rendered.",
+    "strengths": [
+      "Native 4K x 4K (16 MP) output with no upscaling step",
+      "Every element is addressable and editable on its own",
+      "Dense, legible in-image text, now extended to foreign scripts",
+      "Plans structure and spatial relationships before rendering dense scenes"
+    ],
+    "weaknesses": [
+      "API status unclear (see notes)"
+    ],
+    "links": {
+      "official": "https://blog.reve.com/posts/launching-reve-2.1/",
+      "docs": null
+    },
+    "pricing": {
+      "perImageUsd": null,
+      "notes": "No per-image API price published on a page I could read. Reve links to app.reve.com/pricing (subscription plans)."
+    },
+    "maxResolution": "4096x4096",
+    "capabilities": [
+      "text-to-image",
+      "editing",
+      "text-rendering",
+      "reference-images"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [],
+    "scores": {
+      "aaImageArenaElo": null,
+      "lmarenaImageElo": 1302
+    },
+    "notes": "The Reve API post (2026-07-14) says the \"Reve 2.1 API\" outputs \"native 4K x 4K resolution\", hence maxResolution 4096x4096. It names no model id or endpoint strings, so apiIds is empty. A search snippet attributed to Reve's help centre says the API was sunset on August 14, 2026 with credits refunded by Aug 31. I could not open that page (sign-in wall), so this is unverified. Reve's 2026-07-27 post (\"A New Chapter\") announces an OpenAI investment, says some research staff are joining OpenAI, and says Reve continues independently. Not on the AA text-to-image leaderboard (only the 2025 \"Reve Image (Halfmoon)\" is listed)."
+  },
+  {
+    "id": "muse-image",
+    "name": "Muse Image",
+    "company": "meta",
+    "releaseDate": "2026-07-07",
+    "notable": true,
+    "description": "The first image generation model from Meta Superintelligence Labs. It powers image creation in Meta AI, Instagram and WhatsApp and pairs with Muse Spark to plan, research and compose before rendering.",
+    "strengths": [
+      "Cheapest model here at a flat $0.01 per image",
+      "Edits and composes from 1-10 input images",
+      "Built-in web/image search lookups at no extra charge",
+      "Plans layout before rendering, including infographics and text in the image"
+    ],
+    "weaknesses": [
+      "Meta says exact text rendering varies run to run",
+      "No mask/inpainting parameter in the API",
+      "Output only up to 1600px"
+    ],
+    "links": {
+      "official": "https://about.fb.com/news/2026/07/introducing-muse-image/",
+      "docs": "https://dev.meta.ai/docs/image-generation"
+    },
+    "pricing": {
+      "perImageUsd": 0.01,
+      "notes": "Meta Model API: flat $0.01 per generated image regardless of reasoning_strength. Failed or safety-filtered images are not billed. Free for everyday use in Meta AI, with higher limits on Meta subscriptions."
+    },
+    "maxResolution": null,
+    "capabilities": [
+      "text-to-image",
+      "editing",
+      "text-rendering",
+      "reference-images"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "meta",
+        "id": "muse-image-1.0"
+      }
+    ],
+    "scores": {
+      "aaImageArenaElo": 1115,
+      "lmarenaImageElo": 1274
+    },
+    "notes": "Consumer launch 2026-07-07 (Meta newsroom, updated 07-10). The developer API on the Meta Model API (api.meta.ai/v1) was announced 2026-08-25. The developer blog says output is high-quality \"up to 1600px\" without giving pixel dimensions, so maxResolution is null. The size parameter sets aspect ratio only. Open weights are not mentioned anywhere, and the model is treated as closed. AA ranks it #8 at 1115 (raw 1114.97), effectively tied with FLUX 3 Image (1114.86)."
+  },
+  {
+    "id": "gemini-3-1-flash-lite-image",
+    "name": "Nano Banana 2 Lite",
+    "company": "google",
+    "releaseDate": "2026-06-30",
+    "notable": true,
+    "description": "Google's lowest-cost, lowest-latency Gemini image model (Gemini 3.1 Flash-Lite Image) for high-volume generation and editing.",
+    "strengths": [
+      "$0.0336 per image",
+      "Built for ultra-low latency",
+      "Up to 14 object reference images",
+      "Ten aspect ratios from 21:9 to 9:16"
+    ],
+    "weaknesses": [
+      "1K output only",
+      "Not optimized for multiple reference inputs or multi-turn sequential editing",
+      "No search grounding"
+    ],
+    "links": {
+      "official": "https://deepmind.google/models/gemini-image/flash-lite/",
+      "docs": "https://ai.google.dev/gemini-api/docs/image-generation"
+    },
+    "pricing": {
+      "perImageUsd": 0.0336,
+      "notes": "Gemini API standard tier: $0.0336 per 1K image (the only resolution)."
+    },
+    "maxResolution": "1024x1024",
+    "capabilities": [
+      "text-to-image",
+      "editing",
+      "reference-images"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "google",
+        "id": "gemini-3.1-flash-lite-image"
+      }
+    ],
+    "scores": {
+      "aaImageArenaElo": 1096,
+      "lmarenaImageElo": 1250
+    },
+    "notes": "GA 2026-06-30 per the Gemini API changelog. Included as a current Google model; it is outside both top 10s (AA #15, LMArena #15). maxResolution is the 1:1 1K size. Other aspect ratios at 1K have different dimensions."
+  },
+  {
+    "id": "reve-2-0",
+    "name": "Reve 2.0",
+    "company": "reve",
+    "releaseDate": "2026-06-03",
+    "notable": true,
+    "description": "Reve's first layout-first image model: each image is built from a structured map of objects, text and regions that can be edited individually. Superseded by Reve 2.1.",
+    "strengths": [
+      "Native 4K rendering",
+      "Edits target individual objects, text and backgrounds in the layout",
+      "Clean, legible signs, labels, posters and logos",
+      "Stacks more reference images than earlier Reve models"
+    ],
+    "weaknesses": [
+      "Superseded by Reve 2.1 (2026-07-09)"
+    ],
+    "links": {
+      "official": "https://blog.reve.com/posts/announcing-reve-2.0/",
+      "docs": null
+    },
+    "pricing": {
+      "perImageUsd": null,
+      "notes": "No per-image price published on a page I could read."
+    },
+    "maxResolution": null,
+    "capabilities": [
+      "text-to-image",
+      "editing",
+      "text-rendering",
+      "reference-images"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [],
+    "scores": {
+      "aaImageArenaElo": null,
+      "lmarenaImageElo": 1269
+    },
+    "notes": "Included only because it is #10 on LMArena. Not on the AA leaderboard. The announcement says \"native 4K\" but gives no pixel dimensions, so maxResolution is null. Third-party coverage claims 4K x 4K. The post does not say whether 2.0 was on the API. The same day Reve said 2.0 \"replaces all earlier models\"."
+  },
+  {
+    "id": "gpt-image-2",
+    "name": "GPT Image 2",
+    "company": "openai",
+    "releaseDate": "2026-04-21",
+    "notable": true,
+    "description": "The OpenAI image model behind ChatGPT Images 2.0, for generation and editing with flexible sizes and high-fidelity image inputs. Superseded by GPT Image 2.5.",
+    "strengths": [
+      "Custom sizes up to 3840px on the long edge, including 3840x2160",
+      "All image inputs processed at high fidelity",
+      "#3 on both the Artificial Analysis and LMArena text-to-image leaderboards (2026-10-14)"
+    ],
+    "weaknesses": [
+      "$0.211 per 1024x1024 image at high quality",
+      "Superseded by GPT Image 2.5 Flare/Sunburst"
+    ],
+    "links": {
+      "official": "https://openai.com/index/introducing-chatgpt-images-2-0/",
+      "docs": "https://developers.openai.com/api/docs/models/gpt-image-2"
+    },
+    "pricing": {
+      "perImageUsd": 0.211,
+      "notes": "High quality at 1024x1024. Other tiers: low $0.006 (1024x1024) / $0.005 (1024x1536, 1536x1024); medium $0.053 / $0.041; high $0.211 / $0.165. Tokens: $5/1M text in, $8/1M image in, $30/1M image out."
+    },
+    "maxResolution": "3840x2160",
+    "capabilities": [
+      "text-to-image",
+      "editing",
+      "inpainting",
+      "reference-images"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "gpt-image-2"
+      },
+      {
+        "provider": "openai",
+        "id": "gpt-image-2-2026-04-21"
+      }
+    ],
+    "scores": {
+      "aaImageArenaElo": 1172,
+      "lmarenaImageElo": 1383
+    },
+    "notes": "Release date from the OpenAI announcement (April 21, 2026), which matches the snapshot date. In the top 10 on both leaderboards despite being superseded. AA scored the \"high\" setting and LMArena the \"medium\" setting. The OpenAI models overview now lists only the 2.5 models as current, but no deprecation date is published for gpt-image-2."
+  },
+  {
+    "id": "gemini-3-1-flash-image",
+    "name": "Nano Banana 2",
+    "company": "google",
+    "releaseDate": "2026-02-26",
+    "notable": true,
+    "description": "Google's Flash-tier Gemini image model (Gemini 3.1 Flash Image) for fast, high-volume generation and editing. Deprecated in favour of Nano Banana 2.1.",
+    "strengths": [
+      "0.5K to 4K output",
+      "Web Search and Google Image Search grounding",
+      "Multi-reference input (up to 10 object images)",
+      "Video-to-image input"
+    ],
+    "weaknesses": [
+      "Deprecated 2026-10-06 (no shutdown date yet)",
+      "Twice the 1K price of Nano Banana 2.1"
+    ],
+    "links": {
+      "official": "https://deepmind.google/models/gemini-image/flash/",
+      "docs": "https://ai.google.dev/gemini-api/docs/image-generation"
+    },
+    "pricing": {
+      "perImageUsd": 0.067,
+      "notes": "Gemini API standard tier: $0.045 per 0.5K, $0.067 per 1K, $0.101 per 2K, $0.151 per 4K image."
+    },
+    "maxResolution": "4096x4096",
+    "capabilities": [
+      "text-to-image",
+      "editing",
+      "reference-images"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "google",
+        "id": "gemini-3.1-flash-image"
+      }
+    ],
+    "scores": {
+      "aaImageArenaElo": 1125,
+      "lmarenaImageElo": 1262
+    },
+    "notes": "Preview launched 2026-02-26 (gemini-3.1-flash-image-preview, shut down 2026-06-25), GA 2026-05-28. Included because it is #7 on AA, although Google deprecated it on 2026-10-06 with migration to gemini-nano-banana-2.1. It is #11 on LMArena. The LMArena score is for the \"[web-search]\" variant entry. The guide's character-reference limit (5) came from a flattened table and is uncertain."
+  },
+  {
+    "id": "gpt-image-1-5",
+    "name": "GPT Image 1.5",
+    "company": "openai",
+    "releaseDate": "2025-12-16",
+    "notable": true,
+    "description": "OpenAI's previous-generation image model, behind the December 2025 ChatGPT Images relaunch, with more precise edits and better instruction following.",
+    "strengths": [
+      "Precise edits that keep details intact",
+      "Text rendering called out as an improvement at launch",
+      "OpenAI said ChatGPT images generated up to 4x faster"
+    ],
+    "weaknesses": [
+      "Only three output sizes (1024x1024, 1024x1536, 1536x1024)",
+      "Superseded twice (GPT Image 2, then 2.5)"
+    ],
+    "links": {
+      "official": "https://openai.com/index/new-chatgpt-images-is-here/",
+      "docs": "https://developers.openai.com/api/docs/models/gpt-image-1.5"
+    },
+    "pricing": {
+      "perImageUsd": 0.133,
+      "notes": "High quality at 1024x1024. Other tiers: low $0.009 / $0.013 (portrait/landscape); medium $0.034 / $0.05; high $0.133 / $0.20. Tokens: $5/1M text in, $8/1M image in, $32/1M image out, $10/1M text out."
+    },
+    "maxResolution": "1536x1024",
+    "capabilities": [
+      "text-to-image",
+      "editing",
+      "inpainting",
+      "text-rendering"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "gpt-image-1.5"
+      },
+      {
+        "provider": "openai",
+        "id": "gpt-image-1.5-2025-12-16"
+      }
+    ],
+    "scores": {
+      "aaImageArenaElo": 1109,
+      "lmarenaImageElo": 1237
+    },
+    "notes": "Included only because it is #10 on AA (high setting). It is #17 on LMArena (\"gpt-image-1.5-high-fidelity\"). OpenAI calls it \"our previous image generation model\" but has published no deprecation date. maxResolution is the largest listed size, since no explicit maximum is published."
+  },
+  {
+    "id": "gemini-3-pro-image",
+    "name": "Nano Banana Pro",
+    "company": "google",
+    "releaseDate": "2025-11-20",
+    "notable": true,
+    "description": "Google's premium Gemini image model (Gemini 3 Pro Image), built on Gemini 3 for studio-quality, precisely controlled generation and editing.",
+    "strengths": [
+      "Up to 14 references (6 object, 5 character, 3 style)",
+      "1K/2K/4K output",
+      "Google Search grounding",
+      "Positioned for brand consistency and complex tasks"
+    ],
+    "weaknesses": [
+      "$0.134 per 1K/2K image and $0.24 per 4K, the most expensive Gemini image model",
+      "Ranks below the newer, cheaper Nano Banana 2.1 on both leaderboards"
+    ],
+    "links": {
+      "official": "https://deepmind.google/models/gemini-image/pro/",
+      "docs": "https://ai.google.dev/gemini-api/docs/image-generation"
+    },
+    "pricing": {
+      "perImageUsd": 0.134,
+      "notes": "Gemini API standard tier: $0.134 per 1K or 2K image, $0.24 per 4K image."
+    },
+    "maxResolution": "4096x4096",
+    "capabilities": [
+      "text-to-image",
+      "editing",
+      "reference-images"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "google",
+        "id": "gemini-3-pro-image"
+      }
+    ],
+    "scores": {
+      "aaImageArenaElo": 1104,
+      "lmarenaImageElo": 1248
+    },
+    "notes": "Preview released 2025-11-20 (gemini-3-pro-image-preview, shut down 2026-06-25), GA 2026-05-28. Included as a current Google model with no shutdown date or replacement listed. It is outside both top 10s (AA #12, LMArena #16). The LMArena score is for the \"gemini-3-pro-image-2k\" entry. The preview entry scored 1234."
+  }
+]
