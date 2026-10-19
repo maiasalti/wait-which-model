@@ -33,7 +33,7 @@
         "id": "gpt-4-0613"
       }
     ],
-    "retirementDate": null,
+    "retirementDate": "2026-10-23",
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
@@ -57,7 +57,7 @@
       "Fabricates citations, APIs and quotes with no signal that it is guessing",
       "Slow token-by-token output that felt sluggish even at the time"
     ],
-    "notes": "The model that defined the 2023 frontier."
+    "notes": "The model that defined the 2023 frontier. OpenAI shuts down gpt-4-0613 and the gpt-4 alias in the API on 2026-10-23, per its 2026-04-22 \"Legacy GPT model snapshots\" deprecation notice."
   },
   {
     "id": "gpt-4-turbo",
@@ -202,8 +202,17 @@
       "effort": null
     },
     "license": null,
-    "apiIds": [],
-    "retirementDate": null,
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "o1"
+      },
+      {
+        "provider": "openai",
+        "id": "o1-2024-12-17"
+      }
+    ],
+    "retirementDate": "2026-10-23",
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
@@ -227,7 +236,7 @@
       "Overthinks trivial questions, spending minutes on what a small model answers instantly",
       "Reasoning is hidden, so you cannot see where it went wrong or steer it"
     ],
-    "notes": "Full release of the o1 series (previewed September 2024)."
+    "notes": "Full release of the o1 series (previewed September 2024). OpenAI shuts down o1-2024-12-17 and the o1 alias in the API on 2026-10-23, per its 2026-04-22 \"Legacy GPT model snapshots\" deprecation notice."
   },
   {
     "id": "gpt-4-1",
@@ -378,7 +387,7 @@
         "id": "gpt-5-2025-08-07"
       }
     ],
-    "retirementDate": null,
+    "retirementDate": "2026-12-11",
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": 87,
@@ -402,7 +411,7 @@
       "Flatter, more clinical voice; users described losing a companion, not just a tool",
       "Under-answers by default, giving a summary where the previous line elaborated"
     ],
-    "notes": "Scores shown for GPT-5 (thinking, high). SWE-bench Pro 41.78% is Scale's public-set leaderboard figure for \"gpt-5-2025-08-07 (High)\" — third-party, not OpenAI-reported; the original SWE-Bench Pro paper (arXiv 2509.16941) lists the same run at 41.8%, while the 23.3% widely quoted from the paper's launch coverage was the commercial-set figure."
+    "notes": "Scores shown for GPT-5 (thinking, high). SWE-bench Pro 41.78% is Scale's public-set leaderboard figure for \"gpt-5-2025-08-07 (High)\" — third-party, not OpenAI-reported; the original SWE-Bench Pro paper (arXiv 2509.16941) lists the same run at 41.8%, while the 23.3% widely quoted from the paper's launch coverage was the commercial-set figure. OpenAI removes the gpt-5-2025-08-07 snapshot from the API on 2026-12-11, per its 2026-06-11 deprecation notice."
   },
   {
     "id": "gpt-5-1",
@@ -892,7 +901,7 @@
         "id": "claude-sonnet-4-5@20250929"
       }
     ],
-    "retirementDate": null,
+    "retirementDate": "2026-11-30",
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
@@ -915,7 +924,7 @@
       "Hits a ceiling on genuinely novel reasoning; more thinking doesn't produce a better answer",
       "Declares a task finished before verifying that it is"
     ],
-    "notes": "SWE-bench Pro 43.6% is Scale's public-set figure (also Table 1 of the SWE-Bench Pro paper, arXiv 2509.16941) — third-party, not Anthropic-reported."
+    "notes": "SWE-bench Pro 43.6% is Scale's public-set figure (also Table 1 of the SWE-Bench Pro paper, arXiv 2509.16941) — third-party, not Anthropic-reported. Anthropic deprecated Sonnet 4.5 on 2026-09-30 and retires claude-sonnet-4-5-20250929 from the Claude API on 2026-11-30 (platform.claude.com model-deprecations page); Bedrock and Google Cloud set their own schedules."
   },
   {
     "id": "claude-haiku-4-5",
@@ -1148,7 +1157,7 @@
         "id": "gemini-2.0-flash-001"
       }
     ],
-    "retirementDate": null,
+    "retirementDate": "2026-06-01",
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": 77.6,
@@ -1171,7 +1180,7 @@
       "Falls apart on multi-step reasoning — fine for extraction, not for analysis",
       "Follows complex formatting instructions unreliably"
     ],
-    "notes": "Included as the price-performance outlier of its generation. SWE-bench Verified 51.8 is Google-reported using an agentic code-execution harness."
+    "notes": "Included as the price-performance outlier of its generation. SWE-bench Verified 51.8 is Google-reported using an agentic code-execution harness. Google shut down gemini-2.0-flash and gemini-2.0-flash-001 in the Gemini API on 2026-06-01 (announced 2026-02-18; Gemini API release notes and deprecations page)."
   },
   {
     "id": "gemini-2-5-pro",
@@ -1267,7 +1276,7 @@
         "id": "gemini-3-pro-preview"
       }
     ],
-    "retirementDate": null,
+    "retirementDate": "2026-03-09",
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": 89.8,
@@ -1291,7 +1300,7 @@
       "Old prompt-engineering habits — elaborate personas, hand-written chain-of-thought — make it worse, not better",
       "Deep Think sits behind the top consumer tier rather than the API"
     ],
-    "notes": "SWE-Bench Pro (public) 43.3% is Google's own figure (cited in the Gemini 3.1 Pro model card's comparison column) and matches Scale's public leaderboard entry for gemini-3-pro-preview (43.30%). Terminal-Bench 2.1 73.9% (±1.3) is the Terminus 2 harness entry dated 2025-11-18 on the tbench.ai leaderboard as mirrored by Snorkel AI — third-party; the Gemini CLI entry scores 65.8%."
+    "notes": "SWE-Bench Pro (public) 43.3% is Google's own figure (cited in the Gemini 3.1 Pro model card's comparison column) and matches Scale's public leaderboard entry for gemini-3-pro-preview (43.30%). Terminal-Bench 2.1 73.9% (±1.3) is the Terminus 2 harness entry dated 2025-11-18 on the tbench.ai leaderboard as mirrored by Snorkel AI — third-party; the Gemini CLI entry scores 65.8%. Google shut down gemini-3-pro-preview on 2026-03-09 and repointed the id to gemini-3.1-pro-preview (Gemini API release notes)."
   },
   {
     "id": "llama-3-1-405b",

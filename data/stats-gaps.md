@@ -1098,3 +1098,23 @@ New-model release protocol, 2026-10-09 sweep: Beam (Reflection AI), d1-3B and d1
 | beam | contextWindow / maxOutput | 2026-10-09 | docs give "256K" / "128K" only; recorded as 256000 / 128000 — replace with exact counts if the docs or model card publish them |
 | d1-3b | pricing / costPerTask / knowledgeCutoff / maxOutput | 2026-10-09 | weights-only checkpoint with no hosted price; decision model (no output tokens); no cutoff published |
 | d1-omni-600m | pricing / costPerTask / knowledgeCutoff / maxOutput | 2026-10-09 | same as d1-3b |
+Stats-filler sweep on 2026-10-13 (re-check of "re-check" rows from 2026-09-22 → 10-07). WebFetch was denied for every URL this session; findings rest on WebSearch excerpts of arena.ai/company/leaderboard-changelog, arcprize.org/results, artificialanalysis.ai, vals.ai, epoch.ai, benchlm.ai and secondary coverage. Cells already in open PR #49 were not re-researched.
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| claude-opus-5-5 | lmarenaElo | 2026-10-13 | now listed on arena.ai's text board as claude-opus-5.5-high, but the only scores seen are secondary and they disagree. 1509 ±12 comes from cryptobriefing.com and remio.ai, relaying Arena's X post of 2026-09-26. 1507 ±8 is attributed to the 2026-10-08 board update. Arena's changelog dates the Text Arena addition to 2026-10-01, which doesn't fit a 09-26 debut. Left null; a direct read of arena.ai/leaderboard/text would settle it |
+| gpt-6-luna | lmarenaElo | 2026-10-13 | arena.ai changelog (excerpt) confirms gpt-6-luna-max was added to the Text Arena (undated entry, late Sept or early Oct), but no score surfaced in any excerpt. Only Agent Arena (#23) and Coding-category figures found. Re-check with a direct read |
+| grok-4-7 | lmarenaElo | 2026-10-13 | arena.ai changelog (excerpt) confirms grok-4.7-xhigh was added to the Text Arena, but no score surfaced. Only Agent Arena (#16, +3.96%) found. Re-check with a direct read |
+| gpt-6-1-sol | lmarenaElo | 2026-10-13 | still no Text Arena score in any excerpt. Agent Arena only (#5, 11.23% net improvement, 2026-10-02) |
+| mistral-large-4 | lmarenaElo | 2026-10-13 | arena.ai changelog (excerpt) says mistral-large-4 was added to the Text Arena on 2026-10-08, but no score surfaced. lmmarketcap.com's "1280" looks auto-generated and was rejected |
+| gemini-4-argon | contextWindow | 2026-10-13 | still undisclosed by Google. Every 1M figure traces to Artificial Analysis or Arena, and one outlet reports an unconfirmed 2M. Still no Gemini API model page or model card |
+| gemini-4-argon | knowledgeCutoff | 2026-10-13 | still unpublished (no model card; postcutoff.com and eesel.ai both say Google has not disclosed it) |
+| gemini-4-argon | arcAgi2 | 2026-10-13 | no arcprize.org results entry found; access is still limited to the Fairwind trusted-tester programme |
+| claude-sonnet-5-5 | gdpvalAA | 2026-10-13 | Artificial Analysis rates it 1844, per officechai.com and metricnexus.ai (published 2026-09-28), next to Opus 5.5's 1846. The 1846 is the GDPval-AA **v2.1** figure already ledgered for Opus 5.5, so 1844 is v2.1 too, a different scale from the v2 this key records. Belongs in notes, not the key |
+| ling-3-1-flash | pricing | 2026-10-13 | sources conflict. Artificial Analysis' providers page (excerpt) gives InclusionAI at $0.30 / $0.90 per MTok; llmbase.ai gives $0.07 / $0.22; OpenCode and Vercel-based listings still show $0 (the trial). No Ant/InclusionAI pricing page surfaced. Re-check after the trial ends (~10-14) |
+| kolibri-1 | lmarenaElo | 2026-10-13 | still not listed on arena.ai (no changelog entry seen) |
+| kolibri-1 | costPerTask | 2026-10-13 | still no Artificial Analysis model page; coverage only says it is "expected to trail" twenty-plus open-weight models on the Index |
+| mistral-large-4 | sweBenchPro | 2026-10-13 | still unpublished. Mistral reports DeepSWE v1.1 61.7%; extra benchmarks are promised with the weights, now dated 2026-10-27 (pasqualepillitteri.it) |
+| gpt-6-1-sol | gpqaDiamond | 2026-10-13 | Epoch AI's benchmarks.csv (epoch.ai/data/benchmarks.csv) appears to contain a "GPT-6.1 Sol (max)" GPQA Diamond row, but the excerpt was garbled and no value could be tied to the model. Lead for a direct read. Not on Artificial Analysis or vals.ai excerpts |
+| gpt-6-sol | gpqaDiamond | 2026-10-13 | still absent from Artificial Analysis' GPQA Diamond board excerpts, which show Astra at 96.3/96.1 and Gemini 3.8 Flash at 95.3, with no Sol or Luna rows |
+| gpt-6-luna | gpqaDiamond | 2026-10-13 | same as gpt-6-sol |
