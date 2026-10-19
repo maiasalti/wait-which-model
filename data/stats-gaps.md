@@ -1091,11 +1091,11 @@ New-model release protocol, 2026-10-09 sweep: Beam (Reflection AI), d1-3B and d1
 
 | model-id | field | checked | reason |
 |---|---|---|---|
-| beam | pricing | 2026-10-09 | waitlisted API beta; no per-token price on reflection.ai or developers.reflection.ai |
-| beam | costPerTask | 2026-10-09 | no Artificial Analysis listing found |
+| beam | pricing | 2026-10-09 | waitlisted API beta; no per-token price on reflection.ai or developers.reflection.ai — **superseded 2026-10-19: OpenRouter listing ($0.25/$1.00) recorded; Reflection's own price still unpublished** |
+| beam | costPerTask | 2026-10-09 | no Artificial Analysis listing found — **superseded 2026-10-19: Artificial Analysis now lists $0.57/task** |
 | beam | lmarenaElo | 2026-10-09 | not on the arena text board four days after launch; re-check |
 | beam | gdpvalAA / arcAgi2 / mmluPro | 2026-10-09 | not in Reflection's launch table; no third-party run found |
-| beam | contextWindow / maxOutput | 2026-10-09 | docs give "256K" / "128K" only; recorded as 256000 / 128000 — replace with exact counts if the docs or model card publish them |
+| beam | contextWindow / maxOutput | 2026-10-09 | docs give "256K" / "128K" only; recorded as 256000 / 128000 — replace with exact counts if the docs or model card publish them — **superseded 2026-10-19: model card gives 1M context; maxOutput stays 128000 from the API docs** |
 | d1-3b | pricing / costPerTask / knowledgeCutoff / maxOutput | 2026-10-09 | weights-only checkpoint with no hosted price; decision model (no output tokens); no cutoff published |
 | d1-omni-600m | pricing / costPerTask / knowledgeCutoff / maxOutput | 2026-10-09 | same as d1-3b |
 Stats-filler sweep on 2026-10-13 (re-check of "re-check" rows from 2026-09-22 → 10-07). WebFetch was denied for every URL this session; findings rest on WebSearch excerpts of arena.ai/company/leaderboard-changelog, arcprize.org/results, artificialanalysis.ai, vals.ai, epoch.ai, benchlm.ai and secondary coverage. Cells already in open PR #49 were not re-researched.
@@ -1130,3 +1130,18 @@ Stats-filler sweep on 2026-10-13 (re-check of "re-check" rows from 2026-09-22 �
 | deepseek-v4-1-flash-1017 | costPerTask | 2026-10-18 | Artificial Analysis had not published an Intelligence Index cost figure for this checkpoint as of 2026-10-18 |
 | deepseek-v4-1-flash-1017 | speed | 2026-10-18 | Artificial Analysis had not measured this specific checkpoint as of 2026-10-18 |
 | deepseek-v4-1-flash-1017 | knowledgeCutoff | 2026-10-18 | not published by DeepSeek for this checkpoint; DataLearner also lists "no data" |
+| claude-haiku-5-5 | gpqaDiamond / sweBench / sweBenchPro / terminalBench | 2026-10-19 | not in Anthropic's launch table (anthropic.com/news/claude-haiku-5-5), which reports Terminal-Bench 4.0 (39.2%) not 2.1; vals.ai lists only Terminal-Bench 4.0 (36.4%), Terminal-Bench-Science and SWE-bench Multimodal; system card PDF too large to fetch |
+| claude-haiku-5-5 | gdpvalAA | 2026-10-19 | Anthropic reports GDPval-AA v2.1 (1620), not the tracked v2; kept in notes |
+| claude-haiku-5-5 | lmarenaElo / arcAgi2 | 2026-10-19 | no arena.ai listing or ARC Prize entry found 12 days after launch; re-check |
+| nemotron-3-5-super-vl | lmarenaElo / arcAgi2 / aime | 2026-10-19 | not in NVIDIA's model-card table (which reports an 'LMArena v3 proxy' 52.67, not an Arena Elo); no arena.ai listing or ARC Prize entry |
+| nemotron-3-5-super-vl | mmluPro | 2026-10-19 | retired key; card reports MMLU-ProX 76.91, not MMLU-Pro |
+| nemotron-3-5-super-vl | maxOutput / knowledgeCutoff | 2026-10-19 | HF card states no output cap (examples use 16,384) and gives a 2013–Dec 2025 data-collection period rather than a cutoff |
+| nemotron-3-5-bolt-74b-a9b | sweBench / sweBenchPro / lmarenaElo / arcAgi2 | 2026-10-19 | not in NVIDIA's BF16 model-card table; no arena.ai listing or ARC Prize entry |
+| nemotron-3-5-bolt-74b-a9b | gdpvalAA | 2026-10-19 | card's 'GDPVal-AA-V2' column (31.13) is not on the Elo scale tracked here; AA has no score |
+| nemotron-3-5-bolt-74b-a9b | pricing / costPerTask / speed | 2026-10-19 | Artificial Analysis: "No publicly available API"; cost and speed N/A; no OpenRouter listing |
+| nemotron-3-5-bolt-74b-a9b | maxOutput / knowledgeCutoff | 2026-10-19 | card states no output cap; training data through 2026-02-24 and post-training data to May 2026, no single cutoff |
+| muse-spark-open | hle | 2026-10-19 | Meta's card reports 'HLE-Diamond' no tools (26.1), a subset, and HLE with tools (61.0); no full-set no-tools figure |
+| muse-spark-open | sweBench / sweBenchPro / arcAgi2 / lmarenaElo | 2026-10-19 | not in Meta's HF model card (reports DeepSWE 1.1 and SWE-Atlas-QnA instead); no arena.ai listing or ARC Prize entry |
+| muse-spark-open | maxOutput / knowledgeCutoff | 2026-10-19 | not stated on the HF model card; OpenRouter lists no max output |
+| beam | gdpvalAA / lmarenaElo / arcAgi2 | 2026-10-19 | not in Reflection's model card or launch blog; AA lists AA-Briefcase but no GDPval-AA v2 figure; no arena.ai listing or ARC Prize entry |
+| beam | maxOutput | 2026-10-19 | HF card silent; eesel.ai reports 128K on Reflection's beta API docs (secondary, not confirmed) |

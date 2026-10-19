@@ -261,8 +261,8 @@ gpt-5-6-cyber · retirementDate · 2026-10-08 · Bedrock card (docs.aws.amazon.c
 claude-haiku-5-5 · retirementDate · 2026-10-08 · Anthropic's overview (platform.claude.com/docs/en/models/haiku-5-5/overview, read directly) gives retirement "Not sooner than October 7, 2027" and the Bedrock card "EOL no sooner than: October 7, 2027" — a floor, not an announced retirement. Left null.
 claude-haiku-5-5 · speed.timeToFirstTokenSec · 2026-10-08 · Artificial Analysis excerpts conflict for the medium variant: 12.63s on the model page vs 13.40s for Anthropic on the providers page (WebFetch denied). outputTokensPerSec 136.8 filled; this half left null — re-check.
 beam · apiIds · 2026-10-09 · Search excerpts of developers.reflection.ai name the model "Beam-501B-A23B", but the docs page could not be read and the exact case-sensitive API string is unconfirmed. Left [] — re-check with page access.
-beam · license · 2026-10-09 · Not applicable yet — openWeights false; Reflection promises Apache 2.0 weights "later this month". Set license and openWeights when the Hugging Face repo publishes.
-beam · speed · 2026-10-09 · No Artificial Analysis listing. Left null.
+beam · license · 2026-10-09 · Not applicable yet — openWeights false; Reflection promises Apache 2.0 weights "later this month". Set license and openWeights when the Hugging Face repo publishes. — **superseded 2026-10-19: Apache-2.0 weights published on Hugging Face 2026-10-16; license set**
+beam · speed · 2026-10-09 · No Artificial Analysis listing. Left null. — **superseded 2026-10-19: Artificial Analysis now lists it; speed set**
 beam · predecessorId · 2026-10-09 · Reflection's first public model; nothing to replace. Left null.
 beam · retirementDate · 2026-10-09 · Brand-new beta; no lifecycle notice. Left null.
 d1-3b · apiIds · 2026-10-09 · Weights only at LiquidAI/d1-3B; Liquid's hosted API serves "d1", which the sources do not equate with this checkpoint. Left [].
@@ -313,3 +313,14 @@ gemini-4-argon · retirementDate · 2026-10-15 · Google Cloud's model page give
 gemini-4-argon · predecessorId · 2026-10-15 · Re-checked after GA: Google Cloud's guide tells developers moving from Gemini 3.1 Pro to change the model id to gemini-4-argon. That's a migration pointer, not an explicit replacement claim. Left null for Maia's call.
 step-5-preview · license · 2026-10-15 · On the promised weight-drop date, no official stepfun-ai/Step-5-Preview* repo surfaced (only mirrors); a CNMO/ifeng report says the weights opened today but names no location or licence. openWeights stays false. Re-check.
 deepseek-v4-1-flash-1017 · retirementDate · 2026-10-18 · Brand-new checkpoint (released 2026-10-17); no lifecycle notice. Left null.
+claude-haiku-5-5 · retirementDate · 2026-10-19 · platform.claude.com/docs/en/models/haiku-5-5/overview lists "Active (latest)", retirement "Not sooner than October 7, 2027" — a floor, not an announced retirement. Left null.
+nemotron-3-5-super-vl · predecessorId · 2026-10-19 · NVIDIA's blog, technical blog and HF card say it is distilled from Nemotron 3 Ultra and compare it against Nemotron 3 Super, but name no model it replaces; distillation is lineage. Left null.
+nemotron-3-5-super-vl · retirementDate · 2026-10-19 · Brand-new release; no lifecycle notice. Left null.
+nemotron-3-5-bolt-74b-a9b · predecessorId · 2026-10-19 · HF card says it is compressed from Super VL (Star Elastic); no replacement claim. Left null.
+nemotron-3-5-bolt-74b-a9b · apiIds · 2026-10-19 · Artificial Analysis states no publicly available API; no OpenRouter or NIM listing found. Weights only at nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16 and -24GB. Left [].
+nemotron-3-5-bolt-74b-a9b · speed · 2026-10-19 · AA lists N/A (no hosted endpoint). Left null.
+muse-spark-open · predecessorId · 2026-10-19 · HF model card says only that the open-weights version received "additional safety post-training" over Muse Spark; no replacement claim, and Meta's closed Muse Spark line continues. Left null.
+muse-spark-open · retirementDate · 2026-10-19 · Open-weights release; no lifecycle notice. Left null.
+beam · predecessorId · 2026-10-19 · Reflection AI's first model; nothing to replace. Left null.
+beam · apiIds · 2026-10-19 · Only OpenRouter's reflection/beam-1.0-501b-a23b verified; Reflection's own API id (Beam-501B-A23B per eesel.ai) not confirmed from Reflection docs, which sit behind a waitlist login. Fireworks and Baseten listings not checked.
+beam · retirementDate · 2026-10-19 · Brand-new release; no lifecycle notice. Left null.

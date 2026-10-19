@@ -139,17 +139,9 @@
     "modelId": "claude-sonnet-5",
     "tier": "balanced",
     "start": "2026-06-30",
-    "end": "2026-07-09",
-    "dethronedBy": "gpt-5-6-terra",
-    "composite": 0.816
-  },
-  {
-    "modelId": "gpt-5-6-terra",
-    "tier": "balanced",
-    "start": "2026-07-09",
     "end": "2026-09-22",
     "dethronedBy": "gpt-6-sol",
-    "composite": 0.8204
+    "composite": 0.8237
   },
   {
     "modelId": "gpt-6-sol",
@@ -157,7 +149,7 @@
     "start": "2026-09-22",
     "end": "2026-09-28",
     "dethronedBy": "claude-sonnet-5-5",
-    "composite": 0.9073
+    "composite": 0.9166
   },
   {
     "modelId": "claude-sonnet-5-5",
@@ -165,7 +157,7 @@
     "start": "2026-09-28",
     "end": null,
     "dethronedBy": null,
-    "composite": 0.9523
+    "composite": 0.9593
   },
   {
     "modelId": "gemini-2-0-flash",

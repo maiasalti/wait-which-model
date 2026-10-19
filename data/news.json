@@ -102,6 +102,21 @@
     "sourceUrl": "https://mistral.ai/news/mistral-large-4/"
   },
   {
+    "id": "2026-10-16-beam-open-weights",
+    "date": "2026-10-16",
+    "title": "Reflection AI releases Beam's weights under Apache 2.0",
+    "summary": "Reflection AI published the Apache 2.0 weights for Beam, its 501B-total / 23B-active text-only MoE, on Hugging Face on October 16, eleven days after the waitlisted API launch. The model card reports SWE-bench Verified 81.6%, Terminal-Bench 2.1 80.1% and GPQA Diamond 90.6%; Artificial Analysis scores it 30, second among US open-weight models behind Muse Spark Open.",
+    "category": "release",
+    "companies": [
+      "reflection"
+    ],
+    "modelIds": [
+      "beam"
+    ],
+    "sourceName": "Hugging Face",
+    "sourceUrl": "https://huggingface.co/reflection/Beam-1.0-501B-A23B"
+  },
+  {
     "id": "2026-10-07-claude-haiku-5-5",
     "date": "2026-10-07",
     "title": "Anthropic releases Claude Haiku 5.5 with a 1M-token context and effort control",
@@ -3004,5 +3019,36 @@
     ],
     "sourceName": "MarkTechPost",
     "sourceUrl": "https://www.marktechpost.com/2026/10/17/deepseek-just-released-v4-1-flash-1017-scores-77-0-on-deepswe-opens-search-api/"
+  },
+  {
+    "id": "2026-10-15-nemotron-3-5-super-vl",
+    "date": "2026-10-15",
+    "title": "NVIDIA releases Nemotron 3.5 Super VL and Nemotron 3.5 Bolt, open multimodal models for agents and the edge",
+    "summary": "NVIDIA released Nemotron 3.5 Super VL, a 120B-total / 12B-active open multimodal MoE with a 1M-token context distilled from Nemotron 3 Ultra, reporting GPQA Diamond 89.5%, SWE-bench Verified 71.1% and Terminal-Bench 2.1 60.7% on its model card. Alongside it shipped Bolt 74B-A9B, compressed from Super VL and natively quantised to run in 24 GB on RTX and DGX Spark hardware; a 4 GB Bolt E4B follows on October 23. Both are under the OpenMDW-1.1 licence.",
+    "category": "release",
+    "companies": [
+      "nvidia"
+    ],
+    "modelIds": [
+      "nemotron-3-5-super-vl",
+      "nemotron-3-5-bolt-74b-a9b"
+    ],
+    "sourceName": "NVIDIA Technical Blog",
+    "sourceUrl": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/"
+  },
+  {
+    "id": "2026-10-15-muse-spark-open",
+    "date": "2026-10-15",
+    "title": "Meta releases Muse Spark Open, an 816B open-weight Muse model",
+    "summary": "Meta published Muse Spark Open on Hugging Face: an 816B-total / 42B-active multimodal MoE with a 1M-token context that runs on two linked M5 Ultra Mac Studios. Meta reports GPQA Diamond 89.0% and Terminal-Bench 2.1 76.4%; Artificial Analysis scores it 39, the highest of any US open-weight model. The Muse Model License permits commercial use but requires a separate agreement for hosted services above $20M in annual revenue.",
+    "category": "release",
+    "companies": [
+      "meta"
+    ],
+    "modelIds": [
+      "muse-spark-open"
+    ],
+    "sourceName": "Hugging Face (Meta model card)",
+    "sourceUrl": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B"
   }
 ]

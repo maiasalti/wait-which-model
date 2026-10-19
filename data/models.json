@@ -7668,6 +7668,203 @@
     "notes": "Released 2026-10-07 on the Claude API, Amazon Bedrock, Google Cloud, Microsoft Foundry and Claude Platform on AWS. Context 1M, max output 128K (300K on the Message Batches API beta), reliable knowledge cutoff June 2026, default effort medium with adaptive thinking on by default, per Anthropic's model overview and the Bedrock model card. Base prices apply to prompts up to 100K tokens; above that it is $0.50 input and $2.50 output per MTok. Cache reads are $0.01 and 5-minute cache writes $0.125 per MTok, and batch is 50% off. HLE 45.9% is Anthropic's no-tools figure. Anthropic's system card reports SWE-bench Pro, but its figure could not be confirmed from a primary-source excerpt this run, so sweBenchPro is null; the launch table's Terminal-Bench figure is version 4.0 and its GDPval-AA figure is v2.1, neither of which matches the tracked keys. Cost per task ($0.05) and output speed (136.8 tok/s) are Artificial Analysis' medium-effort figures; AA's time-to-first-token figures conflict between pages (12.63s vs 13.40s), so that half of speed is null. predecessorId follows Anthropic's Haiku 4.5 page, which calls Haiku 4.5 a legacy model, names Haiku 5.5 the current Haiku and advises migrating to it."
   },
   {
+    "id": "nemotron-3-5-super-vl",
+    "name": "Nemotron 3.5 Super VL",
+    "company": "nvidia",
+    "releaseDate": "2026-10-15",
+    "status": "superseded",
+    "tier": "balanced",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 0.1,
+      "outputPerMTok": 0.4
+    },
+    "costPerTask": {
+      "usd": 0.19,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": 421.7,
+      "timeToFirstTokenSec": 0.8,
+      "effort": null
+    },
+    "license": {
+      "spdx": null,
+      "name": "OpenMDW-1.1",
+      "kind": "permissive",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "nvidia",
+        "id": "nvidia/nemotron-3.5-super-vl-120b-a12b"
+      },
+      {
+        "provider": "openrouter",
+        "id": "nvidia/nemotron-3.5-super-vl"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 89.52,
+      "sweBench": 71.1,
+      "sweBenchPro": 51.78,
+      "terminalBench": 60.67,
+      "aime": null,
+      "hle": 31.79,
+      "lmarenaElo": null,
+      "gdpvalAA": 1211,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Text, images, documents and short video go through one checkpoint, so screenshot- and chart-heavy agent steps need no separate vision model",
+      "Streams fast enough that multi-step agent loops feel interactive, and context-reuse serving keeps attention and Mamba state across repeated agent calls",
+      "Ships base, post-trained and NVFP4 checkpoints with datasets and recipes, so it can be genuinely retrained — partners have already post-trained it for finance, security and receipt extraction"
+    ],
+    "weaknesses": [
+      "Verbose on reasoning work — it generates well above the median token count to reach an answer, which eats into the per-token price advantage",
+      "The full window needs datacentre hardware: NVIDIA's DGX Spark recipes cap context far lower and serve one sequence at a time",
+      "Video input stops at two minutes and NVIDIA's multimodal examples take one image and one video per request"
+    ],
+    "notes": "120B total / 12B active hybrid Mamba-2–Transformer MoE with a C-RADIO vision encoder, distilled from Nemotron 3 Ultra and released 2026-10-15 alongside Nemotron 3.5 Bolt. Benchmarks are NVIDIA's own BF16 model-card figures (GPQA Diamond 89.52, SWE-bench Verified 71.10, SWE-bench Pro 51.78, Terminal-Bench 2.1 60.67, HLE text-only 31.79 — 29.20 on the full set — and GDPval-AA v2 1211, lab-reported); the NVFP4 checkpoint scores within a point on most rows but drops on DeepSWE and WebVoyager. The card reports MMLU-ProX 76.91, not MMLU-Pro. NVIDIA publishes no first-party per-token price — $0.10/$0.40 is OpenRouter's listing (a logged free NVIDIA endpoint also exists), while Artificial Analysis' provider median is $0.225/$0.575. Artificial Analysis Intelligence Index 26 (v4.3.2) at $0.19 per task, 421.7 tok/s and 0.80s to first token (provider medians, reasoning variant, no effort level named); it generated about 170M tokens running the index against a 100M median, the basis for the verbosity note. No max output limit is published (examples use 16,384 with reasoning sharing the budget); the card gives a 2013–December 2025 data-collection period rather than a knowledge cutoff, so knowledgeCutoff is null. Distillation from Ultra is lineage, not a replacement claim, so predecessorId is null."
+  },
+  {
+    "id": "nemotron-3-5-bolt-74b-a9b",
+    "name": "Nemotron 3.5 Bolt 74B-A9B",
+    "company": "nvidia",
+    "releaseDate": "2026-10-15",
+    "status": "superseded",
+    "tier": "fast",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 262144,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "self-host",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": null,
+      "name": "OpenMDW-1.1",
+      "kind": "permissive",
+      "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 88.83,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": 53.93,
+      "aime": null,
+      "hle": 28.73,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Native 2-bit quantisation squeezes it into 24 GB, so it runs on a single RTX card or a DGX Spark rather than a server",
+      "Keeps Super VL's vision tower, so it reads screenshots, documents and short video locally with no cloud call",
+      "Day-one support in llama.cpp, Ollama, LM Studio, Unsloth and vLLM, so it drops into existing local setups"
+    ],
+    "weaknesses": [
+      "No hosted API at all — you run it yourself or not at all",
+      "Very verbose: it generated more than twice the median output tokens on Artificial Analysis' index, which slows local runs noticeably",
+      "The BF16 release is meant for fine-tuning, not serving — the 24 GB build you would actually deploy gives up a few points across NVIDIA's own table"
+    ],
+    "notes": "74B total / 9B active Mamba-2–Transformer LatentMoE compressed from Nemotron 3.5 Super VL with NVIDIA's Star Elastic method (expert top-K cut from 22 to 9, the parent's vision tower reattached); released 2026-10-15 on Hugging Face as BF16, the 24GB native-2-bit build and GGUF variants. Benchmarks are NVIDIA's model-card figures for the BF16 weights (GPQA Diamond 88.83, Terminal-Bench 2.1 53.93, HLE no tools 28.73); the deployable 24GB build scores 86.43 / 50.98 / 25.30. The card's 'GDPVal-AA-V2' column (31.13) is not on the Elo scale this site tracks, so gdpvalAA is null; SWE-bench is not reported. Context is 'up to 256K' (Artificial Analysis lists 262K). availability is self-host and pricing null: Artificial Analysis states there is no publicly available API and no OpenRouter listing was found. AA Intelligence Index 21 (reasoning variant) with 230M output tokens against a 100M median, but no cost or speed measurement. Training data was collected through 2026-02-24 and post-training data runs to May 2026; NVIDIA states no single knowledge cutoff. A 4 GB sibling, Bolt E4B, is due 2026-10-23. Compression from Super VL is lineage, not replacement, so predecessorId is null."
+  },
+  {
+    "id": "muse-spark-open",
+    "name": "Muse Spark Open",
+    "company": "meta",
+    "releaseDate": "2026-10-15",
+    "status": "superseded",
+    "tier": "balanced",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 1.25,
+      "outputPerMTok": 4.25
+    },
+    "costPerTask": {
+      "usd": 0.84,
+      "effort": "xhigh"
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": 141,
+      "timeToFirstTokenSec": 0.8,
+      "effort": "xhigh"
+    },
+    "license": {
+      "spdx": null,
+      "name": "Muse Model License",
+      "kind": "restricted",
+      "url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "openrouter",
+        "id": "meta/muse-spark-open"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 89,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": 76.4,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": 1401,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Meta's open weights at a size that runs on two linked M5 Ultra Mac Studios, not only on a datacentre rack",
+      "Takes audio and video natively as well as images — still rare among open-weight models",
+      "Gets to an answer in fewer output tokens than the median model on Artificial Analysis' index despite defaulting to its heaviest reasoning setting"
+    ],
+    "weaknesses": [
+      "The Muse Model License requires a separate agreement with Meta once a hosted service passes $20M in annual revenue, plus mandatory 'Built with Muse Spark Open' attribution — not a drop-in for a permissive licence",
+      "Defaults to xhigh reasoning and rejects effort values outside low–xhigh, so quick tasks need effort set explicitly",
+      "Every launch figure was run by Meta in its own harness and the detailed evaluation report is still to come — independent reception is thin"
+    ],
+    "notes": "816B total / 42B active MoE with Meta's Perception Encoder (text, image, video and audio in; text out), released as open weights on 2026-10-15 with an extra round of safety post-training over the closed Muse Spark; NVFP4 needs about 700 GB of VRAM and BF16 about 2 TB. Benchmarks are Meta's model-card figures at xhigh: GPQA Diamond 89.0, Terminal-Bench 2.1 (Terminus 2) 76.4 and GDPval-AA v2 1401 (lab-reported); hle is null because the card reports 'HLE-Diamond' (no tools, 26.1), a subset, alongside HLE with tools 61.0. Also reported: MCP-Atlas 89.2, OSWorld Verified 80.4, Toolathlon Verified 72.8, SciCode 58.5, DeepSWE 1.1 60. Meta does not serve it on its own API; $1.25/$4.25 is OpenRouter's listing and Artificial Analysis' provider median, with hosts including Together, Fireworks and Groq. costPerTask and speed are AA's xhigh figures (Intelligence Index 39, $0.84/task, 141.0 tok/s, 0.80s time to first token as AA reports it); AA lists no other effort variant. Licence classified restricted for the $20M Model-as-a-Service revenue trigger and attribution clause; commercial use is otherwise free. maxOutput and knowledge cutoff are unpublished, and the card names no model it replaces, so predecessorId is null."
+  },
+  {
     "id": "gpt-6-sol",
     "name": "GPT-6 Sol",
     "company": "openai",
@@ -8277,51 +8474,62 @@
     "tier": "flagship",
     "modality": "text",
     "type": "llm",
-    "contextWindow": 256000,
+    "contextWindow": 1000000,
     "maxOutput": 128000,
     "pricing": {
-      "inputPerMTok": null,
-      "outputPerMTok": null
+      "inputPerMTok": 0.25,
+      "outputPerMTok": 1
     },
     "costPerTask": {
-      "usd": null,
+      "usd": 0.57,
       "effort": null
     },
-    "openWeights": false,
-    "availability": "restricted",
+    "openWeights": true,
+    "availability": "general",
     "knowledgeCutoff": "2026-06",
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
+      "outputTokensPerSec": 324.6,
+      "timeToFirstTokenSec": 0.83,
       "effort": null
     },
-    "license": null,
-    "apiIds": [],
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "openrouter",
+        "id": "reflection/beam-1.0-501b-a23b"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
-      "gpqaDiamond": 90.5,
-      "sweBench": 80.9,
-      "sweBenchPro": 65.5,
+      "gpqaDiamond": 90.6,
+      "sweBench": 81.6,
+      "sweBenchPro": 66.1,
       "terminalBench": 80.1,
-      "aime": 97.8,
-      "hle": 36.2,
+      "aime": 97.7,
+      "hle": 36,
       "lmarenaElo": null,
       "gdpvalAA": null,
       "arcAgi2": null
     },
     "strengths": [
-      "Pitched on inference efficiency rather than raw capability — Reflection says it reaches the reasoning level of larger open models on a fraction of the compute",
-      "Reasoning effort is adjustable, so short economical answers and longer deliberate ones can share one deployment",
-      "Tool calling and structured outputs over an OpenAI-compatible endpoint, so existing OpenAI clients work by changing the base URL"
+      "Apache 2.0 weights from a US lab, with no revenue triggers or attribution clauses attached",
+      "Token-frugal — it reaches answers in far fewer output tokens than open models scoring near it, which is where Reflection's cost claim comes from",
+      "Tool calling, parallel calls and strict JSON schemas work from day one on the OpenAI-compatible endpoint"
     ],
     "weaknesses": [
-      "Always reasons — there is no non-thinking mode for quick lookups, only a lower effort setting",
-      "Waitlisted API beta with no published price, and Reflection warns that behaviour and limits may change while it lasts",
-      "Too new to characterise — no hands-on or independent evaluations yet, and the promised open weights had not shipped at launch"
+      "Text-only: screenshots, PDFs and audio have to be converted to text before it can use them",
+      "Developed predominantly for English, per its own model card",
+      "Reflection's first model, with no hands-on reception yet — its own benchmark tables were revised after launch and a demo caption had to be corrected"
     ],
-    "notes": "Reflection AI's first public model, a sparse MoE with 501B total and 23B active parameters (Beam-501B-A23B in Reflection's developer docs), announced 2026-10-05 as a waitlisted, OpenAI-compatible API beta; availability is restricted for that reason. Reflection says the weights, technical report and model card follow later in October under Apache 2.0, so openWeights is false and license null until they ship. Every score is from Reflection's own launch table and was unverified independently at launch: SWE-bench Verified 80.9, SWE-bench Pro (v1) 65.5, GPQA Diamond 90.5, HLE 36.2 without tools, Terminal-Bench 2.1 80.1 and AIME 2026 97.8, at an unstated reasoning effort. The developer docs give a 256K context window and 128K max output (exact token counts unpublished; input and output share the window) and a 30 June 2026 knowledge cutoff, while the launch post says midtraining extends effective context to 1M. No price, API id, LMArena or Artificial Analysis entry recorded as of 2026-10-09; every figure rests on search excerpts of reflection.ai/blog/introducing-beam and developers.reflection.ai, not pages read directly."
+    "notes": "Reflection AI's first open-weight model: a 501B total / 23B active sparse MoE pretrained on 23.8T tokens. Announced 2026-10-05 with a waitlisted API; Apache 2.0 weights (BF16, FP8, NVFP4) followed on Hugging Face on 2026-10-16. Benchmarks are the model card's BF16 figures (GPQA Diamond 90.6, SWE-bench Verified 81.6, SWE-Bench Pro v1 66.1, Terminal-Bench 2.1 80.1, HLE no tools 36.0 / 51.1 with tools, AIME 2026 97.7); the launch blog's revised table gives slightly lower figures (80.9 / 65.5 / 36.2 / 90.5). Reflection's own API price is not public; $0.25/$1.00 is OpenRouter's listing, while Artificial Analysis' provider median is $0.70/$2.10. AA Intelligence Index 30 (v4.3.2) at $0.57 per task, 324.6 tok/s and 0.83s to first token, measured on the reasoning variant without a named effort level (Beam reasons at low–max effort, default medium); 79M output tokens against a 130M median. Context is 1M per the model card, though Reflection's beta API capped serving at 256K at launch; max output is unpublished on the card, so maxOutput keeps the 128K from Reflection's beta API docs. First model from the lab, so predecessorId is null."
   },
   {
     "id": "d1-3b",
