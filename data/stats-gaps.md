@@ -1120,3 +1120,13 @@ Stats-filler sweep on 2026-10-13 (re-check of "re-check" rows from 2026-09-22 �
 | gpt-6-luna | gpqaDiamond | 2026-10-13 | same as gpt-6-sol |
 | claude-sonnet-5-5 | gdpvalAA | 2026-10-15 | re-checked: AA publishes only GDPval-AA v2.1 for Sonnet 5.5 — no v2 figure exists, and v2.1 is a different scale. Left null |
 | ling-3-1-flash | pricing | 2026-10-15 | re-checked after the trial: Ant's own pricing page (developer.ant-ling.com/en/docs/models/price/, excerpt only) shows a limited-time 75% discount with no end date — ¥0.50/¥1.50 per MTok (list ¥2/¥6); a USD row of $0.075/$0.225 (list $0.30/$0.90) may be Ant's OpenRouter channel rather than its direct API. Left null — candidate list price $0.30/$0.90 pending a direct read |
+| deepseek-v4-1-flash-1017 | gpqaDiamond | 2026-10-18 | not reported for this checkpoint specifically in DeepSeek's release coverage (MindStudio, OfficeChai, Kingy AI, MarkTechPost, aiweekly.co); only agentic/coding benchmarks and HLE were given |
+| deepseek-v4-1-flash-1017 | sweBench | 2026-10-18 | not reported; coverage gives DeepSWE v1.1, Terminal-Bench 4.0, ProgramBench, ApexBench instead of SWE-bench Verified |
+| deepseek-v4-1-flash-1017 | sweBenchPro | 2026-10-18 | not reported anywhere found |
+| deepseek-v4-1-flash-1017 | terminalBench | 2026-10-18 | only a Terminal-Bench 4.0 score (42.3) was reported; this field is Terminal-Bench 2.1 only per style guide, so left null and the 4.0 figure recorded in notes instead |
+| deepseek-v4-1-flash-1017 | lmarenaElo | 2026-10-18 | not reported; not yet on LMArena's leaderboard as of 2026-10-18 |
+| deepseek-v4-1-flash-1017 | gdpvalAA | 2026-10-18 | Artificial Analysis had not measured this specific checkpoint as of 2026-10-18 |
+| deepseek-v4-1-flash-1017 | arcAgi2 | 2026-10-18 | not reported anywhere found |
+| deepseek-v4-1-flash-1017 | costPerTask | 2026-10-18 | Artificial Analysis had not published an Intelligence Index cost figure for this checkpoint as of 2026-10-18 |
+| deepseek-v4-1-flash-1017 | speed | 2026-10-18 | Artificial Analysis had not measured this specific checkpoint as of 2026-10-18 |
+| deepseek-v4-1-flash-1017 | knowledgeCutoff | 2026-10-18 | not published by DeepSeek for this checkpoint; DataLearner also lists "no data" |

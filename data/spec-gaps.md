@@ -312,3 +312,4 @@ gpt-5-5 · apiIds (google-vertex) · 2026-10-15 · No Vertex listing for OpenAI 
 gemini-4-argon · retirementDate · 2026-10-15 · Google Cloud's model page gives "October 13, 2027 or later" — a floor, not a scheduled retirement. Left null.
 gemini-4-argon · predecessorId · 2026-10-15 · Re-checked after GA: Google Cloud's guide tells developers moving from Gemini 3.1 Pro to change the model id to gemini-4-argon. That's a migration pointer, not an explicit replacement claim. Left null for Maia's call.
 step-5-preview · license · 2026-10-15 · On the promised weight-drop date, no official stepfun-ai/Step-5-Preview* repo surfaced (only mirrors); a CNMO/ifeng report says the weights opened today but names no location or licence. openWeights stays false. Re-check.
+deepseek-v4-1-flash-1017 · retirementDate · 2026-10-18 · Brand-new checkpoint (released 2026-10-17); no lifecycle notice. Left null.
