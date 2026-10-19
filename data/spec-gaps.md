@@ -232,3 +232,14 @@ helixworld · predecessorId · 2026-10-14 · Noiz AI's first world model; the Gi
 helixworld · apiIds · 2026-10-14 · No public API (QbitAI 2026-08-17: API in internal testing); Hugging Face card lists no inference provider; no OpenRouter listing found. Weights only at NoizAI/HelixWorld-preview. Left [].
 helixworld · speed · 2026-10-14 · Not applicable — a world model, not covered by Artificial Analysis' LLM speed measurements. Left null.
 helixworld · retirementDate · 2026-10-14 · Preview checkpoint; no lifecycle notice. Left null.
+claude-haiku-5-5 · retirementDate · 2026-10-19 · platform.claude.com/docs/en/models/haiku-5-5/overview lists "Active (latest)", retirement "Not sooner than October 7, 2027" — a floor, not an announced retirement. Left null.
+nemotron-3-5-super-vl · predecessorId · 2026-10-19 · NVIDIA's blog, technical blog and HF card say it is distilled from Nemotron 3 Ultra and compare it against Nemotron 3 Super, but name no model it replaces; distillation is lineage. Left null.
+nemotron-3-5-super-vl · retirementDate · 2026-10-19 · Brand-new release; no lifecycle notice. Left null.
+nemotron-3-5-bolt-74b-a9b · predecessorId · 2026-10-19 · HF card says it is compressed from Super VL (Star Elastic); no replacement claim. Left null.
+nemotron-3-5-bolt-74b-a9b · apiIds · 2026-10-19 · Artificial Analysis states no publicly available API; no OpenRouter or NIM listing found. Weights only at nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-BF16 and -24GB. Left [].
+nemotron-3-5-bolt-74b-a9b · speed · 2026-10-19 · AA lists N/A (no hosted endpoint). Left null.
+muse-spark-open · predecessorId · 2026-10-19 · HF model card says only that the open-weights version received "additional safety post-training" over Muse Spark; no replacement claim, and Meta's closed Muse Spark line continues. Left null.
+muse-spark-open · retirementDate · 2026-10-19 · Open-weights release; no lifecycle notice. Left null.
+beam-1-0 · predecessorId · 2026-10-19 · Reflection AI's first model; nothing to replace. Left null.
+beam-1-0 · apiIds · 2026-10-19 · Only OpenRouter's reflection/beam-1.0-501b-a23b verified; Reflection's own API id (Beam-501B-A23B per eesel.ai) not confirmed from Reflection docs, which sit behind a waitlist login. Fireworks and Baseten listings not checked.
+beam-1-0 · retirementDate · 2026-10-19 · Brand-new release; no lifecycle notice. Left null.

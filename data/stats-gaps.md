@@ -1034,3 +1034,18 @@ New-model-release research on 2026-10-04, scoped to `claude-sonnet-5-5`. Sources
 | muse-wonder-full | costPerTask | 2026-10-13 | AA's launch article: "not priced per token, so no Cost per Task figure is available" |
 | muse-wonder-full | maxOutput | 2026-10-13 | not published anywhere by Meta |
 | muse-wonder-full | knowledgeCutoff | 2026-10-13 | absent from the blog, model card and docs; AA lists knowledgeCutoffDate null |
+| claude-haiku-5-5 | gpqaDiamond / sweBench / sweBenchPro / terminalBench | 2026-10-19 | not in Anthropic's launch table (anthropic.com/news/claude-haiku-5-5), which reports Terminal-Bench 4.0 (39.2%) not 2.1; vals.ai lists only Terminal-Bench 4.0 (36.4%), Terminal-Bench-Science and SWE-bench Multimodal; system card PDF too large to fetch |
+| claude-haiku-5-5 | gdpvalAA | 2026-10-19 | Anthropic reports GDPval-AA v2.1 (1620), not the tracked v2; kept in notes |
+| claude-haiku-5-5 | lmarenaElo / arcAgi2 | 2026-10-19 | no arena.ai listing or ARC Prize entry found 12 days after launch; re-check |
+| nemotron-3-5-super-vl | lmarenaElo / arcAgi2 / aime | 2026-10-19 | not in NVIDIA's model-card table (which reports an 'LMArena v3 proxy' 52.67, not an Arena Elo); no arena.ai listing or ARC Prize entry |
+| nemotron-3-5-super-vl | mmluPro | 2026-10-19 | retired key; card reports MMLU-ProX 76.91, not MMLU-Pro |
+| nemotron-3-5-super-vl | maxOutput / knowledgeCutoff | 2026-10-19 | HF card states no output cap (examples use 16,384) and gives a 2013–Dec 2025 data-collection period rather than a cutoff |
+| nemotron-3-5-bolt-74b-a9b | sweBench / sweBenchPro / lmarenaElo / arcAgi2 | 2026-10-19 | not in NVIDIA's BF16 model-card table; no arena.ai listing or ARC Prize entry |
+| nemotron-3-5-bolt-74b-a9b | gdpvalAA | 2026-10-19 | card's 'GDPVal-AA-V2' column (31.13) is not on the Elo scale tracked here; AA has no score |
+| nemotron-3-5-bolt-74b-a9b | pricing / costPerTask / speed | 2026-10-19 | Artificial Analysis: "No publicly available API"; cost and speed N/A; no OpenRouter listing |
+| nemotron-3-5-bolt-74b-a9b | maxOutput / knowledgeCutoff | 2026-10-19 | card states no output cap; training data through 2026-02-24 and post-training data to May 2026, no single cutoff |
+| muse-spark-open | hle | 2026-10-19 | Meta's card reports 'HLE-Diamond' no tools (26.1), a subset, and HLE with tools (61.0); no full-set no-tools figure |
+| muse-spark-open | sweBench / sweBenchPro / arcAgi2 / lmarenaElo | 2026-10-19 | not in Meta's HF model card (reports DeepSWE 1.1 and SWE-Atlas-QnA instead); no arena.ai listing or ARC Prize entry |
+| muse-spark-open | maxOutput / knowledgeCutoff | 2026-10-19 | not stated on the HF model card; OpenRouter lists no max output |
+| beam-1-0 | gdpvalAA / lmarenaElo / arcAgi2 | 2026-10-19 | not in Reflection's model card or launch blog; AA lists AA-Briefcase but no GDPval-AA v2 figure; no arena.ai listing or ARC Prize entry |
+| beam-1-0 | maxOutput | 2026-10-19 | HF card silent; eesel.ai reports 128K on Reflection's beta API docs (secondary, not confirmed) |

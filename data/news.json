@@ -1,5 +1,36 @@
 [
   {
+    "id": "2026-10-15-nemotron-3-5-super-vl",
+    "date": "2026-10-15",
+    "title": "NVIDIA releases Nemotron 3.5 Super VL and Nemotron 3.5 Bolt, open multimodal models for agents and the edge",
+    "summary": "NVIDIA released Nemotron 3.5 Super VL, a 120B-total / 12B-active open multimodal MoE with a 1M-token context distilled from Nemotron 3 Ultra, reporting GPQA Diamond 89.5%, SWE-bench Verified 71.1% and Terminal-Bench 2.1 60.7% on its model card. Alongside it shipped Bolt 74B-A9B, compressed from Super VL and natively quantised to run in 24 GB on RTX and DGX Spark hardware; a 4 GB Bolt E4B follows on October 23. Both are under the OpenMDW-1.1 licence.",
+    "category": "release",
+    "companies": [
+      "nvidia"
+    ],
+    "modelIds": [
+      "nemotron-3-5-super-vl",
+      "nemotron-3-5-bolt-74b-a9b"
+    ],
+    "sourceName": "NVIDIA Technical Blog",
+    "sourceUrl": "https://developer.nvidia.com/blog/nvidia-nemotron-3-5-super-vl-powers-specialized-agents-with-multimodal-reasoning/"
+  },
+  {
+    "id": "2026-10-15-muse-spark-open",
+    "date": "2026-10-15",
+    "title": "Meta releases Muse Spark Open, an 816B open-weight Muse model",
+    "summary": "Meta published Muse Spark Open on Hugging Face: an 816B-total / 42B-active multimodal MoE with a 1M-token context that runs on two linked M5 Ultra Mac Studios. Meta reports GPQA Diamond 89.0% and Terminal-Bench 2.1 76.4%; Artificial Analysis scores it 39, the highest of any US open-weight model. The Muse Model License permits commercial use but requires a separate agreement for hosted services above $20M in annual revenue.",
+    "category": "release",
+    "companies": [
+      "meta"
+    ],
+    "modelIds": [
+      "muse-spark-open"
+    ],
+    "sourceName": "Hugging Face (Meta model card)",
+    "sourceUrl": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B"
+  },
+  {
     "id": "2026-10-14-grok-voice-3-0",
     "date": "2026-10-14",
     "title": "xAI releases Grok Voice 3.0, a speech-to-speech model for voice agents",
@@ -31,6 +62,21 @@
     "sourceUrl": "https://research.meta.ai/blog/muse-wonder"
   },
   {
+    "id": "2026-10-07-claude-haiku-5-5",
+    "date": "2026-10-07",
+    "title": "Anthropic releases Claude Haiku 5.5",
+    "summary": "Anthropic shipped Claude Haiku 5.5 at $0.10/$0.50 per million tokens for prompts up to 100K tokens, about 75% cheaper on average than Haiku 4.5, with a 1M-token context, 128K output and the first effort setting on a Haiku model. It reports HLE 45.9% without tools (Haiku 4.5: 10.2%); Anthropic also cut Sonnet 5.5's cache-read price to $0.10.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-haiku-5-5"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/claude-haiku-5-5"
+  },
+  {
     "id": "2026-10-06-mistral-large-4",
     "date": "2026-10-06",
     "title": "Mistral releases Mistral Large 4 in public preview, with open weights promised by the end of October",
@@ -44,6 +90,21 @@
     ],
     "sourceName": "Mistral AI",
     "sourceUrl": "https://mistral.ai/news/mistral-large-4/"
+  },
+  {
+    "id": "2026-10-05-beam-1-0",
+    "date": "2026-10-05",
+    "title": "Reflection AI releases Beam, its first open-weight model",
+    "summary": "Reflection AI announced Beam, a 501B-total / 23B-active text-only MoE, and released the Apache 2.0 weights on Hugging Face on October 16. Its model card reports SWE-bench Verified 81.6%, Terminal-Bench 2.1 80.1% and GPQA Diamond 90.6%; Artificial Analysis scores it 30, second among US open-weight models behind Muse Spark Open.",
+    "category": "release",
+    "companies": [
+      "reflection"
+    ],
+    "modelIds": [
+      "beam-1-0"
+    ],
+    "sourceName": "Reflection AI",
+    "sourceUrl": "https://reflection.ai/blog/introducing-beam"
   },
   {
     "id": "2026-10-03-kolibri-1",

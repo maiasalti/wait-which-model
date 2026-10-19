@@ -295,5 +295,14 @@
     "website": "https://noiz.ai",
     "color": "#C8701E",
     "order": 33
+  },
+  {
+    "id": "reflection",
+    "name": "Reflection AI",
+    "country": "United States",
+    "founded": 2024,
+    "website": "https://reflection.ai",
+    "color": "#3F8FD0",
+    "order": 34
   }
 ]
