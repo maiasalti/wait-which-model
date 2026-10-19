@@ -207,7 +207,7 @@ soofi-s-30b-a3b · apiIds · 2026-09-24 · Gated preview; no API. Left [].
 mach-1-additive-35b · speed · 2026-09-24 · No AA page; Syzygy's "up to 120 tokens per second" is a local-laptop figure, not an AA measurement. Left null.
 mach-1-additive-35b · apiIds · 2026-09-24 · No hosted API — runs in-browser or locally via mach-serve; weights at SyzygyResearch/Mach-1-Additive-35B only. Left [].
 gemini-4-argon · predecessorId · 2026-10-01 · Google's launch blog and evaluation PDF name no model Argon replaces (it is the first Gemini 4 model; Gemini 3.x Flash models stay on sale). Left null.
-gemini-4-argon · apiIds · 2026-10-01 · Restricted Fairwind rollout; the Gemini API docs have no Argon model page (ai.google.dev/gemini-api/docs/models/gemini-4-argon returns 404) and no official model string was published. Left [] — re-check at broad release.
+gemini-4-argon · apiIds · 2026-10-01 · Restricted Fairwind rollout; the Gemini API docs have no Argon model page (ai.google.dev/gemini-api/docs/models/gemini-4-argon returns 404) and no official model string was published. Left [] — re-check at broad release. — **superseded 2026-10-15: Gemini 4 Argon went GA on 2026-10-13; gemini-4-argon filled for google and google-vertex.**
 gemini-4-argon · speed · 2026-10-01 · AA's model page lists speed as unknown (high-effort variant only). Left null — re-check.
 gpt-6-1-sol · predecessorId · 2026-10-01 · OpenAI's model docs and ChatGPT models page describe it as near-Astra at lower cost and recommend it, but neither says it replaces GPT-6 Sol; "replacement for GPT-6 Sol" appears only in third-party guides, and GPT-6 Sol remains available. Left null.
 ling-3-1-flash · predecessorId · 2026-10-01 · Ant's launch post (x.com/AntLingAGI/status/2105335205741596911) and TechNode's coverage (EN and CN) name no model it replaces; "succeeds Ling-3.0-flash" appears only in third-party blogs (orcarouter.ai), and Ling-3.0-flash is not in models.json anyway. Left null.
@@ -291,3 +291,24 @@ gemini-4-argon · speed · 2026-10-13 · Re-checked: AA still shows Speed N/A on
 gemini-4-argon · apiIds · 2026-10-13 · Re-checked: still a restricted Fairwind rollout; ai.google.dev models page does not list Argon and no official model string has been published. Left [].
 kolibri-1 · speed · 2026-10-13 · Re-checked: still no Artificial Analysis listing; Aleph Alpha's ~47-50k bytes/s per-GPU figure is a vendor throughput number in bytes, not an AA tokens/s measurement. Left null.
 claude-haiku-4-5 · retirementDate · 2026-10-13 · Read platform.claude.com/docs/en/about-claude/model-deprecations directly: claude-haiku-4-5-20251001 still Active, "Not sooner than October 15, 2026", with no deprecation notice. Left null; re-check next sweep.
+
+<!-- spec-filler daily sweep 2026-10-15: WebFetch allowed only for platform.claude.com and docs.aws.amazon.com; other cells rest on domain-restricted WebSearch excerpts of the official page. -->
+claude-haiku-4-5 · retirementDate · 2026-10-15 · Re-checked on the floor date: platform.claude.com/docs/en/about-claude/model-deprecations (read directly) still lists claude-haiku-4-5-20251001 as Active, tentative retirement "Not sooner than October 15, 2026", with no deprecation notice. A floor, not a scheduled retirement. Left null.
+claude-haiku-4-5 · speed · 2026-10-15 · AA has non-reasoning and reasoning variants; comparison-page snapshots disagree (81–96 t/s) and the record's costPerTask (effort null) doesn't say which variant it belongs to. Left null — read the model page directly once the variant is pinned.
+claude-opus-4-5 · speed · 2026-10-15 · AA has Reasoning (flagged deprecated, no longer updated) and Non-reasoning pages; snapshots disagree and costPerTask is null, so there's no variant anchor. Left null.
+grok-4-1 · speed · 2026-10-15 · No AA page for the base Grok 4.1 (site-scoped searches return only the separate Grok 4.1 Fast release and Grok 4). Left null.
+kimi-k2-thinking · speed · 2026-10-15 · AA model page gives a plain TTFT, not first-answer-token; first-answer figures appear only on comparison/provider pages and disagree. Left null.
+mistral-large-3 · speed · 2026-10-15 · AA model-page excerpt gives output speed but no TTFT; comparison/provider snapshots disagree. No single measurement with both halves. Left null.
+muse-spark · speed · 2026-10-15 · Confirmed unavailable: AA has no page for the April 2026 Muse Spark (only 1.1/1.2/1.3); it was private-preview only. Left null.
+muse-spark · apiIds · 2026-10-15 · Confirmed unavailable: Meta's launch post offered it only "in private preview via API to select partners"; the public Meta Model API launched with Muse Spark 1.1. Left [].
+gpt-5-1 · speed · 2026-10-15 · AA GPT-5.1 (high) page excerpts give 119.5 t/s / 44.22 s, but providers and comparison snapshots disagree (99.9–118.6 t/s, 34.9–48.0 s). Left null — candidate {119.5, 44.22, "high"} pending a direct read.
+gemini-3-pro · speed · 2026-10-15 · Confirmed unavailable: AA lists Gemini 3 Pro Preview as deprecated with no speed data (shut down 2026-03-09). Left null.
+gemini-3-1-pro · apiIds (google-vertex) · 2026-10-15 · The Vertex model page excerpt lists gemini-3.1-pro-preview, but held to the gemini-3-8-flash bar (excerpt only, not read). Only the Gemini API id was filled.
+grok-4-3 · apiIds (google-vertex) · 2026-10-15 · Google's partner-model page excerpt gives grok-4.3 (Preview); held pending a direct read. xai and aws-bedrock ids were filled.
+ling-2-6-1t · apiIds (aws-bedrock / google-vertex) · 2026-10-15 · Not on Bedrock's models list (read directly); no Vertex listing found.
+qwen3-5 · apiIds (aws-bedrock / google-vertex) · 2026-10-15 · Bedrock's Qwen list (read directly) has no Qwen3.5; no Vertex listing found.
+qwen3-8-2-4t-a95b · apiIds (aws-bedrock / google-vertex) · 2026-10-15 · Not on Bedrock's Qwen list (read directly); no Vertex listing found.
+gpt-5-5 · apiIds (google-vertex) · 2026-10-15 · No Vertex listing for OpenAI models.
+gemini-4-argon · retirementDate · 2026-10-15 · Google Cloud's model page gives "October 13, 2027 or later" — a floor, not a scheduled retirement. Left null.
+gemini-4-argon · predecessorId · 2026-10-15 · Re-checked after GA: Google Cloud's guide tells developers moving from Gemini 3.1 Pro to change the model id to gemini-4-argon. That's a migration pointer, not an explicit replacement claim. Left null for Maia's call.
+step-5-preview · license · 2026-10-15 · On the promised weight-drop date, no official stepfun-ai/Step-5-Preview* repo surfaced (only mirrors); a CNMO/ifeng report says the weights opened today but names no location or licence. openWeights stays false. Re-check.

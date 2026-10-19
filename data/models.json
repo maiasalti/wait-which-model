@@ -2297,7 +2297,12 @@
       "effort": null
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "google",
+        "id": "gemini-3.1-pro-preview"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -2322,7 +2327,7 @@
       "Elaborate prompt scaffolding backfires — it over-analyses the prompt itself",
       "Creative prose is competent but flat"
     ],
-    "notes": "Preview Feb 11, 2026; ARC-AGI-2 reported as 77.1 (76.5 in some sources). Knowledge cutoff Jan 2025 per DeepMind model page. AIME 98.1 is vals.ai-measured (third-party); MMLU-Pro not publicly reported. Terminal-Bench 2.1 70.7 is the official tbench.ai leaderboard figure with the Terminus 2 harness (Gemini CLI harness 67.1; vals.ai's own harness 70.79). Speed per Artificial Analysis' Gemini 3.1 Pro Preview page (Google's API), which carries no effort label. SWE-Bench Pro (public) 54.2% is Google's own model-card figure (deepmind.google/models/model-cards/gemini-3-1-pro); Scale's public leaderboard lists \"gemini-3.1-pro (thinking)\" lower at 46.10%, a harness difference rather than a correction."
+    "notes": "Preview Feb 11, 2026; ARC-AGI-2 reported as 77.1 (76.5 in some sources). Knowledge cutoff Jan 2025 per DeepMind model page. AIME 98.1 is vals.ai-measured (third-party); MMLU-Pro not publicly reported. Terminal-Bench 2.1 70.7 is the official tbench.ai leaderboard figure with the Terminus 2 harness (Gemini CLI harness 67.1; vals.ai's own harness 70.79). Speed per Artificial Analysis' Gemini 3.1 Pro Preview page (Google's API), which carries no effort label. SWE-Bench Pro (public) 54.2% is Google's own model-card figure (deepmind.google/models/model-cards/gemini-3-1-pro); Scale's public leaderboard lists \"gemini-3.1-pro (thinking)\" lower at 46.10%, a harness difference rather than a correction. API id per Google's Gemini API model page (ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview); the -customtools endpoint is a separate tool-mix variant and isn't recorded, and the Vertex id is held pending a direct read."
   },
   {
     "id": "qwen3-5",
@@ -2358,7 +2363,12 @@
       "url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B/blob/main/LICENSE",
       "commercialUse": true
     },
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "Alibaba Cloud Model Studio",
+        "id": "qwen3.5-397b-a17b"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -2382,7 +2392,7 @@
       "Text-only, so it can't take screenshots, diagrams or PDFs",
       "No first-party API — behavior and speed depend entirely on which host you pick"
     ],
-    "notes": "Figures are for the Qwen3.5-397B-A17B open release. MMLU-Pro 87.8 / GPQA 88.4 / SWE-bench 76.4 third-party (LLM-Stats/DeepInfra). Pricing is the DeepInfra hosted FP8 rate — no first-party API for the open weights. Speed per Artificial Analysis' Qwen3.5 397B A17B (Reasoning) page; AA labels the variant by reasoning mode, not an effort tier."
+    "notes": "Figures are for the Qwen3.5-397B-A17B open release. MMLU-Pro 87.8 / GPQA 88.4 / SWE-bench 76.4 third-party (LLM-Stats/DeepInfra). Pricing is the DeepInfra hosted FP8 rate; Alibaba's Model Studio also serves the open weights, but no first-party price was verified. Speed per Artificial Analysis' Qwen3.5 397B A17B (Reasoning) page; AA labels the variant by reasoning mode, not an effort tier. API id per Alibaba Cloud Model Studio's text-generation model list (qwen3.5-397b-a17b, now marked legacy there)."
   },
   {
     "id": "mistral-small-4",
@@ -2531,7 +2541,20 @@
       "effort": "medium"
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "gpt-5.5"
+      },
+      {
+        "provider": "openai",
+        "id": "gpt-5.5-2026-04-23"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "openai.gpt-5.5"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -2556,7 +2579,7 @@
       "Struggles to recover once a long thread already contains a wrong assumption",
       "Training artefacts surfaced in production, including a tic for inserting creature words that OpenAI later patched out"
     ],
-    "notes": "GPT-5.5 Pro variant ($30/$180) sits #2 on LMArena. Context reported as 1M API / 1.1M by some trackers. Knowledge cutoff Dec 2025. SWE-bench Verified 88.7 lab-reported; LMArena Elo 1481 is the GPT-5.5 (high) listing. Terminal-Bench 2.1 83.4 is the vendor-submitted Codex CLI + GPT-5.5 entry on tbench.ai (also on CodingFleet's 2.1 board); the same model scores 76.4 through the Terminus 2 harness, and OpenAI's launch post reported Terminal-Bench 2.0 82.7. Speed is Artificial Analysis' GPT-5.5 (medium) model-page figure on OpenAI's API (2026-09-03); AA's providers page for the same variant showed a different window (OpenAI 75.0 tok/s / 6.41 s). SWE-Bench Pro 58.6% is OpenAI's launch figure (per llm-stats' OpenAI-sourced entry and Anthropic's Claude Fable 5 comparison table, which lists GPT-5.5 at 58.6); one DataCamp piece quotes 59.4%, untraced. OpenAI later audited SWE-Bench Pro (~30% broken tasks) and stopped recommending it."
+    "notes": "GPT-5.5 Pro variant ($30/$180) sits #2 on LMArena. Context reported as 1M API / 1.1M by some trackers. Knowledge cutoff Dec 2025. SWE-bench Verified 88.7 lab-reported; LMArena Elo 1481 is the GPT-5.5 (high) listing. Terminal-Bench 2.1 83.4 is the vendor-submitted Codex CLI + GPT-5.5 entry on tbench.ai (also on CodingFleet's 2.1 board); the same model scores 76.4 through the Terminus 2 harness, and OpenAI's launch post reported Terminal-Bench 2.0 82.7. Speed is Artificial Analysis' GPT-5.5 (medium) model-page figure on OpenAI's API (2026-09-03); AA's providers page for the same variant showed a different window (OpenAI 75.0 tok/s / 6.41 s). SWE-Bench Pro 58.6% is OpenAI's launch figure (per llm-stats' OpenAI-sourced entry and Anthropic's Claude Fable 5 comparison table, which lists GPT-5.5 at 58.6); one DataCamp piece quotes 59.4%, untraced. OpenAI later audited SWE-Bench Pro (~30% broken tasks) and stopped recommending it. API ids per OpenAI's GPT-5.5 model page (alias plus the 2026-04-23 snapshot) and the Amazon Bedrock model card (openai.gpt-5.5; bedrock-runtime calls go through the us./global. inference profiles). OpenAI retired GPT-5.5 from ChatGPT and Codex on 2026-10-14 but says that doesn't apply to the API, so retirementDate stays null."
   },
   {
     "id": "deepseek-v4",
@@ -2647,7 +2670,16 @@
       "effort": "high"
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "xai",
+        "id": "grok-4.3"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "xai.grok-4.3"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -2671,7 +2703,7 @@
       "Long wait before the first token, because it always thinks first",
       "Still states wrong facts confidently enough to need grounding for factual work"
     ],
-    "notes": "Requests above 200K tokens are billed at 2x. GPQA Diamond 90.1 per Artificial Analysis (third-party). xAI documents no fixed max-output cap; xAI published agentic (tau2-Bench, IFBench) rather than academic benchmarks at launch."
+    "notes": "Requests above 200K tokens are billed at 2x. GPQA Diamond 90.1 per Artificial Analysis (third-party). xAI documents no fixed max-output cap; xAI published agentic (tau2-Bench, IFBench) rather than academic benchmarks at launch. API ids per xAI's model page (grok-4.3) and the Amazon Bedrock model card (xai.grok-4.3, bedrock-mantle only)."
   },
   {
     "id": "gemini-3-5-flash",
@@ -4595,7 +4627,12 @@
       "url": "https://huggingface.co/inclusionAI/Ling-2.6-1T/blob/main/LICENSE",
       "commercialUse": true
     },
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "ant-ling",
+        "id": "Ling-2.6-1T"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -4620,7 +4657,7 @@
       "Humanity's Last Exam score is low relative to its coding and agentic numbers, consistent with a model tuned for execution over broad expert knowledge",
       "Too new for independent coverage on LMArena or Artificial Analysis' full benchmark suite at launch"
     ],
-    "notes": "Ant Group's Bailing team announced Ling-2.6-1T on 2026-04-24 (weights open-sourced 2026-04-30 on Hugging Face/ModelScope); Maia's supplied link (ling-1t.ai/ling-2-6-1t) is not an official Ant Group/InclusionAI domain and was not used as a source. GPQA Diamond, HLE and AIME26 figures are third-party aggregator reports (aiflashreport.com, howaiworks.ai), not confirmed on an official Ant Group table or on Artificial Analysis directly — treat as secondary-sourced. Pricing is Artificial Analysis' median across API providers ($0.30/$2.50 per MTok); OpenRouter separately lists a lower $0.075/$0.625 rate, which may be promotional. Context window is 262,144 tokens via the public API; some coverage cites a 1M-token native/trained context. Total/active parameters are reported as roughly 1.03T/63B (MoE)."
+    "notes": "Ant Group's Bailing team announced Ling-2.6-1T on 2026-04-24 (weights open-sourced 2026-04-30 on Hugging Face/ModelScope); Maia's supplied link (ling-1t.ai/ling-2-6-1t) is not an official Ant Group/InclusionAI domain and was not used as a source. GPQA Diamond, HLE and AIME26 figures are third-party aggregator reports (aiflashreport.com, howaiworks.ai), not confirmed on an official Ant Group table or on Artificial Analysis directly — treat as secondary-sourced. Pricing is Artificial Analysis' median across API providers ($0.30/$2.50 per MTok); OpenRouter separately lists a lower $0.075/$0.625 rate, which may be promotional. Context window is 262,144 tokens via the public API; some coverage cites a 1M-token native/trained context. Total/active parameters are reported as roughly 1.03T/63B (MoE). API id Ling-2.6-1T per Ant's own developer platform (developer.ant-ling.com OpenAI- and Anthropic-compatible API references)."
   },
   {
     "id": "gpt-oss-120b",
@@ -5798,7 +5835,12 @@
       "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B/blob/main/LICENSE",
       "commercialUse": true
     },
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "Alibaba Cloud Model Studio",
+        "id": "qwen3.8-2.4t-a95b"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -5823,7 +5865,7 @@
       "Thinking mode cannot be switched off, so a one-line factual question still pays the full reasoning cost",
       "Licence pulls large deployments back into a negotiated agreement once revenue or user thresholds are crossed"
     ],
-    "notes": "Qwen's own model card describes this as the post-trained base that Qwen3.8-Max is built on, with Max adding vision and a non-thinking mode — so it is a distinct, reduced artefact rather than the tracked qwen3-8-max entry going open. 2.4T total / 95B active MoE. Context is 262,144 native, extensible to ~1,010,000; max output is the 131,072 final-response cap (reasoning content may run to 262,144). Benchmarks are Alibaba's own self-reported card figures (GPQA Diamond 92.6, Terminal-Bench 2.1 86.6, HLE 43.6) — note Artificial Analysis independently measured the closely-related Max at 92.7 / 81.3 / 41.4, so the Terminal-Bench and HLE claims here should be read as unverified. SWE-bench Pro 67.7 is Alibaba's own figure. MMLU-Pro, AIME, LMArena Elo and ARC-AGI-2 are unpublished, and AA had not indexed this variant separately at the time of this check, so costPerTask and speed are null. Pricing is OpenRouter's hosted rate; Alibaba publishes no first-party price for the open-weight release, which is also served by Together AI and Fireworks AI. The licence permits commercial use but requires prominent model-name attribution above 100M MAU or $20M monthly revenue, and a separate agreement for Model-as-a-Service or AI-assistant products above $50M annual revenue."
+    "notes": "Qwen's own model card describes this as the post-trained base that Qwen3.8-Max is built on, with Max adding vision and a non-thinking mode — so it is a distinct, reduced artefact rather than the tracked qwen3-8-max entry going open. 2.4T total / 95B active MoE. Context is 262,144 native, extensible to ~1,010,000; max output is the 131,072 final-response cap (reasoning content may run to 262,144). Benchmarks are Alibaba's own self-reported card figures (GPQA Diamond 92.6, Terminal-Bench 2.1 86.6, HLE 43.6) — note Artificial Analysis independently measured the closely-related Max at 92.7 / 81.3 / 41.4, so the Terminal-Bench and HLE claims here should be read as unverified. SWE-bench Pro 67.7 is Alibaba's own figure. MMLU-Pro, AIME, LMArena Elo and ARC-AGI-2 are unpublished, and AA had not indexed this variant separately at the time of this check, so costPerTask and speed are null. Pricing is OpenRouter's hosted rate; Alibaba's Model Studio lists the open-weight release, but no first-party price was verified; it's also served by Together AI and Fireworks AI. The licence permits commercial use but requires prominent model-name attribution above 100M MAU or $20M monthly revenue, and a separate agreement for Model-as-a-Service or AI-assistant products above $50M annual revenue. API id per Alibaba Cloud Model Studio's model page for qwen3.8-2.4t-a95b."
   },
   {
     "id": "gemini-3-7-flash",
@@ -7980,8 +8022,8 @@
     "tier": "flagship",
     "modality": "multimodal",
     "type": "llm",
-    "contextWindow": null,
-    "maxOutput": 1000000,
+    "contextWindow": 1048576,
+    "maxOutput": 1048576,
     "pricing": {
       "inputPerMTok": 2,
       "outputPerMTok": 10
@@ -7991,15 +8033,24 @@
       "effort": "high"
     },
     "openWeights": false,
-    "availability": "restricted",
-    "knowledgeCutoff": null,
+    "availability": "general",
+    "knowledgeCutoff": "2026-03",
     "speed": {
       "outputTokensPerSec": null,
       "timeToFirstTokenSec": null,
       "effort": null
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "google",
+        "id": "gemini-4-argon"
+      },
+      {
+        "provider": "google-vertex",
+        "id": "gemini-4-argon"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -8021,10 +8072,10 @@
     ],
     "weaknesses": [
       "Thinks at great length — Artificial Analysis' runs average more than twice the output tokens per task of comparable frontier models, so the low per-token rate understates what a job costs",
-      "Can't simply be picked up yet: access starts with vetted cyber defenders in the Fairwind Program, with paid-API and AI Ultra access promised but undated",
-      "Behavior is a moving target this early — no model card, no public API model id and no hands-on reviews exist, so its voice, verbosity and agentic stamina are uncharacterised"
+      "The 1M-token output ceiling is the exception, not the default — a normal synchronous call stops at 65,536 tokens, and the full budget needs long decode on the Interactions API as a background job, sharing one window with the input",
+      "The $2/$10 price is introductory and doubles to $4/$20 after November 30, 2026, which on top of its long thinking makes it costlier than its launch rate suggests"
     ],
-    "notes": "Google's first Gemini 4 model, announced 2026-09-30 and rolling out first to trusted cyber defenders through the Fairwind Program while Google takes part in the U.S. government's voluntary pre-release testing; broader access is promised to paid API customers and Google AI Ultra subscribers 'as soon as possible', hence availability \"restricted\" and no apiIds (the Gemini API catalog lists no Argon model id yet). Pricing is the introductory $2/$10 per MTok (cached input 95% off), rising to $4/$20 afterwards; no end date for the introductory period was given. maxOutput is Google's stated '1M tokens' (up from 64K on earlier Gemini models) — the exact API token limit is unpublished; Google has not disclosed the input context window (Artificial Analysis lists 1M) or a knowledge cutoff, so both stay null. Google's evaluation PDF (deepmind.google/models/evals-methodology/gemini-4-argon) uses only untracked suites: Vals Index 68.9%, AutomationBench 51.3%, Vals Finance Agent v2 65.4%, Harvey Legal Agent 19.6%, DeepSWE v1.1 77.9%, FrontierSWE v2 55.0%, Vibe Code Bench 91.9%, Terminal-Bench 4.0 57.4% (not the tracked 2.1), PostTrainBench 45.3%, Terminal-Bench Science 0.1 57.6%, LABBench2 88.8%, RiemannBench 76.0%, GraphWalks 99.7% (to 128K) / 84.2% (256K–1M), Agent's Last Exam 39.5%, OSWorld 2.0 offline partial 69.2%, Chartography 71.6%, LVBench 91.7% and CWE-bench v1 68.0%; no GPQA Diamond, SWE-bench, HLE or ARC-AGI-2 figures. hle is null: Google's evaluation PDF has no HLE row, and Artificial Analysis' 57% (high) comes from its own 2,158-question text-only subset whose tool setting its methodology doesn't state, so it can't be pinned to a primary source. LMArena Elo 1525 (±9, preliminary, 4,942 votes) is the 'gemini-4-argon-high' text-arena listing, rank 1 on the 2026-09-30 update. Artificial Analysis scores it 53 on its Intelligence Index at high effort (the only variant AA lists) at $1.99 per task at introductory pricing ($3.98 at standard pricing), averaging about 62K output tokens per task against GPT-6 Astra's 27K, with an AA-Omniscience hallucination rate of 15%; AA publishes no speed figures and rates it 1611 on GDPval-AA v2.1, a different scale from the v2 this key records, so gdpvalAA stays null. predecessorId is null: Google names no model it replaces."
+    "notes": "Google's first Gemini 4 model, announced 2026-09-30 and rolled out first to trusted cyber defenders through the Fairwind Program; it became generally available on 2026-10-13 through the Gemini API, AI Studio and Google Cloud (model id gemini-4-argon on both, per ai.google.dev/gemini-api/docs/models/gemini-4-argon and docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon), and to Google AI Pro and Ultra subscribers in the Gemini app. A gemini-4-argon-cyber-permissive variant stays behind the Fairwind allowlist and isn't tracked separately. Pricing is the introductory $2/$10 per MTok (cached input 95% off) through 2026-11-30, then $4/$20. contextWindow is the Gemini API's unified 1,048,576-token window, shared by input, thinking and output; maxOutput is the same 1,048,576 ceiling, reachable only with long decode on the Interactions API — the default synchronous limit is 65,536. knowledgeCutoff is from the DeepMind model card ('March 2026, but knowledge in some domains may be less up to date'). Google Cloud gives a retirement of 'October 13, 2027 or later', a floor rather than a scheduled date, so retirementDate stays null. These GA figures rest on search excerpts of the official pages (WebFetch was unavailable in the 2026-10-15 sweep). Google's evaluation PDF (deepmind.google/models/evals-methodology/gemini-4-argon) uses only untracked suites: Vals Index 68.9%, AutomationBench 51.3%, Vals Finance Agent v2 65.4%, Harvey Legal Agent 19.6%, DeepSWE v1.1 77.9%, FrontierSWE v2 55.0%, Vibe Code Bench 91.9%, Terminal-Bench 4.0 57.4% (not the tracked 2.1), PostTrainBench 45.3%, Terminal-Bench Science 0.1 57.6%, LABBench2 88.8%, RiemannBench 76.0%, GraphWalks 99.7% (to 128K) / 84.2% (256K–1M), Agent's Last Exam 39.5%, OSWorld 2.0 offline partial 69.2%, Chartography 71.6%, LVBench 91.7% and CWE-bench v1 68.0%; no GPQA Diamond, SWE-bench, HLE or ARC-AGI-2 figures. hle is null: Google's evaluation PDF has no HLE row, and Artificial Analysis' 57% (high) comes from its own 2,158-question text-only subset whose tool setting its methodology doesn't state, so it can't be pinned to a primary source. LMArena Elo 1525 (±9, preliminary, 4,942 votes) is the 'gemini-4-argon-high' text-arena listing, rank 1 on the 2026-09-30 update. Artificial Analysis scores it 53 on its Intelligence Index at high effort (the only variant AA lists) at $1.99 per task at introductory pricing ($3.98 at standard pricing), averaging about 62K output tokens per task against GPT-6 Astra's 27K, with an AA-Omniscience hallucination rate of 15%; AA publishes no speed figures and rates it 1611 on GDPval-AA v2.1, a different scale from the v2 this key records, so gdpvalAA stays null. predecessorId is null: Google names no model it replaces."
   },
   {
     "id": "gpt-6-1-sol",
