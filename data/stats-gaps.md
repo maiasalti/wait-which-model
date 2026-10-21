@@ -1145,3 +1145,12 @@ Stats-filler sweep on 2026-10-13 (re-check of "re-check" rows from 2026-09-22 â†
 | muse-spark-open | maxOutput / knowledgeCutoff | 2026-10-19 | not stated on the HF model card; OpenRouter lists no max output |
 | beam | gdpvalAA / lmarenaElo / arcAgi2 | 2026-10-19 | not in Reflection's model card or launch blog; AA lists AA-Briefcase but no GDPval-AA v2 figure; no arena.ai listing or ARC Prize entry |
 | beam | maxOutput | 2026-10-19 | HF card silent; eesel.ai reports 128K on Reflection's beta API docs (secondary, not confirmed) |
+| mercury-3 | gpqaDiamond | 2026-10-21 | Inception's table (medium effort) gives 89.23, but only as copied by MarkTechPost, BenchLM, cellcog.ai and FourWeekMBA. Two domain-restricted searches of inceptionlabs.ai returned the post without the table, and WebFetch was denied. A direct read of the blog would settle it. |
+| mercury-3 | sweBench / sweBenchPro / terminalBench / hle / arcAgi2 / mmluPro / aime | 2026-10-21 | Not reported. Inception's 12-test table covers GPQA Diamond, IFBench, SWE-Bench Atlas, MultiChallenge, MRCR v2 and DeepSWE v1, none of them tracked apart from GPQA. |
+| mercury-3 | lmarenaElo | 2026-10-21 | No arena.ai text listing found. Only a Design Arena game-dev Elo (1204) appears, which isn't comparable. |
+| mercury-3 | gdpvalAA / costPerTask | 2026-10-21 | No Artificial Analysis page yet (AA lists Mercury 2 / 2.5 only, per excerpts the day after launch) |
+| mercury-3 | knowledgeCutoff | 2026-10-21 | Not in blog, docs or OpenRouter excerpts |
+| clairic | all benchmarks | 2026-10-21 | Not applicable, not merely unpublished: typed-value extraction model that generates no text. Cloudflare reports only its own pipeline and forecasting examples. |
+| clairic | maxOutput | 2026-10-21 | No output-token limit exists; output is typed values, not a token stream |
+| clairic | knowledgeCutoff | 2026-10-21 | Not disclosed in the blog, changelog or Workers AI model page |
+| clairic | costPerTask | 2026-10-21 | No Artificial Analysis coverage at launch |

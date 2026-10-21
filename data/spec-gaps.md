@@ -324,3 +324,11 @@ muse-spark-open · retirementDate · 2026-10-19 · Open-weights release; no life
 beam · predecessorId · 2026-10-19 · Reflection AI's first model; nothing to replace. Left null.
 beam · apiIds · 2026-10-19 · Only OpenRouter's reflection/beam-1.0-501b-a23b verified; Reflection's own API id (Beam-501B-A23B per eesel.ai) not confirmed from Reflection docs, which sit behind a waitlist login. Fireworks and Baseten listings not checked.
 beam · retirementDate · 2026-10-19 · Brand-new release; no lifecycle notice. Left null.
+mercury-3 · speed · 2026-10-21 · No Artificial Analysis measurement yet; Inception's 1,068 tok/s is its own figure and OpenRouter's 221/351 tok/s are not AA. Left null.
+mercury-3 · license · 2026-10-21 · Closed weights (API only); one OpenRouter excerpt mentioned planned open weights but nothing has shipped. Left null.
+mercury-3 · retirementDate · 2026-10-21 · Brand-new release; no lifecycle notice. Left null.
+mercury-3 · predecessorId · 2026-10-21 · Mercury 2 / 2.5 are untracked; Inception closes them to new users (existing customers until 2026-11-15) but makes no explicit replacement claim in the excerpts seen. Left null.
+clairic · speed · 2026-10-21 · No Artificial Analysis measurement; Cloudflare gives only "typically under a second" per request, not tokens/sec. Left null.
+clairic · license · 2026-10-21 · Preview with open weights "soon" per the Workers AI changelog; no HF repo or licence yet. Re-check for the weights release.
+clairic · retirementDate · 2026-10-21 · No lifecycle notice on the model page or changelog. Left null.
+clairic · predecessorId · 2026-10-21 · First extraction model; nothing replaced. Left null.
