@@ -1145,3 +1145,23 @@ Stats-filler sweep on 2026-10-13 (re-check of "re-check" rows from 2026-09-22 �
 | muse-spark-open | maxOutput / knowledgeCutoff | 2026-10-19 | not stated on the HF model card; OpenRouter lists no max output |
 | beam | gdpvalAA / lmarenaElo / arcAgi2 | 2026-10-19 | not in Reflection's model card or launch blog; AA lists AA-Briefcase but no GDPval-AA v2 figure; no arena.ai listing or ARC Prize entry |
 | beam | maxOutput | 2026-10-19 | HF card silent; eesel.ai reports 128K on Reflection's beta API docs (secondary, not confirmed) |
+| flint | pricing / costPerTask | 2026-10-22 | no hosted API or OpenRouter listing found; no Artificial Analysis page found |
+| flint | maxOutput | 2026-10-22 | HF card documents only the 262,144 shared context; 32768 is an example max_tokens, not a cap |
+| flint | gpqaDiamond / hle / mmluPro / aime | 2026-10-22 | not in the model-card or MarkTechPost excerpts read (WebFetch denied, so the full table was not read); re-check when the card can be fetched |
+| flint | sweBenchPro | 2026-10-22 | card reports 'SWE-bench Pro v2' 89.7%, not the public split tracked here; logged in notes |
+| flint | lmarenaElo / gdpvalAA / arcAgi2 | 2026-10-22 | no arena.ai listing, GDPval-AA figure or ARC Prize entry found |
+| raon-1-mini-preview | pricing / costPerTask | 2026-10-22 | no hosted API (limited-time playground only); no Artificial Analysis page found |
+| raon-1-mini-preview | maxOutput / knowledgeCutoff | 2026-10-22 | not stated on the HF card or raon-mini.krafton.ai; 32768 is an example max_tokens |
+| raon-1-mini-preview | terminalBench | 2026-10-22 | card reports 'Terminal-Bench Lite' 47.0 only, not 2.1; logged in notes |
+| raon-1-mini-preview | hle / sweBenchPro / aime | 2026-10-22 | not in the HF card benchmark table |
+| raon-1-mini-preview | lmarenaElo / gdpvalAA / arcAgi2 | 2026-10-22 | no arena.ai listing, GDPval-AA figure or ARC Prize entry found |
+| claude-opus-4-5 | costPerTask | 2026-10-22 | AA Claude Opus 4.5 (Reasoning) page lists cost per task as "Unknown" (page deprecated); only the launch-article total (~$1.5k on the old index) exists — not a per-task figure, not derivable |
+| gemini-3-pro | costPerTask | 2026-10-22 | AA Gemini 3 Pro Preview (high) page: cost per task "Not publicly available"; model shut down 2026-03-09 |
+| grok-4-1 | costPerTask | 2026-10-22 | no AA page for the base Grok 4.1 (only the separate Grok 4.1 Fast; see spec-gaps grok-4-1 · speed · 2026-10-15) |
+| kimi-k2-thinking | costPerTask | 2026-10-22 | AA K2 Thinking model and comparison pages show no cost per task; launch article gives only index totals ($356 base endpoint; $380–$1,172 by endpoint) on an older index — not derivable |
+| deepseek-v3-2 | costPerTask | 2026-10-22 | AA has V3.2 Exp Reasoning and Non-reasoning pages; no cost-per-task figure surfaced for either |
+| qwen3-max | costPerTask | 2026-10-22 | AA Qwen3 Max page shows no cost-per-task figure (page deprecated) |
+| kimi-k2 | costPerTask | 2026-10-22 | AA Kimi K2 page: cost to run the Intelligence Index "not publicly available" (page deprecated) |
+| grok-4 | costPerTask | 2026-10-22 | AA Grok 4 page lists cost per Intelligence Index task as N/A (page ~469 days old) |
+| claude-opus-4-1 | costPerTask | 2026-10-22 | AA Claude 4.1 Opus page: per-task cost not shown; deprecated, only the 10k workload is still benchmarked |
+| mistral-medium-3 | costPerTask | 2026-10-22 | no AA cost-per-task figure surfaced (provider and comparison pages only) |
