@@ -1,5 +1,35 @@
 [
   {
+    "id": "2026-10-21-flint",
+    "date": "2026-10-21",
+    "title": "Recursive releases Flint, an open-weight local coding model",
+    "summary": "Recursive, the self-improving-AI lab led by Richard Socher, released its first model: Flint, a 40B-total, 2.5B-active MoE under Apache 2.0 that it says was built largely by its automated 'Eureka Machine'. Recursive reports 74.2% on SWE-bench Verified and 54.9% on Terminal-Bench 2.1, and says it runs at more than 125 tokens per second on an M4 Pro MacBook Pro.",
+    "category": "release",
+    "companies": [
+      "recursive"
+    ],
+    "modelIds": [
+      "flint"
+    ],
+    "sourceName": "Recursive",
+    "sourceUrl": "https://recursive.com/updates/introducing-recursive-flint"
+  },
+  {
+    "id": "2026-10-21-raon-1-mini-preview",
+    "date": "2026-10-21",
+    "title": "Krafton releases a preview of Raon-1 mini, its first in-house LLM",
+    "summary": "Krafton released Raon-1 mini preview, a 30B-total, 4B-active MoE with hybrid linear attention, as Apache 2.0 open weights on Hugging Face, ahead of a full release with a technical report. Krafton reports 84.3 on GPQA Diamond and 70.8% on SWE-bench Verified, and puts Korean conversation and instruction following at the centre of the model.",
+    "category": "release",
+    "companies": [
+      "krafton"
+    ],
+    "modelIds": [
+      "raon-1-mini-preview"
+    ],
+    "sourceName": "Krafton",
+    "sourceUrl": "https://huggingface.co/KRAFTON/Raon-1-mini-preview"
+  },
+  {
     "id": "2026-10-14-grok-voice-3-0",
     "date": "2026-10-14",
     "title": "xAI releases Grok Voice 3.0, a speech-to-speech model for voice agents",

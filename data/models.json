@@ -1336,7 +1336,12 @@
       "url": "https://huggingface.co/meta-llama/Llama-3.1-405B/blob/main/LICENSE",
       "commercialUse": true
     },
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "aws-bedrock",
+        "id": "meta.llama3-1-405b-instruct-v1:0"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -1361,7 +1366,7 @@
       "Text-only, so no screenshots, charts or documents",
       "One-pass answers with no way to make it think longer"
     ],
-    "notes": "Pricing shown is typical hosted-inference cost. SWE-bench Pro 11.18% is Scale's public-set leaderboard figure for llama3-1-405b-instruct — third-party, not Meta-reported."
+    "notes": "Pricing shown is typical hosted-inference cost. SWE-bench Pro 11.18% is Scale's public-set leaderboard figure for llama3-1-405b-instruct — third-party, not Meta-reported. Amazon Bedrock ended Llama 3.1 405B Instruct on 2026-07-07; Meta itself has announced no retirement for the weights."
   },
   {
     "id": "llama-4-maverick",
@@ -1397,7 +1402,12 @@
       "url": "https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E/blob/main/LICENSE",
       "commercialUse": true
     },
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "aws-bedrock",
+        "id": "meta.llama4-maverick-17b-instruct-v1:0"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -1452,8 +1462,13 @@
       "effort": null
     },
     "license": null,
-    "apiIds": [],
-    "retirementDate": null,
+    "apiIds": [
+      {
+        "provider": "xai",
+        "id": "grok-3"
+      }
+    ],
+    "retirementDate": "2026-05-15",
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": 79.9,
@@ -1477,7 +1492,7 @@
       "Uneven at code compared with its maths",
       "Reachable only through the X subscription tiers at launch"
     ],
-    "notes": "Reasoning-mode (beta) scores shown."
+    "notes": "Reasoning-mode (beta) scores shown. The API id grok-3 is the non-reasoning model, while the scores above are reasoning-mode (beta); xAI retired grok-3 from its API on 2026-05-15, redirecting requests to grok-4.3 at no reasoning effort."
   },
   {
     "id": "grok-4",
@@ -1513,7 +1528,7 @@
         "id": "grok-4-0709"
       }
     ],
-    "retirementDate": null,
+    "retirementDate": "2026-05-15",
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": 86.6,
@@ -1537,7 +1552,7 @@
       "Verbose reasoning that inflates cost on work that didn't need it",
       "Its behavior, not its capability, was the story at launch"
     ],
-    "notes": ""
+    "notes": "xAI retired grok-4-0709 from its API on 2026-05-15 (requests redirect to grok-4.3 at low effort)."
   },
   {
     "id": "grok-4-1",
@@ -1627,8 +1642,13 @@
       "url": "https://huggingface.co/mistralai/Mistral-Large-Instruct-2407",
       "commercialUse": null
     },
-    "apiIds": [],
-    "retirementDate": null,
+    "apiIds": [
+      {
+        "provider": "mistral",
+        "id": "mistral-large-2407"
+      }
+    ],
+    "retirementDate": "2025-03-30",
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": 69.4,
@@ -1651,7 +1671,7 @@
       "Weights are downloadable but not usable commercially without a licence",
       "Falls behind quickly once a task needs several reasoning steps"
     ],
-    "notes": ""
+    "notes": "Mistral deprecated mistral-large-2407 on 2024-11-30 and retired it on 2025-03-30 (replacement Mistral Large 3). Amazon Bedrock's 'Mistral Large' is the earlier 24.02 model, not this one."
   },
   {
     "id": "mistral-medium-3",
@@ -1933,8 +1953,13 @@
       "url": "https://huggingface.co/Qwen/Qwen3-235B-A22B/blob/main/LICENSE",
       "commercialUse": true
     },
-    "apiIds": [],
-    "retirementDate": null,
+    "apiIds": [
+      {
+        "provider": "Alibaba Cloud Model Studio",
+        "id": "qwen3-235b-a22b"
+      }
+    ],
+    "retirementDate": "2026-10-10",
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": 82.8,
@@ -1957,7 +1982,7 @@
       "Loses coherence on long agentic runs where closed models hold together",
       "Thinking mode is verbose and hard to bound"
     ],
-    "notes": "Scores for the July 2025 updated (2507) checkpoints where applicable. SWE-bench Pro 21.41% is Scale's public-set leaderboard figure for \"qwen3-235b-a22b\" — third-party, not Alibaba-reported; Scale does not state which Qwen3-235B-A22B checkpoint (original or 2507) it ran."
+    "notes": "Scores for the July 2025 updated (2507) checkpoints where applicable. SWE-bench Pro 21.41% is Scale's public-set leaderboard figure for \"qwen3-235b-a22b\" — third-party, not Alibaba-reported; Scale does not state which Qwen3-235B-A22B checkpoint (original or 2507) it ran. Model Studio retired qwen3-235b-a22b on 2026-10-10 (replacement qwen3.7-plus)."
   },
   {
     "id": "qwen3-max",
@@ -1982,13 +2007,18 @@
     "availability": "general",
     "knowledgeCutoff": "2025-06",
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
+      "outputTokensPerSec": 53.4,
+      "timeToFirstTokenSec": 2.19,
       "effort": null
     },
     "license": null,
-    "apiIds": [],
-    "retirementDate": null,
+    "apiIds": [
+      {
+        "provider": "Alibaba Cloud Model Studio",
+        "id": "qwen3-max-2025-09-23"
+      }
+    ],
+    "retirementDate": "2026-10-10",
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": 85.4,
@@ -2011,7 +2041,7 @@
       "Closed weights, unlike the rest of the Qwen line",
       "Long agentic sessions get verbose, and the verbosity is where the cost goes"
     ],
-    "notes": ""
+    "notes": "Speed is Artificial Analysis' model-page measurement on Alibaba's API (53.4 t/s, 2.19s). The API id is the 2025-09-23 snapshot; the bare qwen3-max alias was repointed to qwen3-max-2026-01-23 in February 2026. Model Studio retired the Qwen3-Max snapshots on 2026-10-10 (replacement qwen3.7-max)."
   },
   {
     "id": "kimi-k2",
@@ -2036,8 +2066,8 @@
     "availability": "general",
     "knowledgeCutoff": "2025-04",
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
+      "outputTokensPerSec": 56.7,
+      "timeToFirstTokenSec": 1.6,
       "effort": null
     },
     "license": {
@@ -2047,7 +2077,12 @@
       "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct/blob/main/LICENSE",
       "commercialUse": true
     },
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "moonshot",
+        "id": "kimi-k2-0711-preview"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -2071,7 +2106,7 @@
       "No deliberation at all, so hard maths and multi-step logic fail outright",
       "Large enough that self-hosting is a serious infrastructure commitment"
     ],
-    "notes": "Licence is Moonshot's Modified MIT: MIT plus a 'Kimi K2' UI-attribution clause above 100M MAU or US$20M monthly revenue, classified permissive. SWE-bench Pro 27.67% is Scale's public-set leaderboard figure for kimi-k2-instruct — third-party, not Moonshot-reported."
+    "notes": "Licence is Moonshot's Modified MIT: MIT plus a 'Kimi K2' UI-attribution clause above 100M MAU or US$20M monthly revenue, classified permissive. SWE-bench Pro 27.67% is Scale's public-set leaderboard figure for kimi-k2-instruct — third-party, not Moonshot-reported. Speed is Artificial Analysis' model-page measurement (median across providers: 56.7 t/s, 1.60s); AA marks the page deprecated in favour of Kimi K2 0905. API id per Moonshot's changelog."
   },
   {
     "id": "kimi-k2-thinking",
@@ -2111,6 +2146,10 @@
       {
         "provider": "moonshot",
         "id": "kimi-k2-thinking"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "moonshot.kimi-k2-thinking"
       }
     ],
     "retirementDate": null,
@@ -9216,5 +9255,127 @@
       "Behavior is a moving target this early: every quality claim, including the Starlink resolution rate, is xAI's own, and no independent hands-on testing exists yet"
     ],
     "notes": "Not an LLM: a speech-to-speech model served through xAI's Voice Agent API, so none of this site's text benchmarks apply and every cell is null by design; it is priced per minute of conversation ($0.08/min, $4.80/hr, unchanged from Grok Voice 2.0), not per token, so pricing is null, and context/output limits are unpublished. xAI's launch figures are cited from Artificial Analysis: Speech-to-Speech Index 86.9 (first; Grok Voice 2.0 81.3), Big Bench Audio 98.5%, Speech Agent Arena Elo 1070, Full Duplex Bench 97.0%, τ-Voice 71.6% (below GPT-Live-1 Astra Medium at 74.5%), plus 74% accuracy on ServiceNow's EVA-Bench; Kingy.ai reads Artificial Analysis' time to first audio as 0.81s, up from 0.70s on 2.0. xAI's docs mark grok-voice-2.0 deprecated and direct users to grok-voice-3.0, but no retirement date is given and Grok Voice 2.0 has no entry here, so predecessorId is null."
+  },
+  {
+    "id": "flint",
+    "name": "Flint",
+    "company": "recursive",
+    "releaseDate": "2026-10-21",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "text",
+    "type": "llm",
+    "contextWindow": 262144,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "self-host",
+    "knowledgeCutoff": "2026-06",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/RecursiveSI/flint",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": 74.2,
+      "sweBenchPro": null,
+      "terminalBench": 54.9,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Built to run locally: the official 4-bit MLX build fits on a well-specced MacBook, so a coding agent can work fully offline",
+      "Tuned for agentic coding loops (investigating a codebase, fixing bugs, implementing features, writing tests) rather than general chat",
+      "Recursive ships its own MLX INT4 and NVFP4/INT4 GGUF builds, so local setups don't wait on community quantisations"
+    ],
+    "weaknesses": [
+      "No hosted API: you run it yourself or not at all",
+      "Rough day-one tooling: the Transformers modelling code wasn't in the base release and runtimes such as mlx-serve were still adding support",
+      "First model from a brand-new lab with a single hands-on review so far, so its behaviour beyond Recursive's own claims is largely uncharacterised"
+    ],
+    "notes": "Recursive's first model, released 2026-10-21 on Hugging Face (RecursiveSI/flint): 39.8B total / ~2.5B active MoE (49 layers, 256 routed experts, 6 per token plus a shared expert), text in / text out, which Recursive says was built largely by its automated 'Eureka Machine' research system. Benchmarks are Recursive's own model-card figures (SWE-bench Verified 74.2%, Terminal-Bench 2.1 54.9%); the card's 'SWE-bench Pro v2' 89.7% is not the SWE-bench Pro public split this site tracks, so sweBenchPro is null, and IFEval 95.1% is also reported. Context is 262,144 tokens shared between prompt and output; no separate max output is documented (card examples use max_tokens 32768). Recursive claims 125+ tok/s on an M4 Pro MacBook Pro and 150+ on a 64GB RTX Spark, which is unverified and not an Artificial Analysis measurement. availability is self-host: no hosted API or OpenRouter listing was found. No GPQA Diamond or HLE figure was found in the excerpts read."
+  },
+  {
+    "id": "raon-1-mini-preview",
+    "name": "Raon-1 mini preview",
+    "company": "krafton",
+    "releaseDate": "2026-10-21",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "text",
+    "type": "llm",
+    "contextWindow": 262144,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "self-host",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/KRAFTON/Raon-1-mini-preview",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": 76.5,
+      "gpqaDiamond": 84.3,
+      "sweBench": 70.8,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Built around natural, colloquial Korean: Krafton tuned dialogue, instruction following and response speed for Korean users first",
+      "Hybrid linear-attention design keeps a KV cache on only seven layers, so long sessions stay light on memory",
+      "Ships with a DFlash2 draft model for speculative decoding and an NVFP4 build that fits a single 32 GB RTX 5090"
+    ],
+    "weaknesses": [
+      "A preview, not the release: Krafton promises final weights and a technical report later, so behaviour may shift",
+      "Broad-knowledge recall, some coding and long-context work are its soft spots, by Krafton's own table; it is a Korean-dialogue specialist more than a generalist",
+      "Hugging Face weights are gated behind an access request, and there is no hosted API beyond a time-limited free playground"
+    ],
+    "notes": "Krafton's first general-purpose LLM, released 2026-10-21 as a preview: 30B total / ~4.3B active MoE trained from scratch, mixing linear-style and full (MLA) attention, trained on Korean, English, Japanese, Chinese, Spanish, French and Thai. Benchmarks are Krafton's own model-card figures (GPQA Diamond 84.3, SWE-bench Verified 70.8 with the mini-SWE-agent harness, MMLU-Pro 76.5), judged with gpt-5.6-luna; the card's 'Terminal-Bench Lite' 47.0 is not Terminal-Bench 2.1, so terminalBench is null. Also reported: BrowseComp Plus 55.7, AA-LCR 67.3, and 92.9 on an internal Korean chatbot benchmark. Context is 262,144 tokens; card examples set max_tokens 32768, which is not stated as a cap. availability is self-host: weights are gated on request and no hosted API or OpenRouter listing was found, only a limited-time free playground."
   }
 ]

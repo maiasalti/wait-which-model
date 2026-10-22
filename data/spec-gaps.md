@@ -324,3 +324,21 @@ muse-spark-open · retirementDate · 2026-10-19 · Open-weights release; no life
 beam · predecessorId · 2026-10-19 · Reflection AI's first model; nothing to replace. Left null.
 beam · apiIds · 2026-10-19 · Only OpenRouter's reflection/beam-1.0-501b-a23b verified; Reflection's own API id (Beam-501B-A23B per eesel.ai) not confirmed from Reflection docs, which sit behind a waitlist login. Fireworks and Baseten listings not checked.
 beam · retirementDate · 2026-10-19 · Brand-new release; no lifecycle notice. Left null.
+flint · speed · 2026-10-22 · artificialanalysis.ai domain search found no Flint page; Recursive's own tok/s claims are not AA measurements. Left null.
+flint · apiIds · 2026-10-22 · No hosted provider found (searched OpenRouter and API pricing); weights only at RecursiveSI/flint. Left [].
+flint · predecessorId · 2026-10-22 · Recursive's first model; nothing to replace. Left null.
+flint · retirementDate · 2026-10-22 · Brand-new open-weights release; no lifecycle notice. Left null.
+raon-1-mini-preview · speed · 2026-10-22 · artificialanalysis.ai domain search found no Raon page. Left null.
+raon-1-mini-preview · apiIds · 2026-10-22 · No hosted provider found; gated weights at KRAFTON/Raon-1-mini-preview and a limited-time playground only. Left [].
+raon-1-mini-preview · predecessorId · 2026-10-22 · Krafton's first general LLM (earlier Raon models are speech/TTS); no replacement claim. Left null.
+raon-1-mini-preview · retirementDate · 2026-10-22 · Preview open-weights release; no lifecycle notice. Left null.
+grok-4 · speed · 2026-10-22 · AA model page excerpt gives 73.6 t/s (confirmed ×2) and TTFT 13.22s (median across providers), but 13.22s did not reappear in two confirming searches (comparison page shows 10.21s; Azure provider 9.82s first-answer). No confirmed pair; left null. If you accept a half-fill, outputTokensPerSec 73.6 is the confirmed half.
+claude-sonnet-4-5 · speed · 2026-10-22 · AA has Non-reasoning (40.9 t/s, 0.93s) and Reasoning (48.8 t/s, 13.18s) pages; the record's costPerTask (0.4129, effort null) matches neither variant (AA Reasoning shows $0.56/task, Non-reasoning has no cost), so there's no variant anchor. Left null pending your variant decision.
+deepseek-r1 · speed · 2026-10-22 · AA DeepSeek R1 (Jan '25) model page (deepseek-r1-0120) shows output speed N/A; only comparison pages (142.4 / 174.6 t/s) and provider pages (Amazon 138.3 t/s) carry figures. The /models/deepseek-r1 page is the 0528 checkpoint. Left null.
+deepseek-v3-2 · speed · 2026-10-22 · AA V3.2 Exp has Reasoning and Non-reasoning pages with no costPerTask anchor; only provider-page figures surfaced (DeepSeek 39.6 t/s, Novita 0.81s TTFT), not a model-page pair. Left null.
+claude-opus-4-1 · speed · 2026-10-22 · AA Claude 4.1 Opus page shows speed "Unknown"; the provider page has no data for the reasoning variant. Left null.
+mistral-medium-3 · speed · 2026-10-22 · Only AA provider-page (Mistral 56.8 t/s, 1.20s) and comparison-page (103.4 t/s, 2.17s) figures surfaced; no model-page measurement. Left null.
+llama-3-1-405b · retirementDate · 2026-10-22 · Bedrock card shows EOL 2026-07-07, but that is Bedrock-specific (same rule as deepseek-r1 · 2026-10-06); Meta has announced no retirement. Left null.
+llama-4-maverick · retirementDate · 2026-10-22 · Bedrock card shows Legacy, EOL 2027-03-30 (Bedrock-specific); the Llama API sunset on 2026-07-06 is a service shutdown, not a model retirement. Left null.
+kimi-k2-thinking · retirementDate · 2026-10-22 · platform.kimi.ai says the "kimi-k2 series" was discontinued 2026-05-25, but doesn't say whether that includes kimi-k2-thinking (Bedrock still serves it, Legacy, EOL 2027-03-30). Left null; re-check if Moonshot lists kimi-k2-thinking explicitly.
+kimi-k2 · retirementDate · 2026-10-22 · Re-checked: platform.kimi.ai model list says "the kimi-k2 series models were officially discontinued on May 25, 2026 and are no longer maintained or supported" (recommends kimi-k3). Held for review: "discontinued / no longer supported" is not an explicit shutdown, unlike Moonshot's later kimi-k2.5 notice that says calls return 404. If accepted, set 2026-05-25. Left null.
