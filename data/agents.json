@@ -1,5 +1,37 @@
 [
   {
+    "id": "claude-duet",
+    "name": "Claude Duet",
+    "company": "anthropic",
+    "releaseDate": "2026-10-21",
+    "notable": true,
+    "description": "Anthropic's proactive agent in a standalone app: sends a morning brief from connected apps, checks them every few hours, completes delegated tasks on its own cloud computer and asks for approval before acting on the user's behalf.",
+    "strengths": [
+      "Runs on Claude Opus 5.5 on its own virtual machine with a browser; keeps working with the app closed",
+      "Carries over memory, skills and connectors from the user's Claude account; 6,000+ connectors and plugins",
+      "Approval required before sending messages, payments, signing or deleting; purchases use one-time Link virtual cards"
+    ],
+    "weaknesses": [
+      "Waitlist research preview for US Pro and Max only; not on Team or Enterprise yet",
+      "Background checks count against plan usage limits",
+      "Can't show its browser; no Microsoft 365, phone calls or texts yet"
+    ],
+    "links": {
+      "official": "https://claude.com/resources/articles/claude-duet",
+      "docs": "https://support.claude.com/en/articles/17631495-get-started-with-claude-duet"
+    },
+    "domain": "general",
+    "underlyingModels": [
+      "claude-opus-5-5"
+    ],
+    "access": "waitlist",
+    "pricing": {
+      "plan": "Pro $20/mo",
+      "notes": "Included with Pro and Max at no extra cost during the research preview; uses the plan's five-hour and weekly limits at the same rate as chat. Admitted users get one full limit reset, usable until 2026-11-30."
+    },
+    "notes": "Notable: frontier-lab developer (Anthropic). Announced 2026-10-21 as a research preview; invitations go out in waves from the waitlist. Apps for iOS and Android; the announcement also lists claude.ai. Users can't choose the model — Duet picks the effort level itself. Blocked even with approval: trading securities, moving money between accounts, accessing someone else's account. Anthropic says it may misjudge urgency and is weaker at personal errands than work tasks. Product page: https://claude.com/product/claude-duet."
+  },
+  {
     "id": "openai-dots",
     "name": "dots",
     "company": "openai",
