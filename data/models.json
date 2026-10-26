@@ -9216,5 +9216,120 @@
       "Behavior is a moving target this early: every quality claim, including the Starlink resolution rate, is xAI's own, and no independent hands-on testing exists yet"
     ],
     "notes": "Not an LLM: a speech-to-speech model served through xAI's Voice Agent API, so none of this site's text benchmarks apply and every cell is null by design; it is priced per minute of conversation ($0.08/min, $4.80/hr, unchanged from Grok Voice 2.0), not per token, so pricing is null, and context/output limits are unpublished. xAI's launch figures are cited from Artificial Analysis: Speech-to-Speech Index 86.9 (first; Grok Voice 2.0 81.3), Big Bench Audio 98.5%, Speech Agent Arena Elo 1070, Full Duplex Bench 97.0%, τ-Voice 71.6% (below GPT-Live-1 Astra Medium at 74.5%), plus 74% accuracy on ServiceNow's EVA-Bench; Kingy.ai reads Artificial Analysis' time to first audio as 0.81s, up from 0.70s on 2.0. xAI's docs mark grok-voice-2.0 deprecated and direct users to grok-voice-3.0, but no retirement date is given and Grok Voice 2.0 has no entry here, so predecessorId is null."
+  },
+  {
+    "id": "kimi-k3-1-pro",
+    "name": "Kimi K3.1 Pro",
+    "company": "moonshot",
+    "releaseDate": "2026-10-23",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1048576,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 2,
+      "outputPerMTok": 10
+    },
+    "costPerTask": {
+      "usd": 2.11,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": 52.2,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "moonshot",
+        "id": "kimi-k3.1-pro"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": 52,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Noticeably quicker to answer than K3, whose slowness was its main complaint — early users report close to twice the speed on their own workloads",
+      "Built for long agentic runs — Moonshot's demos have it iterating on game builds, CAD scripts and a physics simulator over many steps rather than stopping after a first pass",
+      "Fewer invented facts than K3 on Moonshot's own hallucination stress test, a gain Artificial Analysis' independent hallucination eval also shows"
+    ],
+    "weaknesses": [
+      "Thinking is always on and the API rejects requests that disable it; effort defaults to max and changing it mid-conversation throws away the prompt cache",
+      "Very verbose — it burns through output tokens, and one subscriber on the $99/month plan hit their five-hour quota in 47 minutes",
+      "Launch claims need independent checking — most coding scores were run inside Claude Code, the API docs shipped with placeholder numbers, and allegations of undisclosed paid influencer promotion surfaced in launch week"
+    ],
+    "notes": "A post-trained version of Kimi K3 and the first model in Moonshot's K3.1 series, released 2026-10-23 (2026-10-24 China time) on kimi.ai, the Kimi apps, Kimi Code and the Kimi API; Moonshot calls it 3T-class, and Artificial Analysis lists 2.8T total parameters (MarkTechPost reports 104B active). Weights are promised by 2026-11-04, so openWeights stays false and license null until they ship. The $2/$10 base price ($0.20 cached input) is relayed by VentureBeat and Handy AI because the official pricing table didn't render; a kimi-k3.1-pro-highspeed variant costs $4/$20 and Moonshot says it runs 2–3× faster. HLE 52% is Artificial Analysis' no-tools figure (Moonshot reports 70.0% with tools). Terminal-Bench 4.0 is 65.7% per Moonshot and 67% per AA, not comparable to the Terminal-Bench 2.1 field. GDPval-AA is 1846 Elo on v2.1, a different scale from the tracked v2, so it's left null. costPerTask ($2.11, AA's live page; AA's launch report said $1.98) and speed are AA's reasoning variant, which AA doesn't label with an effort level."
+  },
+  {
+    "id": "dessa",
+    "name": "Dessa",
+    "company": "block",
+    "releaseDate": "2026-10-23",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "type": "voice",
+    "contextWindow": null,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "restricted",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Full duplex from the ground up — it listens while it talks, backchannels and decides when to cut in, rather than waiting for the speaker to finish a turn",
+      "Learned only from recorded human conversation, so in Block's demos it picks up on tone, sarcasm and laughter that text-trained voice stacks tend to flatten",
+      "Block says it runs locally on a MacBook Pro M4 Max or better, faster than real time, with no cloud round-trip"
+    ],
+    "weaknesses": [
+      "A research preview with a waitlist, open only to a small group of AI safety researchers — there's no app, API or price to build on",
+      "Everything known about it comes from Block's own hand-picked recordings — no benchmarks, latency figures, model size or independent hands-on testing yet",
+      "No text in training means no stated tool use, document reading or lookup, and Block lists how well it learns facts and new languages as open research questions"
+    ],
+    "notes": "Not an LLM: a speech-to-speech model trained from scratch on human conversation audio only (no text, no pretrained models) on a single NVIDIA GB200 NVL72, built by Block's in-house AI lab, which was founded by former members of Toronto startup Dessa and is led by Ragavan Thurairatnam. Announced 2026-10-23 at block.xyz/dessa and by Jack Dorsey on X. The site's text benchmarks don't apply, and no pricing, context, weights or licence have been published, so every such cell is null; availability is restricted because access is a waitlist plus researcher early access."
   }
 ]

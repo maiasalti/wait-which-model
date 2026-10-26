@@ -324,3 +324,9 @@ muse-spark-open · retirementDate · 2026-10-19 · Open-weights release; no life
 beam · predecessorId · 2026-10-19 · Reflection AI's first model; nothing to replace. Left null.
 beam · apiIds · 2026-10-19 · Only OpenRouter's reflection/beam-1.0-501b-a23b verified; Reflection's own API id (Beam-501B-A23B per eesel.ai) not confirmed from Reflection docs, which sit behind a waitlist login. Fireworks and Baseten listings not checked.
 beam · retirementDate · 2026-10-19 · Brand-new release; no lifecycle notice. Left null.
+kimi-k3-1-pro · predecessorId · 2026-10-26 · Moonshot's blog calls it "a post-trained version of Kimi K3" and compares against K3 throughout, but never says it replaces K3; that's lineage. Left null.
+kimi-k3-1-pro · license · 2026-10-26 · Weights promised "by Nov 4"; no Hugging Face repo or licence yet. openWeights stays false. Re-check after 2026-11-04.
+kimi-k3-1-pro · speed (timeToFirstTokenSec, effort) · 2026-10-26 · AA's page gives 52.2 tok/s on the reasoning variant but no effort label, and its 2.97s TTFT sits in the FAQ without saying whether it's time to first answer token. Left null.
+kimi-k3-1-pro · apiIds (aws-bedrock / google-vertex) · 2026-10-26 · Not checked; launch is Kimi API only. The moonshot id kimi-k3.1-pro comes from Moonshot's blog.
+kimi-k3-1-pro · retirementDate · 2026-10-26 · Brand-new release; no lifecycle notice. Left null.
+dessa · apiIds / license / predecessorId / retirementDate · 2026-10-26 · Research preview at block.xyz/dessa with no API, weights, licence or lifecycle info; it's Block's first model. Left null/[].
