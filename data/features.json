@@ -1,5 +1,38 @@
 [
   {
+    "id": "claude-duet",
+    "name": "Claude Duet",
+    "company": "anthropic",
+    "launchDate": "2026-10-21",
+    "description": "A standalone app in which Claude works as a proactive agent: it sends a morning brief, checks connected accounts every few hours, takes on assigned tasks in its own cloud VM and browser, and asks for approval before acting on your behalf.",
+    "strengths": [
+      "Runs on its own virtual machine, so your laptop or phone needn’t stay on",
+      "Approval required before sending messages, making payments, signing documents or deleting anything",
+      "Over 6,000 connectors and plugins from the Claude Marketplace; purchases via Stripe Link and Shop Pay",
+      "iOS, Android and claude.ai"
+    ],
+    "weaknesses": [
+      "US Pro and Max only, by waitlist; no Team or Enterprise yet",
+      "No model choice, and its cloud browser can’t be watched or taken over",
+      "Background checks and the morning brief count toward plan usage limits"
+    ],
+    "links": {
+      "official": "https://claude.com/resources/articles/claude-duet",
+      "docs": "https://support.claude.com/en/articles/17631495-get-started-with-claude-duet"
+    },
+    "notes": "Research preview, invitations in waves. Also US-only (region-limited); availability recorded as waitlist. Runs on Claude Opus 5.5, which picks its own effort. Admitted users get one full limit reset, usable until 2026-11-30. Microsoft 365 connector not available yet; 1Password sign-in and a Shopify storefront editor listed as coming soon. Can’t make phone calls or send texts.",
+    "surface": "app",
+    "availability": "waitlist",
+    "plans": [
+      "Pro",
+      "Max"
+    ],
+    "modelIds": [
+      "claude-opus-5-5"
+    ],
+    "retiredDate": null
+  },
+  {
     "id": "claude-dashboards",
     "name": "Claude Dashboards",
     "company": "anthropic",
