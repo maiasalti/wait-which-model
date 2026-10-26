@@ -1,5 +1,35 @@
 [
   {
+    "id": "2026-10-23-kimi-k3-1-pro",
+    "date": "2026-10-23",
+    "title": "Moonshot AI releases Kimi K3.1 Pro, a post-trained Kimi K3 with weights promised by November 4",
+    "summary": "Moonshot shipped Kimi K3.1 Pro, the first model in its K3.1 series, on kimi.ai, the Kimi apps and the Kimi API. It costs $2/$10 per million tokens, down from K3's $3/$15, with a 1M-token context window, and a Highspeed variant costs $4/$20. Artificial Analysis scores it 55 on its Intelligence Index, up from K3's 44.",
+    "category": "release",
+    "companies": [
+      "moonshot"
+    ],
+    "modelIds": [
+      "kimi-k3-1-pro"
+    ],
+    "sourceName": "Moonshot AI",
+    "sourceUrl": "https://www.kimi.ai/blog/kimi-k3-1-pro"
+  },
+  {
+    "id": "2026-10-23-dessa",
+    "date": "2026-10-23",
+    "title": "Block unveils Dessa, a full-duplex speech-to-speech model trained without text",
+    "summary": "Block's in-house AI lab announced Dessa as a research preview. It is a speech-to-speech model trained from scratch on human conversation audio alone, it listens and talks at the same time, and Block says it runs locally on a MacBook Pro M4 Max. Access is a waitlist plus early access for a small group of AI safety researchers, and no benchmarks or pricing have been published.",
+    "category": "release",
+    "companies": [
+      "block"
+    ],
+    "modelIds": [
+      "dessa"
+    ],
+    "sourceName": "Block",
+    "sourceUrl": "https://block.xyz/dessa"
+  },
+  {
     "id": "2026-10-14-grok-voice-3-0",
     "date": "2026-10-14",
     "title": "xAI releases Grok Voice 3.0, a speech-to-speech model for voice agents",

@@ -1145,3 +1145,9 @@ Stats-filler sweep on 2026-10-13 (re-check of "re-check" rows from 2026-09-22 �
 | muse-spark-open | maxOutput / knowledgeCutoff | 2026-10-19 | not stated on the HF model card; OpenRouter lists no max output |
 | beam | gdpvalAA / lmarenaElo / arcAgi2 | 2026-10-19 | not in Reflection's model card or launch blog; AA lists AA-Briefcase but no GDPval-AA v2 figure; no arena.ai listing or ARC Prize entry |
 | beam | maxOutput | 2026-10-19 | HF card silent; eesel.ai reports 128K on Reflection's beta API docs (secondary, not confirmed) |
+| kimi-k3-1-pro | gpqaDiamond / sweBench / sweBenchPro / arcAgi2 / lmarenaElo | 2026-10-26 | not in Moonshot's launch blog (kimi.ai/blog/kimi-k3-1-pro), which reports Terminal-Bench 4.0, Kimi Code Bench, BenchCAD, OfficeQA Pro, SWE-Marathon, DeepSWE instead; AA page shows no GPQA; no arena.ai listing or ARC Prize entry found 3 days after launch — re-check |
+| kimi-k3-1-pro | terminalBench | 2026-10-26 | only Terminal-Bench 4.0 exists (Moonshot 65.7%, AA 67%), not the tracked 2.1; kept in notes |
+| kimi-k3-1-pro | gdpvalAA | 2026-10-26 | AA rates it 1846 on GDPval-AA v2.1 (via VentureBeat / Handy AI) — a different scale from the tracked v2; kept in notes |
+| kimi-k3-1-pro | maxOutput / knowledgeCutoff | 2026-10-26 | not stated in Moonshot's blog, Kimi Code docs or AA's page; platform.kimi.ai pricing table didn't render on fetch |
+| kimi-k3-1-pro | mmluPro / aime | 2026-10-26 | retired benchmarks; not in Moonshot's table |
+| dessa | all benchmarks / pricing / contextWindow / maxOutput / costPerTask / speed | 2026-10-26 | voice model, research preview: block.xyz/dessa publishes no benchmarks, size, latency figure or price; no API |

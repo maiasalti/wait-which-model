@@ -678,5 +678,15 @@
     "color": null,
     "notable": false,
     "order": 68
+  },
+  {
+    "id": "block",
+    "name": "Block",
+    "country": "United States",
+    "founded": 2009,
+    "website": "https://block.xyz",
+    "color": null,
+    "notable": false,
+    "order": 69
   }
 ]
