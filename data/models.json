@@ -8358,7 +8358,7 @@
       "usd": null,
       "effort": null
     },
-    "openWeights": false,
+    "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
     "speed": {
@@ -8401,7 +8401,7 @@
       "Open weights are promised but not shipped — nothing to self-host or inspect yet, and no independent evaluation exists",
       "Too new to characterise: Ant's three launch scores are all self-reported, with no hands-on reception yet"
     ],
-    "notes": "Announced by Ant Group's Ling (Bailing) team on 2026-09-30 as a roughly 560B-total / 25B-active MoE with up to a 1M-token context; the two-week free trial serves 262,144 tokens (32,768 max output per the Vercel AI Gateway and Novita listings), and Ant says the full window and an open-source release follow the trial, so openWeights is false and licence null until weights publish. Pricing is null rather than $0 because only the free trial exists and no list price is published. Ant reported only GDPval-AA v2.1 Elo 1673, FrontierSWE 75.16 and HealthBench Professional 65.35; none is a tracked key, and gdpvalAA records v2, so the v2.1 figure is kept here rather than in that cell. Tier is fast on Ant's own lineup, where flash sits below the 1T flagship line. Also free inside Command Code (inclusionai/ling-3.1-flash:free) and on Vercel as inclusionai/ling-3.1-flash-free."
+    "notes": "Announced by Ant Group's Ling (Bailing) team on 2026-09-30 as a roughly 560B-total / 25B-active MoE with up to a 1M-token context; the two-week free trial serves 262,144 tokens (32,768 max output per the Vercel AI Gateway and Novita listings), and the weights were released on Hugging Face (inclusionAI/Ling-3.1-flash, ~574 GB in BF16/FP8) on 2026-10-14; the licence is reported as MIT by community quantisations but was not confirmed on the official card, so license is null. Pricing is null rather than $0 because only the free trial exists and no list price is published. Ant reported only GDPval-AA v2.1 Elo 1673, FrontierSWE 75.16 and HealthBench Professional 65.35; none is a tracked key, and gdpvalAA records v2, so the v2.1 figure is kept here rather than in that cell. Tier is fast on Ant's own lineup, where flash sits below the 1T flagship line. Also free inside Command Code (inclusionai/ling-3.1-flash:free) and on Vercel as inclusionai/ling-3.1-flash-free."
   },
   {
     "id": "kolibri-1",
@@ -9216,5 +9216,69 @@
       "Behavior is a moving target this early: every quality claim, including the Starlink resolution rate, is xAI's own, and no independent hands-on testing exists yet"
     ],
     "notes": "Not an LLM: a speech-to-speech model served through xAI's Voice Agent API, so none of this site's text benchmarks apply and every cell is null by design; it is priced per minute of conversation ($0.08/min, $4.80/hr, unchanged from Grok Voice 2.0), not per token, so pricing is null, and context/output limits are unpublished. xAI's launch figures are cited from Artificial Analysis: Speech-to-Speech Index 86.9 (first; Grok Voice 2.0 81.3), Big Bench Audio 98.5%, Speech Agent Arena Elo 1070, Full Duplex Bench 97.0%, τ-Voice 71.6% (below GPT-Live-1 Astra Medium at 74.5%), plus 74% accuracy on ServiceNow's EVA-Bench; Kingy.ai reads Artificial Analysis' time to first audio as 0.81s, up from 0.70s on 2.0. xAI's docs mark grok-voice-2.0 deprecated and direct users to grok-voice-3.0, but no retirement date is given and Grok Voice 2.0 has no entry here, so predecessorId is null."
+  },
+  {
+    "id": "kimi-k3-1-pro",
+    "name": "Kimi K3.1 Pro",
+    "company": "moonshot",
+    "releaseDate": "2026-10-23",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 2,
+      "outputPerMTok": 10
+    },
+    "costPerTask": {
+      "usd": 2.11,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": 57.5,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "moonshot",
+        "id": "kimi-k3.1-pro"
+      },
+      {
+        "provider": "moonshot",
+        "id": "kimi-k3.1-pro-highspeed"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Works directly inside 3D and game tooling (Blender, CAD, Unreal, Unity and Godot), building whole projects rather than standalone snippets",
+      "Moonshot aimed this release at finance work: it builds fully linked statement models such as DCF and LBO workbooks more reliably than K3 did",
+      "Kimi documents drop-in setups for Claude Code, Codex, OpenCode and Hermes Agent, so it slots into existing coding-agent tooling without adapters"
+    ],
+    "weaknesses": [
+      "Slow and very verbose — thinking mode is mandatory and requests with thinking disabled are rejected, so even quick calls pay for a reasoning pass",
+      "Weights are promised for early November but not out yet, and no licence has been named, so self-hosting has to wait",
+      "Image input must be sent as base64 or an uploaded file ID — public image URLs are not accepted"
+    ],
+    "notes": "Announced 2026-10-23 as a 2.8T-total / 104B-active multimodal MoE post-trained from Kimi K3; Moonshot promises open weights by 2026-11-04 and has named no licence, so openWeights is false and license null until they ship. K3.1 Pro Highspeed (kimi-k3.1-pro-highspeed) is the same model at roughly 2–3x the speed for $4 / $20 per MTok; the base rate is $2 / $10 with $0.20 cached input and a flat price across the 1M window (Kimi Code subscription plans cap Plus/Moderato at 256K). Reasoning effort is low/high/max, and Moonshot's launch figures are all at max. Moonshot's headline tracked-adjacent scores are Terminal-Bench 4.0 65.7% (Claude Code harness; not the 2.1 this site tracks), OfficeQA Pro v2 64.4, BenchCAD 92.7% with tools and GDPval-AA 1846, which is the v2.1 scale, so gdpvalAA stays null. Third-party reproductions of Moonshot's table cite GPQA Diamond 94.2 and HLE 51.1% no tools / 70.0% with tools, but the excerpts of Moonshot's own blog did not show those rows (the charts appear to be images), so gpqaDiamond and hle are null pending a direct read; Artificial Analysis' 52% HLE is its own run. Artificial Analysis ranks it 4th on its Intelligence Index at 55 (K3: 44), with $2.11 per index task and 57.5 output tok/s on its model page (its launch article and creator page show slightly different figures), and doesn't label the effort setting it measured. Arena placed it #8 in Code Arena: WebDev at 1692; no Text Arena listing yet."
   }
 ]
