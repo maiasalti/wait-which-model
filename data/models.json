@@ -9331,5 +9331,66 @@
       "No text in training means no stated tool use, document reading or lookup, and Block lists how well it learns facts and new languages as open research questions"
     ],
     "notes": "Not an LLM: a speech-to-speech model trained from scratch on human conversation audio only (no text, no pretrained models) on a single NVIDIA GB200 NVL72, built by Block's in-house AI lab, which was founded by former members of Toronto startup Dessa and is led by Ragavan Thurairatnam. Announced 2026-10-23 at block.xyz/dessa and by Jack Dorsey on X. The site's text benchmarks don't apply, and no pricing, context, weights or licence have been published, so every such cell is null; availability is restricted because access is a waitlist plus researcher early access."
+  },
+  {
+    "id": "gpt-6-1-terra",
+    "name": "GPT-6.1 Terra",
+    "company": "openai",
+    "releaseDate": "2026-10-26",
+    "status": "unknown",
+    "tier": "balanced",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1050000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 1,
+      "outputPerMTok": 5
+    },
+    "costPerTask": {
+      "usd": 0.1,
+      "effort": "medium"
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-06",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "gpt-6.1-terra"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": "gpt-5-6-terra",
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Built around computer use — reads what's on screen and acts across apps, forms and technical drawings rather than only describing them",
+      "Finishes agentic office tasks markedly faster than Sol or Astra, and early hands-on Codex runs saw it return correct results quickest",
+      "Far fewer confident factual errors than GPT-5.6 Terra at low effort, so the cheap setting is usable for lookups",
+      "Keeps a none reasoning effort that Sol and Astra dropped, for instant replies when thinking isn't needed"
+    ],
+    "weaknesses": [
+      "More willing to work around a restriction than Sol — its system card shows it taking an alternative route that breaks the spirit of a block, and acting without authorisation alongside external agents, far more often, so agent permissions need to be explicit",
+      "Coding ability depends steeply on effort — OpenAI itself steers the hardest coding to Sol or Astra, and Sol at medium already outpaces Terra at max on terminal work",
+      "Thinks long at max effort, using well over the median token count on Artificial Analysis' runs, and its chain of thought follows reasoning instructions far less reliably than Sol's"
+    ],
+    "notes": "Announced 2026-10-26 as the first Terra-tier model since GPT-5.6 (the GPT-6 launch shipped only Sol and Luna); OpenAI's system-card addendum (deploymentsafety.openai.com/gpt-6-1-terra) calls GPT-5.6 Terra 'its predecessor', which sets predecessorId, though GPT-5.6 Terra has no retirement scheduled. Context 1,050,000 tokens (922K max input), 128K output, cutoff 2026-06-01, none/low/medium (default)/high/xhigh/max effort, text+image in, and $1/$5 per MTok ($0.05 cached input, $1.25/$2.50 cache writes at 30-min/12-hour retention) are from OpenAI's model docs; prompts over 272K input tokens bill at 2x input/cache and 1.5x output, batch and flex are half price, fast mode costs 2x and regional processing adds 10%. Tool calls require the Responses API. Rolled out in ChatGPT Work and Codex for Plus, Pro, Enterprise and Edu and in the API. OpenAI's launch charts (openai.com/index/introducing-gpt-6-1-terra, not fetchable directly; figures as reproduced by kingy.ai and CellCog) use only untracked suites: Agents' Last Exam v1 55.9% low / 57.6% medium / 60.0% max (GPT-5.6 Terra 50.7% max), MMMU-Pro 84.6% medium / 85.5% max, OSWorld 2.1 offline 66.7% medium / 74.2% max, Terminal-Bench 4.0 24.8% low / 35.8% medium / 50.3% max (not the tracked 2.1), Terminal-Bench Science 0.1 34.3% medium / 58.3% max, and a difficult-prompt factual error rate of 16.7% low / 10.1% medium / 4.3% max (GPT-5.6 Terra 53.6% low). It is rated Critical in cybersecurity and High in biological/chemical under the Preparedness Framework, with GPT-6 Astra's safeguards. Artificial Analysis scores it 41 on its Intelligence Index at medium ($0.10 per task, the costPerTask figure) and 48 at max ($0.40 per task, 130M output tokens against an 81M median); AA had not measured speed at launch. No GPQA Diamond, SWE-bench, HLE, Arena or ARC Prize figures at launch."
   }
 ]
