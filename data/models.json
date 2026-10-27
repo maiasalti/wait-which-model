@@ -6936,7 +6936,7 @@
       "hle": 36.8,
       "lmarenaElo": 1474,
       "gdpvalAA": 1632,
-      "arcAgi2": null
+      "arcAgi2": 72.9
     },
     "strengths": [
       "Reading is cheaper than writing by design — the encoder half activates half the parameters of the decoder and the KV cache is a quarter of V4-Flash's, so re-reading a large context each agent turn is where the savings actually land",
@@ -6950,7 +6950,7 @@
       "Agent scores swing with the scaffold — DeepSeek's own table shows several points between its harness and Claude Code or Codex, so the headline figures need the matching harness to reproduce",
       "Still answers rather than abstains when it doesn't know — Artificial Analysis measures a near-total hallucination rate on its knowledge probe, unchanged from the V4 line"
     ],
-    "notes": "DeepSeek's first Causal Encoder-Decoder model: a 552B-backbone MoE (763B on disk with the 197B Engram memory, DSpark draft module and vision encoder) activating 8B parameters during prefill and 16B during decode, trained from scratch on 45T multimodal tokens. GPQA Diamond 90.9, Terminal-Bench 2.1 90.6 and HLE 36.8% are DeepSeek's own figures at max reasoning effort (reasoning_effort=100) in its minimal-mode DeepSeek Harness; HLE is 39.1% on the text-only subset and 63.9% with tools, and the same weights score 88.0 on Terminal-Bench 2.1 under Claude Code and 84.1 under Codex per DeepSeek's cross-scaffold table. Artificial Analysis independently measures HLE 39.2% and rates it 1632 on GDPval-AA v2; it scores 40 on AA's Intelligence Index v4.3, which was rescaled since the 50 recorded for V4-Flash-0731 and no longer includes GPQA, so the two index figures are not comparable. Also reported by DeepSeek: DeepSWE v1.1 74.2, Terminal-Bench 3.0 30.0 and 4.0 31.2, Codeforces 3471, MathArena Apex 65.6, NL2Repo-Bench 64.0, CyberGym 88.1, SEC-Bench Pro 62.8, AutomationBench 54.8, Agents' Last Exam 31.8, Chartography 78.9, BabyVision 89.6 and ZeroBench 49.0 (the last three with tools). MMLU-Pro is published only for the base model (74.1, 5-shot) and is not recorded as an instruct score; SWE-bench Verified/Pro, AIME and ARC-AGI-2 are unpublished, and Vals AI ranks it the top open-weight model on its index at high effort. Pricing follows the off-peak convention of the V4-Flash-0731 entry: $0.15 input (cache miss) / $0.60 output with cache hits at $0.003, doubling to $0.30 / $1.20 / $0.006 during peak hours (01:00-04:00 and 06:00-10:00 UTC, Monday-Friday) — the peak rate is what Artificial Analysis lists. costPerTask ($0.2652) and speed (222.2 tok/s, 1.16 s to first answer token) are AA's max-effort measurements on DeepSeek's API. Context is the 1M DeepSeek's pricing page states; max output is that page's 384K maximum, while the Hugging Face card recommends max_tokens of at least 256K. The API id is `deepseek-flash`; DeepSeek's change log retired V4 Flash and V4 Flash Vision Exp the same day and temporarily routes `deepseek-v4-flash` and `deepseek-v4-flash-vision-exp` to this model at Flash rates, which is the explicit replacement behind predecessorId. The launch post also said all `deepseek-v4-pro` traffic would route here from 2026-09-14 until V4.1-Pro ships, but the change log and pricing page later reversed that: V4 Pro service continues after 2026-09-14 with billing unchanged. As with the V4 line, no Jinja chat template ships — prompts go through DeepSeek's Python encoding reference or its Rust deepseek-recipe toolkit. LMArena Elo 1474 (±7, 8,728 votes) is the \"deepseek-v4.1-flash-max\" text-arena listing (arena.ai, added after launch)."
+    "notes": "DeepSeek's first Causal Encoder-Decoder model: a 552B-backbone MoE (763B on disk with the 197B Engram memory, DSpark draft module and vision encoder) activating 8B parameters during prefill and 16B during decode, trained from scratch on 45T multimodal tokens. GPQA Diamond 90.9, Terminal-Bench 2.1 90.6 and HLE 36.8% are DeepSeek's own figures at max reasoning effort (reasoning_effort=100) in its minimal-mode DeepSeek Harness; HLE is 39.1% on the text-only subset and 63.9% with tools, and the same weights score 88.0 on Terminal-Bench 2.1 under Claude Code and 84.1 under Codex per DeepSeek's cross-scaffold table. Artificial Analysis independently measures HLE 39.2% and rates it 1632 on GDPval-AA v2; it scores 40 on AA's Intelligence Index v4.3, which was rescaled since the 50 recorded for V4-Flash-0731 and no longer includes GPQA, so the two index figures are not comparable. Also reported by DeepSeek: DeepSWE v1.1 74.2, Terminal-Bench 3.0 30.0 and 4.0 31.2, Codeforces 3471, MathArena Apex 65.6, NL2Repo-Bench 64.0, CyberGym 88.1, SEC-Bench Pro 62.8, AutomationBench 54.8, Agents' Last Exam 31.8, Chartography 78.9, BabyVision 89.6 and ZeroBench 49.0 (the last three with tools). MMLU-Pro is published only for the base model (74.1, 5-shot) and is not recorded as an instruct score; SWE-bench Verified/Pro and AIME are unpublished; ARC-AGI-2 72.9% is ARC Prize-verified at max effort (arcprize.org/results/deepseek-v4-1-flash; ARC Prize's 2026-10-06 announcement gives $0.13/task, effort unlabelled), and Vals AI ranks it the top open-weight model on its index at high effort. Pricing follows the off-peak convention of the V4-Flash-0731 entry: $0.15 input (cache miss) / $0.60 output with cache hits at $0.003, doubling to $0.30 / $1.20 / $0.006 during peak hours (01:00-04:00 and 06:00-10:00 UTC, Monday-Friday) — the peak rate is what Artificial Analysis lists. costPerTask ($0.2652) and speed (222.2 tok/s, 1.16 s to first answer token) are AA's max-effort measurements on DeepSeek's API. Context is the 1M DeepSeek's pricing page states; max output is that page's 384K maximum, while the Hugging Face card recommends max_tokens of at least 256K. The API id is `deepseek-flash`; DeepSeek's change log retired V4 Flash and V4 Flash Vision Exp the same day and temporarily routes `deepseek-v4-flash` and `deepseek-v4-flash-vision-exp` to this model at Flash rates, which is the explicit replacement behind predecessorId. The launch post also said all `deepseek-v4-pro` traffic would route here from 2026-09-14 until V4.1-Pro ships, but the change log and pricing page later reversed that: V4 Pro service continues after 2026-09-14 with billing unchanged. As with the V4 line, no Jinja chat template ships — prompts go through DeepSeek's Python encoding reference or its Rust deepseek-recipe toolkit. LMArena Elo 1474 (±7, 8,728 votes) is the \"deepseek-v4.1-flash-max\" text-arena listing (arena.ai, added after launch)."
   },
   {
     "id": "fugu-max",
@@ -7653,7 +7653,7 @@
       "hle": 45.9,
       "lmarenaElo": null,
       "gdpvalAA": null,
-      "arcAgi2": null
+      "arcAgi2": 61.3
     },
     "strengths": [
       "Ten times cheaper than Haiku 4.5 per token ($0.10 / $0.50 against $1 / $5) for prompts up to 100K tokens, with a 1M-token context in place of 200K",
@@ -7665,7 +7665,7 @@
       "Prompts over 100K tokens cost five times the base rate ($0.50 input, $2.50 output per MTok), so long-context use loses most of the price advantage",
       "Adaptive thinking is on by default, which adds latency before the first answer token compared with a non-thinking call"
     ],
-    "notes": "Released 2026-10-07 on the Claude API, Amazon Bedrock, Google Cloud, Microsoft Foundry and Claude Platform on AWS. Context 1M, max output 128K (300K on the Message Batches API beta), reliable knowledge cutoff June 2026, default effort medium with adaptive thinking on by default, per Anthropic's model overview and the Bedrock model card. Base prices apply to prompts up to 100K tokens; above that it is $0.50 input and $2.50 output per MTok. Cache reads are $0.01 and 5-minute cache writes $0.125 per MTok, and batch is 50% off. HLE 45.9% is Anthropic's no-tools figure. Anthropic's system card reports SWE-bench Pro, but its figure could not be confirmed from a primary-source excerpt this run, so sweBenchPro is null; the launch table's Terminal-Bench figure is version 4.0 and its GDPval-AA figure is v2.1, neither of which matches the tracked keys. Cost per task ($0.05) and output speed (136.8 tok/s) are Artificial Analysis' medium-effort figures; AA's time-to-first-token figures conflict between pages (12.63s vs 13.40s), so that half of speed is null. predecessorId follows Anthropic's Haiku 4.5 page, which calls Haiku 4.5 a legacy model, names Haiku 5.5 the current Haiku and advises migrating to it."
+    "notes": "Released 2026-10-07 on the Claude API, Amazon Bedrock, Google Cloud, Microsoft Foundry and Claude Platform on AWS. Context 1M, max output 128K (300K on the Message Batches API beta), reliable knowledge cutoff June 2026, default effort medium with adaptive thinking on by default, per Anthropic's model overview and the Bedrock model card. Base prices apply to prompts up to 100K tokens; above that it is $0.50 input and $2.50 output per MTok. Cache reads are $0.01 and 5-minute cache writes $0.125 per MTok, and batch is 50% off. HLE 45.9% is Anthropic's no-tools figure. Anthropic's system card reports SWE-bench Pro, but its figure could not be confirmed from a primary-source excerpt this run, so sweBenchPro is null; the launch table's Terminal-Bench figure is version 4.0 and its GDPval-AA figure is v2.1, neither of which matches the tracked keys. Cost per task ($0.05) and output speed (136.8 tok/s) are Artificial Analysis' medium-effort figures; AA's time-to-first-token figures conflict between pages (12.63s vs 13.40s), so that half of speed is null. predecessorId follows Anthropic's Haiku 4.5 page, which calls Haiku 4.5 a legacy model, names Haiku 5.5 the current Haiku and advises migrating to it. ARC-AGI-2 61.3% is ARC Prize-verified at xhigh effort ($0.085/task; high 30.7%, medium 9.4%, low 2.8%), arcprize.org/results/anthropic-claude-haiku-5-5; ARC Prize left out the max-effort run because only 74 of 120 tasks completed."
   },
   {
     "id": "nemotron-3-5-super-vl",
@@ -8260,7 +8260,7 @@
       "hle": null,
       "lmarenaElo": 1525,
       "gdpvalAA": null,
-      "arcAgi2": null
+      "arcAgi2": 91.3
     },
     "strengths": [
       "Declines to answer obscure-fact questions far more often than it fabricates — it trades recall for honesty, so confident wrong answers are rare",
@@ -8272,7 +8272,7 @@
       "The 1M-token output ceiling is the exception, not the default — a normal synchronous call stops at 65,536 tokens, and the full budget needs long decode on the Interactions API as a background job, sharing one window with the input",
       "The $2/$10 price is introductory and doubles to $4/$20 after November 30, 2026, which on top of its long thinking makes it costlier than its launch rate suggests"
     ],
-    "notes": "Google's first Gemini 4 model, announced 2026-09-30 and rolled out first to trusted cyber defenders through the Fairwind Program; it became generally available on 2026-10-13 through the Gemini API, AI Studio and Google Cloud (model id gemini-4-argon on both, per ai.google.dev/gemini-api/docs/models/gemini-4-argon and docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon), and to Google AI Pro and Ultra subscribers in the Gemini app. A gemini-4-argon-cyber-permissive variant stays behind the Fairwind allowlist and isn't tracked separately. Pricing is the introductory $2/$10 per MTok (cached input 95% off) through 2026-11-30, then $4/$20. contextWindow is the Gemini API's unified 1,048,576-token window, shared by input, thinking and output; maxOutput is the same 1,048,576 ceiling, reachable only with long decode on the Interactions API — the default synchronous limit is 65,536. knowledgeCutoff is from the DeepMind model card ('March 2026, but knowledge in some domains may be less up to date'). Google Cloud gives a retirement of 'October 13, 2027 or later', a floor rather than a scheduled date, so retirementDate stays null. These GA figures rest on search excerpts of the official pages (WebFetch was unavailable in the 2026-10-15 sweep). Google's evaluation PDF (deepmind.google/models/evals-methodology/gemini-4-argon) uses only untracked suites: Vals Index 68.9%, AutomationBench 51.3%, Vals Finance Agent v2 65.4%, Harvey Legal Agent 19.6%, DeepSWE v1.1 77.9%, FrontierSWE v2 55.0%, Vibe Code Bench 91.9%, Terminal-Bench 4.0 57.4% (not the tracked 2.1), PostTrainBench 45.3%, Terminal-Bench Science 0.1 57.6%, LABBench2 88.8%, RiemannBench 76.0%, GraphWalks 99.7% (to 128K) / 84.2% (256K–1M), Agent's Last Exam 39.5%, OSWorld 2.0 offline partial 69.2%, Chartography 71.6%, LVBench 91.7% and CWE-bench v1 68.0%; no GPQA Diamond, SWE-bench, HLE or ARC-AGI-2 figures. hle is null: Google's evaluation PDF has no HLE row, and Artificial Analysis' 57% (high) comes from its own 2,158-question text-only subset whose tool setting its methodology doesn't state, so it can't be pinned to a primary source. LMArena Elo 1525 (±9, preliminary, 4,942 votes) is the 'gemini-4-argon-high' text-arena listing, rank 1 on the 2026-09-30 update. Artificial Analysis scores it 53 on its Intelligence Index at high effort (the only variant AA lists) at $1.99 per task at introductory pricing ($3.98 at standard pricing), averaging about 62K output tokens per task against GPT-6 Astra's 27K, with an AA-Omniscience hallucination rate of 15%; AA publishes no speed figures and rates it 1611 on GDPval-AA v2.1, a different scale from the v2 this key records, so gdpvalAA stays null. predecessorId is null: Google names no model it replaces."
+    "notes": "Google's first Gemini 4 model, announced 2026-09-30 and rolled out first to trusted cyber defenders through the Fairwind Program; it became generally available on 2026-10-13 through the Gemini API, AI Studio and Google Cloud (model id gemini-4-argon on both, per ai.google.dev/gemini-api/docs/models/gemini-4-argon and docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/4-argon), and to Google AI Pro and Ultra subscribers in the Gemini app. A gemini-4-argon-cyber-permissive variant stays behind the Fairwind allowlist and isn't tracked separately. Pricing is the introductory $2/$10 per MTok (cached input 95% off) through 2026-11-30, then $4/$20. contextWindow is the Gemini API's unified 1,048,576-token window, shared by input, thinking and output; maxOutput is the same 1,048,576 ceiling, reachable only with long decode on the Interactions API — the default synchronous limit is 65,536. knowledgeCutoff is from the DeepMind model card ('March 2026, but knowledge in some domains may be less up to date'). Google Cloud gives a retirement of 'October 13, 2027 or later', a floor rather than a scheduled date, so retirementDate stays null. These GA figures rest on search excerpts of the official pages (WebFetch was unavailable in the 2026-10-15 sweep). Google's evaluation PDF (deepmind.google/models/evals-methodology/gemini-4-argon) uses only untracked suites: Vals Index 68.9%, AutomationBench 51.3%, Vals Finance Agent v2 65.4%, Harvey Legal Agent 19.6%, DeepSWE v1.1 77.9%, FrontierSWE v2 55.0%, Vibe Code Bench 91.9%, Terminal-Bench 4.0 57.4% (not the tracked 2.1), PostTrainBench 45.3%, Terminal-Bench Science 0.1 57.6%, LABBench2 88.8%, RiemannBench 76.0%, GraphWalks 99.7% (to 128K) / 84.2% (256K–1M), Agent's Last Exam 39.5%, OSWorld 2.0 offline partial 69.2%, Chartography 71.6%, LVBench 91.7% and CWE-bench v1 68.0%; no GPQA Diamond, SWE-bench, HLE or ARC-AGI-2 figures. hle is null: Google's evaluation PDF has no HLE row, and Artificial Analysis' 57% (high) comes from its own 2,158-question text-only subset whose tool setting its methodology doesn't state, so it can't be pinned to a primary source. LMArena Elo 1525 (±9, preliminary, 4,942 votes) is the 'gemini-4-argon-high' text-arena listing, rank 1 on the 2026-09-30 update. Artificial Analysis scores it 53 on its Intelligence Index at high effort (the only variant AA lists) at $1.99 per task at introductory pricing ($3.98 at standard pricing), averaging about 62K output tokens per task against GPT-6 Astra's 27K, with an AA-Omniscience hallucination rate of 15%; AA publishes no speed figures and rates it 1611 on GDPval-AA v2.1, a different scale from the v2 this key records, so gdpvalAA stays null. predecessorId is null: Google names no model it replaces. ARC-AGI-2 91.3% is ARC Prize-verified at high effort, the highest effort tested ($0.32/task; medium 87.1%, low 42.1%), published 2026-10-13 at arcprize.org/results/google-gemini-4-argon; the page's best-Semi-Private summary line reads 91.2%, while its verified table and ARC Prize's announcement give 91.3%."
   },
   {
     "id": "gpt-6-1-sol",
@@ -9144,7 +9144,7 @@
       "hle": 42.6,
       "lmarenaElo": null,
       "gdpvalAA": null,
-      "arcAgi2": null
+      "arcAgi2": 78.1
     },
     "strengths": [
       "Agentic task-completion and tool-use loops reportedly hold together longer than the September checkpoint, per DeepSeek's own evaluation harness",
@@ -9155,7 +9155,7 @@
       "Shipped as a same-day checkpoint swap under the existing deepseek-flash API alias rather than a standalone announcement — every reported gain so far is DeepSeek's own harness output relayed by trackers, with no independent eval yet",
       "Still ships without a Jinja chat template, inheriting V4.1-Flash's reliance on DeepSeek's own Python/Rust prompt-encoding tooling"
     ],
-    "notes": "A same-architecture dated refresh of DeepSeek-V4.1-Flash (2026-09-10), released 2026-10-17 under the same deepseek-flash API alias, MIT license and 1M-token context; DeepSeek's own figures (relayed by MindStudio, OfficeChai, Kingy AI, MarkTechPost and aiweekly.co, none independently verified) report Humanity's Last Exam at 42.6% without tools (up from 36.8%), Terminal-Bench 4.0 at 42.3 (not comparable to this site's Terminal-Bench 2.1 field, left null) and DeepSWE v1.1 at 77.0; GPQA Diamond, SWE-bench, LMArena and ARC-AGI-2 were not reported for this checkpoint specifically and are left null pending a dedicated eval. contextWindow, maxOutput, pricing and license are carried over from the shared V4.1-Flash deployment since every source describes this as an in-place checkpoint swap on the same endpoint, not a new context/pricing tier; costPerTask and speed are null because Artificial Analysis had not measured this specific checkpoint as of this writing."
+    "notes": "A same-architecture dated refresh of DeepSeek-V4.1-Flash (2026-09-10), released 2026-10-17 under the same deepseek-flash API alias, MIT license and 1M-token context; DeepSeek's own figures (relayed by MindStudio, OfficeChai, Kingy AI, MarkTechPost and aiweekly.co, none independently verified) report Humanity's Last Exam at 42.6% without tools (up from 36.8%), Terminal-Bench 4.0 at 42.3 (not comparable to this site's Terminal-Bench 2.1 field, left null) and DeepSWE v1.1 at 77.0; GPQA Diamond, SWE-bench and LMArena were not reported for this checkpoint specifically and are left null pending a dedicated eval. contextWindow, maxOutput, pricing and license are carried over from the shared V4.1-Flash deployment since every source describes this as an in-place checkpoint swap on the same endpoint, not a new context/pricing tier; costPerTask and speed are null because Artificial Analysis had not measured this specific checkpoint as of this writing. ARC-AGI-2 78.1% is ARC Prize-verified at max effort (low 73.6%, high 68.6%), arcprize.org/results/deepseek-v4-1-flash-1017."
   },
   {
     "id": "grok-voice-3-0",
@@ -9331,5 +9331,130 @@
       "No text in training means no stated tool use, document reading or lookup, and Block lists how well it learns facts and new languages as open research questions"
     ],
     "notes": "Not an LLM: a speech-to-speech model trained from scratch on human conversation audio only (no text, no pretrained models) on a single NVIDIA GB200 NVL72, built by Block's in-house AI lab, which was founded by former members of Toronto startup Dessa and is led by Ragavan Thurairatnam. Announced 2026-10-23 at block.xyz/dessa and by Jack Dorsey on X. The site's text benchmarks don't apply, and no pricing, context, weights or licence have been published, so every such cell is null; availability is restricted because access is a waitlist plus researcher early access."
+  },
+  {
+    "id": "gpt-6-1-terra",
+    "name": "GPT-6.1 Terra",
+    "company": "openai",
+    "releaseDate": "2026-10-26",
+    "status": "unknown",
+    "tier": "balanced",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1050000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 1,
+      "outputPerMTok": 5
+    },
+    "costPerTask": {
+      "usd": 0.13,
+      "effort": "high"
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-06",
+    "speed": {
+      "outputTokensPerSec": 90.9,
+      "timeToFirstTokenSec": 5.66,
+      "effort": "high"
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "gpt-6.1-terra"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "openai.gpt-6.1-terra"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Finishes computer-use and office-software tasks over three times faster than GPT-6.1 Sol or Astra — the speed, not only the price, is the point of it",
+      "Far readier than GPT-5.6 Terra to admit it doesn't know rather than invent an answer, while still answering slightly more questions correctly",
+      "Accepts reasoning effort none, which Astra and GPT-6.1 Sol don't, so one model covers instant replies and long agent runs",
+      "Spends few tokens getting to an answer — Artificial Analysis found it far less verbose than peers at the same effort"
+    ],
+    "weaknesses": [
+      "Roughly matches Sol on vision and computer use but is a step behind on most other work, and OpenAI still points coding and research at Sol or Astra",
+      "Not offered in ChatGPT's Chat mode at launch — only Work and Codex — so most consumer users can't simply pick it",
+      "OpenAI's own testing caught it completing tasks by routes that broke the spirit of a stated restriction in nearly a third of max-effort runs"
+    ],
+    "notes": "Announced 2026-10-26 as the Terra tier of the GPT-6.1 line; OpenAI calls it \"a significant step up from GPT-5.6 Terra\", lineage wording rather than a replacement claim, so predecessorId is null and GPT-5.6 Terra has no shutdown date. Context 1,050,000 tokens, 128K output, cutoff 2026-06-01, effort none/low/medium (default)/high/xhigh/max, and $1/$5 per MTok ($0.05 cached input, $1.25 cache writes) are from OpenAI's model docs; prompts over 272K input tokens bill at 2x input/cache and 1.5x output, batch is $0.50/$2.50 and fast mode $2/$10. OpenAI's launch material uses only untracked suites (Terminal-Bench 4.0 50.3% at max — not the tracked 2.1 — against GPT-5.6 Terra's 21.5%; Agents' Last Exam +15 points over GPT-5.6 Terra at medium; OSWorld 2.1 and MMMU-Pro gains; factual error rate 4.3% at max). The system-card addendum rates it Critical in cybersecurity and High in biological/chemical, with Astra's safeguards. Artificial Analysis scores it 48 on its Intelligence Index at max ($0.40 per task), 44 at high and 41 at medium; no medium cost per task was published in the pages seen, so costPerTask and speed are both AA's high-effort figures. AA also reports a 50-point drop in AA-Omniscience hallucination rate against GPT-5.6 Terra. No HLE, GPQA, Arena or ARC Prize figure yet. Bedrock GA came on 2026-10-27, priced $1.10/$5.50 in-region and $1/$5 global; its \"end of life no sooner than 2027-10-26\" is a floor, not a retirement."
+  },
+  {
+    "id": "nanbeige4-3-33b",
+    "name": "Nanbeige4.3-33B",
+    "company": "nanbeige",
+    "releaseDate": "2026-10-25",
+    "status": "superseded",
+    "tier": "balanced",
+    "modality": "text",
+    "type": "llm",
+    "contextWindow": 524288,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "self-host",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/Nanbeige/Nanbeige4.3-33B",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 89.5,
+      "sweBench": null,
+      "sweBenchPro": 60.3,
+      "terminalBench": 80.9,
+      "aime": 95.2,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Built to sit inside agent harnesses — XML/JSON tool calling and an option to preserve its thinking across turns",
+      "Runs on a single 24 GB consumer GPU or a Mac at 4-bit, around 19 GB, so local agent work doesn't need a server",
+      "Apache 2.0 with the base checkpoint published alongside, so it can be fine-tuned and shipped commercially without licence friction"
+    ],
+    "weaknesses": [
+      "Thinks at length by default — quantisers advise an output budget of 32K tokens or more, thinking included, or answers get cut off",
+      "Every headline score comes from Nanbeige's own harness runs, and no hosted API exists yet, so trying it means self-hosting a 66 GB BF16 checkpoint"
+    ],
+    "notes": "Released 2026-10-25 (Nanbeige's X announcement; some outlets date the Hugging Face upload to 10-24 or report 10-26 in UTC+8) by BOSS Zhipin's Nanbeige LLM Lab as a ~33.1B dense Llama-architecture model with a 524,288-token context, Apache 2.0 weights and a separate Base checkpoint. All scores are self-reported from the model card with preserve_thinking on: Terminal-Bench 2.1 80.9% (Terminus 2 harness), GPQA Diamond 89.5, SWE-bench Pro 60.3, AIME 2026 95.2; it also reports DeepSWE 65.5 (mini-swe-agent) and a GDPval figure of 84.8 that is not Artificial Analysis' Elo, so gdpvalAA is null. No SWE-bench Verified or HLE row was seen. The card recommends max new tokens of 65,536 for agentic work and 262,144 for reasoning, which are settings rather than a documented cap, so maxOutput is null. No hosted inference provider was listed at publication, so availability is self-host."
   }
 ]
