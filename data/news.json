@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-10-26-gpt-6-1-terra",
+    "date": "2026-10-26",
+    "title": "OpenAI releases GPT-6.1 Terra, its first Terra-tier model since GPT-5.6, at $1/$5",
+    "summary": "OpenAI shipped GPT-6.1 Terra, a mid-tier model built for computer use and visual work, in ChatGPT Work, Codex and the API at $1/$5 per million tokens, half or less of GPT-5.6 Terra's $2/$12, with a 1.05M-token context window. OpenAI reports 60.0% on Agents' Last Exam at max effort, against 59.3% for GPT-6 Astra, and Artificial Analysis scores it 48 on its Intelligence Index at $0.40 per task.",
+    "category": "release",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-6-1-terra"
+    ],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-terra/"
+  },
+  {
     "id": "2026-10-23-kimi-k3-1-pro",
     "date": "2026-10-23",
     "title": "Moonshot AI releases Kimi K3.1 Pro, a post-trained Kimi K3 with weights promised by November 4",

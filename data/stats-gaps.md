@@ -1151,3 +1151,8 @@ Stats-filler sweep on 2026-10-13 (re-check of "re-check" rows from 2026-09-22 �
 | kimi-k3-1-pro | maxOutput / knowledgeCutoff | 2026-10-26 | not stated in Moonshot's blog, Kimi Code docs or AA's page; platform.kimi.ai pricing table didn't render on fetch |
 | kimi-k3-1-pro | mmluPro / aime | 2026-10-26 | retired benchmarks; not in Moonshot's table |
 | dessa | all benchmarks / pricing / contextWindow / maxOutput / costPerTask / speed | 2026-10-26 | voice model, research preview: block.xyz/dessa publishes no benchmarks, size, latency figure or price; no API |
+| gpt-6-1-terra | gpqaDiamond / sweBench / sweBenchPro / hle / gdpvalAA | 2026-10-27 | not in OpenAI's launch charts (Agents' Last Exam, MMMU-Pro, OSWorld 2.1, Terminal-Bench 4.0, Terminal-Bench Science 0.1 instead) or the system-card addendum; AA's page names HLE/GPQA/GDPval but shows no values for this model a day after launch — re-check |
+| gpt-6-1-terra | terminalBench | 2026-10-27 | only Terminal-Bench 4.0 exists (OpenAI 50.3% max), not the tracked 2.1; kept in notes |
+| gpt-6-1-terra | lmarenaElo / arcAgi2 | 2026-10-27 | no arena.ai listing or ARC Prize results page found a day after launch — re-check |
+| gpt-6-1-terra | speed | 2026-10-27 | Artificial Analysis lists output speed as unknown on both the medium and max pages at launch — re-check |
+| gpt-6-1-terra | mmluPro / aime | 2026-10-27 | retired benchmarks; not in OpenAI's launch material |
