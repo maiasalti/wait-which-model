@@ -415,8 +415,8 @@
     "country": "Singapore",
     "founded": null,
     "website": "https://agnes-ai.com",
-    "color": "#96458B",
-    "notable": true,
+    "color": null,
+    "notable": false,
     "order": 42
   },
   {
@@ -680,6 +680,36 @@
     "order": 68
   },
   {
+    "id": "recursive",
+    "name": "Recursive",
+    "country": "United Kingdom",
+    "founded": null,
+    "website": "https://recursive.com",
+    "color": "#D8742E",
+    "notable": true,
+    "order": 70
+  },
+  {
+    "id": "krafton",
+    "name": "Krafton",
+    "country": "South Korea",
+    "founded": 2018,
+    "website": "https://www.krafton.com",
+    "color": "#3A8FC9",
+    "notable": true,
+    "order": 71
+  },
+  {
+    "id": "inception",
+    "name": "Inception",
+    "country": "United States",
+    "founded": null,
+    "website": "https://www.inceptionlabs.ai",
+    "color": "#4AA36A",
+    "notable": true,
+    "order": 69
+  },
+  {
     "id": "block",
     "name": "Block",
     "country": "United States",
@@ -687,6 +717,36 @@
     "website": "https://block.xyz",
     "color": null,
     "notable": false,
-    "order": 69
+    "order": 75
+  },
+  {
+    "id": "pixverse",
+    "name": "PixVerse",
+    "country": "Singapore",
+    "founded": 2023,
+    "website": "https://pixverse.ai",
+    "color": "#007744",
+    "notable": true,
+    "order": 74
+  },
+  {
+    "id": "heygen",
+    "name": "HeyGen",
+    "country": null,
+    "founded": null,
+    "website": "https://www.heygen.com",
+    "color": "#8A6FD1",
+    "notable": true,
+    "order": 73
+  },
+  {
+    "id": "nanbeige",
+    "name": "Nanbeige",
+    "country": "China",
+    "founded": null,
+    "website": "https://huggingface.co/Nanbeige",
+    "color": "#648026",
+    "notable": true,
+    "order": 72
   }
 ]

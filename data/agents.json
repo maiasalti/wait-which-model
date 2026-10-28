@@ -32,6 +32,64 @@
     "notes": "Notable: frontier-lab developer (Anthropic). Announced 2026-10-21 as a research preview; invitations go out in waves from the waitlist. Apps for iOS and Android; the announcement also lists claude.ai. Users can't choose the model — Duet picks the effort level itself. Blocked even with approval: trading securities, moving money between accounts, accessing someone else's account. Anthropic says it may misjudge urgency and is weaker at personal errands than work tasks. Product page: https://claude.com/product/claude-duet."
   },
   {
+    "id": "devin-oncall",
+    "name": "Devin Oncall",
+    "company": "cognition",
+    "releaseDate": "2026-10-15",
+    "notable": false,
+    "description": "Cognition's on-call agent that triages alerts, bug reports and incidents from Slack, Microsoft Teams and PagerDuty, finds the root cause from telemetry, code and deployments, and opens a fix PR.",
+    "strengths": [
+      "Per-responder memory; writes debugging skills from the org's own integrations",
+      "Joins incident channels and keeps a self-updating incident report",
+      "Vendor-reported ~60% of investigations skipped by reusing prior work and grouping related alerts"
+    ],
+    "weaknesses": [
+      "One-time per-organisation setup before responders work",
+      "No Oncall price or model published"
+    ],
+    "links": {
+      "official": "https://devin.ai/blog/introducing-devin-oncall",
+      "docs": "https://docs.devin.ai/product-guides/devin-oncall"
+    },
+    "domain": "coding",
+    "underlyingModels": [],
+    "access": "ga",
+    "pricing": {
+      "plan": null,
+      "notes": "No Oncall-specific pricing found. Devin's plans are Free, Pro, Max, Teams and Enterprise with usage-based quotas; Enterprise is billed in ACUs."
+    },
+    "notes": "Not notable: non-frontier developer. Cognition reports 100% end-to-end success on SREGym from its own evaluation, but SREGym is not one of the rule's leaderboards (SWE-bench, GAIA, BrowseComp, OSWorld), and CloudThinker also shows 100% on the public SREGym leaderboard. Launch post dated 2026-10-15 says it is generally available. AngelList replaced its in-house harness with it (vendor-reported). Product page: https://devin.ai/oncall."
+  },
+  {
+    "id": "gemini-agent-work",
+    "name": "Gemini agent",
+    "company": "google",
+    "releaseDate": "2026-10-08",
+    "notable": true,
+    "description": "Google Cloud's single agent for work: given an objective rather than instructions, it plans the job, creates temporary sub-agents, works inside Workspace and connected business systems, and can act as a team 'coworker agent' with its own identity.",
+    "strengths": [
+      "Routes each job across Gemini and Anthropic Claude models",
+      "Coworker agents get their own Workspace account, email address, calendar and Drive",
+      "Jobs can be scheduled or triggered by events"
+    ],
+    "weaknesses": [
+      "Not publicly available yet; Google points customers to sales",
+      "No price published"
+    ],
+    "links": {
+      "official": "https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026",
+      "docs": null
+    },
+    "domain": "general",
+    "underlyingModels": [],
+    "access": "waitlist",
+    "pricing": {
+      "plan": null,
+      "notes": "No pricing published. Google describes built-in cost controls through per-job model routing."
+    },
+    "notes": "Notable: frontier-lab developer (Google). Announced 2026-10-08 at Gemini at Work 2026 (Google Cloud blog; blog.google 'Google Cloud introduces the Gemini agent'). Google's 'What the Gemini agent means for startups' post says the new capabilities are not publicly available yet and to contact sales, so access is 'waitlist' as the closest schema value (as for Copilot Autopilot). Industry versions for Financial Services and Legal are in preview. Google says it orchestrates 'across our Gemini family of models and Claude models from Anthropic' without naming versions, so underlyingModels is empty. Reachable from web, iOS, Android, Windows and Mac per the announcement. Distinct from the consumer Gemini Spark and from the 2025 Gemini app 'Gemini Agent' (features.json gemini-agent). Press reports (CNBC, Bloomberg; not used) say private preview with GA targeted for the end of October in North America; not confirmed on a Google page."
+  },
+  {
     "id": "openai-dots",
     "name": "dots",
     "company": "openai",
@@ -105,21 +163,21 @@
       "Free for most use, per Meta"
     ],
     "weaknesses": [
-      "US only at launch",
+      "Limited regions: US, Canada, Japan and Singapore",
       "Meta states the architecture does not prevent Meta from accessing data when necessary to operate the service"
     ],
     "links": {
       "official": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
-      "docs": null
+      "docs": "https://ai.meta.com/muse/"
     },
     "domain": "general",
     "underlyingModels": [],
     "access": "ga",
     "pricing": {
-      "plan": null,
-      "notes": "'Free for most of what people need, with subscription plans for people who want to do more' — no plan names or prices published."
+      "plan": "Free; Power $20/mo",
+      "notes": "Free with a usage limit; Power $20/mo (500M Muse tokens/week) and Maximum $100/mo (3B Muse tokens/week), per Meta's 'About Muse subscriptions' help page, which says Muse and its subscriptions are in limited testing and not available in all locations."
     },
-    "notes": "Notable: frontier-lab developer (Meta). Meta says Muse runs on 'Muse Spark' without a version number, so it is not mapped to a specific muse-spark-1-x id. Meta's 2026-10-12 Muse Wonder post says Muse Wonder 'will soon power experiences in Muse', rolling out first to subscribers — once confirmed live, muse-wonder could be added. Announcement updated 2026-09-30. Separate from the July 2026 Meta AI app task features (Muse Spark 1.1)."
+    "notes": "Notable: frontier-lab developer (Meta). Meta says Muse runs on 'Muse Spark' without a version number, so it is not mapped to a specific muse-spark-1-x id. Meta's 2026-10-12 Muse Wonder post says Muse Wonder 'will soon power experiences in Muse', rolling out first to subscribers — once confirmed live, muse-wonder could be added. Announcement updated 2026-09-30. Separate from the July 2026 Meta AI app task features (Muse Spark 1.1). Launched in the US and Canada; Japan 2026-10-23 (first market outside North America, with Mercari, Money Forward ME and Ticket Pia connectors) and Singapore 2026-10-28 (Shopee, Grab, Singapore Airlines and others)."
   },
   {
     "id": "grok-bot",
@@ -147,9 +205,41 @@
     "access": "beta",
     "pricing": {
       "plan": "Included with SuperGrok and Cursor Pro plans",
-      "notes": "Included with all SuperGrok tiers and Cursor Pro/Pro+/Ultra and Teams plans (expanded 2026-08-26). Weekly usage allowance; on-demand usage billed by model and token cost. Enterprise waitlist/rolling out."
+      "notes": "Included with all SuperGrok tiers and Cursor Pro/Pro+/Ultra and Teams plans (expanded 2026-08-26). Weekly usage allowance; on-demand usage billed by model and token cost. Available to every Enterprise team from 2026-09-25."
     },
-    "notes": "Notable: frontier-lab developer (xAI). Runs on Cursor's cloud infrastructure; onboarding and plans route through Cursor. No model named on any xAI page fetched."
+    "notes": "Notable: frontier-lab developer (xAI). Runs on Cursor's cloud infrastructure; onboarding and plans route through Cursor. No model named on any xAI page fetched. Grok Voice 3.0 (2026-10-14) powers Grok Bot's voice mode; xAI still names no model for the Bot itself."
+  },
+  {
+    "id": "chatgpt-work",
+    "name": "ChatGPT Work",
+    "company": "openai",
+    "releaseDate": "2026-07-09",
+    "notable": true,
+    "description": "Agent mode in ChatGPT for longer tasks: takes a goal, works across connected apps and files, stays with a project for hours if needed, and returns finished documents, spreadsheets, presentations and reports.",
+    "strengths": [
+      "Scheduled, triggered or monitoring tasks",
+      "Desktop app version can use local files and apps and has a built-in browser",
+      "Asks for approval on important actions as it works"
+    ],
+    "weaknesses": [
+      "Not on Free or Go",
+      "Highest effort levels limited to Pro and Enterprise"
+    ],
+    "links": {
+      "official": "https://openai.com/index/chatgpt-for-your-most-ambitious-work/",
+      "docs": "https://help.openai.com/articles/20001275"
+    },
+    "domain": "general",
+    "underlyingModels": [
+      "gpt-6-1-sol",
+      "gpt-6-1-terra"
+    ],
+    "access": "ga",
+    "pricing": {
+      "plan": "Plus $20/mo",
+      "notes": "Included in Plus ($20/mo), Pro (Pro 100/200/500 at $100/$200/$500 per month), Business, Enterprise and Edu; not Free or Go. Enterprise/Edu owners enable new models in workspace settings."
+    },
+    "notes": "Notable: frontier-lab developer (OpenAI). Backfill: launched 2026-07-09 and missed by earlier agent runs (it is already in features.json). Launched on 'GPT-5.6' with no variant named; rolled out first to Pro, Enterprise and Edu, then Plus and Business. Model additions: GPT-6 Sol and Luna 2026-09-22; GPT-6.1 Sol 2026-09-29 (launch post: available 'in ChatGPT Work and Codex'); Ultrafast mode for GPT-6.1 Sol 2026-10-08 (Pro $500, eligible Enterprise/Edu); GPT-6.1 Terra 2026-10-26 (ChatGPT & Codex changelog). Users choose among OpenAI models, a vendor-only lineup as with Codex; no source names Work's default. The 2025 'Introducing ChatGPT agent' post is marked outdated and points to ChatGPT Work."
   },
   {
     "id": "claude-tag",
@@ -207,7 +297,7 @@
       "plan": "Usage-based",
       "notes": "Microsoft says Cowork, Code and Autopilot run on usage-based billing; no rates published."
     },
-    "notes": "Not notable: Microsoft is not in the frontier-lab list and no benchmark published. Launched 2026-06-02 as 'Microsoft Scout' (experimental, Frontier program + select private-preview customers); renamed Autopilot in the 2026-09-25 'new Copilot' announcement, which says it is 'expanding to private preview at the end of the month'. Mapped to 'waitlist' as the closest schema value for private preview."
+    "notes": "Not notable: Microsoft is not in the frontier-lab list and no benchmark published. Launched 2026-06-02 as 'Microsoft Scout' (experimental, Frontier program + select private-preview customers); renamed Autopilot in the 2026-09-25 'new Copilot' announcement, which says it is 'expanding to private preview at the end of the month'. Mapped to 'waitlist' as the closest schema value for private preview. Microsoft's Copilot page now lists Autopilot as 'Available in Private Preview'; Microsoft says it will come to Outlook and Teams and be in preview for Microsoft 365 Premium and Pro subscribers later in 2026."
   },
   {
     "id": "minimax-mavis",
@@ -266,7 +356,7 @@
       "plan": "Google AI Pro or Ultra subscription",
       "notes": "Launched as beta for US Ultra; US Pro added 2026-07-16; Ultra expanded to all Gemini languages 2026-07-14."
     },
-    "notes": "Notable: frontier-lab developer (Google). Launched 2026-05-19 running 'on Gemini 3.5' with the Antigravity harness; Google's 2026-08-13 Gemini 3.7 Flash post says Spark 'will be using Gemini 3.7 Flash starting today'. The current Gemini help page heads it 'Gemini Spark (now called Task)' and says 'Since May, we've been testing Spark in beta' — access set to 'ga' on that basis, but Google has not published a rename/GA announcement; the 'What's new for Gemini Spark' page (to 2026-07-17) does not mention a rename. Help page also says the user can change Gemini model from the model menu. Relationship to the Nov 2025 'Gemini Agent' (agent mode) is not stated anywhere I found."
+    "notes": "Notable: frontier-lab developer (Google). Launched 2026-05-19 running 'on Gemini 3.5' with the Antigravity harness; Google's 2026-08-13 Gemini 3.7 Flash post says Spark 'will be using Gemini 3.7 Flash starting today'. The current Gemini help page heads it 'Gemini Spark (now called Task)' and says 'Since May, we've been testing Spark in beta' — access set to 'ga' on that basis, but Google has not published a rename/GA announcement; the 'What's new for Gemini Spark' page (to 2026-07-17) does not mention a rename. Help page also says the user can change Gemini model from the model menu. Relationship to the Nov 2025 'Gemini Agent' (agent mode) is not stated anywhere I found. Google's Gemini Apps Privacy Hub (updated 2026-10-23) calls it 'Tasks in Gemini (formerly known as Spark)'."
   },
   {
     "id": "replit-agent",
@@ -314,7 +404,7 @@
     ],
     "links": {
       "official": "https://www.perplexity.ai/hub/blog/introducing-perplexity-computer",
-      "docs": null
+      "docs": "https://www.perplexity.ai/help-center/en/articles/13837784-what-is-computer"
     },
     "domain": "general",
     "underlyingModels": [
@@ -325,7 +415,7 @@
       "plan": "Perplexity Pro or Max",
       "notes": "Launched for Max; extended to all Pro subscribers on web and iOS in March 2026. Credit-based usage."
     },
-    "notes": "Not notable: non-frontier developer; launch post cites only Perplexity's own DRACO benchmark. Borderline harness: users can choose the orchestrator model and prompt it to use any of the 20+ models for subagents. underlyingModels reflects the 2026-08-24 changelog: GPT-5.6 Terra is the default subagent model (also selectable as orchestrator); GPT-5.6 Luna (gpt-5-6-luna) handles scheduled automations. Launch orchestrator was Opus 4.6 (not in models.json); GPT-5.5 became default orchestrator in May 2026."
+    "notes": "Not notable: non-frontier developer; launch post cites only Perplexity's own DRACO benchmark. Borderline harness: users can choose the orchestrator model and prompt it to use any of the 20+ models for subagents. underlyingModels reflects the 2026-08-24 changelog: GPT-5.6 Terra is the default subagent model (also selectable as orchestrator); GPT-5.6 Luna (gpt-5-6-luna) handles scheduled automations. Launch orchestrator was Opus 4.6 (not in models.json); GPT-5.5 became default orchestrator in May 2026. Since 2026-10-20 Computer can run fully local on Apple-silicon Macs (model, harness and execution on device; Qwen 3.6 and PPLX Pro as local options) for Pro, Max and Enterprise."
   },
   {
     "id": "chrome-auto-browse",
@@ -413,7 +503,7 @@
       "plan": "Pro $20/mo",
       "notes": "Pro $20/mo ($17/mo annual); Max 5x $100/mo; Max 20x $200/mo; Team $20/seat/mo; Enterprise contact sales."
     },
-    "notes": "Notable: frontier-lab developer (Anthropic). Launched 2026-01-12 (Max, macOS) as a research preview; GA on macOS and Windows 2026-04-09; web and mobile 2026-07-07. Per the 2026-09-16 release note and product page, Cowork is 'now simply Claude' — its capabilities available from any conversation, rolling out to Pro and Max. Product page does not name a model (user can pick among Claude models)."
+    "notes": "Notable: frontier-lab developer (Anthropic). Launched 2026-01-12 (Max, macOS) as a research preview; GA on macOS and Windows 2026-04-09; web and mobile 2026-07-07. Per the 2026-09-16 release note and product page, Cowork is 'now simply Claude' — its capabilities available from any conversation, rolling out to Pro and Max. Product page does not name a model (user can pick among Claude models). Enterprise: unified chat and Cowork GA 2026-10-23, off by default for existing orgs until it turns on 2026-11-16; not for zero-data-retention, HIPAA-ready or customer-managed-key orgs; new 'Efficient mode' keeps it on Sonnet and Haiku."
   },
   {
     "id": "kimi-agent",
@@ -619,14 +709,15 @@
     "domain": "coding",
     "underlyingModels": [
       "gpt-6-1-sol",
-      "gpt-6-luna"
+      "gpt-6-luna",
+      "gpt-6-1-terra"
     ],
     "access": "ga",
     "pricing": {
       "plan": "Plus $20/mo",
       "notes": "Plus $20; Pro $100/$200/$500; Business $20–25/user/mo; Enterprise/Edu contact sales. Business Codex seats credit-based."
     },
-    "notes": "Notable: frontier-lab developer (OpenAI). Research preview 2025-05-16 on codex-1 (o3-based). underlyingModels are the models the current pricing page lists for Plus (GPT-6.1 Sol, GPT-6 Luna); GPT-6 Astra and others also listed for higher plans; GPT-5.5 retires from Codex 2026-10-14. Users choose among OpenAI models (vendor-only lineup). Codex CLI is a separate harness entry."
+    "notes": "Notable: frontier-lab developer (OpenAI). Research preview 2025-05-16 on codex-1 (o3-based). underlyingModels are the models the current pricing page lists for Plus (GPT-6.1 Sol, GPT-6 Luna); GPT-6 Astra and others also listed for higher plans; GPT-5.5 retires from Codex 2026-10-14. Users choose among OpenAI models (vendor-only lineup). Codex CLI is a separate harness entry. GPT-6.1 Terra added to Codex 2026-10-26 for Plus, Pro, Business, Enterprise and Edu."
   },
   {
     "id": "genspark-super-agent",

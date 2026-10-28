@@ -685,7 +685,7 @@ Weekly release-scan sweep on 2026-09-15, scoped to `deepseek-v4-1-flash` (2026-0
 | deepseek-v4-1-flash | sweBenchPro | 2026-09-15 | not in DeepSeek's launch table; not on the Scale SWE-bench Pro public leaderboard as of 2026-09-15 |
 | deepseek-v4-1-flash | aime | 2026-09-15 | not published by DeepSeek (reports MathArena Apex 65.6 and Codeforces 3471 instead); AA's index no longer carries AIME |
 | deepseek-v4-1-flash | lmarenaElo | 2026-09-15 | no V4.1-Flash listing on arena.ai's text leaderboard (only deepseek-v4-pro variants, ranks 50/57); Design Arena's 1347 is a different arena — **superseded 2026-10-08: arena.ai text board now lists deepseek-v4.1-flash-max at 1474 ±7; filled** |
-| deepseek-v4-1-flash | arcAgi2 | 2026-09-15 | ARC Prize has verified V4-Flash-0731 (61.4%) but has no V4.1-Flash results page (arcprize.org/results/deepseek-v4-1-flash returns 404) |
+| deepseek-v4-1-flash | arcAgi2 | 2026-09-15 | ARC Prize has verified V4-Flash-0731 (61.4%) but has no V4.1-Flash results page (arcprize.org/results/deepseek-v4-1-flash returns 404) — **superseded 2026-10-27: ARC Prize verified result published — filled** |
 | deepseek-v4-1-flash | knowledgeCutoff | 2026-09-15 | not disclosed in DeepSeek's HF card, API docs or launch post; AA's model page records knowledgeCutoffDate null |
 | jev | gpqaDiamond, sweBench, sweBenchPro, terminalBench, hle, lmarenaElo, gdpvalAA, arcAgi2, mmluPro, aime | 2026-09-21 | not applicable, not merely unpublished: Jev is a typed-decision model that cannot generate text, so no generative benchmark can be run on it; independent evals (priorbench/jev, scienthoon/jev-ood-calibration, beri.net) measure classification accuracy and calibration only |
 | jev | maxOutput | 2026-09-21 | no output-token limit published; output is a fixed set of typed values, not a token stream, and output tokens are unmetered |
@@ -953,7 +953,7 @@ New-model release run on 2026-10-01 (Gemini 4 Argon, GPT-6.1 Sol). Sources: Goog
 | gemini-4-argon | sweBench / sweBenchPro | 2026-10-01 | Google reports DeepSWE v1.1 77.9% and FrontierSWE v2 55.0% instead; no SWE-bench Verified or Pro figure anywhere primary |
 | gemini-4-argon | terminalBench | 2026-10-01 | only Terminal-Bench 4.0 exists (Google 57.4%, AA 57%), not the tracked 2.1 |
 | gemini-4-argon | gdpvalAA | 2026-10-01 | AA rates it 1611 (high) on GDPval-AA v2.1 — a different scale from the v2 this key records; migrate the key before using it |
-| gemini-4-argon | arcAgi2 | 2026-10-01 | not on arcprize.org/results the day after launch; restricted rollout — re-check |
+| gemini-4-argon | arcAgi2 | 2026-10-01 | not on arcprize.org/results the day after launch; restricted rollout — re-check — **superseded 2026-10-27: ARC Prize verified result published — filled** |
 | gemini-4-argon | contextWindow | 2026-10-01 | Google has not disclosed the input context window; AA's "1M" is not an official figure — re-check once a Gemini API model page exists — **superseded 2026-10-15: Gemini 4 Argon went GA on 2026-10-13; the Gemini API model page gives a unified 1,048,576-token window (filled)** |
 | gemini-4-argon | knowledgeCutoff | 2026-10-01 | not stated in Google's announcement; no model card published — re-check — **superseded 2026-10-15: the DeepMind model card now states a March 2026 cutoff (filled as 2026-03)** |
 | gemini-4-argon | mmluPro / aime | 2026-10-01 | retired benchmarks; not in Google's table |
@@ -1047,7 +1047,7 @@ Stats-filler sweep on 2026-10-06 (daily sweep, unattended). WebFetch was denied 
 | kolibri-1 | lmarenaElo | 2026-10-06 | re-checked: no arena.ai listing or Arena post found |
 | gemini-4-argon | contextWindow | 2026-10-06 | re-checked: Google still has not published an input context window (coverage stresses only the 1M *output* limit); AA's 1M remains unofficial and no Gemini API model page exists — re-check |
 | gemini-4-argon | knowledgeCutoff | 2026-10-06 | re-checked: still no model card; third-party pages state the cutoff is unpublished |
-| gemini-4-argon | arcAgi2 | 2026-10-06 | re-checked: no ARC Prize result or post found |
+| gemini-4-argon | arcAgi2 | 2026-10-06 | re-checked: no ARC Prize result or post found — **superseded 2026-10-27: ARC Prize verified result published — filled** |
 | claude-sonnet-5-5 | arcAgi2 | 2026-10-06 | re-checked: ARC Prize has posted Opus 5.5 (93.3% high) but nothing for Sonnet 5.5 |
 | grok-4-7 | arcAgi2 / lmarenaElo / terminalBench | 2026-10-06 | re-checked: ARC Prize pages exist for Grok 4.5 and 4.6 only; no arena text listing; not on Vals' TB 2.1 board (Vals no longer runs 2.1 on new releases) |
 | step-5-preview | terminalBench | 2026-10-06 | DataLearner/BenchLM claim "Terminal-Bench v2.1 85.0%", but StepFun's launch table lists Terminal-Bench 4.0 33.3% and no 2.1 row; the tracker figure has no traceable primary or leaderboard source — rejected |
@@ -1078,13 +1078,13 @@ Daily sweep 2026-10-08 (unattended; WebFetch denied except AWS and Claude docs, 
 | claude-haiku-5-5 | terminalBench | 2026-10-08 | Anthropic's figure is Terminal-Bench 4.0, not the tracked 2.1; no 2.1 run found |
 | claude-haiku-5-5 | gdpvalAA | 2026-10-08 | only a GDPval-AA v2.1 figure is reported; the tracked key is v2 |
 | claude-haiku-5-5 | lmarenaElo | 2026-10-08 | not on the arena.ai text board one day after launch — re-check |
-| claude-haiku-5-5 | arcAgi2 | 2026-10-08 | no arcprize.org results page one day after launch — re-check |
+| claude-haiku-5-5 | arcAgi2 | 2026-10-08 | no arcprize.org results page one day after launch — re-check — **superseded 2026-10-27: ARC Prize verified result published — filled** |
 | gpt-6-1-sol | lmarenaElo | 2026-10-08 | conflicting: excerpts attribute "gpt-6.1-sol-max 1483 ±11" to both the default and the no-style-control text board, and a mirror shows 1445.6; default-board figure not pinned — re-check |
 | gpt-6-luna | lmarenaElo | 2026-10-08 | arena.ai's changelog says gpt-6-luna-max joined the Text Arena (2026-09-30), but only a Coding-category score surfaced — re-check |
 | grok-4-7 | lmarenaElo | 2026-10-08 | arena.ai's changelog says grok-4.7-xhigh joined the Text Arena (2026-09-30), but no score surfaced — re-check |
 | kolibri-1 | lmarenaElo | 2026-10-08 | still no Kolibri listing on arena.ai five days after release — re-check |
 | gemini-4-argon | contextWindow, knowledgeCutoff | 2026-10-08 | re-checked: Google still publishes no model card, context or cutoff (Fairwind-only access) — re-check at broader rollout |
-| gemini-4-argon | arcAgi2 | 2026-10-08 | re-checked: no arcprize.org results page for Argon |
+| gemini-4-argon | arcAgi2 | 2026-10-08 | re-checked: no arcprize.org results page for Argon — **superseded 2026-10-27: ARC Prize verified result published — filled** |
 | claude-sonnet-5-5 | arcAgi2 | 2026-10-08 | re-checked: ARC Prize has posted Opus 5.5 but no Sonnet 5.5 results page |
 
 New-model release protocol, 2026-10-09 sweep: Beam (Reflection AI), d1-3B and d1-omni-600M (Liquid AI). WebFetch denied all session; sources are WebSearch excerpts.
@@ -1109,7 +1109,7 @@ Stats-filler sweep on 2026-10-13 (re-check of "re-check" rows from 2026-09-22 �
 | mistral-large-4 | lmarenaElo | 2026-10-13 | arena.ai changelog (excerpt) says mistral-large-4 was added to the Text Arena on 2026-10-08, but no score surfaced. lmmarketcap.com's "1280" looks auto-generated and was rejected |
 | gemini-4-argon | contextWindow | 2026-10-13 | still undisclosed by Google. Every 1M figure traces to Artificial Analysis or Arena, and one outlet reports an unconfirmed 2M. Still no Gemini API model page or model card |
 | gemini-4-argon | knowledgeCutoff | 2026-10-13 | still unpublished (no model card; postcutoff.com and eesel.ai both say Google has not disclosed it) |
-| gemini-4-argon | arcAgi2 | 2026-10-13 | no arcprize.org results entry found; access is still limited to the Fairwind trusted-tester programme |
+| gemini-4-argon | arcAgi2 | 2026-10-13 | no arcprize.org results entry found; access is still limited to the Fairwind trusted-tester programme — **superseded 2026-10-27: ARC Prize verified result published — filled** |
 | claude-sonnet-5-5 | gdpvalAA | 2026-10-13 | Artificial Analysis rates it 1844, per officechai.com and metricnexus.ai (published 2026-09-28), next to Opus 5.5's 1846. The 1846 is the GDPval-AA **v2.1** figure already ledgered for Opus 5.5, so 1844 is v2.1 too, a different scale from the v2 this key records. Belongs in notes, not the key |
 | ling-3-1-flash | pricing | 2026-10-13 | sources conflict. Artificial Analysis' providers page (excerpt) gives InclusionAI at $0.30 / $0.90 per MTok; llmbase.ai gives $0.07 / $0.22; OpenCode and Vercel-based listings still show $0 (the trial). No Ant/InclusionAI pricing page surfaced. Re-check after the trial ends (~10-14) |
 | kolibri-1 | lmarenaElo | 2026-10-13 | still not listed on arena.ai (no changelog entry seen) |
@@ -1126,13 +1126,13 @@ Stats-filler sweep on 2026-10-13 (re-check of "re-check" rows from 2026-09-22 �
 | deepseek-v4-1-flash-1017 | terminalBench | 2026-10-18 | only a Terminal-Bench 4.0 score (42.3) was reported; this field is Terminal-Bench 2.1 only per style guide, so left null and the 4.0 figure recorded in notes instead |
 | deepseek-v4-1-flash-1017 | lmarenaElo | 2026-10-18 | not reported; not yet on LMArena's leaderboard as of 2026-10-18 |
 | deepseek-v4-1-flash-1017 | gdpvalAA | 2026-10-18 | Artificial Analysis had not measured this specific checkpoint as of 2026-10-18 |
-| deepseek-v4-1-flash-1017 | arcAgi2 | 2026-10-18 | not reported anywhere found |
-| deepseek-v4-1-flash-1017 | costPerTask | 2026-10-18 | Artificial Analysis had not published an Intelligence Index cost figure for this checkpoint as of 2026-10-18 |
-| deepseek-v4-1-flash-1017 | speed | 2026-10-18 | Artificial Analysis had not measured this specific checkpoint as of 2026-10-18 |
+| deepseek-v4-1-flash-1017 | costPerTask | 2026-10-18 | Artificial Analysis had not published an Intelligence Index cost figure for this checkpoint as of 2026-10-18 — **superseded 2026-10-20: AA now lists $0.26 (max), filled** |
+| deepseek-v4-1-flash-1017 | speed | 2026-10-18 | Artificial Analysis had not measured this specific checkpoint as of 2026-10-18 — **superseded 2026-10-20: AA now lists 230.4 t/s / 1.08s (max), filled** |
+| deepseek-v4-1-flash-1017 | arcAgi2 | 2026-10-18 | not reported anywhere found — **superseded 2026-10-27: ARC Prize verified result published — filled** |
 | deepseek-v4-1-flash-1017 | knowledgeCutoff | 2026-10-18 | not published by DeepSeek for this checkpoint; DataLearner also lists "no data" |
 | claude-haiku-5-5 | gpqaDiamond / sweBench / sweBenchPro / terminalBench | 2026-10-19 | not in Anthropic's launch table (anthropic.com/news/claude-haiku-5-5), which reports Terminal-Bench 4.0 (39.2%) not 2.1; vals.ai lists only Terminal-Bench 4.0 (36.4%), Terminal-Bench-Science and SWE-bench Multimodal; system card PDF too large to fetch |
 | claude-haiku-5-5 | gdpvalAA | 2026-10-19 | Anthropic reports GDPval-AA v2.1 (1620), not the tracked v2; kept in notes |
-| claude-haiku-5-5 | lmarenaElo / arcAgi2 | 2026-10-19 | no arena.ai listing or ARC Prize entry found 12 days after launch; re-check |
+| claude-haiku-5-5 | lmarenaElo / arcAgi2 | 2026-10-19 | no arena.ai listing or ARC Prize entry found 12 days after launch; re-check — **arcAgi2 half superseded 2026-10-27: ARC Prize verified result published — filled; lmarenaElo still open** |
 | nemotron-3-5-super-vl | lmarenaElo / arcAgi2 / aime | 2026-10-19 | not in NVIDIA's model-card table (which reports an 'LMArena v3 proxy' 52.67, not an Arena Elo); no arena.ai listing or ARC Prize entry |
 | nemotron-3-5-super-vl | mmluPro | 2026-10-19 | retired key; card reports MMLU-ProX 76.91, not MMLU-Pro |
 | nemotron-3-5-super-vl | maxOutput / knowledgeCutoff | 2026-10-19 | HF card states no output cap (examples use 16,384) and gives a 2013–Dec 2025 data-collection period rather than a cutoff |
@@ -1156,3 +1156,78 @@ Stats-filler sweep on 2026-10-13 (re-check of "re-check" rows from 2026-09-22 �
 | gpt-6-1-terra | lmarenaElo / arcAgi2 | 2026-10-27 | no arena.ai listing or ARC Prize results page found a day after launch — re-check |
 | gpt-6-1-terra | speed | 2026-10-27 | Artificial Analysis lists output speed as unknown on both the medium and max pages at launch — re-check |
 | gpt-6-1-terra | mmluPro / aime | 2026-10-27 | retired benchmarks; not in OpenAI's launch material |
+| grok-voice-3-0 | gpqaDiamond / sweBench / sweBenchPro / terminalBench / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-10-20 | not applicable, not merely unpublished: a speech-to-speech model; xAI's launch (x.ai/news/grok-voice-3) reports only audio suites (AA Speech-to-Speech Index, Big Bench Audio, Speech Agent Arena Elo 1070, Full Duplex Bench, τ-Voice), and the Speech Agent Arena Elo is not the LMArena text Elo |
+| grok-voice-3-0 | pricing | 2026-10-20 | not per-token: docs.x.ai/developers/pricing lists Speech to Speech (grok-voice-3.0) at $0.08/min ($4.80/hr) plus $0.004 per text input; no per-MTok rate exists |
+| grok-voice-3-0 | contextWindow / maxOutput / knowledgeCutoff | 2026-10-20 | not stated on docs.x.ai (models page, voice overview, speech-to-speech guide, rate limits; S2S is limited by concurrent sessions only); the 500k context and May 2026 cutoff in search results belong to text models Grok 4.6/4.7 |
+| grok-voice-3-0 | costPerTask | 2026-10-20 | not applicable: no Artificial Analysis Intelligence Index run for a speech model; xAI's "cost to complete a task" claim refers to AA's Big Bench Audio, a different measure |
+| d1-3b | gpqaDiamond / sweBench / sweBenchPro / terminalBench / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-10-20 | not applicable, not merely unpublished: typed-decision model that cannot generate text (same as clef / jev); Liquid reports only its own decision-format dataset means |
+| d1-omni-600m | gpqaDiamond / sweBench / sweBenchPro / terminalBench / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-10-20 | same as d1-3b |
+| helixworld | gpqaDiamond / sweBench / sweBenchPro / terminalBench / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-10-20 | not applicable: interactive world model (video + audio generator); Noiz reports only HelixBench / WBench |
+| helixworld | contextWindow / maxOutput / pricing / knowledgeCutoff / costPerTask | 2026-10-20 | not applicable: no token interface, no public API or price, no AA Intelligence Index run |
+| mistral-large-4 | lmarenaElo | 2026-10-20 | re-checked: Arena's changelog confirms Text, Agent and WebDev listings, and Arena's own post gives WebDev 1534 (#45), but no first-party Text score surfaced; BenchLeader's "Arena Text 1432 (#106)" and Lindy's "#112 on 10-13" are third-party relays. Arena says open-model ranking follows the end-of-October weights; re-check then |
+| kolibri-1 | lmarenaElo | 2026-10-20 | re-checked: still no Kolibri listing on arena.ai or in the Arena changelog |
+| gpt-4-1 | costPerTask | 2026-10-20 | AA model-page excerpts give speed and price but no cost to run the Intelligence Index; AA's index figures for it conflict across versions (13 estimated vs 19/20), so no single cost anchor |
+| gemini-2-5-pro | costPerTask | 2026-10-20 | already filled (0.1978) — not touched; AA excerpts now give a $0.23–0.33 per-task range across snapshots, possibly from a newer index version. Flagged only, no correction proposed |
+| minimax-m3-1-flash | maxOutput | 2026-10-20 | the Messages API reference gives max 524,288 / recommended 131,072, but names MiniMax-M3.1-Flash-Preview; not confirmed for the GA id |
+| minimax-m3-1-flash | gpqaDiamond / sweBench / sweBenchPro / terminalBench / hle / arcAgi2 / mmluPro / aime | 2026-10-20 | MiniMax reports only OSWorld V2 61.7, ALE 29.6, DeepSWE v1.1 73.7, BankerToolBench 76.2 and CyberGym ~82; HLE claimed relative to DeepSeek V4.1 Flash with no figure; an aiintoai "SWE-bench Verified 73.8%" is for the Preview, untraceable, rejected |
+| minimax-m3-1-flash | lmarenaElo | 2026-10-20 | only the Code Arena WebDev listing (1588) exists; no text-arena listing yet |
+| minimax-m3-1-flash | knowledgeCutoff | 2026-10-20 | not in the blog, docs or AA excerpts |
+| minimax-m3-1-flash | gdpvalAA | 2026-10-20 | AA lists v2.1-era evals only; no v2 figure |
+| mercury-3 | gpqaDiamond | 2026-10-21 | Inception's table (medium effort) gives 89.23, but only as copied by MarkTechPost, BenchLM, cellcog.ai and FourWeekMBA. Two domain-restricted searches of inceptionlabs.ai returned the post without the table, and WebFetch was denied. A direct read of the blog would settle it. |
+| mercury-3 | sweBench / sweBenchPro / terminalBench / hle / arcAgi2 / mmluPro / aime | 2026-10-21 | Not reported. Inception's 12-test table covers GPQA Diamond, IFBench, SWE-Bench Atlas, MultiChallenge, MRCR v2 and DeepSWE v1, none of them tracked apart from GPQA. |
+| mercury-3 | lmarenaElo | 2026-10-21 | No arena.ai text listing found. Only a Design Arena game-dev Elo (1204) appears, which isn't comparable. |
+| mercury-3 | gdpvalAA / costPerTask | 2026-10-21 | No Artificial Analysis page yet (AA lists Mercury 2 / 2.5 only, per excerpts the day after launch) |
+| mercury-3 | knowledgeCutoff | 2026-10-21 | Not in blog, docs or OpenRouter excerpts |
+| clairic | all benchmarks | 2026-10-21 | Not applicable, not merely unpublished: typed-value extraction model that generates no text. Cloudflare reports only its own pipeline and forecasting examples. |
+| clairic | maxOutput | 2026-10-21 | No output-token limit exists; output is typed values, not a token stream |
+| clairic | knowledgeCutoff | 2026-10-21 | Not disclosed in the blog, changelog or Workers AI model page |
+| clairic | costPerTask | 2026-10-21 | No Artificial Analysis coverage at launch |
+| flint | pricing / costPerTask | 2026-10-22 | no hosted API or OpenRouter listing found; no Artificial Analysis page found |
+| flint | maxOutput | 2026-10-22 | HF card documents only the 262,144 shared context; 32768 is an example max_tokens, not a cap |
+| flint | gpqaDiamond / hle / mmluPro / aime | 2026-10-22 | not in the model-card or MarkTechPost excerpts read (WebFetch denied, so the full table was not read); re-check when the card can be fetched |
+| flint | sweBenchPro | 2026-10-22 | card reports 'SWE-bench Pro v2' 89.7%, not the public split tracked here; logged in notes |
+| flint | lmarenaElo / gdpvalAA / arcAgi2 | 2026-10-22 | no arena.ai listing, GDPval-AA figure or ARC Prize entry found |
+| raon-1-mini-preview | pricing / costPerTask | 2026-10-22 | no hosted API (limited-time playground only); no Artificial Analysis page found |
+| raon-1-mini-preview | maxOutput / knowledgeCutoff | 2026-10-22 | not stated on the HF card or raon-mini.krafton.ai; 32768 is an example max_tokens |
+| raon-1-mini-preview | terminalBench | 2026-10-22 | card reports 'Terminal-Bench Lite' 47.0 only, not 2.1; logged in notes |
+| raon-1-mini-preview | hle / sweBenchPro / aime | 2026-10-22 | not in the HF card benchmark table |
+| raon-1-mini-preview | lmarenaElo / gdpvalAA / arcAgi2 | 2026-10-22 | no arena.ai listing, GDPval-AA figure or ARC Prize entry found |
+| claude-opus-4-5 | costPerTask | 2026-10-22 | AA Claude Opus 4.5 (Reasoning) page lists cost per task as "Unknown" (page deprecated); only the launch-article total (~$1.5k on the old index) exists — not a per-task figure, not derivable |
+| gemini-3-pro | costPerTask | 2026-10-22 | AA Gemini 3 Pro Preview (high) page: cost per task "Not publicly available"; model shut down 2026-03-09 |
+| grok-4-1 | costPerTask | 2026-10-22 | no AA page for the base Grok 4.1 (only the separate Grok 4.1 Fast; see spec-gaps grok-4-1 · speed · 2026-10-15) |
+| kimi-k2-thinking | costPerTask | 2026-10-22 | AA K2 Thinking model and comparison pages show no cost per task; launch article gives only index totals ($356 base endpoint; $380–$1,172 by endpoint) on an older index — not derivable |
+| deepseek-v3-2 | costPerTask | 2026-10-22 | AA has V3.2 Exp Reasoning and Non-reasoning pages; no cost-per-task figure surfaced for either |
+| qwen3-max | costPerTask | 2026-10-22 | AA Qwen3 Max page shows no cost-per-task figure (page deprecated) |
+| kimi-k2 | costPerTask | 2026-10-22 | AA Kimi K2 page: cost to run the Intelligence Index "not publicly available" (page deprecated) |
+| grok-4 | costPerTask | 2026-10-22 | AA Grok 4 page lists cost per Intelligence Index task as N/A (page ~469 days old) |
+| claude-opus-4-1 | costPerTask | 2026-10-22 | AA Claude 4.1 Opus page: per-task cost not shown; deprecated, only the 10k workload is still benchmarked |
+| mistral-medium-3 | costPerTask | 2026-10-22 | no AA cost-per-task figure surfaced (provider and comparison pages only) |
+
+
+Stats-filler sweep on 2026-10-27 (daily sweep, unattended). WebFetch was denied; findings rest on WebSearch excerpts restricted to arena.ai / news.lmarena.ai / x.com/arena, arcprize.org results pages and x.com/arcprize, labs.scale.com SWE-Bench Pro leaderboards and artificialanalysis.ai. Fills: arcAgi2 on gemini-4-argon (91.3), claude-haiku-5-5 (61.3), deepseek-v4-1-flash-1017 (78.1) and deepseek-v4-1-flash (72.9), all from ARC Prize verified results pages.
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| claude-haiku-5-5 | lmarenaElo | 2026-10-27 | Arena's changelog says "Claude Haiku 5.5 (High)" was added to Text Arena on 2026-10-22, but no Text score surfaced in arena.ai / news.lmarena.ai / x.com/arena excerpts; only Code Arena WebDev #30 (1587) and Agent Arena #27, neither of which is the tracked text Elo. Re-check |
+| claude-sonnet-5-5 | arcAgi2 | 2026-10-27 | still no arcprize.org results page; ARC Prize has posted Opus 5.5, Haiku 5.5, Fable 5.1, Argon, Astra and DeepSeek 1017 but not Sonnet 5.5 |
+| muse-wonder | arcAgi2 | 2026-10-27 | no arcprize.org results page found; Arena lists Muse Wonder (Max) in Agent Arena only |
+| mistral-large-4 | lmarenaElo | 2026-10-27 | Arena's weekly post gives Agent Arena #43 only; still no first-party Text Arena score. Weights now due 2026-10-31 (HF "Upcoming release" ETA); re-check after |
+| gemini-4-argon | sweBenchPro | 2026-10-27 | Scale's board now shows Argon only on SWE-Bench Pro **V2** (labs.scale.com/leaderboard/swe_bench_pro_public_v2: 99.22 ±0.45 full 642-task set, 92.16 hard 51-task subset, mini-swe-agent, high). V2 (2026-09-22) drops 89 invalid tasks and disables web tools, so it isn't the public split the key tracks. Not filled pending a benchmark-key decision |
+
+New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanbeige4-3-33b` (2026-10-25); its `gpt-6-1-terra` rows were dropped when merging, as main already carries that model and its own ledger rows. WebFetch was denied; findings rest on WebSearch excerpts restricted to openai.com, developers.openai.com, deploymentsafety.openai.com, docs.aws.amazon.com, artificialanalysis.ai, huggingface.co and the labs' X accounts.
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| nanbeige4-3-33b | sweBench | 2026-10-27 | model card's coding row is SWE-bench Pro (60.3), no Verified figure |
+| nanbeige4-3-33b | hle | 2026-10-27 | no HLE row in the HF card excerpts or coverage |
+| nanbeige4-3-33b | gdpvalAA | 2026-10-27 | card reports a "GDPval" of 84.8 from Nanbeige's own run, not Artificial Analysis' Elo; kept in notes |
+| nanbeige4-3-33b | lmarenaElo / arcAgi2 | 2026-10-27 | no arena.ai listing or ARC Prize result |
+| nanbeige4-3-33b | mmluPro | 2026-10-27 | retired; not in the card |
+| nanbeige4-3-33b | pricing / costPerTask / speed | 2026-10-27 | no hosted API or OpenRouter listing at publication; AA hasn't benchmarked it |
+| nanbeige4-3-33b | maxOutput / knowledgeCutoff | 2026-10-27 | card gives recommended max-new-tokens settings (65,536 agentic / 262,144 reasoning), not a cap; cutoff unpublished |
+| d1-2b | pricing / costPerTask / knowledgeCutoff / maxOutput | 2026-10-28 | weights-only checkpoint with no hosted price; decision model (no output tokens); no cutoff published |
+| d1-2b | contextWindow (exact integer) | 2026-10-28 | HF card says "128K"; recorded 128000; config.json not read — 131072 possible |
+| d1-omni-2b | pricing / costPerTask / knowledgeCutoff / maxOutput | 2026-10-28 | same as d1-2b |
+| d1-omni-2b | contextWindow (exact integer) | 2026-10-28 | same as d1-2b |
+| d1-ultra | contextWindow | 2026-10-28 | not stated in Liquid's blog/docs/pricing excerpts; OpenRouter and Vercel list 32,768 (third-party), kept in notes |
+| d1-ultra | costPerTask / knowledgeCutoff / maxOutput | 2026-10-28 | decision model with no output tokens; AA Decision Index has no cost-per-Intelligence-Index-task figure; no cutoff published |

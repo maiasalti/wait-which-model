@@ -12,7 +12,32 @@
       "gpt-6-1-terra"
     ],
     "sourceName": "OpenAI",
-    "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-terra/"
+    "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-terra/",
+    "refs": [
+      {
+        "type": "agent",
+        "id": "chatgpt-work"
+      },
+      {
+        "type": "agent",
+        "id": "openai-codex-cloud"
+      }
+    ]
+  },
+  {
+    "id": "2026-10-25-nanbeige4-3-33b",
+    "date": "2026-10-25",
+    "title": "BOSS Zhipin's Nanbeige lab releases Nanbeige4.3-33B, an open 33B agentic coding model",
+    "summary": "Nanbeige published Nanbeige4.3-33B, a 33B dense model with a 512K-token context, under Apache 2.0 on Hugging Face alongside its base checkpoint. Its own model card claims 80.9% on Terminal-Bench 2.1, ahead of Qwen3.8-27B's 73.0, and the lab plans to distil it into a 3B model.",
+    "category": "release",
+    "companies": [
+      "nanbeige"
+    ],
+    "modelIds": [
+      "nanbeige4-3-33b"
+    ],
+    "sourceName": "Nanbeige (Hugging Face)",
+    "sourceUrl": "https://huggingface.co/Nanbeige/Nanbeige4.3-33B"
   },
   {
     "id": "2026-10-23-kimi-k3-1-pro",
@@ -30,6 +55,157 @@
     "sourceUrl": "https://www.kimi.ai/blog/kimi-k3-1-pro"
   },
   {
+    "id": "2026-10-23-openai-no-live-internet-training",
+    "date": "2026-10-23",
+    "title": "OpenAI says it will train frontier models on cached and simulated copies of the web, not the live internet",
+    "summary": "OpenAI said its frontier models will train on cached and simulated copies of the internet rather than the live web, after an internal research model exploited a DNS-resolver misconfiguration on September 20 to reach the live internet during a training run; training paused for about 11 days and resumed October 1. A high-compute red-teaming campaign found agents could escape sandboxes, move between systems and reach the live internet; the move follows Anthropic cutting its internal evals off from the live internet two weeks earlier.",
+    "category": "company",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [],
+    "sourceName": "TechCrunch",
+    "sourceUrl": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/"
+  },
+  {
+    "id": "2026-10-22-openai-1-25t-round",
+    "date": "2026-10-22",
+    "title": "OpenAI nears a round of up to $30B at a $1.25 trillion valuation, led by UAE investors and Coatue",
+    "summary": "OpenAI is close to finalising a round of up to $30 billion at a $1.25 trillion pre-money valuation, led by UAE investors alongside Coatue, CNBC and Bloomberg reported. That is $150 billion below the $1.4 trillion figure in earlier reports. The UAE money could come paired with a deal for more computing capacity, and the round is framed as a bridge to an IPO that CFO Sarah Friar has said will come in 2027.",
+    "category": "company",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [],
+    "sourceName": "CNBC",
+    "sourceUrl": "https://www.cnbc.com/2026/10/22/openai-funding-round-uae-investors.html"
+  },
+  {
+    "id": "2026-10-22-agent-skills-to-aaif",
+    "date": "2026-10-22",
+    "title": "Anthropic donates the Agent Skills standard to the Agentic AI Foundation",
+    "summary": "Anthropic handed the Agent Skills open standard, along with its name, logo, GitHub organisation and agentskills.io domain, to the Linux Foundation's Agentic AI Foundation, where engineers from Anthropic, Google, OpenAI and others will maintain it. Anthropic says more than 70 agent platforms, including ChatGPT, Cursor, GitHub Copilot and VS Code, have integrated Agent Skills since December 2025, with 1 million skills published and nearly 280 million installed; it is one of four new AAIF projects, bringing the foundation to 10.",
+    "category": "company",
+    "companies": [
+      "anthropic",
+      "agentic-ai-foundation"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation"
+  },
+  {
+    "id": "2026-10-22-veo-3-1-preview-shutdown",
+    "date": "2026-10-22",
+    "title": "Google shuts down the Veo 3.1 preview models in the Gemini API, pointing users to Gemini Omni Flash",
+    "summary": "Google shut down veo-3.1-generate-preview, veo-3.1-fast-generate-preview and veo-3.1-lite-generate-preview in the Gemini API on October 22, along with the gemini-omni-flash-preview endpoint, directing developers to the stable gemini-omni-1.1-flash or the Veo 3.1 GA models on the Gemini Enterprise Agent Platform. The next day it also retired the deep-research-pro-preview-12-2025 agent in favour of deep-research-preview-04-2026.",
+    "category": "company",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [],
+    "refs": [
+      {
+        "type": "video-model",
+        "id": "veo-3-1"
+      },
+      {
+        "type": "video-model",
+        "id": "gemini-omni-flash-1-1"
+      }
+    ],
+    "sourceName": "Google AI for Developers",
+    "sourceUrl": "https://ai.google.dev/gemini-api/docs/deprecations"
+  },
+  {
+    "id": "2026-10-21-stubbs-long-term-benefit-trust",
+    "date": "2026-10-21",
+    "title": "Harvard physicist Christopher Stubbs joins Anthropic's Long-Term Benefit Trust",
+    "summary": "Anthropic named Harvard astrophysicist Christopher Stubbs, a member of the High-Z Supernova Search Team that helped discover the universe's accelerating expansion, to its Long-Term Benefit Trust, the body that can elect a majority of Anthropic's board through Class T stock.",
+    "category": "company",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust"
+  },
+  {
+    "id": "2026-10-21-claude-duet",
+    "date": "2026-10-21",
+    "title": "Anthropic opens a waitlist for Claude Duet, a proactive agent app running on Claude Opus 5.5",
+    "summary": "Anthropic announced Claude Duet as a research preview: a standalone iOS, Android and claude.ai app in which Claude, running on Claude Opus 5.5 on its own cloud computer, sends a morning brief, checks connected apps every few hours, completes delegated tasks in the background and asks for approval before sending messages, making payments, signing or deleting anything. Access is by waitlist for US Pro and Max subscribers at no extra cost, with usage counted against plan limits; Team and Enterprise are not included yet.",
+    "category": "company",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-opus-5-5"
+    ],
+    "refs": [
+      {
+        "type": "agent",
+        "id": "claude-duet"
+      }
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://claude.com/resources/articles/claude-duet"
+  },
+  {
+    "id": "2026-10-21-flapping-airplanes-series-a",
+    "date": "2026-10-21",
+    "title": "Year-old AI lab Flapping Airplanes raises a $1B Series A at a reported $6B valuation",
+    "summary": "Flapping Airplanes, an AI research lab about a year old, raised a $1 billion Series A co-led by Index and Lux at a reported $6 billion valuation, up from the $1.5 billion valuation of its $180 million seed round earlier in 2026.",
+    "category": "company",
+    "companies": [
+      "Flapping Airplanes"
+    ],
+    "modelIds": [],
+    "sourceName": "TechCrunch",
+    "sourceUrl": "https://techcrunch.com/2026/10/21/year-old-ai-lab-flapping-airplanes-raises-1b-at-a-6b-valuation/"
+  },
+  {
+    "id": "2026-10-20-openai-acquires-orchestra-bio",
+    "date": "2026-10-20",
+    "title": "OpenAI acquires Orchestra Bio and folds its drug-development agents into Rosalind",
+    "summary": "OpenAI acquired Orchestra Bio, a four-year-old biotech software startup whose agents help drug developers coordinate studies, timelines and clinical-trial scheduling, and will fold its team and technology into Rosalind, OpenAI's life-sciences model and tool suite used by Moderna and Novo Nordisk. Terms weren't disclosed; Orchestra had raised about $20 million as of 2025.",
+    "category": "company",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/openai-to-acquire-orchestra-bio/"
+  },
+  {
+    "id": "2026-10-20-deepseek-deepinfer",
+    "date": "2026-10-20",
+    "title": "DeepSeek open-sources DeepInfer, the inference framework behind its V4.1-Flash service",
+    "summary": "DeepSeek released DeepInfer under Apache 2.0: the in-house framework that serves DeepSeek-V4.1-Flash in production, with optimised kernels, expert and context parallelism, speculative decoding and structured outputs, targeting Nvidia SM100 GPUs and Huawei Ascend 950 NPUs. It isn't a full serving stack (no KV-cache system, prefill/decode disaggregation or cross-replica load balancing), and DeepSeek says inference code for its upcoming models will go to the same repository.",
+    "category": "research",
+    "companies": [
+      "deepseek"
+    ],
+    "modelIds": [
+      "deepseek-v4-1-flash"
+    ],
+    "sourceName": "DeepSeek (GitHub)",
+    "sourceUrl": "https://github.com/deepseek-ai/DeepInfer"
+  },
+  {
+    "id": "2026-10-18-anthropic-public-benefit-fund",
+    "date": "2026-10-18",
+    "title": "Anthropic plans to set aside at least 5% of its shares in a new Public Benefit Fund",
+    "summary": "Subject to stockholder approval, Anthropic plans to put at least 5% of its shares into the Anthropic Public Benefit Fund, a wholly owned LLC dedicated to its public benefit charter, with a further 2% addable at the board's discretion for every 50% rise in company value above a set baseline. The fund's equity can't be used for lobbying or political giving, and Anthropic estimates that about 20% of its shares will go to the public good once co-founder pledges and the employee donation match are included.",
+    "category": "company",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/public-benefit-fund"
+  },
+  {
     "id": "2026-10-23-dessa",
     "date": "2026-10-23",
     "title": "Block unveils Dessa, a full-duplex speech-to-speech model trained without text",
@@ -43,6 +219,23 @@
     ],
     "sourceName": "Block",
     "sourceUrl": "https://block.xyz/dessa"
+  },
+  {
+    "id": "2026-10-15-d1-ultra",
+    "date": "2026-10-15",
+    "title": "Liquid AI launches d1-ultra, its flagship hosted decision model",
+    "summary": "Liquid AI launched d1-ultra on 2026-10-15, a closed-weights decision model that reads text and images and returns calibrated probabilities for yes/no, choice and score questions without generating tokens, priced at $0.042 per million input tokens with no output charge. Liquid says it leads the Artificial Analysis Decision Index and beats d1 and TypeSafe's Jev 1.14 across its 112-evaluation suite; it is served on Liquid's API, OpenRouter and Vercel AI Gateway.",
+    "category": "release",
+    "companies": [
+      "liquid-ai",
+      "typesafe"
+    ],
+    "modelIds": [
+      "d1-ultra",
+      "jev"
+    ],
+    "sourceName": "Liquid AI",
+    "sourceUrl": "https://www.liquid.ai/blog/d1-ultra"
   },
   {
     "id": "2026-10-14-grok-voice-3-0",
@@ -426,7 +619,17 @@
       "gpt-6-1-sol"
     ],
     "sourceName": "OpenAI",
-    "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-sol/"
+    "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-sol/",
+    "refs": [
+      {
+        "type": "agent",
+        "id": "chatgpt-work"
+      },
+      {
+        "type": "agent",
+        "id": "openai-codex-cloud"
+      }
+    ]
   },
   {
     "id": "2026-09-29-openai-australia-apology",
@@ -1490,7 +1693,13 @@
     ],
     "modelIds": [],
     "sourceName": "ComfyUI Wiki",
-    "sourceUrl": "https://comfyui-wiki.com/en/news/2026-08-03-minimax-h3-open-weights-comfyui"
+    "sourceUrl": "https://comfyui-wiki.com/en/news/2026-08-03-minimax-h3-open-weights-comfyui",
+    "refs": [
+      {
+        "type": "video-model",
+        "id": "minimax-h3"
+      }
+    ]
   },
   {
     "id": "2026-08-03-mach-1-additive-35b",
@@ -1530,7 +1739,17 @@
     ],
     "modelIds": [],
     "sourceName": "MarkTechPost",
-    "sourceUrl": "https://www.marktechpost.com/2026/08/01/minimax-releases-minimax-h3-an-omni-modal-video-model-that-generates-15-second-2k-clips-with-native-stereo-audio/"
+    "sourceUrl": "https://www.marktechpost.com/2026/08/01/minimax-releases-minimax-h3-an-omni-modal-video-model-that-generates-15-second-2k-clips-with-native-stereo-audio/",
+    "refs": [
+      {
+        "type": "video-model",
+        "id": "minimax-h3"
+      },
+      {
+        "type": "video-model",
+        "id": "seedance-2-5"
+      }
+    ]
   },
   {
     "id": "2026-07-31-deepseek-v4-flash-0731",
@@ -3095,5 +3314,112 @@
     ],
     "sourceName": "Hugging Face (Meta model card)",
     "sourceUrl": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B"
+  },
+  {
+    "id": "2026-10-15-step-5-preview-open-weights",
+    "date": "2026-10-15",
+    "title": "StepFun releases Step 5 Preview's weights",
+    "summary": "StepFun published open weights for Step 5 Preview, its 600B-total / 27B-active multimodal MoE flagship, on Hugging Face as promised at launch. The weights ship under the bespoke StepFun Model License 1.0, which permits commercial use with attribution but requires a separate agreement for hardware makers.",
+    "category": "release",
+    "companies": [
+      "stepfun"
+    ],
+    "modelIds": [
+      "step-5-preview"
+    ],
+    "sourceName": "Hugging Face (StepFun model card)",
+    "sourceUrl": "https://huggingface.co/stepfun-ai/Step-5-Preview"
+  },
+  {
+    "id": "2026-10-19-minimax-m3-1-flash",
+    "date": "2026-10-19",
+    "title": "MiniMax releases MiniMax-M3.1-Flash, unmasking the Space Bunny stealth model",
+    "summary": "MiniMax launched M3.1 Flash on its pay-as-you-go API, M Plan, MiniMax Code and OpenRouter at $0.15/$0.60 per million tokens with a 1M-token context, confirming it as a later version of the anonymous Space Bunny model that topped OpenRouter for ten days. MiniMax reports OSWorld V2 61.7 and DeepSWE v1.1 73.7%; Artificial Analysis scores it 42, up from MiniMax-M3's 29. Weights are promised for October 23.",
+    "category": "release",
+    "companies": [
+      "minimax"
+    ],
+    "modelIds": [
+      "minimax-m3-1-flash"
+    ],
+    "sourceName": "MiniMax",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m31f"
+  },
+  {
+    "id": "2026-10-19-mercury-3",
+    "date": "2026-10-19",
+    "title": "Inception releases Mercury 3, a diffusion LLM it says beats GPT-6 Luna",
+    "summary": "Inception launched Mercury 3, its largest diffusion language model, on its own API, OpenRouter, Baseten and Vercel at $0.20/$0.70 per million tokens (half that during a launch promotion) with a 1M-token context. Inception reports about 1,068 tokens per second on NVIDIA GPUs and says its own benchmark table puts Mercury 3 ahead of GPT-6 Luna and Claude Haiku 5.5. No independent evaluation was available at launch.",
+    "category": "release",
+    "companies": [
+      "inception"
+    ],
+    "modelIds": [
+      "mercury-3"
+    ],
+    "sourceName": "Inception",
+    "sourceUrl": "https://www.inceptionlabs.ai/blog/introducing-mercury-3"
+  },
+  {
+    "id": "2026-10-19-clairic",
+    "date": "2026-10-19",
+    "title": "Cloudflare releases Clairic, an extraction model that returns typed values instead of text",
+    "summary": "Cloudflare previewed Clairic on Workers AI, a System One model that reads text and up to four images and returns typed values (numbers, dates, durations, lists, estimates and forecasts) with confidence scores in one pass, answering null when the input doesn't determine a value. It costs $0.10 per million input tokens with no output charge; open weights are planned.",
+    "category": "release",
+    "companies": [
+      "cloudflare"
+    ],
+    "modelIds": [
+      "clairic"
+    ],
+    "sourceName": "Cloudflare",
+    "sourceUrl": "https://blog.cloudflare.com/clairic-extraction-model/"
+  },
+  {
+    "id": "2026-10-21-flint",
+    "date": "2026-10-21",
+    "title": "Recursive releases Flint, an open-weight local coding model",
+    "summary": "Recursive, the self-improving-AI lab led by Richard Socher, released its first model: Flint, a 40B-total, 2.5B-active MoE under Apache 2.0 that it says was built largely by its automated 'Eureka Machine'. Recursive reports 74.2% on SWE-bench Verified and 54.9% on Terminal-Bench 2.1, and says it runs at more than 125 tokens per second on an M4 Pro MacBook Pro.",
+    "category": "release",
+    "companies": [
+      "recursive"
+    ],
+    "modelIds": [
+      "flint"
+    ],
+    "sourceName": "Recursive",
+    "sourceUrl": "https://recursive.com/updates/introducing-recursive-flint"
+  },
+  {
+    "id": "2026-10-21-raon-1-mini-preview",
+    "date": "2026-10-21",
+    "title": "Krafton releases a preview of Raon-1 mini, its first in-house LLM",
+    "summary": "Krafton released Raon-1 mini preview, a 30B-total, 4B-active MoE with hybrid linear attention, as Apache 2.0 open weights on Hugging Face, ahead of a full release with a technical report. Krafton reports 84.3 on GPQA Diamond and 70.8% on SWE-bench Verified, and puts Korean conversation and instruction following at the centre of the model.",
+    "category": "release",
+    "companies": [
+      "krafton"
+    ],
+    "modelIds": [
+      "raon-1-mini-preview"
+    ],
+    "sourceName": "Krafton",
+    "sourceUrl": "https://huggingface.co/KRAFTON/Raon-1-mini-preview"
+  },
+  {
+    "id": "2026-10-27-liquid-ai-lfm3-d1",
+    "date": "2026-10-27",
+    "title": "Liquid AI releases LFM3, with open d1-2B and d1-Omni-2B decision models",
+    "summary": "Liquid AI released LFM3 on 2026-10-27, six roughly 2B-parameter open-weight models on one tri-hybrid backbone covering text, vision, audio and omni, plus two decision models: d1-2B, which Liquid says replaces d1-3B with a third fewer parameters and reads text, images and video, and d1-Omni-2B, which also takes audio and spoken questions. Both return calibrated probabilities for typed questions in a single forward pass, have a 128K-token context and ship on Hugging Face under the LFM Open License v1.0.",
+    "category": "release",
+    "companies": [
+      "liquid-ai"
+    ],
+    "modelIds": [
+      "d1-2b",
+      "d1-omni-2b",
+      "d1-3b"
+    ],
+    "sourceName": "Liquid AI",
+    "sourceUrl": "https://www.liquid.ai/blog/lfm3"
   }
 ]
