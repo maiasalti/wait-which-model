@@ -680,6 +680,26 @@
     "order": 68
   },
   {
+    "id": "recursive",
+    "name": "Recursive",
+    "country": "United Kingdom",
+    "founded": null,
+    "website": "https://recursive.com",
+    "color": "#D8742E",
+    "notable": true,
+    "order": 70
+  },
+  {
+    "id": "krafton",
+    "name": "Krafton",
+    "country": "South Korea",
+    "founded": 2018,
+    "website": "https://www.krafton.com",
+    "color": "#3A8FC9",
+    "notable": true,
+    "order": 71
+  },
+  {
     "id": "inception",
     "name": "Inception",
     "country": "United States",
