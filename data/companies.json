@@ -415,8 +415,8 @@
     "country": "Singapore",
     "founded": null,
     "website": "https://agnes-ai.com",
-    "color": "#96458B",
-    "notable": true,
+    "color": null,
+    "notable": false,
     "order": 42
   },
   {
@@ -718,5 +718,25 @@
     "color": null,
     "notable": false,
     "order": 69
+  },
+  {
+    "id": "heygen",
+    "name": "HeyGen",
+    "country": null,
+    "founded": null,
+    "website": "https://www.heygen.com",
+    "color": "#8A6FD1",
+    "notable": true,
+    "order": 73
+  },
+  {
+    "id": "nanbeige",
+    "name": "Nanbeige",
+    "country": "China",
+    "founded": null,
+    "website": "https://huggingface.co/Nanbeige",
+    "color": "#648026",
+    "notable": true,
+    "order": 72
   }
 ]

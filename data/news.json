@@ -15,6 +15,21 @@
     "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-terra/"
   },
   {
+    "id": "2026-10-25-nanbeige4-3-33b",
+    "date": "2026-10-25",
+    "title": "BOSS Zhipin's Nanbeige lab releases Nanbeige4.3-33B, an open 33B agentic coding model",
+    "summary": "Nanbeige published Nanbeige4.3-33B, a 33B dense model with a 512K-token context, under Apache 2.0 on Hugging Face alongside its base checkpoint. Its own model card claims 80.9% on Terminal-Bench 2.1, ahead of Qwen3.8-27B's 73.0, and the lab plans to distil it into a 3B model.",
+    "category": "release",
+    "companies": [
+      "nanbeige"
+    ],
+    "modelIds": [
+      "nanbeige4-3-33b"
+    ],
+    "sourceName": "Nanbeige (Hugging Face)",
+    "sourceUrl": "https://huggingface.co/Nanbeige/Nanbeige4.3-33B"
+  },
+  {
     "id": "2026-10-23-kimi-k3-1-pro",
     "date": "2026-10-23",
     "title": "Moonshot AI releases Kimi K3.1 Pro, a post-trained Kimi K3 with weights promised by November 4",
@@ -1641,7 +1656,13 @@
     ],
     "modelIds": [],
     "sourceName": "ComfyUI Wiki",
-    "sourceUrl": "https://comfyui-wiki.com/en/news/2026-08-03-minimax-h3-open-weights-comfyui"
+    "sourceUrl": "https://comfyui-wiki.com/en/news/2026-08-03-minimax-h3-open-weights-comfyui",
+    "refs": [
+      {
+        "type": "video-model",
+        "id": "minimax-h3"
+      }
+    ]
   },
   {
     "id": "2026-08-03-mach-1-additive-35b",
@@ -1681,7 +1702,17 @@
     ],
     "modelIds": [],
     "sourceName": "MarkTechPost",
-    "sourceUrl": "https://www.marktechpost.com/2026/08/01/minimax-releases-minimax-h3-an-omni-modal-video-model-that-generates-15-second-2k-clips-with-native-stereo-audio/"
+    "sourceUrl": "https://www.marktechpost.com/2026/08/01/minimax-releases-minimax-h3-an-omni-modal-video-model-that-generates-15-second-2k-clips-with-native-stereo-audio/",
+    "refs": [
+      {
+        "type": "video-model",
+        "id": "minimax-h3"
+      },
+      {
+        "type": "video-model",
+        "id": "seedance-2-5"
+      }
+    ]
   },
   {
     "id": "2026-07-31-deepseek-v4-flash-0731",
