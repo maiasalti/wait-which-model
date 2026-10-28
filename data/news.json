@@ -3095,5 +3095,35 @@
     ],
     "sourceName": "Hugging Face (Meta model card)",
     "sourceUrl": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B"
+  },
+  {
+    "id": "2026-10-15-step-5-preview-open-weights",
+    "date": "2026-10-15",
+    "title": "StepFun releases Step 5 Preview's weights",
+    "summary": "StepFun published open weights for Step 5 Preview, its 600B-total / 27B-active multimodal MoE flagship, on Hugging Face as promised at launch. The weights ship under the bespoke StepFun Model License 1.0, which permits commercial use with attribution but requires a separate agreement for hardware makers.",
+    "category": "release",
+    "companies": [
+      "stepfun"
+    ],
+    "modelIds": [
+      "step-5-preview"
+    ],
+    "sourceName": "Hugging Face (StepFun model card)",
+    "sourceUrl": "https://huggingface.co/stepfun-ai/Step-5-Preview"
+  },
+  {
+    "id": "2026-10-19-minimax-m3-1-flash",
+    "date": "2026-10-19",
+    "title": "MiniMax releases MiniMax-M3.1-Flash, unmasking the Space Bunny stealth model",
+    "summary": "MiniMax launched M3.1 Flash on its pay-as-you-go API, M Plan, MiniMax Code and OpenRouter at $0.15/$0.60 per million tokens with a 1M-token context, confirming it as a later version of the anonymous Space Bunny model that topped OpenRouter for ten days. MiniMax reports OSWorld V2 61.7 and DeepSWE v1.1 73.7%; Artificial Analysis scores it 42, up from MiniMax-M3's 29. Weights are promised for October 23.",
+    "category": "release",
+    "companies": [
+      "minimax"
+    ],
+    "modelIds": [
+      "minimax-m3-1-flash"
+    ],
+    "sourceName": "MiniMax",
+    "sourceUrl": "https://www.minimax.io/blog/minimax-m31f"
   }
 ]

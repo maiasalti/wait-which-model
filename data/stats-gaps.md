@@ -1127,8 +1127,8 @@ Stats-filler sweep on 2026-10-13 (re-check of "re-check" rows from 2026-09-22 �
 | deepseek-v4-1-flash-1017 | lmarenaElo | 2026-10-18 | not reported; not yet on LMArena's leaderboard as of 2026-10-18 |
 | deepseek-v4-1-flash-1017 | gdpvalAA | 2026-10-18 | Artificial Analysis had not measured this specific checkpoint as of 2026-10-18 |
 | deepseek-v4-1-flash-1017 | arcAgi2 | 2026-10-18 | not reported anywhere found |
-| deepseek-v4-1-flash-1017 | costPerTask | 2026-10-18 | Artificial Analysis had not published an Intelligence Index cost figure for this checkpoint as of 2026-10-18 |
-| deepseek-v4-1-flash-1017 | speed | 2026-10-18 | Artificial Analysis had not measured this specific checkpoint as of 2026-10-18 |
+| deepseek-v4-1-flash-1017 | costPerTask | 2026-10-18 | Artificial Analysis had not published an Intelligence Index cost figure for this checkpoint as of 2026-10-18 — **superseded 2026-10-20: AA now lists $0.26 (max), filled** |
+| deepseek-v4-1-flash-1017 | speed | 2026-10-18 | Artificial Analysis had not measured this specific checkpoint as of 2026-10-18 — **superseded 2026-10-20: AA now lists 230.4 t/s / 1.08s (max), filled** |
 | deepseek-v4-1-flash-1017 | knowledgeCutoff | 2026-10-18 | not published by DeepSeek for this checkpoint; DataLearner also lists "no data" |
 | claude-haiku-5-5 | gpqaDiamond / sweBench / sweBenchPro / terminalBench | 2026-10-19 | not in Anthropic's launch table (anthropic.com/news/claude-haiku-5-5), which reports Terminal-Bench 4.0 (39.2%) not 2.1; vals.ai lists only Terminal-Bench 4.0 (36.4%), Terminal-Bench-Science and SWE-bench Multimodal; system card PDF too large to fetch |
 | claude-haiku-5-5 | gdpvalAA | 2026-10-19 | Anthropic reports GDPval-AA v2.1 (1620), not the tracked v2; kept in notes |
@@ -1156,3 +1156,20 @@ Stats-filler sweep on 2026-10-13 (re-check of "re-check" rows from 2026-09-22 �
 | gpt-6-1-terra | lmarenaElo / arcAgi2 | 2026-10-27 | no arena.ai listing or ARC Prize results page found a day after launch — re-check |
 | gpt-6-1-terra | speed | 2026-10-27 | Artificial Analysis lists output speed as unknown on both the medium and max pages at launch — re-check |
 | gpt-6-1-terra | mmluPro / aime | 2026-10-27 | retired benchmarks; not in OpenAI's launch material |
+| grok-voice-3-0 | gpqaDiamond / sweBench / sweBenchPro / terminalBench / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-10-20 | not applicable, not merely unpublished: a speech-to-speech model; xAI's launch (x.ai/news/grok-voice-3) reports only audio suites (AA Speech-to-Speech Index, Big Bench Audio, Speech Agent Arena Elo 1070, Full Duplex Bench, τ-Voice), and the Speech Agent Arena Elo is not the LMArena text Elo |
+| grok-voice-3-0 | pricing | 2026-10-20 | not per-token: docs.x.ai/developers/pricing lists Speech to Speech (grok-voice-3.0) at $0.08/min ($4.80/hr) plus $0.004 per text input; no per-MTok rate exists |
+| grok-voice-3-0 | contextWindow / maxOutput / knowledgeCutoff | 2026-10-20 | not stated on docs.x.ai (models page, voice overview, speech-to-speech guide, rate limits; S2S is limited by concurrent sessions only); the 500k context and May 2026 cutoff in search results belong to text models Grok 4.6/4.7 |
+| grok-voice-3-0 | costPerTask | 2026-10-20 | not applicable: no Artificial Analysis Intelligence Index run for a speech model; xAI's "cost to complete a task" claim refers to AA's Big Bench Audio, a different measure |
+| d1-3b | gpqaDiamond / sweBench / sweBenchPro / terminalBench / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-10-20 | not applicable, not merely unpublished: typed-decision model that cannot generate text (same as clef / jev); Liquid reports only its own decision-format dataset means |
+| d1-omni-600m | gpqaDiamond / sweBench / sweBenchPro / terminalBench / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-10-20 | same as d1-3b |
+| helixworld | gpqaDiamond / sweBench / sweBenchPro / terminalBench / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-10-20 | not applicable: interactive world model (video + audio generator); Noiz reports only HelixBench / WBench |
+| helixworld | contextWindow / maxOutput / pricing / knowledgeCutoff / costPerTask | 2026-10-20 | not applicable: no token interface, no public API or price, no AA Intelligence Index run |
+| mistral-large-4 | lmarenaElo | 2026-10-20 | re-checked: Arena's changelog confirms Text, Agent and WebDev listings, and Arena's own post gives WebDev 1534 (#45), but no first-party Text score surfaced; BenchLeader's "Arena Text 1432 (#106)" and Lindy's "#112 on 10-13" are third-party relays. Arena says open-model ranking follows the end-of-October weights; re-check then |
+| kolibri-1 | lmarenaElo | 2026-10-20 | re-checked: still no Kolibri listing on arena.ai or in the Arena changelog |
+| gpt-4-1 | costPerTask | 2026-10-20 | AA model-page excerpts give speed and price but no cost to run the Intelligence Index; AA's index figures for it conflict across versions (13 estimated vs 19/20), so no single cost anchor |
+| gemini-2-5-pro | costPerTask | 2026-10-20 | already filled (0.1978) — not touched; AA excerpts now give a $0.23–0.33 per-task range across snapshots, possibly from a newer index version. Flagged only, no correction proposed |
+| minimax-m3-1-flash | maxOutput | 2026-10-20 | the Messages API reference gives max 524,288 / recommended 131,072, but names MiniMax-M3.1-Flash-Preview; not confirmed for the GA id |
+| minimax-m3-1-flash | gpqaDiamond / sweBench / sweBenchPro / terminalBench / hle / arcAgi2 / mmluPro / aime | 2026-10-20 | MiniMax reports only OSWorld V2 61.7, ALE 29.6, DeepSWE v1.1 73.7, BankerToolBench 76.2 and CyberGym ~82; HLE claimed relative to DeepSeek V4.1 Flash with no figure; an aiintoai "SWE-bench Verified 73.8%" is for the Preview, untraceable, rejected |
+| minimax-m3-1-flash | lmarenaElo | 2026-10-20 | only the Code Arena WebDev listing (1588) exists; no text-arena listing yet |
+| minimax-m3-1-flash | knowledgeCutoff | 2026-10-20 | not in the blog, docs or AA excerpts |
+| minimax-m3-1-flash | gdpvalAA | 2026-10-20 | AA lists v2.1-era evals only; no v2 figure |

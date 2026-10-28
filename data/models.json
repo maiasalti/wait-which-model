@@ -441,8 +441,17 @@
       "effort": null
     },
     "license": null,
-    "apiIds": [],
-    "retirementDate": null,
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "gpt-5.1"
+      },
+      {
+        "provider": "openai",
+        "id": "gpt-5.1-2025-11-13"
+      }
+    ],
+    "retirementDate": "2027-04-01",
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
@@ -465,7 +474,7 @@
       "Still misjudges ambiguous prompts, occasionally answering a hard question from the fast path",
       "The gains are in feel and pacing rather than capability — easier to work with, not smarter"
     ],
-    "notes": "Shipped as Instant and Thinking variants."
+    "notes": "Shipped as Instant and Thinking variants. API ids per OpenAI's GPT-5.1 model page (alias plus the 2025-11-13 snapshot); OpenAI's 2026-10-01 deprecation notice removes gpt-5.1 from the API on 2027-04-01, with gpt-6-sol as the recommended replacement."
   },
   {
     "id": "claude-3-opus",
@@ -7354,7 +7363,7 @@
       "usd": 0.72,
       "effort": null
     },
-    "openWeights": false,
+    "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
     "speed": {
@@ -7362,7 +7371,13 @@
       "timeToFirstTokenSec": 3.05,
       "effort": null
     },
-    "license": null,
+    "license": {
+      "spdx": null,
+      "name": "StepFun Model License 1.0",
+      "kind": "restricted",
+      "url": "https://huggingface.co/stepfun-ai/Step-5-Preview/blob/main/LICENSE.txt",
+      "commercialUse": true
+    },
     "apiIds": [
       {
         "provider": "stepfun",
@@ -7392,9 +7407,9 @@
     "weaknesses": [
       "Very verbose in its reasoning: Artificial Analysis' index run drew nearly twice the median output tokens, so the cheap per-token rate buys less than it looks",
       "StepFun's comparison table runs Step 5 at high effort against rivals at max and mixes HLE tool settings, so its own parity claims are not apples-to-apples",
-      "A preview with no model card, no weights yet and no stated licence — the open-weights promise for October 15 currently has nothing behind it but an empty Hugging Face repo"
+      "Self-hosting is heavyweight and licence-bound — the open checkpoint is FP8-first (BF16 is a separate ~1.2 TB checkpoint), and the bespoke StepFun Model License requires attribution and a separate deal for device makers"
     ],
-    "notes": "600B-total / 27B-active sparse MoE with 92 layers, StepFun's first Step 5 model, announced on X at 03:15 UTC on 2026-09-20 with API access the same day (Artificial Analysis dates it 2026-09-18). GPQA Diamond 93.5 is from StepFun's launch table, published only as an image and transcribed by CellCog and a linux.do relay, at high effort. That table also lists HLE 46.5%, but StepFun's footnote says its HLE row is a with-tools row mixing text-only-subset and full-dataset runs, so it is not recorded; it further lists Terminal-Bench 4.0 33.3% (not the 2.1 this site tracks), DeepSWE v1.1 67.7, SWE-Marathon v1.1 72.7, BrowseComp 88.7, FrontierFinance 66.4, DRACO 83.3, StepCodeBench 49.0, ProgramBench 80.5, ALE-CLI 29.5, MMMU-Pro 76.0 and a GDPval-AA figure of 1571 whose version label could not be confirmed; AA rates it 1566 on GDPval-AA v2.1, a rescaled successor to the v2 this site's gdpvalAA key records, so that cell stays null. AA Intelligence Index 44 (level with Grok 4.6 and Kimi K3 Max); costPerTask $0.72 and speed (92.1 tok/s, 3.05 s to first answer token) are AA's measurements of the single reasoning variant it lists, which carries no effort label even though the API exposes low/medium/high — hence effort null. Pricing is $1.00 input on cache miss / $0.05 on cache hit / $2.70 output including reasoning tokens; max output 64K per StepFun's platform docs. Weights are promised for 2026-10-15 in BF16 (~1.2 TB) with no licence named, so openWeights stays false until they ship. No arena.ai listing, no ARC Prize entry surfaced, knowledge cutoff undisclosed. predecessorId is null: StepFun frames it as a new flagship, not a replacement for Step 3.7 Flash."
+    "notes": "600B-total / 27B-active sparse MoE with 92 layers, StepFun's first Step 5 model, announced on X at 03:15 UTC on 2026-09-20 with API access the same day (Artificial Analysis dates it 2026-09-18). GPQA Diamond 93.5 is from StepFun's launch table, published only as an image and transcribed by CellCog and a linux.do relay, at high effort. That table also lists HLE 46.5%, but StepFun's footnote says its HLE row is a with-tools row mixing text-only-subset and full-dataset runs, so it is not recorded; it further lists Terminal-Bench 4.0 33.3% (not the 2.1 this site tracks), DeepSWE v1.1 67.7, SWE-Marathon v1.1 72.7, BrowseComp 88.7, FrontierFinance 66.4, DRACO 83.3, StepCodeBench 49.0, ProgramBench 80.5, ALE-CLI 29.5, MMMU-Pro 76.0 and a GDPval-AA figure of 1571 whose version label could not be confirmed; AA rates it 1566 on GDPval-AA v2.1, a rescaled successor to the v2 this site's gdpvalAA key records, so that cell stays null. AA Intelligence Index 44 (level with Grok 4.6 and Kimi K3 Max); costPerTask $0.72 and speed (92.1 tok/s, 3.05 s to first answer token) are AA's measurements of the single reasoning variant it lists, which carries no effort label even though the API exposes low/medium/high — hence effort null. Pricing is $1.00 input on cache miss / $0.10 on cache hit (StepFun's English pricing page) / $2.70 output including reasoning tokens; max output 64K per StepFun's platform docs. StepFun published the weights on 2026-10-15 (FP8 at stepfun-ai/Step-5-Preview plus an NVFP4 build) under the bespoke StepFun Model License 1.0, which permits commercial use with attribution but requires a separate agreement for hardware makers. No arena.ai listing, no ARC Prize entry surfaced, knowledge cutoff undisclosed. predecessorId is null: StepFun frames it as a new flagship, not a replacement for Step 3.7 Flash."
   },
   {
     "id": "grok-4-7",
@@ -9108,16 +9123,16 @@
       "outputPerMTok": 0.6
     },
     "costPerTask": {
-      "usd": null,
-      "effort": null
+      "usd": 0.26,
+      "effort": "max"
     },
     "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
     "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
-      "effort": null
+      "outputTokensPerSec": 230.4,
+      "timeToFirstTokenSec": 1.08,
+      "effort": "max"
     },
     "license": {
       "spdx": "MIT",
@@ -9155,7 +9170,7 @@
       "Shipped as a same-day checkpoint swap under the existing deepseek-flash API alias rather than a standalone announcement — every reported gain so far is DeepSeek's own harness output relayed by trackers, with no independent eval yet",
       "Still ships without a Jinja chat template, inheriting V4.1-Flash's reliance on DeepSeek's own Python/Rust prompt-encoding tooling"
     ],
-    "notes": "A same-architecture dated refresh of DeepSeek-V4.1-Flash (2026-09-10), released 2026-10-17 under the same deepseek-flash API alias, MIT license and 1M-token context; DeepSeek's own figures (relayed by MindStudio, OfficeChai, Kingy AI, MarkTechPost and aiweekly.co, none independently verified) report Humanity's Last Exam at 42.6% without tools (up from 36.8%), Terminal-Bench 4.0 at 42.3 (not comparable to this site's Terminal-Bench 2.1 field, left null) and DeepSWE v1.1 at 77.0; GPQA Diamond, SWE-bench, LMArena and ARC-AGI-2 were not reported for this checkpoint specifically and are left null pending a dedicated eval. contextWindow, maxOutput, pricing and license are carried over from the shared V4.1-Flash deployment since every source describes this as an in-place checkpoint swap on the same endpoint, not a new context/pricing tier; costPerTask and speed are null because Artificial Analysis had not measured this specific checkpoint as of this writing."
+    "notes": "A same-architecture dated refresh of DeepSeek-V4.1-Flash (2026-09-10), released 2026-10-17 under the same deepseek-flash API alias, MIT license and 1M-token context; DeepSeek's own figures (relayed by MindStudio, OfficeChai, Kingy AI, MarkTechPost and aiweekly.co, none independently verified) report Humanity's Last Exam at 42.6% without tools (up from 36.8%), Terminal-Bench 4.0 at 42.3 (not comparable to this site's Terminal-Bench 2.1 field, left null) and DeepSWE v1.1 at 77.0; GPQA Diamond, SWE-bench, LMArena and ARC-AGI-2 were not reported for this checkpoint specifically and are left null pending a dedicated eval. contextWindow, maxOutput, pricing and license are carried over from the shared V4.1-Flash deployment since every source describes this as an in-place checkpoint swap on the same endpoint, not a new context/pricing tier; speed (230.4 t/s, 1.08s on DeepSeek's API) and cost per Intelligence Index task ($0.26) are Artificial Analysis' measurements of the 1017 checkpoint at max effort; Artificial Analysis lists DeepSeek's peak-hour rate of $0.30/$1.20 per MTok, while the pricing above is the off-peak rate."
   },
   {
     "id": "grok-voice-3-0",
@@ -9216,6 +9231,66 @@
       "Behavior is a moving target this early: every quality claim, including the Starlink resolution rate, is xAI's own, and no independent hands-on testing exists yet"
     ],
     "notes": "Not an LLM: a speech-to-speech model served through xAI's Voice Agent API, so none of this site's text benchmarks apply and every cell is null by design; it is priced per minute of conversation ($0.08/min, $4.80/hr, unchanged from Grok Voice 2.0), not per token, so pricing is null, and context/output limits are unpublished. xAI's launch figures are cited from Artificial Analysis: Speech-to-Speech Index 86.9 (first; Grok Voice 2.0 81.3), Big Bench Audio 98.5%, Speech Agent Arena Elo 1070, Full Duplex Bench 97.0%, τ-Voice 71.6% (below GPT-Live-1 Astra Medium at 74.5%), plus 74% accuracy on ServiceNow's EVA-Bench; Kingy.ai reads Artificial Analysis' time to first audio as 0.81s, up from 0.70s on 2.0. xAI's docs mark grok-voice-2.0 deprecated and direct users to grok-voice-3.0, but no retirement date is given and Grok Voice 2.0 has no entry here, so predecessorId is null."
+  },
+  {
+    "id": "minimax-m3-1-flash",
+    "name": "MiniMax-M3.1-Flash",
+    "company": "minimax",
+    "releaseDate": "2026-10-19",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 0.15,
+      "outputPerMTok": 0.6
+    },
+    "costPerTask": {
+      "usd": 0.22,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "minimax",
+        "id": "MiniMax-M3.1-Flash"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Already battle-tested at scale before its name was public — as the anonymous 'Space Bunny' it was OpenRouter's most-used model for ten straight days, so the launch build is not a cold start",
+      "Built around agent work rather than chat: MiniMax pitches computer-use and cross-application tasks first, and its Code Arena WebDev debut jumped well clear of MiniMax-M3",
+      "Reasoning model priced like a Flash — cheap enough to leave running inside long agent loops, with MiniMax claiming roughly three times faster online inference than M3"
+    ],
+    "weaknesses": [
+      "Very verbose: Artificial Analysis' index run drew nearly twice the median output tokens, so the low per-token rate buys less than it looks",
+      "Almost never declines to answer — on Artificial Analysis' knowledge test it attempted nearly every question it did not know, so unfamiliar facts come back as confident guesses",
+      "Weights are promised but not yet out, and MiniMax published no parameter count or tracked-benchmark scores at launch — only its own agentic suites"
+    ],
+    "notes": "Announced 2026-10-19 on MiniMax's blog and X account as the public launch of M3.1 Flash, after a MiniMax Code / Token Plan-only preview (M3.1-Flash-Preview, 2026-09-27) and the 'Space Bunny' OpenRouter stealth run, which MiniMax says was an earlier version of this model; available the same day through the MiniMax API (pay-as-you-go), M Plan, MiniMax Code and OpenRouter. MiniMax reports only its own agentic suites — OSWorld V2 61.7, Agents' Last Exam 29.6, DeepSWE v1.1 73.7%, BankerToolBench 76.2 and CyberGym ~82% — none of the site's tracked benchmarks, and says HLE edges DeepSeek V4.1 Flash without giving a figure, so every benchmark cell is null; Arena's Code Arena WebDev listing (1588) is not the text-arena Elo this site records. Artificial Analysis rates it 42 on its Intelligence Index (MiniMax-M3: 29) at $0.22 per index task, measured on the single unlabelled variant it lists, hence effort null; speed stays null because AA's output-speed figure could not be confirmed. Pricing is $0.15 input / $0.015 cache read / $0.60 output per million tokens, with a priority tier at 1.5x. Context is 1M tokens shared by input and output; MiniMax's Messages API reference gives a 524,288-token output maximum but names the Preview model id, so maxOutput stays null. Parameter count is unpublished. Weights are promised for 2026-10-23 per MiniMax's X post (the blog says only 'later'), so openWeights stays false and license null until they ship. predecessorId is null: MiniMax names no model it replaces."
   },
   {
     "id": "kimi-k3-1-pro",
