@@ -1269,3 +1269,9 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `gpt-
 | nanbeige4-3-33b | mmluPro | 2026-10-27 | retired; not in the card |
 | nanbeige4-3-33b | pricing / costPerTask / speed | 2026-10-27 | no hosted API or OpenRouter listing at publication; AA hasn't benchmarked it |
 | nanbeige4-3-33b | maxOutput / knowledgeCutoff | 2026-10-27 | card gives recommended max-new-tokens settings (65,536 agentic / 262,144 reasoning), not a cap; cutoff unpublished |
+| d1-2b | pricing / costPerTask / knowledgeCutoff / maxOutput | 2026-10-28 | weights-only checkpoint with no hosted price; decision model (no output tokens); no cutoff published |
+| d1-2b | contextWindow (exact integer) | 2026-10-28 | HF card says "128K"; recorded 128000; config.json not read — 131072 possible |
+| d1-omni-2b | pricing / costPerTask / knowledgeCutoff / maxOutput | 2026-10-28 | same as d1-2b |
+| d1-omni-2b | contextWindow (exact integer) | 2026-10-28 | same as d1-2b |
+| d1-ultra | contextWindow | 2026-10-28 | not stated in Liquid's blog/docs/pricing excerpts; OpenRouter and Vercel list 32,768 (third-party), kept in notes |
+| d1-ultra | costPerTask / knowledgeCutoff / maxOutput | 2026-10-28 | decision model with no output tokens; AA Decision Index has no cost-per-Intelligence-Index-task figure; no cutoff published |

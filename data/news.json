@@ -12,7 +12,17 @@
       "gpt-6-1-terra"
     ],
     "sourceName": "OpenAI",
-    "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-terra/"
+    "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-terra/",
+    "refs": [
+      {
+        "type": "agent",
+        "id": "chatgpt-work"
+      },
+      {
+        "type": "agent",
+        "id": "openai-codex-cloud"
+      }
+    ]
   },
   {
     "id": "2026-10-25-nanbeige4-3-33b",
@@ -209,6 +219,23 @@
     ],
     "sourceName": "Block",
     "sourceUrl": "https://block.xyz/dessa"
+  },
+  {
+    "id": "2026-10-15-d1-ultra",
+    "date": "2026-10-15",
+    "title": "Liquid AI launches d1-ultra, its flagship hosted decision model",
+    "summary": "Liquid AI launched d1-ultra on 2026-10-15, a closed-weights decision model that reads text and images and returns calibrated probabilities for yes/no, choice and score questions without generating tokens, priced at $0.042 per million input tokens with no output charge. Liquid says it leads the Artificial Analysis Decision Index and beats d1 and TypeSafe's Jev 1.14 across its 112-evaluation suite; it is served on Liquid's API, OpenRouter and Vercel AI Gateway.",
+    "category": "release",
+    "companies": [
+      "liquid-ai",
+      "typesafe"
+    ],
+    "modelIds": [
+      "d1-ultra",
+      "jev"
+    ],
+    "sourceName": "Liquid AI",
+    "sourceUrl": "https://www.liquid.ai/blog/d1-ultra"
   },
   {
     "id": "2026-10-14-grok-voice-3-0",
@@ -592,7 +619,17 @@
       "gpt-6-1-sol"
     ],
     "sourceName": "OpenAI",
-    "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-sol/"
+    "sourceUrl": "https://openai.com/index/introducing-gpt-6-1-sol/",
+    "refs": [
+      {
+        "type": "agent",
+        "id": "chatgpt-work"
+      },
+      {
+        "type": "agent",
+        "id": "openai-codex-cloud"
+      }
+    ]
   },
   {
     "id": "2026-09-29-openai-australia-apology",
@@ -3367,5 +3404,22 @@
     ],
     "sourceName": "Krafton",
     "sourceUrl": "https://huggingface.co/KRAFTON/Raon-1-mini-preview"
+  },
+  {
+    "id": "2026-10-27-liquid-ai-lfm3-d1",
+    "date": "2026-10-27",
+    "title": "Liquid AI releases LFM3, with open d1-2B and d1-Omni-2B decision models",
+    "summary": "Liquid AI released LFM3 on 2026-10-27, six roughly 2B-parameter open-weight models on one tri-hybrid backbone covering text, vision, audio and omni, plus two decision models: d1-2B, which Liquid says replaces d1-3B with a third fewer parameters and reads text, images and video, and d1-Omni-2B, which also takes audio and spoken questions. Both return calibrated probabilities for typed questions in a single forward pass, have a 128K-token context and ship on Hugging Face under the LFM Open License v1.0.",
+    "category": "release",
+    "companies": [
+      "liquid-ai"
+    ],
+    "modelIds": [
+      "d1-2b",
+      "d1-omni-2b",
+      "d1-3b"
+    ],
+    "sourceName": "Liquid AI",
+    "sourceUrl": "https://www.liquid.ai/blog/lfm3"
   }
 ]

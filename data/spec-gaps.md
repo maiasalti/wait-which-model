@@ -386,3 +386,13 @@ nanbeige4-3-33b · predecessorId · 2026-10-27 · No earlier Nanbeige model is t
 nanbeige4-3-33b · apiIds · 2026-10-27 · Weights only; no lab API, OpenRouter or HF inference provider at publication. Left [].
 nanbeige4-3-33b · retirementDate · 2026-10-27 · Open-weights release, no lifecycle notice. Left null.
 nanbeige4-3-33b · license.url · 2026-10-27 · Apache-2.0 confirmed via search excerpts of the card and multiple quant cards; LICENSE file path not read directly (WebFetch denied), so url points at the repo.
+d1-2b · apiIds · 2026-10-28 · Weights only at LiquidAI/d1-2B (GGUF/MLX/ONNX variants); Liquid's hosted decision API serves d1-ultra and d1.1, not this checkpoint. Left [].
+d1-2b · speed · 2026-10-28 · Decision model; no Artificial Analysis listing (card gives 5.7 ms/decision on H100, not a tok/s figure). Left null.
+d1-2b · retirementDate · 2026-10-28 · Brand-new open-weights release; no lifecycle notice. Left null.
+d1-omni-2b · apiIds · 2026-10-28 · Weights only at LiquidAI/d1-Omni-2B; no hosted endpoint. Left [].
+d1-omni-2b · speed · 2026-10-28 · Decision model; no AA listing. Left null.
+d1-omni-2b · predecessorId · 2026-10-28 · LFM3 post's replacement claim names only d1-3B; d1-omni-600M is still listed in Liquid's docs. Left null.
+d1-ultra · predecessorId · 2026-10-28 · Liquid compares it against d1 and Jev 1.14 but makes no replacement claim, and hosted d1 is not on the site. Left null.
+d1-ultra · apiIds (liquid) · 2026-10-28 · OpenRouter liquid/d1-ultra verified; Liquid API model string not seen in docs excerpts. Vercel AI Gateway id not checked.
+d1-ultra · speed · 2026-10-28 · Decision model; AA covers it only in the Decision Index, no tok/s figure. Left null.
+d1-ultra · retirementDate · 2026-10-28 · No lifecycle notice. Left null.
