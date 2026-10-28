@@ -212,7 +212,9 @@ gemini-4-argon · speed · 2026-10-01 · AA's model page lists speed as unknown 
 gpt-6-1-sol · predecessorId · 2026-10-01 · OpenAI's model docs and ChatGPT models page describe it as near-Astra at lower cost and recommend it, but neither says it replaces GPT-6 Sol; "replacement for GPT-6 Sol" appears only in third-party guides, and GPT-6 Sol remains available. Left null.
 ling-3-1-flash · predecessorId · 2026-10-01 · Ant's launch post (x.com/AntLingAGI/status/2105335205741596911) and TechNode's coverage (EN and CN) name no model it replaces; "succeeds Ling-3.0-flash" appears only in third-party blogs (orcarouter.ai), and Ling-3.0-flash is not in models.json anyway. Left null.
 ling-3-1-flash · speed.timeToFirstTokenSec · 2026-10-08 · AA page (artificialanalysis.ai/models/ling-3-1-flash) now exists; outputTokensPerSec 210.7 filled from it. Its 1.78s figure is labelled time to first token, and the site field is time to first answer token; search excerpts did not show the answer-token figure (WebFetch denied). Left null — re-check with page access.
-ling-3-1-flash · license · 2026-10-01 · Not applicable — openWeights false; Ant promises an open-source release after the two-week trial, and the inclusionAI Hugging Face org has no Ling-3.1-flash repo yet. Re-check once weights publish.
+
+### spec-gaps.md rows
+
 ling-3-1-flash · retirementDate · 2026-10-01 · No lifecycle notice; brand-new release. Not chased further.
 kolibri-1 · predecessorId · 2026-10-05 · The launch post describes Kolibri Origin (30B-A3B, pre-training finished 11 June 2026) as the model that validated the training pipeline and says Kolibri is "much better", but never says Kolibri replaces it; the Hugging Face card only uses Origin as a comparison baseline. Origin is not on this site. Left null.
 kolibri-1 · speed · 2026-10-05 · No Artificial Analysis listing as of release week. Left null.
@@ -366,3 +368,6 @@ llama-3-1-405b · retirementDate · 2026-10-22 · Bedrock card shows EOL 2026-07
 llama-4-maverick · retirementDate · 2026-10-22 · Bedrock card shows Legacy, EOL 2027-03-30 (Bedrock-specific); the Llama API sunset on 2026-07-06 is a service shutdown, not a model retirement. Left null.
 kimi-k2-thinking · retirementDate · 2026-10-22 · platform.kimi.ai says the "kimi-k2 series" was discontinued 2026-05-25, but doesn't say whether that includes kimi-k2-thinking (Bedrock still serves it, Legacy, EOL 2027-03-30). Left null; re-check if Moonshot lists kimi-k2-thinking explicitly.
 kimi-k2 · retirementDate · 2026-10-22 · Re-checked: platform.kimi.ai model list says "the kimi-k2 series models were officially discontinued on May 25, 2026 and are no longer maintained or supported" (recommends kimi-k3). Held for review: "discontinued / no longer supported" is not an explicit shutdown, unlike Moonshot's later kimi-k2.5 notice that says calls return 404. If accepted, set 2026-05-25. Left null.
+
+### stats-gaps.md rows
+

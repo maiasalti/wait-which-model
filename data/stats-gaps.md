@@ -1202,3 +1202,37 @@ Stats-filler sweep on 2026-10-13 (re-check of "re-check" rows from 2026-09-22 â†
 | grok-4 | costPerTask | 2026-10-22 | AA Grok 4 page lists cost per Intelligence Index task as N/A (page ~469 days old) |
 | claude-opus-4-1 | costPerTask | 2026-10-22 | AA Claude 4.1 Opus page: per-task cost not shown; deprecated, only the 10k workload is still benchmarked |
 | mistral-medium-3 | costPerTask | 2026-10-22 | no AA cost-per-task figure surfaced (provider and comparison pages only) |
+
+### Sources, one per non-null value
+
+| Field | Value | Source (excerpt seen this session) |
+|---|---|---|
+| name, releaseDate, "first model in K3.1 series", 1M context | Kimi K3.1 Pro, 2026-10-23 | https://www.kimi.com/en/blog/kimi-k3-1-pro ; https://forum.moonshot.ai/t/kimi-k3-1-pro-has-launched-start-exploring-now/629 ; Artificial Analysis launch article dated 23 Oct 2026, https://artificialanalysis.ai/articles/kimi-k3-1-pro-launch-benchmarks |
+| params, multimodal | 2.8T / 104B active MoE, "Multimodal" | https://x.com/Kimi_Moonshot/status/2113680701770068067 |
+| modality detail | image + video input, native vision understanding | https://www.kimi.com/code/docs/en/kimi-code/models.html ; https://platform.kimi.com/docs/guide/kimi-k3-1-pro-quickstart |
+| contextWindow | 1000000 ("supports up to a 1M token context window") | https://platform.kimi.com/docs/guide/kimi-k3-1-pro-quickstart ; kimi.com blog |
+| pricing | $2 / $10, $0.20 cache hit; Highspeed $4 / $20 | Kimi API Platform, https://platform.moonshot.ai/ (excerpt; its index date looked stale, so cross-checked) ; https://artificialanalysis.ai/models/kimi-k3-1-pro ("$2/$10/$0.20") ; https://x.com/OpenRouter/status/2113699820124934334 ("$2/M input tokens, $10/M output tokens") |
+| costPerTask.usd | 2.11 | https://artificialanalysis.ai/models/kimi-k3-1-pro (model page; the launch article's ~$1.98 is K3's figure used as a comparison) |
+| speed.outputTokensPerSec | 57.5 | https://artificialanalysis.ai/models/kimi-k3-1-pro (the creator page https://artificialanalysis.ai/models/creators/kimi shows 77; the model page is preferred) |
+| openWeights false / weights date | "Full model weights will be released by Nov 4, 2026" | https://www.kimi.com/en/blog/kimi-k3-1-pro ; AA launch article ("once its weights are published") |
+| availability general | Kimi API + OpenRouter | platform.kimi.com docs ; https://x.com/OpenRouter/status/2113699820124934334 |
+| apiIds | `kimi-k3.1-pro` ("with a dot"), `kimi-k3.1-pro-highspeed` | https://platform.kimi.com/docs/guide/kimi-k3-1-pro-quickstart ; https://platform.kimi.com/docs/models ; https://platform.kimi.com/docs/api/chat |
+| tier flagship | "most capable 3T-class" model; successor line to flagship K3 | kimi.com blog |
+| Strength 1 (3D/game tooling) | | https://x.com/Kimi_Moonshot/status/2113680701770068067 ; https://x.com/Kimi_Moonshot/status/2113680710150357279 |
+| Strength 2 (finance) | "improves over K3 by 7.2 points on financial modelingâ€¦"; "NVDA DCF/LBO model with fully linked statements" | https://x.com/Kimi_Moonshot/status/2113680714311094458 |
+| Strength 3 (agent tooling) | | https://www.kimi.com/code/docs/en/third-party-tools/codex ; https://www.kimi.com/code/docs/en/third-party-tools/opencode ; https://www.kimi.com/code/docs/en/third-party-tools/claude-code ; https://www.kimi.com/code/docs/en/third-party-tools/hermes.html |
+| Weakness 1 (verbose, mandatory thinking) | "notably slow and very verbose"; "K3.1 Pro models only support thinking mode, and requests with thinking disabled are rejected" | https://artificialanalysis.ai/models/kimi-k3-1-pro ; https://platform.kimi.com/docs/guide/kimi-k3-1-pro-quickstart |
+| Weakness 2 (weights pending) | | kimi.com blog |
+| Weakness 3 (no image URLs) | "visual input does not support public image URLs" | https://platform.kimi.com/docs/guide/kimi-k3-1-pro-quickstart |
+| Notes: Terminal-Bench 4.0 65.7, BenchCAD 92.7, OfficeQA Pro v2 64.4, GDPval-AA 1846 | | platform.kimi.com docs excerpt ; https://x.com/Kimi_Moonshot/status/2113680710150357279 ; https://x.com/Kimi_Moonshot/status/2113680714311094458 ; https://the-decoder.com/chinese-ai-model-kimi-k3-1-pro-is-closing-in-on-anthropics-claude-opus-5-5/ (GDPval-AA 1846 vs Opus 5.5 1866; Opus 5.5's record gives Anthropic's own v2.1 figure as 1846, so the scale is v2.1 either way) |
+| Notes: effort low/high/max | | https://www.kimi.com/code/docs/en/kimi-code/models.html |
+| Notes: Code Arena WebDev #8, 1692 | | https://x.com/arena/status/2113687344532320326 |
+| Notes: AA index 55, 4th | | https://x.com/ArtificialAnlys/status/2113688083145314416 ; AA launch article |
+
+**Conflicts and caveats, for review:**
+- **costPerTask / speed effort.** Moonshot's evaluations run at max, and AA labels K3 "max", but the K3.1 Pro AA pages seen carry no effort label. Both `effort` fields are left null rather than guessed. If a direct read of the AA page shows a "(max)" variant name, set both to `"max"`.
+- **AA's speed differs between pages:** 57.5 on the model page vs 77 on the creator page. The model page is used.
+- **Release date:** one GitHub issue titles it "[2026-10-24]" (likely China time or the next day). Moonshot's posts, AA's article and the Kimi forum all give 10-23.
+
+### news.json entry
+

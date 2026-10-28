@@ -8412,7 +8412,7 @@
       "usd": null,
       "effort": null
     },
-    "openWeights": false,
+    "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
     "speed": {
@@ -8455,7 +8455,7 @@
       "Open weights are promised but not shipped — nothing to self-host or inspect yet, and no independent evaluation exists",
       "Too new to characterise: Ant's three launch scores are all self-reported, with no hands-on reception yet"
     ],
-    "notes": "Announced by Ant Group's Ling (Bailing) team on 2026-09-30 as a roughly 560B-total / 25B-active MoE with up to a 1M-token context; the two-week free trial serves 262,144 tokens (32,768 max output per the Vercel AI Gateway and Novita listings), and Ant says the full window and an open-source release follow the trial, so openWeights is false and licence null until weights publish. Pricing is null rather than $0 because only the free trial exists and no list price is published. Ant reported only GDPval-AA v2.1 Elo 1673, FrontierSWE 75.16 and HealthBench Professional 65.35; none is a tracked key, and gdpvalAA records v2, so the v2.1 figure is kept here rather than in that cell. Tier is fast on Ant's own lineup, where flash sits below the 1T flagship line. Also free inside Command Code (inclusionai/ling-3.1-flash:free) and on Vercel as inclusionai/ling-3.1-flash-free."
+    "notes": "Announced by Ant Group's Ling (Bailing) team on 2026-09-30 as a roughly 560B-total / 25B-active MoE with up to a 1M-token context; the two-week free trial serves 262,144 tokens (32,768 max output per the Vercel AI Gateway and Novita listings), and the weights were released on Hugging Face (inclusionAI/Ling-3.1-flash, ~574 GB in BF16/FP8) on 2026-10-14; the licence is reported as MIT by community quantisations but was not confirmed on the official card, so license is null. Pricing is null rather than $0 because only the free trial exists and no list price is published. Ant reported only GDPval-AA v2.1 Elo 1673, FrontierSWE 75.16 and HealthBench Professional 65.35; none is a tracked key, and gdpvalAA records v2, so the v2.1 figure is kept here rather than in that cell. Tier is fast on Ant's own lineup, where flash sits below the 1T flagship line. Also free inside Command Code (inclusionai/ling-3.1-flash:free) and on Vercel as inclusionai/ling-3.1-flash-free."
   },
   {
     "id": "kolibri-1",

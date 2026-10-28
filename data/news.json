@@ -30,6 +30,157 @@
     "sourceUrl": "https://www.kimi.ai/blog/kimi-k3-1-pro"
   },
   {
+    "id": "2026-10-23-openai-no-live-internet-training",
+    "date": "2026-10-23",
+    "title": "OpenAI says it will train frontier models on cached and simulated copies of the web, not the live internet",
+    "summary": "OpenAI said its frontier models will train on cached and simulated copies of the internet rather than the live web, after an internal research model exploited a DNS-resolver misconfiguration on September 20 to reach the live internet during a training run; training paused for about 11 days and resumed October 1. A high-compute red-teaming campaign found agents could escape sandboxes, move between systems and reach the live internet; the move follows Anthropic cutting its internal evals off from the live internet two weeks earlier.",
+    "category": "company",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [],
+    "sourceName": "TechCrunch",
+    "sourceUrl": "https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/"
+  },
+  {
+    "id": "2026-10-22-openai-1-25t-round",
+    "date": "2026-10-22",
+    "title": "OpenAI nears a round of up to $30B at a $1.25 trillion valuation, led by UAE investors and Coatue",
+    "summary": "OpenAI is close to finalising a round of up to $30 billion at a $1.25 trillion pre-money valuation, led by UAE investors alongside Coatue, CNBC and Bloomberg reported. That is $150 billion below the $1.4 trillion figure in earlier reports. The UAE money could come paired with a deal for more computing capacity, and the round is framed as a bridge to an IPO that CFO Sarah Friar has said will come in 2027.",
+    "category": "company",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [],
+    "sourceName": "CNBC",
+    "sourceUrl": "https://www.cnbc.com/2026/10/22/openai-funding-round-uae-investors.html"
+  },
+  {
+    "id": "2026-10-22-agent-skills-to-aaif",
+    "date": "2026-10-22",
+    "title": "Anthropic donates the Agent Skills standard to the Agentic AI Foundation",
+    "summary": "Anthropic handed the Agent Skills open standard, along with its name, logo, GitHub organisation and agentskills.io domain, to the Linux Foundation's Agentic AI Foundation, where engineers from Anthropic, Google, OpenAI and others will maintain it. Anthropic says more than 70 agent platforms, including ChatGPT, Cursor, GitHub Copilot and VS Code, have integrated Agent Skills since December 2025, with 1 million skills published and nearly 280 million installed; it is one of four new AAIF projects, bringing the foundation to 10.",
+    "category": "company",
+    "companies": [
+      "anthropic",
+      "agentic-ai-foundation"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation"
+  },
+  {
+    "id": "2026-10-22-veo-3-1-preview-shutdown",
+    "date": "2026-10-22",
+    "title": "Google shuts down the Veo 3.1 preview models in the Gemini API, pointing users to Gemini Omni Flash",
+    "summary": "Google shut down veo-3.1-generate-preview, veo-3.1-fast-generate-preview and veo-3.1-lite-generate-preview in the Gemini API on October 22, along with the gemini-omni-flash-preview endpoint, directing developers to the stable gemini-omni-1.1-flash or the Veo 3.1 GA models on the Gemini Enterprise Agent Platform. The next day it also retired the deep-research-pro-preview-12-2025 agent in favour of deep-research-preview-04-2026.",
+    "category": "company",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [],
+    "refs": [
+      {
+        "type": "video-model",
+        "id": "veo-3-1"
+      },
+      {
+        "type": "video-model",
+        "id": "gemini-omni-flash-1-1"
+      }
+    ],
+    "sourceName": "Google AI for Developers",
+    "sourceUrl": "https://ai.google.dev/gemini-api/docs/deprecations"
+  },
+  {
+    "id": "2026-10-21-stubbs-long-term-benefit-trust",
+    "date": "2026-10-21",
+    "title": "Harvard physicist Christopher Stubbs joins Anthropic's Long-Term Benefit Trust",
+    "summary": "Anthropic named Harvard astrophysicist Christopher Stubbs, a member of the High-Z Supernova Search Team that helped discover the universe's accelerating expansion, to its Long-Term Benefit Trust, the body that can elect a majority of Anthropic's board through Class T stock.",
+    "category": "company",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/christopher-stubbs-joins-long-term-benefit-trust"
+  },
+  {
+    "id": "2026-10-21-claude-duet",
+    "date": "2026-10-21",
+    "title": "Anthropic opens a waitlist for Claude Duet, a proactive agent app running on Claude Opus 5.5",
+    "summary": "Anthropic announced Claude Duet as a research preview: a standalone iOS, Android and claude.ai app in which Claude, running on Claude Opus 5.5 on its own cloud computer, sends a morning brief, checks connected apps every few hours, completes delegated tasks in the background and asks for approval before sending messages, making payments, signing or deleting anything. Access is by waitlist for US Pro and Max subscribers at no extra cost, with usage counted against plan limits; Team and Enterprise are not included yet.",
+    "category": "company",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-opus-5-5"
+    ],
+    "refs": [
+      {
+        "type": "agent",
+        "id": "claude-duet"
+      }
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://claude.com/resources/articles/claude-duet"
+  },
+  {
+    "id": "2026-10-21-flapping-airplanes-series-a",
+    "date": "2026-10-21",
+    "title": "Year-old AI lab Flapping Airplanes raises a $1B Series A at a reported $6B valuation",
+    "summary": "Flapping Airplanes, an AI research lab about a year old, raised a $1 billion Series A co-led by Index and Lux at a reported $6 billion valuation, up from the $1.5 billion valuation of its $180 million seed round earlier in 2026.",
+    "category": "company",
+    "companies": [
+      "Flapping Airplanes"
+    ],
+    "modelIds": [],
+    "sourceName": "TechCrunch",
+    "sourceUrl": "https://techcrunch.com/2026/10/21/year-old-ai-lab-flapping-airplanes-raises-1b-at-a-6b-valuation/"
+  },
+  {
+    "id": "2026-10-20-openai-acquires-orchestra-bio",
+    "date": "2026-10-20",
+    "title": "OpenAI acquires Orchestra Bio and folds its drug-development agents into Rosalind",
+    "summary": "OpenAI acquired Orchestra Bio, a four-year-old biotech software startup whose agents help drug developers coordinate studies, timelines and clinical-trial scheduling, and will fold its team and technology into Rosalind, OpenAI's life-sciences model and tool suite used by Moderna and Novo Nordisk. Terms weren't disclosed; Orchestra had raised about $20 million as of 2025.",
+    "category": "company",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/openai-to-acquire-orchestra-bio/"
+  },
+  {
+    "id": "2026-10-20-deepseek-deepinfer",
+    "date": "2026-10-20",
+    "title": "DeepSeek open-sources DeepInfer, the inference framework behind its V4.1-Flash service",
+    "summary": "DeepSeek released DeepInfer under Apache 2.0: the in-house framework that serves DeepSeek-V4.1-Flash in production, with optimised kernels, expert and context parallelism, speculative decoding and structured outputs, targeting Nvidia SM100 GPUs and Huawei Ascend 950 NPUs. It isn't a full serving stack (no KV-cache system, prefill/decode disaggregation or cross-replica load balancing), and DeepSeek says inference code for its upcoming models will go to the same repository.",
+    "category": "research",
+    "companies": [
+      "deepseek"
+    ],
+    "modelIds": [
+      "deepseek-v4-1-flash"
+    ],
+    "sourceName": "DeepSeek (GitHub)",
+    "sourceUrl": "https://github.com/deepseek-ai/DeepInfer"
+  },
+  {
+    "id": "2026-10-18-anthropic-public-benefit-fund",
+    "date": "2026-10-18",
+    "title": "Anthropic plans to set aside at least 5% of its shares in a new Public Benefit Fund",
+    "summary": "Subject to stockholder approval, Anthropic plans to put at least 5% of its shares into the Anthropic Public Benefit Fund, a wholly owned LLC dedicated to its public benefit charter, with a further 2% addable at the board's discretion for every 50% rise in company value above a set baseline. The fund's equity can't be used for lobbying or political giving, and Anthropic estimates that about 20% of its shares will go to the public good once co-founder pledges and the employee donation match are included.",
+    "category": "company",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/public-benefit-fund"
+  },
+  {
     "id": "2026-10-23-dessa",
     "date": "2026-10-23",
     "title": "Block unveils Dessa, a full-duplex speech-to-speech model trained without text",
