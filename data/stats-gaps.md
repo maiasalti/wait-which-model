@@ -1126,12 +1126,9 @@ Stats-filler sweep on 2026-10-13 (re-check of "re-check" rows from 2026-09-22 �
 | deepseek-v4-1-flash-1017 | terminalBench | 2026-10-18 | only a Terminal-Bench 4.0 score (42.3) was reported; this field is Terminal-Bench 2.1 only per style guide, so left null and the 4.0 figure recorded in notes instead |
 | deepseek-v4-1-flash-1017 | lmarenaElo | 2026-10-18 | not reported; not yet on LMArena's leaderboard as of 2026-10-18 |
 | deepseek-v4-1-flash-1017 | gdpvalAA | 2026-10-18 | Artificial Analysis had not measured this specific checkpoint as of 2026-10-18 |
-| deepseek-v4-1-flash-1017 | arcAgi2 | 2026-10-18 | not reported anywhere found |
 | deepseek-v4-1-flash-1017 | costPerTask | 2026-10-18 | Artificial Analysis had not published an Intelligence Index cost figure for this checkpoint as of 2026-10-18 — **superseded 2026-10-20: AA now lists $0.26 (max), filled** |
 | deepseek-v4-1-flash-1017 | speed | 2026-10-18 | Artificial Analysis had not measured this specific checkpoint as of 2026-10-18 — **superseded 2026-10-20: AA now lists 230.4 t/s / 1.08s (max), filled** |
 | deepseek-v4-1-flash-1017 | arcAgi2 | 2026-10-18 | not reported anywhere found — **superseded 2026-10-27: ARC Prize verified result published — filled** |
-| deepseek-v4-1-flash-1017 | costPerTask | 2026-10-18 | Artificial Analysis had not published an Intelligence Index cost figure for this checkpoint as of 2026-10-18 |
-| deepseek-v4-1-flash-1017 | speed | 2026-10-18 | Artificial Analysis had not measured this specific checkpoint as of 2026-10-18 |
 | deepseek-v4-1-flash-1017 | knowledgeCutoff | 2026-10-18 | not published by DeepSeek for this checkpoint; DataLearner also lists "no data" |
 | claude-haiku-5-5 | gpqaDiamond / sweBench / sweBenchPro / terminalBench | 2026-10-19 | not in Anthropic's launch table (anthropic.com/news/claude-haiku-5-5), which reports Terminal-Bench 4.0 (39.2%) not 2.1; vals.ai lists only Terminal-Bench 4.0 (36.4%), Terminal-Bench-Science and SWE-bench Multimodal; system card PDF too large to fetch |
 | claude-haiku-5-5 | gdpvalAA | 2026-10-19 | Anthropic reports GDPval-AA v2.1 (1620), not the tracked v2; kept in notes |
@@ -1206,39 +1203,6 @@ Stats-filler sweep on 2026-10-13 (re-check of "re-check" rows from 2026-09-22 �
 | claude-opus-4-1 | costPerTask | 2026-10-22 | AA Claude 4.1 Opus page: per-task cost not shown; deprecated, only the 10k workload is still benchmarked |
 | mistral-medium-3 | costPerTask | 2026-10-22 | no AA cost-per-task figure surfaced (provider and comparison pages only) |
 
-### Sources, one per non-null value
-
-| Field | Value | Source (excerpt seen this session) |
-|---|---|---|
-| name, releaseDate, "first model in K3.1 series", 1M context | Kimi K3.1 Pro, 2026-10-23 | https://www.kimi.com/en/blog/kimi-k3-1-pro ; https://forum.moonshot.ai/t/kimi-k3-1-pro-has-launched-start-exploring-now/629 ; Artificial Analysis launch article dated 23 Oct 2026, https://artificialanalysis.ai/articles/kimi-k3-1-pro-launch-benchmarks |
-| params, multimodal | 2.8T / 104B active MoE, "Multimodal" | https://x.com/Kimi_Moonshot/status/2113680701770068067 |
-| modality detail | image + video input, native vision understanding | https://www.kimi.com/code/docs/en/kimi-code/models.html ; https://platform.kimi.com/docs/guide/kimi-k3-1-pro-quickstart |
-| contextWindow | 1000000 ("supports up to a 1M token context window") | https://platform.kimi.com/docs/guide/kimi-k3-1-pro-quickstart ; kimi.com blog |
-| pricing | $2 / $10, $0.20 cache hit; Highspeed $4 / $20 | Kimi API Platform, https://platform.moonshot.ai/ (excerpt; its index date looked stale, so cross-checked) ; https://artificialanalysis.ai/models/kimi-k3-1-pro ("$2/$10/$0.20") ; https://x.com/OpenRouter/status/2113699820124934334 ("$2/M input tokens, $10/M output tokens") |
-| costPerTask.usd | 2.11 | https://artificialanalysis.ai/models/kimi-k3-1-pro (model page; the launch article's ~$1.98 is K3's figure used as a comparison) |
-| speed.outputTokensPerSec | 57.5 | https://artificialanalysis.ai/models/kimi-k3-1-pro (the creator page https://artificialanalysis.ai/models/creators/kimi shows 77; the model page is preferred) |
-| openWeights false / weights date | "Full model weights will be released by Nov 4, 2026" | https://www.kimi.com/en/blog/kimi-k3-1-pro ; AA launch article ("once its weights are published") |
-| availability general | Kimi API + OpenRouter | platform.kimi.com docs ; https://x.com/OpenRouter/status/2113699820124934334 |
-| apiIds | `kimi-k3.1-pro` ("with a dot"), `kimi-k3.1-pro-highspeed` | https://platform.kimi.com/docs/guide/kimi-k3-1-pro-quickstart ; https://platform.kimi.com/docs/models ; https://platform.kimi.com/docs/api/chat |
-| tier flagship | "most capable 3T-class" model; successor line to flagship K3 | kimi.com blog |
-| Strength 1 (3D/game tooling) | | https://x.com/Kimi_Moonshot/status/2113680701770068067 ; https://x.com/Kimi_Moonshot/status/2113680710150357279 |
-| Strength 2 (finance) | "improves over K3 by 7.2 points on financial modeling…"; "NVDA DCF/LBO model with fully linked statements" | https://x.com/Kimi_Moonshot/status/2113680714311094458 |
-| Strength 3 (agent tooling) | | https://www.kimi.com/code/docs/en/third-party-tools/codex ; https://www.kimi.com/code/docs/en/third-party-tools/opencode ; https://www.kimi.com/code/docs/en/third-party-tools/claude-code ; https://www.kimi.com/code/docs/en/third-party-tools/hermes.html |
-| Weakness 1 (verbose, mandatory thinking) | "notably slow and very verbose"; "K3.1 Pro models only support thinking mode, and requests with thinking disabled are rejected" | https://artificialanalysis.ai/models/kimi-k3-1-pro ; https://platform.kimi.com/docs/guide/kimi-k3-1-pro-quickstart |
-| Weakness 2 (weights pending) | | kimi.com blog |
-| Weakness 3 (no image URLs) | "visual input does not support public image URLs" | https://platform.kimi.com/docs/guide/kimi-k3-1-pro-quickstart |
-| Notes: Terminal-Bench 4.0 65.7, BenchCAD 92.7, OfficeQA Pro v2 64.4, GDPval-AA 1846 | | platform.kimi.com docs excerpt ; https://x.com/Kimi_Moonshot/status/2113680710150357279 ; https://x.com/Kimi_Moonshot/status/2113680714311094458 ; https://the-decoder.com/chinese-ai-model-kimi-k3-1-pro-is-closing-in-on-anthropics-claude-opus-5-5/ (GDPval-AA 1846 vs Opus 5.5 1866; Opus 5.5's record gives Anthropic's own v2.1 figure as 1846, so the scale is v2.1 either way) |
-| Notes: effort low/high/max | | https://www.kimi.com/code/docs/en/kimi-code/models.html |
-| Notes: Code Arena WebDev #8, 1692 | | https://x.com/arena/status/2113687344532320326 |
-| Notes: AA index 55, 4th | | https://x.com/ArtificialAnlys/status/2113688083145314416 ; AA launch article |
-
-**Conflicts and caveats, for review:**
-- **costPerTask / speed effort.** Moonshot's evaluations run at max, and AA labels K3 "max", but the K3.1 Pro AA pages seen carry no effort label. Both `effort` fields are left null rather than guessed. If a direct read of the AA page shows a "(max)" variant name, set both to `"max"`.
-- **AA's speed differs between pages:** 57.5 on the model page vs 77 on the creator page. The model page is used.
-- **Release date:** one GitHub issue titles it "[2026-10-24]" (likely China time or the next day). Moonshot's posts, AA's article and the Kimi forum all give 10-23.
-
-### news.json entry
-
 
 Stats-filler sweep on 2026-10-27 (daily sweep, unattended). WebFetch was denied; findings rest on WebSearch excerpts restricted to arena.ai / news.lmarena.ai / x.com/arena, arcprize.org results pages and x.com/arcprize, labs.scale.com SWE-Bench Pro leaderboards and artificialanalysis.ai. Fills: arcAgi2 on gemini-4-argon (91.3), claude-haiku-5-5 (61.3), deepseek-v4-1-flash-1017 (78.1) and deepseek-v4-1-flash (72.9), all from ARC Prize verified results pages.
 
@@ -1250,18 +1214,10 @@ Stats-filler sweep on 2026-10-27 (daily sweep, unattended). WebFetch was denied;
 | mistral-large-4 | lmarenaElo | 2026-10-27 | Arena's weekly post gives Agent Arena #43 only; still no first-party Text Arena score. Weights now due 2026-10-31 (HF "Upcoming release" ETA); re-check after |
 | gemini-4-argon | sweBenchPro | 2026-10-27 | Scale's board now shows Argon only on SWE-Bench Pro **V2** (labs.scale.com/leaderboard/swe_bench_pro_public_v2: 99.22 ±0.45 full 642-task set, 92.16 hard 51-task subset, mini-swe-agent, high). V2 (2026-09-22) drops 89 invalid tasks and disables web tools, so it isn't the public split the key tracks. Not filled pending a benchmark-key decision |
 
-New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `gpt-6-1-terra` (2026-10-26) and `nanbeige4-3-33b` (2026-10-25). WebFetch was denied; findings rest on WebSearch excerpts restricted to openai.com, developers.openai.com, deploymentsafety.openai.com, docs.aws.amazon.com, artificialanalysis.ai, huggingface.co and the labs' X accounts.
+New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanbeige4-3-33b` (2026-10-25); its `gpt-6-1-terra` rows were dropped when merging, as main already carries that model and its own ledger rows. WebFetch was denied; findings rest on WebSearch excerpts restricted to openai.com, developers.openai.com, deploymentsafety.openai.com, docs.aws.amazon.com, artificialanalysis.ai, huggingface.co and the labs' X accounts.
 
 | model-id | field | checked | reason |
 |---|---|---|---|
-| gpt-6-1-terra | gpqaDiamond / hle | 2026-10-27 | OpenAI's launch post and system-card addendum excerpts show no GPQA or HLE; AA lists HLE among its index evals for Terra but the figure wasn't in the excerpts (WebFetch denied) |
-| gpt-6-1-terra | terminalBench | 2026-10-27 | only Terminal-Bench 4.0 published (OpenAI 50.3% at max), not the tracked 2.1; kept in notes |
-| gpt-6-1-terra | sweBench / sweBenchPro | 2026-10-27 | OpenAI publishes neither; not seen on Scale's SWE-bench Pro board at launch |
-| gpt-6-1-terra | lmarenaElo | 2026-10-27 | no arena.ai text listing found the day after launch |
-| gpt-6-1-terra | arcAgi2 | 2026-10-27 | no arcprize.org result for Terra yet (6.1 Sol and Astra only) |
-| gpt-6-1-terra | gdpvalAA | 2026-10-27 | no AA GDPval figure seen; AA now reports v2.1, a different scale from the tracked v2 |
-| gpt-6-1-terra | mmluPro / aime | 2026-10-27 | retired benchmarks; not in OpenAI's launch material |
-| gpt-6-1-terra | costPerTask (medium) | 2026-10-27 | AA release page gives medium index 41 but no medium cost per task in the excerpts; high ($0.13) used instead |
 | nanbeige4-3-33b | sweBench | 2026-10-27 | model card's coding row is SWE-bench Pro (60.3), no Verified figure |
 | nanbeige4-3-33b | hle | 2026-10-27 | no HLE row in the HF card excerpts or coverage |
 | nanbeige4-3-33b | gdpvalAA | 2026-10-27 | card reports a "GDPval" of 84.8 from Nanbeige's own run, not Artificial Analysis' Elo; kept in notes |
