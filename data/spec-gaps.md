@@ -340,3 +340,11 @@ minimax-m3-1-flash · license · 2026-10-20 · Closed until weights ship (2026-1
 minimax-m3-1-flash · predecessorId · 2026-10-20 · MiniMax names no model it replaces; M3.1-Flash-Preview (the Code/Token Plan build) is not tracked on main. Left null.
 minimax-m3-1-flash · retirementDate · 2026-10-20 · Brand-new release; no lifecycle notice. Left null.
 minimax-m3-1-flash · apiIds · 2026-10-20 · Pricing and models-overview pages use MiniMax-M3.1-Flash; API-reference examples still show MiniMax-M3.1-Flash-Preview. Recorded MiniMax-M3.1-Flash; no OpenRouter or other-provider id recorded.
+mercury-3 · speed · 2026-10-21 · No Artificial Analysis measurement yet; Inception's 1,068 tok/s is its own figure and OpenRouter's 221/351 tok/s are not AA. Left null.
+mercury-3 · license · 2026-10-21 · Closed weights (API only); one OpenRouter excerpt mentioned planned open weights but nothing has shipped. Left null.
+mercury-3 · retirementDate · 2026-10-21 · Brand-new release; no lifecycle notice. Left null.
+mercury-3 · predecessorId · 2026-10-21 · Mercury 2 / 2.5 are untracked; Inception closes them to new users (existing customers until 2026-11-15) but makes no explicit replacement claim in the excerpts seen. Left null.
+clairic · speed · 2026-10-21 · No Artificial Analysis measurement; Cloudflare gives only "typically under a second" per request, not tokens/sec. Left null.
+clairic · license · 2026-10-21 · Preview with open weights "soon" per the Workers AI changelog; no HF repo or licence yet. Re-check for the weights release.
+clairic · retirementDate · 2026-10-21 · No lifecycle notice on the model page or changelog. Left null.
+clairic · predecessorId · 2026-10-21 · First extraction model; nothing replaced. Left null.

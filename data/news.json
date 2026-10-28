@@ -3125,5 +3125,35 @@
     ],
     "sourceName": "MiniMax",
     "sourceUrl": "https://www.minimax.io/blog/minimax-m31f"
+  },
+  {
+    "id": "2026-10-19-mercury-3",
+    "date": "2026-10-19",
+    "title": "Inception releases Mercury 3, a diffusion LLM it says beats GPT-6 Luna",
+    "summary": "Inception launched Mercury 3, its largest diffusion language model, on its own API, OpenRouter, Baseten and Vercel at $0.20/$0.70 per million tokens (half that during a launch promotion) with a 1M-token context. Inception reports about 1,068 tokens per second on NVIDIA GPUs and says its own benchmark table puts Mercury 3 ahead of GPT-6 Luna and Claude Haiku 5.5. No independent evaluation was available at launch.",
+    "category": "release",
+    "companies": [
+      "inception"
+    ],
+    "modelIds": [
+      "mercury-3"
+    ],
+    "sourceName": "Inception",
+    "sourceUrl": "https://www.inceptionlabs.ai/blog/introducing-mercury-3"
+  },
+  {
+    "id": "2026-10-19-clairic",
+    "date": "2026-10-19",
+    "title": "Cloudflare releases Clairic, an extraction model that returns typed values instead of text",
+    "summary": "Cloudflare previewed Clairic on Workers AI, a System One model that reads text and up to four images and returns typed values (numbers, dates, durations, lists, estimates and forecasts) with confidence scores in one pass, answering null when the input doesn't determine a value. It costs $0.10 per million input tokens with no output charge; open weights are planned.",
+    "category": "release",
+    "companies": [
+      "cloudflare"
+    ],
+    "modelIds": [
+      "clairic"
+    ],
+    "sourceName": "Cloudflare",
+    "sourceUrl": "https://blog.cloudflare.com/clairic-extraction-model/"
   }
 ]

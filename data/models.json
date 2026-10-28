@@ -9233,6 +9233,126 @@
     "notes": "Not an LLM: a speech-to-speech model served through xAI's Voice Agent API, so none of this site's text benchmarks apply and every cell is null by design; it is priced per minute of conversation ($0.08/min, $4.80/hr, unchanged from Grok Voice 2.0), not per token, so pricing is null, and context/output limits are unpublished. xAI's launch figures are cited from Artificial Analysis: Speech-to-Speech Index 86.9 (first; Grok Voice 2.0 81.3), Big Bench Audio 98.5%, Speech Agent Arena Elo 1070, Full Duplex Bench 97.0%, τ-Voice 71.6% (below GPT-Live-1 Astra Medium at 74.5%), plus 74% accuracy on ServiceNow's EVA-Bench; Kingy.ai reads Artificial Analysis' time to first audio as 0.81s, up from 0.70s on 2.0. xAI's docs mark grok-voice-2.0 deprecated and direct users to grok-voice-3.0, but no retirement date is given and Grok Voice 2.0 has no entry here, so predecessorId is null."
   },
   {
+    "id": "mercury-3",
+    "name": "Mercury 3",
+    "company": "inception",
+    "releaseDate": "2026-10-19",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "text",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": 131072,
+    "pricing": {
+      "inputPerMTok": 0.2,
+      "outputPerMTok": 0.7
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "inception",
+        "id": "mercury-3"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Diffusion decoding refines whole blocks of the answer in parallel instead of token by token, so long outputs land in a burst — the gain is largest on generation-heavy calls",
+      "Reasoning effort is a per-call dial from instant to high, so one endpoint covers both latency-critical calls and harder ones",
+      "Tool calling and JSON-schema structured outputs on an OpenAI-compatible API, so it drops into existing agent tooling without an adapter"
+    ],
+    "weaknesses": [
+      "Defaults to low reasoning effort where Mercury 2.5 defaulted to medium — out-of-the-box answers are shallower than the launch comparisons, which ran at medium, unless the setting is pinned",
+      "Holds up on one-shot coding questions but drifts over long multi-turn agent sessions, and because every turn still has to read the whole conversation first, the speed edge shrinks as context grows",
+      "Every quality claim at launch is Inception's own — no independent evaluator had measured it by the day after release"
+    ],
+    "notes": "Announced 2026-10-19 by Inception and its founders on X ('Today, we're releasing Mercury 3'); the blog post's listing date reads 2026-10-15 and OpenRouter's listing 2026-10-16, so the public announcement date is used. Available the same day on the Inception API Platform, OpenRouter, Baseten and Vercel; list price is $0.20 input / $0.70 output per million tokens ($0.02 cached input), with a 50% launch promotion ($0.10 / $0.35, end date unstated). Text-only input. Inception claims about 1,068 output tokens per second on NVIDIA GPUs (its own figure, not an Artificial Analysis measurement) and a 1M-token context, up from Mercury 2.5's 260K. Inception's benchmark table (medium effort for all models) reportedly leads GPT-6 Luna and Claude Haiku 5.5 on 8 of 12 tests, including GPQA Diamond, IFBench and SWE-Bench Atlas, but the table could not be read from the primary page, so every benchmark cell is null. Mercury 2 and 2.5 (not tracked here) are closed to new users, and existing customers keep access until 2026-11-15. No Artificial Analysis coverage yet; parameter count and knowledge cutoff are unpublished."
+  },
+  {
+    "id": "clairic",
+    "name": "Clairic",
+    "company": "cloudflare",
+    "releaseDate": "2026-10-19",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "type": "system-one",
+    "contextWindow": 65536,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 0.1,
+      "outputPerMTok": 0
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "cloudflare",
+        "id": "@cf/cloudflare/clairic"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Returns a value of the requested type or an explicit null for every field in one pass — nothing to parse, and a value the input doesn't contain comes back as absent rather than invented",
+      "Attaches a null probability and a confidence to each scalar, and a median with an 80% interval to estimates and forecasts, giving an automation threshold to work against",
+      "Reads up to four images alongside the text, so a receipt photo or screenshot can be the source document"
+    ],
+    "weaknesses": [
+      "Arithmetic is only dependable for one or two steps — longer computed fields need checking downstream",
+      "Forecasts flatten toward the average a few steps out and cannot anticipate events the series doesn't show, such as holidays — not a replacement for a time-series model trained on your own data",
+      "A preview with open weights only promised and no base model or licence named — and Cloudflare itself stresses every answer is well formed, not necessarily correct"
+    ],
+    "notes": "Not an LLM: a \"System One\" extraction model, the first of a new class alongside Cloudflare's Clef decision models, that reads a text state plus up to four images and returns typed values (text, number, date/time, duration, list, bounded estimate, forecast up to 64 steps) in a single pass without generating tokens, so none of this site's benchmarks apply and every cell is null by design. Released 2026-10-19 as a preview on Workers AI at $0.10 per million input tokens (9,091 neurons); Cloudflare states there is no output-token charge because it generates no tokens, hence 0 as on Jev. The context window is 65,536 tokens, with fields that don't fit beside the state in one 8,192-token pass split across parallel passes. Cloudflare's launch post compares latency and cost against a GLM-5.3 pipeline and reports 17 of 21 forecast actuals inside the 80% interval, both its own figures. Open weights are planned but not yet released; base model, parameter count and knowledge cutoff are unpublished. No Artificial Analysis coverage."
+  },
+  {
     "id": "minimax-m3-1-flash",
     "name": "MiniMax-M3.1-Flash",
     "company": "minimax",
