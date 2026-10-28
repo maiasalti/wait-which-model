@@ -688,5 +688,15 @@
     "color": null,
     "notable": false,
     "order": 69
+  },
+  {
+    "id": "pixverse",
+    "name": "PixVerse",
+    "country": "Singapore",
+    "founded": 2023,
+    "website": "https://pixverse.ai",
+    "color": "#007744",
+    "notable": true,
+    "order": 74
   }
 ]

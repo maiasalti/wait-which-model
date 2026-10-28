@@ -1,5 +1,100 @@
 [
   {
+    "id": "genie-4",
+    "name": "Genie 4",
+    "company": "google",
+    "releaseDate": "2026-10-27",
+    "notable": true,
+    "description": "Google DeepMind's real-time interactive world model, which generates explorable worlds from text and image prompts with native audio and lets users steer the scene mid-simulation in natural language, with Gemini models keeping it coherent.",
+    "strengths": [
+      "Native real-time audio: ambient sound, music and interactive dialogue",
+      "Mid-simulation steering by text, e.g. changing the weather, moving the camera or adding characters",
+      "Text and image prompts, with keyboard navigation and camera control",
+      "Demonstrated as a simulator for Gemini-driven agents and robots (e.g. Apptronik Apollo)"
+    ],
+    "weaknesses": [
+      "Limited research preview for trusted testers; no public access, pricing or API yet",
+      "Google says it supports a few minutes of continuous interaction, with visual drift in longer sessions",
+      "Unreliable text rendering and imperfect simulation of real-world locations"
+    ],
+    "interactive": true,
+    "inputs": [
+      "text",
+      "image",
+      "actions"
+    ],
+    "output": "video-stream",
+    "maxSessionSec": null,
+    "maxResolution": null,
+    "fps": null,
+    "access": "research-preview",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [],
+    "pricing": {
+      "notes": "Not published. Google says it is coming to Google AI Ultra subscribers in Project Genie and to early-access partners in the Gemini API and AI Studio."
+    },
+    "links": {
+      "official": "https://deepmind.google/models/genie/",
+      "docs": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+    },
+    "notes": "Announced 2026-10-27 (Google blog) as a research preview rolling out to a small group of trusted testers. Successor to Genie 3, which keeps its own entry because Project Genie still runs Genie 3 until the Ultra rollout. TechCrunch reports scenes stay consistent 'up to two minutes, double Genie 3'; Google's pages say only 'a few minutes of continuous interaction', so maxSessionSec is null. No resolution or fps is published for Genie 4 (the 720p/24 fps figures in search results are Genie 3's). Robotics demos pair it with Gemini 3.8 Flash as a guiding agent and Gemini 4 Argon. All output carries SynthID. openWeights false = none mentioned."
+  },
+  {
+    "id": "hy-nomas",
+    "name": "Hy-Nomas",
+    "company": "tencent",
+    "releaseDate": "2026-10-21",
+    "notable": true,
+    "description": "Tencent Hunyuan's open-weight free-form interactive world model that builds a world one video segment at a time from text, which users keep steering with multi-turn text instructions and camera trajectories as generation continues.",
+    "strengths": [
+      "Multi-turn steering mid-generation: add objects, change style or scene, describe actions, move the camera",
+      "720x1280 output at 24 FPS from an 8-step distilled model",
+      "Runs on a single RTX 4090 via a low-memory INT8/FP8 configuration with CPU offload",
+      "Apache-2.0 weights with inference and LoRA training code, plus Hy-Nomas-Bench (280 cases)"
+    ],
+    "weaknesses": [
+      "No official generation-speed figure; Tencent says speed depends on hardware, resolution, segment length and history",
+      "Text and camera control only; no image conditioning documented"
+    ],
+    "interactive": null,
+    "inputs": [
+      "text",
+      "actions"
+    ],
+    "output": "video-stream",
+    "maxSessionSec": null,
+    "maxResolution": "1280x720",
+    "fps": 24,
+    "access": "ga",
+    "openWeights": true,
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/tencent/Hy-Nomas",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "huggingface",
+        "id": "tencent/Hy-Nomas"
+      },
+      {
+        "provider": "huggingface",
+        "id": "tencent/Hy-Nomas-Diffusers"
+      }
+    ],
+    "pricing": {
+      "notes": "Free open weights; self-hosted."
+    },
+    "links": {
+      "official": "https://github.com/Tencent-Hunyuan/Hy-Nomas",
+      "docs": "https://huggingface.co/tencent/Hy-Nomas"
+    },
+    "notes": "releaseDate = GitHub README 'initial code release' 2026-10-21 (repo created that day; comfyui-wiki gives the same date). fps 24 is the output playback rate, not generation speed; a community ComfyUI port reports slower than real time on an RTX 4090 (~3.5-4 s per 1 s turn at 832x480), which is why interactive is null rather than true. 'actions' = camera trajectories / keyboard navigation. commercialUse true applies to the Apache-2.0 release only: the card says third-party components keep their own licences, and community repackagers (nynxz, DeepBeepMeep) say the bundled PixelUMM decoder is a fine-tune under NVIDIA's One-Way Noncommercial License. That decoder claim isn't confirmed on Tencent's own pages. Weights include Cinematic and Robotics LoRAs and a Nomas-PE prompt enhancer. Separate line from HY-World 1.5 (WorldPlay) and HY-World 2.0."
+  },
+  {
     "id": "odyssey-3",
     "name": "Odyssey-3",
     "company": "odyssey",
@@ -35,7 +130,47 @@
       "official": "https://odyssey.systems/meet-odyssey-3",
       "docs": null
     },
-    "notes": "Announced 2026-09-15 ('Introducing Odyssey-3', said public release 'in the coming weeks'); research preview made available 2026-10-08 ('Our research preview is available now'), used as releaseDate. maxResolution is the Pro variant (base Odyssey-3 is 832x480, per a benchmark footnote). Physics-IQ and WorldMark figures are Odyssey's own evaluations. openWeights false = no weights mentioned anywhere. Predecessor Odyssey-2 Max (2026-04-21) was private beta for partners only. Odyssey also lists Agora-2 (multi-agent world model, 2026-09-24) with a demo at agora.odyssey.systems — not added as a separate entry. Notable=false only because access is 'research preview', not ga/beta, though the preview appears open to anyone — caller may wish to override."
+    "notes": "Announced 2026-09-15 ('Introducing Odyssey-3', said public release 'in the coming weeks'); research preview made available 2026-10-08 ('Our research preview is available now'), used as releaseDate. maxResolution is the Pro variant (base Odyssey-3 is 832x480, per a benchmark footnote). Physics-IQ and WorldMark figures are Odyssey's own evaluations. openWeights false = no weights mentioned anywhere. Predecessor Odyssey-2 Max (2026-04-21) was private beta for partners only. Odyssey also lists Agora-2 (multi-agent world model, 2026-09-24) with a demo at agora.odyssey.systems — not added as a separate entry. Notable=false only because access is 'research preview', not ga/beta, though the preview appears open to anyone — caller may wish to override. As of 2026-10-28 the Meet Odyssey-3 page shows 'Try Odyssey-3' and 'Get API Access' links. Odyssey's developer portal dates from the Odyssey-2 Pro API launch, and no Odyssey-3 model id or price was found."
+  },
+  {
+    "id": "pixverse-r2",
+    "name": "PixVerse R2",
+    "company": "pixverse",
+    "releaseDate": "2026-09-22",
+    "notable": true,
+    "description": "PixVerse's real-time 'omni' world model that keeps one audiovisual world running while the user is inside it, updating it from text, visual references, audio and movement controls, with earlier actions carried forward.",
+    "strengths": [
+      "One real-time interface for text, visual references, audio and action inputs",
+      "User actions persist across the session; built for longer coherent sessions than R1",
+      "Collection of R2 worlds open to explore on PixVerse's site"
+    ],
+    "weaknesses": [
+      "No published resolution, frame rate or session length",
+      "No API or pricing published",
+      "PixVerse says it is not a finished game engine or a fully open world"
+    ],
+    "interactive": true,
+    "inputs": [
+      "text",
+      "image",
+      "actions"
+    ],
+    "output": "video-stream",
+    "maxSessionSec": null,
+    "maxResolution": null,
+    "fps": null,
+    "access": "beta",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [],
+    "pricing": {
+      "notes": "Not published; no R2 entry in PixVerse platform docs (which cover V6 and other clip models)."
+    },
+    "links": {
+      "official": "https://pixverse.ai/en/blog/pixverse-introduces-r2-real-time-world-model",
+      "docs": "https://pixverse.ai/en/blog/pixverse-r2-scaling-real-time-omni-world-models"
+    },
+    "notes": "releaseDate = launch post as listed on PixVerse's blog index (2026-09-22); a syndicated Business Wire copy is dated 2026-09-23; the technical post is dated 2026-08-23. access 'beta' because the launch post says a collection of R2 worlds is open to explore, but one PixVerse page still says 'coming soon' and no sign-up or plan terms were found. 'image' = visual references; audio input also supported (not in the inputs enum). Predecessor R1 (January 2026) not added separately. openWeights false = none mentioned."
   },
   {
     "id": "runway-gwm-worlds-2",
@@ -326,12 +461,11 @@
     "strengths": [
       "Open weights under a commercial-use licence (OpenMDW 1.1)",
       "Action-conditioned forward-dynamics generation as well as inverse-dynamics and policy modes",
-      "Two sizes released: Nano (16B) for workstation GPUs, Super (64B) for large-scale synthetic data",
+      "Three sizes: Edge (4B) for on-device real-time robotics, Nano (16B) for workstation GPUs, Super (64B) for large-scale synthetic data",
       "NVIDIA reports first place among open models on Physics-IQ and RoboArena"
     ],
     "weaknesses": [
-      "Not a real-time interactive generator; produces clips of 5-400 frames",
-      "Edge variant for real-time inference not yet released"
+      "Not a real-time interactive generator; produces clips of 5-400 frames"
     ],
     "interactive": false,
     "inputs": [
@@ -361,6 +495,10 @@
       {
         "provider": "huggingface",
         "id": "nvidia/Cosmos3-Super"
+      },
+      {
+        "provider": "huggingface",
+        "id": "nvidia/Cosmos3-Edge"
       }
     ],
     "pricing": {
@@ -370,7 +508,7 @@
       "official": "https://nvidianews.nvidia.com/news/nvidia-launches-cosmos-3-the-open-frontier-foundation-model-for-physical-ai",
       "docs": "https://github.com/nvidia/cosmos"
     },
-    "notes": "Announced at GTC Taipei; press release and model cards date it 2026-05-31 (some coverage says June 1). Output resolution/fps follow the input request; 720p is the maximum listed input resolution and the examples use 1280x720 at 24 fps, so fps left null. Clip length 5-400 frames (default 189); maxSessionSec left null as no duration is stated (400 frames ≈ 16.7 s at 24 fps, my arithmetic). Super is listed as 64B in NVIDIA's HF blog and 65B on the HF page. Audio input supported (max 0.5 s) — not in the inputs enum. A third variant, Cosmos 3 Edge, is 'coming soon'. OpenMDW SPDX id not confirmed, so spdx null."
+    "notes": "Announced at GTC Taipei; press release and model cards date it 2026-05-31 (some coverage says June 1). Output resolution/fps follow the input request; 720p is the maximum listed input resolution and the examples use 1280x720 at 24 fps, so fps left null. Clip length 5-400 frames (default 189); maxSessionSec left null as no duration is stated (400 frames ≈ 16.7 s at 24 fps, my arithmetic). Super is listed as 64B in NVIDIA's HF blog and 65B on the HF page. Audio input supported (max 0.5 s) — not in the inputs enum. Cosmos 3 Edge (4B, Nemotron-based 2B reasoner per NVIDIA's developer blog) released 2026-07-20 per its HF model card (press dates the announcement 07-16); the Cosmos 3 technical report (06-22) describes Edge as a dense 2B model 'in a later release', conflicting with the card's 4B. A separate Cosmos3-Edge-Policy-DROID robot policy is not part of this entry. OpenMDW SPDX id not confirmed, so spdx null."
   },
   {
     "id": "spaitial-echo-2",
@@ -751,10 +889,10 @@
       "notes": "Included with Google AI Ultra ($200 tier), 18+."
     },
     "links": {
-      "official": "https://deepmind.google/models/genie/",
+      "official": "https://deepmind.google/blog/genie-3-a-new-frontier-for-world-models/",
       "docs": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/project-genie/"
     },
-    "notes": "Genie 3 was announced 2025-08-05 as a limited research preview for select academics/creators; releaseDate is the first public launch via Project Genie (2026-01-29, U.S. Ultra subscribers), expanded to Ultra subscribers globally on 2026-05-19. Google calls Project Genie 'an experimental research prototype', hence access 'research-preview' even though any eligible paying subscriber can use it. fps: DeepMind model page says 20-24 fps, the Genie 3 blog says 24. maxSessionSec 60 = Project Genie cap; the model itself supports 'a few minutes' of continuous interaction. No Genie 4 found."
+    "notes": "Genie 3 was announced 2025-08-05 as a limited research preview for select academics/creators; releaseDate is the first public launch via Project Genie (2026-01-29, U.S. Ultra subscribers), expanded to Ultra subscribers globally on 2026-05-19. Google calls Project Genie 'an experimental research prototype', hence access 'research-preview' even though any eligible paying subscriber can use it. fps: DeepMind model page says 20-24 fps, the Genie 3 blog says 24. maxSessionSec 60 = Project Genie cap; the model itself supports 'a few minutes' of continuous interaction. Successor Genie 4 announced 2026-10-27 as a trusted-tester research preview (separate entry). Google says it is coming to Project Genie for Ultra subscribers; until then Project Genie runs Genie 3. The deepmind.google/models/genie page now presents Genie 4."
   },
   {
     "id": "hy-world-1-5",

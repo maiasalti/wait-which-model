@@ -9392,5 +9392,190 @@
       "Thinks long at max effort, using well over the median token count on Artificial Analysis' runs, and its chain of thought follows reasoning instructions far less reliably than Sol's"
     ],
     "notes": "Announced 2026-10-26 as the first Terra-tier model since GPT-5.6 (the GPT-6 launch shipped only Sol and Luna); OpenAI's system-card addendum (deploymentsafety.openai.com/gpt-6-1-terra) calls GPT-5.6 Terra 'its predecessor', which sets predecessorId, though GPT-5.6 Terra has no retirement scheduled. Context 1,050,000 tokens (922K max input), 128K output, cutoff 2026-06-01, none/low/medium (default)/high/xhigh/max effort, text+image in, and $1/$5 per MTok ($0.05 cached input, $1.25/$2.50 cache writes at 30-min/12-hour retention) are from OpenAI's model docs; prompts over 272K input tokens bill at 2x input/cache and 1.5x output, batch and flex are half price, fast mode costs 2x and regional processing adds 10%. Tool calls require the Responses API. Rolled out in ChatGPT Work and Codex for Plus, Pro, Enterprise and Edu and in the API. OpenAI's launch charts (openai.com/index/introducing-gpt-6-1-terra, not fetchable directly; figures as reproduced by kingy.ai and CellCog) use only untracked suites: Agents' Last Exam v1 55.9% low / 57.6% medium / 60.0% max (GPT-5.6 Terra 50.7% max), MMMU-Pro 84.6% medium / 85.5% max, OSWorld 2.1 offline 66.7% medium / 74.2% max, Terminal-Bench 4.0 24.8% low / 35.8% medium / 50.3% max (not the tracked 2.1), Terminal-Bench Science 0.1 34.3% medium / 58.3% max, and a difficult-prompt factual error rate of 16.7% low / 10.1% medium / 4.3% max (GPT-5.6 Terra 53.6% low). It is rated Critical in cybersecurity and High in biological/chemical under the Preparedness Framework, with GPT-6 Astra's safeguards. Artificial Analysis scores it 41 on its Intelligence Index at medium ($0.10 per task, the costPerTask figure) and 48 at max ($0.40 per task, 130M output tokens against an 81M median); AA had not measured speed at launch. No GPQA Diamond, SWE-bench, HLE, Arena or ARC Prize figures at launch."
+  },
+  {
+    "id": "d1-2b",
+    "name": "d1-2B",
+    "company": "liquid-ai",
+    "releaseDate": "2026-10-27",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "type": "system-one",
+    "contextWindow": 128000,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "self-host",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": null,
+      "name": "LFM Open License v1.0",
+      "kind": "restricted",
+      "url": "https://www.liquid.ai/lfm-license",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": "d1-3b",
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "A third smaller than the d1-3B it replaces while answering more accurately on Liquid's own decision suites, so the same edge box handles more traffic",
+      "Reads video as well as text and images in the state, so a recorded clip can be classified without pulling frames out first",
+      "One forward pass with no generated tokens returns a calibrated probability per option, so a confidence threshold can decide what escalates to a larger model",
+      "Ships in GGUF, MLX and ONNX builds from Liquid itself on day one, so it runs on laptops and phones without waiting for community ports"
+    ],
+    "weaknesses": [
+      "Cannot write text at all — it is a decision model, so anything that needs an explanation or a draft has to go to a generator",
+      "Every accuracy figure so far is Liquid's own, on suites it chose; no independent replication had appeared at launch",
+      "Free commercial use stops at US$10M annual revenue under the LFM Open License, and above that production use needs a paid licence from Liquid"
+    ],
+    "notes": "Not an LLM: an open-weights \"System One\" decision model from Liquid AI's LFM3 family, 1.92B parameters built on LFM3-VL-2B (24-layer tri-hybrid backbone of gated short convolutions, sliding-window and global attention), taking text, image or video state plus typed questions and returning calibrated probabilities in one forward pass, so none of this site's benchmarks apply and every cell is null by design. Liquid's LFM3 launch post says it \"replaces our previous d1-3B, with a third fewer parameters\", hence predecessorId. The model card gives a 128K-token context (recorded as 128,000; the exact integer was not seen), Decision Bench (decisionbench.ai) v4 85.2 against 83.6 for d1-3B, ImajevBench v2.0-lite 75.5 against 64.0, and 5.7 ms per decision on an H100 (3.8 ms on an MI325X); all are Liquid's own measurements. Availability is self-host: Liquid's docs list it as open weights run on your own hardware, and its hosted decision API serves d1-ultra and d1.1 instead. No price, knowledge cutoff or Artificial Analysis entry. Sources are search excerpts of liquid.ai/blog/lfm3, huggingface.co/LiquidAI/d1-2B and docs.liquid.ai/lfm/models/decision-models, not pages read directly."
+  },
+  {
+    "id": "d1-omni-2b",
+    "name": "d1-Omni-2B",
+    "company": "liquid-ai",
+    "releaseDate": "2026-10-27",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "type": "system-one",
+    "contextWindow": 128000,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "self-host",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": null,
+      "name": "LFM Open License v1.0",
+      "kind": "restricted",
+      "url": "https://www.liquid.ai/lfm-license",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Takes the question itself as speech as well as text, so a voice request can be routed or checked without a transcription step in between",
+      "Keeps most of its accuracy when questions are heard rather than read, according to Liquid's spoken-question runs",
+      "Batches up to 16 written or spoken questions about one state into a single call, so a call-triage pipeline asks everything at once",
+      "Liquid ships ONNX, GGUF and MLX builds, with a per-decision time on an Apple laptop chip in the tens of milliseconds"
+    ],
+    "weaknesses": [
+      "Cannot produce a transcript or speech — Liquid's card is explicit that it is not a chat model, so it only decides",
+      "Spoken questions don't cover Hindi, Thai, Vietnamese or Indonesian, though those languages work in text",
+      "Audio has to arrive at 16 kHz, and adding a ten-second clip roughly doubles per-decision time on a datacentre GPU"
+    ],
+    "notes": "Not an LLM: the audio-capable open-weights \"System One\" decision model from Liquid AI's LFM3 family, 2.17B parameters built on LFM3-Omni-2B, taking text with images or audio as state plus written or spoken typed questions and returning calibrated probabilities in one forward pass, so none of this site's benchmarks apply and every cell is null by design. The model card gives a 128K-token context (recorded as 128,000; the exact integer was not seen), DecisionBench v1 76.4 and decisionbench.ai v4 84.7 (against 77.1 and 85.2 for d1-2B), 83.4 written vs 78.2 heard on the v1 routing-and-triage subset, and 5.8 ms per decision on an H100 (12.4 ms with a 10-second clip; 21.1 ms on an Apple M5 Pro); all are Liquid's own figures. Liquid makes no replacement claim for the earlier d1-omni-600M, which its docs still list, so predecessorId is null. Availability is self-host: open weights only, with no hosted endpoint. No price, knowledge cutoff or Artificial Analysis entry. Sources are search excerpts of liquid.ai/blog/lfm3, huggingface.co/LiquidAI/d1-Omni-2B (and its ONNX card) and docs.liquid.ai/lfm/models/decision-models, not pages read directly."
+  },
+  {
+    "id": "d1-ultra",
+    "name": "d1-ultra",
+    "company": "liquid-ai",
+    "releaseDate": "2026-10-15",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "type": "system-one",
+    "contextWindow": null,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 0.042,
+      "outputPerMTok": 0
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "openrouter",
+        "id": "liquid/d1-ultra"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Trained specifically to make its probabilities trustworthy, where Liquid says most decision models are overconfident — the point is a threshold you can automate on",
+      "Built for messy visual judgement calls such as spotting a defect against a spec or checking a damage claim against customer photos",
+      "Each question is billed as its own prompt on input tokens only, so cost scales with how much you ask rather than with any generated output",
+      "Reachable through Liquid's own API, OpenRouter and Vercel AI Gateway on the same System One request shape as Jev"
+    ],
+    "weaknesses": [
+      "Closed weights, unlike Liquid's open d1 checkpoints — it runs only on hosted endpoints",
+      "The lead over rival decision models is Liquid's own claim, and one independent review could not confirm it beats every rival",
+      "Within two weeks Liquid was steering cost-sensitive users to a cheaper hosted d1.1, so the hosted line-up is still shifting"
+    ],
+    "notes": "Not an LLM: Liquid AI's flagship hosted \"System One\" decision model, built on a larger open-weight base model with Liquid-specific customisations, taking text and/or images plus typed questions (yes/no, choice, score) and returning probabilities with no generated tokens, so none of this site's benchmarks apply and every cell is null by design. Filed under the fast tier with the other decision models. Launched 2026-10-15 (liquid.ai/blog/d1-ultra) at $0.042 per M input tokens and $0 output per Liquid's pricing page, with images billed at 1.5 tokens per 32x32-pixel patch. Liquid's launch thread claims 44 languages, first place on the Artificial Analysis Decision Index (65) and a lead in all eight categories of its own 112-evaluation suite against d1 and Jev 1.14; AA's Decision Index is not a tracked benchmark here, and these are Liquid's figures. Liquid publishes no context length in the excerpts seen; OpenRouter and Vercel list 32,768 tokens, so contextWindow is left null pending an official figure. OpenRouter's liquid/d1-ultra is the only API id verified; Liquid's own model string was not seen. Weights are not published. No knowledge cutoff or Artificial Analysis cost/speed entry. Sources are search excerpts, not pages read directly."
   }
 ]

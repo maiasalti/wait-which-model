@@ -330,3 +330,13 @@ kimi-k3-1-pro · speed (timeToFirstTokenSec, effort) · 2026-10-26 · AA's page 
 kimi-k3-1-pro · apiIds (aws-bedrock / google-vertex) · 2026-10-26 · Not checked; launch is Kimi API only. The moonshot id kimi-k3.1-pro comes from Moonshot's blog.
 kimi-k3-1-pro · retirementDate · 2026-10-26 · Brand-new release; no lifecycle notice. Left null.
 dessa · apiIds / license / predecessorId / retirementDate · 2026-10-26 · Research preview at block.xyz/dessa with no API, weights, licence or lifecycle info; it's Block's first model. Left null/[].
+d1-2b · apiIds · 2026-10-28 · Weights only at LiquidAI/d1-2B (GGUF/MLX/ONNX variants); Liquid's hosted decision API serves d1-ultra and d1.1, not this checkpoint. Left [].
+d1-2b · speed · 2026-10-28 · Decision model; no Artificial Analysis listing (card gives 5.7 ms/decision on H100, not a tok/s figure). Left null.
+d1-2b · retirementDate · 2026-10-28 · Brand-new open-weights release; no lifecycle notice. Left null.
+d1-omni-2b · apiIds · 2026-10-28 · Weights only at LiquidAI/d1-Omni-2B; no hosted endpoint. Left [].
+d1-omni-2b · speed · 2026-10-28 · Decision model; no AA listing. Left null.
+d1-omni-2b · predecessorId · 2026-10-28 · LFM3 post's replacement claim names only d1-3B; d1-omni-600M is still listed in Liquid's docs. Left null.
+d1-ultra · predecessorId · 2026-10-28 · Liquid compares it against d1 and Jev 1.14 but makes no replacement claim, and hosted d1 is not on the site. Left null.
+d1-ultra · apiIds (liquid) · 2026-10-28 · OpenRouter liquid/d1-ultra verified; Liquid API model string not seen in docs excerpts. Vercel AI Gateway id not checked.
+d1-ultra · speed · 2026-10-28 · Decision model; AA covers it only in the Decision Index, no tok/s figure. Left null.
+d1-ultra · retirementDate · 2026-10-28 · No lifecycle notice. Left null.

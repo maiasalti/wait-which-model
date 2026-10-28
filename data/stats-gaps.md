@@ -1156,3 +1156,9 @@ Stats-filler sweep on 2026-10-13 (re-check of "re-check" rows from 2026-09-22 �
 | gpt-6-1-terra | lmarenaElo / arcAgi2 | 2026-10-27 | no arena.ai listing or ARC Prize results page found a day after launch — re-check |
 | gpt-6-1-terra | speed | 2026-10-27 | Artificial Analysis lists output speed as unknown on both the medium and max pages at launch — re-check |
 | gpt-6-1-terra | mmluPro / aime | 2026-10-27 | retired benchmarks; not in OpenAI's launch material |
+| d1-2b | pricing / costPerTask / knowledgeCutoff / maxOutput | 2026-10-28 | weights-only checkpoint with no hosted price; decision model (no output tokens); no cutoff published |
+| d1-2b | contextWindow (exact integer) | 2026-10-28 | HF card says "128K"; recorded 128000; config.json not read — 131072 possible |
+| d1-omni-2b | pricing / costPerTask / knowledgeCutoff / maxOutput | 2026-10-28 | same as d1-2b |
+| d1-omni-2b | contextWindow (exact integer) | 2026-10-28 | same as d1-2b |
+| d1-ultra | contextWindow | 2026-10-28 | not stated in Liquid's blog/docs/pricing excerpts; OpenRouter and Vercel list 32,768 (third-party), kept in notes |
+| d1-ultra | costPerTask / knowledgeCutoff / maxOutput | 2026-10-28 | decision model with no output tokens; AA Decision Index has no cost-per-Intelligence-Index-task figure; no cutoff published |
