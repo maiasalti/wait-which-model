@@ -1232,7 +1232,6 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | d1-ultra | contextWindow | 2026-10-28 | not stated in Liquid's blog/docs/pricing excerpts; OpenRouter and Vercel list 32,768 (third-party), kept in notes |
 | d1-ultra | costPerTask / knowledgeCutoff / maxOutput | 2026-10-28 | decision model with no output tokens; AA Decision Index has no cost-per-Intelligence-Index-task figure; no cutoff published |
 
-New-model-release run on 2026-10-29 (Maia-flagged), scoped to `gemini-4-carbon` and `lfm3-1-7b`. Sources read directly: Google's launch blog, Google's Gemini 4 Carbon evaluation PDF, artificialanalysis.ai/models/gemini-4-carbon, arena.ai text leaderboard, huggingface.co/LiquidAI/LFM3-1.7B, docs.liquid.ai/lfm/models/lfm3-1.7b, liquid.ai/blog/lfm3, liquid.ai/pricing.
 
 | model-id | field | checked | reason |
 |---|---|---|---|
@@ -1241,7 +1240,3 @@ New-model-release run on 2026-10-29 (Maia-flagged), scoped to `gemini-4-carbon` 
 | gemini-4-carbon | gdpvalAA | 2026-10-29 | AA lists GDPval-AA v2.1 as an evaluation but no score shown; v2.1 is not the v2 scale this key records |
 | gemini-4-carbon | mmluPro / aime | 2026-10-29 | retired; not in Google's table |
 | gemini-4-carbon | contextWindow / maxOutput / knowledgeCutoff | 2026-10-29 | no Google model card (deepmind.google/models/model-cards/gemini-4-carbon 404) or Gemini API model page; AA's "1M" context is not official — re-check at wider rollout |
-| lfm3-1-7b | sweBenchPro / lmarenaElo / gdpvalAA / arcAgi2 | 2026-10-29 | not on the HF card or blog; no arena.ai, AA or ARC Prize listing |
-| lfm3-1-7b | mmluPro / aime | 2026-10-29 | retired; not on the card |
-| lfm3-1-7b | maxOutput / knowledgeCutoff | 2026-10-29 | docs give example max_tokens settings (2,048 / 8,192), not a cap; cutoff unpublished |
-| lfm3-1-7b | costPerTask | 2026-10-29 | no Artificial Analysis page (artificialanalysis.ai/models/lfm3-1-7b 404) |

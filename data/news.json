@@ -3425,13 +3425,12 @@
     "id": "2026-10-27-liquid-ai-lfm3-d1",
     "date": "2026-10-27",
     "title": "Liquid AI releases LFM3, with open d1-2B and d1-Omni-2B decision models",
-    "summary": "Liquid AI released LFM3 on 2026-10-27, six roughly 2B-parameter open-weight models on one tri-hybrid backbone covering text, vision, audio and omni, plus two decision models: d1-2B, which Liquid says replaces d1-3B with a third fewer parameters and reads text, images and video, and d1-Omni-2B, which also takes audio and spoken questions. Both return calibrated probabilities for typed questions in a single forward pass, have a 128K-token context and ship on Hugging Face under the LFM Open License v1.0. The family's text model, LFM3-1.7B, has a 256K-token context and is also served on Liquid's API at $0.08/$0.20 per million tokens.",
+    "summary": "Liquid AI released LFM3 on 2026-10-27, six roughly 2B-parameter open-weight models on one tri-hybrid backbone covering text, vision, audio and omni, plus two decision models: d1-2B, which Liquid says replaces d1-3B with a third fewer parameters and reads text, images and video, and d1-Omni-2B, which also takes audio and spoken questions. Both return calibrated probabilities for typed questions in a single forward pass, have a 128K-token context and ship on Hugging Face under the LFM Open License v1.0.",
     "category": "release",
     "companies": [
       "liquid-ai"
     ],
     "modelIds": [
-      "lfm3-1-7b",
       "d1-2b",
       "d1-omni-2b",
       "d1-3b"
