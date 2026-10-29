@@ -49,7 +49,7 @@ export function CompanyLogo({
           strokeLinejoin="round"
         />
       ) : (
-        <path d={logo.path} fill={fill} />
+        <path d={logo.path} fill={fill} fillRule={logo.fillRule} />
       )}
     </svg>
   );

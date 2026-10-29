@@ -33,13 +33,13 @@ const HIT = 12; // hover target radius in px, independent of the mark's own geom
  * tooltip misses between letter strokes. The transparent circle underneath gives every mark
  * one solid, predictable hit area. It needs fill="transparent" rather than fill="none":
  * "none" is not hit-tested. */
-function logoShape(color: string, path: string | undefined, dimming: boolean) {
+function logoShape(color: string, logo: (typeof LOGO_PATHS)[string] | undefined, dimming: boolean) {
   return function LogoMark(props: unknown) {
     const { cx, cy, payload } = props as { cx?: number; cy?: number; payload?: Point };
     if (cx == null || cy == null) return <g />;
     const opacity = dimming && payload && !payload.hi ? DIM : 0.95;
     const hitArea = <circle cx={cx} cy={cy} r={HIT} fill="transparent" />;
-    if (!path)
+    if (!logo)
       return (
         <g>
           {hitArea}
@@ -49,12 +49,28 @@ function logoShape(color: string, path: string | undefined, dimming: boolean) {
     return (
       <g>
         {hitArea}
-        <g
-          transform={`translate(${cx - MARK / 2}, ${cy - MARK / 2}) scale(${MARK / 24})`}
+        <svg
+          x={cx - MARK / 2}
+          y={cy - MARK / 2}
+          width={MARK}
+          height={MARK}
+          viewBox={logo.viewBox ?? "0 0 24 24"}
           opacity={opacity}
+          overflow="visible"
         >
-          <path d={path} fill={color} />
-        </g>
+          {logo.stroke ? (
+            <path
+              d={logo.path}
+              fill="none"
+              stroke={color}
+              strokeWidth={logo.stroke}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          ) : (
+            <path d={logo.path} fill={color} fillRule={logo.fillRule} />
+          )}
+        </svg>
       </g>
     );
   };
@@ -363,7 +379,7 @@ export function TimelineScatter({
               name={s.company.name}
               data={s.points}
               isAnimationActive={false}
-              shape={logoShape(companyColor(s.company.id), LOGO_PATHS[s.company.id]?.path, dimming)}
+              shape={logoShape(companyColor(s.company.id), LOGO_PATHS[s.company.id], dimming)}
             />
           ))}
           {showLabels && <LabelLayer points={all} dimming={dimming} />}
@@ -439,7 +455,7 @@ export function CostPerfScatter({
               name={s.company.name}
               data={s.points}
               isAnimationActive={false}
-              shape={logoShape(companyColor(s.company.id), LOGO_PATHS[s.company.id]?.path, dimming)}
+              shape={logoShape(companyColor(s.company.id), LOGO_PATHS[s.company.id], dimming)}
             />
           ))}
           {showLabels && <LabelLayer points={all} dimming={dimming} />}
