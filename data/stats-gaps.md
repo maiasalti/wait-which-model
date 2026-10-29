@@ -1231,3 +1231,12 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | d1-omni-2b | contextWindow (exact integer) | 2026-10-28 | same as d1-2b |
 | d1-ultra | contextWindow | 2026-10-28 | not stated in Liquid's blog/docs/pricing excerpts; OpenRouter and Vercel list 32,768 (third-party), kept in notes |
 | d1-ultra | costPerTask / knowledgeCutoff / maxOutput | 2026-10-28 | decision model with no output tokens; AA Decision Index has no cost-per-Intelligence-Index-task figure; no cutoff published |
+
+
+| model-id | field | checked | reason |
+|---|---|---|---|
+| gemini-4-carbon | gpqaDiamond / sweBench / sweBenchPro / hle / arcAgi2 | 2026-10-29 | not in Google's evaluation PDF or blog; AA's model page lists HLE-Diamond as an index component but shows no per-eval score; no arcprize.org result at launch (restricted Fairwind access) — re-check at wider rollout |
+| gemini-4-carbon | terminalBench | 2026-10-29 | only Terminal-Bench 4.0 published (Google/AA 65.2%), not the tracked 2.1 |
+| gemini-4-carbon | gdpvalAA | 2026-10-29 | AA lists GDPval-AA v2.1 as an evaluation but no score shown; v2.1 is not the v2 scale this key records |
+| gemini-4-carbon | mmluPro / aime | 2026-10-29 | retired; not in Google's table |
+| gemini-4-carbon | contextWindow / maxOutput / knowledgeCutoff | 2026-10-29 | no Google model card (deepmind.google/models/model-cards/gemini-4-carbon 404) or Gemini API model page; AA's "1M" context is not official — re-check at wider rollout |
