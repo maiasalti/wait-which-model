@@ -393,3 +393,11 @@ d1-ultra · predecessorId · 2026-10-28 · Liquid compares it against d1 and Jev
 d1-ultra · apiIds (liquid) · 2026-10-28 · OpenRouter liquid/d1-ultra verified; Liquid API model string not seen in docs excerpts. Vercel AI Gateway id not checked.
 d1-ultra · speed · 2026-10-28 · Decision model; AA covers it only in the Decision Index, no tok/s figure. Left null.
 d1-ultra · retirementDate · 2026-10-28 · No lifecycle notice. Left null.
+gemini-4-carbon · predecessorId · 2026-10-29 · Google's launch blog says Carbon "builds on" Gemini 4 Argon (lineage); the blog and evaluation PDF name no model it replaces, and Argon stays on sale. Left null.
+gemini-4-carbon · apiIds · 2026-10-29 · Restricted Fairwind rollout; no Gemini API or Vertex model page and no official model string (the only "gemini-4-carbon" id seen is in a third-party code snippet). Left [].
+gemini-4-carbon · speed.timeToFirstTokenSec · 2026-10-29 · AA's FAQ gives "Time to First Token 103.13s" on Google's API, but its Time To First Answer Token chart shows no value for Carbon (High), so the answer-token figure is unconfirmed. outputTokensPerSec 99.8 recorded. Left null.
+gemini-4-carbon · retirementDate · 2026-10-29 · No lifecycle notice. Left null.
+lfm3-1-7b · predecessorId · 2026-10-29 · Liquid says LFM3-1.7B outperforms LFM2.5-2.6B but makes no replacement claim, and no LFM2.5 model is tracked. Left null.
+lfm3-1-7b · apiIds · 2026-10-29 · liquid.ai/pricing lists the model at $0.08/$0.20 but shows no API model string; the docs only use the HF id LiquidAI/LFM3-1.7B. No OpenRouter listing found. Left [].
+lfm3-1-7b · speed · 2026-10-29 · No Artificial Analysis page. Left null.
+lfm3-1-7b · retirementDate · 2026-10-29 · No lifecycle notice. Left null.

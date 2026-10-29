@@ -1,5 +1,21 @@
 [
   {
+    "id": "2026-10-28-gemini-4-carbon",
+    "date": "2026-10-28",
+    "title": "Google releases Gemini 4 Carbon, its strongest model, to cyber defenders first",
+    "summary": "Google announced Gemini 4 Carbon on 2026-10-28, two weeks after Argon, as its strongest model for cybersecurity and long-horizon work, with access starting with a subset of cyber defenders through the Fairwind Program and wider release promised 'as soon as possible'. It tops Artificial Analysis' Intelligence Index v5.0 at 59, one point ahead of Claude Opus 5.5, Google reports 88.2% on SEC-bench Pro and 54.8% on ExploitGym, and it launches at Argon's introductory $2/$10 per million tokens.",
+    "category": "release",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [
+      "gemini-4-carbon",
+      "gemini-4-argon"
+    ],
+    "sourceName": "Google",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+  },
+  {
     "id": "2026-10-26-gpt-6-1-terra",
     "date": "2026-10-26",
     "title": "OpenAI releases GPT-6.1 Terra, its first Terra-tier model since GPT-5.6, at $1/$5",
@@ -3409,12 +3425,13 @@
     "id": "2026-10-27-liquid-ai-lfm3-d1",
     "date": "2026-10-27",
     "title": "Liquid AI releases LFM3, with open d1-2B and d1-Omni-2B decision models",
-    "summary": "Liquid AI released LFM3 on 2026-10-27, six roughly 2B-parameter open-weight models on one tri-hybrid backbone covering text, vision, audio and omni, plus two decision models: d1-2B, which Liquid says replaces d1-3B with a third fewer parameters and reads text, images and video, and d1-Omni-2B, which also takes audio and spoken questions. Both return calibrated probabilities for typed questions in a single forward pass, have a 128K-token context and ship on Hugging Face under the LFM Open License v1.0.",
+    "summary": "Liquid AI released LFM3 on 2026-10-27, six roughly 2B-parameter open-weight models on one tri-hybrid backbone covering text, vision, audio and omni, plus two decision models: d1-2B, which Liquid says replaces d1-3B with a third fewer parameters and reads text, images and video, and d1-Omni-2B, which also takes audio and spoken questions. Both return calibrated probabilities for typed questions in a single forward pass, have a 128K-token context and ship on Hugging Face under the LFM Open License v1.0. The family's text model, LFM3-1.7B, has a 256K-token context and is also served on Liquid's API at $0.08/$0.20 per million tokens.",
     "category": "release",
     "companies": [
       "liquid-ai"
     ],
     "modelIds": [
+      "lfm3-1-7b",
       "d1-2b",
       "d1-omni-2b",
       "d1-3b"
