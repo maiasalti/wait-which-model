@@ -8920,7 +8920,7 @@
       "usd": 1.1318,
       "effort": null
     },
-    "openWeights": false,
+    "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
     "speed": {
@@ -8928,7 +8928,13 @@
       "timeToFirstTokenSec": 18.69,
       "effort": null
     },
-    "license": null,
+    "license": {
+      "spdx": null,
+      "name": "Mistral Ecosystem Open-Weight License",
+      "kind": "restricted",
+      "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B-NVFP4",
+      "commercialUse": true
+    },
     "apiIds": [
       {
         "provider": "mistral",
@@ -8961,9 +8967,9 @@
     "weaknesses": [
       "A public preview whose reinforcement-learning run is still in flight — Mistral expects large improvements in the coming weeks, so behaviour is a moving target, not a fixed release",
       "Reasons before every answer, so replies take a long time to start even on simple prompts",
-      "Weights are promised for the end of October but not yet out, so self-hosting has to wait"
+      "The open-weight licence is a modified MIT that still needs a separate commercial licence from Mistral before you can sell it as a hosted model-as-a-service"
     ],
-    "notes": "Public preview announced 2026-10-06 on Mistral Studio; Mistral says the weights will be released by the end of October and names no licence yet, so openWeights is false and license null until they ship. Mistral's two official pages disagree on size: the announcement says 1T total / 49B active parameters, while the docs model page says 1.05T total / 52B active plus a 1.6B vision encoder. Context is 1M per Mistral's docs (Artificial Analysis lists 524,288). Pricing is the $1.36 / $4.18 list rate ($0.14 cached input); the docs page currently shows exactly half ($0.68 / $2.09 / $0.07 cached) with the list price struck through, and gives no end date for the discount. Mistral reported none of the tracked benchmark keys: its launch figures are DeepSWE v1.1 61.7%, SWE-Atlas-QnA 59.4%, Terminal-Bench 4 28.3% (not the 2.1 this site tracks), Coding Agent Index 49.8%, AutomationBench 59.9% and Cybench 93%. hle is null: Mistral reports no HLE figure, and Artificial Analysis' 35% comes from its own text-only subset with an unstated tool setting. AA also lists GDPval-AA v2.1 at 1424, which is not the v2 this site tracks. AA measures a single reasoning configuration with no effort levels named, so costPerTask and speed carry no effort."
+    "notes": "Public preview announced 2026-10-06 on Mistral Studio. Mistral released the weights of an improved checkpoint on 2026-10-29 (mistral.ai/news/mistral-large-4-oss; Hugging Face mistralai/Mistral-Large-4-1T-A52B plus an NVFP4 build) under the Mistral Ecosystem Open-Weight License, a modified MIT that allows commercial use but requires a separate Mistral licence for model-as-a-service offerings. Mistral credits three more weeks of reinforcement learning for gains over the preview, including Terminal-Bench 4.0 up 13 points to 41% (still not the 2.1 this site tracks); the other figures below describe the preview, and releaseDate stays the 2026-10-06 preview announcement. Mistral's two official pages disagree on size: the announcement says 1T total / 49B active parameters, while the docs model page says 1.05T total / 52B active plus a 1.6B vision encoder. Context is 1M per Mistral's docs (Artificial Analysis lists 524,288). Pricing is the $1.36 / $4.18 list rate ($0.14 cached input); the docs page currently shows exactly half ($0.68 / $2.09 / $0.07 cached) with the list price struck through, and gives no end date for the discount. Mistral reported none of the tracked benchmark keys: its launch figures are DeepSWE v1.1 61.7%, SWE-Atlas-QnA 59.4%, Terminal-Bench 4 28.3% (not the 2.1 this site tracks), Coding Agent Index 49.8%, AutomationBench 59.9% and Cybench 93%. hle is null: Mistral reports no HLE figure, and Artificial Analysis' 35% comes from its own text-only subset with an unstated tool setting. AA also lists GDPval-AA v2.1 at 1424, which is not the v2 this site tracks. AA measures a single reasoning configuration with no effort levels named, so costPerTask and speed carry no effort."
   },
   {
     "id": "muse-wonder",

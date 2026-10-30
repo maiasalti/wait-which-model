@@ -77,3 +77,5 @@ qwen-task-assistant · links.docs · 2026-10-28 · qwen.ai, alibabagroup.com, al
 lovable · pricing.plan · 2026-10-28 · lovable.dev FAQ/billing: credits (Pro 100/mo) but no dollar price in excerpts; $25 only on third-party guides
 
 ## features
+
+muse-for-small-business · links.docs · 2026-10-30 · search for Meta help-center setup/connector pages: only third-party guides (eesel, smartscope, parix); no Meta help article surfaced; WebFetch unavailable
