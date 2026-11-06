@@ -1,5 +1,35 @@
 [
   {
+    "id": "2026-11-05-gpt-6-cyber",
+    "date": "2026-11-05",
+    "title": "OpenAI launches GPT-6 Cyber, a cyber-specialised GPT-6 Astra for approved Daybreak Red customers",
+    "summary": "OpenAI released GPT-6 Cyber, a variant of GPT-6 Astra trained for authorised vulnerability discovery and exploit development, through the API and Codex to a select group of approved Daybreak Red customers at $20/$100 per million tokens. It scores 48.5% on ExploitGym against 32.1% for GPT-5.6 Cyber, is rated Critical for cybersecurity under OpenAI's Preparedness Framework (GPT-5.6 Cyber was High), and was used to find 81 previously unknown high-severity Firefox vulnerabilities and build working exploits for 948 Linux kernel bugs.",
+    "category": "release",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-6-cyber"
+    ],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-6-cyber/"
+  },
+  {
+    "id": "2026-11-04-kimi-k3-1-pro-open-weights",
+    "date": "2026-11-04",
+    "title": "Moonshot AI publishes the Kimi K3.1 Pro weights on Hugging Face",
+    "summary": "Moonshot released the full weights of Kimi K3.1 Pro, a 2.8T-parameter mixture-of-experts model with 104B active parameters and a 1M-token context, two weeks after its API launch and on the date it had promised. They ship under a custom Kimi K3.1-Pro License that allows commercial use but requires a separate agreement for large Model-as-a-Service operators. The model card reports 94.2 on GPQA Diamond and 65.7 on Terminal-Bench 4.0.",
+    "category": "release",
+    "companies": [
+      "moonshot"
+    ],
+    "modelIds": [
+      "kimi-k3-1-pro"
+    ],
+    "sourceName": "Hugging Face (moonshotai/Kimi-K3.1-Pro)",
+    "sourceUrl": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+  },
+  {
     "id": "2026-10-28-gemini-4-carbon",
     "date": "2026-10-28",
     "title": "Google releases Gemini 4 Carbon, its strongest model, to cyber defenders first",

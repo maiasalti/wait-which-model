@@ -1145,7 +1145,7 @@ Stats-filler sweep on 2026-10-13 (re-check of "re-check" rows from 2026-09-22 �
 | muse-spark-open | maxOutput / knowledgeCutoff | 2026-10-19 | not stated on the HF model card; OpenRouter lists no max output |
 | beam | gdpvalAA / lmarenaElo / arcAgi2 | 2026-10-19 | not in Reflection's model card or launch blog; AA lists AA-Briefcase but no GDPval-AA v2 figure; no arena.ai listing or ARC Prize entry |
 | beam | maxOutput | 2026-10-19 | HF card silent; eesel.ai reports 128K on Reflection's beta API docs (secondary, not confirmed) |
-| kimi-k3-1-pro | gpqaDiamond / sweBench / sweBenchPro / arcAgi2 / lmarenaElo | 2026-10-26 | not in Moonshot's launch blog (kimi.ai/blog/kimi-k3-1-pro), which reports Terminal-Bench 4.0, Kimi Code Bench, BenchCAD, OfficeQA Pro, SWE-Marathon, DeepSWE instead; AA page shows no GPQA; no arena.ai listing or ARC Prize entry found 3 days after launch — re-check |
+| kimi-k3-1-pro | gpqaDiamond / sweBench / sweBenchPro / arcAgi2 / lmarenaElo | 2026-10-26 | not in Moonshot's launch blog (kimi.ai/blog/kimi-k3-1-pro), which reports Terminal-Bench 4.0, Kimi Code Bench, BenchCAD, OfficeQA Pro, SWE-Marathon, DeepSWE instead; AA page shows no GPQA; no arena.ai listing or ARC Prize entry found 3 days after launch — re-check — **gpqaDiamond superseded 2026-11-06: 94.2 on the HF model card, filled** |
 | kimi-k3-1-pro | terminalBench | 2026-10-26 | only Terminal-Bench 4.0 exists (Moonshot 65.7%, AA 67%), not the tracked 2.1; kept in notes |
 | kimi-k3-1-pro | gdpvalAA | 2026-10-26 | AA rates it 1846 on GDPval-AA v2.1 (via VentureBeat / Handy AI) — a different scale from the tracked v2; kept in notes |
 | kimi-k3-1-pro | maxOutput / knowledgeCutoff | 2026-10-26 | not stated in Moonshot's blog, Kimi Code docs or AA's page; platform.kimi.ai pricing table didn't render on fetch |
@@ -1240,3 +1240,10 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | gemini-4-carbon | gdpvalAA | 2026-10-29 | AA lists GDPval-AA v2.1 as an evaluation but no score shown; v2.1 is not the v2 scale this key records |
 | gemini-4-carbon | mmluPro / aime | 2026-10-29 | retired; not in Google's table |
 | gemini-4-carbon | contextWindow / maxOutput / knowledgeCutoff | 2026-10-29 | no Google model card (deepmind.google/models/model-cards/gemini-4-carbon 404) or Gemini API model page; AA's "1M" context is not official — re-check at wider rollout |
+| gpt-6-cyber | gpqaDiamond / sweBench / sweBenchPro / terminalBench / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-11-06 | OpenAI's announcement and system card (deploymentsafety.openai.com/gpt-6-cyber) report only cyber/safety evals (ExploitGym, SEC-Bench Pro, SRE-Bench, CyScenarioBench, FrontierCyber, ExpertSWE) — none map onto tracked keys; Daybreak Red gating means no arena.ai, AA or ARC Prize placement |
+| gpt-6-cyber | mmluPro / aime | 2026-11-06 | retired; not published |
+| gpt-6-cyber | costPerTask | 2026-11-06 | not indexed by Artificial Analysis; Daybreak Red-gated |
+| gpt-6-cyber | knowledgeCutoff | 2026-11-06 | OpenAI's model page (developers.openai.com/api/docs/models/gpt-6-cyber) states no cutoff; not inferred from GPT-6 Astra's |
+| kimi-k3-1-pro | sweBench / sweBenchPro / arcAgi2 / lmarenaElo | 2026-11-06 | re-checked on the open-weights HF model card (huggingface.co/moonshotai/Kimi-K3.1-Pro): it reports SWE Marathon v1.1 and DeepSWE v1.1 instead, with no SWE-bench Verified, SWE-bench Pro, ARC-AGI-2 or arena figure |
+| kimi-k3-1-pro | terminalBench / gdpvalAA | 2026-11-06 | HF card confirms Terminal-Bench 4.0 65.7 (Claude Code harness) and GDPval-AA v2.1 1846, neither of them the tracked version; BrowseComp 92.1 is untracked |
+| kimi-k3-1-pro | maxOutput / knowledgeCutoff | 2026-11-06 | HF model card, platform.kimi.ai introduction and models pages state neither; the card’s max_tokens=4096 is only a code example |
