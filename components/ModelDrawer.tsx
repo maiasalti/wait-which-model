@@ -8,7 +8,7 @@ import { companyName, formatDate } from "@/lib/data";
 import { ModelStatsGrid } from "./model/ModelStatsGrid";
 import { ModelBenchmarks } from "./model/ModelBenchmarks";
 import { ModelProsCons } from "./model/ModelProsCons";
-import { ModelNewsList } from "./model/ModelNewsList";
+import { ModelNewsList, newsCount } from "./model/ModelNewsList";
 import { ModelUsedBy, usedByCount } from "./model/ModelUsedBy";
 import { Collapsible } from "./Collapsible";
 import { ModelDeveloperDetails } from "./model/ModelDeveloperDetails";
@@ -56,15 +56,24 @@ export function ModelDrawer({ model }: { model: Model }) {
         <ModelStatsGrid model={model} className="grid-cols-2 sm:grid-cols-3" />
 
         <div>
+          {newsCount(model) > 0 && (
+            <Collapsible
+              title="News"
+              meta={`${newsCount(model)} ${newsCount(model) === 1 ? "story" : "stories"}`}
+              defaultOpen
+            >
+              <ModelNewsList model={model} />
+            </Collapsible>
+          )}
+          <Collapsible title="Strengths & weaknesses" defaultOpen>
+            <ModelProsCons model={model} className="space-y-5" />
+          </Collapsible>
           <Collapsible
             title="Benchmarks"
             meta={`${benchmarkCoverage(model).reported} of ${benchmarkCoverage(model).total} reported`}
             defaultOpen
           >
             <ModelBenchmarks model={model} />
-          </Collapsible>
-          <Collapsible title="Strengths & weaknesses">
-            <ModelProsCons model={model} className="space-y-5" />
           </Collapsible>
           <Collapsible title="For developers">
             <ModelDeveloperDetails model={model} />
@@ -74,9 +83,6 @@ export function ModelDrawer({ model }: { model: Model }) {
               <ModelUsedBy model={model} />
             </Collapsible>
           )}
-          <Collapsible title="News">
-            <ModelNewsList model={model} />
-          </Collapsible>
         </div>
       </aside>
     </div>
