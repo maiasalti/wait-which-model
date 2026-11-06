@@ -15,10 +15,10 @@ const CATEGORIES: { key: NewsCategory | "all"; label: string }[] = [
 
 const CATEGORY_STYLE: Record<NewsCategory, string> = {
   release: "bg-accent/15 text-accent",
-  benchmark: "bg-white/10 text-ink",
-  company: "bg-white/5 text-ink-2",
-  research: "bg-white/5 text-ink-2",
-  policy: "bg-white/5 text-ink-2",
+  benchmark: "bg-wash/10 text-ink",
+  company: "bg-wash/5 text-ink-2",
+  research: "bg-wash/5 text-ink-2",
+  policy: "bg-wash/5 text-ink-2",
 };
 
 function monthKey(date: string) {

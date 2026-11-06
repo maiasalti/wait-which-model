@@ -37,8 +37,8 @@ export function ModelCard({ model }: { model: Model }) {
               model.status === "frontier"
                 ? "bg-accent/15 text-accent"
                 : model.status === "unknown"
-                  ? "bg-amber-400/15 text-amber-400"
-                  : "bg-white/5 text-ink-3"
+                  ? "bg-warn/15 text-warn"
+                  : "bg-wash/5 text-ink-3"
             }`}
           >
             {STATUS_LABEL[model.status]}
@@ -49,7 +49,7 @@ export function ModelCard({ model }: { model: Model }) {
             </span>
           )}
           {model.openWeights && (
-            <span className="mono rounded bg-white/5 px-1.5 py-0.5 text-[10px] uppercase tracking-wider text-ink-2">
+            <span className="mono rounded bg-wash/5 px-1.5 py-0.5 text-[10px] uppercase tracking-wider text-ink-2">
               Open weights
             </span>
           )}

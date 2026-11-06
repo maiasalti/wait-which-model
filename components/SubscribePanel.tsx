@@ -34,7 +34,7 @@ export function SubscribePanel() {
         <button
           type="submit"
           disabled={status === "sending" || done}
-          className="rounded border border-line-strong bg-surface-2 px-5 py-2.5 text-sm font-semibold text-ink hover:bg-white/5 disabled:opacity-60"
+          className="rounded border border-line-strong bg-surface-2 px-5 py-2.5 text-sm font-semibold text-ink hover:bg-wash/5 disabled:opacity-60"
         >
           {status === "sending" ? "Adding…" : done ? "Subscribed" : "Notify me"}
         </button>

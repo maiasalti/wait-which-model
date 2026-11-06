@@ -26,12 +26,11 @@ function barPct(value: number | null | undefined, domainMin: number, domainMax: 
 
 /** Darkens a hex color so a same-company compare bar stays visually distinct
  * from the primary model's bar instead of rendering as an identical color. */
-function darken(hex: string, amount: number): string {
-  const n = parseInt(hex.replace("#", ""), 16);
-  const r = Math.round(((n >> 16) & 255) * (1 - amount));
-  const g = Math.round(((n >> 8) & 255) * (1 - amount));
-  const b = Math.round((n & 255) * (1 - amount));
-  return `#${[r, g, b].map((c) => c.toString(16).padStart(2, "0")).join("")}`;
+/** Same-company compare colour: the brand colour scaled 40% toward black
+ *  (an sRGB mix with black is exactly a per-channel multiply). Works on the
+ *  CSS-variable colours companyColor returns, in either theme. */
+function darken(color: string, amount: number): string {
+  return `color-mix(in srgb, ${color} ${Math.round((1 - amount) * 100)}%, black)`;
 }
 
 /** Benchmark bars plus the quick-compare picker. Compare state lives here rather
@@ -123,7 +122,7 @@ export function ModelBenchmarks({ model }: { model: Model }) {
                         setCompareId(m.id);
                         setCompareQuery("");
                       }}
-                      className="flex w-full items-center gap-1.5 px-2 py-1.5 text-left text-xs text-ink-2 hover:bg-white/5 hover:text-ink"
+                      className="flex w-full items-center gap-1.5 px-2 py-1.5 text-left text-xs text-ink-2 hover:bg-wash/5 hover:text-ink"
                     >
                       <CompanyLogo companyId={m.company} size={12} />
                       {m.name}
@@ -164,7 +163,7 @@ export function ModelBenchmarks({ model }: { model: Model }) {
                     <div className="text-right text-[10px] text-ink">
                       {e.v != null ? `${e.v}${unit}` : "—"}
                     </div>
-                    <div className="mt-0.5 h-1.5 w-full overflow-hidden rounded-full bg-white/5">
+                    <div className="mt-0.5 h-1.5 w-full overflow-hidden rounded-full bg-wash/5">
                       <div
                         className="h-full rounded-full transition-[width]"
                         style={{ width: `${barPct(e.v, domainMin, domainMax)}%`, background: e.color }}

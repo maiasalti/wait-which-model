@@ -14,13 +14,20 @@
  *                         must be able to tell neighbours apart too
  *   5. Contrast           WCAG ratio of each colour against the surface
  *
+ * Then the same for the light theme. Light mode doesn't use these hexes
+ * directly: lib/palette.ts derives a variant per colour (same OKLCH hue and
+ * chroma, lightness lowered only as far as needed for 3:1 on every light
+ * surface), and that derived palette is what gets checked — contrast against
+ * the light surfaces, chroma floor, and adjacent CVD / normal-vision ΔE.
+ *
  * Adjacent-pair only is deliberate. Thirteen categorical hues cannot all be
  * mutually separable under CVD — that is a property of the colour space, not a
  * bug — so the site leans on secondary encoding everywhere colour appears: the
  * directory buttons carry brand logos, the charts carry labels and tooltips.
  * Run with --all to see the full pairwise picture anyway.
  *
- * Usage:  node scripts/palette-check.js [--all]
+ * Usage:  node scripts/palette-check.js [--all] [--light]
+ *         (--light lists each colour the light theme darkens)
  * Exits 1 on any FAIL.
  *
  * Colour maths (Machado-Oliveira-Fernandes 2009 CVD transforms at severity 1.0,
@@ -30,7 +37,10 @@
 const fs = require("fs");
 const path = require("path");
 
-const SURFACE = "#0B0E1A"; // --surface in app/globals.css
+const SURFACE = "#0B0E1A"; // --bg in app/globals.css (dark)
+// Light-mode derivation lives in lib/palette.ts (shared with the site). Node's
+// built-in type stripping lets this CommonJS script require the .ts module.
+const { lightPalette, minLightContrast, LIGHT_SURFACES, LIGHT_CONTRAST_MIN } = require("../lib/palette.ts");
 const BAND = [0.48, 0.67];
 const CHROMA_FLOOR = 0.1;
 const CVD_TARGET = 8.0;
@@ -122,6 +132,38 @@ const lowContrast = companies.filter((c) => contrast(c.color, SURFACE) < CONTRAS
 say(lowContrast.length === 0, "Contrast vs surface",
   lowContrast.length ? lowContrast.map((c) => `${c.id} ${contrast(c.color, SURFACE).toFixed(2)}:1`).join(", ")
                      : `all ${companies.length} >= ${CONTRAST_MIN}:1`);
+
+const lightHexes = lightPalette(companies.map((c) => c.color));
+const light = companies.map((c, i) => ({ id: c.id, dark: c.color, color: lightHexes[i] }));
+const adjusted = light.filter((c) => c.color !== c.dark.toUpperCase());
+console.log(`\nCompany palette (light, surfaces ${LIGHT_SURFACES.join(" ")}): ${adjusted.length} of ${light.length} darkened for light mode\n`);
+
+const lightLow = light.filter((c) => minLightContrast(c.color) < LIGHT_CONTRAST_MIN);
+say(lightLow.length === 0, "Contrast vs light",
+  lightLow.length ? lightLow.map((c) => `${c.id} ${minLightContrast(c.color).toFixed(2)}:1`).join(", ")
+                  : `all ${light.length} >= ${LIGHT_CONTRAST_MIN}:1 on every light surface`);
+
+const lightLowChroma = light.filter((c) => oklch(c.color)[1] < CHROMA_FLOOR);
+say(lightLowChroma.length === 0, "Chroma floor (light)",
+  lightLowChroma.length ? lightLowChroma.map((c) => `${c.id} C=${oklch(c.color)[1].toFixed(3)}`).join(", ")
+                        : `all ${light.length} >= ${CHROMA_FLOOR}`);
+
+let lWorstCvd = null, lWorstNormal = null;
+for (let i = 0; i < light.length - 1; i++) {
+  const [a, b] = [light[i], light[i + 1]];
+  const c = cvdMin(a.color, b.color), n = deltaE(a.color, b.color);
+  if (!lWorstCvd || c < lWorstCvd.v) lWorstCvd = { v: c, a, b };
+  if (!lWorstNormal || n < lWorstNormal.v) lWorstNormal = { v: n, a, b };
+}
+say(lWorstCvd.v >= CVD_TARGET, "CVD separation (light)",
+  `worst adjacent ${lWorstCvd.a.id}<->${lWorstCvd.b.id} ΔE ${lWorstCvd.v.toFixed(1)} (need >= ${CVD_TARGET})`);
+say(lWorstNormal.v >= NORMAL_FLOOR, "Normal floor (light)",
+  `worst adjacent ${lWorstNormal.a.id}<->${lWorstNormal.b.id} ΔE ${lWorstNormal.v.toFixed(1)} (need >= ${NORMAL_FLOOR})`);
+
+if (process.argv.includes("--light")) {
+  console.log(`\n  Light-mode variants:`);
+  for (const c of adjusted) console.log(`    ${c.id.padEnd(22)} ${c.dark} -> ${c.color}`);
+}
 
 if (process.argv.includes("--all")) {
   const pairs = [];

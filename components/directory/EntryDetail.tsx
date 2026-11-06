@@ -146,7 +146,7 @@ export function EntryDetail({ kind, entry, compact = false }: { kind: EntryKind;
                     href={n.sourceUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block rounded border border-line p-2 text-sm transition-colors hover:border-ink-3 hover:bg-white/5"
+                    className="block rounded border border-line p-2 text-sm transition-colors hover:border-ink-3 hover:bg-wash/5"
                   >
                     <span className="mono text-[10px] text-ink-3">{formatDate(n.date)}</span>
                     <p className="text-ink-2">{n.title}</p>

@@ -34,7 +34,7 @@ export function EntryCard({ entry, config }: { entry: AnyEntry; config: KindConf
             </span>
           )}
           {badges.map((b) => (
-            <span key={b} className="mono rounded bg-white/5 px-1.5 py-0.5 text-[10px] uppercase tracking-wider text-ink-2">
+            <span key={b} className="mono rounded bg-wash/5 px-1.5 py-0.5 text-[10px] uppercase tracking-wider text-ink-2">
               {b}
             </span>
           ))}

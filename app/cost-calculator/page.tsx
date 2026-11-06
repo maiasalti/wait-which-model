@@ -196,7 +196,7 @@ export default function CostCalculatorPage() {
                   {row.model.name}
                 </Link>
                 {pick && (
-                  <span className="text-[10px] text-emerald-400">
+                  <span className="text-[10px] text-good">
                     save {usd(pick.monthly - row.monthly)}
                   </span>
                 )}
@@ -208,7 +208,7 @@ export default function CostCalculatorPage() {
                 {/* Bar is relative to the priciest row on screen, so the spread
                     is visible at a glance. The exact figure sits beside it, so
                     the bar never has to be read as precise. */}
-                <span className="h-1 flex-1 overflow-hidden rounded-full bg-white/5">
+                <span className="h-1 flex-1 overflow-hidden rounded-full bg-wash/5">
                   <span
                     className="block h-full rounded-full bg-accent/70"
                     style={{ width: `${Math.max(1.5, (row.monthly / barMax) * 100)}%` }}
