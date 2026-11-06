@@ -77,3 +77,29 @@ qwen-task-assistant · links.docs · 2026-10-28 · qwen.ai, alibabagroup.com, al
 lovable · pricing.plan · 2026-10-28 · lovable.dev FAQ/billing: credits (Pro 100/mo) but no dollar price in excerpts; $25 only on third-party guides
 
 ## features
+
+## voice-models
+
+gpt-live-1 · languages · 2026-11-06 · platform.openai.com model page, Live guides, community launch post: no total (voice table covers 7)
+gpt-live-1-1 · voices, languages, toolCalling, apiIds · 2026-11-06 · OpenAI community staff post (13 new voices, API "coming soon"); help.openai.com release notes 403
+gpt-realtime-2-1 · languages · 2026-11-06 · model page + Realtime guides: no count (same for -2-1-mini, -2, -1-5)
+gemini-3-8-live · languages · 2026-11-06 · conflicting: 97 (launch blog), 99 (Live API guide), 70 (Live overview); 97 used (same for -extended-thinking)
+gemini-3-8-live · voices · 2026-11-06 · 30 is Google Cloud's Live API voice page, not model-specific (same for -extended-thinking)
+gemini-3-1-flash-live · languages · 2026-11-06 · no per-model figure
+grok-voice-3-0 · voices · 2026-11-06 · S2S guide points to TTS list: TTS docs 5 voices vs cookbook 28
+nova-2-sonic · voices · 2026-11-06 · conflicting: 16 IDs (language table) vs 18 / 22 (service card versions)
+nova-2-sonic · pricing.perMinuteUsd · 2026-11-06 · aws.amazon.com/bedrock/pricing and /nova/pricing speech rows did not render (same for nova-2-5-sonic)
+phonic-1 · apiIds, voices · 2026-11-06 · phonic.ai blog, homepage, pricing page: no model id or voice count
+eleven-realtime-v1-max · voices · 2026-11-06 · blog gives "17,000+" library voices, no built-in count (same for -mini)
+stepaudio-3-realtime · releaseDate · 2026-11-06 · StepFun docs: no date; arXiv v1 2026-09-12, 2026-09-15 secondary only
+stepaudio-3-realtime · voices · 2026-11-06 · model page: not stated
+qwen-audio-3-0-realtime · releaseDate · 2026-11-06 · Alibaba Cloud docs: none; 2026-07-15 from Chinese media only
+qwen-audio-3-1-realtime · voices · 2026-11-06 · docs: "union of TTS lists", no count
+qwen3-5-omni-realtime · releaseDate · 2026-11-06 · snapshot id 2026-03-15, secondary 2026-03-30; qwen.ai JS-rendered, did not load
+qwen3-8-omni-flash-realtime · languages · 2026-11-06 · conflicting: 74 (blog) vs 113 (docs)
+deepslate-opal · releaseDate · 2026-11-06 · deepslate.eu + docs: not stated
+higgs-realtime · voices · 2026-11-06 · docs: presets plus cloning, no count
+raon-speechchat-9b · releaseDate · 2026-11-06 · conflicting: April 2026 (HF citation) vs arXiv 2605.x
+nemotronlabs-voicechat-11b · releaseDate · 2026-11-06 · conflicting: 2026-08-03 (HF, used) vs 2026-07-21 (NGC)
+nemotronlabs-voicechat-11b · license · 2026-11-06 · conflicting: HF OpenMDW 1.1 (used) vs NGC NIM NVIDIA evaluation licence
+lfm3-audio-2b · pricing.perMinuteUsd · 2026-11-06 · API console linked, no price published

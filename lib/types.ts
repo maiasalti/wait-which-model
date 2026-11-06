@@ -72,13 +72,12 @@ export interface ApiId {
   id: string;
 }
 
-export type ModelType = "llm" | "system-one" | "world-model" | "voice";
+export type ModelType = "llm" | "system-one" | "world-model";
 
 export const MODEL_TYPE_LABEL: Record<ModelType, string> = {
   llm: "LLM",
   "system-one": "System One",
   "world-model": "World Model",
-  voice: "Voice",
 };
 
 export interface Model {
@@ -96,10 +95,8 @@ export interface Model {
    *  apply and the recommender must not suggest it for chat work.
    *  `world-model` is an interactive world generator (Noiz AI's HelixWorld):
    *  a starting image plus camera moves and actions in, a streamed explorable
-   *  scene out — no text, so the same exclusions apply.
-   *  `voice` is a speech-to-speech model (xAI's Grok Voice 3.0): live audio
-   *  in, spoken audio out, priced per minute rather than per token — the text
-   *  benchmarks don't apply, so it is excluded the same way. */
+   *  scene out — no text, so the same exclusions apply. Speech-to-speech
+   *  voice models are not models.json entries; they live in voice-models.json. */
   type: ModelType;
   contextWindow: number | null;
   maxOutput: number | null;
@@ -178,7 +175,7 @@ export interface NewsItem {
   refs?: NewsRef[];
 }
 
-export type NewsRefType = "image-model" | "video-model" | "world-model" | "harness" | "agent" | "feature";
+export type NewsRefType = "image-model" | "video-model" | "world-model" | "voice-model" | "harness" | "agent" | "feature";
 
 export interface NewsRef {
   type: NewsRefType;
@@ -295,6 +292,25 @@ export interface WorldModelEntry extends ReleasedEntry {
   pricing: { notes: string };
 }
 
+export type VoiceInput = "audio" | "text" | "image" | "video";
+
+/** A speech-to-speech model: live audio in, spoken audio out. */
+export interface VoiceModelEntry extends ReleasedEntry {
+  /** Developer-published price per conversation minute; null when it is only
+   *  priced per audio token (the token rates then go in `pricing.notes`). */
+  pricing: { perMinuteUsd: number | null; notes: string };
+  inputs: VoiceInput[];
+  toolCalling: boolean | null;
+  languages: number | null;
+  voices: number | null;
+  access: WorldModelAccess;
+  openWeights: boolean;
+  license: License | null;
+  apiIds: ApiId[];
+  /** Artificial Analysis' Big Bench Audio score (speech-to-speech reasoning), %. */
+  scores: { aaBigBenchAudio: number | null };
+}
+
 export interface HarnessScore {
   benchmark: "terminalBench";
   /** A harness score is meaningless without the model it ran, so this is required. */
@@ -338,6 +354,7 @@ export interface DirectoryEntries {
   "image-models": ImageModelEntry;
   "video-models": VideoModelEntry;
   "world-models": WorldModelEntry;
+  "voice-models": VoiceModelEntry;
   harnesses: HarnessEntry;
   agents: AgentEntry;
   features: FeatureEntry;

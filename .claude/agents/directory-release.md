@@ -1,6 +1,6 @@
 ---
 name: directory-release
-description: Adds and maintains entries in one of the non-model directories (image-models, video-models, world-models, harnesses, agents, features) by following protocols/DIRECTORY_RELEASE_PROTOCOL.md — primary sources only, rule-based Notable flag, gap ledger. Use when Maia says "execute directory release protocol for <directory>" or asks to add an image/video/world model, harness, agent or frontier-lab feature.
+description: Adds and maintains entries in one of the non-model directories (image-models, video-models, world-models, voice-models, harnesses, agents, features) by following protocols/DIRECTORY_RELEASE_PROTOCOL.md — primary sources only, rule-based Notable flag, gap ledger. Use when Maia says "execute directory release protocol for <directory>" or asks to add an image/video/world model, harness, agent or frontier-lab feature.
 tools: WebSearch, WebFetch, Read, Edit, Write, Bash, Grep, Glob
 ---
 

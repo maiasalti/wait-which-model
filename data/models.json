@@ -9212,66 +9212,6 @@
     "notes": "A same-architecture dated refresh of DeepSeek-V4.1-Flash (2026-09-10), released 2026-10-17 under the same deepseek-flash API alias, MIT license and 1M-token context; DeepSeek's own figures (relayed by MindStudio, OfficeChai, Kingy AI, MarkTechPost and aiweekly.co, none independently verified) report Humanity's Last Exam at 42.6% without tools (up from 36.8%), Terminal-Bench 4.0 at 42.3 (not comparable to this site's Terminal-Bench 2.1 field, left null) and DeepSWE v1.1 at 77.0; GPQA Diamond, SWE-bench, LMArena and ARC-AGI-2 were not reported for this checkpoint specifically and are left null pending a dedicated eval. contextWindow, maxOutput, pricing and license are carried over from the shared V4.1-Flash deployment since every source describes this as an in-place checkpoint swap on the same endpoint, not a new context/pricing tier; speed (230.4 t/s, 1.08s on DeepSeek's API) and cost per Intelligence Index task ($0.26) are Artificial Analysis' measurements of the 1017 checkpoint at max effort; Artificial Analysis lists DeepSeek's peak-hour rate of $0.30/$1.20 per MTok, while the pricing above is the off-peak rate."
   },
   {
-    "id": "grok-voice-3-0",
-    "name": "Grok Voice 3.0",
-    "company": "xai",
-    "releaseDate": "2026-10-14",
-    "status": "unknown",
-    "tier": "flagship",
-    "modality": "multimodal",
-    "type": "voice",
-    "contextWindow": null,
-    "maxOutput": null,
-    "pricing": {
-      "inputPerMTok": null,
-      "outputPerMTok": null
-    },
-    "costPerTask": {
-      "usd": null,
-      "effort": null
-    },
-    "openWeights": false,
-    "availability": "general",
-    "knowledgeCutoff": null,
-    "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
-      "effort": null
-    },
-    "license": null,
-    "apiIds": [
-      {
-        "provider": "xai",
-        "id": "grok-voice-3.0"
-      }
-    ],
-    "retirementDate": null,
-    "predecessorId": null,
-    "benchmarks": {
-      "mmluPro": null,
-      "gpqaDiamond": null,
-      "sweBench": null,
-      "sweBenchPro": null,
-      "terminalBench": null,
-      "aime": null,
-      "hle": null,
-      "lmarenaElo": null,
-      "gdpvalAA": null,
-      "arcAgi2": null
-    },
-    "strengths": [
-      "A drop-in upgrade — same endpoint, session parameters and events as Grok Voice 2.0, and agents on the grok-voice-latest alias moved over without a code change",
-      "Built for support and sales calls with tools and policies, not just chat — xAI already runs it on Starlink's phone lines and in Tesla cars",
-      "Holds up through pauses, turn-taking and callers talking over it, the full-duplex behavior voice agents most often fumble"
-    ],
-    "weaknesses": [
-      "Reasoning is on at high effort by default, and the first audio arrives slightly later than on Grok Voice 2.0 — the quality gain costs a beat of responsiveness",
-      "Anyone on the grok-voice-latest alias was moved to the new model automatically, so production agents changed behavior on launch day unless their owners had pinned a version",
-      "Behavior is a moving target this early: every quality claim, including the Starlink resolution rate, is xAI's own, and no independent hands-on testing exists yet"
-    ],
-    "notes": "Not an LLM: a speech-to-speech model served through xAI's Voice Agent API, so none of this site's text benchmarks apply and every cell is null by design; it is priced per minute of conversation ($0.08/min, $4.80/hr, unchanged from Grok Voice 2.0), not per token, so pricing is null, and context/output limits are unpublished. xAI's launch figures are cited from Artificial Analysis: Speech-to-Speech Index 86.9 (first; Grok Voice 2.0 81.3), Big Bench Audio 98.5%, Speech Agent Arena Elo 1070, Full Duplex Bench 97.0%, τ-Voice 71.6% (below GPT-Live-1 Astra Medium at 74.5%), plus 74% accuracy on ServiceNow's EVA-Bench; Kingy.ai reads Artificial Analysis' time to first audio as 0.81s, up from 0.70s on 2.0. xAI's docs mark grok-voice-2.0 deprecated and direct users to grok-voice-3.0, but no retirement date is given and Grok Voice 2.0 has no entry here, so predecessorId is null."
-  },
-  {
     "id": "flint",
     "name": "Flint",
     "company": "recursive",
@@ -9639,61 +9579,6 @@
       "Launch claims need independent checking — most coding scores were run inside Claude Code, the API docs shipped with placeholder numbers, and allegations of undisclosed paid influencer promotion surfaced in launch week"
     ],
     "notes": "A post-trained version of Kimi K3 and the first model in Moonshot’s K3.1 series, released 2026-10-23 (2026-10-24 China time) on kimi.ai, the Kimi apps, Kimi Code and the Kimi API; the Hugging Face card gives 2.8T total parameters and 104B active, with MXFP4 weights and MXFP8 activations from quantization-aware training. Weights went public on 2026-11-04 at huggingface.co/moonshotai/Kimi-K3.1-Pro, ungated, under the bespoke Kimi K3.1-Pro License: it starts from MIT wording, then requires a separate agreement for Model-as-a-Service operators above $20M in revenue over 12 months, and a visible \"Kimi K3.1-Pro\" credit in products above 100M MAU or $20M monthly revenue. Internal use and Moonshot’s certified partners are exempt, so the licence is classed restricted with commercial use permitted. The $2/$10 base price ($0.20 cached input) is relayed by VentureBeat and Handy AI because the official pricing table didn’t render; a kimi-k3.1-pro-highspeed variant costs $4/$20 and Moonshot says it runs 2–3× faster. GPQA Diamond 94.2 and HLE 51.1% (no tools; 70.0% with tools) are Moonshot’s own model-card figures at max effort, and Artificial Analysis measures HLE at 52% no tools. Terminal-Bench 4.0 is 65.7% per Moonshot and 67% per AA, so it can’t be compared with the Terminal-Bench 2.1 field, and BrowseComp (92.1) isn’t tracked. GDPval-AA is 1846 Elo on v2.1, a different scale from the tracked v2, so it’s left null. costPerTask ($2.11, AA’s live page; AA’s launch report said $1.98) and speed are AA’s reasoning variant, which AA doesn’t label with an effort level."
-  },
-  {
-    "id": "dessa",
-    "name": "Dessa",
-    "company": "block",
-    "releaseDate": "2026-10-23",
-    "status": "unknown",
-    "tier": "flagship",
-    "modality": "multimodal",
-    "type": "voice",
-    "contextWindow": null,
-    "maxOutput": null,
-    "pricing": {
-      "inputPerMTok": null,
-      "outputPerMTok": null
-    },
-    "costPerTask": {
-      "usd": null,
-      "effort": null
-    },
-    "openWeights": false,
-    "availability": "restricted",
-    "knowledgeCutoff": null,
-    "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
-      "effort": null
-    },
-    "license": null,
-    "apiIds": [],
-    "retirementDate": null,
-    "predecessorId": null,
-    "benchmarks": {
-      "mmluPro": null,
-      "gpqaDiamond": null,
-      "sweBench": null,
-      "sweBenchPro": null,
-      "terminalBench": null,
-      "aime": null,
-      "hle": null,
-      "lmarenaElo": null,
-      "gdpvalAA": null,
-      "arcAgi2": null
-    },
-    "strengths": [
-      "Full duplex from the ground up — it listens while it talks, backchannels and decides when to cut in, rather than waiting for the speaker to finish a turn",
-      "Learned only from recorded human conversation, so in Block's demos it picks up on tone, sarcasm and laughter that text-trained voice stacks tend to flatten",
-      "Block says it runs locally on a MacBook Pro M4 Max or better, faster than real time, with no cloud round-trip"
-    ],
-    "weaknesses": [
-      "A research preview with a waitlist, open only to a small group of AI safety researchers — there's no app, API or price to build on",
-      "Everything known about it comes from Block's own hand-picked recordings — no benchmarks, latency figures, model size or independent hands-on testing yet",
-      "No text in training means no stated tool use, document reading or lookup, and Block lists how well it learns facts and new languages as open research questions"
-    ],
-    "notes": "Not an LLM: a speech-to-speech model trained from scratch on human conversation audio only (no text, no pretrained models) on a single NVIDIA GB200 NVL72, built by Block's in-house AI lab, which was founded by former members of Toronto startup Dessa and is led by Ragavan Thurairatnam. Announced 2026-10-23 at block.xyz/dessa and by Jack Dorsey on X. The site's text benchmarks don't apply, and no pricing, context, weights or licence have been published, so every such cell is null; availability is restricted because access is a waitlist plus researcher early access."
   },
   {
     "id": "gpt-6-1-terra",
