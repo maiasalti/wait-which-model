@@ -6,7 +6,7 @@ import { ModelStatsGrid } from "@/components/model/ModelStatsGrid";
 import { ModelBenchmarks } from "@/components/model/ModelBenchmarks";
 import { benchmarkCoverage } from "@/components/model/benchmarkCoverage";
 import { ModelProsCons } from "@/components/model/ModelProsCons";
-import { ModelNewsList } from "@/components/model/ModelNewsList";
+import { ModelNewsList, newsCount } from "@/components/model/ModelNewsList";
 import { ModelUsedBy, usedByCount } from "@/components/model/ModelUsedBy";
 import { Collapsible } from "@/components/Collapsible";
 import { ModelDeveloperDetails } from "@/components/model/ModelDeveloperDetails";
@@ -92,15 +92,24 @@ export default async function ModelPage({
         <ModelStatsGrid model={model} className="grid-cols-2 sm:grid-cols-3" />
 
         <div className="mt-8">
+          {newsCount(model) > 0 && (
+            <Collapsible
+              title="News"
+              meta={`${newsCount(model)} ${newsCount(model) === 1 ? "story" : "stories"}`}
+              defaultOpen
+            >
+              <ModelNewsList model={model} />
+            </Collapsible>
+          )}
+          <Collapsible title="Strengths & weaknesses" defaultOpen>
+            <ModelProsCons model={model} className="grid gap-6 sm:grid-cols-2" />
+          </Collapsible>
           <Collapsible
             title="Benchmarks"
             meta={`${benchmarkCoverage(model).reported} of ${benchmarkCoverage(model).total} reported`}
             defaultOpen
           >
             <ModelBenchmarks model={model} />
-          </Collapsible>
-          <Collapsible title="Strengths & weaknesses" defaultOpen>
-            <ModelProsCons model={model} className="grid gap-6 sm:grid-cols-2" />
           </Collapsible>
           <Collapsible title="For developers">
             <ModelDeveloperDetails model={model} />
@@ -110,9 +119,6 @@ export default async function ModelPage({
               <ModelUsedBy model={model} />
             </Collapsible>
           )}
-          <Collapsible title="News">
-            <ModelNewsList model={model} />
-          </Collapsible>
         </div>
       </div>
     </div>
