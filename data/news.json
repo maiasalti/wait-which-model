@@ -1,5 +1,21 @@
 [
   {
+    "id": "2026-11-09-claude-fable-5-2",
+    "date": "2026-11-09",
+    "title": "Anthropic releases Claude Fable 5.2 and Claude Mythos 5.2, and cuts Fable's price 20%",
+    "summary": "Fable 5.2 is generally available at $8/$40 per million tokens, down from $10/$50, and scores 93.0% on SWE-bench Pro and 73.2% on Humanity's Last Exam without tools in Anthropic's system card, with ARC Prize verifying 93.8% on ARC-AGI-2. Mythos 5.2, the same model with fewer safeguards, is limited to organisations in Anthropic's Cyber and Life Sciences Verification Programs.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-fable-5-2",
+      "claude-mythos-5-2"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+  },
+  {
     "id": "2026-11-05-gpt-6-cyber",
     "date": "2026-11-05",
     "title": "OpenAI launches GPT-6 Cyber, a cyber-specialised GPT-6 Astra for approved Daybreak Red customers",
