@@ -10116,5 +10116,66 @@
       "Gated behind Daybreak Red approval, SSO, MFA and IP allowlisting, with no Batch endpoint, so it can't be trialled casually and behavior outside its cyber specialism is undocumented"
     ],
     "notes": "Cyber-specialised variant of GPT-6 Astra (OpenAI's docs style it GPT-6-Cyber), announced 2026-11-05 and available through the API and Codex only to a select group of approved Daybreak Red customers, hence availability \"restricted\"; OpenAI says wider Daybreak Red access is coming and that GPT-5.6 Cyber is opening up to all Daybreak Red customers. Context 1,050,000 tokens (922K max input), 128K output, text and image in, and $20/$100 per MTok ($2 cached input, $25/$50 cache writes at 30-minute/12-hour retention) are from OpenAI's model docs, which list Chat Completions and Responses but not Batch and publish no knowledge cutoff or reasoning-effort levels. All tracked benchmarks are unpublished. OpenAI's system card (deploymentsafety.openai.com/gpt-6-cyber) reports only cyber and safety evals, given here against Astra: ExploitGym 48.45% (42.43%; GPT-5.6 Cyber 32.1%), ExploitGym Hardened 36.94% (29.69%), SEC-Bench Pro 87.02% (85.38%), SRE-Bench 92.84% (87.98%), ExploitBench Internal Port 42% (39%), CyScenarioBench 11/11 challenges solved (8/11), FrontierCyber 90/288 (96/288), and general-coding ExpertSWE 82.95% (83.24%). OpenAI also reports 40.3% recall on black-box web pentesting (Astra 32.0%) and a Critical cybersecurity rating under its Preparedness Framework, up from GPT-5.6 Cyber's High. predecessorId stays null: OpenAI calls it \"a major step up from GPT-5.6 Cyber\", lineage rather than a replacement claim, and GPT-5.6 Cyber stays on sale. Artificial Analysis has not indexed it, so costPerTask and speed are null."
+  },
+  {
+    "id": "inkling-2-small",
+    "name": "Inkling 2 Small",
+    "company": "thinking-machines",
+    "releaseDate": "2026-11-05",
+    "status": "unknown",
+    "tier": "balanced",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1048576,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 0.3,
+      "outputPerMTok": 1
+    },
+    "costPerTask": {
+      "usd": 1.18,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-06",
+    "speed": {
+      "outputTokensPerSec": 157,
+      "timeToFirstTokenSec": 29.08,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "thinking-machines",
+        "id": "thinkingmachines/Inkling-2-Small"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Trained with RL on hundreds of thousands of long-horizon coding tasks across several agent harnesses and compaction strategies",
+      "Learns faster than the first-generation Inkling models when fine-tuned on Tinker, matching Inkling Small's final score on a finance-document RL task in 75 steps",
+      "Reads images through a small 292M vision encoder, scoring 81.6% on MMMU Pro in the lab's own evaluation",
+      "Cheap to call on Tinker at $0.30 in and $1.00 out per million tokens"
+    ],
+    "weaknesses": [
+      "Weights are closed at launch, with the Apache 2.0 release held back for external safety testing",
+      "The lab says it isn't a succinct communicator and its chat presentation is weaker, overusing slashes",
+      "Picks the wrong tool more often in codebases with many skills, and drops audio input that Inkling Small had"
+    ],
+    "notes": "Thinking Machines Lab's first second-generation model, a 594B-total/17B-active MoE announced 2026-11-05 (thinkingmachines.ai/news/inkling-2-small). Available on Tinker for serverless inference, sampling and fine-tuning; the lab says it intends to publish full weights under Apache 2.0 'next week' pending safety evaluations, so openWeights and license stay false/null until the weights are actually out. Pricing is Tinker's serverless inference rate ($0.30 input, $0.03 cached, $1.00 output per MTok at 256K context); Tinker training is $1.50/MTok at 64K and $3.00 at 256K. contextWindow 1M is Artificial Analysis' figure and matches the 1M trajectory limit the lab used for evals; Tinker serves 256K (serverless) and 64K or 256K (training). knowledgeCutoff is the '2026-06' data cutoff on the lab's pretraining chart. The lab reports none of the tracked benchmarks: no GPQA Diamond, SWE-bench Verified, ARC-AGI-2 or LMArena figure; its SWE-bench Pro is the v2 Hard split (86.3%), HLE is HLE-Diamond (28.7%), Terminal-Bench is only Terminal Bench Science v0.1 (5.7%), and GDPval-AA is v2.1 (1630), a different scale from the v2 this key records. Also reported at effort 0.99 (xhigh): DeepSWE v1.1 72.1%, FrontierCode v2.0 25.4%, Vibe Code Bench v1.1 81.6%, AA-LCR v1.1 83.3%, MMMU Pro 81.6%. Artificial Analysis scores it 31 on Intelligence Index v5.0.1 (the reasoning variant, no effort label) at $1.18 per task, 157 output tokens/s and 29.08 s to first answer token. predecessorId is null: the lab calls it its 'second model generation' but names no model it replaces."
   }
 ]

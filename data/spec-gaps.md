@@ -402,3 +402,5 @@ gpt-6-cyber · speed · 2026-11-06 · Not measured by Artificial Analysis; Daybr
 gpt-6-cyber · apiIds (aws-bedrock) · 2026-11-06 · No Bedrock model card or AWS announcement found for GPT-6 Cyber (only GPT-5.6 Cyber and GPT-6 Astra are on Bedrock). Only the OpenAI id recorded.
 gpt-6-cyber · retirementDate · 2026-11-06 · No lifecycle notice. Left null.
 kimi-k3-1-pro · predecessorId · 2026-11-06 · Re-checked after the weights release: the HF model card and kimi.ai blog still call it a post-trained K3 and never say it replaces K3. Left null.
+inkling-2-small · predecessorId · 2026-11-09 · Launch post calls it the lab's 'second model generation' and 'more capable across the board than our first generation' but names no model it replaces. Left null.
+inkling-2-small · retirementDate · 2026-11-09 · No lifecycle notice. Left null.

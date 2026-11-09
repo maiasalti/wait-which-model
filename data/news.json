@@ -1,5 +1,39 @@
 [
   {
+    "id": "2026-11-05-gemini-omni-flash-1-2",
+    "date": "2026-11-05",
+    "title": "Google makes Gemini Omni 1.2 Flash generally available",
+    "summary": "Google's Omni video model now generates and edits clips of 3 to 15 seconds, up from a 10-second cap on Omni 1.1 Flash, and 720p video drops about 30% to roughly $0.07 per second. It is generally available on the Gemini API and Google Cloud, and requests to Omni 1.1 Flash move to 1.2 from December 3.",
+    "category": "release",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [],
+    "refs": [
+      {
+        "type": "video-model",
+        "id": "gemini-omni-flash-1-2"
+      }
+    ],
+    "sourceName": "Google",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+  },
+  {
+    "id": "2026-11-05-inkling-2-small",
+    "date": "2026-11-05",
+    "title": "Thinking Machines Lab releases Inkling 2 Small",
+    "summary": "The first model of the lab's second generation is a 594B-total/17B-active MoE with image input and variable effort, available on Tinker at $0.30/$1.00 per million tokens. Weights are closed for now, with an Apache 2.0 release planned after external safety testing; Artificial Analysis scores it 31 on its Intelligence Index.",
+    "category": "release",
+    "companies": [
+      "thinking-machines"
+    ],
+    "modelIds": [
+      "inkling-2-small"
+    ],
+    "sourceName": "Thinking Machines Lab",
+    "sourceUrl": "https://thinkingmachines.ai/news/inkling-2-small/"
+  },
+  {
     "id": "2026-11-05-gpt-6-cyber",
     "date": "2026-11-05",
     "title": "OpenAI launches GPT-6 Cyber, a cyber-specialised GPT-6 Astra for approved Daybreak Red customers",
