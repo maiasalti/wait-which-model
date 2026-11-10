@@ -16,7 +16,7 @@ test("each directory job runs on its weekday once enabled", () => {
     2: ["video-models"],
     3: ["agents", "world-models"],
     4: ["harnesses"],
-    5: ["features"],
+    5: ["features", "voice-models"],
   });
   assert.deepEqual(jobsFor(3, ["world-models"]), ["health", "models", "world-models"]);
   assert.deepEqual(jobsFor(3, ENABLED_DIRECTORY_JOBS), ["health", "models", "agents", "world-models"]);

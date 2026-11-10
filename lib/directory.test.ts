@@ -10,12 +10,12 @@ import {
   groupByMonth,
 } from "./directory.ts";
 
-const ZERO = { models: 0, "image-models": 0, "video-models": 0, "world-models": 0, harnesses: 0, agents: 0, features: 0 };
+const ZERO = { models: 0, "image-models": 0, "video-models": 0, "world-models": 0, "voice-models": 0, harnesses: 0, agents: 0, features: 0 };
 
 test("tabs are in the spec's order", () => {
   assert.deepEqual(
     DIRECTORY_TABS.map((t) => t.label),
-    ["Models", "Image models", "Video models", "World models", "Harnesses", "Agents", "Frontier Features"]
+    ["Models", "Image models", "Video models", "World models", "Voice models", "Harnesses", "Agents", "Frontier Features"]
   );
 });
 

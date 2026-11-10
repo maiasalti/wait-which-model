@@ -6,6 +6,7 @@ export type DirectoryKey =
   | "image-models"
   | "video-models"
   | "world-models"
+  | "voice-models"
   | "harnesses"
   | "agents"
   | "features";
@@ -21,6 +22,7 @@ export const DIRECTORY_TABS: readonly DirectoryTab[] = [
   { key: "image-models", label: "Image models", href: "/image-models" },
   { key: "video-models", label: "Video models", href: "/video-models" },
   { key: "world-models", label: "World models", href: "/world-models" },
+  { key: "voice-models", label: "Voice models", href: "/voice-models" },
   { key: "harnesses", label: "Harnesses", href: "/harnesses" },
   { key: "agents", label: "Agents", href: "/agents" },
   { key: "features", label: "Frontier Features", href: "/features" },

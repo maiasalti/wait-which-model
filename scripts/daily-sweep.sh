@@ -142,7 +142,7 @@ JOBS TODAY: $JOBS
 - news   : follow protocols/NEWS_SCAN_PROTOCOL.md for ALL tracked companies, covering the period
            since the newest date in data/news.json, all categories. Do not interview anyone —
            that scope is fixed for scheduled runs.
-- image-models | video-models | world-models | harnesses | agents | features :
+- image-models | video-models | world-models | voice-models | harnesses | agents | features :
            follow the 'Sweep job' section of protocols/DIRECTORY_RELEASE_PROTOCOL.md for that
            directory (its data/<name>.json file). Skip cells already in data/directory-gaps.md.
 

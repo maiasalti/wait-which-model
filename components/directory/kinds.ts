@@ -6,6 +6,7 @@ import type {
   HarnessEntry,
   ImageModelEntry,
   VideoModelEntry,
+  VoiceModelEntry,
   WorldModelEntry,
 } from "@/lib/types";
 import { modelById } from "@/lib/data";
@@ -139,6 +140,36 @@ const world: KindConfig<WorldModelEntry> = {
   chips: (e) => e.inputs.map((i) => `${i} in`),
 };
 
+const perMinute = (v: number | null) => (v == null ? null : `$${v < 0.1 ? v.toFixed(3) : v.toFixed(2)}/min`);
+const count = (v: number | null) => (v == null ? null : v.toString());
+
+const voice: KindConfig<VoiceModelEntry> = {
+  kind: "voice-models",
+  href: "/voice-models",
+  title: "Voice models",
+  plural: "voice models",
+  intro: "Speech-to-speech models you can hold a live conversation with: audio in, spoken audio out, with Artificial Analysis' Big Bench Audio score where it ranks them.",
+  cardFacts: (e) => [
+    { label: "$ / min", value: perMinute(e.pricing.perMinuteUsd) },
+    { label: "Big Bench Audio", value: e.scores.aaBigBenchAudio == null ? null : `${e.scores.aaBigBenchAudio}%` },
+    { label: "Languages", value: count(e.languages) },
+  ],
+  detailFacts: (e) => [
+    { label: "Price per minute", value: perMinute(e.pricing.perMinuteUsd) },
+    // Token-priced models have no per-minute figure, so their rates are the price.
+    ...(e.pricing.perMinuteUsd == null ? [{ label: "Pricing", value: e.pricing.notes || null }] : []),
+    { label: "Inputs", value: list(e.inputs) },
+    { label: "Tool calling", value: yesNo(e.toolCalling) },
+    { label: "Languages", value: count(e.languages) },
+    { label: "Voices", value: count(e.voices) },
+    { label: "Big Bench Audio", value: e.scores.aaBigBenchAudio == null ? null : `${e.scores.aaBigBenchAudio}%` },
+    { label: "Access", value: accessLabel(e.access) },
+    licenseFact(e),
+  ],
+  badges: (e) => [...(e.access === "ga" ? [] : [accessLabel(e.access)]), ...(e.openWeights ? ["Open weights"] : [])],
+  chips: (e) => [...e.inputs.filter((i) => i !== "audio").map((i) => `${i} in`), ...(e.toolCalling ? ["tool calling"] : [])],
+};
+
 const PRICING_MODEL: Record<HarnessEntry["pricing"]["model"], string> = {
   free: "Free",
   subscription: "Subscription",
@@ -245,6 +276,7 @@ export const KINDS = {
   "image-models": image,
   "video-models": video,
   "world-models": world,
+  "voice-models": voice,
   harnesses: harness,
   agents: agent,
   features: feature,
