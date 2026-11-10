@@ -20,7 +20,7 @@ export function BenchmarkCoverage() {
               <span className="ml-1.5 text-[10px] uppercase tracking-wider text-ink-3">retired</span>
             )}
           </span>
-          <span className="h-2 flex-1 overflow-hidden rounded-full bg-white/5">
+          <span className="h-2 flex-1 overflow-hidden rounded-full bg-wash/5">
             <span
               className="block h-full rounded-full bg-accent"
               style={{ width: `${(r.reported / total) * 100}%` }}

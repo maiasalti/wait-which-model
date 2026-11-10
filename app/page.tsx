@@ -132,7 +132,8 @@ export default function DirectoryPage() {
                       : "border-line opacity-80 hover:opacity-100"
                   }`}
                   style={{
-                    background: `${companyColor(c.id)}${active ? "3D" : "14"}`,
+                    // 23.9% / 7.8% = the old hex alpha suffixes 3D / 14.
+                    background: `color-mix(in srgb, ${companyColor(c.id)} ${active ? "23.9%" : "7.8%"}, transparent)`,
                     borderColor: active ? companyColor(c.id) : undefined,
                   }}
                 >

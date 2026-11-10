@@ -17,6 +17,7 @@ const DIRECTORY_FILES = {
   "image-models": "image-model",
   "video-models": "video-model",
   "world-models": "world-model",
+  "voice-models": "voice-model",
   harnesses: "harness",
   agents: "agent",
   features: "feature",

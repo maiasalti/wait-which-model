@@ -93,12 +93,12 @@ export function ReignChart() {
                   <span className="mono w-40 shrink-0 truncate text-xs text-ink-2">
                     {model?.name ?? r.modelId}
                   </span>
-                  <span className="h-3 flex-1 overflow-hidden rounded-full bg-white/5">
+                  <span className="h-3 flex-1 overflow-hidden rounded-full bg-wash/5">
                     <span
                       className="block h-full rounded-full"
                       style={{
                         width: `${days === null ? 1.5 : Math.max(1.5, (days / longest) * 100)}%`,
-                        background: model ? companyColor(model.company) : "#8A93A6",
+                        background: companyColor(model?.company ?? ""),
                         opacity: r.end === null ? 1 : 0.75,
                       }}
                     />

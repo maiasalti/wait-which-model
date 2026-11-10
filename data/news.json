@@ -1,5 +1,85 @@
 [
   {
+    "id": "2026-11-09-claude-fable-5-2",
+    "date": "2026-11-09",
+    "title": "Anthropic releases Claude Fable 5.2 and Claude Mythos 5.2, and cuts Fable's price 20%",
+    "summary": "Fable 5.2 is generally available at $8/$40 per million tokens, down from $10/$50, and scores 93.0% on SWE-bench Pro and 73.2% on Humanity's Last Exam without tools in Anthropic's system card, with ARC Prize verifying 93.8% on ARC-AGI-2. Mythos 5.2, the same model with fewer safeguards, is limited to organisations in Anthropic's Cyber and Life Sciences Verification Programs.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [
+      "claude-fable-5-2",
+      "claude-mythos-5-2"
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+  },
+  {
+    "id": "2026-11-05-gemini-omni-flash-1-2",
+    "date": "2026-11-05",
+    "title": "Google makes Gemini Omni 1.2 Flash generally available",
+    "summary": "Google's Omni video model now generates and edits clips of 3 to 15 seconds, up from a 10-second cap on Omni 1.1 Flash, and 720p video drops about 30% to roughly $0.07 per second. It is generally available on the Gemini API and Google Cloud, and requests to Omni 1.1 Flash move to 1.2 from December 3.",
+    "category": "release",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [],
+    "refs": [
+      {
+        "type": "video-model",
+        "id": "gemini-omni-flash-1-2"
+      }
+    ],
+    "sourceName": "Google",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/"
+  },
+  {
+    "id": "2026-11-05-inkling-2-small",
+    "date": "2026-11-05",
+    "title": "Thinking Machines Lab releases Inkling 2 Small",
+    "summary": "The first model of the lab's second generation is a 594B-total/17B-active MoE with image input and variable effort, available on Tinker at $0.30/$1.00 per million tokens. Weights are closed for now, with an Apache 2.0 release planned after external safety testing; Artificial Analysis scores it 31 on its Intelligence Index.",
+    "category": "release",
+    "companies": [
+      "thinking-machines"
+    ],
+    "modelIds": [
+      "inkling-2-small"
+    ],
+    "sourceName": "Thinking Machines Lab",
+    "sourceUrl": "https://thinkingmachines.ai/news/inkling-2-small/"
+  },
+  {
+    "id": "2026-11-05-gpt-6-cyber",
+    "date": "2026-11-05",
+    "title": "OpenAI launches GPT-6 Cyber, a cyber-specialised GPT-6 Astra for approved Daybreak Red customers",
+    "summary": "OpenAI released GPT-6 Cyber, a variant of GPT-6 Astra trained for authorised vulnerability discovery and exploit development, through the API and Codex to a select group of approved Daybreak Red customers at $20/$100 per million tokens. It scores 48.5% on ExploitGym against 32.1% for GPT-5.6 Cyber, is rated Critical for cybersecurity under OpenAI's Preparedness Framework (GPT-5.6 Cyber was High), and was used to find 81 previously unknown high-severity Firefox vulnerabilities and build working exploits for 948 Linux kernel bugs.",
+    "category": "release",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-6-cyber"
+    ],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-6-cyber/"
+  },
+  {
+    "id": "2026-11-04-kimi-k3-1-pro-open-weights",
+    "date": "2026-11-04",
+    "title": "Moonshot AI publishes the Kimi K3.1 Pro weights on Hugging Face",
+    "summary": "Moonshot released the full weights of Kimi K3.1 Pro, a 2.8T-parameter mixture-of-experts model with 104B active parameters and a 1M-token context, two weeks after its API launch and on the date it had promised. They ship under a custom Kimi K3.1-Pro License that allows commercial use but requires a separate agreement for large Model-as-a-Service operators. The model card reports 94.2 on GPQA Diamond and 65.7 on Terminal-Bench 4.0.",
+    "category": "release",
+    "companies": [
+      "moonshot"
+    ],
+    "modelIds": [
+      "kimi-k3-1-pro"
+    ],
+    "sourceName": "Hugging Face (moonshotai/Kimi-K3.1-Pro)",
+    "sourceUrl": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+  },
+  {
     "id": "2026-10-28-gemini-4-carbon",
     "date": "2026-10-28",
     "title": "Google releases Gemini 4 Carbon, its strongest model, to cyber defenders first",
@@ -230,11 +310,15 @@
     "companies": [
       "block"
     ],
-    "modelIds": [
-      "dessa"
-    ],
+    "modelIds": [],
     "sourceName": "Block",
-    "sourceUrl": "https://block.xyz/dessa"
+    "sourceUrl": "https://block.xyz/dessa",
+    "refs": [
+      {
+        "type": "voice-model",
+        "id": "dessa"
+      }
+    ]
   },
   {
     "id": "2026-10-15-d1-ultra",
@@ -262,11 +346,15 @@
     "companies": [
       "xai"
     ],
-    "modelIds": [
-      "grok-voice-3-0"
-    ],
+    "modelIds": [],
     "sourceName": "xAI",
-    "sourceUrl": "https://x.ai/news/grok-voice-3"
+    "sourceUrl": "https://x.ai/news/grok-voice-3",
+    "refs": [
+      {
+        "type": "voice-model",
+        "id": "grok-voice-3-0"
+      }
+    ]
   },
   {
     "id": "2026-10-12-muse-wonder",
@@ -3042,7 +3130,13 @@
       "nova-2-pro"
     ],
     "sourceName": "AWS News Blog",
-    "sourceUrl": "https://aws.amazon.com/about-aws/whats-new/2025/12/nova-2-foundation-models-amazon-bedrock"
+    "sourceUrl": "https://aws.amazon.com/about-aws/whats-new/2025/12/nova-2-foundation-models-amazon-bedrock",
+    "refs": [
+      {
+        "type": "voice-model",
+        "id": "nova-2-sonic"
+      }
+    ]
   },
   {
     "id": "2025-11-24-opus-4-5",

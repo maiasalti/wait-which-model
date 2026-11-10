@@ -498,7 +498,7 @@ export function HeadToHead({ picked }: { picked: Model[] }) {
           <XAxis dataKey="bench" tickLine={false} axisLine={{ stroke: "var(--line-strong)" }} interval={0} />
           <YAxis unit="%" domain={[0, 100]} tickLine={false} axisLine={false} width={48} />
           <Tooltip
-            cursor={{ fill: "rgba(190,205,240,0.06)" }}
+            cursor={{ fill: "var(--cursor-fill)" }}
             contentStyle={{
               background: "var(--surface-2)",
               border: "1px solid var(--line-strong)",

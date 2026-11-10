@@ -11,6 +11,47 @@
   --ink-2: #9aa4c0;
   --ink-3: #5f6884;
   --accent: #8fa3d9;
+  /* Native controls and scrollbars follow the active theme. */
+  color-scheme: dark;
+  /* Base hue for neutral washes (`bg-wash/5` = the old `bg-white/5`). */
+  --wash: #ffffff;
+  /* Status hues (Tailwind's 400 steps on dark). */
+  --good: oklch(76.5% 0.177 163.223);
+  --bad: oklch(71.2% 0.194 13.428);
+  --best: oklch(74.6% 0.16 232.661);
+  --warn: oklch(82.8% 0.189 84.429);
+  --glow: rgba(99, 131, 209, 0.1);
+  --cursor-fill: rgba(190, 205, 240, 0.06);
+  --selection: rgba(143, 163, 217, 0.35);
+  /* Company colours (--co-<id>) are injected by app/layout.tsx from
+     data/companies.json; see companyPaletteCss() in lib/data.ts. */
+}
+
+/* Light theme — follows the device setting. The dark observatory tokens above
+   stay the default. OG images and the spec-diff PNG export hard-code the
+   dark values and stay dark in both themes. */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f5f6fa;
+    --surface: #ffffff;
+    --surface-2: #eceff6;
+    --line: rgba(30, 40, 80, 0.12);
+    --line-strong: rgba(30, 40, 80, 0.26);
+    --ink: #10142a;
+    --ink-2: #4a5373;
+    --ink-3: #646c8a;
+    --accent: #3b54a6;
+    --wash: #1e2850;
+    /* Tailwind's 700 steps — legible as text on the light surfaces. */
+    --good: oklch(50.8% 0.118 165.612);
+    --bad: oklch(51.4% 0.222 16.935);
+    --best: oklch(50% 0.134 242.749);
+    --warn: oklch(55.5% 0.163 48.998);
+    --glow: rgba(99, 131, 209, 0.12);
+    --cursor-fill: rgba(30, 40, 80, 0.05);
+    --selection: rgba(59, 84, 166, 0.22);
+    color-scheme: light;
+  }
 }
 
 @theme inline {
@@ -23,18 +64,22 @@
   --color-ink-2: var(--ink-2);
   --color-ink-3: var(--ink-3);
   --color-accent: var(--accent);
+  --color-wash: var(--wash);
+  --color-good: var(--good);
+  --color-bad: var(--bad);
+  --color-best: var(--best);
+  --color-warn: var(--warn);
   --font-display: var(--font-space-grotesk);
   --font-mono: var(--font-plex-mono);
 }
 
 html {
   background: var(--bg);
-  color-scheme: dark;
 }
 
 body {
   background:
-    radial-gradient(1100px 480px at 75% -180px, rgba(99, 131, 209, 0.10), transparent 65%),
+    radial-gradient(1100px 480px at 75% -180px, var(--glow), transparent 65%),
     var(--bg);
   color: var(--ink);
   font-family: var(--font-space-grotesk), system-ui, sans-serif;
@@ -42,7 +87,7 @@ body {
 }
 
 ::selection {
-  background: rgba(143, 163, 217, 0.35);
+  background: var(--selection);
 }
 
 *:focus-visible {

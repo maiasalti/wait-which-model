@@ -860,5 +860,58 @@
       "aaVideoArenaElo": 1157,
       "lmarenaVideoElo": null
     }
+  },
+  {
+    "id": "gemini-omni-flash-1-2",
+    "name": "Gemini Omni 1.2 Flash",
+    "company": "google",
+    "releaseDate": "2026-11-05",
+    "notable": true,
+    "description": "Google's third Omni video generation and editing model, raising one generation from 10 to 15 seconds and cutting the 720p price by about 30% against Omni 1.1 Flash.",
+    "strengths": [
+      "Single generations and edits run 3 to 15 seconds, set in one-second steps",
+      "About $0.07 per second at 720p, down from about $0.10 on Omni 1.1 Flash",
+      "Multi-turn conversational editing that fixes a detail without regenerating the whole clip",
+      "Native speech, music and effects with multi-speaker conditioning and tighter lip-sync"
+    ],
+    "weaknesses": [
+      "1080p and 4K are upsampled, not native",
+      "Google says fast sports action and complex physics are still weak",
+      "No free tier on the Gemini API"
+    ],
+    "links": {
+      "official": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+      "docs": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/omni-1-2-flash"
+    },
+    "pricing": {
+      "perSecondUsd": 0.07,
+      "notes": "Gemini API pricing page (aistudio.google.com/docs/pricing): input $1.50/1M tokens (text, image, video), text output $9.00/1M, video output $12.00/1M. Video tokens per second: 360p 1,931, 720p 5,792, 1080p upsampled 8,688, 4K upsampled 17,376. Stated effective prices: about $0.023/s at 360p, $0.07/s at 720p (about $1.04 for a 15 s clip), $0.104/s at 1080p and $0.209/s at 4K. No free tier."
+    },
+    "maxDurationSec": 15,
+    "maxResolution": "4K",
+    "nativeAudio": true,
+    "capabilities": [
+      "text-to-video",
+      "image-to-video",
+      "video-editing",
+      "extension"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "google-gemini-api",
+        "id": "gemini-omni-1.2-flash"
+      },
+      {
+        "provider": "google-vertex",
+        "id": "gemini-omni-1.2-flash"
+      }
+    ],
+    "scores": {
+      "aaVideoArenaElo": null,
+      "lmarenaVideoElo": null
+    },
+    "notes": "Generally available on the Gemini API and Gemini for business (Google Cloud) from 2026-11-05 per Google's launch post, with Provisioned Throughput; also rolling out in Flow, Google Vids, the Gemini app (AI Ultra) and Google Ads. maxDurationSec is one generation (Google Cloud model page: 'Output video duration (generation and editing): 3 to 15 seconds'). Extension takes up to the last 10 seconds of input and adds 3 to 10 seconds, concatenated onto up to the last 30 seconds of the input. Up to 10 reference images and 3 reference videos (up to 3 seconds each) per prompt; first-and-last-frame generation supported; audio input is not supported on the Cloud page even though the launch post mentions audio cues. The Gemini API pricing page says requests to gemini-omni-1.1-flash are routed to 1.2 Flash and billed at 1.2 rates from 2026-12-03. Outputs carry SynthID and C2PA Content Credentials. Not yet on the Artificial Analysis or LMArena video boards as of 2026-11-09."
   }
 ]

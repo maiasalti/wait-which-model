@@ -112,7 +112,7 @@ export function DirectoryShell({ kind }: { kind: EntryKind }) {
                   }`}
                   style={
                     active
-                      ? { background: `${color}3D`, borderColor: color }
+                      ? { background: `color-mix(in srgb, ${color} 23.9%, transparent)`, borderColor: color }
                       : undefined
                   }
                 >

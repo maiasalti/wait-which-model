@@ -5,7 +5,7 @@
     "start": "2024-02-15",
     "end": "2024-05-13",
     "dethronedBy": "gpt-4o",
-    "composite": 0.0631
+    "composite": 0.0618
   },
   {
     "modelId": "gpt-4o",
@@ -21,7 +21,7 @@
     "start": "2024-12-05",
     "end": "2025-03-25",
     "dethronedBy": "gemini-2-5-pro",
-    "composite": 0.3648
+    "composite": 0.3617
   },
   {
     "modelId": "gemini-2-5-pro",
@@ -29,7 +29,7 @@
     "start": "2025-03-25",
     "end": "2025-07-09",
     "dethronedBy": "grok-4",
-    "composite": 0.4719
+    "composite": 0.4655
   },
   {
     "modelId": "grok-4",
@@ -37,7 +37,7 @@
     "start": "2025-07-09",
     "end": "2025-08-05",
     "dethronedBy": "claude-opus-4-1",
-    "composite": 0.5441
+    "composite": 0.535
   },
   {
     "modelId": "claude-opus-4-1",
@@ -59,17 +59,9 @@
     "modelId": "gemini-3-1-pro",
     "tier": "flagship",
     "start": "2026-02-11",
-    "end": "2026-04-08",
-    "dethronedBy": "muse-spark",
-    "composite": 0.7327
-  },
-  {
-    "modelId": "muse-spark",
-    "tier": "flagship",
-    "start": "2026-04-08",
     "end": "2026-04-23",
     "dethronedBy": "gpt-5-5",
-    "composite": 0.7367
+    "composite": 0.7178
   },
   {
     "modelId": "gpt-5-5",
@@ -77,7 +69,7 @@
     "start": "2026-04-23",
     "end": "2026-06-09",
     "dethronedBy": "claude-fable-5",
-    "composite": 0.8075
+    "composite": 0.7933
   },
   {
     "modelId": "claude-fable-5",
@@ -85,23 +77,31 @@
     "start": "2026-06-09",
     "end": "2026-09-01",
     "dethronedBy": "claude-fable-5-1",
-    "composite": 0.9286
+    "composite": 0.9093
   },
   {
     "modelId": "claude-fable-5-1",
     "tier": "flagship",
     "start": "2026-09-01",
-    "end": "2026-09-22",
-    "dethronedBy": "claude-opus-5-5",
-    "composite": 0.9568
+    "end": "2026-09-03",
+    "dethronedBy": "gpt-6-astra",
+    "composite": 0.9322
   },
   {
-    "modelId": "claude-opus-5-5",
+    "modelId": "gpt-6-astra",
     "tier": "flagship",
-    "start": "2026-09-22",
+    "start": "2026-09-03",
+    "end": "2026-11-09",
+    "dethronedBy": "claude-fable-5-2",
+    "composite": 0.9412
+  },
+  {
+    "modelId": "claude-fable-5-2",
+    "tier": "flagship",
+    "start": "2026-11-09",
     "end": null,
     "dethronedBy": null,
-    "composite": 0.9709
+    "composite": 0.9957
   },
   {
     "modelId": "claude-3-5-sonnet",

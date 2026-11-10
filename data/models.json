@@ -9218,66 +9218,6 @@
     "notes": "A same-architecture dated refresh of DeepSeek-V4.1-Flash (2026-09-10), released 2026-10-17 under the same deepseek-flash API alias, MIT license and 1M-token context; DeepSeek's own figures (relayed by MindStudio, OfficeChai, Kingy AI, MarkTechPost and aiweekly.co, none independently verified) report Humanity's Last Exam at 42.6% without tools (up from 36.8%), Terminal-Bench 4.0 at 42.3 (not comparable to this site's Terminal-Bench 2.1 field, left null) and DeepSWE v1.1 at 77.0; GPQA Diamond, SWE-bench, LMArena and ARC-AGI-2 were not reported for this checkpoint specifically and are left null pending a dedicated eval. contextWindow, maxOutput, pricing and license are carried over from the shared V4.1-Flash deployment since every source describes this as an in-place checkpoint swap on the same endpoint, not a new context/pricing tier; speed (230.4 t/s, 1.08s on DeepSeek's API) and cost per Intelligence Index task ($0.26) are Artificial Analysis' measurements of the 1017 checkpoint at max effort; Artificial Analysis lists DeepSeek's peak-hour rate of $0.30/$1.20 per MTok, while the pricing above is the off-peak rate."
   },
   {
-    "id": "grok-voice-3-0",
-    "name": "Grok Voice 3.0",
-    "company": "xai",
-    "releaseDate": "2026-10-14",
-    "status": "unknown",
-    "tier": "flagship",
-    "modality": "multimodal",
-    "type": "voice",
-    "contextWindow": null,
-    "maxOutput": null,
-    "pricing": {
-      "inputPerMTok": null,
-      "outputPerMTok": null
-    },
-    "costPerTask": {
-      "usd": null,
-      "effort": null
-    },
-    "openWeights": false,
-    "availability": "general",
-    "knowledgeCutoff": null,
-    "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
-      "effort": null
-    },
-    "license": null,
-    "apiIds": [
-      {
-        "provider": "xai",
-        "id": "grok-voice-3.0"
-      }
-    ],
-    "retirementDate": null,
-    "predecessorId": null,
-    "benchmarks": {
-      "mmluPro": null,
-      "gpqaDiamond": null,
-      "sweBench": null,
-      "sweBenchPro": null,
-      "terminalBench": null,
-      "aime": null,
-      "hle": null,
-      "lmarenaElo": null,
-      "gdpvalAA": null,
-      "arcAgi2": null
-    },
-    "strengths": [
-      "A drop-in upgrade — same endpoint, session parameters and events as Grok Voice 2.0, and agents on the grok-voice-latest alias moved over without a code change",
-      "Built for support and sales calls with tools and policies, not just chat — xAI already runs it on Starlink's phone lines and in Tesla cars",
-      "Holds up through pauses, turn-taking and callers talking over it, the full-duplex behavior voice agents most often fumble"
-    ],
-    "weaknesses": [
-      "Reasoning is on at high effort by default, and the first audio arrives slightly later than on Grok Voice 2.0 — the quality gain costs a beat of responsiveness",
-      "Anyone on the grok-voice-latest alias was moved to the new model automatically, so production agents changed behavior on launch day unless their owners had pinned a version",
-      "Behavior is a moving target this early: every quality claim, including the Starlink resolution rate, is xAI's own, and no independent hands-on testing exists yet"
-    ],
-    "notes": "Not an LLM: a speech-to-speech model served through xAI's Voice Agent API, so none of this site's text benchmarks apply and every cell is null by design; it is priced per minute of conversation ($0.08/min, $4.80/hr, unchanged from Grok Voice 2.0), not per token, so pricing is null, and context/output limits are unpublished. xAI's launch figures are cited from Artificial Analysis: Speech-to-Speech Index 86.9 (first; Grok Voice 2.0 81.3), Big Bench Audio 98.5%, Speech Agent Arena Elo 1070, Full Duplex Bench 97.0%, τ-Voice 71.6% (below GPT-Live-1 Astra Medium at 74.5%), plus 74% accuracy on ServiceNow's EVA-Bench; Kingy.ai reads Artificial Analysis' time to first audio as 0.81s, up from 0.70s on 2.0. xAI's docs mark grok-voice-2.0 deprecated and direct users to grok-voice-3.0, but no retirement date is given and Grok Voice 2.0 has no entry here, so predecessorId is null."
-  },
-  {
     "id": "flint",
     "name": "Flint",
     "company": "recursive",
@@ -9598,7 +9538,7 @@
       "usd": 2.11,
       "effort": null
     },
-    "openWeights": false,
+    "openWeights": true,
     "availability": "general",
     "knowledgeCutoff": null,
     "speed": {
@@ -9606,7 +9546,13 @@
       "timeToFirstTokenSec": null,
       "effort": null
     },
-    "license": null,
+    "license": {
+      "spdx": null,
+      "name": "Kimi K3.1-Pro License",
+      "kind": "restricted",
+      "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro/blob/main/LICENSE",
+      "commercialUse": true
+    },
     "apiIds": [
       {
         "provider": "moonshot",
@@ -9617,12 +9563,12 @@
     "predecessorId": null,
     "benchmarks": {
       "mmluPro": null,
-      "gpqaDiamond": null,
+      "gpqaDiamond": 94.2,
       "sweBench": null,
       "sweBenchPro": null,
       "terminalBench": null,
       "aime": null,
-      "hle": 52,
+      "hle": 51.1,
       "lmarenaElo": null,
       "gdpvalAA": null,
       "arcAgi2": null
@@ -9630,69 +9576,15 @@
     "strengths": [
       "Noticeably quicker to answer than K3, whose slowness was its main complaint — early users report close to twice the speed on their own workloads",
       "Built for long agentic runs — Moonshot's demos have it iterating on game builds, CAD scripts and a physics simulator over many steps rather than stopping after a first pass",
-      "Fewer invented facts than K3 on Moonshot's own hallucination stress test, a gain Artificial Analysis' independent hallucination eval also shows"
+      "Fewer invented facts than K3 on Moonshot's own hallucination stress test, a gain Artificial Analysis' independent hallucination eval also shows",
+      "Weights are downloadable under the same MIT-derived terms as K3 — ordinary commercial use needs no separate deal, and only the largest hosted services and consumer products pick up conditions"
     ],
     "weaknesses": [
       "Thinking is always on and the API rejects requests that disable it; effort defaults to max and changing it mid-conversation throws away the prompt cache",
       "Very verbose — it burns through output tokens, and one subscriber on the $99/month plan hit their five-hour quota in 47 minutes",
       "Launch claims need independent checking — most coding scores were run inside Claude Code, the API docs shipped with placeholder numbers, and allegations of undisclosed paid influencer promotion surfaced in launch week"
     ],
-    "notes": "A post-trained version of Kimi K3 and the first model in Moonshot's K3.1 series, released 2026-10-23 (2026-10-24 China time) on kimi.ai, the Kimi apps, Kimi Code and the Kimi API; Moonshot calls it 3T-class, and Artificial Analysis lists 2.8T total parameters (MarkTechPost reports 104B active). Weights are promised by 2026-11-04, so openWeights stays false and license null until they ship. The $2/$10 base price ($0.20 cached input) is relayed by VentureBeat and Handy AI because the official pricing table didn't render; a kimi-k3.1-pro-highspeed variant costs $4/$20 and Moonshot says it runs 2–3× faster. HLE 52% is Artificial Analysis' no-tools figure (Moonshot reports 70.0% with tools). Terminal-Bench 4.0 is 65.7% per Moonshot and 67% per AA, not comparable to the Terminal-Bench 2.1 field. GDPval-AA is 1846 Elo on v2.1, a different scale from the tracked v2, so it's left null. costPerTask ($2.11, AA's live page; AA's launch report said $1.98) and speed are AA's reasoning variant, which AA doesn't label with an effort level."
-  },
-  {
-    "id": "dessa",
-    "name": "Dessa",
-    "company": "block",
-    "releaseDate": "2026-10-23",
-    "status": "unknown",
-    "tier": "flagship",
-    "modality": "multimodal",
-    "type": "voice",
-    "contextWindow": null,
-    "maxOutput": null,
-    "pricing": {
-      "inputPerMTok": null,
-      "outputPerMTok": null
-    },
-    "costPerTask": {
-      "usd": null,
-      "effort": null
-    },
-    "openWeights": false,
-    "availability": "restricted",
-    "knowledgeCutoff": null,
-    "speed": {
-      "outputTokensPerSec": null,
-      "timeToFirstTokenSec": null,
-      "effort": null
-    },
-    "license": null,
-    "apiIds": [],
-    "retirementDate": null,
-    "predecessorId": null,
-    "benchmarks": {
-      "mmluPro": null,
-      "gpqaDiamond": null,
-      "sweBench": null,
-      "sweBenchPro": null,
-      "terminalBench": null,
-      "aime": null,
-      "hle": null,
-      "lmarenaElo": null,
-      "gdpvalAA": null,
-      "arcAgi2": null
-    },
-    "strengths": [
-      "Full duplex from the ground up — it listens while it talks, backchannels and decides when to cut in, rather than waiting for the speaker to finish a turn",
-      "Learned only from recorded human conversation, so in Block's demos it picks up on tone, sarcasm and laughter that text-trained voice stacks tend to flatten",
-      "Block says it runs locally on a MacBook Pro M4 Max or better, faster than real time, with no cloud round-trip"
-    ],
-    "weaknesses": [
-      "A research preview with a waitlist, open only to a small group of AI safety researchers — there's no app, API or price to build on",
-      "Everything known about it comes from Block's own hand-picked recordings — no benchmarks, latency figures, model size or independent hands-on testing yet",
-      "No text in training means no stated tool use, document reading or lookup, and Block lists how well it learns facts and new languages as open research questions"
-    ],
-    "notes": "Not an LLM: a speech-to-speech model trained from scratch on human conversation audio only (no text, no pretrained models) on a single NVIDIA GB200 NVL72, built by Block's in-house AI lab, which was founded by former members of Toronto startup Dessa and is led by Ragavan Thurairatnam. Announced 2026-10-23 at block.xyz/dessa and by Jack Dorsey on X. The site's text benchmarks don't apply, and no pricing, context, weights or licence have been published, so every such cell is null; availability is restricted because access is a waitlist plus researcher early access."
+    "notes": "A post-trained version of Kimi K3 and the first model in Moonshot’s K3.1 series, released 2026-10-23 (2026-10-24 China time) on kimi.ai, the Kimi apps, Kimi Code and the Kimi API; the Hugging Face card gives 2.8T total parameters and 104B active, with MXFP4 weights and MXFP8 activations from quantization-aware training. Weights went public on 2026-11-04 at huggingface.co/moonshotai/Kimi-K3.1-Pro, ungated, under the bespoke Kimi K3.1-Pro License: it starts from MIT wording, then requires a separate agreement for Model-as-a-Service operators above $20M in revenue over 12 months, and a visible \"Kimi K3.1-Pro\" credit in products above 100M MAU or $20M monthly revenue. Internal use and Moonshot’s certified partners are exempt, so the licence is classed restricted with commercial use permitted. The $2/$10 base price ($0.20 cached input) is relayed by VentureBeat and Handy AI because the official pricing table didn’t render; a kimi-k3.1-pro-highspeed variant costs $4/$20 and Moonshot says it runs 2–3× faster. GPQA Diamond 94.2 and HLE 51.1% (no tools; 70.0% with tools) are Moonshot’s own model-card figures at max effort, and Artificial Analysis measures HLE at 52% no tools. Terminal-Bench 4.0 is 65.7% per Moonshot and 67% per AA, so it can’t be compared with the Terminal-Bench 2.1 field, and BrowseComp (92.1) isn’t tracked. GDPval-AA is 1846 Elo on v2.1, a different scale from the tracked v2, so it’s left null. costPerTask ($2.11, AA’s live page; AA’s launch report said $1.98) and speed are AA’s reasoning variant, which AA doesn’t label with an effort level."
   },
   {
     "id": "gpt-6-1-terra",
@@ -10055,5 +9947,263 @@
       "Reachable only by vetted cyber defenders through the Fairwind Program at launch, with no date for wider access, so it can't be trialled casually"
     ],
     "notes": "Google's second Gemini 4 model, announced 2026-10-28 two weeks after Argon and described as building on it; access starts with a subset of cyber defenders and phases out to more trusted partners through the Fairwind Program, with developers, businesses and consumers promised access 'as soon as possible', and the model is in the U.S. government's voluntary pre-release testing — hence availability \"restricted\". Pricing is Google's introductory $2/$10 per MTok (cached input 95% off), rising to $4/$20; Google's blog gives no end date for the discount. Google's evaluation PDF (deepmind.google/models/evals-methodology/gemini-4-carbon, highest thinking setting) uses only untracked suites: Artificial Analysis Intelligence Index v5.0 59 (Argon 50, GPT-6 Astra 57, Claude Opus 5.5 58), Vals Index v2.2 70.4%, SWE-sweep 9.6%, FrontierSWE 2 61.2%, Terminal-Bench 4.0 65.2% (not the tracked 2.1), Agents' Last Exam v1.1 77.4%, OSWorld 2.1 offline 81.5%, AutomationBench 53.9%, Vending-Bench 2 $16,484, Chartography 72.5%, Blueprint-Bench 2 58.6%, GraphWalks 256K–1M 96.2%, RiemannBench 80.0%, Terminal-Bench Science 0.1 64.8%, CWE-bench 71.0%, ExploitGym 54.8% and SEC-bench Pro 88.2% (183-task May 2026 JavaScript-engine split, pass@1 over 3 attempts); the ExploitGym and SEC-bench Pro runs are Google's own, some with mitigations off. No GPQA Diamond, SWE-bench, HLE, ARC-AGI-2 or GDPval-AA v2 figure was published. LMArena Elo 1528 (±9, preliminary, 4,403 votes) is the 'Gemini 4 Carbon (High)' text-arena listing, rank 1 ahead of Argon (now 1520); it is 4th on WebDev Arena at 1768. costPerTask $7.76 and output speed 99.8 tok/s are Artificial Analysis' figures for the only variant it lists, Carbon (High), and AA prices the index run at the $4/$20 list rate, not the introductory one (so the per-task cost at launch pricing is about half). AA's FAQ gives a 103.13s time to first token on Google's API but its first-answer-token chart shows no value, so timeToFirstTokenSec is null. contextWindow, maxOutput and knowledgeCutoff are null: Google published no model card or Gemini API model page, and AA's '1M' context is not an official figure. No official model string has been published, so apiIds is empty. predecessorId is null: Google says Carbon builds on Argon but names no model it replaces."
+  },
+  {
+    "id": "gpt-6-cyber",
+    "name": "GPT-6 Cyber",
+    "company": "openai",
+    "releaseDate": "2026-11-05",
+    "status": "frontier",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1050000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 20,
+      "outputPerMTok": 100
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "restricted",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "gpt-6-cyber"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Carries offensive work through to a working, validated exploit — Linux kernel bugs, a remote code execution flaw in Brotli — and beats Astra on most cyber tasks even with Astra's refusals out of the way",
+      "Stays inside the scope a tester sets: on OpenAI's honeypot runs it almost never touches out-of-scope services, even without the deployment safety prompt",
+      "Judges severity rather than just finding bugs — Mozilla's review saw it mark 30 already-reported Firefox issues as more serious than first assessed"
+    ],
+    "weaknesses": [
+      "No better than Astra at general coding, and trails it on part of OpenAI's own cyber suite — a specialist to reach for on exploit work, not a replacement for Astra",
+      "Flagged for deceptive claims about blockers more often than Astra in OpenAI's own alignment tests, so its stated reasons for stopping need checking",
+      "Gated behind Daybreak Red approval, SSO, MFA and IP allowlisting, with no Batch endpoint, so it can't be trialled casually and behavior outside its cyber specialism is undocumented"
+    ],
+    "notes": "Cyber-specialised variant of GPT-6 Astra (OpenAI's docs style it GPT-6-Cyber), announced 2026-11-05 and available through the API and Codex only to a select group of approved Daybreak Red customers, hence availability \"restricted\"; OpenAI says wider Daybreak Red access is coming and that GPT-5.6 Cyber is opening up to all Daybreak Red customers. Context 1,050,000 tokens (922K max input), 128K output, text and image in, and $20/$100 per MTok ($2 cached input, $25/$50 cache writes at 30-minute/12-hour retention) are from OpenAI's model docs, which list Chat Completions and Responses but not Batch and publish no knowledge cutoff or reasoning-effort levels. All tracked benchmarks are unpublished. OpenAI's system card (deploymentsafety.openai.com/gpt-6-cyber) reports only cyber and safety evals, given here against Astra: ExploitGym 48.45% (42.43%; GPT-5.6 Cyber 32.1%), ExploitGym Hardened 36.94% (29.69%), SEC-Bench Pro 87.02% (85.38%), SRE-Bench 92.84% (87.98%), ExploitBench Internal Port 42% (39%), CyScenarioBench 11/11 challenges solved (8/11), FrontierCyber 90/288 (96/288), and general-coding ExpertSWE 82.95% (83.24%). OpenAI also reports 40.3% recall on black-box web pentesting (Astra 32.0%) and a Critical cybersecurity rating under its Preparedness Framework, up from GPT-5.6 Cyber's High. predecessorId stays null: OpenAI calls it \"a major step up from GPT-5.6 Cyber\", lineage rather than a replacement claim, and GPT-5.6 Cyber stays on sale. Artificial Analysis has not indexed it, so costPerTask and speed are null."
+  },
+  {
+    "id": "inkling-2-small",
+    "name": "Inkling 2 Small",
+    "company": "thinking-machines",
+    "releaseDate": "2026-11-05",
+    "status": "unknown",
+    "tier": "balanced",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1048576,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 0.3,
+      "outputPerMTok": 1
+    },
+    "costPerTask": {
+      "usd": 1.18,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-06",
+    "speed": {
+      "outputTokensPerSec": 157,
+      "timeToFirstTokenSec": 29.08,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "thinking-machines",
+        "id": "thinkingmachines/Inkling-2-Small"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Trained with RL on hundreds of thousands of long-horizon coding tasks across several agent harnesses and compaction strategies",
+      "Learns faster than the first-generation Inkling models when fine-tuned on Tinker, matching Inkling Small's final score on a finance-document RL task in 75 steps",
+      "Reads images through a small 292M vision encoder, scoring 81.6% on MMMU Pro in the lab's own evaluation",
+      "Cheap to call on Tinker at $0.30 in and $1.00 out per million tokens"
+    ],
+    "weaknesses": [
+      "Weights are closed at launch, with the Apache 2.0 release held back for external safety testing",
+      "The lab says it isn't a succinct communicator and its chat presentation is weaker, overusing slashes",
+      "Picks the wrong tool more often in codebases with many skills, and drops audio input that Inkling Small had"
+    ],
+    "notes": "Thinking Machines Lab's first second-generation model, a 594B-total/17B-active MoE announced 2026-11-05 (thinkingmachines.ai/news/inkling-2-small). Available on Tinker for serverless inference, sampling and fine-tuning; the lab says it intends to publish full weights under Apache 2.0 'next week' pending safety evaluations, so openWeights and license stay false/null until the weights are actually out. Pricing is Tinker's serverless inference rate ($0.30 input, $0.03 cached, $1.00 output per MTok at 256K context); Tinker training is $1.50/MTok at 64K and $3.00 at 256K. contextWindow 1M is Artificial Analysis' figure and matches the 1M trajectory limit the lab used for evals; Tinker serves 256K (serverless) and 64K or 256K (training). knowledgeCutoff is the '2026-06' data cutoff on the lab's pretraining chart. The lab reports none of the tracked benchmarks: no GPQA Diamond, SWE-bench Verified, ARC-AGI-2 or LMArena figure; its SWE-bench Pro is the v2 Hard split (86.3%), HLE is HLE-Diamond (28.7%), Terminal-Bench is only Terminal Bench Science v0.1 (5.7%), and GDPval-AA is v2.1 (1630), a different scale from the v2 this key records. Also reported at effort 0.99 (xhigh): DeepSWE v1.1 72.1%, FrontierCode v2.0 25.4%, Vibe Code Bench v1.1 81.6%, AA-LCR v1.1 83.3%, MMMU Pro 81.6%. Artificial Analysis scores it 31 on Intelligence Index v5.0.1 (the reasoning variant, no effort label) at $1.18 per task, 157 output tokens/s and 29.08 s to first answer token. predecessorId is null: the lab calls it its 'second model generation' but names no model it replaces."
+  },
+  {
+    "id": "claude-fable-5-2",
+    "name": "Claude Fable 5.2",
+    "company": "anthropic",
+    "releaseDate": "2026-11-09",
+    "status": "frontier",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 8,
+      "outputPerMTok": 40
+    },
+    "openWeights": false,
+    "knowledgeCutoff": "2026-06",
+    "license": null,
+    "retirementDate": null,
+    "predecessorId": null,
+    "costPerTask": {
+      "usd": 26.54,
+      "effort": "max"
+    },
+    "availability": "general",
+    "speed": {
+      "outputTokensPerSec": 103,
+      "timeToFirstTokenSec": 231.55,
+      "effort": "max"
+    },
+    "apiIds": [
+      {
+        "provider": "anthropic",
+        "id": "claude-fable-5-2"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "anthropic.claude-fable-5-2"
+      },
+      {
+        "provider": "google-vertex",
+        "id": "claude-fable-5-2"
+      }
+    ],
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": 93,
+      "terminalBench": null,
+      "aime": null,
+      "hle": 73.2,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": 93.8
+    },
+    "strengths": [
+      "SWE-bench Pro jumps to 93.0% from Fable 5.1's 81.2%, ahead of Opus 5.5's 89.9% in Anthropic's system card",
+      "Completed 41.3% of Remote Labor Index freelance projects at a professional standard, about double Opus 5.5's 21.3%",
+      "20% cheaper than Fable 5.1 at $8/$40 per MTok, with outputs Anthropic says arrive up to 30% faster",
+      "Highest ARC-AGI-2 score ARC Prize has verified, 93.8% at xhigh effort"
+    ],
+    "weaknesses": [
+      "Trails Opus 5.5 on the GDPval-AA and AA-Briefcase Elo ratings, at twice Opus 5.5's price",
+      "At max effort Artificial Analysis measured almost four minutes before the first answer token and $26.54 per index task",
+      "Thinking is always on, forced tool_choice returns a 400 error, and it isn't offered under zero data retention without Anthropic's approval"
+    ],
+    "notes": "Same model as the restricted Claude Mythos 5.2 (tracked separately), which shares its specs and pricing and differs only in safeguards. Specs, ids and pricing are from Anthropic's model page (platform.claude.com/docs/en/models/fable-5-2/overview): 1M context, 128K synchronous output, reliable knowledge cutoff June 2026, default effort high, cache reads $0.20/MTok (2.5% of input), 5-minute cache writes $10, 1-hour $16, batch 50% off; fast mode is $16/$80 for up to 2.5x faster output. Bedrock id anthropic.claude-fable-5-2; Google Cloud and Microsoft Foundry use claude-fable-5-2. Retirement is 'not sooner than November 9, 2027', a floor rather than a scheduled date. Benchmarks from the Fable 5.2 / Mythos 5.2 system card (Table 8.1.A, max effort, safeguards on, five-trial average): SWE-bench Pro 93.0%, HLE 73.2% no tools / 74.2% with tools, plus untracked FrontierCode 2.0 49.1% (xhigh), FrontierSWE v2 69.9%, SWE-bench Multilingual 96.6%, OSWorld 2.1 offline partial 89.3%, Remote Labor Index 41.3%, AutomationBench 51.4%, Terminal-Bench 4.0 67.6% and Terminal-Bench-Science 0.1 74.6%. GDPval-AA is reported only as v2.1 (1831), a different scale from the v2 this key records, so gdpvalAA stays null. ARC-AGI-2 93.8% is ARC Prize-verified at xhigh effort (arcprize.org/results/anthropic-claude-fable-5-2, 2026-11-09; max 92.5%, high 90.4%, medium 89.6%, low 86.7%). Cost per task and speed are Artificial Analysis' max-effort variant, the only one it lists: Intelligence Index 65, $26.54 per task, 103 tok/s, 231.55 s to first answer token, 275M output tokens across the index. predecessorId is null: Anthropic's launch post and migration guide describe moving from Fable 5.1 but never say 5.2 replaces it, and Fable 5.1 stays available as a legacy model. Anthropic's launch post says that in prerelease testing the model helped complete otherwise-infeasible software migrations, designed three working electronic devices, solved two open problems in black-hole physics and formalised Fermat's Last Theorem in 30 hours (a 1,000-agent team on an earlier snapshot, per the system card). The launch table also gives RoboDojo Sim 64.9% (Fable 5.1 27.6%), WANDR relaxed 82.1%, Chartography no tools 73.4%, AA-Briefcase v1.1 66.1% rubric / 1785 Elo (Opus 5.5 leads at 1800), and AutomationBench 51.4%, where Gemini 4 Carbon leads at 53.9%."
+  },
+  {
+    "id": "claude-mythos-5-2",
+    "name": "Claude Mythos 5.2",
+    "company": "anthropic",
+    "releaseDate": "2026-11-09",
+    "status": "frontier",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 8,
+      "outputPerMTok": 40
+    },
+    "openWeights": false,
+    "knowledgeCutoff": "2026-06",
+    "license": null,
+    "retirementDate": null,
+    "predecessorId": null,
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "availability": "restricted",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "apiIds": [
+      {
+        "provider": "anthropic",
+        "id": "claude-mythos-5-2"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "anthropic.claude-mythos-5-2"
+      },
+      {
+        "provider": "google-vertex",
+        "id": "claude-mythos-5-2"
+      }
+    ],
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Rediscovered 89.6% of known CVEs in Anthropic's evaluation, up from Mythos 5.1's 78.3%",
+      "Completed 76.3% of CyScenarioBench challenges, the strongest result Anthropic reports for any model",
+      "Top score on Anthropic's de novo protein binder design task at 85.1%",
+      "Same capabilities and $8/$40 pricing as Fable 5.2 without Fable's cyber and biology safeguards"
+    ],
+    "weaknesses": [
+      "Only for organisations verified through Anthropic's Cyber or Life Sciences Verification Programs, plus Claude Enterprise via Claude Security",
+      "Refused 82.8% of malicious requests in the system card's misuse test, down from Mythos 5.1's 88.5%"
+    ],
+    "notes": "Same model as Claude Fable 5.2 with fewer safeguards. Anthropic's model page (platform.claude.com/docs/en/models/mythos-5-2/overview) says it is available only to organisations verified through its verification programs, with the same specs and pricing as Fable 5.2 (1M context, 128K output, $8/$40, cache reads $0.20, June 2026 knowledge cutoff); the launch post adds that Claude Enterprise customers can use it through Claude Security without verification, and Mythos fast mode is limited to verified organisations. Ids: claude-mythos-5-2 (Claude API, Google Cloud, Foundry), anthropic.claude-mythos-5-2 (Bedrock). Benchmarks stay null: the system card reports Mythos 5.2 only on untracked suites (CVE Rediscovery 89.6%, CyScenarioBench 76.3%, De Novo Binder Design 85.1%, all without safeguards) and gives Fable 5.2's tracked scores under Fable's name, so they aren't copied across. Retirement is 'not sooner than November 9, 2027', a floor. predecessorId is null: Anthropic gives a migration path from Mythos 5.1 but no replacement statement, and Mythos 5.1 isn't tracked. The launch table gives Mythos 5.2 75.3% on Terminal-Bench-Science 0.1 (Fable 5.2 74.6%), also untracked."
   }
 ]

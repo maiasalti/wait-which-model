@@ -1,0 +1,1327 @@
+[
+  {
+    "id": "gpt-live-1",
+    "name": "GPT-Live-1",
+    "company": "openai",
+    "releaseDate": "2026-07-08",
+    "notable": true,
+    "description": "OpenAI's full-duplex voice model: it listens and speaks at the same time and hands deeper reasoning and tool use to a separate backend model. It powers ChatGPT Voice and has been in the API since September 2026.",
+    "strengths": [
+      "Full duplex: handles pauses, interruptions and backchannels while it speaks",
+      "Delegates reasoning and tools to a backend model you choose, e.g. GPT-6 Astra",
+      "Flat $0.05 per minute, billed per second",
+      "21 built-in voices plus custom voices from a prompt or recording"
+    ],
+    "weaknesses": [
+      "Backend model and tool calls are billed separately on top of the per-minute rate",
+      "No image or video input on the API",
+      "Served only on the new Live endpoint (v1/live/sessions), not the Realtime API"
+    ],
+    "links": {
+      "official": "https://openai.com/index/introducing-gpt-live/",
+      "docs": "https://developers.openai.com/api/docs/models/gpt-live-1"
+    },
+    "notes": "Notable: frontier-lab clause (also #3 on AA Speech to Speech Index at 83.2). releaseDate is the GPT-Live system card's publication date (2026-07-08), when GPT-Live-1 and GPT-Live-1 mini became the ChatGPT Voice defaults; API general availability was 2026-09-10 per the OpenAI changelog. openai.com pages returned 403 to the fetcher, so launch-post facts come from the OpenAI developer community announcement, the changelog and the system card. AA's Big Bench Audio score (90.1%) is for 'GPT-Live-1 (Astra, medium)', i.e. paired with GPT-6 Astra at medium effort; with GPT-6 Sol (low) AA lists 89.0%. OpenAI's launch claims (paired with GPT-6 Astra medium): Tau3 83.6% vs 45.7% for GPT-Realtime-2.1, AA Conversational Dynamics 97.3%, turn-taking latency 0.798s. Voices: 12 at API launch, 9 more added 2026-10-16 (21 in the voice table). GPT-Live-1 mini (ChatGPT free-tier default) has no API listing and no separate entry. Languages: no total published; the voice table covers English, Portuguese, German, French, Hindi, Japanese and Korean.",
+    "pricing": {
+      "perMinuteUsd": 0.05,
+      "notes": "$0.05 per minute of live session, billed per second; backend Responses calls and tool use billed separately at the configured model's normal rates. No per-token audio pricing."
+    },
+    "inputs": [
+      "audio",
+      "text"
+    ],
+    "toolCalling": true,
+    "languages": null,
+    "voices": 21,
+    "access": "ga",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "gpt-live-1"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": 90.1
+    }
+  },
+  {
+    "id": "gpt-live-1-1",
+    "name": "GPT-Live-1.1",
+    "company": "openai",
+    "releaseDate": "2026-10-15",
+    "notable": true,
+    "description": "An update to GPT-Live for ChatGPT, Codex and dots, with better accents, new voices and more natural delegation. API access is announced as coming soon.",
+    "strengths": [
+      "13 new voices",
+      "Better French, German, Hindi, Mexican Spanish, Korean and Japanese",
+      "Custom voices from a text prompt or an approved recording"
+    ],
+    "weaknesses": [
+      "Not in the API yet: OpenAI says only 'coming soon', and the API model list still shows gpt-live-1",
+      "No benchmark figures published for 1.1"
+    ],
+    "links": {
+      "official": "https://community.openai.com/t/gpt-live-1-1-is-rolling-out-with-new-voices-and-better-accents/1406704",
+      "docs": null
+    },
+    "notes": "Notable: frontier-lab clause. Source is the OpenAI staff announcement on the OpenAI Developer Community (2026-10-15); the ChatGPT release notes (help.openai.com) returned 403. Third-party reports say a lighter 'GPT-Live-1.1 Quip' replaces GPT-Live-1 mini for non-Plus users, but the staff post doesn't mention Quip, so it isn't an entry and the claim is unverified. Not on the AA leaderboard. Consider whether a ChatGPT-only model belongs in the directory; the alternative is folding it into gpt-live-1's notes.",
+    "pricing": {
+      "perMinuteUsd": null,
+      "notes": "No API pricing; available inside ChatGPT, Codex and dots."
+    },
+    "inputs": [
+      "audio"
+    ],
+    "toolCalling": null,
+    "languages": null,
+    "voices": null,
+    "access": "ga",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [],
+    "scores": {
+      "aaBigBenchAudio": null
+    }
+  },
+  {
+    "id": "gpt-realtime-2-1",
+    "name": "GPT-Realtime-2.1",
+    "company": "openai",
+    "releaseDate": "2026-07-06",
+    "notable": true,
+    "description": "OpenAI's current Realtime API speech-to-speech reasoning model, with configurable reasoning effort and tool use. It updates GPT-Realtime-2 with better alphanumeric recognition, silence and noise handling, and interruption behavior.",
+    "strengths": [
+      "Configurable reasoning effort in a single speech-to-speech model",
+      "Function calling and prompt caching on the Realtime API (WebRTC, WebSocket, SIP)",
+      "Accepts image input alongside audio and text",
+      "128K context, 32K max output"
+    ],
+    "weaknesses": [
+      "Audio at $32 in / $64 out per 1M tokens, far above per-minute rivals",
+      "Big Bench Audio drops from 95.8% at high effort to 86.8% at minimal (AA)"
+    ],
+    "links": {
+      "official": "https://developers.openai.com/api/docs/models/gpt-realtime-2.1",
+      "docs": "https://developers.openai.com/api/docs/guides/realtime"
+    },
+    "notes": "Notable: frontier-lab clause (also #8 on AA Speech to Speech Index, 75.2 at High). AA Big Bench Audio: 95.8% (High), 86.8% (Minimal). OpenAI's deprecations page names gpt-realtime-2.1 as the replacement for gpt-realtime and gpt-4o-realtime (shutdown 2027-01-20). Knowledge cutoff 2024-09-30. Voices: 10 built-in Realtime voices (alloy, ash, ballad, coral, echo, sage, shimmer, verse, marin, cedar) per the Realtime conversations guide, and custom voices are available to eligible customers. No language count is published.",
+    "pricing": {
+      "perMinuteUsd": null,
+      "notes": "Per 1M tokens: text $4 in / $0.40 cached / $24 out; audio $32 in / $0.40 cached / $64 out; image $5 in / $0.50 cached."
+    },
+    "inputs": [
+      "audio",
+      "text",
+      "image"
+    ],
+    "toolCalling": true,
+    "languages": null,
+    "voices": 10,
+    "access": "ga",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "gpt-realtime-2.1"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": 95.8
+    }
+  },
+  {
+    "id": "gpt-realtime-2-1-mini",
+    "name": "GPT-Realtime-2.1 Mini",
+    "company": "openai",
+    "releaseDate": "2026-07-06",
+    "notable": true,
+    "description": "A distilled, faster and cheaper version of GPT-Realtime-2.1 for realtime voice apps, with reasoning and tool use.",
+    "strengths": [
+      "Audio at $10 in / $20 out per 1M tokens, under a third of GPT-Realtime-2.1",
+      "Function calling and reasoning tokens",
+      "OpenAI's named replacement for gpt-realtime-mini and its TTS models"
+    ],
+    "weaknesses": [
+      "Big Bench Audio 74.7% at High and 62.7% at Minimal (AA), far below the full model"
+    ],
+    "links": {
+      "official": "https://developers.openai.com/api/docs/models/gpt-realtime-2.1-mini",
+      "docs": "https://developers.openai.com/api/docs/guides/realtime"
+    },
+    "notes": "Notable: frontier-lab clause. AA lists 'GPT-Realtime-2.1 Mini High' at 74.7% and 'Mini Minimal' at 62.7% (S2S Index 54.4). OpenAI's deprecations page names it as the replacement for gpt-realtime-mini (shutdown 2027-01-20) and for tts-1, tts-1-hd and gpt-4o-mini-tts (shutdown 2027-01-06). 128K context, 32K max output. Voices: the same 10 Realtime voices.",
+    "pricing": {
+      "perMinuteUsd": null,
+      "notes": "Per 1M tokens: text $0.60 in / $0.06 cached / $2.40 out; audio $10 in / $0.30 cached / $20 out; image $0.80 in / $0.08 cached."
+    },
+    "inputs": [
+      "audio",
+      "text",
+      "image"
+    ],
+    "toolCalling": true,
+    "languages": null,
+    "voices": 10,
+    "access": "ga",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "gpt-realtime-2.1-mini"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": 74.7
+    }
+  },
+  {
+    "id": "gpt-realtime-2",
+    "name": "GPT-Realtime-2",
+    "company": "openai",
+    "releaseDate": "2026-05-07",
+    "notable": true,
+    "description": "OpenAI's first Realtime API voice model with configurable reasoning, for speech-to-speech agents. It is still listed alongside its successor, GPT-Realtime-2.1.",
+    "strengths": [
+      "Highest Big Bench Audio of any OpenAI model on AA, 96.6% at High",
+      "Configurable reasoning effort and function calling",
+      "128K context, 32K max output"
+    ],
+    "weaknesses": [
+      "Superseded by GPT-Realtime-2.1 at the same price",
+      "Big Bench Audio falls to 71.8% at minimal effort (AA)"
+    ],
+    "links": {
+      "official": "https://developers.openai.com/api/docs/models/gpt-realtime-2",
+      "docs": "https://developers.openai.com/api/docs/guides/realtime"
+    },
+    "notes": "Notable: frontier-lab clause. Not deprecated on OpenAI's deprecations page, but GPT-Realtime-2.1 updates it at identical pricing; consider dropping it if the directory keeps only the newest generation. AA Big Bench Audio: High 96.6%, Medium 93.3%, Minimal 71.8%; S2S Index 73.6 (High).",
+    "pricing": {
+      "perMinuteUsd": null,
+      "notes": "Per 1M tokens: text $4 in / $0.40 cached / $24 out; audio $32 in / $0.40 cached / $64 out; image $5 in / $0.50 cached."
+    },
+    "inputs": [
+      "audio",
+      "text",
+      "image"
+    ],
+    "toolCalling": true,
+    "languages": null,
+    "voices": 10,
+    "access": "ga",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "gpt-realtime-2"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": 96.6
+    }
+  },
+  {
+    "id": "gpt-realtime-1-5",
+    "name": "GPT-Realtime-1.5",
+    "company": "openai",
+    "releaseDate": "2026-02-23",
+    "notable": true,
+    "description": "OpenAI's non-reasoning Realtime API speech-to-speech model for voice agents and customer support, still listed and not deprecated.",
+    "strengths": [
+      "Lower latency than the reasoning models: 0.81s time to first audio on AA",
+      "Function calling and prompt caching",
+      "Text output $16 per 1M tokens, vs $24 on the 2.x models"
+    ],
+    "weaknesses": [
+      "32K context and 4,096 max output tokens",
+      "Big Bench Audio 81.4% (AA), well behind the 2.x models"
+    ],
+    "links": {
+      "official": "https://developers.openai.com/api/docs/models/gpt-realtime-1.5",
+      "docs": "https://developers.openai.com/api/docs/guides/realtime"
+    },
+    "notes": "Notable: frontier-lab clause. The model page still calls it 'the best voice model for audio in, audio out'. Not deprecated, but older than the 2.x line; consider dropping it if only the newest generation is kept. AA S2S Index 70.3.",
+    "pricing": {
+      "perMinuteUsd": null,
+      "notes": "Per 1M tokens: text $4 in / $0.40 cached / $16 out; audio $32 in / $0.40 cached / $64 out; image $5 in / $0.50 cached."
+    },
+    "inputs": [
+      "audio",
+      "text",
+      "image"
+    ],
+    "toolCalling": true,
+    "languages": null,
+    "voices": 10,
+    "access": "ga",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "openai",
+        "id": "gpt-realtime-1.5"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": 81.4
+    }
+  },
+  {
+    "id": "gemini-3-8-live",
+    "name": "Gemini 3.8 Live",
+    "company": "google",
+    "releaseDate": "2026-09-15",
+    "notable": true,
+    "description": "Google's default Live API model for low-latency voice agents, built on Gemini 3 Pro. It takes live audio, images and video and answers in speech, and it also powers Search Live.",
+    "strengths": [
+      "Switches between 97 languages mid-conversation (Google launch post)",
+      "Asynchronous, non-blocking function calling plus Google Search grounding",
+      "Accepts live video and images as well as audio",
+      "Audio at $0.005/min in and $0.018/min out"
+    ],
+    "weaknesses": [
+      "Big Bench Audio 91.7%, behind its Extended Thinking sibling's 97.7% (AA)",
+      "Affective dialogue removed and proactive audio can't be switched off"
+    ],
+    "links": {
+      "official": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+      "docs": "https://aistudio.google.com/docs/models/gemini-3.8-live"
+    },
+    "notes": "Notable: frontier-lab clause (also #9 on AA S2S Index, 74.5). GA 2026-09-15 per the Gemini API changelog. Google's launch post claims second place in AA's Speech Agent Arena. Language count conflicts: the launch post says 97, the Live API guide lists 99, and the Live API overview says 70. Voices: Google Cloud's Live API voice page lists 30 prebuilt voices for the Live API generally, not per model. 131,072 input / 65,536 output tokens. Knowledge cutoff January 2025 (model card).",
+    "pricing": {
+      "perMinuteUsd": null,
+      "notes": "Paid tier, shared with 3.8 Live Extended Thinking and 3.1 Flash Live Preview: input text $0.75 / audio $3.00 (or $0.005/min) / image-video $1.00 (or $0.002/min) per 1M tokens; output text $4.50 / audio $12.00 (or $0.018/min) per 1M tokens, including thinking tokens. Free tier available. Google publishes separate per-minute input and output rates, not one blended per-minute price, so perMinuteUsd is null."
+    },
+    "inputs": [
+      "audio",
+      "text",
+      "image",
+      "video"
+    ],
+    "toolCalling": true,
+    "languages": 97,
+    "voices": 30,
+    "access": "ga",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "google",
+        "id": "gemini-3.8-live"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": 91.7
+    }
+  },
+  {
+    "id": "gemini-3-8-live-extended-thinking",
+    "name": "Gemini 3.8 Live Extended Thinking",
+    "company": "google",
+    "releaseDate": "2026-09-15",
+    "notable": true,
+    "description": "The higher-reasoning version of Gemini 3.8 Live, for complex multi-step voice tasks. It runs background reasoning at a configurable level while the conversation continues, and powers Gemini Live in the Gemini app.",
+    "strengths": [
+      "Big Bench Audio 97.7% (AA)",
+      "Configurable background thinking: minimal, low, medium, high",
+      "Asynchronous function calling while audio keeps streaming",
+      "Same per-token price as Gemini 3.8 Live"
+    ],
+    "weaknesses": [
+      "1.35s time to first audio on AA, among the slowest of the top models",
+      "τ-Voice 68.6%, behind GPT-Live-1 (74.5%) and Grok Voice 3.0 (71.6%) per xAI's comparison table"
+    ],
+    "links": {
+      "official": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+      "docs": "https://aistudio.google.com/docs/models/gemini-3.8-live"
+    },
+    "notes": "Notable: frontier-lab clause (also top 10 on AA: #4 on S2S Index at 82.6, #7 on Big Bench Audio). Google's launch post claimed #1 on AA's S2S index at 82.6; AA now ranks it 4th behind Phonic 1, Grok Voice 3.0 and GPT-Live-1. Google also reports τ-Voice-banking 35.1%. The AA listing is 'Gemini 3.8 Live Extended Thinking (High)'. Language and voice counts as for Gemini 3.8 Live.",
+    "pricing": {
+      "perMinuteUsd": null,
+      "notes": "Same table as Gemini 3.8 Live: input text $0.75 / audio $3.00 ($0.005/min) / image-video $1.00 ($0.002/min); output text $4.50 / audio $12.00 ($0.018/min) per 1M tokens, including thinking tokens."
+    },
+    "inputs": [
+      "audio",
+      "text",
+      "image",
+      "video"
+    ],
+    "toolCalling": true,
+    "languages": 97,
+    "voices": 30,
+    "access": "ga",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "google",
+        "id": "gemini-3.8-live-extended-thinking"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": 97.7
+    }
+  },
+  {
+    "id": "gemini-3-1-flash-live",
+    "name": "Gemini 3.1 Flash Live",
+    "company": "google",
+    "releaseDate": "2026-03-26",
+    "notable": true,
+    "description": "Google's earlier audio-to-audio Live API model, still in preview. Google now labels it legacy and recommends Gemini 3.8 Live.",
+    "strengths": [
+      "Big Bench Audio 96.6% at high thinking (AA)",
+      "Thinking levels from minimal to high",
+      "Same per-token price as Gemini 3.8 Live"
+    ],
+    "weaknesses": [
+      "Legacy preview: Google recommends migrating to Gemini 3.8 Live",
+      "Synchronous function calling only",
+      "2.99s time to first audio at high thinking (AA)"
+    ],
+    "links": {
+      "official": "https://aistudio.google.com/docs/models/gemini-3.1-flash-live-preview",
+      "docs": "https://aistudio.google.com/docs/models/gemini-3.1-flash-live-preview"
+    },
+    "notes": "Notable: frontier-lab clause. Released 2026-03-26 per the Gemini API changelog. The model page calls it a 'legacy preview audio-to-audio model', with no deprecation date; drop it if legacy models are out of scope. AA: High 96.6% (S2S 72.0), Minimal 71.3% (S2S 64.2).",
+    "pricing": {
+      "perMinuteUsd": null,
+      "notes": "Shares the Gemini 3.8 Live table: input text $0.75 / audio $3.00 ($0.005/min) / image-video $1.00 ($0.002/min); output text $4.50 / audio $12.00 ($0.018/min) per 1M tokens."
+    },
+    "inputs": [
+      "audio",
+      "text",
+      "image"
+    ],
+    "toolCalling": true,
+    "languages": null,
+    "voices": 30,
+    "access": "beta",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "google",
+        "id": "gemini-3.1-flash-live-preview"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": 96.6
+    }
+  },
+  {
+    "id": "grok-voice-3-0",
+    "name": "Grok Voice 3.0",
+    "company": "xai",
+    "releaseDate": "2026-10-14",
+    "notable": true,
+    "description": "xAI's speech-to-speech model for voice agents, served through its Speech to Speech (Voice Agent) API. xAI also runs it on Starlink support lines and in Tesla cars.",
+    "strengths": [
+      "Big Bench Audio 98.5% and #2 on AA's S2S Index (86.9)",
+      "Flat $0.08 per minute, unchanged from Grok Voice 2.0",
+      "Built-in web search, X search, collections, MCP and custom function tools",
+      "A drop-in upgrade: agents on the grok-voice-latest alias moved over automatically"
+    ],
+    "weaknesses": [
+      "0.81s time to first audio on AA, up from 0.70s on Grok Voice 2.0",
+      "Anyone on grok-voice-latest was switched on launch day unless they had pinned a version",
+      "Single region (us-east-1); sessions capped at 120 minutes"
+    ],
+    "links": {
+      "official": "https://x.ai/news/grok-voice-3",
+      "docs": "https://docs.x.ai/developers/model-capabilities/audio/speech-to-speech"
+    },
+    "notes": "Notable: frontier-lab clause (also top 10 on both AA boards: #2 S2S Index, #6 Big Bench Audio). AA lists the developer as 'SpaceXAI'. Moved from models.json; facts re-verified 2026-11-06. Launch figures (xAI citing AA): S2S Index 86.9 (2.0: 81.3), Big Bench Audio 98.5%, Speech Agent Arena Elo 1070, Task Success 94.8%, Full Duplex Bench 97.0%, τ-Voice 71.6% (GPT-Live-1 74.5%), ServiceNow EVA-Bench 74%. xAI's docs mark grok-voice-2.0 deprecated with no retirement date. Languages: the speech-to-speech guide lists 20 and says others work with varying accuracy. Voices: the guide points to the TTS voice list, and the TTS docs list 5 built-in voices (ara, eve, leo, rex, sal) while an xAI cookbook mentions 28, so the count is left null. The launch post doesn't name tool calling, but the docs list it.",
+    "pricing": {
+      "perMinuteUsd": 0.08,
+      "notes": "$0.08/min ($4.80/hr) of session; text input messages $0.004 each; server_vad sessions billed for full session duration, push-to-talk only for audio sent and received."
+    },
+    "inputs": [
+      "audio",
+      "text"
+    ],
+    "toolCalling": true,
+    "languages": 20,
+    "voices": null,
+    "access": "ga",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "xai",
+        "id": "grok-voice-3.0"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": 98.5
+    }
+  },
+  {
+    "id": "nova-2-5-sonic",
+    "name": "Amazon Nova 2.5 Sonic",
+    "company": "amazon",
+    "releaseDate": "2026-10-05",
+    "notable": false,
+    "description": "Amazon's latest speech-to-speech model on Bedrock, the successor to Nova 2 Sonic. It improves reasoning, instruction following, tool-calling accuracy and latency, with the same API, voices and languages.",
+    "strengths": [
+      "Asynchronous tool calling: keeps talking while tools run",
+      "18 voices, including polyglot voices that speak all 7 languages and code-switch",
+      "Same price as Nova 2 Sonic",
+      "256K context window"
+    ],
+    "weaknesses": [
+      "Only 7 supported languages; AWS advises against using others",
+      "No speech-to-speech translation, and pitch and accent can't be adjusted",
+      "Not yet on the AA leaderboard"
+    ],
+    "links": {
+      "official": "https://aws.amazon.com/about-aws/whats-new/2026/10/amazon-nova-2.5-Sonic/",
+      "docs": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-amazon-nova-2-5-sonic.html"
+    },
+    "notes": "Not notable: Amazon isn't a frontier-lab company and the model isn't on AA. The service card calls it the successor to Nova 2 Sonic with 'the same API surface, voices, and language support', and mentions using open-source models to improve tool calling. Languages: English, Spanish, German, French, Italian, Portuguese, Hindi. Regions: us-east-1, us-west-2, eu-north-1, ap-northeast-1. Price not found: AWS says it matches Nova 2 Sonic, but the Bedrock pricing page's Nova speech rows didn't render for the fetcher.",
+    "pricing": {
+      "perMinuteUsd": null,
+      "notes": "Token-priced on Bedrock, same as Nova 2 Sonic per AWS; exact rates not retrievable from aws.amazon.com/bedrock/pricing (rows did not render)."
+    },
+    "inputs": [
+      "audio",
+      "text"
+    ],
+    "toolCalling": true,
+    "languages": 7,
+    "voices": 18,
+    "access": "ga",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "bedrock",
+        "id": "amazon.nova-2-5-sonic"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": null
+    }
+  },
+  {
+    "id": "nova-2-sonic",
+    "name": "Amazon Nova 2 Sonic",
+    "company": "amazon",
+    "releaseDate": "2025-12-02",
+    "notable": false,
+    "description": "Amazon's second-generation speech-to-speech model on Bedrock for real-time voice agents, with native telephony integrations. Nova 2.5 Sonic has since superseded it.",
+    "strengths": [
+      "Integrates with Amazon Connect, Twilio, Vonage, AudioCodes, LiveKit and Pipecat",
+      "Asynchronous tool handling and RAG grounding",
+      "1M-token context window"
+    ],
+    "weaknesses": [
+      "8-minute connection limit, so long calls need session renewal",
+      "Superseded by Nova 2.5 Sonic",
+      "Big Bench Audio 88.1% (AA, Mar 2026 version)"
+    ],
+    "links": {
+      "official": "https://aws.amazon.com/blogs/aws/introducing-amazon-nova-2-sonic-next-generation-speech-to-speech-model-for-conversational-ai/",
+      "docs": "https://docs.aws.amazon.com/nova/latest/nova2-userguide/using-conversational-speech.html"
+    },
+    "notes": "Not notable (AA Big Bench Audio #21). The Bedrock model card says Active, with EOL no sooner than 2026-12-02; drop it if superseded models are out of scope. AA's listing is 'Nova 2.0 Sonic (Mar 2026)', which suggests a March 2026 update; no AWS page for that update was found. Voice count conflicts: the language-support table lists 16 voice IDs, and versions of the service card say 18 and 22, so it's null. Pricing rows on the Bedrock page didn't render.",
+    "pricing": {
+      "perMinuteUsd": null,
+      "notes": "Token-priced on Bedrock (speech and text input/output); exact rates not retrievable from aws.amazon.com/bedrock/pricing."
+    },
+    "inputs": [
+      "audio",
+      "text"
+    ],
+    "toolCalling": true,
+    "languages": 7,
+    "voices": null,
+    "access": "ga",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "bedrock",
+        "id": "amazon.nova-2-sonic-v1:0"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": 88.1
+    }
+  },
+  {
+    "id": "dessa",
+    "name": "Dessa",
+    "company": "block",
+    "releaseDate": "2026-10-23",
+    "notable": false,
+    "description": "A full-duplex speech-to-speech model from Block's AI research lab, trained from scratch only on recorded human conversation, with no text and no pretrained models. It listens while it talks and runs locally on a high-end Mac.",
+    "strengths": [
+      "Full duplex by design: backchannels and decides when to cut in",
+      "Trained only on human conversation audio, on a single NVIDIA GB200 NVL72",
+      "Runs locally on a MacBook Pro M4 Max or better"
+    ],
+    "weaknesses": [
+      "Waitlist only, with early access for a small group of AI safety researchers; no API or price",
+      "No benchmarks, latency figures or model size published",
+      "No text in training means no stated tool use; fact learning and new languages are listed as open questions"
+    ],
+    "links": {
+      "official": "https://block.xyz/dessa",
+      "docs": null
+    },
+    "notes": "Not notable: not on AA, and Block isn't a frontier-lab company. Moved from models.json; re-verified 2026-11-06 against block.xyz/dessa, which states the facts above but gives no publication date (only a privacy-notice effective date of 2026-10-21). releaseDate 2026-10-23 is carried over from the existing entry and news item (the announcement and Jack Dorsey's X post); it isn't printed on Block's page. The page lists no tool use, so toolCalling is null.",
+    "pricing": {
+      "perMinuteUsd": null,
+      "notes": "No pricing published."
+    },
+    "inputs": [
+      "audio"
+    ],
+    "toolCalling": null,
+    "languages": null,
+    "voices": null,
+    "access": "waitlist",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [],
+    "scores": {
+      "aaBigBenchAudio": null
+    }
+  },
+  {
+    "id": "phonic-1",
+    "name": "Phonic-1",
+    "company": "phonic",
+    "releaseDate": "2026-10-29",
+    "notable": true,
+    "description": "Phonic's end-to-end speech-to-speech model for agentic voice tasks, built to call tools while the caller is still speaking. It's served on Phonic's voice-agent platform.",
+    "strengths": [
+      "#1 on AA's Speech to Speech Index (87.1) with Big Bench Audio 98.9%",
+      "Calls tools while the caller is still speaking",
+      "0.61s time to first audio (AA)",
+      "Flat $0.07/min with no LLM or token pass-through"
+    ],
+    "weaknesses": [
+      "Platform-bound: no public model ID, and Enterprise is needed for self-hosting or VPC",
+      "Phonic's τ³-Voice comparison is self-reported"
+    ],
+    "links": {
+      "official": "https://phonic.ai/blog/phonic-1",
+      "docs": "https://docs.phonic.ai"
+    },
+    "notes": "Notable: top 10 on both AA boards (#1 S2S Index 87.1; #3 Big Bench Audio 98.9%, listed as 'Phonic 1 (High)'). Phonic reports τ³-Voice multilingual full-duplex 83.2 vs GPT-Live-1 79.9 and Gemini 3.8 Live 68.5. Languages: trained on '50+', stored as 50. The pricing page lists Starter $0.07/min, Pro $0.065/min ($200 monthly minimum) and custom Enterprise, without tying them to Phonic-1 by name. phonic.co now redirects to phonic.ai. The old docs at docs.phonic.co listed usage pricing 'starting at $0.15 per minute', which looks outdated.",
+    "pricing": {
+      "perMinuteUsd": 0.07,
+      "notes": "Starter $0.07/min (no minimum); Pro $0.065/min with $200/month minimum; Enterprise custom. $250/mo free credits for sign-ups by 2026-11-30."
+    },
+    "inputs": [
+      "audio"
+    ],
+    "toolCalling": true,
+    "languages": 50,
+    "voices": null,
+    "access": "ga",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [],
+    "scores": {
+      "aaBigBenchAudio": 98.9
+    }
+  },
+  {
+    "id": "eleven-realtime-v1-max",
+    "name": "Eleven Realtime v1 Max",
+    "company": "elevenlabs",
+    "releaseDate": "2026-10-19",
+    "notable": true,
+    "description": "ElevenLabs' reasoning speech-to-speech model for voice agents. It bundles speech recognition, turn-taking, an LLM and voice in one model choice, and reasons before it answers.",
+    "strengths": [
+      "Big Bench Audio 98.8% and 0.57s time to first audio (AA)",
+      "Completed 87.1% of tool-use tasks",
+      "Realtime API compatible with OpenAI's over WebSocket",
+      "90+ languages and the ElevenLabs voice library (17,000+ voices)"
+    ],
+    "weaknesses": [
+      "Token charges ($1.80 in / $9.00 out per 1M) on top of $0.08/min connected audio",
+      "Full-Duplex-Bench 94.1%, slightly below the cheaper Mini"
+    ],
+    "links": {
+      "official": "https://elevenlabs.io/blog/realtime",
+      "docs": "https://elevenlabs.io/docs/overview/models"
+    },
+    "notes": "Notable: top 10 on both AA boards (#7 S2S Index 77.3; #4 Big Bench Audio 98.8%). releaseDate is the changelog launch (gradual rollout from 2026-10-19, all workspaces by 2026-11-02); the blog post is dated 2026-10-20. Benchmarks from ElevenLabs' blog, measured by AA: Speech Agent Arena 998. The dashboard default for Realtime voice mode since 2026-10-26. perMinuteUsd is the connected-audio rate only; token charges apply on top.",
+    "pricing": {
+      "perMinuteUsd": 0.08,
+      "notes": "$0.080 per additional minute of connected audio PLUS $1.80 per 1M input tokens and $9.00 per 1M output tokens; burst pricing $0.160/min above concurrency limit."
+    },
+    "inputs": [
+      "audio",
+      "text"
+    ],
+    "toolCalling": true,
+    "languages": 90,
+    "voices": null,
+    "access": "ga",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "elevenlabs",
+        "id": "eleven_realtime_v1_max"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": 98.8
+    }
+  },
+  {
+    "id": "eleven-realtime-v1-mini",
+    "name": "Eleven Realtime v1 Mini",
+    "company": "elevenlabs",
+    "releaseDate": "2026-10-19",
+    "notable": false,
+    "description": "ElevenLabs' default, fastest and cheapest Eleven Realtime model, for assistants, tutors and interactive characters.",
+    "strengths": [
+      "Full-Duplex-Bench 95.8%, higher than Max",
+      "Input tokens $0.20 per 1M",
+      "OpenAI-Realtime-compatible API"
+    ],
+    "weaknesses": [
+      "Big Bench Audio 75.9% (AA), far below Max",
+      "Tool-use success 60.3%, vs 87.1% for Max"
+    ],
+    "links": {
+      "official": "https://elevenlabs.io/blog/realtime",
+      "docs": "https://elevenlabs.io/docs/overview/models"
+    },
+    "notes": "Not notable: #18 on AA S2S Index (64.4) and #26 on Big Bench Audio (75.9%). The text input modality is inferred from the OpenAI-compatible Realtime API; the blog only says audio in, audio out.",
+    "pricing": {
+      "perMinuteUsd": 0.08,
+      "notes": "$0.080 per additional minute of connected audio PLUS $0.20 per 1M input tokens and $6.00 per 1M output tokens; burst $0.160/min."
+    },
+    "inputs": [
+      "audio",
+      "text"
+    ],
+    "toolCalling": true,
+    "languages": 90,
+    "voices": null,
+    "access": "ga",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "elevenlabs",
+        "id": "eleven_realtime_v1_mini"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": 75.9
+    }
+  },
+  {
+    "id": "stepaudio-3-realtime",
+    "name": "StepAudio 3 Realtime",
+    "company": "stepfun",
+    "releaseDate": null,
+    "notable": true,
+    "description": "StepFun's full-duplex voice model on its Realtime API. It reasons while it speaks and runs tool calls in the background without breaking off the conversation.",
+    "strengths": [
+      "Highest Big Bench Audio on AA, 99.7%",
+      "98.9 on AA Full-Duplex Bench (StepFun technical report)",
+      "Built-in web_search and retrieval tools, run asynchronously"
+    ],
+    "weaknesses": [
+      "Only Chinese and English are fully supported; other languages are in preview",
+      "Still a preview ID during the free trial, with paid billing from 2026-11-09",
+      "No AA Speech to Speech Index score, so its agentic and arena results are unranked"
+    ],
+    "links": {
+      "official": "https://platform.stepfun.ai/docs/en/guides/models/stepaudio-3-realtime.md",
+      "docs": "https://platform.stepfun.ai/docs/en/guides/models/audio"
+    },
+    "notes": "Notable: #1 on AA Big Bench Audio (99.7%); it has no AA S2S Index score. No primary release date: the technical report (arXiv 2609.14005) was first submitted 2026-09-12, and secondary coverage says API availability began 2026-09-15. Model ID: the docs list stepaudio-3-realtime-preview (free trial, to be retired when paid billing starts), and the pricing page lists stepaudio-3-realtime. Report figures: τ-Voice 56.0% macro task success, MMSU 90.6. Open weights not stated, and secondary sources say none. Secondary coverage (remio.ai, aiweekly) reports an 8.83s average time to first audio on AA's benchmark; unverified, so it isn't used.",
+    "pricing": {
+      "perMinuteUsd": 0.125,
+      "notes": "stepaudio-3-realtime: $0.125 per session minute ($7.50/hr), counting both user and agent speaking time, effective 2026-11-09 00:00 UTC+8; free until 2026-11-08. CNY page: ¥0.65/session minute."
+    },
+    "inputs": [
+      "audio",
+      "text"
+    ],
+    "toolCalling": true,
+    "languages": 2,
+    "voices": null,
+    "access": "beta",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "stepfun",
+        "id": "stepaudio-3-realtime"
+      },
+      {
+        "provider": "stepfun",
+        "id": "stepaudio-3-realtime-preview"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": 99.7
+    }
+  },
+  {
+    "id": "qwen-audio-3-1-realtime",
+    "name": "Qwen-Audio-3.1-Realtime",
+    "company": "alibaba",
+    "releaseDate": "2026-09-22",
+    "notable": false,
+    "description": "Alibaba's current full-duplex realtime voice model family on Model Studio, in Plus and Flash tiers. Alibaba points GPT-Live-1 and Gemini 3.8 Live users to the Plus tier.",
+    "strengths": [
+      "14 languages plus 21 Chinese varieties",
+      "Function calling, plus web search on Flash",
+      "Voice cloning via the Voice Cloning API",
+      "262K context on Plus"
+    ],
+    "weaknesses": [
+      "On Plus, function calling and web search can't be enabled together",
+      "Not yet on the AA leaderboard"
+    ],
+    "links": {
+      "official": "https://www.alibabacloud.com/en/press-room/alibaba-unveils-roadmap-on-full-stack-ai-strategy",
+      "docs": "https://www.alibabacloud.com/help/en/model-studio/qwen-audio-realtime-user-guides"
+    },
+    "notes": "Not notable: not on AA yet (the 3.0 generation is). releaseDate is the Apsara Conference press release naming Qwen-Audio-3.1-Realtime (2026-09-22). The Plus and Flash tiers are two model IDs kept in one entry; split them if preferred. Flash pricing isn't on the fetched pages. Alibaba's speech-to-speech page maps GPT-Live 1 and Gemini 3.8 Live to the 3.1 Plus tier, and GPT-Realtime-2.1 Mini to Flash. Voices: default longanqian_v3.1 plus the qwen-audio-3.1 TTS voice lists; no count is given.",
+    "pricing": {
+      "perMinuteUsd": null,
+      "notes": "qwen-audio-3.1-realtime-plus per 1M tokens, Singapore: text in $0.80, audio in $6.40, text out $6.40, audio out $24 (audio-only billing when both are returned); Beijing: $0.688 / $5.501 / $5.501 / $20.628. Flash pricing not found."
+    },
+    "inputs": [
+      "audio",
+      "text"
+    ],
+    "toolCalling": true,
+    "languages": 14,
+    "voices": null,
+    "access": "ga",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "alibaba",
+        "id": "qwen-audio-3.1-realtime-plus"
+      },
+      {
+        "provider": "alibaba",
+        "id": "qwen-audio-3.1-realtime-flash"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": null
+    }
+  },
+  {
+    "id": "qwen-audio-3-0-realtime",
+    "name": "Qwen-Audio-3.0-Realtime",
+    "company": "alibaba",
+    "releaseDate": null,
+    "notable": true,
+    "description": "Alibaba's previous-generation full-duplex realtime voice model family (Plus and Flash) on Model Studio. It is still listed, but no longer recommended.",
+    "strengths": [
+      "Big Bench Audio 99.2% on Plus, #2 on AA",
+      "Function calling and web search",
+      "11 languages plus 21 Chinese varieties; 5 system voices plus cloning"
+    ],
+    "weaknesses": [
+      "Superseded by Qwen-Audio-3.1-Realtime and no longer recommended in Alibaba's docs",
+      "40,960-token context with 8,192 max output on Plus",
+      "AA S2S Index 69.5, far below its reasoning score"
+    ],
+    "links": {
+      "official": "https://www.alibabacloud.com/help/en/model-studio/qwen-audio-realtime-user-guides",
+      "docs": "https://help.aliyun.com/en/model-studio/qwen-audio-3-0-realtime-plus"
+    },
+    "notes": "Notable: #2 on AA Big Bench Audio (Plus 99.2%); Flash scores 96.1% (#13); S2S Index Plus 69.5, Flash 67.7. releaseDate is null because no Alibaba page gives one; Chinese media (ithome, 10jqka, qbitai) report 2026-07-15. Alibaba's speech-to-speech page labels it 'earlier generation' and not recommended, so drop it if superseded models are out of scope. Pricing below was published in CNY on the Singapore page.",
+    "pricing": {
+      "perMinuteUsd": null,
+      "notes": "qwen-audio-3.0-realtime-plus, Singapore, per 1M tokens (shown in CNY): text in 5.995, audio in 47.963, text out 47.963, audio out 179.861 (text output not charged when audio returned). Flash pricing not fetched."
+    },
+    "inputs": [
+      "audio",
+      "text"
+    ],
+    "toolCalling": true,
+    "languages": 11,
+    "voices": 5,
+    "access": "ga",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "alibaba",
+        "id": "qwen-audio-3.0-realtime-plus"
+      },
+      {
+        "provider": "alibaba",
+        "id": "qwen-audio-3.0-realtime-flash"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": 99.2
+    }
+  },
+  {
+    "id": "qwen3-8-omni-flash-realtime",
+    "name": "Qwen3.8-Omni-Flash-Realtime",
+    "company": "alibaba",
+    "releaseDate": "2026-09-18",
+    "notable": false,
+    "description": "The realtime variant of Alibaba's Qwen3.8-Omni-Flash omnimodal model. It perceives and responds while receiving live audio and video streams, and can call tools along the way.",
+    "strengths": [
+      "Live audio and video input, plus images and text",
+      "Speech recognition in 74 languages and 39 Chinese dialects",
+      "Custom function calling, remote MCP and web search",
+      "Audio at $0.93 in / $1.87 out per 1M tokens"
+    ],
+    "weaknesses": [
+      "Speech output in fewer languages (29 plus 7 dialects) than it understands",
+      "Not yet on the AA leaderboard"
+    ],
+    "links": {
+      "official": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
+      "docs": "https://www.alibabacloud.com/help/en/model-studio/realtime"
+    },
+    "notes": "Not notable: not on AA. releaseDate is the qwen.ai blog date (2026/09/18, seen via search); the qwen.ai page is JS-rendered and didn't load, and the Alibaba Cloud Community mirror is dated 2026-09-20. Language counts conflict: the blog says 74 languages + 39 dialects recognised and 29 + 7 generated, while the Model Studio realtime doc says 113 languages/dialects recognised and 36 generated. languages = 74 (blog recognition). Open weights not stated.",
+    "pricing": {
+      "perMinuteUsd": null,
+      "notes": "Singapore, per 1M tokens: input text/image/video $0.23, audio $0.93; output text $0.70, audio $1.87."
+    },
+    "inputs": [
+      "audio",
+      "text",
+      "image",
+      "video"
+    ],
+    "toolCalling": true,
+    "languages": 74,
+    "voices": null,
+    "access": "ga",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "alibaba",
+        "id": "qwen3.8-omni-flash-realtime"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": null
+    }
+  },
+  {
+    "id": "qwen3-5-omni-realtime",
+    "name": "Qwen3.5-Omni Realtime",
+    "company": "alibaba",
+    "releaseDate": null,
+    "notable": true,
+    "description": "The realtime audio and video conversation variants of Alibaba's Qwen3.5-Omni, in Plus and Flash tiers, on Model Studio.",
+    "strengths": [
+      "Big Bench Audio 98.7% on Plus, #5 on AA",
+      "Text, audio, image and video input",
+      "Semantic VAD for interruptions, plus function calling and web search"
+    ],
+    "weaknesses": [
+      "Plus audio output at $62 per 1M tokens",
+      "Flash scores only 59.0% on Big Bench Audio (AA)",
+      "Superseded for realtime audio and video by Qwen3.8-Omni-Flash-Realtime"
+    ],
+    "links": {
+      "official": "https://www.alibabacloud.com/help/en/model-studio/s2s-model",
+      "docs": "https://www.alibabacloud.com/help/en/model-studio/realtime"
+    },
+    "notes": "Notable: #5 on AA Big Bench Audio (Qwen3.5 Omni Plus Realtime, 98.7%); Flash Realtime is #35 at 59.0%. releaseDate is null: the dated snapshot ID is qwen3.5-omni-plus-realtime-2026-03-15, and secondary sources date the Qwen3.5-Omni launch to about 2026-03-30; the qwen.ai blog didn't render. 113 input languages/dialects; 29 output languages + 7 dialects (Model Studio).",
+    "pricing": {
+      "perMinuteUsd": null,
+      "notes": "Singapore, per 1M tokens. Plus Realtime: input text/image/video $2.10, audio $16.50; output text $12.40, audio $62.00. Flash Realtime: input $0.55 / audio $4.50; output text $3.30, audio $17.70."
+    },
+    "inputs": [
+      "audio",
+      "text",
+      "image",
+      "video"
+    ],
+    "toolCalling": true,
+    "languages": null,
+    "voices": null,
+    "access": "ga",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "alibaba",
+        "id": "qwen3.5-omni-plus-realtime"
+      },
+      {
+        "provider": "alibaba",
+        "id": "qwen3.5-omni-flash-realtime"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": 98.7
+    }
+  },
+  {
+    "id": "deepslate-opal",
+    "name": "Deepslate Opal",
+    "company": "deepslate",
+    "releaseDate": null,
+    "notable": false,
+    "description": "Deepslate's proprietary end-to-end speech-to-speech model, built in Germany and hosted in the EU or on-premises for GDPR-sensitive voice agents.",
+    "strengths": [
+      "0.44s time to first audio, which Deepslate cites from AA",
+      "27 languages with EU or on-premises hosting",
+      "Function tools and webhooks for live lookups"
+    ],
+    "weaknesses": [
+      "Big Bench Audio 85.0% (AA)",
+      "No published release date; v3.0 is a preview that requires access approval"
+    ],
+    "links": {
+      "official": "https://deepslate.eu/",
+      "docs": "https://docs.deepslate.eu/opal.md"
+    },
+    "notes": "Not notable: #23 on AA Big Bench Audio (85.0%). No release date on Deepslate's site or docs. The docs list opal-v2.1 (GA, platform default) and opal-v3.0-preview (on request). Price is the regular rate; a release offer of 2 ct/min was running. Deepslate's own page says the reasoning core is based on an open-weights LLM.",
+    "pricing": {
+      "perMinuteUsd": 0.1,
+      "notes": "Regular 10 ct/min (release offer 2 ct/min); pay-as-you-go includes 10 concurrent calls. Currency shown as 'ct' (EUR or USD not stated)."
+    },
+    "inputs": [
+      "audio"
+    ],
+    "toolCalling": true,
+    "languages": 27,
+    "voices": null,
+    "access": "ga",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "deepslate",
+        "id": "opal-v2.1"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": 85
+    }
+  },
+  {
+    "id": "higgs-realtime",
+    "name": "Higgs Realtime",
+    "company": "boson-ai",
+    "releaseDate": "2026-08-04",
+    "notable": false,
+    "description": "Boson AI's audio-native speech-to-speech model and hosted API for voice agents, compatible with the OpenAI Realtime API.",
+    "strengths": [
+      "Audio at $0.0023/min in and $0.014/min out",
+      "100+ languages with code-switching mid-utterance",
+      "Drop-in OpenAI Realtime API compatibility, including tool calling"
+    ],
+    "weaknesses": [
+      "Big Bench Audio 68.6% on AA, vs 94.8% in Boson's own run",
+      "Its successor, Higgs Realtime Duplex (2026-11-05), is API-waitlist only"
+    ],
+    "links": {
+      "official": "https://www.boson.ai/blog/higgs-realtime",
+      "docs": "https://docs.boson.ai/models/higgs-realtime/overview.md"
+    },
+    "notes": "Not notable: #31 on AA Big Bench Audio (68.6%). Boson's blog reports BigBench Audio v1.2 at 94.8 (vs gpt-realtime-1.5 86.0), ComplexFuncBench (Audio) 83.4 and IHBench-RQ 71.2, evaluated 2026-07-02; the BBA figure conflicts with AA. Latency about 0.70s to first audio frame (Boson). Higgs Realtime Duplex, a full-duplex omni successor announced 2026-11-05, is API-waitlist only and not an entry.",
+    "pricing": {
+      "perMinuteUsd": null,
+      "notes": "Audio input $0.0023/min, audio output $0.014/min, transcription input $0.0025/min; underlying token rates $0.75/1M input, $0.25/1M cached, $4.50/1M output. Separate in/out per-minute rates, so no single perMinuteUsd."
+    },
+    "inputs": [
+      "audio",
+      "text"
+    ],
+    "toolCalling": true,
+    "languages": 100,
+    "voices": null,
+    "access": "ga",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "boson-ai",
+        "id": "higgs-realtime"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": 68.6
+    }
+  },
+  {
+    "id": "nemotronlabs-voicechat-11b",
+    "name": "NemotronLabs VoiceChat 11B",
+    "company": "nvidia",
+    "releaseDate": "2026-08-03",
+    "notable": false,
+    "description": "NVIDIA's open-weight full-duplex speech model, an 11B hybrid Mamba/Transformer. NVIDIA calls it the first open full-duplex model that keeps the conversation going while it calls tools.",
+    "strengths": [
+      "Open weights under OpenMDW 1.1",
+      "Tool calling with spoken 'on-hold' messages while tools run",
+      "448 ms turn-taking latency on Full-Duplex-Bench 1.0 (NVIDIA)"
+    ],
+    "weaknesses": [
+      "English only",
+      "Big Bench Audio 27.0% (AA)",
+      "No hosted API: self-serve via vLLM or an NGC NIM container"
+    ],
+    "links": {
+      "official": "https://huggingface.co/nvidia/NVIDIA-NemotronLabs-VoiceChat-11B",
+      "docs": "https://catalog.ngc.nvidia.com/orgs/nim/nvidia/containers/nemotron-labs-voicechat"
+    },
+    "notes": "Not notable: #41 on AA Big Bench Audio (27.0%, listed as 'Nemotron Voicechat'). Release date conflict: the model card says 2026-08-03, the NGC container page 2026-07-21. Licence conflict: the HF card says OpenMDW 1.1, but the NGC NIM container is under the NVIDIA Software and Model Evaluation License; the HF weights licence is used here. NVIDIA reports BFCL-v3 spoken tool calling 56.1%.",
+    "pricing": {
+      "perMinuteUsd": null,
+      "notes": "Open weights; no hosted price."
+    },
+    "inputs": [
+      "audio",
+      "text"
+    ],
+    "toolCalling": true,
+    "languages": 1,
+    "voices": null,
+    "access": "ga",
+    "openWeights": true,
+    "license": {
+      "spdx": null,
+      "name": "OpenMDW 1.1",
+      "kind": "permissive",
+      "url": "https://github.com/OpenMDW/OpenMDW/blob/main/1.1/LICENSE.OpenMDW-1.1",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "huggingface",
+        "id": "nvidia/NVIDIA-NemotronLabs-VoiceChat-11B"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": 27
+    }
+  },
+  {
+    "id": "personaplex-7b",
+    "name": "PersonaPlex-7B",
+    "company": "nvidia",
+    "releaseDate": "2026-01-15",
+    "notable": false,
+    "description": "NVIDIA's open-weight 7B full-duplex speech-to-speech model, built on Kyutai's Moshi. A text prompt sets the persona and an audio prompt sets the voice.",
+    "strengths": [
+      "Persona set by text prompt, voice by audio conditioning",
+      "Listens and speaks at once, with barge-in",
+      "Open weights, ready for commercial use per NVIDIA"
+    ],
+    "weaknesses": [
+      "English only",
+      "Big Bench Audio 19.1% (AA)",
+      "Gated Hugging Face download; self-host only"
+    ],
+    "links": {
+      "official": "https://huggingface.co/nvidia/personaplex-7b-v1",
+      "docs": "https://github.com/NVIDIA/PersonaPlex"
+    },
+    "notes": "Not notable: #42 on AA Big Bench Audio (19.1%). Release date per the model card (2026-01-15); secondary coverage says 2026-01-20. Licence: NVIDIA Open Model License Agreement, with additional information under CC-BY-4.0. The GitHub repo ships pre-packaged voice prompts (NATF0-3, NATM0-3, VARF0-4, VARM0-4), but the model card gives no count, so voices is null.",
+    "pricing": {
+      "perMinuteUsd": null,
+      "notes": "Open weights; no hosted price."
+    },
+    "inputs": [
+      "audio",
+      "text"
+    ],
+    "toolCalling": false,
+    "languages": 1,
+    "voices": null,
+    "access": "ga",
+    "openWeights": true,
+    "license": {
+      "spdx": null,
+      "name": "NVIDIA Open Model License Agreement",
+      "kind": "restricted",
+      "url": "https://huggingface.co/nvidia/personaplex-7b-v1",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "huggingface",
+        "id": "nvidia/personaplex-7b-v1"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": 19.1
+    }
+  },
+  {
+    "id": "raon-speechchat-9b",
+    "name": "Raon-SpeechChat 9B",
+    "company": "krafton",
+    "releaseDate": null,
+    "notable": false,
+    "description": "KRAFTON's open-weight full-duplex speech language model for real-time English conversation, with natural turn-taking, backchannels and barge-in. It's built on the Raon-Speech base model.",
+    "strengths": [
+      "Open checkpoints, training and inference pipeline",
+      "17 built-in personas plus voice cloning from reference audio",
+      "Strongest on Full-Duplex-Bench v1.0 turn-taking and interruption tasks (KRAFTON report)"
+    ],
+    "weaknesses": [
+      "Non-commercial licence (CC BY-NC 4.0)",
+      "English only",
+      "Big Bench Audio 57.5% (AA)"
+    ],
+    "links": {
+      "official": "https://huggingface.co/KRAFTON/Raon-SpeechChat-9B",
+      "docs": "https://github.com/krafton-ai/Raon-Speech"
+    },
+    "notes": "Not notable: #37 on AA Big Bench Audio (57.5%). releaseDate is null: the HF card cites 'April 2026' with a technical report 'Published Apr 8', while the arXiv ID 2605.23912 implies May 2026. Training data: 119K hours (report) vs 116K hours (GitHub README). About 10B parameters despite the 9B name. No tool calling is mentioned, so toolCalling is null.",
+    "pricing": {
+      "perMinuteUsd": null,
+      "notes": "Open weights; no hosted price."
+    },
+    "inputs": [
+      "audio"
+    ],
+    "toolCalling": null,
+    "languages": 1,
+    "voices": null,
+    "access": "research-only",
+    "openWeights": true,
+    "license": {
+      "spdx": "CC-BY-NC-4.0",
+      "name": "Creative Commons Attribution-NonCommercial 4.0",
+      "kind": "restricted",
+      "url": "https://huggingface.co/KRAFTON/Raon-SpeechChat-9B",
+      "commercialUse": false
+    },
+    "apiIds": [
+      {
+        "provider": "huggingface",
+        "id": "KRAFTON/Raon-SpeechChat-9B"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": 57.5
+    }
+  },
+  {
+    "id": "moshi",
+    "name": "Moshi",
+    "company": "kyutai",
+    "releaseDate": "2024-09-18",
+    "notable": false,
+    "description": "Kyutai's open-weight full-duplex spoken dialogue model, which models the user's and its own speech as parallel streams. It's the base that NVIDIA's PersonaPlex builds on.",
+    "strengths": [
+      "About 200 ms practical latency on an L4 GPU (160 ms theoretical)",
+      "Weights CC-BY 4.0; runs on PyTorch, MLX and Rust/Candle",
+      "Inner-monologue text tokens alongside speech"
+    ],
+    "weaknesses": [
+      "Big Bench Audio 4.4%, last on AA",
+      "No tool access; English only",
+      "Two fixed synthetic voices (Moshiko, Moshika)"
+    ],
+    "links": {
+      "official": "https://kyutai.org/blog/2024-09-18-moshi-release",
+      "docs": "https://github.com/kyutai-labs/moshi"
+    },
+    "notes": "Not notable: last on AA Big Bench Audio (#44, 4.4%). releaseDate is the open-weights release, from the Kyutai blog URL (/blog/2024-09-18-moshi-release); Kyutai first demoed Moshi in July 2024. Code licences: Python MIT, Rust Apache. 7B temporal transformer (the HF card lists 8B BF16 tensors). Older than the other entries but still available, so drop it if age matters. The HF card says the model is trained to produce one voice per checkpoint; the two released variants give 2 voices.",
+    "pricing": {
+      "perMinuteUsd": null,
+      "notes": "Open weights; free online demo at moshi-chat.kyutai.org."
+    },
+    "inputs": [
+      "audio"
+    ],
+    "toolCalling": false,
+    "languages": 1,
+    "voices": 2,
+    "access": "ga",
+    "openWeights": true,
+    "license": {
+      "spdx": "CC-BY-4.0",
+      "name": "Creative Commons Attribution 4.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/kyutai/moshiko-pytorch-bf16",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "huggingface",
+        "id": "kyutai/moshiko-pytorch-bf16"
+      },
+      {
+        "provider": "huggingface",
+        "id": "kyutai/moshika-pytorch-bf16"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": 4.4
+    }
+  },
+  {
+    "id": "lfm3-audio-2b",
+    "name": "LFM3-Audio-2B",
+    "company": "liquid-ai",
+    "releaseDate": "2026-10-27",
+    "notable": false,
+    "description": "Liquid AI's small open-weight audio model. It takes speech or text and streams back text, speech or both, aimed at on-device voice chat.",
+    "strengths": [
+      "Time to first token as low as 50 ms (causal encoder prefills while you speak)",
+      "About 2B parameters, in BF16, GGUF, MLX and ONNX",
+      "Turns spoken requests into tool calls"
+    ],
+    "weaknesses": [
+      "Voice chat is English only, though it understands 18 languages",
+      "Not on the AA leaderboard",
+      "No inference provider hosts it"
+    ],
+    "links": {
+      "official": "https://www.liquid.ai/blog/lfm3",
+      "docs": "https://huggingface.co/LiquidAI/LFM3-Audio-2B"
+    },
+    "notes": "Not notable: not on AA. Included as a speech-in, speech-out streaming model, but the model card doesn't call it full duplex; drop it if the directory requires full-duplex realtime. languages = 18 (the header figure; the list has 19 entries because it separates British and American English). The licence record matches the LFM Open License v1.0 entry already in models.json.",
+    "pricing": {
+      "perMinuteUsd": null,
+      "notes": "Open weights; Liquid AI API console linked but no price found."
+    },
+    "inputs": [
+      "audio",
+      "text"
+    ],
+    "toolCalling": true,
+    "languages": 18,
+    "voices": null,
+    "access": "ga",
+    "openWeights": true,
+    "license": {
+      "spdx": null,
+      "name": "LFM Open License v1.0",
+      "kind": "restricted",
+      "url": "https://www.liquid.ai/lfm-license",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "huggingface",
+        "id": "LiquidAI/LFM3-Audio-2B"
+      }
+    ],
+    "scores": {
+      "aaBigBenchAudio": null
+    }
+  }
+]

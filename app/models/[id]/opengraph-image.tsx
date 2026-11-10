@@ -1,7 +1,7 @@
 import { MODEL_TYPE_LABEL } from "@/lib/types";
 import { ImageResponse } from "next/og";
 import {
-  companyColor,
+  companyHex,
   companyName,
   formatContext,
   formatCostPerTask,
@@ -58,7 +58,9 @@ export default async function Image({
   // failure, so fail rather than render an empty PNG.
   if (!model) throw new Error(`No model with id "${id}" for OG image`);
 
-  const brand = companyColor(model.company);
+  // OG cards always render on the dark observatory surface, so the raw
+  // dark-palette hex (not the theme-aware CSS variable) is the right colour.
+  const brand = companyHex(model.company);
 
   // Built only from real schema fields. Parameter counts and licences live in
   // prose inside `notes`, so deriving them would mean parsing free text and

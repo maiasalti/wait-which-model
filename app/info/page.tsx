@@ -106,7 +106,7 @@ export default function InfoPage() {
           href={methodology.costPerTask.furtherReading.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 block rounded border border-line p-3 transition-colors hover:border-ink-3 hover:bg-white/5"
+          className="mt-4 block rounded border border-line p-3 transition-colors hover:border-ink-3 hover:bg-wash/5"
         >
           <span className="mono text-[10px] uppercase tracking-wider text-ink-3">
             Further reading

@@ -28,7 +28,7 @@ export function SubscribeForm() {
         <button
           type="submit"
           disabled={status === "sending"}
-          className="rounded border border-line-strong bg-surface-2 px-3 py-1.5 text-xs font-semibold text-ink hover:bg-white/5 disabled:opacity-60"
+          className="rounded border border-line-strong bg-surface-2 px-3 py-1.5 text-xs font-semibold text-ink hover:bg-wash/5 disabled:opacity-60"
         >
           {status === "sending" ? "Adding…" : "Notify me"}
         </button>
