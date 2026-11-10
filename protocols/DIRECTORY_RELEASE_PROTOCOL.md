@@ -1,8 +1,8 @@
 ---
 type: Protocol
 title: Directory Release Protocol
-description: Add and maintain entries in the six non-model directories (image, video and world models, harnesses, agents,
-  Frontier Features) from primary sources only, with a rule-based Notable flag and a gap ledger so re-runs skip dead ends.
+description: Add and maintain entries in the seven non-model directories (image, video, world and voice models, harnesses,
+  agents, Frontier Features) from primary sources only, with a rule-based Notable flag and a gap ledger so re-runs skip dead ends.
 tags:
 - protocols
 generated:
@@ -14,7 +14,7 @@ generated:
 
 **Trigger:** Maia says "execute directory release protocol for <directory>", or the daily sweep's
 directory job for the day (see `DAILY_SWEEP_PROTOCOL.md`). `<directory>` is one of
-`image-models`, `video-models`, `world-models`, `harnesses`, `agents`, `features`. Each has its
+`image-models`, `video-models`, `world-models`, `voice-models`, `harnesses`, `agents`, `features`. Each has its
 own file, `data/<directory>.json`.
 
 **Not in scope:** language models (that's `NEW_MODEL_RELEASE_PROTOCOL.md`). Nothing here feeds
@@ -34,7 +34,7 @@ frontier status, reigns, Compare, the Cost Calculator, Which Model or subscriber
    with `notable` true only if it has a Notable entry; a notable company needs a palette colour
    that passes `node scripts/palette-check.js`, everyone else gets `"color": null` and renders grey.
 5. **News refs.** When `news.json` covers an entry, tag the item with
-   `refs: [{ "type": "<image-model|video-model|world-model|harness|agent|feature>", "id": "…" }]`.
+   `refs: [{ "type": "<image-model|video-model|world-model|voice-model|harness|agent|feature>", "id": "…" }]`.
    `modelIds` stays models-only.
 6. **Validate:** `node scripts/integrity.js`, `npm test`, `npm run build`.
 
@@ -50,6 +50,7 @@ An entry is `notable: true` when, at the time it's checked, **either**:
 | image-models | Artificial Analysis text-to-image arena **or** LMArena text-to-image | — |
 | video-models | Artificial Analysis text-to-video arena **or** LMArena video | — |
 | world-models | none exists yet | publicly usable (`access` `ga` or `beta`) counts as clause 1 |
+| voice-models | Artificial Analysis speech-to-speech: the Speech to Speech Index **or** the Big Bench Audio column | — |
 | harnesses | Terminal-Bench (tbench.ai), the version it shows as primary | — |
 | agents | none shared | a vendor-published result that placed top-3 on an official public leaderboard (SWE-bench, GAIA, BrowseComp, OSWorld) at publication |
 | features | n/a: every entry is a frontier lab's, so there is no `notable` field | — |
@@ -85,6 +86,13 @@ Types are in `lib/types.ts`; this is what to research for each.
   `simulation-video`), `maxSessionSec`, `maxResolution`, `fps`, `access` (`ga`, `beta`,
   `waitlist`, `research-preview`, `research-only`), `openWeights`, `license`, `apiIds`,
   `pricing.notes`.
+- **voice-models** (speech-to-speech: live audio in, spoken audio out, e.g. Grok Voice, OpenAI's
+  realtime models, Gemini native audio; not plain text-to-speech or transcription):
+  `pricing.perMinuteUsd` (only when the developer publishes a per-minute price; otherwise `null`
+  with the per-token audio rates in `pricing.notes`), `inputs[]` (`audio`, `text`, `image`,
+  `video`), `toolCalling`, `languages`, `voices`, `access` (`ga`, `beta`, `waitlist`,
+  `research-preview`, `research-only`), `openWeights`, `license`, `apiIds`,
+  `scores.aaBigBenchAudio`.
 - **harnesses** (wraps a model the *user* picks): `interface[]` (`cli`, `ide`, `desktop`, `web`),
   `openSource`, `license`, `repo`, `supportedModels` (`"any"`, `"vendor"`, or models.json ids),
   `pricing.model` (`free`, `subscription`, `byo-key`, `usage`), `scores[]` of

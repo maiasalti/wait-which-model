@@ -1150,16 +1150,11 @@ Stats-filler sweep on 2026-10-13 (re-check of "re-check" rows from 2026-09-22 �
 | kimi-k3-1-pro | gdpvalAA | 2026-10-26 | AA rates it 1846 on GDPval-AA v2.1 (via VentureBeat / Handy AI) — a different scale from the tracked v2; kept in notes |
 | kimi-k3-1-pro | maxOutput / knowledgeCutoff | 2026-10-26 | not stated in Moonshot's blog, Kimi Code docs or AA's page; platform.kimi.ai pricing table didn't render on fetch |
 | kimi-k3-1-pro | mmluPro / aime | 2026-10-26 | retired benchmarks; not in Moonshot's table |
-| dessa | all benchmarks / pricing / contextWindow / maxOutput / costPerTask / speed | 2026-10-26 | voice model, research preview: block.xyz/dessa publishes no benchmarks, size, latency figure or price; no API |
 | gpt-6-1-terra | gpqaDiamond / sweBench / sweBenchPro / hle / gdpvalAA | 2026-10-27 | not in OpenAI's launch charts (Agents' Last Exam, MMMU-Pro, OSWorld 2.1, Terminal-Bench 4.0, Terminal-Bench Science 0.1 instead) or the system-card addendum; AA's page names HLE/GPQA/GDPval but shows no values for this model a day after launch — re-check |
 | gpt-6-1-terra | terminalBench | 2026-10-27 | only Terminal-Bench 4.0 exists (OpenAI 50.3% max), not the tracked 2.1; kept in notes |
 | gpt-6-1-terra | lmarenaElo / arcAgi2 | 2026-10-27 | no arena.ai listing or ARC Prize results page found a day after launch — re-check |
 | gpt-6-1-terra | speed | 2026-10-27 | Artificial Analysis lists output speed as unknown on both the medium and max pages at launch — re-check |
 | gpt-6-1-terra | mmluPro / aime | 2026-10-27 | retired benchmarks; not in OpenAI's launch material |
-| grok-voice-3-0 | gpqaDiamond / sweBench / sweBenchPro / terminalBench / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-10-20 | not applicable, not merely unpublished: a speech-to-speech model; xAI's launch (x.ai/news/grok-voice-3) reports only audio suites (AA Speech-to-Speech Index, Big Bench Audio, Speech Agent Arena Elo 1070, Full Duplex Bench, τ-Voice), and the Speech Agent Arena Elo is not the LMArena text Elo |
-| grok-voice-3-0 | pricing | 2026-10-20 | not per-token: docs.x.ai/developers/pricing lists Speech to Speech (grok-voice-3.0) at $0.08/min ($4.80/hr) plus $0.004 per text input; no per-MTok rate exists |
-| grok-voice-3-0 | contextWindow / maxOutput / knowledgeCutoff | 2026-10-20 | not stated on docs.x.ai (models page, voice overview, speech-to-speech guide, rate limits; S2S is limited by concurrent sessions only); the 500k context and May 2026 cutoff in search results belong to text models Grok 4.6/4.7 |
-| grok-voice-3-0 | costPerTask | 2026-10-20 | not applicable: no Artificial Analysis Intelligence Index run for a speech model; xAI's "cost to complete a task" claim refers to AA's Big Bench Audio, a different measure |
 | d1-3b | gpqaDiamond / sweBench / sweBenchPro / terminalBench / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-10-20 | not applicable, not merely unpublished: typed-decision model that cannot generate text (same as clef / jev); Liquid reports only its own decision-format dataset means |
 | d1-omni-600m | gpqaDiamond / sweBench / sweBenchPro / terminalBench / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-10-20 | same as d1-3b |
 | helixworld | gpqaDiamond / sweBench / sweBenchPro / terminalBench / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-10-20 | not applicable: interactive world model (video + audio generator); Noiz reports only HelixBench / WBench |
@@ -1247,3 +1242,8 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | kimi-k3-1-pro | sweBench / sweBenchPro / arcAgi2 / lmarenaElo | 2026-11-06 | re-checked on the open-weights HF model card (huggingface.co/moonshotai/Kimi-K3.1-Pro): it reports SWE Marathon v1.1 and DeepSWE v1.1 instead, with no SWE-bench Verified, SWE-bench Pro, ARC-AGI-2 or arena figure |
 | kimi-k3-1-pro | terminalBench / gdpvalAA | 2026-11-06 | HF card confirms Terminal-Bench 4.0 65.7 (Claude Code harness) and GDPval-AA v2.1 1846, neither of them the tracked version; BrowseComp 92.1 is untracked |
 | kimi-k3-1-pro | maxOutput / knowledgeCutoff | 2026-11-06 | HF model card, platform.kimi.ai introduction and models pages state neither; the card’s max_tokens=4096 is only a code example |
+| claude-fable-5-2 | gpqaDiamond / sweBench / aime / mmluPro | 2026-11-10 | not in the Fable 5.2 / Mythos 5.2 system card or launch post; Artificial Analysis' model page shows no figure |
+| claude-fable-5-2 | terminalBench | 2026-11-10 | system card reports Terminal-Bench 4.0 (67.6%) and Terminal-Bench-Science 0.1 only, not 2.1; AA's page names 4.0 as its index component with no score |
+| claude-fable-5-2 | gdpvalAA | 2026-11-10 | only GDPval-AA v2.1 (1831) reported, a different scale from v2 |
+| claude-fable-5-2 | lmarenaElo | 2026-11-10 | not yet on the arena.ai text leaderboard one day after release; re-check |
+| claude-mythos-5-2 | all benchmarks / costPerTask / speed | 2026-11-10 | system card reports Mythos 5.2 only on untracked suites (CVE Rediscovery, CyScenarioBench, De Novo Binder Design); access-restricted, so no AA or arena listing |

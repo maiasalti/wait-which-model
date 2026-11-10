@@ -5,17 +5,18 @@
  */
 
 // Each directory is scanned once a week (spec 2026-10-09). World models joined
-// later and share Wednesday, the one weekday with no stats or news job.
+// later and share Wednesday, the one weekday with no stats or news job; voice
+// models joined after that and share Friday with features.
 const ROTATION = {
   1: ["image-models"],
   2: ["video-models"],
   3: ["agents", "world-models"],
   4: ["harnesses"],
-  5: ["features"],
+  5: ["features", "voice-models"],
 };
 
 // A directory's job switches on in the stage that ships its protocol and data.
-const ENABLED_DIRECTORY_JOBS = ["image-models", "video-models", "world-models", "harnesses", "agents", "features"];
+const ENABLED_DIRECTORY_JOBS = ["image-models", "video-models", "world-models", "harnesses", "agents", "features", "voice-models"];
 
 function jobsFor(dow, enabled) {
   if (dow < 1 || dow > 5) return [];

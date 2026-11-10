@@ -7,6 +7,7 @@ import reignsJson from "@/data/frontier-reigns.json";
 import imageModelsJson from "@/data/image-models.json";
 import videoModelsJson from "@/data/video-models.json";
 import worldModelsJson from "@/data/world-models.json";
+import voiceModelsJson from "@/data/voice-models.json";
 import harnessesJson from "@/data/harnesses.json";
 import agentsJson from "@/data/agents.json";
 import featuresJson from "@/data/features.json";
@@ -45,6 +46,7 @@ export const entries: { [K in EntryKind]: DirectoryEntries[K][] } = {
   "image-models": sortEntries(imageModelsJson as unknown as DirectoryEntries["image-models"][], "newest"),
   "video-models": sortEntries(videoModelsJson as unknown as DirectoryEntries["video-models"][], "newest"),
   "world-models": sortEntries(worldModelsJson as unknown as DirectoryEntries["world-models"][], "newest"),
+  "voice-models": sortEntries(voiceModelsJson as unknown as DirectoryEntries["voice-models"][], "newest"),
   harnesses: sortEntries(harnessesJson as unknown as DirectoryEntries["harnesses"][], "newest"),
   agents: sortEntries(agentsJson as unknown as DirectoryEntries["agents"][], "newest"),
   features: sortEntries(featuresJson as unknown as DirectoryEntries["features"][], "newest"),
@@ -60,6 +62,7 @@ export const directoryCounts: Record<DirectoryKey, number> = {
   "image-models": entries["image-models"].length,
   "video-models": entries["video-models"].length,
   "world-models": entries["world-models"].length,
+  "voice-models": entries["voice-models"].length,
   harnesses: entries.harnesses.length,
   agents: entries.agents.length,
   features: entries.features.length,
@@ -70,6 +73,7 @@ export const REF_TYPE: Record<EntryKind, NewsRefType> = {
   "image-models": "image-model",
   "video-models": "video-model",
   "world-models": "world-model",
+  "voice-models": "voice-model",
   harnesses: "harness",
   agents: "agent",
   features: "feature",

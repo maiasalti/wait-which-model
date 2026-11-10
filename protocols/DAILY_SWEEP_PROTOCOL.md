@@ -33,7 +33,7 @@ fire late on Monday and collide with Monday's own sweep.
 | Tue | health · models · **stats** | video-models |
 | Wed | health · models | agents · world-models |
 | Thu | health · models · **stats** | harnesses |
-| Fri | health · models | features |
+| Fri | health · models | features · voice-models |
 
 Job selection lives in `scripts/lib/sweep-jobs.js` (tested). A directory job runs only once its
 key is listed in `ENABLED_DIRECTORY_JOBS` there, which the stage that ships its protocol and data

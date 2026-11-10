@@ -748,5 +748,55 @@
     "color": "#648026",
     "notable": true,
     "order": 72
+  },
+  {
+    "id": "phonic",
+    "name": "Phonic",
+    "country": "United States",
+    "founded": null,
+    "website": "https://phonic.ai",
+    "color": "#C2508F",
+    "notable": true,
+    "order": 76
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "country": "United States",
+    "founded": 2022,
+    "website": "https://elevenlabs.io",
+    "color": "#A38E22",
+    "notable": true,
+    "order": 77
+  },
+  {
+    "id": "deepslate",
+    "name": "Deepslate",
+    "country": "Germany",
+    "founded": null,
+    "website": "https://deepslate.eu",
+    "color": null,
+    "notable": false,
+    "order": 78
+  },
+  {
+    "id": "boson-ai",
+    "name": "Boson AI",
+    "country": null,
+    "founded": null,
+    "website": "https://www.boson.ai",
+    "color": null,
+    "notable": false,
+    "order": 79
+  },
+  {
+    "id": "kyutai",
+    "name": "Kyutai",
+    "country": "France",
+    "founded": 2023,
+    "website": "https://kyutai.org",
+    "color": null,
+    "notable": false,
+    "order": 80
   }
 ]

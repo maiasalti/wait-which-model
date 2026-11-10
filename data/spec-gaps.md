@@ -331,8 +331,6 @@ kimi-k3-1-pro · license · 2026-10-26 · Weights promised "by Nov 4"; no Huggin
 kimi-k3-1-pro · speed (timeToFirstTokenSec, effort) · 2026-10-26 · AA's page gives 52.2 tok/s on the reasoning variant but no effort label, and its 2.97s TTFT sits in the FAQ without saying whether it's time to first answer token. Left null.
 kimi-k3-1-pro · apiIds (aws-bedrock / google-vertex) · 2026-10-26 · Not checked; launch is Kimi API only. The moonshot id kimi-k3.1-pro comes from Moonshot's blog.
 kimi-k3-1-pro · retirementDate · 2026-10-26 · Brand-new release; no lifecycle notice. Left null.
-dessa · apiIds / license / predecessorId / retirementDate · 2026-10-26 · Research preview at block.xyz/dessa with no API, weights, licence or lifecycle info; it's Block's first model. Left null/[].
-grok-voice-3-0 · speed · 2026-10-20 · Not applicable: Artificial Analysis measures speech models by Time to First Audio on Big Bench Audio (artificialanalysis.ai/speech-to-speech), not output tokens/s or text TTFT; the speech leaderboard excerpt shows Grok Voice 3.0's conversational-dynamics score (97.0%) and Arena Elo (1070) but no TTFA value, and Kingy.ai's 0.81s is a secondary relay. Left null.
 gemini-2-5-pro · speed · 2026-10-20 · AA model-page excerpt gives only rounded figures ("about 116 t/s", "about 25.7s"); comparison snapshots show 119–154 t/s and 18–22s. No exact model-page pair confirmed by a second search. Left null.
 o3 · speed · 2026-10-20 · AA model-page excerpt gives only rounded figures ("about 136 t/s", "about 8.6s"); snapshots 151–152 t/s and ~5.9s. No exact pair confirmed. Left null.
 soofi-s-30b-a3b · license · 2026-10-20 · Re-checked: the Soofi-S-Base HF card still calls it a closed-beta preview to be "released under a permissive license"; the preview GGUF/quant repos are "Other" with the licence text marked TODO; only the Pretraining-Tech-Report Space metadata names Apache-2.0, which is a Space, not the model repo. Left null.
@@ -402,3 +400,7 @@ gpt-6-cyber · speed · 2026-11-06 · Not measured by Artificial Analysis; Daybr
 gpt-6-cyber · apiIds (aws-bedrock) · 2026-11-06 · No Bedrock model card or AWS announcement found for GPT-6 Cyber (only GPT-5.6 Cyber and GPT-6 Astra are on Bedrock). Only the OpenAI id recorded.
 gpt-6-cyber · retirementDate · 2026-11-06 · No lifecycle notice. Left null.
 kimi-k3-1-pro · predecessorId · 2026-11-06 · Re-checked after the weights release: the HF model card and kimi.ai blog still call it a post-trained K3 and never say it replaces K3. Left null.
+claude-fable-5-2 · predecessorId · 2026-11-10 · Launch post, model page and migration guide describe migrating from Fable 5.1 but never say 5.2 replaces it; Fable 5.1 is listed as a legacy model still available. Left null.
+claude-fable-5-2 · retirementDate · 2026-11-10 · Model page: "Not sooner than November 9, 2027", a floor. Left null.
+claude-mythos-5-2 · predecessorId · 2026-11-10 · Migration path from Mythos 5.1 only; no replacement statement, and Mythos 5.1 isn't tracked. Left null.
+claude-mythos-5-2 · retirementDate · 2026-11-10 · Model page: "Not sooner than November 9, 2027", a floor. Left null.
