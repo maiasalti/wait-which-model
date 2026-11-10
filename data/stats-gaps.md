@@ -1250,3 +1250,8 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | inkling-2-small | gpqaDiamond / sweBench / arcAgi2 / lmarenaElo / mmluPro / aime | 2026-11-09 | not on the lab's launch page (thinkingmachines.ai/news/inkling-2-small) or Artificial Analysis' model page; no arena listing |
 | inkling-2-small | sweBenchPro / hle / terminalBench / gdpvalAA | 2026-11-09 | lab reports only untracked variants: SWE-bench Pro v2 Hard 86.3%, HLE-Diamond 28.7%, Terminal Bench Science v0.1 5.7%, GDPval-AA v2.1 1630 |
 | inkling-2-small | maxOutput | 2026-11-09 | not stated on the launch page, Tinker pricing page or AA |
+| claude-fable-5-2 | gpqaDiamond / sweBench / aime / mmluPro | 2026-11-10 | not in the Fable 5.2 / Mythos 5.2 system card or launch post; Artificial Analysis' model page shows no figure |
+| claude-fable-5-2 | terminalBench | 2026-11-10 | system card reports Terminal-Bench 4.0 (67.6%) and Terminal-Bench-Science 0.1 only, not 2.1; AA's page names 4.0 as its index component with no score |
+| claude-fable-5-2 | gdpvalAA | 2026-11-10 | only GDPval-AA v2.1 (1831) reported, a different scale from v2 |
+| claude-fable-5-2 | lmarenaElo | 2026-11-10 | not yet on the arena.ai text leaderboard one day after release; re-check |
+| claude-mythos-5-2 | all benchmarks / costPerTask / speed | 2026-11-10 | system card reports Mythos 5.2 only on untracked suites (CVE Rediscovery, CyScenarioBench, De Novo Binder Design); access-restricted, so no AA or arena listing |

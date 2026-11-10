@@ -10177,5 +10177,142 @@
       "Picks the wrong tool more often in codebases with many skills, and drops audio input that Inkling Small had"
     ],
     "notes": "Thinking Machines Lab's first second-generation model, a 594B-total/17B-active MoE announced 2026-11-05 (thinkingmachines.ai/news/inkling-2-small). Available on Tinker for serverless inference, sampling and fine-tuning; the lab says it intends to publish full weights under Apache 2.0 'next week' pending safety evaluations, so openWeights and license stay false/null until the weights are actually out. Pricing is Tinker's serverless inference rate ($0.30 input, $0.03 cached, $1.00 output per MTok at 256K context); Tinker training is $1.50/MTok at 64K and $3.00 at 256K. contextWindow 1M is Artificial Analysis' figure and matches the 1M trajectory limit the lab used for evals; Tinker serves 256K (serverless) and 64K or 256K (training). knowledgeCutoff is the '2026-06' data cutoff on the lab's pretraining chart. The lab reports none of the tracked benchmarks: no GPQA Diamond, SWE-bench Verified, ARC-AGI-2 or LMArena figure; its SWE-bench Pro is the v2 Hard split (86.3%), HLE is HLE-Diamond (28.7%), Terminal-Bench is only Terminal Bench Science v0.1 (5.7%), and GDPval-AA is v2.1 (1630), a different scale from the v2 this key records. Also reported at effort 0.99 (xhigh): DeepSWE v1.1 72.1%, FrontierCode v2.0 25.4%, Vibe Code Bench v1.1 81.6%, AA-LCR v1.1 83.3%, MMMU Pro 81.6%. Artificial Analysis scores it 31 on Intelligence Index v5.0.1 (the reasoning variant, no effort label) at $1.18 per task, 157 output tokens/s and 29.08 s to first answer token. predecessorId is null: the lab calls it its 'second model generation' but names no model it replaces."
+  },
+  {
+    "id": "claude-fable-5-2",
+    "name": "Claude Fable 5.2",
+    "company": "anthropic",
+    "releaseDate": "2026-11-09",
+    "status": "frontier",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 8,
+      "outputPerMTok": 40
+    },
+    "openWeights": false,
+    "knowledgeCutoff": "2026-06",
+    "license": null,
+    "retirementDate": null,
+    "predecessorId": null,
+    "costPerTask": {
+      "usd": 26.54,
+      "effort": "max"
+    },
+    "availability": "general",
+    "speed": {
+      "outputTokensPerSec": 103,
+      "timeToFirstTokenSec": 231.55,
+      "effort": "max"
+    },
+    "apiIds": [
+      {
+        "provider": "anthropic",
+        "id": "claude-fable-5-2"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "anthropic.claude-fable-5-2"
+      },
+      {
+        "provider": "google-vertex",
+        "id": "claude-fable-5-2"
+      }
+    ],
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": 93,
+      "terminalBench": null,
+      "aime": null,
+      "hle": 73.2,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": 93.8
+    },
+    "strengths": [
+      "SWE-bench Pro jumps to 93.0% from Fable 5.1's 81.2%, ahead of Opus 5.5's 89.9% in Anthropic's system card",
+      "Completed 41.3% of Remote Labor Index freelance projects at a professional standard, about double Opus 5.5's 21.3%",
+      "20% cheaper than Fable 5.1 at $8/$40 per MTok, with outputs Anthropic says arrive up to 30% faster",
+      "Highest ARC-AGI-2 score ARC Prize has verified, 93.8% at xhigh effort"
+    ],
+    "weaknesses": [
+      "Trails Opus 5.5 on the GDPval-AA and AA-Briefcase Elo ratings, at twice Opus 5.5's price",
+      "At max effort Artificial Analysis measured almost four minutes before the first answer token and $26.54 per index task",
+      "Thinking is always on, forced tool_choice returns a 400 error, and it isn't offered under zero data retention without Anthropic's approval"
+    ],
+    "notes": "Same model as the restricted Claude Mythos 5.2 (tracked separately), which shares its specs and pricing and differs only in safeguards. Specs, ids and pricing are from Anthropic's model page (platform.claude.com/docs/en/models/fable-5-2/overview): 1M context, 128K synchronous output, reliable knowledge cutoff June 2026, default effort high, cache reads $0.20/MTok (2.5% of input), 5-minute cache writes $10, 1-hour $16, batch 50% off; fast mode is $16/$80 for up to 2.5x faster output. Bedrock id anthropic.claude-fable-5-2; Google Cloud and Microsoft Foundry use claude-fable-5-2. Retirement is 'not sooner than November 9, 2027', a floor rather than a scheduled date. Benchmarks from the Fable 5.2 / Mythos 5.2 system card (Table 8.1.A, max effort, safeguards on, five-trial average): SWE-bench Pro 93.0%, HLE 73.2% no tools / 74.2% with tools, plus untracked FrontierCode 2.0 49.1% (xhigh), FrontierSWE v2 69.9%, SWE-bench Multilingual 96.6%, OSWorld 2.1 offline partial 89.3%, Remote Labor Index 41.3%, AutomationBench 51.4%, Terminal-Bench 4.0 67.6% and Terminal-Bench-Science 0.1 74.6%. GDPval-AA is reported only as v2.1 (1831), a different scale from the v2 this key records, so gdpvalAA stays null. ARC-AGI-2 93.8% is ARC Prize-verified at xhigh effort (arcprize.org/results/anthropic-claude-fable-5-2, 2026-11-09; max 92.5%, high 90.4%, medium 89.6%, low 86.7%). Cost per task and speed are Artificial Analysis' max-effort variant, the only one it lists: Intelligence Index 65, $26.54 per task, 103 tok/s, 231.55 s to first answer token, 275M output tokens across the index. predecessorId is null: Anthropic's launch post and migration guide describe moving from Fable 5.1 but never say 5.2 replaces it, and Fable 5.1 stays available as a legacy model. Anthropic's launch post says that in prerelease testing the model helped complete otherwise-infeasible software migrations, designed three working electronic devices, solved two open problems in black-hole physics and formalised Fermat's Last Theorem in 30 hours (a 1,000-agent team on an earlier snapshot, per the system card). The launch table also gives RoboDojo Sim 64.9% (Fable 5.1 27.6%), WANDR relaxed 82.1%, Chartography no tools 73.4%, AA-Briefcase v1.1 66.1% rubric / 1785 Elo (Opus 5.5 leads at 1800), and AutomationBench 51.4%, where Gemini 4 Carbon leads at 53.9%."
+  },
+  {
+    "id": "claude-mythos-5-2",
+    "name": "Claude Mythos 5.2",
+    "company": "anthropic",
+    "releaseDate": "2026-11-09",
+    "status": "frontier",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": 8,
+      "outputPerMTok": 40
+    },
+    "openWeights": false,
+    "knowledgeCutoff": "2026-06",
+    "license": null,
+    "retirementDate": null,
+    "predecessorId": null,
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "availability": "restricted",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "apiIds": [
+      {
+        "provider": "anthropic",
+        "id": "claude-mythos-5-2"
+      },
+      {
+        "provider": "aws-bedrock",
+        "id": "anthropic.claude-mythos-5-2"
+      },
+      {
+        "provider": "google-vertex",
+        "id": "claude-mythos-5-2"
+      }
+    ],
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Rediscovered 89.6% of known CVEs in Anthropic's evaluation, up from Mythos 5.1's 78.3%",
+      "Completed 76.3% of CyScenarioBench challenges, the strongest result Anthropic reports for any model",
+      "Top score on Anthropic's de novo protein binder design task at 85.1%",
+      "Same capabilities and $8/$40 pricing as Fable 5.2 without Fable's cyber and biology safeguards"
+    ],
+    "weaknesses": [
+      "Only for organisations verified through Anthropic's Cyber or Life Sciences Verification Programs, plus Claude Enterprise via Claude Security",
+      "Refused 82.8% of malicious requests in the system card's misuse test, down from Mythos 5.1's 88.5%"
+    ],
+    "notes": "Same model as Claude Fable 5.2 with fewer safeguards. Anthropic's model page (platform.claude.com/docs/en/models/mythos-5-2/overview) says it is available only to organisations verified through its verification programs, with the same specs and pricing as Fable 5.2 (1M context, 128K output, $8/$40, cache reads $0.20, June 2026 knowledge cutoff); the launch post adds that Claude Enterprise customers can use it through Claude Security without verification, and Mythos fast mode is limited to verified organisations. Ids: claude-mythos-5-2 (Claude API, Google Cloud, Foundry), anthropic.claude-mythos-5-2 (Bedrock). Benchmarks stay null: the system card reports Mythos 5.2 only on untracked suites (CVE Rediscovery 89.6%, CyScenarioBench 76.3%, De Novo Binder Design 85.1%, all without safeguards) and gives Fable 5.2's tracked scores under Fable's name, so they aren't copied across. Retirement is 'not sooner than November 9, 2027', a floor. predecessorId is null: Anthropic gives a migration path from Mythos 5.1 but no replacement statement, and Mythos 5.1 isn't tracked. The launch table gives Mythos 5.2 75.3% on Terminal-Bench-Science 0.1 (Fable 5.2 74.6%), also untracked."
   }
 ]
