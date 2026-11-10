@@ -402,3 +402,7 @@ gpt-6-cyber · speed · 2026-11-06 · Not measured by Artificial Analysis; Daybr
 gpt-6-cyber · apiIds (aws-bedrock) · 2026-11-06 · No Bedrock model card or AWS announcement found for GPT-6 Cyber (only GPT-5.6 Cyber and GPT-6 Astra are on Bedrock). Only the OpenAI id recorded.
 gpt-6-cyber · retirementDate · 2026-11-06 · No lifecycle notice. Left null.
 kimi-k3-1-pro · predecessorId · 2026-11-06 · Re-checked after the weights release: the HF model card and kimi.ai blog still call it a post-trained K3 and never say it replaces K3. Left null.
+claude-fable-5-2 · predecessorId · 2026-11-10 · Launch post, model page and migration guide describe migrating from Fable 5.1 but never say 5.2 replaces it; Fable 5.1 is listed as a legacy model still available. Left null.
+claude-fable-5-2 · retirementDate · 2026-11-10 · Model page: "Not sooner than November 9, 2027", a floor. Left null.
+claude-mythos-5-2 · predecessorId · 2026-11-10 · Migration path from Mythos 5.1 only; no replacement statement, and Mythos 5.1 isn't tracked. Left null.
+claude-mythos-5-2 · retirementDate · 2026-11-10 · Model page: "Not sooner than November 9, 2027", a floor. Left null.
