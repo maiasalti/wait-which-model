@@ -41,6 +41,8 @@ heygen-video-1 · pricing.perSecondUsd · 2026-10-27 · heygen.com model page, b
 heygen-video-1 · scores.lmarenaVideoElo · 2026-10-27 · LMArena text-to-video board (Sep 21) and changelog: not listed
 flux-3-max · releaseDate · 2026-10-27 · fal.ai/flux-3-max, fal model pages, bfl.ai/models/flux-3-video, docs.bfl.ai release notes: no day given; AA lists 'Oct 2026'
 flux-3-max · scores.lmarenaVideoElo · 2026-10-27 · LMArena text-to-video board (Sep 21) and changelog: not listed
+gemini-omni-flash-1-2 · scores.aaVideoArenaElo · 2026-11-09 · AA text-to-video and image-to-video boards: not listed yet (newest Omni entry is 1.1 Flash)
+gemini-omni-flash-1-2 · scores.lmarenaVideoElo · 2026-11-09 · LMArena video board: not listed yet
 
 ## world-models
 

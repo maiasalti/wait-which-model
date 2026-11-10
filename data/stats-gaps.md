@@ -1242,6 +1242,9 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | kimi-k3-1-pro | sweBench / sweBenchPro / arcAgi2 / lmarenaElo | 2026-11-06 | re-checked on the open-weights HF model card (huggingface.co/moonshotai/Kimi-K3.1-Pro): it reports SWE Marathon v1.1 and DeepSWE v1.1 instead, with no SWE-bench Verified, SWE-bench Pro, ARC-AGI-2 or arena figure |
 | kimi-k3-1-pro | terminalBench / gdpvalAA | 2026-11-06 | HF card confirms Terminal-Bench 4.0 65.7 (Claude Code harness) and GDPval-AA v2.1 1846, neither of them the tracked version; BrowseComp 92.1 is untracked |
 | kimi-k3-1-pro | maxOutput / knowledgeCutoff | 2026-11-06 | HF model card, platform.kimi.ai introduction and models pages state neither; the card’s max_tokens=4096 is only a code example |
+| inkling-2-small | gpqaDiamond / sweBench / arcAgi2 / lmarenaElo / mmluPro / aime | 2026-11-09 | not on the lab's launch page (thinkingmachines.ai/news/inkling-2-small) or Artificial Analysis' model page; no arena listing |
+| inkling-2-small | sweBenchPro / hle / terminalBench / gdpvalAA | 2026-11-09 | lab reports only untracked variants: SWE-bench Pro v2 Hard 86.3%, HLE-Diamond 28.7%, Terminal Bench Science v0.1 5.7%, GDPval-AA v2.1 1630 |
+| inkling-2-small | maxOutput | 2026-11-09 | not stated on the launch page, Tinker pricing page or AA |
 | claude-fable-5-2 | gpqaDiamond / sweBench / aime / mmluPro | 2026-11-10 | not in the Fable 5.2 / Mythos 5.2 system card or launch post; Artificial Analysis' model page shows no figure |
 | claude-fable-5-2 | terminalBench | 2026-11-10 | system card reports Terminal-Bench 4.0 (67.6%) and Terminal-Bench-Science 0.1 only, not 2.1; AA's page names 4.0 as its index component with no score |
 | claude-fable-5-2 | gdpvalAA | 2026-11-10 | only GDPval-AA v2.1 (1831) reported, a different scale from v2 |
