@@ -58,7 +58,7 @@ function NavGroup({
             onClick={() => {
               if (detailsRef.current) detailsRef.current.open = false;
             }}
-            className="block px-3 py-2 text-sm text-ink-2 hover:bg-white/5 hover:text-ink"
+            className="block px-3 py-2 text-sm text-ink-2 hover:bg-wash/5 hover:text-ink"
           >
             {t.label}
           </Link>

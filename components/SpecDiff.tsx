@@ -10,14 +10,14 @@ import { CompanyLogo } from "./CompanyLogo";
 const MAX_OTHERS = 4;
 
 const VERDICT_CLASS: Record<string, string> = {
-  better: "text-emerald-400",
-  worse: "text-rose-400",
+  better: "text-good",
+  worse: "text-bad",
   same: "text-ink-3",
   na: "text-ink-3",
   // Reserved for the baseline when it beats every model it is compared with.
   // Deliberately not green: green answers "how does this compare to the
   // baseline", blue answers "the baseline won".
-  best: "text-sky-400",
+  best: "text-best",
 };
 
 export function SpecDiff({
@@ -302,7 +302,7 @@ export function SpecDiff({
                             tiny symbol reads as broken rather than as a
                             deliberate refusal to compare. */}
                         {!isBaseline && !ok && f.effortSensitive && bv != null && mv != null && (
-                          <span className="mt-0.5 block text-[10px] leading-tight text-amber-400/70">
+                          <span className="mt-0.5 block text-[10px] leading-tight text-warn/70">
                             different effort — not comparable
                           </span>
                         )}
@@ -319,16 +319,16 @@ export function SpecDiff({
               being the smaller number. Say so rather than making people infer it. */}
           <p className="mono mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-[10px] text-ink-3">
             <span>
-              <span className="text-emerald-400">green</span> better than baseline
+              <span className="text-good">green</span> better than baseline
             </span>
             <span>
-              <span className="text-rose-400">red</span> worse
+              <span className="text-bad">red</span> worse
             </span>
             <span>
-              <span className="text-sky-400">blue</span> baseline beat them all
+              <span className="text-best">blue</span> baseline beat them all
             </span>
             <span>better, not bigger — a cheaper or faster figure is green</span>
-            <span className="text-amber-400/70">
+            <span className="text-warn/70">
               uncoloured + noted = measured at different efforts, not comparable
             </span>
           </p>

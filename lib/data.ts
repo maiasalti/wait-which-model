@@ -24,7 +24,8 @@ import type {
 } from "./types";
 import type { Reign } from "./reigns";
 import { companiesWithEntries, sortEntries, type DirectoryKey } from "./directory";
-import { resolveColor } from "./format";
+import { NEUTRAL_COMPANY_COLOR, resolveColor } from "./format";
+import { lightPalette, lightVariant } from "./palette";
 
 export const models = (modelsJson as Model[]).slice().sort(
   (a, b) => b.releaseDate.localeCompare(a.releaseDate)
@@ -97,8 +98,36 @@ export const companyById = new Map(companies.map((c) => [c.id, c]));
 export const modelById = new Map(models.map((m) => [m.id, m]));
 export const benchmarkByKey = new Map(benchmarks.map((b) => [b.key, b]));
 
+/** A company's colour as a CSS value for browser-rendered UI: a custom
+ *  property (`var(--co-<id>)`) that resolves to the dark-tuned palette hex, or
+ *  in light mode to its derived light variant (see `companyPaletteCss`).
+ *  Companies without a palette slot get the neutral grey token. Use
+ *  `color-mix()` rather than string concatenation for tints. For contexts that
+ *  can't resolve CSS variables (OG images, canvas exports) use `companyHex`. */
 export function companyColor(companyId: string): string {
+  return companyById.get(companyId)?.color ? `var(--co-${companyId})` : "var(--co-neutral)";
+}
+
+/** The raw dark-palette hex, for non-CSS renderers (OG images stay dark). */
+export function companyHex(companyId: string): string {
   return resolveColor(companyById.get(companyId)?.color);
+}
+
+/** CSS that defines every `--co-*` custom property `companyColor` points at:
+ *  dark-palette hexes by default, light variants (lib/palette.ts, verified by
+ *  scripts/palette-check.js) under `prefers-color-scheme: light`. Generated
+ *  from companies.json at build time so a new company needs no CSS edit. */
+export function companyPaletteCss(): string {
+  const coloured = companies.filter((c) => c.color != null);
+  const dark = coloured.map((c) => c.color as string);
+  const light = lightPalette(dark);
+  const darkVars = coloured.map((c, i) => `--co-${c.id}:${dark[i]}`);
+  darkVars.push(`--co-neutral:${NEUTRAL_COMPANY_COLOR}`);
+  const lightVars = coloured
+    .map((c, i) => (light[i].toUpperCase() !== dark[i].toUpperCase() ? `--co-${c.id}:${light[i]}` : null))
+    .filter((v): v is string => v != null);
+  lightVars.push(`--co-neutral:${lightVariant(NEUTRAL_COMPANY_COLOR)}`);
+  return `:root{${darkVars.join(";")}}@media (prefers-color-scheme: light){:root{${lightVars.join(";")}}}`;
 }
 
 export function companyName(companyId: string): string {

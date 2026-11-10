@@ -1,10 +1,11 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { SubscribeForm } from "@/components/SubscribeForm";
 import { SubscribeBanner } from "@/components/SubscribeBanner";
+import { companyPaletteCss } from "@/lib/data";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -35,6 +36,21 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image" },
 };
 
+// The site follows the device's light/dark setting (prefers-color-scheme).
+// theme-color tints browser chrome to match each theme's page background
+// (--bg in app/globals.css); color-scheme lets native controls follow too.
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f5f6fa" },
+    { media: "(prefers-color-scheme: dark)", color: "#0b0e1a" },
+  ],
+  colorScheme: "dark light",
+};
+
+// Company colour custom properties (--co-<id>), both themes. Built from
+// data/companies.json at build time; companyColor() returns var(--co-<id>).
+const companyPalette = companyPaletteCss();
+
 export default function RootLayout({
   children,
   modal,
@@ -50,6 +66,7 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${plexMono.variable} h-full antialiased`}
     >
       <head>
+        <style id="company-palette">{companyPalette}</style>
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-GJFVT58K8P"

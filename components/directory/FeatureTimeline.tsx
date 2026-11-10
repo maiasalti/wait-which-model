@@ -33,7 +33,7 @@ export function FeatureTimeline({ features }: { features: FeatureEntry[] }) {
                       {companyName(f.company)}
                     </span>
                     <span>{surfaceLabel(f.surface)}</span>
-                    {f.availability !== "ga" && <span className="text-amber-400">{accessLabel(f.availability)}</span>}
+                    {f.availability !== "ga" && <span className="text-warn">{accessLabel(f.availability)}</span>}
                     {f.retiredDate && <span>Retired {formatDate(f.retiredDate)}</span>}
                   </div>
                   <h3 className="mt-1 font-semibold">{f.name}</h3>

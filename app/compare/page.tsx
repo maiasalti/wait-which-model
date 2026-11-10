@@ -10,9 +10,9 @@ import CompareClient from "./CompareClient";
 function ComparePlaceholder() {
   return (
     <div className="min-h-[80vh] pt-10" aria-hidden>
-      <div className="h-4 w-40 rounded bg-white/5" />
-      <div className="mt-3 h-9 w-72 rounded bg-white/5" />
-      <div className="mt-3 h-4 w-full max-w-2xl rounded bg-white/5" />
+      <div className="h-4 w-40 rounded bg-wash/5" />
+      <div className="mt-3 h-9 w-72 rounded bg-wash/5" />
+      <div className="mt-3 h-4 w-full max-w-2xl rounded bg-wash/5" />
       <div className="mt-8 flex flex-col gap-8 lg:flex-row lg:items-start">
         <div className="h-96 w-full rounded border border-line lg:w-64 lg:shrink-0" />
         <div className="flex min-w-0 flex-1 flex-col gap-10">
