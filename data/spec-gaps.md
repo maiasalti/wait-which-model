@@ -403,3 +403,6 @@ claude-fable-5-2 · predecessorId · 2026-11-10 · Launch post, model page and m
 claude-fable-5-2 · retirementDate · 2026-11-10 · Model page: "Not sooner than November 9, 2027", a floor. Left null.
 claude-mythos-5-2 · predecessorId · 2026-11-10 · Migration path from Mythos 5.1 only; no replacement statement, and Mythos 5.1 isn't tracked. Left null.
 claude-mythos-5-2 · retirementDate · 2026-11-10 · Model page: "Not sooner than November 9, 2027", a floor. Left null.
+muse-ember · predecessorId · 2026-11-10 · Launch post introduces it as Meta's smallest model and names no model it replaces. Left null.
+muse-ember · apiIds (google-vertex) · 2026-11-10 · Coverage says it's on Google Cloud and Oracle Cloud, but no model id found on either. Only Meta and OpenRouter ids recorded.
+muse-ember · retirementDate · 2026-11-10 · No lifecycle notice. Left null.

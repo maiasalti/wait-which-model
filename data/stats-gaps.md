@@ -1250,3 +1250,6 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | claude-fable-5-2 | gdpvalAA | 2026-11-10 | only GDPval-AA v2.1 (1831) reported, a different scale from v2 |
 | claude-fable-5-2 | lmarenaElo | 2026-11-10 | not yet on the arena.ai text leaderboard one day after release; re-check |
 | claude-mythos-5-2 | all benchmarks / costPerTask / speed | 2026-11-10 | system card reports Mythos 5.2 only on untracked suites (CVE Rediscovery, CyScenarioBench, De Novo Binder Design); access-restricted, so no AA or arena listing |
+| muse-ember | gpqaDiamond / sweBench / sweBenchPro / aime / mmluPro / hle / arcAgi2 / lmarenaElo | 2026-11-10 | not in Meta's launch post or model page; AA's model page shows no figure; no arena listing found |
+| muse-ember | terminalBench / gdpvalAA | 2026-11-10 | Meta reports Terminal-Bench 4.0 (40.9), not 2.1; AA lists GDPval-AA v2.1 with no score |
+| muse-ember | maxOutput / knowledgeCutoff | 2026-11-10 | not stated on dev.meta.ai/models/muse-ember, the launch post or AA |
