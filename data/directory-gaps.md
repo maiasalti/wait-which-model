@@ -80,6 +80,8 @@ lovable · pricing.plan · 2026-10-28 · lovable.dev FAQ/billing: credits (Pro 1
 
 ## features
 
+muse-for-small-business · links.docs · 2026-10-30 · search for Meta help-center setup/connector pages: only third-party guides (eesel, smartscope, parix); no Meta help article surfaced; WebFetch unavailable
+
 ## voice-models
 
 gpt-live-1 · languages · 2026-11-06 · platform.openai.com model page, Live guides, community launch post: no total (voice table covers 7)

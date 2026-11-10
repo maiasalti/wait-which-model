@@ -48,9 +48,9 @@
     ],
     "links": {
       "official": "https://claude.com/resources/articles/dashboards-and-motion",
-      "docs": null
+      "docs": "https://support.claude.com/en/articles/17454700-get-started-with-claude-dashboards"
     },
-    "notes": "Source says 'beta on paid plans'; plans list expands that to Claude's paid tiers. Launch article names no model.",
+    "notes": "Launch article says 'beta on paid plans'; the help article names Pro, Max, Team and Enterprise. Dashboards are saved in the Artifacts tab and count toward plan usage limits. Launch article names no model.",
     "surface": "app",
     "availability": "beta",
     "plans": [
@@ -106,7 +106,7 @@
     ],
     "links": {
       "official": "https://openai.com/index/gpt-6-for-everyone/",
-      "docs": null
+      "docs": "https://help.openai.com/en/articles/20001598-intelligent-ui-in-chatgpt"
     },
     "notes": "Shipped with GPT-6 in the Chat tab: Plus/Pro/Business/Enterprise use GPT-6 Sol, Free and Go use GPT-6 Luna (from the next day). openai.com blocks direct fetch; page text retrieved via a reader proxy.",
     "surface": "app",
@@ -141,9 +141,9 @@
     ],
     "links": {
       "official": "https://gemini.google/release-notes/",
-      "docs": null
+      "docs": "https://support.google.com/gemini/answer/17094296"
     },
-    "notes": "Gems will be migrated to skills when Gems are removed. A Customize menu for skills and 40+ connected apps followed 2026-10-13.",
+    "notes": "Gems will be migrated to skills when Gems are removed. Docs link is Google's 'Create and manage skills for Gemini Apps' help article (seen in search in its German edition). A Customize menu for skills and 40+ connected apps followed 2026-10-13.",
     "surface": "app",
     "availability": "ga",
     "plans": [],
@@ -190,7 +190,7 @@
     ],
     "links": {
       "official": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
-      "docs": null
+      "docs": "https://help.openai.com/en/articles/20001549-getting-started-with-space-in-chatgpt"
     },
     "notes": "Space replaces Library for accounts with access; Projects remain separate. Facts from the ChatGPT release notes (2026-09-29).",
     "surface": "app",
@@ -251,7 +251,7 @@
     ],
     "links": {
       "official": "https://x.ai/news/team-bots",
-      "docs": null
+      "docs": "https://docs.x.ai/grok-bot/team-bots"
     },
     "notes": "",
     "surface": "app",
@@ -362,7 +362,7 @@
     ],
     "links": {
       "official": "https://x.ai/news/introducing-grok-bot",
-      "docs": null
+      "docs": "https://docs.x.ai/grok-bot/get-started"
     },
     "notes": "Desktop and iOS. Also available to Cursor Pro, Pro+, Ultra and Cursor Teams Standard/Premium subscribers. A later 'Grok Bot for Enterprise' post (listed on x.ai/news, date not captured) opened it to enterprises.",
     "surface": "app",
