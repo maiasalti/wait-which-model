@@ -406,3 +406,7 @@ claude-mythos-5-2 · retirementDate · 2026-11-10 · Model page: "Not sooner tha
 muse-ember · predecessorId · 2026-11-10 · Launch post introduces it as Meta's smallest model and names no model it replaces. Left null.
 muse-ember · apiIds (google-vertex) · 2026-11-10 · Coverage says it's on Google Cloud and Oracle Cloud, but no model id found on either. Only Meta and OpenRouter ids recorded.
 muse-ember · retirementDate · 2026-11-10 · No lifecycle notice. Left null.
+gemini-decision-1 · predecessorId · 2026-11-12 · Launch post and Decisions API docs name no model it replaces. Left null.
+gemini-decision-1 · apiIds (openrouter, google-vertex) · 2026-11-12 · Post says OpenRouter/Vercel integrations are rolling out and Google Cloud is "coming soon"; no ids seen. Only gemini-decision-1 on the Gemini API verified.
+gemini-decision-1 · speed · 2026-11-12 · Decision model with no output tokens; not on AA's Decision Index at launch. Google's own 150-250 ms latency kept in strengths. Left null.
+gemini-decision-1 · retirementDate · 2026-11-12 · No lifecycle notice. Left null.

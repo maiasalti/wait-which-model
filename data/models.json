@@ -10270,5 +10270,65 @@
       "Weights stay private, like the rest of the Muse line"
     ],
     "notes": "Meta's smallest Muse model, announced in the developer blog post \"Start building with Muse Ember\" (dev.meta.ai/resources/blog/build-with-muse-ember), which gives no date; 2026-11-09 is the date SiliconANGLE and other launch coverage give. Available on the Meta Model API as muse-ember-1.0 and in every Muse Code plan; coverage also reports Google Cloud and Oracle Cloud, whose ids weren't found, and OpenRouter lists meta/muse-ember. Pricing from the model page (dev.meta.ai/models/muse-ember): $0.10 input, $0.004 cached, $0.50 output per MTok up to 200K context, and $0.30 / $0.012 / $1.50 above it; the 1M context window is the model page's and Artificial Analysis' figure. Meta reports none of the tracked benchmarks. Its launch table (max effort) gives AutomationBench-AA 37.8, Agents' Last Exam 61.6, Terminal-Bench 4.0 40.9 (best published harness, not the tracked 2.1), Coding Agent Index-AA 46, FrontierCode 2.0-AA 27.2, GDP.pdf-AA 22.8, OSWorld 2.1 69.5 partial / 27.8 binary, PerceptionBench with tools 80.6 and its internal Personal Superintelligence Index 46.8. Artificial Analysis scores it 36 on its Intelligence Index (Max reasoning, the only variant listed; Meta's post estimates $0.13 a task) at $0.14 per task, 449 tok/s and 4.22 s to first answer token. predecessorId is null: Meta names no model it replaces."
+  },
+  {
+    "id": "gemini-decision-1",
+    "name": "Gemini Decision 1",
+    "company": "google",
+    "releaseDate": "2026-11-11",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "type": "system-one",
+    "contextWindow": 262144,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 0.1,
+      "outputPerMTok": 0
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "google",
+        "id": "gemini-decision-1"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Takes text, images, audio, video and PDFs in one request, a wider input mix than the other hosted decision models",
+      "Scores up to 1,000 questions against one shared input, which is billed once, and Google says latency stays nearly flat from 1 to 100 questions",
+      "Google reports 150 to 250 ms end-to-end with the lowest calibration error on its benchmark suite, aimed at routing and grading jobs",
+      "Free tier in Google AI Studio for prototyping, then $0.10 per million input tokens with no output charge"
+    ],
+    "weaknesses": [
+      "Served only on the Gemini Developer API's v1beta endpoint at launch, with Google Cloud support still \"coming soon\"",
+      "The speed and calibration figures are Google's own, and Artificial Analysis had not listed it on its Decision Index at launch"
+    ],
+    "notes": "Not an LLM: Google DeepMind's typed-decision model behind the Gemini Decisions API, which scores yes/no, multiple-choice (2 to 255 options) and ordered-rubric questions in a single forward pass and returns probabilities with no generated text, so none of this site's benchmarks apply and every cell is null by design. Filed under the fast tier with the other decision models. Launched 2026-11-11 (blog.google, Gemini Decisions API post) at $0.10 per M input tokens and $0 output, with no charge for thinking, audio transcription or OCR; Google says it is nearly 5x cheaper than Gemini 3.5 Flash-Lite on the Interactions API across its suite. contextWindow is the docs' 262,144-token request limit, which counts shared input and every question together. Neither the post nor the docs label it preview or GA. OpenRouter, Vercel, LiteLLM and other integrations were announced as rolling out; no OpenRouter id was verified. No knowledge cutoff or Artificial Analysis cost/speed entry."
   }
 ]

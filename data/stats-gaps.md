@@ -1253,3 +1253,4 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | muse-ember | gpqaDiamond / sweBench / sweBenchPro / aime / mmluPro / hle / arcAgi2 / lmarenaElo | 2026-11-10 | not in Meta's launch post or model page; AA's model page shows no figure; no arena listing found |
 | muse-ember | terminalBench / gdpvalAA | 2026-11-10 | Meta reports Terminal-Bench 4.0 (40.9), not 2.1; AA lists GDPval-AA v2.1 with no score |
 | muse-ember | maxOutput / knowledgeCutoff | 2026-11-10 | not stated on dev.meta.ai/models/muse-ember, the launch post or AA |
+| gemini-decision-1 | costPerTask / knowledgeCutoff / maxOutput | 2026-11-12 | decision model with no output tokens; no AA Intelligence Index cost; post and docs publish no cutoff |
