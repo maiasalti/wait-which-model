@@ -410,3 +410,11 @@ gemini-decision-1 · predecessorId · 2026-11-12 · Launch post and Decisions AP
 gemini-decision-1 · apiIds (openrouter, google-vertex) · 2026-11-12 · Post says OpenRouter/Vercel integrations are rolling out and Google Cloud is "coming soon"; no ids seen. Only gemini-decision-1 on the Gemini API verified.
 gemini-decision-1 · speed · 2026-11-12 · Decision model with no output tokens; not on AA's Decision Index at launch. Google's own 150-250 ms latency kept in strengths. Left null.
 gemini-decision-1 · retirementDate · 2026-11-12 · No lifecycle notice. Left null.
+ripple-65b-preview · predecessorId · 2026-11-12 · Ricursive's first public model; HF card and ricursive.com/ripple name no model it replaces. Left null.
+ripple-65b-preview · apiIds (together, fireworks, gmi-cloud) · 2026-11-12 · Announcement lists Together AI, GMI Cloud, Fireworks and OpenRouter as hosts but gives no model strings; only OpenRouter's ricursiveai/ripple-65b-preview verified.
+ripple-65b-preview · speed · 2026-11-12 · Not measured by Artificial Analysis (no model page). The card's 250 tok/s on 2xB200 at batch 8 is a lab serving figure, not AA. Left null.
+ripple-65b-preview · retirementDate · 2026-11-12 · No lifecycle notice. Left null.
+lfm3-1-7b · predecessorId · 2026-11-12 · LFM3 post compares it with LFM2.5-2.6B (not tracked here) but states no replacement. Left null.
+lfm3-1-7b · apiIds (liquid) · 2026-11-12 · Liquid's pricing page and docs.liquid.ai/lfm/models/lfm3-1.7b give no API model string; only OpenRouter's liquid/lfm-3-1.7b verified.
+lfm3-1-7b · speed · 2026-11-12 · Not measured by Artificial Analysis (no model page). Left null.
+lfm3-1-7b · retirementDate · 2026-11-12 · No lifecycle notice. Left null.

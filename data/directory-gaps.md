@@ -19,6 +19,8 @@ Format: `entry-id · field · YYYY-MM-DD · what was searched`
 
 ## image-models
 
+minimax-h3-image · scores.lmarenaImageElo · 2026-11-12 · arena.ai text-to-image board (Nov 8 update): not listed
+
 ## video-models
 
 utopai-x · pricing.perSecondUsd · 2026-10-27 · utopaistudios.com PAI pricing page: credit-priced (93 credits/s at 1080p), credit packs vary $15–$150, no USD per-second rate
@@ -81,6 +83,7 @@ lovable · pricing.plan · 2026-10-28 · lovable.dev FAQ/billing: credits (Pro 1
 ## features
 
 muse-for-small-business · links.docs · 2026-10-30 · search for Meta help-center setup/connector pages: only third-party guides (eesel, smartscope, parix); no Meta help article surfaced; WebFetch unavailable
+claude-sheets · modelIds · 2026-11-12 · claude.com sheets-whiteboards-data article, support.claude.com Sheets guide: no model named (same for claude-whiteboards)
 
 ## voice-models
 

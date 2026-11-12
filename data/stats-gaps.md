@@ -1254,3 +1254,7 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | muse-ember | terminalBench / gdpvalAA | 2026-11-10 | Meta reports Terminal-Bench 4.0 (40.9), not 2.1; AA lists GDPval-AA v2.1 with no score |
 | muse-ember | maxOutput / knowledgeCutoff | 2026-11-10 | not stated on dev.meta.ai/models/muse-ember, the launch post or AA |
 | gemini-decision-1 | costPerTask / knowledgeCutoff / maxOutput | 2026-11-12 | decision model with no output tokens; no AA Intelligence Index cost; post and docs publish no cutoff |
+| ripple-65b-preview | hle / arcAgi2 / lmarenaElo / gdpvalAA | 2026-11-12 | not on the HF model card (huggingface.co/ricursiveAI/Ripple-65B-Preview) or ricursive.com/ripple; no arena listing; card reports SWE-bench Pro v2.0 Hard / DeepSWE 1.1 / MCP Atlas instead |
+| ripple-65b-preview | costPerTask / maxOutput / knowledgeCutoff | 2026-11-12 | no Artificial Analysis page (artificialanalysis.ai/models/ripple-65b-preview 404); card and post state no max output or cutoff |
+| lfm3-1-7b | sweBenchPro / lmarenaElo / gdpvalAA / arcAgi2 / mmluPro / aime | 2026-11-12 | not on the HF model card (huggingface.co/LiquidAI/LFM3-1.7B) or liquid.ai/blog/lfm3; no arena listing |
+| lfm3-1-7b | costPerTask / maxOutput / knowledgeCutoff | 2026-11-12 | no Artificial Analysis page (artificialanalysis.ai/models/lfm3-1-7b 404); card, blog and docs.liquid.ai give a combined 256K input+output window but no separate output cap or cutoff |

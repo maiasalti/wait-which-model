@@ -15,6 +15,21 @@
     "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
   },
   {
+    "id": "2026-11-10-alphaproof-code-signal",
+    "date": "2026-11-10",
+    "title": "Google DeepMind's AlphaProof Code formally verifies Signal's cryptographic protocol",
+    "summary": "Google DeepMind introduced AlphaProof Code, an agent system that formally verified that Signal's compiled core cryptographic code meets key security properties, such as keeping messages protected before and after a device is temporarily compromised. Researchers turned Signal's security goals into formal specifications, every one reviewed by human experts; agents powered by Gemini 4 Carbon then wrote more than six million lines of Lean proofs in four weeks, with Lean checking the proofs mechanically and the agents flagging about 1% of the codebase for human review. As a test, two previously fixed real bugs were reintroduced into an isolated copy, and in both cases the system produced a machine-checked proof that the buggy version was insecure. DeepMind calls it the first AI-driven formal verification of a widely deployed cryptographic protocol at this depth, and the first verification of such a protocol's implementation by any method; Signal staff gave feedback on the methodology, and the specification and proof artifacts are being open-sourced.",
+    "category": "research",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [
+      "gemini-4-carbon"
+    ],
+    "sourceName": "Google DeepMind",
+    "sourceUrl": "https://deepmind.google/blog/introducing-alphaproof-code/"
+  },
+  {
     "id": "2026-11-09-muse-ember",
     "date": "2026-11-09",
     "title": "Meta launches Muse Ember, its smallest and cheapest Muse model",
@@ -44,6 +59,19 @@
     ],
     "sourceName": "Anthropic",
     "sourceUrl": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+  },
+  {
+    "id": "2026-11-08-nvidia-board-huang-investigation",
+    "date": "2026-11-08",
+    "title": "Nvidia's board opens an independent investigation after reports Jensen Huang was targeted by a foreign intelligence effort",
+    "summary": "Nvidia's board said a committee of independent directors, supported by outside counsel, will oversee an investigation following news reports that CEO Jensen Huang was targeted by a foreign intelligence effort. The board said it had no reason to believe U.S. national security or Nvidia's secrets were compromised and expressed confidence in Huang and his leadership team. In an email to staff the same day, Huang apologised for being unfaithful to his wife, said he supports the investigation and will cooperate fully, and said he intends to remain CEO; he did not directly address the espionage allegations. On 2026-11-11 the Wall Street Journal reported that the board was preparing to remove Huang, and Nvidia shares fell more than 9% in after-hours trading; the company had not publicly commented on that report.",
+    "category": "company",
+    "companies": [
+      "nvidia"
+    ],
+    "modelIds": [],
+    "sourceName": "Nvidia",
+    "sourceUrl": "https://investor.nvidia.com/news/press-release-details/2026/Statement-from-NVIDIA-Board-of-Directors/default.aspx"
   },
   {
     "id": "2026-11-05-gemini-omni-flash-1-2",
@@ -3555,11 +3583,27 @@
       "liquid-ai"
     ],
     "modelIds": [
+      "lfm3-1-7b",
       "d1-2b",
       "d1-omni-2b",
       "d1-3b"
     ],
     "sourceName": "Liquid AI",
     "sourceUrl": "https://www.liquid.ai/blog/lfm3"
+  },
+  {
+    "id": "2026-11-04-ricursive-ripple-65b-preview",
+    "date": "2026-11-04",
+    "title": "Ricursive Intelligence releases Ripple-65B-Preview, its first open-weight model",
+    "summary": "Ricursive Intelligence, the AI chip-design startup, put Ripple-65B-Preview on Hugging Face under Apache 2.0: a 65B dense model pretrained on 12T tokens with a 1,048,576-token context, described as a general-purpose variant of the model behind its chip-design platform. Ricursive reports 80.5 on Terminal-Bench 2.1, 76.5 on SWE-bench Verified, 61.4 on SWE-bench Pro and 85.2 on GPQA Diamond. The announcement post followed on 2026-11-11.",
+    "category": "release",
+    "companies": [
+      "ricursive"
+    ],
+    "modelIds": [
+      "ripple-65b-preview"
+    ],
+    "sourceName": "Ricursive Intelligence",
+    "sourceUrl": "https://www.ricursive.com/ripple"
   }
 ]
