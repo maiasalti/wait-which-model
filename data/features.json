@@ -1,5 +1,71 @@
 [
   {
+    "id": "claude-sheets",
+    "name": "Claude Sheets",
+    "company": "anthropic",
+    "launchDate": "2026-11-10",
+    "description": "A built-in spreadsheet that you, your team and Claude edit together: Claude builds sheets with tabs, formulas, formatting and drop-downs, and outlines each change it makes to cells.",
+    "strengths": [
+      "144 built-in functions",
+      "Shared editing with your team",
+      "Download as .xlsx or CSV"
+    ],
+    "weaknesses": [
+      "Capped at 100,000 cells per sheet",
+      "No pivot tables, protected ranges, find and replace or PDF export yet; no macros, VBA or Power Query",
+      "Read-only on mobile; off by default on Enterprise"
+    ],
+    "links": {
+      "official": "https://claude.com/resources/articles/sheets-whiteboards-data",
+      "docs": "https://support.claude.com/en/articles/18324300-get-started-with-claude-sheets"
+    },
+    "notes": "Launched in beta 2026-11-10 alongside Claude Whiteboards and the Claude Data rename. The launch article says 'simple spreadsheet functionality' for now and points full-Excel work to .xlsx export or Claude for Excel. On by default on Team; Enterprise owners enable it under Organization settings > Artifacts. Not available with HIPAA, CMEK or ZDR. Launch article and help page name no model. The same-day announcement says Claude Meetings (Claude joining a call to take notes) is 'coming soon', so it has no entry yet; TechCrunch reported it as a Team/Enterprise beta on Google Meet, which Anthropic's own pages don't confirm.",
+    "surface": "app",
+    "availability": "beta",
+    "plans": [
+      "Pro",
+      "Max",
+      "Ultra",
+      "Team",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "claude-whiteboards",
+    "name": "Claude Whiteboards",
+    "company": "anthropic",
+    "launchDate": "2026-11-10",
+    "description": "A shared board where you, your team and Claude arrange ideas into diagrams and flows; Claude can turn a discussion into a board with owners and dates, group notes by theme and draft action items.",
+    "strengths": [
+      "Send boards to Lucid, Miro or Zoho Vani",
+      "Turn a board into a doc or deck",
+      "Web, desktop and mobile"
+    ],
+    "weaknesses": [
+      "Doesn't use context from connected apps",
+      "No import of a board from a file",
+      "Off by default on Enterprise; unavailable with HIPAA-ready configurations"
+    ],
+    "links": {
+      "official": "https://claude.com/resources/articles/sheets-whiteboards-data",
+      "docs": "https://support.claude.com/en/articles/18324319-get-started-with-claude-whiteboards"
+    },
+    "notes": "Launched in beta 2026-11-10 alongside Claude Sheets. Export is PNG via Share > Export. On by default on Team; Enterprise owners enable it under Organization settings > Artifacts. Counts toward plan usage limits. Launch article and help page name no model.",
+    "surface": "app",
+    "availability": "beta",
+    "plans": [
+      "Pro",
+      "Max",
+      "Ultra",
+      "Team",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
     "id": "claude-duet",
     "name": "Claude Duet",
     "company": "anthropic",
@@ -34,28 +100,31 @@
   },
   {
     "id": "claude-dashboards",
-    "name": "Claude Dashboards",
+    "name": "Claude Data (formerly Claude Dashboards)",
     "company": "anthropic",
     "launchDate": "2026-10-08",
-    "description": "Turns questions about company data into a dashboard that stays current, connecting to data platforms (BigQuery, Databricks, Snowflake) or CRMs such as Salesforce.",
+    "description": "Turns questions about company data into dashboards, data stories, narrated videos and letters, connecting to a warehouse (Redshift, BigQuery, ClickHouse, Databricks, Snowflake) or a connected app such as Salesforce.",
     "strengths": [
       "Each chart shows its query and last-refresh time",
-      "Connects to BigQuery, Databricks, Snowflake and Salesforce"
+      "Certified metric definitions from dbt, Looker or Cube (beta)",
+      "Live sharing in which viewers see only approved queries (beta)",
+      "Tracked changes with rollback; per-dashboard refresh cadence"
     ],
     "weaknesses": [
-      "Off by default on Enterprise",
-      "Several integrations (Databricks Genie, Looker, Tableau, monday.com) listed as coming soon"
+      "Needs a data connector such as a warehouse or CRM",
+      "Certified queries and live sharing still in beta"
     ],
     "links": {
       "official": "https://claude.com/resources/articles/dashboards-and-motion",
-      "docs": "https://support.claude.com/en/articles/17454700-get-started-with-claude-dashboards"
+      "docs": "https://support.claude.com/en/articles/17454700-get-started-with-claude-data"
     },
-    "notes": "Launch article says 'beta on paid plans'; the help article names Pro, Max, Team and Enterprise. Dashboards are saved in the Artifacts tab and count toward plan usage limits. Launch article names no model.",
+    "notes": "Launched as Claude Dashboards in beta on paid plans 2026-10-08 (launchDate kept). Renamed Claude Data and made generally available 2026-11-10 (https://claude.com/resources/articles/sheets-whiteboards-data); existing dashboards keep working and the id is unchanged. Certified queries and live sharing remain beta. On by default on Team; on Enterprise it turns on by default 2026-11-19 unless an owner has saved a setting. Availability and plans reflect the GA state; the help article names Pro, Max, Ultra, Team and Enterprise. No model named.",
     "surface": "app",
-    "availability": "beta",
+    "availability": "ga",
     "plans": [
       "Pro",
       "Max",
+      "Ultra",
       "Team",
       "Enterprise"
     ],

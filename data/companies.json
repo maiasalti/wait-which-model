@@ -798,5 +798,15 @@
     "color": null,
     "notable": false,
     "order": 80
+  },
+  {
+    "id": "ricursive",
+    "name": "Ricursive Intelligence",
+    "country": "United States",
+    "founded": 2025,
+    "website": "https://www.ricursive.com",
+    "color": null,
+    "notable": false,
+    "order": 81
   }
 ]

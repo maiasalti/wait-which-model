@@ -10330,5 +10330,137 @@
       "The speed and calibration figures are Google's own, and Artificial Analysis had not listed it on its Decision Index at launch"
     ],
     "notes": "Not an LLM: Google DeepMind's typed-decision model behind the Gemini Decisions API, which scores yes/no, multiple-choice (2 to 255 options) and ordered-rubric questions in a single forward pass and returns probabilities with no generated text, so none of this site's benchmarks apply and every cell is null by design. Filed under the fast tier with the other decision models. Launched 2026-11-11 (blog.google, Gemini Decisions API post) at $0.10 per M input tokens and $0 output, with no charge for thinking, audio transcription or OCR; Google says it is nearly 5x cheaper than Gemini 3.5 Flash-Lite on the Interactions API across its suite. contextWindow is the docs' 262,144-token request limit, which counts shared input and every question together. Neither the post nor the docs label it preview or GA. OpenRouter, Vercel, LiteLLM and other integrations were announced as rolling out; no OpenRouter id was verified. No knowledge cutoff or Artificial Analysis cost/speed entry."
+  },
+  {
+    "id": "lfm3-1-7b",
+    "name": "LFM3-1.7B",
+    "company": "liquid-ai",
+    "releaseDate": "2026-10-27",
+    "status": "superseded",
+    "tier": "fast",
+    "modality": "text",
+    "type": "llm",
+    "contextWindow": 262144,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 0.08,
+      "outputPerMTok": 0.2
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": null,
+      "name": "LFM Open License v1.0",
+      "kind": "restricted",
+      "url": "https://www.liquid.ai/lfm-license",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "openrouter",
+        "id": "liquid/lfm-3-1.7b"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 63.37,
+      "sweBench": 43.4,
+      "sweBenchPro": null,
+      "terminalBench": 12.92,
+      "aime": null,
+      "hle": 7.17,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Small enough to run on a laptop or phone, about 1 GB at 4-bit, and fine-tunable on a single GPU",
+      "Built for local agents rather than chat: tool calling, structured output, and deferred tool loading that keeps tool definitions out of the prompt until a search tool returns them",
+      "Runs on the usual local stacks from day one, including llama.cpp, Ollama, LM Studio, MLX, vLLM and SGLang, with recommended sampling settings already stored in the GGUF"
+    ],
+    "weaknesses": [
+      "Liquid itself advises against agentic coding or complex multi-step reasoning, and says knowledge-heavy tasks need retrieval or search alongside it",
+      "Thinks by default and drops earlier turns' reasoning unless told to keep it, so direct answers need thinking switched off in the chat template",
+      "Free commercial use stops at US$10M annual revenue under the LFM Open License, and above that any production use needs a paid licence from Liquid"
+    ],
+    "notes": "The text model of Liquid AI's six-model LFM3 family, released 2026-10-27 (Hugging Face upload and liquid.ai/blog/lfm3): 1.73B parameters across a 24-layer tri-hybrid stack of 13 gated short-convolution, 5 sliding-window-attention and 6 global-attention layers, pretrained on 22T tokens, with a 256K context covering input and output combined. All scores are Liquid's own from the model card: SWE-bench Verified 43.4 and Terminal-Bench 2.1 12.92 are both with the OpenCode harness, and HLE 7.17 is no tools (13.90 with tools). Pricing is Liquid's API rate ($0.02 cached input), matched on OpenRouter; Liquid's docs give no API model string, so only OpenRouter's id is recorded. Neither the post nor the card states a max output or knowledge cutoff, and Artificial Analysis had no page for it at the time of writing."
+  },
+  {
+    "id": "ripple-65b-preview",
+    "name": "Ripple-65B-Preview",
+    "company": "ricursive",
+    "releaseDate": "2026-11-04",
+    "status": "superseded",
+    "tier": "balanced",
+    "modality": "text",
+    "type": "llm",
+    "contextWindow": 1048576,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 0.2,
+      "outputPerMTok": 0.6
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/ricursiveAI/Ripple-65B-Preview",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "openrouter",
+        "id": "ricursiveai/ripple-65b-preview"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": 84.2,
+      "gpqaDiamond": 85.2,
+      "sweBench": 76.5,
+      "sweBenchPro": 61.42,
+      "terminalBench": 80.52,
+      "aime": 95,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Post-training was aimed squarely at agentic coding, so terminal and repo work is where it is strongest — Ricursive calls the rest of the post-training relatively light",
+      "Dense, with every parameter active on every token, so it is simpler to serve and quantise than the mixture-of-experts models it is measured against, and Ricursive pitches the NVFP4 build for a single DGX Spark",
+      "Apache 2.0 with a pretrain-only Base checkpoint and a speculative-decoding DFlash2 variant published alongside, so it can be fine-tuned and shipped commercially without licence friction"
+    ],
+    "weaknesses": [
+      "Every headline score is Ricursive's own, and its model card warns that agentic results are hard to reproduce and shift with harness settings",
+      "A preview whose Hugging Face repo was still taking generation and inference fixes a week after upload — behaviour is a moving target, not a fixed release",
+      "Pretrained on a predominantly English and code corpus, so knowledge-heavy science work and non-English use trail its coding results"
+    ],
+    "notes": "Ricursive Intelligence's first public model, a 65B dense Transformer (80 layers, d_model 5120) pretrained on 12T tokens and described as a general-purpose variant of the model behind its chip-design platform. Weights went up on Hugging Face on 2026-11-04 (initial commit) and the announcement post (ricursive.com/ripple) followed on 2026-11-11. All scores are self-reported from the model card at full BF16 and maximum effort: Terminal-Bench 2.1 80.52 per the announcement (80.5 on the card, Terminus 2 harness), SWE-bench Pro v1.0 61.42, SWE-bench Verified 76.5 and GPQA Diamond 85.2, with OpenCode as the harness where none is named; AIME is the 2026 exam (it also reports 97.1 for 2024 and 98.3 for 2025), and SWE-bench Pro v2.0 Hard 79.1 is an untracked variant. No HLE or ARC-AGI-2 figure is reported. Ricursive publishes no first-party price: $0.20/$0.60 is Together AI's and GMI Cloud's rate on OpenRouter, where Prime Intellect lists $0.10/$0.30. Context is 1,048,576 tokens per the card; no max output or knowledge cutoff is stated, and Artificial Analysis had no page for it at the time of writing."
   }
 ]

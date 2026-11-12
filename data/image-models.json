@@ -1,5 +1,57 @@
 [
   {
+    "id": "minimax-h3-image",
+    "name": "MiniMax-H3-Image",
+    "company": "minimax",
+    "releaseDate": "2026-11-10",
+    "notable": false,
+    "description": "MiniMax's open-weight 33.1B-parameter diffusion transformer for text-to-image and reference-based editing in one checkpoint, distilled to 6 sampling steps.",
+    "strengths": [
+      "About 16 MP native output without an upscaler",
+      "Editing with up to 16 reference images",
+      "6-step distilled sampling; 4K in under 10 seconds per MiniMax",
+      "Open weights, with SGLang, vLLM-Omni, diffusers and ComfyUI support"
+    ],
+    "weaknesses": [
+      "Licence excludes the EU, UK, South Korea and US",
+      "Written authorisation needed above $1M annual revenue or for hosted services",
+      "No masked edits, negative prompts or adjustable step count; 68.65 GB BF16 weights"
+    ],
+    "links": {
+      "official": "https://www.minimax.io/blog/minimax-h3-image",
+      "docs": "https://platform.minimax.io/docs/guides/image-generation"
+    },
+    "pricing": {
+      "perImageUsd": 0.02179,
+      "notes": "MiniMax API is token-priced ($2.30/M text in, $1.50/M image in, $3.80/M image out); $0.02179 is MiniMax's own example cost for one 1K text-to-image generation (2K $0.02333, 4K $0.06879). Highspeed: $0.03529 at 1K. Until 2026-11-17 16:00 UTC, 50% off requests whose output is at least 16.6 MP."
+    },
+    "maxResolution": "4096x4096",
+    "capabilities": [
+      "text-to-image",
+      "editing",
+      "reference-images"
+    ],
+    "openWeights": true,
+    "license": {
+      "spdx": null,
+      "name": "MiniMax-H3-Image Community License Agreement",
+      "kind": "restricted",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-H3-Image/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "minimax",
+        "id": "MiniMax-H3-Image"
+      }
+    ],
+    "scores": {
+      "aaImageArenaElo": 1067,
+      "lmarenaImageElo": null
+    },
+    "notes": "releaseDate is the licence's stated release date and the Hugging Face repo's first commit (Nov 10); MiniMax's blog post is dated 2026-11-11. Architecture figures (33.1B params, 50 layers, 6-step distillation, no CFG) are from the Hugging Face card; the blog gives no parameter count and no benchmark scores, only an unquantified prompt-adherence claim. maxResolution is the 1:1 4K size; the HF card gives 4096x4096 to 6272x2688 (21:9) and the API accepts custom sizes up to 20 MP between 1:3 and 3:1 (7104x2368). A sibling API id, MiniMax-H3-Image-Highspeed, takes the same parameters and ranks #22 on AA (1071); it is not a separate entry. Commercial use is allowed within the licence territory but needs MiniMax's written authorisation above $1M annualised revenue or for hosted services, and outputs may not be used to improve other AI models. Not notable: #23 on the Artificial Analysis text-to-image arena (2026-11-12) and not on the LMArena text-to-image board (Nov 8 update)."
+  },
+  {
     "id": "gemini-nano-banana-2-1",
     "name": "Nano Banana 2.1",
     "company": "google",
@@ -49,7 +101,7 @@
     "name": "FLUX 3 Image",
     "company": "black-forest-labs",
     "releaseDate": "2026-10-01",
-    "notable": true,
+    "notable": false,
     "description": "The image mode of Black Forest Labs' FLUX 3 multimodal model: text-to-image, targeted editing and multi-reference composition through one API endpoint.",
     "strengths": [
       "Up to ten reference images in one request",
@@ -86,7 +138,7 @@
       "aaImageArenaElo": 1115,
       "lmarenaImageElo": null
     },
-    "notes": "Release date from the BFL release notes entry dated October 1, 2026 (the FLUX 3 family was announced 2026-07-23, but Image shipped later). The API id is the endpoint path POST https://api.bfl.ai/v1/flux-3-image. Max resolution is only given as a \"4k\" tier of about 16 MP, with no pixel dimensions, so maxResolution is null. The model page shows a 5456x3072 example. Not open weights: BFL offers FLUX 3 Image under a commercial weights licence through sales. Open weights are promised only for the \"FLUX 3 Dev multimodal backbone\", which is \"coming soon\". Not on the LMArena text-to-image table as of 2026-10-14. Text rendering is not claimed as a feature, so it is not listed, though the examples contain typography."
+    "notes": "Release date from the BFL release notes entry dated October 1, 2026 (the FLUX 3 family was announced 2026-07-23, but Image shipped later). The API id is the endpoint path POST https://api.bfl.ai/v1/flux-3-image. Max resolution is only given as a \"4k\" tier of about 16 MP, with no pixel dimensions, so maxResolution is null. The model page shows a 5456x3072 example. Not open weights: BFL offers FLUX 3 Image under a commercial weights licence through sales. Open weights are promised only for the \"FLUX 3 Dev multimodal backbone\", which is \"coming soon\". Not on the LMArena text-to-image table as of 2026-10-14. Text rendering is not claimed as a feature, so it is not listed, though the examples contain typography. Notable removed 2026-11-12: #17 on the Artificial Analysis text-to-image arena and not on LMArena text-to-image, so neither leaderboard clause applies."
   },
   {
     "id": "gpt-image-2-5-sunburst",
@@ -234,7 +286,7 @@
       "aaImageArenaElo": 1152,
       "lmarenaImageElo": 1332
     },
-    "notes": "Announced 2026-08-10 (microsoft.ai post, updated 2026-09-04). Foundry public preview was announced 2026-09-04, and the Foundry model version is 2026-07-31. maxResolution is the square equivalent of the 2,359,296-pixel cap. Either side may be longer if the total stays within it, and each side must be at least 768px. The Foundry API id is the catalog model name. Callers address their own deployment name. The sibling MAI-Image-2.6-Flash ranked #11 on AA and is not included."
+    "notes": "Announced 2026-08-10 (microsoft.ai post, updated 2026-09-04). Foundry public preview was announced 2026-09-04, and the Foundry model version is 2026-07-31. maxResolution is the square equivalent of the 2,359,296-pixel cap. Either side may be longer if the total stays within it, and each side must be at least 768px. The Foundry API id is the catalog model name. Callers address their own deployment name. The sibling MAI-Image-2.6-Flash ranked #11 on AA and is not included. Notable via clause 1: #7 on the Artificial Analysis text-to-image arena and #6 on LMArena (checked 2026-11-12)."
   },
   {
     "id": "grok-imagine-image-2-0",
@@ -321,7 +373,7 @@
       "aaImageArenaElo": null,
       "lmarenaImageElo": 1302
     },
-    "notes": "The Reve API post (2026-07-14) says the \"Reve 2.1 API\" outputs \"native 4K x 4K resolution\", hence maxResolution 4096x4096. It names no model id or endpoint strings, so apiIds is empty. A search snippet attributed to Reve's help centre says the API was sunset on August 14, 2026 with credits refunded by Aug 31. I could not open that page (sign-in wall), so this is unverified. Reve's 2026-07-27 post (\"A New Chapter\") announces an OpenAI investment, says some research staff are joining OpenAI, and says Reve continues independently. Not on the AA text-to-image leaderboard (only the 2025 \"Reve Image (Halfmoon)\" is listed)."
+    "notes": "The Reve API post (2026-07-14) says the \"Reve 2.1 API\" outputs \"native 4K x 4K resolution\", hence maxResolution 4096x4096. It names no model id or endpoint strings, so apiIds is empty. A search snippet attributed to Reve's help centre says the API was sunset on August 14, 2026 with credits refunded by Aug 31. I could not open that page (sign-in wall), so this is unverified. Reve's 2026-07-27 post (\"A New Chapter\") announces an OpenAI investment, says some research staff are joining OpenAI, and says Reve continues independently. Not on the AA text-to-image leaderboard (only the 2025 \"Reve Image (Halfmoon)\" is listed). Notable via clause 1: #9 on LMArena text-to-image (Nov 8 update, checked 2026-11-12)."
   },
   {
     "id": "muse-image",
@@ -421,7 +473,7 @@
     "name": "Reve 2.0",
     "company": "reve",
     "releaseDate": "2026-06-03",
-    "notable": true,
+    "notable": false,
     "description": "Reve's first layout-first image model: each image is built from a structured map of objects, text and regions that can be edited individually. Superseded by Reve 2.1.",
     "strengths": [
       "Native 4K rendering",
@@ -454,7 +506,7 @@
       "aaImageArenaElo": null,
       "lmarenaImageElo": 1269
     },
-    "notes": "Included only because it is #10 on LMArena. Not on the AA leaderboard. The announcement says \"native 4K\" but gives no pixel dimensions, so maxResolution is null. Third-party coverage claims 4K x 4K. The post does not say whether 2.0 was on the API. The same day Reve said 2.0 \"replaces all earlier models\"."
+    "notes": "Added as #10 on LMArena. Not on the AA leaderboard. The announcement says \"native 4K\" but gives no pixel dimensions, so maxResolution is null. Third-party coverage claims 4K x 4K. The post does not say whether 2.0 was on the API. The same day Reve said 2.0 \"replaces all earlier models\". Notable removed 2026-11-12: now #11 on LMArena text-to-image (Nov 8 update), outside the top 10."
   },
   {
     "id": "gpt-image-2",
