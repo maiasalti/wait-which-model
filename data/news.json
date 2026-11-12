@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-11-09-muse-ember",
+    "date": "2026-11-09",
+    "title": "Meta launches Muse Ember, its smallest and cheapest Muse model",
+    "summary": "Ember is built for high-volume agent work such as tool calls and coding subtasks, with a 1M-token context window at $0.10/$0.50 per million tokens up to 200K. It scores 36 on the Artificial Analysis Intelligence Index, level with Claude Haiku 5.5, at about $0.14 a task, but trails Haiku on FrontierCode 2.0. The weights stay private.",
+    "category": "release",
+    "companies": [
+      "meta"
+    ],
+    "modelIds": [
+      "muse-ember"
+    ],
+    "sourceName": "Meta",
+    "sourceUrl": "https://dev.meta.ai/resources/blog/build-with-muse-ember"
+  },
+  {
     "id": "2026-11-09-claude-fable-5-2",
     "date": "2026-11-09",
     "title": "Anthropic releases Claude Fable 5.2 and Claude Mythos 5.2, and cuts Fable's price 20%",

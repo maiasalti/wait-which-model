@@ -10205,5 +10205,70 @@
       "Refused 82.8% of malicious requests in the system card's misuse test, down from Mythos 5.1's 88.5%"
     ],
     "notes": "Same model as Claude Fable 5.2 with fewer safeguards. Anthropic's model page (platform.claude.com/docs/en/models/mythos-5-2/overview) says it is available only to organisations verified through its verification programs, with the same specs and pricing as Fable 5.2 (1M context, 128K output, $8/$40, cache reads $0.20, June 2026 knowledge cutoff); the launch post adds that Claude Enterprise customers can use it through Claude Security without verification, and Mythos fast mode is limited to verified organisations. Ids: claude-mythos-5-2 (Claude API, Google Cloud, Foundry), anthropic.claude-mythos-5-2 (Bedrock). Benchmarks stay null: the system card reports Mythos 5.2 only on untracked suites (CVE Rediscovery 89.6%, CyScenarioBench 76.3%, De Novo Binder Design 85.1%, all without safeguards) and gives Fable 5.2's tracked scores under Fable's name, so they aren't copied across. Retirement is 'not sooner than November 9, 2027', a floor. predecessorId is null: Anthropic gives a migration path from Mythos 5.1 but no replacement statement, and Mythos 5.1 isn't tracked. The launch table gives Mythos 5.2 75.3% on Terminal-Bench-Science 0.1 (Fable 5.2 74.6%), also untracked."
+  },
+  {
+    "id": "muse-ember",
+    "name": "Muse Ember",
+    "company": "meta",
+    "releaseDate": "2026-11-09",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 0.1,
+      "outputPerMTok": 0.5
+    },
+    "costPerTask": {
+      "usd": 0.14,
+      "effort": "max"
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": 449,
+      "timeToFirstTokenSec": 4.22,
+      "effort": "max"
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "meta",
+        "id": "muse-ember-1.0"
+      },
+      {
+        "provider": "openrouter",
+        "id": "meta/muse-ember"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Matches Claude Haiku 5.5 at 36 on the Artificial Analysis Intelligence Index for about $0.14 a task",
+      "$0.10 in and $0.50 out per million tokens up to 200K, with cached input at $0.004",
+      "Built for bounded agent subtasks, leading Haiku 5.5 and GPT-6 Luna on AutomationBench-AA (37.8) and Terminal-Bench 4.0 (40.9) in Meta's table",
+      "Takes text, image, audio and video input, and Artificial Analysis measured 449 output tokens a second"
+    ],
+    "weaknesses": [
+      "Trails Haiku 5.5 on FrontierCode 2.0-AA, 27.2 to 34.9",
+      "Prices triple above 200K input tokens, to $0.30 and $1.50",
+      "Weights stay private, like the rest of the Muse line"
+    ],
+    "notes": "Meta's smallest Muse model, announced in the developer blog post \"Start building with Muse Ember\" (dev.meta.ai/resources/blog/build-with-muse-ember), which gives no date; 2026-11-09 is the date SiliconANGLE and other launch coverage give. Available on the Meta Model API as muse-ember-1.0 and in every Muse Code plan; coverage also reports Google Cloud and Oracle Cloud, whose ids weren't found, and OpenRouter lists meta/muse-ember. Pricing from the model page (dev.meta.ai/models/muse-ember): $0.10 input, $0.004 cached, $0.50 output per MTok up to 200K context, and $0.30 / $0.012 / $1.50 above it; the 1M context window is the model page's and Artificial Analysis' figure. Meta reports none of the tracked benchmarks. Its launch table (max effort) gives AutomationBench-AA 37.8, Agents' Last Exam 61.6, Terminal-Bench 4.0 40.9 (best published harness, not the tracked 2.1), Coding Agent Index-AA 46, FrontierCode 2.0-AA 27.2, GDP.pdf-AA 22.8, OSWorld 2.1 69.5 partial / 27.8 binary, PerceptionBench with tools 80.6 and its internal Personal Superintelligence Index 46.8. Artificial Analysis scores it 36 on its Intelligence Index (Max reasoning, the only variant listed; Meta's post estimates $0.13 a task) at $0.14 per task, 449 tok/s and 4.22 s to first answer token. predecessorId is null: Meta names no model it replaces."
   }
 ]
