@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-11-11-gemini-decision-1",
+    "date": "2026-11-11",
+    "title": "Google launches Gemini Decision 1 and the Gemini Decisions API",
+    "summary": "Google DeepMind launched the Gemini Decisions API on 2026-11-11, powered by Gemini Decision 1, a closed-weights decision model that scores yes/no, multiple-choice and rubric questions across text, images, audio, video and PDFs and returns calibrated probabilities instead of generated text. It takes up to 1,000 questions against one input of up to 256K tokens, costs $0.10 per million input tokens with no output charge, and runs on the Gemini API and Google AI Studio, with Google Cloud support coming soon.",
+    "category": "release",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [
+      "gemini-decision-1"
+    ],
+    "sourceName": "Google",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
+  },
+  {
     "id": "2026-11-09-claude-fable-5-2",
     "date": "2026-11-09",
     "title": "Anthropic releases Claude Fable 5.2 and Claude Mythos 5.2, and cuts Fable's price 20%",

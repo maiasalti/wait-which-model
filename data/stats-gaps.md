@@ -1250,3 +1250,4 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | claude-fable-5-2 | gdpvalAA | 2026-11-10 | only GDPval-AA v2.1 (1831) reported, a different scale from v2 |
 | claude-fable-5-2 | lmarenaElo | 2026-11-10 | not yet on the arena.ai text leaderboard one day after release; re-check |
 | claude-mythos-5-2 | all benchmarks / costPerTask / speed | 2026-11-10 | system card reports Mythos 5.2 only on untracked suites (CVE Rediscovery, CyScenarioBench, De Novo Binder Design); access-restricted, so no AA or arena listing |
+| gemini-decision-1 | costPerTask / knowledgeCutoff / maxOutput | 2026-11-12 | decision model with no output tokens; no AA Intelligence Index cost; post and docs publish no cutoff |

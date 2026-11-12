@@ -10205,5 +10205,65 @@
       "Refused 82.8% of malicious requests in the system card's misuse test, down from Mythos 5.1's 88.5%"
     ],
     "notes": "Same model as Claude Fable 5.2 with fewer safeguards. Anthropic's model page (platform.claude.com/docs/en/models/mythos-5-2/overview) says it is available only to organisations verified through its verification programs, with the same specs and pricing as Fable 5.2 (1M context, 128K output, $8/$40, cache reads $0.20, June 2026 knowledge cutoff); the launch post adds that Claude Enterprise customers can use it through Claude Security without verification, and Mythos fast mode is limited to verified organisations. Ids: claude-mythos-5-2 (Claude API, Google Cloud, Foundry), anthropic.claude-mythos-5-2 (Bedrock). Benchmarks stay null: the system card reports Mythos 5.2 only on untracked suites (CVE Rediscovery 89.6%, CyScenarioBench 76.3%, De Novo Binder Design 85.1%, all without safeguards) and gives Fable 5.2's tracked scores under Fable's name, so they aren't copied across. Retirement is 'not sooner than November 9, 2027', a floor. predecessorId is null: Anthropic gives a migration path from Mythos 5.1 but no replacement statement, and Mythos 5.1 isn't tracked. The launch table gives Mythos 5.2 75.3% on Terminal-Bench-Science 0.1 (Fable 5.2 74.6%), also untracked."
+  },
+  {
+    "id": "gemini-decision-1",
+    "name": "Gemini Decision 1",
+    "company": "google",
+    "releaseDate": "2026-11-11",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "type": "system-one",
+    "contextWindow": 262144,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 0.1,
+      "outputPerMTok": 0
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "google",
+        "id": "gemini-decision-1"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Takes text, images, audio, video and PDFs in one request, a wider input mix than the other hosted decision models",
+      "Scores up to 1,000 questions against one shared input, which is billed once, and Google says latency stays nearly flat from 1 to 100 questions",
+      "Google reports 150 to 250 ms end-to-end with the lowest calibration error on its benchmark suite, aimed at routing and grading jobs",
+      "Free tier in Google AI Studio for prototyping, then $0.10 per million input tokens with no output charge"
+    ],
+    "weaknesses": [
+      "Served only on the Gemini Developer API's v1beta endpoint at launch, with Google Cloud support still \"coming soon\"",
+      "The speed and calibration figures are Google's own, and Artificial Analysis had not listed it on its Decision Index at launch"
+    ],
+    "notes": "Not an LLM: Google DeepMind's typed-decision model behind the Gemini Decisions API, which scores yes/no, multiple-choice (2 to 255 options) and ordered-rubric questions in a single forward pass and returns probabilities with no generated text, so none of this site's benchmarks apply and every cell is null by design. Filed under the fast tier with the other decision models. Launched 2026-11-11 (blog.google, Gemini Decisions API post) at $0.10 per M input tokens and $0 output, with no charge for thinking, audio transcription or OCR; Google says it is nearly 5x cheaper than Gemini 3.5 Flash-Lite on the Interactions API across its suite. contextWindow is the docs' 262,144-token request limit, which counts shared input and every question together. Neither the post nor the docs label it preview or GA. OpenRouter, Vercel, LiteLLM and other integrations were announced as rolling out; no OpenRouter id was verified. No knowledge cutoff or Artificial Analysis cost/speed entry."
   }
 ]
