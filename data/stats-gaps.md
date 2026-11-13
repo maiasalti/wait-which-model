@@ -89,10 +89,10 @@ Sweep sources checked on 2026-07-04: LMArena (arena.ai) leaderboard, llm-stats.c
 | grok-4-1 | hle | 2026-07-04 | no public figure distinct from Grok 4 |
 | grok-4-1 | arcAgi2 | 2026-07-04 | not on ARC-AGI-2 leaderboards |
 | grok-4-3 | mmluPro | 2026-07-04 | AA benchmark chart referenced but no exact public number retrievable |
-| grok-4-3 | sweBench | 2026-07-04 | no exact public figure found (AA/OpenRouter pages omit it) |
+| grok-4-3 | sweBench | 2026-07-04 | no exact public figure found (AA/OpenRouter pages omit it) — **superseded 2026-11-13: filled (71.4)** |
 | grok-4-3 | aime | 2026-07-04 | no public figure; search results conflate with Grok 4 |
 | grok-4-3 | hle | 2026-07-04 | no public figure; search results conflate with Grok 4 |
-| grok-4-3 | lmarenaElo | 2026-07-04 | not in LMArena top listings as of July 2026 |
+| grok-4-3 | lmarenaElo | 2026-07-04 | not in LMArena top listings as of July 2026 — **superseded 2026-11-13: filled (1442)** |
 | grok-4-3 | arcAgi2 | 2026-07-04 | not on ARC-AGI-2 leaderboards (Grok 4.20 tested, 4.3 not) |
 | grok-4-3 | maxOutput | 2026-07-04 | xAI documents no fixed output cap — no number to record |
 | grok-4-3 | knowledgeCutoff | 2026-07-04 | not disclosed by xAI |
@@ -129,8 +129,8 @@ Sweep sources checked on 2026-07-04: LMArena (arena.ai) leaderboard, llm-stats.c
 | qwen3-max | hle | 2026-07-04 | not on HLE leaderboards |
 | qwen3-max | arcAgi2 | 2026-07-04 | not on ARC-AGI-2 leaderboards |
 | qwen3-5 | aime | 2026-07-04 | Alibaba reports HMMT, not AIME, for Qwen3.5 |
-| qwen3-5 | hle | 2026-07-04 | only the 27B variant's figure published; 397B not evaluated |
-| qwen3-5 | lmarenaElo | 2026-07-04 | not in LMArena top listings |
+| qwen3-5 | hle | 2026-07-04 | only the 27B variant's figure published; 397B not evaluated — **superseded 2026-11-13: filled (28.7)** |
+| qwen3-5 | lmarenaElo | 2026-07-04 | not in LMArena top listings — **superseded 2026-11-13: filled (1441)** |
 | qwen3-5 | arcAgi2 | 2026-07-04 | not on ARC-AGI-2 leaderboards |
 | qwen3-5 | knowledgeCutoff | 2026-07-04 | not disclosed |
 | qwen3-7-max | aime | 2026-07-04 | Alibaba reports HMMT 2026 (97.1) instead of AIME |
@@ -653,8 +653,8 @@ Stats-filler sweep on 2026-09-03 (daily sweep), two batches: (a) recent/unknown/
 
 Weekly release-scan sweep on 2026-09-13, scoped to `fugu-max` and `fugu-ultra-v2` (both 2026-09-11); `deepseek-v4-1-flash` was independently researched and committed the same day (see the 2026-09-15 sweep below for its remaining gaps). WebFetch returned EGRESS_BLOCKED for every domain tried this session (api-docs.deepseek.com, huggingface.co, openrouter.ai, deepseek.com, artificialanalysis.ai, datanorth.ai, heise.de, cellcog.ai, bitrue.com, anthropic.com) — findings rest entirely on WebSearch-synthesized excerpts, cross-checked across at least two independent outlets each where possible. Sources checked via excerpts: Sakana's own site (sakana.ai/fugu-max-release, sakana.ai/fugu, sakana.ai/company-info), OpenRouter, modelgrep.com, datanorth.ai, orcarouter.ai, marktechpost.com, alphasignal.ai, theroboticsmedia.com, pondero.ai, forkast.news.
 
-| fugu-max | gpqaDiamond | 2026-09-13 | Sakana's launch post claims a best-overall score but renders the actual percentage only in a chart image, not extractable text; no third-party leaderboard listing found |
-| fugu-max | terminalBench | 2026-09-13 | same chart-image issue as gpqaDiamond; Sakana claims best-overall on Terminal-Bench 2.1 but no numeric figure found in text |
+| fugu-max | gpqaDiamond | 2026-09-13 | Sakana's launch post claims a best-overall score but renders the actual percentage only in a chart image, not extractable text; no third-party leaderboard listing found — **superseded 2026-11-13: filled (95.5)** |
+| fugu-max | terminalBench | 2026-09-13 | same chart-image issue as gpqaDiamond; Sakana claims best-overall on Terminal-Bench 2.1 but no numeric figure found in text — **superseded 2026-11-13: filled (89.5)** |
 | fugu-max | sweBench | 2026-09-13 | not reported; Sakana's own evals (SWEFish, AutomationBench) don't map to SWE-bench Verified |
 | fugu-max | sweBenchPro | 2026-09-13 | not reported by Sakana; not on the SWE-bench Pro public leaderboard |
 | fugu-max | hle | 2026-09-13 | not found in any text-extractable source for this specific model |
@@ -665,7 +665,7 @@ Weekly release-scan sweep on 2026-09-13, scoped to `fugu-max` and `fugu-ultra-v2
 | fugu-max | gdpvalAA | 2026-09-13 | Sakana reports its own "GDP.pdf" (a Surge AI benchmark), a different benchmark from Artificial Analysis' GDPval-AA v2 — no mapping made; AA has not scored any Fugu model |
 | fugu-max | costPerTask.usd | 2026-09-13 | no Artificial Analysis Intelligence Index page exists for any Fugu model as of this check |
 | fugu-max | speed | 2026-09-13 | no Artificial Analysis measurement exists; third-party OpenRouter/ModelGrep throughput numbers are not AA-sourced and conflict with each other (13-72 tok/s across trackers), so none were recorded per the AA-only rule for this field |
-| fugu-ultra-v2 | gpqaDiamond | 2026-09-13 | same chart-image issue as fugu-max; Sakana reportedly evaluated it but no extractable numeric figure found for the v2.0 build specifically (a 95.5% figure found in comparisons is attributed to the original June 2026 Fugu/Fugu Ultra, not confirmed as the v2.0 build's own score) |
+| fugu-ultra-v2 | gpqaDiamond | 2026-09-13 | same chart-image issue as fugu-max; Sakana reportedly evaluated it but no extractable numeric figure found for the v2.0 build specifically (a 95.5% figure found in comparisons is attributed to the original June 2026 Fugu/Fugu Ultra, not confirmed as the v2.0 build's own score) — **superseded 2026-11-13: filled (95.5)** |
 | fugu-ultra-v2 | terminalBench | 2026-09-13 | same issue; an 82.1% figure found in comparisons is attributed to the original Fugu Ultra, not confirmed as v2.0-specific |
 | fugu-ultra-v2 | sweBench | 2026-09-13 | not reported; Sakana's own SWE Bench Pro claim doesn't specify a numeric score in extractable text |
 | fugu-ultra-v2 | sweBenchPro | 2026-09-13 | Sakana claims state-of-the-art on SWE-bench Pro but the number is only in a chart image |
@@ -774,7 +774,7 @@ Stats-filler sweep on 2026-09-22 (first pass over the new `sweBenchPro` / `gdpva
 | gpt-5-5 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
 | deepseek-v4 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
 | grok-4-3 | sweBenchPro | 2026-09-22 | xAI published tau2-Bench/IFBench at launch; not on Scale's leaderboard (Grok 4.5 was the first Grok with a SWE-bench Pro figure) |
-| grok-4-3 | terminalBench | 2026-09-22 | not on tbench.ai/Snorkel or BenchLM Terminal-Bench 2.1 boards |
+| grok-4-3 | terminalBench | 2026-09-22 | not on tbench.ai/Snorkel or BenchLM Terminal-Bench 2.1 boards — **superseded 2026-11-13: filled (41.95)** |
 | grok-4-3 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
 | gemini-3-5-flash | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
 | qwen3-8-max | gdpvalAA | 2026-09-22 | Artificial Analysis' board has moved to GDPval-AA v2.1 (rescaled — Fable 5.1 max reads 1735 there against the 1853 v2 figure on record), and no v2 rating for this model is retrievable; not filled to avoid mixing scales. v2.1 rating seen 2026-09-22: 1596 — migrate the key before using it |
@@ -823,7 +823,7 @@ Stats-filler sweep on 2026-09-22 (first pass over the new `sweBenchPro` / `gdpva
 | minimax-m3 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
 | seed-2-0-pro | sweBenchPro | 2026-09-22 | not in the Seed2.0 model card tables as previously read; not on Scale's leaderboard |
 | seed-2-0-pro | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
-| seed-2-1-pro | sweBenchPro | 2026-09-22 | ByteDance published only qualitative "leading scores on SWE-Pro"; llm-stats' 57.5 is untraceable to a ByteDance table |
+| seed-2-1-pro | sweBenchPro | 2026-09-22 | ByteDance published only qualitative "leading scores on SWE-Pro"; llm-stats' 57.5 is untraceable to a ByteDance table — **superseded 2026-11-13: filled (57.5)** |
 | seed-2-1-pro | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
 | ernie-5-0 | sweBenchPro | 2026-09-22 | same |
 | ernie-5-0 | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
@@ -863,7 +863,7 @@ Stats-filler sweep on 2026-09-22 (first pass over the new `sweBenchPro` / `gdpva
 | glm-5-3-flash | sweBenchPro | 2026-09-22 | Z.ai's six-benchmark launch table (DeepSWE v1.1, AutomationBench, GDPval-AA v2, Terminal Bench 2.1, Toolathlon, multimodal) has no SWE-bench Pro row; HF card footnotes name the benchmark but no figure is readable; not on Scale's leaderboard |
 | glm-5-3-flash | hle | 2026-09-22 | only "HLE w/ tools 55.3" circulates (Qubrid/eesel relaying Z.ai); no no-tools figure, and the tracked cell records no-tools scores |
 | glm-5-3-flash | gdpvalAA | 2026-09-22 | Artificial Analysis' board has moved to GDPval-AA v2.1 (rescaled — Fable 5.1 max reads 1735 there against the 1853 v2 figure on record), and no v2 rating for this model is retrievable; not filled to avoid mixing scales. v2.1 rating seen 2026-09-22: 1641 — migrate the key before using it |
-| glm-5-3-flash | arcAgi2 | 2026-09-22 | no GLM-5.3-Flash entry in ARC Prize's results index (17 systems as of 2026-09-22) |
+| glm-5-3-flash | arcAgi2 | 2026-09-22 | no GLM-5.3-Flash entry in ARC Prize's results index (17 systems as of 2026-09-22) — **superseded 2026-11-13: filled (65.8)** |
 | glm-5-3-flash | knowledgeCutoff | 2026-09-22 | not stated in the HF model card, Z.ai launch coverage, or AA's model page |
 | hy4-preview | gdpvalAA | 2026-09-22 | not on Artificial Analysis' GDPval-AA board (now v2.1) and no v2 rating ever published; older/uncovered model |
 | deepseek-v4-pro-0813 | sweBenchPro | 2026-09-22 | DeepSeek's 0813 table (Terminal-Bench 2.1, DeepSWE, NL2Repo, CyberGym, AutomationBench) omits SWE Pro; the HF V4-Pro card's 55.4 is the April V4-Pro-Max figure, already recorded on deepseek-v4 |
@@ -919,7 +919,7 @@ New-model-release sweep on 2026-09-22 (window widened to 2026-09-11 through 2026
 | gpt-6-luna | sweBench | 2026-09-23 | OpenAI has not published SWE-bench Verified since February 2026; no launch-table or third-party figure |
 | gpt-6-luna | sweBenchPro | 2026-09-23 | not on Scale's SWE-bench Pro public board as of 2026-09-23; OpenAI reports DeepSWE v1.1 66.6% instead |
 | gpt-6-luna | terminalBench | 2026-09-23 | only a Terminal-Bench 4.0 run exists (AA 13% at max), not the tracked 2.1 |
-| gpt-6-luna | lmarenaElo | 2026-09-23 | not on the arena.ai text board (last update 2026-09-13) the day after launch; re-check |
+| gpt-6-luna | lmarenaElo | 2026-09-23 | not on the arena.ai text board (last update 2026-09-13) the day after launch; re-check — **superseded 2026-11-13: filled (1441)** |
 | gpt-6-luna | gdpvalAA | 2026-09-23 | AA rates it 1367 (max) / 1218 (medium) on GDPval-AA v2.1 — a different scale from the v2 this key records; migrate the key before using it |
 | gpt-6-luna | mmluPro / aime | 2026-09-23 | retired benchmarks; not in OpenAI's launch table |
 | laya | gpqaDiamond, sweBench, sweBenchPro, terminalBench, hle, lmarenaElo, gdpvalAA, arcAgi2, mmluPro, aime | 2026-09-23 | not applicable, not merely unpublished: Laya is a typed-decision encoder (ModernBERT/mmBERT + decision head) that cannot generate text, so no generative benchmark can be run on it; the model card and independent tests (orcarouter, flowtivity, eesel) report classification accuracy and calibration only |
@@ -932,7 +932,7 @@ New-model-release sweep on 2026-09-22 (window widened to 2026-09-11 through 2026
 | mimo-v2-6-pro | gdpvalAA | 2026-09-24 | 1673 on GDPval-AA v2.1 (Xiaomi Table 3 and AA's payload agree) — a different scale from the v2 this key records; migrate the key before using it |
 | mimo-v2-6-pro | knowledgeCutoff | 2026-09-24 | unpublished on the HF card, tech report and AA (knowledgeCutoffDate null); the "December 2024" line on the mimo.mi.com model page is a sample system prompt, not a spec |
 | mimo-v2-6-flash | gpqaDiamond, sweBench, sweBenchPro, hle, arcAgi2, mmluPro, aime | 2026-09-24 | not in the Hugging Face card, tech report Table 3 or mimo.mi.com; Artificial Analysis has no Flash listing so no independent HLE; not on Scale's SWE-bench Pro board or the ARC Prize leaderboard |
-| mimo-v2-6-flash | lmarenaElo | 2026-09-24 | not on the arena.ai text board (last update 2026-09-13); re-check |
+| mimo-v2-6-flash | lmarenaElo | 2026-09-24 | not on the arena.ai text board (last update 2026-09-13); re-check — **superseded 2026-11-13: filled (1448)** |
 | mimo-v2-6-flash | gdpvalAA | 2026-09-24 | Xiaomi's Table 3 has no GDPval-AA entry for Flash and AA has not run it; the key also records v2 while AA now publishes v2.1 |
 | mimo-v2-6-flash | costPerTask | 2026-09-24 | no Artificial Analysis listing for MiMo-V2.6-Flash as of launch week (AA payload carries only mimo-v2-6-pro); re-check |
 | mimo-v2-6-flash | knowledgeCutoff | 2026-09-24 | unpublished on the HF card and tech report; the "December 2024" line on the mimo.mi.com model page is a sample system prompt |
@@ -960,7 +960,7 @@ New-model release run on 2026-10-01 (Gemini 4 Argon, GPT-6.1 Sol). Sources: Goog
 | gpt-6-1-sol | gpqaDiamond | 2026-10-01 | not in OpenAI's launch material or on AA's pages; an 88% figure on aggregator sites is untraceable to a primary source |
 | gpt-6-1-sol | sweBench / sweBenchPro | 2026-10-01 | OpenAI reports DeepSWE v1.1 instead; not on Scale's SWE-bench Pro board |
 | gpt-6-1-sol | terminalBench | 2026-10-01 | only Terminal-Bench 4.0 (AA 56% max) and Terminal-Bench Science 0.1 exist, not the tracked 2.1 |
-| gpt-6-1-sol | lmarenaElo | 2026-10-01 | gpt-6.1-sol-max was added to Arena's Agent Arena on 2026-09-30 but has no row on the text board (2026-09-30 update) — re-check |
+| gpt-6-1-sol | lmarenaElo | 2026-10-01 | gpt-6.1-sol-max was added to Arena's Agent Arena on 2026-09-30 but has no row on the text board (2026-09-30 update) — re-check — **superseded 2026-11-13: filled (1481)** |
 | gpt-6-1-sol | gdpvalAA | 2026-10-01 | AA rates it 1575 (max) on GDPval-AA v2.1 — a different scale from v2; migrate the key before using it |
 | gpt-6-1-sol | arcAgi2 | 2026-10-01 | no arcprize.org results page; a 27% figure on aggregator sites is untraceable to ARC Prize — re-check — **superseded 2026-10-08: arcprize.org/results/openai-gpt-6-1-sol gives 94.2% at max; filled** |
 | gpt-6-1-sol | mmluPro / aime | 2026-10-01 | retired benchmarks; not in OpenAI's launch material |
@@ -999,8 +999,8 @@ New-model-release research on 2026-10-04, scoped to `claude-sonnet-5-5`. Sources
 | mistral-large-4 | gpqaDiamond | 2026-10-07 | not in Mistral's announcement (mistral.ai/news/mistral-large-4) or docs page; Artificial Analysis lists GPQA as null for this model |
 | mistral-large-4 | sweBench | 2026-10-07 | Mistral reported DeepSWE v1.1 and SWE-Atlas-QnA, not SWE-bench Verified (announcement read directly) |
 | mistral-large-4 | sweBenchPro | 2026-10-07 | not in the announcement; Mistral says additional benchmarks come with the weights by end of October |
-| mistral-large-4 | terminalBench | 2026-10-07 | Mistral's figure is Terminal-Bench 4 (28.3%) and AA's is Terminal-Bench 4.0 (26.8%); AA lists terminalBench21 as null — no 2.1 figure |
-| mistral-large-4 | lmarenaElo | 2026-10-07 | not on arena.ai's text leaderboard one day into the preview; re-check |
+| mistral-large-4 | terminalBench | 2026-10-07 | Mistral's figure is Terminal-Bench 4 (28.3%) and AA's is Terminal-Bench 4.0 (26.8%); AA lists terminalBench21 as null — no 2.1 figure — **superseded 2026-11-13: filled (90.2)** |
+| mistral-large-4 | lmarenaElo | 2026-10-07 | not on arena.ai's text leaderboard one day into the preview; re-check — **superseded 2026-11-13: filled (1420)** |
 | mistral-large-4 | gdpvalAA | 2026-10-07 | Artificial Analysis lists GDPval-AA v2.1 (1424), not the tracked v2; kept in notes |
 | mistral-large-4 | arcAgi2 | 2026-10-07 | no ARC Prize entry found |
 | mistral-large-4 | mmluPro | 2026-10-07 | retired key; not reported |
@@ -1040,9 +1040,9 @@ Stats-filler sweep on 2026-10-06 (daily sweep, unattended). WebFetch was denied 
 | model-id | field | checked | reason |
 |---|---|---|---|
 | gpt-6-1-sol | arcAgi2 | 2026-10-06 | ARC Prize's own X post (x.com/arcprize/status/2105391846067249649) gives ARC-AGI-2 94.2% at $0.25/task but names no reasoning effort, and no arcprize.org/results/openai-gpt-6-1-sol page surfaced to show the per-effort breakdown; this site records max effort, and ARC's headline is not always the max-effort run (Opus 5.5's headline 93.3% was high; max is 91.7%) — re-check for the results page |
-| gpt-6-1-sol | lmarenaElo | 2026-10-06 | Arena has published Agent Arena (#5) and Code Arena: WebDev results for GPT-6.1 Sol (Max) but no text-board figure; Arena's 2026-10-01 post said text scores were "coming soon" — re-check |
+| gpt-6-1-sol | lmarenaElo | 2026-10-06 | Arena has published Agent Arena (#5) and Code Arena: WebDev results for GPT-6.1 Sol (Max) but no text-board figure; Arena's 2026-10-01 post said text scores were "coming soon" — re-check — **superseded 2026-11-13: filled (1481)** |
 | gpt-6-sol | terminalBench | 2026-10-06 | conflicting: one search excerpt of vals.ai/models/openai_gpt-6-sol gives Terminal-Bench 2.1 83.15% (#6/73), but the same 83.15% is credited to Claude Sonnet 5.5 on vals.ai/models/anthropic_claude-sonnet-5-5; excerpts can't settle which is right — re-check with direct page access |
-| gpt-6-luna | lmarenaElo | 2026-10-06 | re-checked: Arena has published Agent Arena (#23) and Code Arena: WebDev (1593) figures for GPT-6 Luna (Max) but no text-board score — re-check |
+| gpt-6-luna | lmarenaElo | 2026-10-06 | re-checked: Arena has published Agent Arena (#23) and Code Arena: WebDev (1593) figures for GPT-6 Luna (Max) but no text-board score — re-check — **superseded 2026-11-13: filled (1441)** |
 | mimo-v2-6-pro | lmarenaElo | 2026-10-06 | re-checked: one search summary gave a text-arena score of 1480 but tied it to no source page; Arena's own posts cover only Code Arena: WebDev (1628, AutoEval) and Agent Arena — unverified, re-check |
 | kolibri-1 | lmarenaElo | 2026-10-06 | re-checked: no arena.ai listing or Arena post found |
 | gemini-4-argon | contextWindow | 2026-10-06 | re-checked: Google still has not published an input context window (coverage stresses only the 1M *output* limit); AA's 1M remains unofficial and no Gemini API model page exists — re-check |
@@ -1074,14 +1074,14 @@ Daily sweep 2026-10-08 (unattended; WebFetch denied except AWS and Claude docs, 
 | model-id | field | checked | reason |
 |---|---|---|---|
 | claude-haiku-5-5 | mmluPro, gpqaDiamond, sweBench, aime | 2026-10-08 | not in Anthropic's launch material; Anthropic has stopped reporting these in 5.x-era cards |
-| claude-haiku-5-5 | sweBenchPro | 2026-10-08 | the research agent quoted 64.8% from a system-card excerpt, but two anthropic.com-scoped searches surfaced the HLE figure and not this one; left null until the system card PDF can be read — re-check |
+| claude-haiku-5-5 | sweBenchPro | 2026-10-08 | the research agent quoted 64.8% from a system-card excerpt, but two anthropic.com-scoped searches surfaced the HLE figure and not this one; left null until the system card PDF can be read — re-check — **superseded 2026-11-13: filled (64.8)** |
 | claude-haiku-5-5 | terminalBench | 2026-10-08 | Anthropic's figure is Terminal-Bench 4.0, not the tracked 2.1; no 2.1 run found |
 | claude-haiku-5-5 | gdpvalAA | 2026-10-08 | only a GDPval-AA v2.1 figure is reported; the tracked key is v2 |
-| claude-haiku-5-5 | lmarenaElo | 2026-10-08 | not on the arena.ai text board one day after launch — re-check |
+| claude-haiku-5-5 | lmarenaElo | 2026-10-08 | not on the arena.ai text board one day after launch — re-check — **superseded 2026-11-13: filled (1421)** |
 | claude-haiku-5-5 | arcAgi2 | 2026-10-08 | no arcprize.org results page one day after launch — re-check — **superseded 2026-10-27: ARC Prize verified result published — filled** |
-| gpt-6-1-sol | lmarenaElo | 2026-10-08 | conflicting: excerpts attribute "gpt-6.1-sol-max 1483 ±11" to both the default and the no-style-control text board, and a mirror shows 1445.6; default-board figure not pinned — re-check |
-| gpt-6-luna | lmarenaElo | 2026-10-08 | arena.ai's changelog says gpt-6-luna-max joined the Text Arena (2026-09-30), but only a Coding-category score surfaced — re-check |
-| grok-4-7 | lmarenaElo | 2026-10-08 | arena.ai's changelog says grok-4.7-xhigh joined the Text Arena (2026-09-30), but no score surfaced — re-check |
+| gpt-6-1-sol | lmarenaElo | 2026-10-08 | conflicting: excerpts attribute "gpt-6.1-sol-max 1483 ±11" to both the default and the no-style-control text board, and a mirror shows 1445.6; default-board figure not pinned — re-check — **superseded 2026-11-13: filled (1481)** |
+| gpt-6-luna | lmarenaElo | 2026-10-08 | arena.ai's changelog says gpt-6-luna-max joined the Text Arena (2026-09-30), but only a Coding-category score surfaced — re-check — **superseded 2026-11-13: filled (1441)** |
+| grok-4-7 | lmarenaElo | 2026-10-08 | arena.ai's changelog says grok-4.7-xhigh joined the Text Arena (2026-09-30), but no score surfaced — re-check — **superseded 2026-11-13: filled (1443)** |
 | kolibri-1 | lmarenaElo | 2026-10-08 | still no Kolibri listing on arena.ai five days after release — re-check |
 | gemini-4-argon | contextWindow, knowledgeCutoff | 2026-10-08 | re-checked: Google still publishes no model card, context or cutoff (Fairwind-only access) — re-check at broader rollout |
 | gemini-4-argon | arcAgi2 | 2026-10-08 | re-checked: no arcprize.org results page for Argon — **superseded 2026-10-27: ARC Prize verified result published — filled** |
@@ -1103,10 +1103,10 @@ Stats-filler sweep on 2026-10-13 (re-check of "re-check" rows from 2026-09-22 �
 | model-id | field | checked | reason |
 |---|---|---|---|
 | claude-opus-5-5 | lmarenaElo | 2026-10-13 | now listed on arena.ai's text board as claude-opus-5.5-high, but the only scores seen are secondary and they disagree. 1509 ±12 comes from cryptobriefing.com and remio.ai, relaying Arena's X post of 2026-09-26. 1507 ±8 is attributed to the 2026-10-08 board update. Arena's changelog dates the Text Arena addition to 2026-10-01, which doesn't fit a 09-26 debut. Left null; a direct read of arena.ai/leaderboard/text would settle it |
-| gpt-6-luna | lmarenaElo | 2026-10-13 | arena.ai changelog (excerpt) confirms gpt-6-luna-max was added to the Text Arena (undated entry, late Sept or early Oct), but no score surfaced in any excerpt. Only Agent Arena (#23) and Coding-category figures found. Re-check with a direct read |
-| grok-4-7 | lmarenaElo | 2026-10-13 | arena.ai changelog (excerpt) confirms grok-4.7-xhigh was added to the Text Arena, but no score surfaced. Only Agent Arena (#16, +3.96%) found. Re-check with a direct read |
-| gpt-6-1-sol | lmarenaElo | 2026-10-13 | still no Text Arena score in any excerpt. Agent Arena only (#5, 11.23% net improvement, 2026-10-02) |
-| mistral-large-4 | lmarenaElo | 2026-10-13 | arena.ai changelog (excerpt) says mistral-large-4 was added to the Text Arena on 2026-10-08, but no score surfaced. lmmarketcap.com's "1280" looks auto-generated and was rejected |
+| gpt-6-luna | lmarenaElo | 2026-10-13 | arena.ai changelog (excerpt) confirms gpt-6-luna-max was added to the Text Arena (undated entry, late Sept or early Oct), but no score surfaced in any excerpt. Only Agent Arena (#23) and Coding-category figures found. Re-check with a direct read — **superseded 2026-11-13: filled (1441)** |
+| grok-4-7 | lmarenaElo | 2026-10-13 | arena.ai changelog (excerpt) confirms grok-4.7-xhigh was added to the Text Arena, but no score surfaced. Only Agent Arena (#16, +3.96%) found. Re-check with a direct read — **superseded 2026-11-13: filled (1443)** |
+| gpt-6-1-sol | lmarenaElo | 2026-10-13 | still no Text Arena score in any excerpt. Agent Arena only (#5, 11.23% net improvement, 2026-10-02) — **superseded 2026-11-13: filled (1481)** |
+| mistral-large-4 | lmarenaElo | 2026-10-13 | arena.ai changelog (excerpt) says mistral-large-4 was added to the Text Arena on 2026-10-08, but no score surfaced. lmmarketcap.com's "1280" looks auto-generated and was rejected — **superseded 2026-11-13: filled (1420)** |
 | gemini-4-argon | contextWindow | 2026-10-13 | still undisclosed by Google. Every 1M figure traces to Artificial Analysis or Arena, and one outlet reports an unconfirmed 2M. Still no Gemini API model page or model card |
 | gemini-4-argon | knowledgeCutoff | 2026-10-13 | still unpublished (no model card; postcutoff.com and eesel.ai both say Google has not disclosed it) |
 | gemini-4-argon | arcAgi2 | 2026-10-13 | no arcprize.org results entry found; access is still limited to the Fairwind trusted-tester programme — **superseded 2026-10-27: ARC Prize verified result published — filled** |
@@ -1159,7 +1159,7 @@ Stats-filler sweep on 2026-10-13 (re-check of "re-check" rows from 2026-09-22 �
 | d1-omni-600m | gpqaDiamond / sweBench / sweBenchPro / terminalBench / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-10-20 | same as d1-3b |
 | helixworld | gpqaDiamond / sweBench / sweBenchPro / terminalBench / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-10-20 | not applicable: interactive world model (video + audio generator); Noiz reports only HelixBench / WBench |
 | helixworld | contextWindow / maxOutput / pricing / knowledgeCutoff / costPerTask | 2026-10-20 | not applicable: no token interface, no public API or price, no AA Intelligence Index run |
-| mistral-large-4 | lmarenaElo | 2026-10-20 | re-checked: Arena's changelog confirms Text, Agent and WebDev listings, and Arena's own post gives WebDev 1534 (#45), but no first-party Text score surfaced; BenchLeader's "Arena Text 1432 (#106)" and Lindy's "#112 on 10-13" are third-party relays. Arena says open-model ranking follows the end-of-October weights; re-check then |
+| mistral-large-4 | lmarenaElo | 2026-10-20 | re-checked: Arena's changelog confirms Text, Agent and WebDev listings, and Arena's own post gives WebDev 1534 (#45), but no first-party Text score surfaced; BenchLeader's "Arena Text 1432 (#106)" and Lindy's "#112 on 10-13" are third-party relays. Arena says open-model ranking follows the end-of-October weights; re-check then — **superseded 2026-11-13: filled (1420)** |
 | kolibri-1 | lmarenaElo | 2026-10-20 | re-checked: still no Kolibri listing on arena.ai or in the Arena changelog |
 | gpt-4-1 | costPerTask | 2026-10-20 | AA model-page excerpts give speed and price but no cost to run the Intelligence Index; AA's index figures for it conflict across versions (13 estimated vs 19/20), so no single cost anchor |
 | gemini-2-5-pro | costPerTask | 2026-10-20 | already filled (0.1978) — not touched; AA excerpts now give a $0.23–0.33 per-task range across snapshots, possibly from a newer index version. Flagged only, no correction proposed |
@@ -1168,7 +1168,7 @@ Stats-filler sweep on 2026-10-13 (re-check of "re-check" rows from 2026-09-22 �
 | minimax-m3-1-flash | lmarenaElo | 2026-10-20 | only the Code Arena WebDev listing (1588) exists; no text-arena listing yet |
 | minimax-m3-1-flash | knowledgeCutoff | 2026-10-20 | not in the blog, docs or AA excerpts |
 | minimax-m3-1-flash | gdpvalAA | 2026-10-20 | AA lists v2.1-era evals only; no v2 figure |
-| mercury-3 | gpqaDiamond | 2026-10-21 | Inception's table (medium effort) gives 89.23, but only as copied by MarkTechPost, BenchLM, cellcog.ai and FourWeekMBA. Two domain-restricted searches of inceptionlabs.ai returned the post without the table, and WebFetch was denied. A direct read of the blog would settle it. |
+| mercury-3 | gpqaDiamond | 2026-10-21 | Inception's table (medium effort) gives 89.23, but only as copied by MarkTechPost, BenchLM, cellcog.ai and FourWeekMBA. Two domain-restricted searches of inceptionlabs.ai returned the post without the table, and WebFetch was denied. A direct read of the blog would settle it. — **superseded 2026-11-13: filled (89.23)** |
 | mercury-3 | sweBench / sweBenchPro / terminalBench / hle / arcAgi2 / mmluPro / aime | 2026-10-21 | Not reported. Inception's 12-test table covers GPQA Diamond, IFBench, SWE-Bench Atlas, MultiChallenge, MRCR v2 and DeepSWE v1, none of them tracked apart from GPQA. |
 | mercury-3 | lmarenaElo | 2026-10-21 | No arena.ai text listing found. Only a Design Arena game-dev Elo (1204) appears, which isn't comparable. |
 | mercury-3 | gdpvalAA / costPerTask | 2026-10-21 | No Artificial Analysis page yet (AA lists Mercury 2 / 2.5 only, per excerpts the day after launch) |
@@ -1203,10 +1203,10 @@ Stats-filler sweep on 2026-10-27 (daily sweep, unattended). WebFetch was denied;
 
 | model-id | field | checked | reason |
 |---|---|---|---|
-| claude-haiku-5-5 | lmarenaElo | 2026-10-27 | Arena's changelog says "Claude Haiku 5.5 (High)" was added to Text Arena on 2026-10-22, but no Text score surfaced in arena.ai / news.lmarena.ai / x.com/arena excerpts; only Code Arena WebDev #30 (1587) and Agent Arena #27, neither of which is the tracked text Elo. Re-check |
+| claude-haiku-5-5 | lmarenaElo | 2026-10-27 | Arena's changelog says "Claude Haiku 5.5 (High)" was added to Text Arena on 2026-10-22, but no Text score surfaced in arena.ai / news.lmarena.ai / x.com/arena excerpts; only Code Arena WebDev #30 (1587) and Agent Arena #27, neither of which is the tracked text Elo. Re-check — **superseded 2026-11-13: filled (1421)** |
 | claude-sonnet-5-5 | arcAgi2 | 2026-10-27 | still no arcprize.org results page; ARC Prize has posted Opus 5.5, Haiku 5.5, Fable 5.1, Argon, Astra and DeepSeek 1017 but not Sonnet 5.5 |
 | muse-wonder | arcAgi2 | 2026-10-27 | no arcprize.org results page found; Arena lists Muse Wonder (Max) in Agent Arena only |
-| mistral-large-4 | lmarenaElo | 2026-10-27 | Arena's weekly post gives Agent Arena #43 only; still no first-party Text Arena score. Weights now due 2026-10-31 (HF "Upcoming release" ETA); re-check after |
+| mistral-large-4 | lmarenaElo | 2026-10-27 | Arena's weekly post gives Agent Arena #43 only; still no first-party Text Arena score. Weights now due 2026-10-31 (HF "Upcoming release" ETA); re-check after — **superseded 2026-11-13: filled (1420)** |
 | gemini-4-argon | sweBenchPro | 2026-10-27 | Scale's board now shows Argon only on SWE-Bench Pro **V2** (labs.scale.com/leaderboard/swe_bench_pro_public_v2: 99.22 ±0.45 full 642-task set, 92.16 hard 51-task subset, mini-swe-agent, high). V2 (2026-09-22) drops 89 invalid tasks and disables web tools, so it isn't the public split the key tracks. Not filled pending a benchmark-key decision |
 
 New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanbeige4-3-33b` (2026-10-25); its `gpt-6-1-terra` rows were dropped when merging, as main already carries that model and its own ledger rows. WebFetch was denied; findings rest on WebSearch excerpts restricted to openai.com, developers.openai.com, deploymentsafety.openai.com, docs.aws.amazon.com, artificialanalysis.ai, huggingface.co and the labs' X accounts.
@@ -1260,3 +1260,69 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | lfm3-1-7b | costPerTask / maxOutput / knowledgeCutoff | 2026-11-12 | no Artificial Analysis page (artificialanalysis.ai/models/lfm3-1-7b 404); card, blog and docs.liquid.ai give a combined 256K input+output window but no separate output cap or cutoff |
 | gemini-4-hydrogen | gpqaDiamond / sweBench / sweBenchPro / arcAgi2 / mmluPro / aime | 2026-11-13 | not in Google's blog, model card or evaluation PDF (gemini_4_hydrogen_model_evaluation.pdf); AA's model pages show no figure; no arcprize.org results page (404) |
 | gemini-4-hydrogen | terminalBench / hle / gdpvalAA | 2026-11-13 | Google reports Terminal-Bench 4.1 (57.0%) and 4.0, not 2.1, and HLE-Diamond 58.8% (AA subset); AA lists GDPval-AA v2.1 with no score, a different scale from v2 |
+| seed-2-1-pro | gpqaDiamond | 2026-11-13 | not found via primary source (checked: Seed2.1 Model Card PDF, which has SuperGPQA 70.8 only and no GPQA Diamond row; seed.bytedance.com/en/seed2_1; launch blog) |
+| seed-2-1-pro | hle | 2026-11-13 | not found via primary source. Model Card Table 11 reports 'HLE-Verified (no tool)' 42.9 and 'HLE-textonly (with Search)' 55.7, and neither is the standard full-set no-tools HLE, so both were rejected |
+| seed-2-1-pro | gdpvalAA | 2026-11-13 | Model Card's 'GDPval' 87.9 is OpenAI's GDPval win rate, not the Artificial Analysis GDPval-AA v2 Elo; not filled |
+| seed-2-1-pro | lmarenaElo | 2026-11-13 | not on arena.ai text leaderboard (Nov 11 2026 snapshot, ranks 1-152 visible; only Dola Seed 2.0 Pro 1456 listed). The 1539 is from Code Arena frontend, a different board |
+| seed-2-1-pro | sweBench | 2026-11-13 | not in Seed2.1 Model Card (SWE-bench Pro, SWE-Atlas and DeepSWE only) |
+| ling-3-1-flash | hle | 2026-11-13 | official HF card table lists HLE 37.44 but does not say whether it's no-tools or with-tools or name the judge. Comparison columns don't match the site's no-tools values (Opus 5 54.90 vs 56.3, GPT-5.6 Sol 49.50 vs 47.2, Kimi K3 46.90 vs 43.5), so it isn't clearly the same setting; left null |
+| ling-3-1-flash | gpqaDiamond / sweBench / arcAgi2 | 2026-11-13 | not in official HF card table (inclusionAI/Ling-3.1-flash) |
+| ling-3-1-flash | gdpvalAA | 2026-11-13 | HF card reports GDPval-AA v2.1 1673 only; key records v2 |
+| ling-3-1-flash | lmarenaElo | 2026-11-13 | not on arena.ai text leaderboard (Nov 11 2026, ranks 1-152 visible; no Ling entry) |
+| qwen3-8-omni-flash | hle | 2026-11-13 | Qwen3.8-Omni tech report (arXiv 2609.25611) Table 2 lists HLE 36.5 but footnote 6 says 'HLE: judged by GPT-4o' (not the official o3-mini judge) and tool use is unspecified; rejected as a non-comparable setting |
+| qwen3-8-omni-flash | terminalBench / sweBench / arcAgi2 / gdpvalAA | 2026-11-13 | not in arXiv 2609.25611 Table 2 (DeepSWE 1.1, SWE-bench Pro, SWE-bench Multilingual, NL2Repo, CoWorkBench, IFBench, GPQA, HLE, LCB v6 only) |
+| qwen3-8-omni-flash | lmarenaElo | 2026-11-13 | not on arena.ai text leaderboard (Nov 11 2026, ranks 1-152 visible) |
+| qwen3-8-max-0902 | gpqaDiamond / sweBench / terminalBench / hle / lmarenaElo / arcAgi2 | 2026-11-13 | still no snapshot-specific figures. Circulating GPQA 92.6, HLE 43.6 and TB 2.1 86.6 are the August Qwen3.8-Max table. arena.ai text board (Nov 11 2026) lists only 'Qwen3.8-Max' (1484), with no 0902 snapshot entry |
+| qwen3-7-flash | gpqaDiamond / sweBench / sweBenchPro / terminalBench / hle / lmarenaElo / arcAgi2 | 2026-11-13 | still no Alibaba benchmark publication (searched for a model card or HF card, none found). Not on arena.ai text board (Nov 11 2026, ranks 1-152 visible; only Qwen3.7-Max-Preview and Qwen3.7-Plus) |
+| mimo-v2-6-flash | gpqaDiamond / sweBench / sweBenchPro / hle / arcAgi2 / gdpvalAA | 2026-11-13 | re-checked XiaomiMiMo/MiMo-V2.6-Flash-RL and -MOPD HF cards: only Terminal Bench 2.1 (87.6, already recorded) and Terminal Bench 4.0 among relevant rows |
+| step-5-preview | sweBench / sweBenchPro / terminalBench / hle / arcAgi2 / gdpvalAA | 2026-11-13 | official HF card (stepfun-ai/Step-5-Preview) chart shows DeepSWE v1.1, StepCodeBench, ProgramBench, Terminal-Bench v4 33.3, ALE-CLI, GDPval-AA v2.1 1566 (sourced from AA), FrontierFinance and DRACO only. stepfun.com/step-5-preview didn't render via fetch |
+| glm-5-3 | gpqaDiamond / sweBench / sweBenchPro / hle / arcAgi2 | 2026-11-13 | HF model card (huggingface.co/zai-org/GLM-5.3) has no GPQA, SWE-bench Verified/Pro, ARC-AGI or no-tools HLE rows (HLE w/ tools 62.5 only); no arcprize.org/results page (zai-glm-5-3 404, not on leaderboard). Note: arena.ai 2026-11-11 board shows GLM-5.3 (Max) at 1482 vs 1483 on record (live drift, not changed) |
+| glm-5-3-flash | gpqaDiamond / sweBench / sweBenchPro / hle | 2026-11-13 | re-checked the HF card README, its bench_53.png chart (Terminal Bench 2.1, DeepSWE, ALE, AutomationBench, HLE w/ tools 55.3, GDPVal-AA v2) and .eval_results YAML: none of these rows; HLE is with-tools only |
+| kimi-k2-8-preview | gpqaDiamond / sweBench / sweBenchPro / terminalBench / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-11-13 | still no Moonshot model card or benchmark table (no moonshotai HF repo for K2.8); not on arena.ai text board (2026-11-11) or the ARC Prize leaderboard |
+| kimi-k3-1-pro | sweBench / sweBenchPro / terminalBench / gdpvalAA / arcAgi2 | 2026-11-13 | no change since 2026-11-06: not on the ARC Prize leaderboard; HF card still gives only Terminal-Bench 4.0 and GDPval-AA v2.1 |
+| deepseek-v4-1-flash-1017 | gpqaDiamond / sweBench / sweBenchPro / terminalBench / gdpvalAA | 2026-11-13 | HF model card (deepseek-ai/DeepSeek-V4.1-Flash-1017) table: HLE w/o tools, Terminal-Bench 4.0, DeepSWE, ProgramBench, NL2Repo, AutomationBench, ALE, Apex, Chartography, BabyVision, ZeroBench only |
+| deepseek-v4-1-flash-1017 | lmarenaElo | 2026-11-13 | arena.ai text board (2026-11-11) lists only DeepSeek-V4.1-Flash-20260910 (Max) 1475, not the 1017 checkpoint |
+| minimax-m3-1-flash | gpqaDiamond / sweBench / sweBenchPro / terminalBench / hle / arcAgi2 / gdpvalAA | 2026-11-13 | HF model card (MiniMaxAI/MiniMax-M3.1-Flash) gives Terminal Bench 4.0 38.1 (not 2.1), HLE without tools 43.4 but on the text-only subset (2,158 q), not the full set, plus GDP.pdf AA 20.8 (not GDPval-AA); no GPQA/SWE-bench/ARC rows; not on ARC Prize leaderboard |
+| minimax-m3-1-flash | lmarenaElo | 2026-11-13 | not on arena.ai text board (2026-11-11 update; visible ranks 1-152) |
+| fugu-max | hle | 2026-11-13 | Sakana's chart reports 'HLE (text)' 44.7, the text-only subset, not the full set, so not filled |
+| fugu-max | sweBench / sweBenchPro / lmarenaElo / gdpvalAA / arcAgi2 | 2026-11-13 | Sakana chart's ten panels (TB2.1, HLE text, DeepSWE, CharXiv, Chartography, GDP.pdf, GPQA-D, AutomationBench, AA-LCR, SWEFish) have none of these; not on arena.ai (2026-11-11) or ARC Prize |
+| fugu-ultra-v2 | hle | 2026-11-13 | Sakana's chart reports 'HLE (text)' 56.3, the text-only subset, not the full set, so not filled |
+| fugu-ultra-v2 | terminalBench / sweBench / sweBenchPro / lmarenaElo / gdpvalAA / arcAgi2 | 2026-11-13 | the Fugu Ultra v2 chart's eight panels (HLE text, GDP.pdf, Chartography, SWEFish, DeepSWE, ProgramBench, GPQAD, Toolathon) have none of these; not on arena.ai (2026-11-11) or ARC Prize |
+| qwen3-5 | arcAgi2 | 2026-11-13 | re-checked: still not on arcprize.org/leaderboard (only Qwen3.8-27B listed) |
+| qwen3-5 | terminalBench | 2026-11-13 | Alibaba's card reports 'Terminal Bench 2' 52.5 (v2.0, not 2.1 — not comparable); not on Vals AI's Terminal-Bench 2.1 board |
+| qwen3-5 | sweBenchPro | 2026-11-13 | still not reported on Alibaba's model card |
+| grok-4-3 | hle | 2026-11-13 | conflicting third-party figures: BenchLM relays an Artificial Analysis independent run at 37.2% and a separate 'HLE' 35% (LLMBase also 35.0%); AA's own pages now run Index v5 and no longer display the HLE score — unresolvable |
+| grok-4-3 | gdpvalAA | 2026-11-13 | AA's 2026-04-30 launch article gives GDPval-AA Elo 1500, but that predates the v2 rescale (Intelligence Index v4.1, 2026-06-16), so it is a v1 figure; no v2 rating on AA or the llmlearner GDPval-AA v2 board |
+| grok-4-3 | arcAgi2 | 2026-11-13 | re-checked: not on arcprize.org/leaderboard (Grok 4.20, 4.5, 4.6, 4.7 listed; 4.3 not) |
+| mistral-small-4 | hle | 2026-11-13 | conflicting third-party figures: BenchLM relays an Artificial Analysis run at 9.9%, Design for Online 9.5%, Compute Prices 3.8%; AA's current page (Index v5) no longer shows HLE — unresolvable |
+| mistral-small-4 | sweBench | 2026-11-13 | re-checked: not on Vals AI's SWE-bench Verified board; Mistral's card cites LiveCodeBench/AA-LCR/AIME25 only |
+| mistral-small-4 | terminalBench | 2026-11-13 | re-checked: not on Vals AI's Terminal-Bench 2.1 board |
+| mistral-small-4 | arcAgi2 | 2026-11-13 | re-checked: not on arcprize.org/leaderboard |
+| nemotron-3-super | gpqaDiamond | 2026-11-13 | re-checked NVIDIA's technical report: post-trained table says only 'GPQA (no tools) 79.23' / 'GPQA (with tools) 82.70' (citing Rein et al.), while the base-model table explicitly says 'GPQA-Diamond' — split not stated for the post-trained figure; BenchLM's AA-GPQA board has no Nemotron 3 Super entry |
+| nemotron-3-super | terminalBench | 2026-11-13 | NVIDIA reports Terminal Bench Core 2.0 (31.00) and hard subset (25.78) — v2.0, not 2.1; not on Vals AI's Terminal-Bench 2.1 board |
+| nemotron-3-super | lmarenaElo | 2026-11-13 | re-checked: no Nemotron 3 Super entry in arena.ai Text leaderboard's visible rows (only Nemotron 3 Ultra and 3.5 Super VL); a BenchLM '1260' figure could not be traced to arena.ai |
+| nemotron-3-super | arcAgi2 | 2026-11-13 | re-checked: not on arcprize.org/leaderboard (only Nemotron 3.5 Super VL) |
+| ernie-5-1 | gpqaDiamond / sweBench / hle / terminalBench / arcAgi2 | 2026-11-13 | re-checked: Baidu still publishes no exact figures; Artificial Analysis has no ERNIE 5.1 page (404); not on Vals AI SWE-bench/Terminal-Bench 2.1 boards or arcprize.org; only an unreliable French blog (ayinedjimi-consultants.fr) gives GPQA 88.1 / SWE-bench 79.3, uncorroborated |
+| mistral-large-4 | gpqaDiamond / sweBench / sweBenchPro / hle / arcAgi2 | 2026-11-13 | not in Mistral's open-weights post (mistral.ai/news/mistral-large-4-oss), HF card or technical report Tables 1-6. The report gives HLE-Diamond (AA) 17.3%, a different benchmark. SWE-bench Verified appears only in ablation figures for intermediate checkpoints, not the final model. Thinking Machines' Inkling 2 Small card lists a GPQA figure for ML4, but it is a third-party run and not used |
+| mistral-large-4 | gdpvalAA | 2026-11-13 | the report and blog list no GDPval-AA. AA's 1424 is v2.1, not the tracked v2 |
+| inkling-2-small | hle | 2026-11-13 | the model card (thinkingmachines.ai/model-card/inkling-2-small/) reports HLE-Diamond 28.7% and 'HLE (text only)' 44.1% with no tool setting. Neither is the full HLE, and text-only subsets are nulled site-wide |
+| inkling-2-small | sweBench / sweBenchPro / lmarenaElo / gdpvalAA | 2026-11-13 | the model card has no SWE-bench Verified. SWE-bench Pro appears only as v2 Hard 86.3% / v2 Full 97.7%, not the public split. Arena entries are DesignArena and Code Arena (WebDev) 1653, not Text Arena. GDPval-AA is v2.1 (1630). Absent from the visible arena.ai Text board (2026-11-11, top ~151 of 421); the remaining rows were not readable (Cloudflare) |
+| mercury-3 | gdpvalAA / sweBench / sweBenchPro / terminalBench / hle / arcAgi2 | 2026-11-13 | the benchmark-table image on Inception's launch post has an unversioned lab-run 'GDPval (Elo)' 1,237.2, plus SWE-Bench Atlas, DeepSWE v1, AA-LCR, MRCR v2, tau3-bench, MultiChallenge, IFBench, BrowseComp+ and DeepSearchQA. None of these is a tracked key |
+| mercury-3 | lmarenaElo | 2026-11-13 | absent from the visible arena.ai Text board (updated 2026-11-11, top ~151 of 421 rows); the remaining rows were not readable (Cloudflare) |
+| flint | gpqaDiamond / hle / arcAgi2 | 2026-11-13 | HF card README and benchmark chart (assets/flint_benchmarks_nvfp4.png) read directly. They cover only Terminal-Bench 2.1, SWE-bench Pro v2, SWE-bench Verified, LiveCodeBench v6, IFBench and IFEval |
+| laguna-xs-2-1 | terminalBench | 2026-11-13 | Recursive's Flint chart gives Laguna XS 2.1 a Terminal-Bench 2.1 score of 24.7%, marked † (measured internally by Recursive). That is a third-party run, not poolside's own, so it is not used. poolside still reports only TB 2.0 |
+| raon-1-mini-preview | sweBenchPro / terminalBench / hle / arcAgi2 / lmarenaElo / gdpvalAA | 2026-11-13 | HF card re-read: still only 'Terminal-Bench Lite' 47.0, and a 'GDPVal' 66.0 judge score (not an Elo); none of the other keys are reported |
+| atria-dawn-preview | gpqaDiamond / sweBench / hle / arcAgi2 / lmarenaElo / gdpvalAA | 2026-11-13 | HF card re-read: unchanged (only SWE-bench Pro 59.6, TB 2.1 78.3 and an unversioned 'GDPval' 1583). Absent from the visible arena.ai Text board (2026-11-11) |
+| command-a-plus / laguna-s-2-1 / laguna-xs-2-1 / soofi-s-30b-a3b / mach-1-additive-35b | lmarenaElo | 2026-11-13 | absent from the visible arena.ai Text board (updated 2026-11-11, top ~151 of 421 rows); the remaining rows were not readable (Cloudflare). Other keys were not re-researched: no new primary publication was found and the existing ledger rows stand |
+| gpt-6-1-terra | lmarenaElo | 2026-11-13 | not found via primary source (checked: arena.ai text board dated 2026-11-11, ranks 1-151 visible, no GPT-6.1 Terra row; Arena changelog lists Terra only on Code WebDev (Max, 10-27) and Agent (Medium, 11-12), no Text entry) |
+| gpt-6-1-terra | arcAgi2 | 2026-11-13 | not found via primary source (checked: arcprize.org/results index and leaderboard have no entry; arcprize.org/results/openai-gpt-6-1-terra returns 404) |
+| gpt-6-1-sol | gpqaDiamond / sweBenchPro / hle | 2026-11-13 | not found via primary source (checked: deploymentsafety.openai.com/gpt-6-1-sol has none of these; not on labs.scale.com SWE-Bench Pro public board; not on lastexam.ai) |
+| gpt-6-luna | sweBenchPro | 2026-11-13 | not found via primary source (checked: labs.scale.com SWE-Bench Pro public board has no GPT-6.x rows; Anthropic's Haiku 5.5 card shows '-' for Luna) |
+| grok-4-7 | gpqaDiamond / hle / sweBenchPro | 2026-11-13 | not found via primary source (checked: docs.x.ai grok-4.7 page has no benchmarks; not on labs.scale.com SWE-Bench Pro public board; not on lastexam.ai) |
+| gemini-4-argon | gpqaDiamond / hle / sweBench | 2026-11-13 | not found via primary source (checked: DeepMind model card reports only Terminal-Bench 4.0, TB Science 0.1, DeepSWE v1.1, FrontierSWE v2; evaluation PDF links no GPQA/HLE/SWE-bench Verified; not on lastexam.ai). Note: Arena text board now reads 1522 vs 1525 on record (normal drift, not changed) |
+| muse-spark-1-2 | arcAgi2 / sweBenchPro | 2026-11-13 | not found via primary source (checked: arcprize.org/results index lists only Muse Spark Open for Meta, meta-muse-spark-1-2 returns 404; labs.scale.com SWE-Bench Pro public board lists Muse Spark 1.1 and Muse Spark only). Note: Arena text board now reads 1493 vs 1498 on record (drift, not changed) |
+| muse-ember | lmarenaElo / arcAgi2 | 2026-11-13 | not found via primary source (checked: Arena changelog lists Muse Ember only on Code WebDev (11-09) and Agent (11-11), no text-board row; no arcprize.org entry) |
+| claude-haiku-5-5 | gpqaDiamond / sweBench / terminalBench | 2026-11-13 | not found via primary source (checked: full system card PDF text, Table 8.1.A - no GPQA or SWE-bench Verified row; Terminal-Bench only 4.0 (39.2%) on anthropic.com/claude-haiku-5-5, not 2.1) |
+| gpt-5-6-cyber | lmarenaElo / arcAgi2 | 2026-11-13 | not found via primary source (checked: no row on arena.ai text board ranks 1-151; no arcprize.org results entry; still Daybreak Red-gated) |
+| glm-5-3 | gdpvalAA | 2026-11-13 | Z.ai HF card lists "GDPval-AA v2" 1769, but its comparison figures run 14–19 Elo above AA's v2 values recorded here (Kimi K3 1682 vs 1668, GPT-5.6 Sol 1730 vs 1711) — likely a different v2 snapshot; left null for parity |
+| glm-5-3-flash | gdpvalAA | 2026-11-13 | Z.ai card chart (bench_53.png) shows "GDPVal-AA v2" 1773; same snapshot-mismatch concern as glm-5-3 (comparison figures 14–19 Elo above AA v2 values recorded here); left null for parity |
