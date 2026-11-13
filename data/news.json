@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-11-12-gemini-4-hydrogen",
+    "date": "2026-11-12",
+    "title": "Google releases Gemini 4 Hydrogen",
+    "summary": "Google released Gemini 4 Hydrogen, a faster model adapted from Gemini 4 Carbon for everyday coding and agent work, rolling out across the Gemini app, Search, the Gemini API, AI Studio, Vertex AI and Antigravity with a 1M-token context window at $1.50/$7.50 per million tokens. Google says it finishes tasks about 2.5 times faster than Gemini 3.8 Flash, and it scores 57.0% on Terminal-Bench 4.1 against 3.8 Flash's 18.2%.",
+    "category": "release",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [
+      "gemini-4-hydrogen"
+    ],
+    "sourceName": "Google",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+  },
+  {
     "id": "2026-11-11-gemini-decision-1",
     "date": "2026-11-11",
     "title": "Google launches Gemini Decision 1 and the Gemini Decisions API",

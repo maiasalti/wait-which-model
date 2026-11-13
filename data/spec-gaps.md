@@ -418,3 +418,5 @@ lfm3-1-7b · predecessorId · 2026-11-12 · LFM3 post compares it with LFM2.5-2.
 lfm3-1-7b · apiIds (liquid) · 2026-11-12 · Liquid's pricing page and docs.liquid.ai/lfm/models/lfm3-1.7b give no API model string; only OpenRouter's liquid/lfm-3-1.7b verified.
 lfm3-1-7b · speed · 2026-11-12 · Not measured by Artificial Analysis (no model page). Left null.
 lfm3-1-7b · retirementDate · 2026-11-12 · No lifecycle notice. Left null.
+gemini-4-hydrogen · predecessorId · 2026-11-13 · Launch blog calls it "a major standalone upgrade for teams migrating from Gemini 3.8 Flash" and AI Studio's what's-new page a "recommended upgrade from Gemini 3.8 Flash and earlier Gemini 3 and 2.5 models"; neither says it replaces 3.8 Flash, which stays on sale with no shutdown date. Model card says "adapted from Gemini 4 Carbon" (lineage). Left null for Maia's call.
+gemini-4-hydrogen · retirementDate · 2026-11-13 · Vertex AI page calls it a "short-term" GA release under a 45-day minimum retirement notice but schedules no date. Left null.

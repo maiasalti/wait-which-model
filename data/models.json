@@ -10462,5 +10462,70 @@
       "Pretrained on a predominantly English and code corpus, so knowledge-heavy science work and non-English use trail its coding results"
     ],
     "notes": "Ricursive Intelligence's first public model, a 65B dense Transformer (80 layers, d_model 5120) pretrained on 12T tokens and described as a general-purpose variant of the model behind its chip-design platform. Weights went up on Hugging Face on 2026-11-04 (initial commit) and the announcement post (ricursive.com/ripple) followed on 2026-11-11. All scores are self-reported from the model card at full BF16 and maximum effort: Terminal-Bench 2.1 80.52 per the announcement (80.5 on the card, Terminus 2 harness), SWE-bench Pro v1.0 61.42, SWE-bench Verified 76.5 and GPQA Diamond 85.2, with OpenCode as the harness where none is named; AIME is the 2026 exam (it also reports 97.1 for 2024 and 98.3 for 2025), and SWE-bench Pro v2.0 Hard 79.1 is an untracked variant. No HLE or ARC-AGI-2 figure is reported. Ricursive publishes no first-party price: $0.20/$0.60 is Together AI's and GMI Cloud's rate on OpenRouter, where Prime Intellect lists $0.10/$0.30. Context is 1,048,576 tokens per the card; no max output or knowledge cutoff is stated, and Artificial Analysis had no page for it at the time of writing."
+  },
+  {
+    "id": "gemini-4-hydrogen",
+    "name": "Gemini 4 Hydrogen",
+    "company": "google",
+    "releaseDate": "2026-11-12",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1048576,
+    "maxOutput": 1048576,
+    "pricing": {
+      "inputPerMTok": 1.5,
+      "outputPerMTok": 7.5
+    },
+    "costPerTask": {
+      "usd": 0.8,
+      "effort": "medium"
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-03",
+    "speed": {
+      "outputTokensPerSec": 177,
+      "timeToFirstTokenSec": 11.8,
+      "effort": "medium"
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "google",
+        "id": "gemini-4-hydrogen"
+      },
+      {
+        "provider": "google-vertex",
+        "id": "gemini-4-hydrogen"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": 1490,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Built as the fast executor beside Gemini 4 Carbon — Antigravity's Orchestrator lets Carbon plan read-only, then hands edits and test runs to Hydrogen and switches back when it hits friction, all in one session",
+      "Four thinking levels from low up to a new xhigh, defaulting to high, so one model id spans quick chat and longer agent runs",
+      "Google says it oversteps less in agent work than 3.8 Flash, with fewer misaligned actions and shortcuts taken to finish a task",
+      "Reads dense PDFs, spreadsheets, charts, audio and recorded video in one request, aimed at multimodal knowledge work rather than just code"
+    ],
+    "weaknesses": [
+      "Ignores temperature, top_p and top_k, rejects the minimal thinking level and drops explicit caching — request code carried over from 3.x Flash needs rewriting",
+      "Google's own model card reports more unjustified refusals than 3.8 Flash, especially on multimodal prompts, and warns of occasional slowness, timeouts and heavy token use at the higher thinking levels",
+      "One day old at the time of writing with no independent hands-on reviews yet, so its speed and behaviour claims are Google's own"
+    ],
+    "notes": "Google's everyday coding and agent model, announced 2026-11-12 (blog.google) and described in the DeepMind model card as 'adapted from Gemini 4 Carbon'; Google sets it apart from its 'frontier models, Gemini 4 Carbon and Gemini 4 Argon', calls it 'our daily driver for agentic workflows' and sells it at Gemini 3.8 Flash's post-introductory list price, so it is filed in the fast tier. Rolling out globally on launch day to the Gemini API and AI Studio (all tiers, stable), Vertex AI (a 'short-term' GA release with a 45-day retirement notice), the Gemini app, Google Search, Sheets, Gemini for business, Android Studio and Antigravity. Pricing is $1.50/$7.50 per MTok with no introductory rate or long-context tier (implicit caching only, $0.075 cached input; batch and flex half price, priority 1.8x); Gemini 3.8 Flash stays on sale at $0.75/$3.75 until it doubles to the same $1.50/$7.50 on 2027-01-01. contextWindow is the 1,048,576-token window shared by input, thinking and output, and maxOutput is the same ceiling reachable only with background long decode — a synchronous response stops at 65,536 (AI Studio and Vertex docs agree; the blog's 'up to 1 million output tokens' refers to the long-decode path). knowledgeCutoff is from the model card ('March 2026, though in some domains the model's knowledge may be less up to date'). Google's evaluation PDF uses only untracked suites: SWE-sweep 13.5%, Terminal-Bench 4.1 57.0% (blog: 3.8 Flash 18.2%; not the tracked 2.1), Agents' Last Exam v1.1 71.6%, AutomationBench-AA 76.1%, Vending-Bench 2 $14,549, OSWorld 2.1 offline 77.6%, MKA 53.4%, Chartography 66.6%, Terminal-Bench Science 0.1 51.4% and HLE-Diamond 58.8% (AA's subset, so hle stays null); the blog adds Vals Tax Agent 52.3% and Vals Legal Research 55.8%, and no GPQA Diamond, SWE-bench, ARC-AGI-2 or GDPval-AA v2 figure exists. LMArena Elo 1490 (±9, preliminary, 4,741 votes) is the 'Gemini 4 Hydrogen (High)' text-arena listing at rank 15. costPerTask and speed are Artificial Analysis' medium-effort variant per site convention (Intelligence Index 41, $0.80/task, 177 tok/s, 11.80 s to first answer token); high, Google's default, scores 51 at $1.87/task, 170 tok/s and 18.89 s, and xhigh 54 at $3.16/task, 190 tok/s and 37.77 s. Google's '2.5x faster than Gemini 3.8 Flash' is task completion time at the high default, from early partner tests. predecessorId is null: Google calls it 'a major standalone upgrade for teams migrating from Gemini 3.8 Flash' and AI Studio's what's-new page a 'recommended upgrade from Gemini 3.8 Flash', but neither says it replaces 3.8 Flash, which has no shutdown date."
   }
 ]
