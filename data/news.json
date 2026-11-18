@@ -1,5 +1,37 @@
 [
   {
+    "id": "2026-11-17-gpt-6-2-astra-sol",
+    "date": "2026-11-17",
+    "title": "OpenAI releases GPT-6.2 Astra and GPT-6.2 Sol",
+    "summary": "OpenAI released GPT-6.2 Astra, for demanding science, legal, engineering and finance work, and GPT-6.2 Sol, for everyday tasks, in ChatGPT Work, Codex and the API with 1.05M-token context windows. Astra costs $8/$40 per million tokens, 20% below GPT-6 Astra, while Sol keeps GPT-6.1 Sol's $2/$10; ARC Prize verified Astra at 95.8% on ARC-AGI-2.",
+    "category": "release",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-6-2-astra",
+      "gpt-6-2-sol"
+    ],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
+  },
+  {
+    "id": "2026-11-17-mai-code-2",
+    "date": "2026-11-17",
+    "title": "Microsoft launches MAI Code 2 and MAI Code 2 Flash",
+    "summary": "Microsoft unveiled MAI Code 2 and MAI Code 2 Flash at Ignite, two in-house agentic coding models now live in GitHub Copilot, with Flash also in limited preview on Microsoft Foundry. Both have 1.05M-token context windows; list prices are $1/$5 and $0.10/$0.50 per million tokens (half that under a launch promotion until May 2027), and Microsoft's model card reports 84.6% and 78.3% on Terminal-Bench 2.1.",
+    "category": "release",
+    "companies": [
+      "microsoft"
+    ],
+    "modelIds": [
+      "mai-code-2",
+      "mai-code-2-flash"
+    ],
+    "sourceName": "Microsoft AI",
+    "sourceUrl": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/"
+  },
+  {
     "id": "2026-11-12-gemini-4-hydrogen",
     "date": "2026-11-12",
     "title": "Google releases Gemini 4 Hydrogen",
