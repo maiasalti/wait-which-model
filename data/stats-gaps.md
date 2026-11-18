@@ -1326,3 +1326,14 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | gpt-5-6-cyber | lmarenaElo / arcAgi2 | 2026-11-13 | not found via primary source (checked: no row on arena.ai text board ranks 1-151; no arcprize.org results entry; still Daybreak Red-gated) |
 | glm-5-3 | gdpvalAA | 2026-11-13 | Z.ai HF card lists "GDPval-AA v2" 1769, but its comparison figures run 14–19 Elo above AA's v2 values recorded here (Kimi K3 1682 vs 1668, GPT-5.6 Sol 1730 vs 1711) — likely a different v2 snapshot; left null for parity |
 | glm-5-3-flash | gdpvalAA | 2026-11-13 | Z.ai card chart (bench_53.png) shows "GDPVal-AA v2" 1773; same snapshot-mismatch concern as glm-5-3 (comparison figures 14–19 Elo above AA v2 values recorded here); left null for parity |
+| gpt-6-2-astra | gpqaDiamond / sweBench / sweBenchPro / hle / mmluPro / aime | 2026-11-18 | not in OpenAI's launch post (relayed via the developer-forum announcement and coverage; openai.com returned 403) or model docs; deploymentsafety.openai.com/gpt-6-2-astra returns 404; AA's model page shows no GPQA/HLE figure; vals.ai page has none |
+| gpt-6-2-astra | terminalBench | 2026-11-18 | only Terminal-Bench 4.0 (Vals AI 63.13%, max) and Terminal-Bench-Science exist; Vals has archived its 2.1 board and no longer runs new models on it |
+| gpt-6-2-astra | lmarenaElo | 2026-11-18 | not on arena.ai's leaderboard changelog one day after release; re-check |
+| gpt-6-2-astra | gdpvalAA | 2026-11-18 | OpenAI reports GDPval-v2 only as "+6.2 points over GPT-6 Astra", no absolute; AA's page shows no GDPval-AA value |
+| gpt-6-2-sol | gpqaDiamond / sweBench / sweBenchPro / hle / gdpvalAA / mmluPro / aime | 2026-11-18 | not in OpenAI's launch material or model docs; deploymentsafety.openai.com/gpt-6-2-sol returns 404; AA's model page shows no figures for these |
+| gpt-6-2-sol | terminalBench | 2026-11-18 | only Terminal-Bench 4.0 rankings reported (Vals AI 7th); no 2.1 run, Vals' 2.1 board archived |
+| gpt-6-2-sol | lmarenaElo | 2026-11-18 | not on arena.ai's leaderboard changelog one day after release; re-check |
+| mai-code-2 | gpqaDiamond / sweBench / sweBenchPro / hle / lmarenaElo / gdpvalAA / arcAgi2 / mmluPro / aime | 2026-11-18 | MAI Code 2 model card reports only DeepSWE 1.1, Terminal-Bench 2.1 and SWE Atlas; Microsoft's blog and microsoft.ai/models/mai-code-2 give only relative claims; not on AA's leaderboard, arena changelog or arcprize.org |
+| mai-code-2 | costPerTask | 2026-11-18 | not on Artificial Analysis' leaderboard at launch; re-check |
+| mai-code-2-flash | gpqaDiamond / sweBench / sweBenchPro / hle / lmarenaElo / gdpvalAA / arcAgi2 / mmluPro / aime | 2026-11-18 | same model card as mai-code-2 — only DeepSWE 1.1, Terminal-Bench 2.1 and SWE Atlas reported; not on AA, arena changelog or arcprize.org |
+| mai-code-2-flash | costPerTask | 2026-11-18 | not on Artificial Analysis' leaderboard at launch; re-check |

@@ -420,3 +420,17 @@ lfm3-1-7b · speed · 2026-11-12 · Not measured by Artificial Analysis (no mode
 lfm3-1-7b · retirementDate · 2026-11-12 · No lifecycle notice. Left null.
 gemini-4-hydrogen · predecessorId · 2026-11-13 · Launch blog calls it "a major standalone upgrade for teams migrating from Gemini 3.8 Flash" and AI Studio's what's-new page a "recommended upgrade from Gemini 3.8 Flash and earlier Gemini 3 and 2.5 models"; neither says it replaces 3.8 Flash, which stays on sale with no shutdown date. Model card says "adapted from Gemini 4 Carbon" (lineage). Left null for Maia's call.
 gemini-4-hydrogen · retirementDate · 2026-11-13 · Vertex AI page calls it a "short-term" GA release under a 45-day minimum retirement notice but schedules no date. Left null.
+gpt-6-2-astra · predecessorId · 2026-11-18 · OpenAI (via its developer-forum post and The Decoder/Tech Monitor coverage; openai.com blog returned 403) calls the price 20% below "its predecessor" GPT-6 Astra but never says 6.2 replaces it; model docs name no predecessor and GPT-6 Astra has no deprecation notice. Left null — re-read the openai.com post if it becomes fetchable.
+gpt-6-2-astra · apiIds (aws-bedrock) · 2026-11-18 · No Bedrock model card for GPT-6.2 Astra found yet; only OpenAI's gpt-6.2-astra recorded.
+gpt-6-2-astra · retirementDate · 2026-11-18 · No lifecycle notice. Left null.
+gpt-6-2-sol · predecessorId · 2026-11-18 · Coverage says Sol keeps GPT-6.1 Sol's price; neither the forum announcement nor the model docs say it replaces 6.1 Sol. Left null.
+gpt-6-2-sol · apiIds (aws-bedrock) · 2026-11-18 · No Bedrock model card for GPT-6.2 Sol found yet; only OpenAI's gpt-6.2-sol recorded.
+gpt-6-2-sol · retirementDate · 2026-11-18 · No lifecycle notice. Left null.
+mai-code-2 · speed · 2026-11-18 · Not measured by Artificial Analysis at launch. Left null.
+mai-code-2 · apiIds · 2026-11-18 · Copilot-only at launch; no Foundry deployment or API model string published (GitHub's supported-models page lists a display name only). Left [].
+mai-code-2 · predecessorId · 2026-11-18 · Model card compares the family with MAI-Code-1.1-Flash (not tracked here) but states no replacement; GitHub changelog doesn't deprecate 1.1-Flash. Left null.
+mai-code-2 · retirementDate · 2026-11-18 · No lifecycle notice. Left null.
+mai-code-2-flash · speed · 2026-11-18 · Not measured by Artificial Analysis at launch. Left null.
+mai-code-2-flash · apiIds · 2026-11-18 · Foundry limited-access preview publishes no model string; Copilot lists display name only. Left [].
+mai-code-2-flash · predecessorId · 2026-11-18 · Model card compares with MAI-Code-1.1-Flash (not tracked here) without a replacement claim. Left null.
+mai-code-2-flash · retirementDate · 2026-11-18 · No lifecycle notice. Left null.
