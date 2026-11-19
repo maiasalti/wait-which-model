@@ -110,3 +110,6 @@ raon-speechchat-9b · releaseDate · 2026-11-06 · conflicting: April 2026 (HF c
 nemotronlabs-voicechat-11b · releaseDate · 2026-11-06 · conflicting: 2026-08-03 (HF, used) vs 2026-07-21 (NGC)
 nemotronlabs-voicechat-11b · license · 2026-11-06 · conflicting: HF OpenMDW 1.1 (used) vs NGC NIM NVIDIA evaluation licence
 lfm3-audio-2b · pricing.perMinuteUsd · 2026-11-06 · API console linked, no price published
+mai-realtime-1 · languages, voices · 2026-11-19 · microsoft.ai blog, model page, MAI Labs: not stated; 17 languages / 2 voices only in TestingCatalog leak
+mai-realtime-1 · apiIds, links.docs · 2026-11-19 · blog + model page give no model id or docs; no learn.microsoft.com page found
+mai-realtime-1 · scores.aaBigBenchAudio · 2026-11-19 · not on AA speech-to-speech; model page tile shows 0% placeholder
