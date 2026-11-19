@@ -3862,5 +3862,182 @@
     ],
     "sourceName": "Ricursive Intelligence",
     "sourceUrl": "https://www.ricursive.com/ripple"
+  },
+  {
+    "id": "2026-11-05-claude-personal-finance",
+    "date": "2026-11-05",
+    "title": "Anthropic launches Personal Finance in Claude, a read-only view of linked bank accounts",
+    "summary": "Anthropic began rolling out Personal Finance in beta for Pro, Max and Ultra subscribers in the US. Users link accounts through Plaid, signing in to their bank themselves, and Claude sees balances, credit limits and up to two years of transactions for the accounts they choose. Access is read-only: Claude can't move, manage or invest money, and the feature isn't designed to give investment advice. Conversations in the Personal Finance hub aren't used for training, and Anthropic says there are no ads or sponsored financial products.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "refs": [
+      {
+        "type": "feature",
+        "id": "claude-personal-finance"
+      }
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://claude.com/resources/articles/introducing-personal-finance-in-claude"
+  },
+  {
+    "id": "2026-11-05-muse-voice-avatars",
+    "date": "2026-11-05",
+    "title": "Meta adds real-time voice and expressive avatars to the Muse app",
+    "summary": "Meta began rolling out voice conversations and animated avatars in the Muse app in the US, on mobile, web and Mac. They run on two new Meta models: Muse Realtime Voice, for low-latency spoken conversation that users can interrupt, and Muse Realtime Avatar, which reacts with expressions and gestures as it listens and speaks. Users choose voice only, an avatar beside the chat, or full screen, and pick from hundreds of voice styles. Support for AI glasses and Muse Charm is listed as coming soon.",
+    "category": "release",
+    "companies": [
+      "meta"
+    ],
+    "modelIds": [],
+    "refs": [
+      {
+        "type": "feature",
+        "id": "muse-voice-and-avatars"
+      }
+    ],
+    "sourceName": "Meta",
+    "sourceUrl": "https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/"
+  },
+  {
+    "id": "2026-11-06-muse-spaces",
+    "date": "2026-11-06",
+    "title": "Meta launches Spaces, custom mini-apps users build by describing them in Muse",
+    "summary": "Meta added Spaces to the Muse app everywhere Muse is available. A user describes an idea, such as a gift tracker or a planning board, and Muse builds it; the space can be refined over time, pinned to the sidebar or tabs, shown on a schedule, and updated in the background from connected apps. Meta says it runs on specialized versions of its models trained with learnings from Muse Wonder, without naming them. Spaces can't yet be shared with other people.",
+    "category": "release",
+    "companies": [
+      "meta"
+    ],
+    "modelIds": [],
+    "refs": [
+      {
+        "type": "feature",
+        "id": "muse-spaces"
+      }
+    ],
+    "sourceName": "Meta",
+    "sourceUrl": "https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/"
+  },
+  {
+    "id": "2026-11-10-claude-sheets-whiteboards",
+    "date": "2026-11-10",
+    "title": "Anthropic launches Claude Sheets and Claude Whiteboards in beta and makes Claude Data generally available",
+    "summary": "Anthropic added two shared workspaces to Claude in beta on all paid plans, on web, desktop and mobile. Sheets lets Claude build spreadsheets with tabs, formulas, formatting and drop-downs, outlining each change it makes, with export to .xlsx or CSV; Anthropic describes the functionality as simple for now. Whiteboards turns discussions into boards with owners and dates that can become a doc or deck or move to Lucid, Miro or Zoho Vani. Claude Dashboards, in beta since October, was renamed Claude Data and is now generally available. Both new tools are on by default on Team and off by default on Enterprise.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "refs": [
+      {
+        "type": "feature",
+        "id": "claude-sheets"
+      },
+      {
+        "type": "feature",
+        "id": "claude-whiteboards"
+      }
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://claude.com/resources/articles/sheets-whiteboards-data"
+  },
+  {
+    "id": "2026-11-10-chatgpt-business-hub",
+    "date": "2026-11-10",
+    "title": "OpenAI opens Business Hub, letting businesses claim their profiles and publish agents in ChatGPT",
+    "summary": "OpenAI introduced Businesses in ChatGPT in beta. Through Business Hub, eligible businesses in ChatGPT's markets can claim and verify their profile, update key details and product feeds with pricing and availability, and see aggregated insights such as mentions, website clicks and discovery topics. Eligible US ecommerce and online service businesses can also publish a Business Agent that answers customer questions; it can be sponsored as a ChatGPT Ads destination, with sponsored placements labelled. OpenAI says it doesn't share users' conversations or Business Agent chats with businesses.",
+    "category": "company",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [],
+    "refs": [
+      {
+        "type": "feature",
+        "id": "chatgpt-business-hub"
+      }
+    ],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/introducing-businesses-chatgpt/"
+  },
+  {
+    "id": "2026-11-11-grok-bot-1-0",
+    "date": "2026-11-11",
+    "title": "xAI releases Grok Bot 1.0 with shared team bots and meeting attendance",
+    "summary": "xAI took Grok Bot, its always-on agent with its own cloud computer, out of beta as Grok Bot 1.0. Bots can now be shared and brought into Slack, Microsoft Teams and video calls, where they take part through the chat and carry context from earlier conversations, and they follow up proactively on unfinished work. xAI says they are faster and more reliable at browsing, documents and presentations while using fewer resources. Team Bots come with Team and Enterprise plans; meetings with Team, Enterprise and Ultra.",
+    "category": "release",
+    "companies": [
+      "xai"
+    ],
+    "modelIds": [],
+    "refs": [
+      {
+        "type": "feature",
+        "id": "grok-bot"
+      }
+    ],
+    "sourceName": "xAI",
+    "sourceUrl": "https://x.ai/news/grok-bot-1-0"
+  },
+  {
+    "id": "2026-11-12-claude-meetings",
+    "date": "2026-11-12",
+    "title": "Anthropic launches Claude Meetings, letting Claude join Google Meet calls as a participant",
+    "summary": "Anthropic began rolling out Claude Meetings in beta on Team and Enterprise plans. Claude joins Google Meet calls as a visible participant, answers questions asked aloud or in chat, builds docs and whiteboards with teammates during the call, and writes notes, action items and a recap; it saves a transcript, summary and screen descriptions but not audio. During the beta, notes, transcripts and answers that don't use connected tools are free, and artifacts are free through 2027-02-10. It isn't available to organizations using zero data retention, HIPAA-ready configurations or customer-managed keys, and by default stays out of calls with outside guests. Other meeting platforms are listed as coming soon.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "refs": [
+      {
+        "type": "feature",
+        "id": "claude-meetings"
+      }
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://claude.com/resources/articles/claude-meetings"
+  },
+  {
+    "id": "2026-11-13-chatgpt-wallet",
+    "date": "2026-11-13",
+    "title": "OpenAI launches ChatGPT Wallet so agents can pay without seeing card details",
+    "summary": "OpenAI began a gradual rollout of ChatGPT Wallet to Pro subscribers aged 18+ in the US, starting in dots. Users save an eligible US-issued card once and approve each agent purchase with a biometric check after reviewing the items, total and card; the payment network then issues a token so neither the agent nor the merchant receives the real card details. American Express, Chase, Mastercard and Visa built it with OpenAI, alongside fraud partners Forter, Riskified, Sardine and Signifyd and payment providers Adyen, Checkout.com and Stripe. OpenAI describes fully delegated purchases within preset spending limits as a future step.",
+    "category": "release",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [],
+    "refs": [
+      {
+        "type": "feature",
+        "id": "chatgpt-wallet"
+      }
+    ],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/introducing-chatgpt-wallet/"
+  },
+  {
+    "id": "2026-11-17-tasks-in-gemini-free",
+    "date": "2026-11-17",
+    "title": "Google makes Tasks in Gemini free in six countries and adds payments, texting and business calls",
+    "summary": "Google made Tasks in Gemini, the background agent mode in the Gemini app that launched as Gemini Spark in May, free for users 18+ in the US, Canada, Australia, India, Japan and Korea, running on Gemini 4 Hydrogen. Tasks runs in a hardware-isolated virtual machine dedicated to each account and pauses for confirmation before critical steps such as buying. New the same day: Google Pay checkout via the Agent Payments Protocol with a user-set spending cap, starting tasks by text message (US numbers) or by forwarding email to gemini@google.com, and calls to local businesses (not available in Indiana, Louisiana, Minnesota, Montana or Nebraska).",
+    "category": "release",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [
+      "gemini-4-hydrogen"
+    ],
+    "refs": [
+      {
+        "type": "feature",
+        "id": "gemini-spark"
+      }
+    ],
+    "sourceName": "Google",
+    "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/"
   }
 ]
