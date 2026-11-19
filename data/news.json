@@ -669,6 +669,21 @@
     "sourceUrl": "https://notebookcheck.net/Google-Gemini-drops-Flash-and-Pro-for-free-users-on-October-9.1415964.0.html"
   },
   {
+    "id": "2026-10-09-microsoft-decision-1",
+    "date": "2026-10-09",
+    "title": "Microsoft launches Microsoft-Decision-1, its first decision model",
+    "summary": "Microsoft introduced Microsoft-Decision-1, a Qwen3.5-9B model post-trained to return a calibrated probability for each fixed answer option in a single pass rather than generating text, for routing, classification, grading and guardrail checks. It is in preview in Microsoft Foundry and on OpenRouter at $0.042 per million input tokens with free output, and Microsoft says it had the highest accuracy in its 36-benchmark comparison with a median latency about 35 times lower than GPT-6 Sol.",
+    "category": "release",
+    "companies": [
+      "microsoft"
+    ],
+    "modelIds": [
+      "microsoft-decision-1"
+    ],
+    "sourceName": "Microsoft",
+    "sourceUrl": "https://commandline.microsoft.com/microsoft-decision-1-model-foundry/"
+  },
+  {
     "id": "2026-10-08-australia-systems-based-frontier-ai-regulation",
     "date": "2026-10-08",
     "title": "Australia outlines systems-based regulation for frontier AI",

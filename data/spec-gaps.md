@@ -435,3 +435,6 @@ mai-code-2-flash · predecessorId · 2026-11-18 · Model card compares with MAI-
 mai-code-2-flash · retirementDate · 2026-11-18 · No lifecycle notice. Left null.
 gemini-4-neon · predecessorId · 2026-11-19 · Launch blog, model card ('adapted from Gemini 4 Carbon', lineage) and AI Studio model page name no model it replaces; 9to5Google reports it taking Argon's Gemini app picker slot, a secondary consumer-UI report, not a replacement claim. Argon stays on sale. Left null.
 gemini-4-neon · retirementDate · 2026-11-19 · No lifecycle notice on the AI Studio or Vertex model pages. Left null.
+microsoft-decision-1 · predecessorId · 2026-11-19 · Microsoft's launch post calls it its first decision model; nothing earlier to replace. Left null.
+microsoft-decision-1 · speed · 2026-11-19 · Decision model with no output tokens; no Artificial Analysis speed entry. Microsoft's relative latency claim kept in strengths. Left null.
+microsoft-decision-1 · retirementDate · 2026-11-19 · No lifecycle notice in the Foundry catalog (still listed as Preview). Left null.
