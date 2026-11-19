@@ -20,6 +20,9 @@ Format: `entry-id · field · YYYY-MM-DD · what was searched`
 ## image-models
 
 minimax-h3-image · scores.lmarenaImageElo · 2026-11-12 · arena.ai text-to-image board (Nov 8 update): not listed
+mai-image-2-7 · pricing.perImageUsd · 2026-11-19 · Azure Foundry Models pricing page (no 2.7 row), ai.azure.com catalog page (no figures), Learn how-to; microsoft.ai gives only "~$35 per 1,000 images" with no size
+mai-image-2-7-flash · pricing.perImageUsd · 2026-11-19 · Azure Foundry Models pricing page (no 2.7 row), ai.azure.com catalog page (no figures), Learn how-to; microsoft.ai gives only "~$10 per 1,000 images" with no size
+mai-image-2-7-flash · scores.lmarenaImageElo · 2026-11-19 · arena.ai text-to-image board (Nov 16 update): not listed
 
 ## video-models
 

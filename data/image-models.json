@@ -1,5 +1,98 @@
 [
   {
+    "id": "mai-image-2-7",
+    "name": "MAI-Image-2.7",
+    "company": "microsoft",
+    "releaseDate": "2026-11-17",
+    "notable": true,
+    "description": "Microsoft AI's flagship diffusion image model for text-to-image generation and multi-reference image editing, sold through Microsoft Foundry.",
+    "strengths": [
+      "#1 on the Artificial Analysis image-editing arena at launch (1215 Elo, Microsoft-cited)",
+      "Transparent-background output",
+      "Edits accept up to five reference images",
+      "Output up to 4,194,304 total pixels (2048x2048 equivalent)"
+    ],
+    "weaknesses": [
+      "Public preview only in Foundry (no SLA)"
+    ],
+    "links": {
+      "official": "https://microsoft.ai/models/mai-image-2-7/",
+      "docs": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/how-to/use-foundry-models-mai-image"
+    },
+    "pricing": {
+      "perImageUsd": null,
+      "notes": "Microsoft's announcement gives about $35 per 1,000 images, with no image size stated. No Foundry token rates are published yet."
+    },
+    "maxResolution": "2048x2048",
+    "capabilities": [
+      "text-to-image",
+      "editing",
+      "inpainting",
+      "text-rendering",
+      "reference-images"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "azure-foundry",
+        "id": "MAI-Image-2.7"
+      }
+    ],
+    "scores": {
+      "aaImageArenaElo": 1214,
+      "lmarenaImageElo": 1387
+    },
+    "notes": "Released 2026-11-17 per the model card (Ignite 2026). Foundry public preview, model version 2026-11-02; the model card also lists OpenRouter, Vercel, Genspark and fal as distribution partners. maxResolution is the square equivalent of the model card's 4,194,304-pixel cap (either side may exceed 2048 if the total stays within it). The card covers both 2.7 and 2.7 Flash; the Foundry how-to's pixel-cap note still names only the 2.6 and 2.5 models. Foundry has not published 2.7 token rates (the Azure pricing page has no 2.7 row), so perImageUsd is null. An editing-only preview debuted on Arena and Artificial Analysis on 2026-10-27 (microsoft.ai post); text-to-image arrived with the 11-17 release. The model card gives 20B non-embedding parameters. The AA image-editing figure (1215 Elo, 5,478 votes, as of 2026-11-16) is from Microsoft's announcement. Notable via clause 1: #4 on the Artificial Analysis text-to-image arena (1214) and #4 on LMArena text-to-image (1387, Nov 16 update), checked 2026-11-19."
+  },
+  {
+    "id": "mai-image-2-7-flash",
+    "name": "MAI-Image-2.7-Flash",
+    "company": "microsoft",
+    "releaseDate": "2026-11-17",
+    "notable": false,
+    "description": "Faster, lower-cost variant of MAI-Image-2.7 with the same generation and editing capabilities, sold through Microsoft Foundry.",
+    "strengths": [
+      "About $10 per 1,000 images (Microsoft's figure)",
+      "Same generation and editing capabilities as MAI-Image-2.7 per the Foundry docs",
+      "Transparent-background output",
+      "Edits accept up to five reference images"
+    ],
+    "weaknesses": [
+      "Public preview only in Foundry (no SLA)",
+      "56 Elo below MAI-Image-2.7 on the Artificial Analysis text-to-image arena"
+    ],
+    "links": {
+      "official": "https://microsoft.ai/models/mai-image-2-7/",
+      "docs": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/how-to/use-foundry-models-mai-image"
+    },
+    "pricing": {
+      "perImageUsd": null,
+      "notes": "Microsoft's announcement gives about $10 per 1,000 images, with no image size stated. No Foundry token rates are published yet."
+    },
+    "maxResolution": "2048x2048",
+    "capabilities": [
+      "text-to-image",
+      "editing",
+      "inpainting",
+      "text-rendering",
+      "reference-images"
+    ],
+    "openWeights": false,
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "azure-foundry",
+        "id": "MAI-Image-2.7-Flash"
+      }
+    ],
+    "scores": {
+      "aaImageArenaElo": 1158,
+      "lmarenaImageElo": null
+    },
+    "notes": "Released 2026-11-17 per the model card (Ignite 2026). Foundry public preview, model version 2026-11-02; the model card also lists OpenRouter, Vercel, Genspark and fal as distribution partners. maxResolution is the square equivalent of the model card's 4,194,304-pixel cap (either side may exceed 2048 if the total stays within it). The card covers both 2.7 and 2.7 Flash; the Foundry how-to's pixel-cap note still names only the 2.6 and 2.5 models. Foundry has not published 2.7 token rates (the Azure pricing page has no 2.7 row), so perImageUsd is null. The model card calls Flash an optimized version of MAI-Image-2.7. microsoft.ai has no separate Flash model page (/models/mai-image-2-7-flash/ returns 404), so links.official is the shared 2.7 page. Not notable: #11 on the Artificial Analysis text-to-image arena (1158, level with Canva Craft at #12) and not on the LMArena text-to-image board (Nov 16 update), checked 2026-11-19."
+  },
+  {
     "id": "minimax-h3-image",
     "name": "MiniMax-H3-Image",
     "company": "minimax",
@@ -255,7 +348,6 @@
       "Edits include object removal, replacement, inpainting and text updates"
     ],
     "weaknesses": [
-      "Public preview only in Foundry (no SLA)",
       "Output capped at 2,359,296 total pixels (1536x1536 equivalent)"
     ],
     "links": {
@@ -283,10 +375,10 @@
       }
     ],
     "scores": {
-      "aaImageArenaElo": 1152,
-      "lmarenaImageElo": 1332
+      "aaImageArenaElo": 1168,
+      "lmarenaImageElo": 1331
     },
-    "notes": "Announced 2026-08-10 (microsoft.ai post, updated 2026-09-04). Foundry public preview was announced 2026-09-04, and the Foundry model version is 2026-07-31. maxResolution is the square equivalent of the 2,359,296-pixel cap. Either side may be longer if the total stays within it, and each side must be at least 768px. The Foundry API id is the catalog model name. Callers address their own deployment name. The sibling MAI-Image-2.6-Flash ranked #11 on AA and is not included. Notable via clause 1: #7 on the Artificial Analysis text-to-image arena and #6 on LMArena (checked 2026-11-12)."
+    "notes": "Announced 2026-08-10 (microsoft.ai post, updated 2026-09-04). Foundry public preview was announced 2026-09-04, and the Foundry model version is 2026-07-31. The Foundry catalog now lists it as Generally available (checked 2026-11-19); no GA date is published. maxResolution is the square equivalent of the 2,359,296-pixel cap. Either side may be longer if the total stays within it, and each side must be at least 768px. The Foundry API id is the catalog model name. Callers address their own deployment name. The sibling MAI-Image-2.6-Flash ranks #17 on AA and is not included. Scores refreshed 2026-11-19 (were AA 1152, LMArena 1332 on 2026-11-12). Notable via clause 1: #9 on the Artificial Analysis text-to-image arena (1168) and #7 on LMArena text-to-image (1331, Nov 16 update), checked 2026-11-19."
   },
   {
     "id": "grok-imagine-image-2-0",
