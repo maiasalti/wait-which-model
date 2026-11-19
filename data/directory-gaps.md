@@ -51,6 +51,10 @@ gemini-omni-flash-1-2 · scores.lmarenaVideoElo · 2026-11-09 · LMArena video b
 genie-4 · maxSessionSec · 2026-10-28 · deepmind.google model page + Genie 4 blog + blog.google post (search excerpts): only "a few minutes of continuous interaction"; TechCrunch's "two minutes" not on Google pages
 genie-4 · maxResolution · 2026-10-28 · deepmind.google + blog.google Genie 4 pages: no resolution stated (720p in results is Genie 3)
 genie-4 · fps · 2026-10-28 · deepmind.google + blog.google Genie 4 pages: no frame rate stated (24 fps in results is Genie 3)
+genie-4 · maxSessionSec · 2026-11-19 · resolved: deepmind.google/models/genie now says "around a minute of continuous interaction" → 60
+genie-4 · maxResolution, fps · 2026-11-19 · re-checked deepmind.google/models/genie, 2026-11-18 "Genie 4 is now available" post, labs.google/projectgenie: still not stated
+genie-4 · apiIds · 2026-11-19 · Oct 27 DeepMind blog promises Gemini API/AI Studio early-access partners; Nov 18 post + model page silent; no model id found
+genie-4 · pricing (USD) · 2026-11-19 · one.google.com/about/google-ai-plans showed no US figure ("From /mo"), gemini.google/subscriptions showed SGD only; footnote ties Project Genie to an Ultra ("20x") plan
 hy-nomas · interactive · 2026-10-28 · GitHub README + HF card: multi-turn steering during generation, no real-time claim; speed "depends on hardware…"; only community port reports (slower than real time)
 hy-nomas · maxSessionSec · 2026-10-28 · GitHub README + HF card: segment-chained generation with history, no maximum length stated
 pixverse-r2 · maxSessionSec · 2026-10-28 · pixverse.ai launch post, model page, technical post: "far longer sessions", no figure

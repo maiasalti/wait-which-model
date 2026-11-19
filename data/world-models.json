@@ -855,16 +855,16 @@
     "company": "google",
     "releaseDate": "2026-10-27",
     "notable": true,
-    "description": "Google DeepMind's real-time interactive world model, which generates explorable worlds from text and image prompts with native audio and lets users steer the scene mid-simulation in natural language, with Gemini models keeping it coherent.",
+    "description": "Google DeepMind's real-time interactive world model, which generates explorable worlds from text and image prompts with native audio and lets users steer the scene mid-simulation in natural language; it now powers Project Genie for eligible Google AI Ultra subscribers.",
     "strengths": [
       "Native real-time audio: ambient sound, music and interactive dialogue",
       "Mid-simulation steering by text, e.g. changing the weather, moving the camera or adding characters",
-      "Text and image prompts, with keyboard navigation and camera control",
+      "Available in Project Genie to eligible Google AI Ultra subscribers (18+) since 2026-11-18",
       "Demonstrated as a simulator for Gemini-driven agents and robots (e.g. Apptronik Apollo)"
     ],
     "weaknesses": [
-      "Limited research preview for trusted testers; no public access, pricing or API yet",
-      "Google says it supports a few minutes of continuous interaction, with visual drift in longer sessions",
+      "Requires Google AI Ultra (Google AI Pro is waitlist-only); no API or published price",
+      "Google says it supports around a minute of continuous interaction, with visual drift in longer sessions",
       "Unreliable text rendering and imperfect simulation of real-world locations"
     ],
     "interactive": true,
@@ -874,7 +874,7 @@
       "actions"
     ],
     "output": "video-stream",
-    "maxSessionSec": null,
+    "maxSessionSec": 60,
     "maxResolution": null,
     "fps": null,
     "access": "research-preview",
@@ -882,13 +882,13 @@
     "license": null,
     "apiIds": [],
     "pricing": {
-      "notes": "Not published. Google says it is coming to Google AI Ultra subscribers in Project Genie and to early-access partners in the Gemini API and AI Studio."
+      "notes": "Included with Google AI Ultra in Project Genie (18+); Google AI Pro members can join a waitlist. Google's plans page lists Project Genie under Ultra only; no standalone or API price is published."
     },
     "links": {
       "official": "https://deepmind.google/models/genie/",
-      "docs": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+      "docs": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/"
     },
-    "notes": "Announced 2026-10-27 (Google blog) as a research preview rolling out to a small group of trusted testers. Successor to Genie 3, which keeps its own entry because Project Genie still runs Genie 3 until the Ultra rollout. TechCrunch reports scenes stay consistent 'up to two minutes, double Genie 3'; Google's pages say only 'a few minutes of continuous interaction', so maxSessionSec is null. No resolution or fps is published for Genie 4 (the 720p/24 fps figures in search results are Genie 3's). Robotics demos pair it with Gemini 3.8 Flash as a guiding agent and Gemini 4 Argon. All output carries SynthID. openWeights false = none mentioned."
+    "notes": "Announced 2026-10-27 (DeepMind blog) as a research preview for trusted testers; rolled out in Project Genie to eligible Google AI Ultra subscribers on 2026-11-18 (Google blog 'Genie 4 is now available'), and labs.google/projectgenie now says Project Genie is powered by Genie 4. access stays 'research-preview' on the same basis as Genie 3: the Project Genie page still calls it 'an experimental research prototype' and the 2026-11-18 post says Genie 3 and Genie 4 'remain world models in the frontier research space'. Neither page names countries; the Project Genie page says 18+. The Oct 27 blog also promised access for early-access partners of the Gemini API and Google AI Studio; the Nov 18 post does not mention it and no model id is published, so apiIds is empty. maxSessionSec 60 = the DeepMind model page's 'around a minute of continuous interaction' (approximate; a model limitation, not a stated Project Genie cap; the Oct blog said only 'short sessions' and TechCrunch had reported 'up to two minutes'). No resolution or fps is published for Genie 4 (the 720p/24 fps figures in search results are Genie 3's). Robotics demos pair it with Gemini 3.8 Flash as a guiding agent and Gemini 4 Argon. All output carries SynthID. openWeights false = none mentioned. Successor to Genie 3, which keeps its own entry. Notable: frontier-lab clause (google)."
   },
   {
     "id": "hy-nomas",
