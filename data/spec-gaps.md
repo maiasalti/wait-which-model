@@ -438,3 +438,12 @@ gemini-4-neon · retirementDate · 2026-11-19 · No lifecycle notice on the AI S
 microsoft-decision-1 · predecessorId · 2026-11-19 · Microsoft's launch post calls it its first decision model; nothing earlier to replace. Left null.
 microsoft-decision-1 · speed · 2026-11-19 · Decision model with no output tokens; no Artificial Analysis speed entry. Microsoft's relative latency claim kept in strengths. Left null.
 microsoft-decision-1 · retirementDate · 2026-11-19 · No lifecycle notice in the Foundry catalog (still listed as Preview). Left null.
+qwen4-max · predecessorId · 2026-11-19 · Alibaba's press release (alibabacloud.com/press-room/alibaba-unveils-qwen4-max) and Model Studio qwen4-max page compare it with Qwen3.8-Max but never say it replaces it. Left null.
+qwen4-max · retirementDate · 2026-11-19 · No lifecycle notice on Model Studio. Left null.
+mai-cyber-2-flash · predecessorId · 2026-11-19 · Launch post says it will replace "the existing model in the MAI profile" in MDASH and compares it with MAI Cyber 1.1 Flash, but neither MAI Cyber 1 Flash nor 1.1 Flash is tracked here. Left null.
+mai-cyber-2-flash · apiIds · 2026-11-19 · Ships only inside Microsoft security products (MDASH); no Foundry or API model string published. Left [].
+mai-cyber-2-flash · speed · 2026-11-19 · Not on Artificial Analysis. Left null.
+mai-cyber-2-flash · retirementDate · 2026-11-19 · No lifecycle notice. Left null.
+microsoft-decision-1-1 · predecessorId · 2026-11-19 · GA post (commandline.microsoft.com/microsoft-decision-model-ga) compares it with "our first model" (faster, six Decision Index points higher, same cost) but has no replace/successor/supersede wording, and Microsoft-Decision-1 is still in the Foundry catalog. Left null.
+microsoft-decision-1-1 · speed · 2026-11-19 · Decision model with no output tokens; no Artificial Analysis speed entry. Left null.
+microsoft-decision-1-1 · retirementDate · 2026-11-19 · No lifecycle notice. Left null.

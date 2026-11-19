@@ -117,7 +117,10 @@
     "companies": [
       "microsoft"
     ],
-    "modelIds": [],
+    "modelIds": [
+      "mai-cyber-2-flash",
+      "microsoft-decision-1-1"
+    ],
     "sourceName": "Microsoft AI",
     "sourceUrl": "https://microsoft.ai/news/microsoft-ignite-2026/"
   },
@@ -175,7 +178,9 @@
     "companies": [
       "alibaba"
     ],
-    "modelIds": [],
+    "modelIds": [
+      "qwen4-max"
+    ],
     "sourceName": "Alibaba Cloud",
     "sourceUrl": "https://www.alibabacloud.com/press-room/alibaba-unveils-qwen4-max"
   },

@@ -10895,5 +10895,194 @@
       "Shipped as a Foundry preview that Microsoft said it would soon rebase on other models, so behavior is a moving target rather than a fixed release"
     ],
     "notes": "Not an LLM: Microsoft's first typed-decision model, Qwen3.5-9B post-trained for single-pass decision scoring, which returns calibrated probabilities over fixed answer options rather than text, so none of this site's benchmarks apply and every cell is null by design; filed under the fast tier with the other decision models. Introduced on 2026-10-09 (commandline.microsoft.com, \"Microsoft-Decision-1\") in Microsoft Foundry, where the catalog lists it as Preview with text-only input and a 32,768-token context, and on OpenRouter, hence availability general; the OpenRouter id is the path Microsoft's post links to. $0.042 per M input tokens, output free. Microsoft's accuracy, latency and perturbation figures come from its own 36-benchmark comparison. No Artificial Analysis cost or speed entry and no knowledge cutoff published."
+  },
+  {
+    "id": "qwen4-max",
+    "name": "Qwen4-Max",
+    "company": "alibaba",
+    "releaseDate": "2026-11-16",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": 131072,
+    "pricing": {
+      "inputPerMTok": 1.5,
+      "outputPerMTok": 4.5
+    },
+    "costPerTask": {
+      "usd": 3.27,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": 56,
+      "timeToFirstTokenSec": 146.14,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "Alibaba Cloud Model Studio",
+        "id": "qwen4-max"
+      },
+      {
+        "provider": "openrouter",
+        "id": "qwen/qwen4-max"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Takes text, images and video in one request on the same endpoint, so document, chart and screen-recording work doesn't need a separate vision model",
+      "Effort settings map onto the OpenAI and Anthropic API parameters, so existing clients and coding tools can switch to it by changing the model string",
+      "Alibaba says it beats Qwen3.8-Max on its office-style agent work while reasoning noticeably less — the per-task saving comes from fewer tokens as well as the lower rate",
+      "Alibaba's Live Delivery lets a user redirect a running agent mid-task instead of restarting it, a vendor feature not yet tested independently"
+    ],
+    "weaknesses": [
+      "Slow and wordy in Artificial Analysis' runs, which spent minutes before the first answer token and used far more output than the median model — agent loops take tens of minutes per task",
+      "Thinking tokens count against the same max_tokens budget as the answer, so a tight cap can cut the reply off",
+      "Alibaba's own launch chart has it trailing on terminal work and whole-program coding — it reads as an office-agent model more than a coding specialist"
+    ],
+    "notes": "Closed-weight 2.4T-parameter mixture-of-experts model with 71B active parameters; Alibaba's press release dated 2026-11-16 announced it as available now on QwenCloud (Token Plan and API), QwenWork and QwenStudio, after a Token Plan-only preview reported from 2026-11-11, and says smaller open-weight Qwen4 models will follow. Pricing, 1,000,000-token context, 131,072-token non-thinking max output (262,144 in thinking mode) and text/image/video input are from Alibaba Cloud Model Studio's qwen4-max page; $1.50/$4.50 per MTok is the Singapore international rate, other regions list $1.413/$4.24, cache hits $0.075. Effort levels are low, high (default) and xhigh. Cost per task ($3.27), speed and the 984K context AA quotes are Artificial Analysis figures from a single unlabelled variant, so effort is null. Every tracked benchmark cell is null: Alibaba's launch chart, relayed by VentureBeat and DataCamp because the qwen.ai post did not render, gives HLE 51.7 (tool use unstated), Terminal-Bench 4.0 48.5 (not comparable with the 2.1 key), DeepSWE 1.1 75.7 and Code Arena 1750; Artificial Analysis lists GDPval-AA v2.1 at 1809 (the key tracks v2); it is not yet on arena.ai's Text Arena (Nov 18 board). predecessorId is null — Alibaba compares it with Qwen3.8-Max without saying it replaces it."
+  },
+  {
+    "id": "mai-cyber-2-flash",
+    "name": "MAI Cyber 2 Flash",
+    "company": "microsoft",
+    "releaseDate": "2026-11-17",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "text",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 0.1,
+      "outputPerMTok": 0.5
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "restricted",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "A specialist security model built on Microsoft's own security data, meant to run the bulk of scans in its MDASH multi-agent harness and leave only the hardest cases to larger models",
+      "Spends far fewer output tokens than MAI Cyber 1.1 Flash on the same work, which is where most of the cost saving comes from",
+      "Microsoft reports frontier-level results on end-to-end vulnerability tasks at a small fraction of a flagship model's cost per task, using half the reasoning budget"
+    ],
+    "weaknesses": [
+      "Not a general API — it ships only inside Microsoft security products, reaching eligible MDASH customers from mid-December, and access means registering interest as a verified defender",
+      "Every performance figure is Microsoft's own, measured after it dropped benchmark tasks that overlapped its training data, and its comparison with GPT-6 Cyber is still pending",
+      "No model card for this version at launch, so modality, output limit and training cutoff are unpublished"
+    ],
+    "notes": "Announced at Microsoft Ignite on 2026-11-17 (microsoft.ai/news/introducing-mai-cyber-2-flash). Pricing is the list rate in the launch post's cost footnote, $0.10/$0.50 per MTok with $0.01 cached input; the 1M-token context is Microsoft's figure (four times MAI Cyber 1.1 Flash's). Microsoft reports CyberGym-E2E 92.3% against GPT-6 Astra's 91.5% on 813 of 905 tasks (92 excluded for training overlap) and WebExploitBench 40.4% against GPT-5.6 Cyber's 38.4%; neither is a tracked key, so every benchmark cell is null. Availability is restricted: it is exclusive to Microsoft security products and will automatically replace the existing model in MDASH's MAI profile for eligible customers from mid-December. Modality is recorded as text because Microsoft has not published input types for this version; the model page links a MAI-Cyber-1-Flash card rather than a card for this release. No API model string, Artificial Analysis entry or knowledge cutoff. Its predecessors, MAI Cyber 1 Flash and 1.1 Flash, are not tracked here, so predecessorId is null."
+  },
+  {
+    "id": "microsoft-decision-1-1",
+    "name": "Microsoft-Decision-1.1",
+    "company": "microsoft",
+    "releaseDate": "2026-11-17",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "type": "system-one",
+    "contextWindow": 32767,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 0.042,
+      "outputPerMTok": 0
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "microsoft-foundry",
+        "id": "Microsoft-Decision-1.1"
+      },
+      {
+        "provider": "openrouter",
+        "id": "microsoft/microsoft-decision-1.1"
+      },
+      {
+        "provider": "vercel-ai-gateway",
+        "id": "microsoft/decision-1.1"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Adds image input to Microsoft-Decision-1's text — photos and screenshots can sit in the state alongside text or JSON",
+      "Can split confidence across several valid answers or abstain when the input is incomplete, which gives a clean act, flag or escalate signal",
+      "Already routes Copilot requests and sets Cowork's reasoning effort inside Microsoft, so it has been run on live routing traffic rather than only benchmarks",
+      "Microsoft says it is more than twice as fast as Microsoft-Decision-1 at the same price"
+    ],
+    "weaknesses": [
+      "Microsoft's own docs warn that scores shift with how questions and options are worded or ordered, and badly framed questions still come back with scores",
+      "Calibration is strongest on familiar task types, and the docs recommend treating score questions as relative orderings rather than absolute ratings",
+      "No independent hands-on testing at launch — the accuracy, speed and Decision Index figures all come from Microsoft"
+    ],
+    "notes": "Not an LLM: Microsoft's second typed-decision model, now post-trained from Gemma 4 26B A4B rather than Decision-1's Qwen3.5-9B, which answers Noul, Choice and Score questions with calibrated probabilities instead of text, so none of this site's benchmarks apply and every cell is null by design; filed under the fast tier with the other decision models. Generally available on 2026-11-17 (commandline.microsoft.com, Microsoft-Decision-1.1 GA post) in Microsoft Foundry, OpenRouter and Vercel; the Ignite keynote calls it Decision 1.1. Context is the Foundry catalog's 32,767 tokens (Vercel's description says 32,768); text and image input, up to 8 images per call. Pricing is $0.042 per M input tokens with free output, from Vercel AI Gateway's listing and Microsoft's statement that it costs the same as Decision-1. Microsoft reports 68 on Artificial Analysis' Decision Index v2.1, six points above Decision-1, and the highest average accuracy of eight decision models across its own 102-benchmark suite. predecessorId is null — Microsoft compares it with \"our first model\" but does not say it replaces Decision-1. No Artificial Analysis cost or speed entry and no knowledge cutoff published."
   }
 ]

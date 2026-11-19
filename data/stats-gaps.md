@@ -1342,3 +1342,12 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | gemini-4-neon | mmluPro / aime | 2026-11-19 | retired; not in Google's table |
 | microsoft-decision-1 | all benchmarks | 2026-11-19 | not applicable, not merely unpublished: typed-decision model that cannot generate text; Microsoft reports only its own 36-benchmark decision-format comparison |
 | microsoft-decision-1 | costPerTask / knowledgeCutoff / maxOutput | 2026-11-19 | decision model with no output tokens; no AA Intelligence Index cost; launch post and Foundry catalog publish no cutoff |
+| qwen4-max | gpqaDiamond / sweBench / sweBenchPro / arcAgi2 / mmluPro / aime | 2026-11-19 | not in Alibaba's press release or launch chart (as relayed by VentureBeat/DataCamp); AA model page shows no per-eval scores; no arcprize.org result at launch — re-check |
+| qwen4-max | hle | 2026-11-19 | Alibaba's launch chart gives 51.7 (tool use unstated) but the qwen.ai post would not render, so the figure was seen only via VentureBeat/DataCamp; AA's HLE page did not list it. In notes; re-check against the official post |
+| qwen4-max | terminalBench | 2026-11-19 | only Terminal-Bench 4.0 published (48.5 Alibaba; 48.48 Vals), not the tracked 2.1 |
+| qwen4-max | lmarenaElo | 2026-11-19 | not on arena.ai Text Arena (Nov 18 board); Code Arena 1750 only |
+| qwen4-max | gdpvalAA | 2026-11-19 | AA lists GDPval-AA v2.1 1809 only (key tracks v2); in notes |
+| mai-cyber-2-flash | all benchmarks | 2026-11-19 | Microsoft reports only CyberGym-E2E and WebExploitBench; no model card for this version; not on AA, arena.ai or arcprize.org |
+| mai-cyber-2-flash | maxOutput / knowledgeCutoff / costPerTask | 2026-11-19 | no model card for this version (model page links the MAI-Cyber-1-Flash card); not on Artificial Analysis |
+| microsoft-decision-1-1 | all benchmarks | 2026-11-19 | not applicable, not merely unpublished: typed-decision model that cannot generate text; Microsoft reports AA Decision Index v2.1 68 and its own 102-benchmark decision suite only |
+| microsoft-decision-1-1 | costPerTask / knowledgeCutoff / maxOutput | 2026-11-19 | decision model with no output tokens; no AA Intelligence Index cost; GA post and Foundry catalog publish no cutoff |
