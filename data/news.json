@@ -122,7 +122,21 @@
       "microsoft-decision-1-1"
     ],
     "sourceName": "Microsoft AI",
-    "sourceUrl": "https://microsoft.ai/news/microsoft-ignite-2026/"
+    "sourceUrl": "https://microsoft.ai/news/microsoft-ignite-2026/",
+    "refs": [
+      {
+        "type": "image-model",
+        "id": "mai-image-2-7"
+      },
+      {
+        "type": "image-model",
+        "id": "mai-image-2-7-flash"
+      },
+      {
+        "type": "voice-model",
+        "id": "mai-realtime-1"
+      }
+    ]
   },
   {
     "id": "2026-11-16-bis-remote-access-rule",
