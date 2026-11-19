@@ -9901,8 +9901,8 @@
     "tier": "flagship",
     "modality": "multimodal",
     "type": "llm",
-    "contextWindow": null,
-    "maxOutput": null,
+    "contextWindow": 1048576,
+    "maxOutput": 1048576,
     "pricing": {
       "inputPerMTok": 2,
       "outputPerMTok": 10
@@ -9912,15 +9912,24 @@
       "effort": "high"
     },
     "openWeights": false,
-    "availability": "restricted",
-    "knowledgeCutoff": null,
+    "availability": "general",
+    "knowledgeCutoff": "2026-03",
     "speed": {
       "outputTokensPerSec": 99.8,
       "timeToFirstTokenSec": null,
       "effort": "high"
     },
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "google",
+        "id": "gemini-4-carbon"
+      },
+      {
+        "provider": "google-vertex",
+        "id": "gemini-4-carbon"
+      }
+    ],
     "retirementDate": null,
     "predecessorId": null,
     "benchmarks": {
@@ -9944,9 +9953,9 @@
     "weaknesses": [
       "Thinks even longer than Argon — more than twice the reasoning tokens, and some finance and legal agent tasks take over twice as long to finish",
       "Guesses more often when it doesn't know than Argon did, so Argon's habit of declining rather than fabricating has weakened",
-      "Reachable only by vetted cyber defenders through the Fairwind Program at launch, with no date for wider access, so it can't be trialled casually"
+      "Spent its first two weeks open only to vetted cyber defenders, so it reached developers later than Argon and with less outside testing behind it"
     ],
-    "notes": "Google's second Gemini 4 model, announced 2026-10-28 two weeks after Argon and described as building on it; access starts with a subset of cyber defenders and phases out to more trusted partners through the Fairwind Program, with developers, businesses and consumers promised access 'as soon as possible', and the model is in the U.S. government's voluntary pre-release testing — hence availability \"restricted\". Pricing is Google's introductory $2/$10 per MTok (cached input 95% off), rising to $4/$20; Google's blog gives no end date for the discount. Google's evaluation PDF (deepmind.google/models/evals-methodology/gemini-4-carbon, highest thinking setting) uses only untracked suites: Artificial Analysis Intelligence Index v5.0 59 (Argon 50, GPT-6 Astra 57, Claude Opus 5.5 58), Vals Index v2.2 70.4%, SWE-sweep 9.6%, FrontierSWE 2 61.2%, Terminal-Bench 4.0 65.2% (not the tracked 2.1), Agents' Last Exam v1.1 77.4%, OSWorld 2.1 offline 81.5%, AutomationBench 53.9%, Vending-Bench 2 $16,484, Chartography 72.5%, Blueprint-Bench 2 58.6%, GraphWalks 256K–1M 96.2%, RiemannBench 80.0%, Terminal-Bench Science 0.1 64.8%, CWE-bench 71.0%, ExploitGym 54.8% and SEC-bench Pro 88.2% (183-task May 2026 JavaScript-engine split, pass@1 over 3 attempts); the ExploitGym and SEC-bench Pro runs are Google's own, some with mitigations off. No GPQA Diamond, SWE-bench, HLE, ARC-AGI-2 or GDPval-AA v2 figure was published. LMArena Elo 1528 (±9, preliminary, 4,403 votes) is the 'Gemini 4 Carbon (High)' text-arena listing, rank 1 ahead of Argon (now 1520); it is 4th on WebDev Arena at 1768. costPerTask $7.76 and output speed 99.8 tok/s are Artificial Analysis' figures for the only variant it lists, Carbon (High), and AA prices the index run at the $4/$20 list rate, not the introductory one (so the per-task cost at launch pricing is about half). AA's FAQ gives a 103.13s time to first token on Google's API but its first-answer-token chart shows no value, so timeToFirstTokenSec is null. contextWindow, maxOutput and knowledgeCutoff are null: Google published no model card or Gemini API model page, and AA's '1M' context is not an official figure. No official model string has been published, so apiIds is empty. predecessorId is null: Google says Carbon builds on Argon but names no model it replaces."
+    "notes": "Google's second Gemini 4 model, announced 2026-10-28 two weeks after Argon and described as building on it; access started with a subset of cyber defenders through the Fairwind Program, and on 2026-11-10 Google made it generally available to all paying developers and enterprises through the Gemini API in AI Studio and Gemini for business, and to Google AI Ultra subscribers in the Gemini app, AI Mode and Antigravity (blog.google, 'Gemini 4 Carbon is now available'), so availability is general; a 'Carbon for cyber' variant stays behind Fairwind. Pricing is Google's introductory $2/$10 per MTok (cached input 95% off) through 2026-11-30, rising to $4/$20 on 2026-12-01 per the Gemini API pricing page. Google's evaluation PDF (deepmind.google/models/evals-methodology/gemini-4-carbon, highest thinking setting) uses only untracked suites: Artificial Analysis Intelligence Index v5.0 59 (Argon 50, GPT-6 Astra 57, Claude Opus 5.5 58), Vals Index v2.2 70.4%, SWE-sweep 9.6%, FrontierSWE 2 61.2%, Terminal-Bench 4.0 65.2% (not the tracked 2.1), Agents' Last Exam v1.1 77.4%, OSWorld 2.1 offline 81.5%, AutomationBench 53.9%, Vending-Bench 2 $16,484, Chartography 72.5%, Blueprint-Bench 2 58.6%, GraphWalks 256K–1M 96.2%, RiemannBench 80.0%, Terminal-Bench Science 0.1 64.8%, CWE-bench 71.0%, ExploitGym 54.8% and SEC-bench Pro 88.2% (183-task May 2026 JavaScript-engine split, pass@1 over 3 attempts); the ExploitGym and SEC-bench Pro runs are Google's own, some with mitigations off. No GPQA Diamond, SWE-bench, HLE, ARC-AGI-2 or GDPval-AA v2 figure was published. LMArena Elo 1528 (±9, preliminary, 4,403 votes) is the 'Gemini 4 Carbon (High)' text-arena listing, rank 1 ahead of Argon (now 1520); it is 4th on WebDev Arena at 1768. costPerTask $7.76 and output speed 99.8 tok/s are Artificial Analysis' figures for the only variant it lists, Carbon (High), and AA prices the index run at the $4/$20 list rate, not the introductory one (so the per-task cost at launch pricing is about half). AA's FAQ gives a 103.13s time to first token on Google's API but its first-answer-token chart shows no value, so timeToFirstTokenSec is null. contextWindow is the 1,048,576-token window shared by input, thinking and output, and maxOutput the same ceiling reachable only with long decode — a synchronous response stops at 65,536 (AI Studio and Vertex model pages, added at GA); knowledgeCutoff is from the DeepMind model card ('March 2026, though in some domains the model's knowledge may be less up to date'). apiIds gemini-4-carbon is from the AI Studio model page (stable) and the Gemini Enterprise Agent Platform model page. predecessorId is null: Google says Carbon builds on Argon but names no model it replaces."
   },
   {
     "id": "gpt-6-cyber",
@@ -10757,5 +10766,70 @@
       "Tuned for English code production only at release; other languages and less common frameworks are largely unevaluated"
     ],
     "notes": "Announced at Microsoft Ignite on 2026-11-17, generally available in GitHub Copilot (Free, Student, Pro, Pro+, Max, Business, Enterprise) and in limited-access preview on Microsoft Foundry via the Responses API, hence availability \"restricted\"; no Foundry model string is published, so apiIds is empty. Pricing is the list rate from GitHub's models-and-pricing docs, $0.10/$0.50 per MTok ($0.01 cached input), which applies from 2027-05-17; until then a 50% promotion bills $0.05/$0.25, and Microsoft's \"65% of GPT-6 Luna's\" and \"20% of Claude Haiku 5.5's\" cost claims are made at that promotional price. Context 1,050,000 tokens (922K input), 128K output, text and image input, pre-training cutoff August 2026, low-to-max effort and closed weights are from the shared MAI Code 2 model card (microsoft.ai/pdf/MAI-Code-2-And-MAI-Code-2-Flash-Model-Card.pdf), which gives 12B active and about 398B total parameters (its summary table says 5B-15B). Terminal-Bench 2.1 78.3% is lab-reported at max effort on Microsoft's MSBench with the GitHub Copilot CLI harness (subagents off, mean of three runs); the card also gives DeepSWE 1.1 59.9% and SWE Atlas 44.8%, above MAI Code 2's 43.1%. Microsoft's claim that it matches GPT-6 Luna and Claude Haiku 5.5 is a vendor comparison over DeepSWE 1.1, Terminal-Bench 2.1 and SWE-Atlas. The card compares it with MAI-Code-1.1-Flash (not tracked here) without saying it replaces it."
+  },
+  {
+    "id": "gemini-4-neon",
+    "name": "Gemini 4 Neon",
+    "company": "google",
+    "releaseDate": "2026-11-18",
+    "status": "unknown",
+    "tier": "balanced",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1048576,
+    "maxOutput": 1048576,
+    "pricing": {
+      "inputPerMTok": 3,
+      "outputPerMTok": 15
+    },
+    "costPerTask": {
+      "usd": 6.44,
+      "effort": "xhigh"
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": "2026-03",
+    "speed": {
+      "outputTokensPerSec": 110,
+      "timeToFirstTokenSec": 56.51,
+      "effort": "xhigh"
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "google",
+        "id": "gemini-4-neon"
+      },
+      {
+        "provider": "google-vertex",
+        "id": "gemini-4-neon"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": 1518,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Built to run as an Orchestrator over parallel Hydrogen subagents, holding long tool-heavy agent runs together rather than doing every edit itself",
+      "Cuts redundant file reads, reports progress as it goes and carries work across context compaction, and Google says it adapts cleanly when corrected mid-task",
+      "Google reports the lowest fabrication rate it has recorded in internal Antigravity testing and the lowest coding-shortcut rate of any Gemini 4 model",
+      "Refuses benign requests less often than Hydrogen, especially multimodal ones, by the model card's own safety comparison"
+    ],
+    "weaknesses": [
+      "At xhigh it thinks at great length — Artificial Analysis' runs use more than twice the output tokens of the high setting, and the first answer token takes close to a minute",
+      "Safeguards still turn away some legitimate agent work, and the full Safety & Security Report was only promised for the coming days at launch",
+      "One day old at the time of writing with no independent hands-on reviews yet, so its behaviour claims are Google's own"
+    ],
+    "notes": "Google's third Gemini 4 tier, announced 2026-11-18 (blog.google) and described in the DeepMind model card as 'adapted from Gemini 4 Carbon'; Google places it between Carbon ('your hardest, long-horizon projects') and Hydrogen ('fast everyday execution') as the model that 'balances depth and efficiency', so it is filed in the balanced tier. Rolling out on launch day to the Gemini API paid tier in AI Studio and Android Studio, Gemini for business, Antigravity, and Google AI Pro and Ultra subscribers in the Gemini app; the Vertex model page lists gemini-4-neon as GA from 2026-11-18, and a 'Neon for cyber' variant goes to Fairwind Program defenders and isn't tracked separately. Pricing is $3/$15 per MTok with no introductory rate or long-context tier (implicit caching only, $0.15 cached input; batch and flex half price, priority 1.8x); there is no free tier. contextWindow is the 1,048,576-token window shared by input, thinking and output, and maxOutput is the same ceiling reachable only with background long decode — a synchronous response stops at 65,536 (model card: 'up to 64K default synchronous output tokens'). knowledgeCutoff is from the model card ('March 2026, though in some domains the model's knowledge may be less up to date'). Thinking levels are low, medium, high (default) and xhigh. Google's evaluation PDF (deepmind.google/models/evals-methodology/gemini-4-neon, highest thinking setting) uses only untracked suites: AA Index v5.0.1 61, Vals Index v2.2 70.9%, CursorBench 4.1 65.4%, Terminal-Bench 4.1 65.2% (not the tracked 2.1), FrontierCode 2.0 46.2% (high), SWE-sweep 39.0% provider harness / 12.8% mini-SWE, AutomationBench 56.3%, Agents' Last Exam v1.1 75.8%, RiemannBench 84.0%, Terminal-Bench-Science 0.1 70.5%, HLE-Diamond 71.3% (AA's subset, so hle stays null), MKA 56.5%, Chartography 73.5%, LVBench 89.0%, GraphWalks 256K–1M 95.2%, CWE-Bench v2 70.7%, SEC-bench Pro 90.5% and WebExploitBench v1.2 51.3%; the blog adds Agent Arena Index 1336 and Vending-Bench 2 $16,843. No GPQA Diamond, SWE-bench, ARC-AGI-2 or GDPval-AA v2 figure exists. LMArena Elo 1518 is the 'Gemini 4 Neon (High)' text-arena listing at rank 3 on the 2026-11-18 board (no CI or vote count shown). costPerTask and speed are Artificial Analysis' xhigh variant, the only one it prices ($6.44/task, Intelligence Index 61, 110 tok/s, 56.51 s to first answer token); high scores 60 (101 tok/s, 40.64 s), medium 55 (101 tok/s, 20.14 s) and low 44 (97 tok/s, 13.93 s), with no per-task cost shown for those. predecessorId is null: Google names no model it replaces; 9to5Google reports Neon taking Argon's slot in the Gemini app model picker, but that is not a replacement claim from Google."
   }
 ]
