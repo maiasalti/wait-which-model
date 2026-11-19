@@ -1323,5 +1323,46 @@
     "scores": {
       "aaBigBenchAudio": null
     }
+  },
+  {
+    "id": "mai-realtime-1",
+    "name": "MAI Realtime 1",
+    "company": "microsoft",
+    "releaseDate": "2026-11-17",
+    "notable": false,
+    "description": "Microsoft AI's first speech-to-speech model, built for enterprise voice agents: it handles interruptions, waits for the speaker to finish and pairs MAI's voice with real-time reasoning. It is in a limited-access Microsoft Foundry preview and in MAI Labs.",
+    "strengths": [
+      "$0.01 per audio minute base rate",
+      "Compatible with the OpenAI Realtime API",
+      "Persona tone, style and behaviour set by prompting",
+      "Connects to enterprise systems and tools"
+    ],
+    "weaknesses": [
+      "Limited-access preview only: register for Foundry access",
+      "Reasoning billed on top at $1 / $5 per 1M input / output tokens",
+      "No benchmark scores published, only claims against GPT Realtime 2.1"
+    ],
+    "links": {
+      "official": "https://microsoft.ai/news/introducing-mai-realtime-1/",
+      "docs": null
+    },
+    "notes": "Not notable: not on the Artificial Analysis speech-to-speech boards (checked 2026-11-19), and Microsoft isn't a frontier-lab company. releaseDate is the announcement date (microsoft.ai, 2026-11-17, Ignite). Microsoft claims it outperforms GPT Realtime 2.1 on quality, speed and price across public benchmarks and sits on the performance-price Pareto frontier for Big Bench Audio and Tau-Voice, but gives no figures; the model page's Big Bench Audio and time-to-first-audio tiles showed 0 placeholders. toolCalling is from the blog's \"connects to enterprise systems and tools\"; no function-calling docs yet. inputs lists audio only because no page names text or image input. MAI Labs is personal use only. Agoda and Reservations.ai are testing it; Microsoft says it is coming to Dynamics 365 Contact Center and Dragon Copilot. Secondary reports (TestingCatalog) of 17 languages and two voices are unconfirmed on Microsoft pages.",
+    "pricing": {
+      "perMinuteUsd": 0.01,
+      "notes": "$0.01 per minute base speech-to-speech usage; reasoning billed separately at $1 per 1M input tokens and $5 per 1M output tokens. Preview customers aren't billed until public preview begins."
+    },
+    "inputs": [
+      "audio"
+    ],
+    "toolCalling": true,
+    "languages": null,
+    "voices": null,
+    "access": "waitlist",
+    "openWeights": false,
+    "license": null,
+    "apiIds": [],
+    "scores": {
+      "aaBigBenchAudio": null
+    }
   }
 ]
