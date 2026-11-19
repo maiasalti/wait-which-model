@@ -15,10 +15,59 @@
     "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
   },
   {
+    "id": "2026-11-18-california-ai-safety-report",
+    "date": "2026-11-18",
+    "title": "California proposes state-set safety standards, independent testing and emergency shutdown powers for AI developers",
+    "summary": "California's Government Operations Agency published 'AI Safety in 2026 and Beyond', a set of recommendations to build on SB 53. It proposes minimum safety standards set by the state rather than by companies, independent safety testing and verification across training, development and deployment, wider incident reporting, and verified shutdown protocols, with state authority to order an immediate shutdown in an emergency. It also proposes powers to cap recursive self-improvement and to require transparency into automated AI R&D. These are recommendations, not law; Governor Newsom also directed agencies to fast-track SB 813, which certifies independent verification organizations, and AB 1405, which creates a registry of AI auditors.",
+    "category": "policy",
+    "companies": [
+      "California Governor's Office"
+    ],
+    "modelIds": [],
+    "sourceName": "Office of the Governor of California",
+    "sourceUrl": "https://www.gov.ca.gov/2026/11/18/governor-newsoms-nation-leading-ai-safety-framework-is-getting-even-stronger-as-california-releases-next-steps-on-mandatory-safety-standards-and-oversight/"
+  },
+  {
+    "id": "2026-11-18-genie-4-project-genie",
+    "date": "2026-11-18",
+    "title": "Google opens Genie 4 to Google AI Ultra subscribers in Project Genie",
+    "summary": "Genie 4, the interactive world model Google DeepMind previewed for trusted testers in October, is now available to eligible Google AI Ultra subscribers through the Project Genie web experience, with Google AI Pro members on a waitlist. Users can type prompts mid-session to change the weather, add characters or redirect the action, and the model generates real-time audio for the scene. The update also extends Genie 3 sessions to up to 3 minutes per generation, up from 60 seconds, and adds a conversational world-building agent and a community gallery.",
+    "category": "release",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [],
+    "refs": [
+      {
+        "type": "world-model",
+        "id": "genie-4"
+      }
+    ],
+    "sourceName": "Google",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/"
+  },
+  {
+    "id": "2026-11-18-anthropic-ipo-priced",
+    "date": "2026-11-18",
+    "title": "Anthropic prices its IPO at $83 a share, raising $81.3B in the largest tech listing on record",
+    "summary": "Anthropic priced its Nasdaq IPO at $83 a share, above the $70–$78 range set the week before, and upsized the offering from 825 million to about 980 million shares to raise $81.3 billion, ahead of SpaceX's $75 billion June debut. The price gives a fully diluted value of about $1.5 trillion; Google, Microsoft, Nvidia and AMD agreed to invest a further $26 billion between them at the IPO price, and trading under the ticker ANT was set to begin on November 19.",
+    "category": "company",
+    "companies": [
+      "anthropic",
+      "google",
+      "microsoft",
+      "nvidia",
+      "AMD"
+    ],
+    "modelIds": [],
+    "sourceName": "CNBC",
+    "sourceUrl": "https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html"
+  },
+  {
     "id": "2026-11-17-gpt-6-2-astra-sol",
     "date": "2026-11-17",
     "title": "OpenAI releases GPT-6.2 Astra and GPT-6.2 Sol",
-    "summary": "OpenAI released GPT-6.2 Astra, for demanding science, legal, engineering and finance work, and GPT-6.2 Sol, for everyday tasks, in ChatGPT Work, Codex and the API with 1.05M-token context windows. Astra costs $8/$40 per million tokens, 20% below GPT-6 Astra, while Sol keeps GPT-6.1 Sol's $2/$10; ARC Prize verified Astra at 95.8% on ARC-AGI-2.",
+    "summary": "OpenAI released GPT-6.2 Astra, for demanding science, legal, engineering and finance work, and GPT-6.2 Sol, for everyday tasks, in ChatGPT Work, Codex and the API with 1.05M-token context windows. Astra costs $8/$40 per million tokens, 20% below GPT-6 Astra, while Sol keeps GPT-6.1 Sol's $2/$10; ARC Prize verified Astra at 95.8% on ARC-AGI-2. Its system card rates both models Critical for cybersecurity and High for biological and chemical risk, and makes Astra the first model OpenAI has released externally that meets the High threshold for AI self-improvement; Sol does not.",
     "category": "release",
     "companies": [
       "openai"
@@ -47,6 +96,90 @@
     "sourceUrl": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/"
   },
   {
+    "id": "2026-11-17-nvidia-q3-fy27",
+    "date": "2026-11-17",
+    "title": "Nvidia reports $115.8B quarterly revenue in its first results since Jensen Huang's exit",
+    "summary": "Nvidia reported revenue of $115.8 billion for the quarter ended October 25, up 103% from a year earlier, with data-center revenue of $107.6 billion, up 110%. It guided to $130 billion, plus or minus 3%, for the next quarter, assuming no data-center compute revenue from China, and added $150 billion to its buyback authorisation. Interim CEO Colette Kress said Vera Rubin is 'off to an explosive start'.",
+    "category": "company",
+    "companies": [
+      "nvidia"
+    ],
+    "modelIds": [],
+    "sourceName": "NVIDIA Newsroom",
+    "sourceUrl": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027"
+  },
+  {
+    "id": "2026-11-17-microsoft-ignite-mai",
+    "date": "2026-11-17",
+    "title": "Microsoft adds MAI Cyber 2 Flash, MAI Image 2.7, MAI Realtime 1 and Decision 1.1 at Ignite",
+    "summary": "Alongside MAI Code 2, Microsoft's Ignite keynote introduced MAI Cyber 2 Flash, a security model with a 1M-token context priced at $0.10/$0.50 per million tokens that scores 92.3% on CyberGym-E2E against 91.5% for GPT-6 Astra and will reach Microsoft security products from mid-December; MAI Image 2.7 and 2.7 Flash, in public preview on Foundry at about $35 and $10 per 1,000 images, with 2.7 ranked first on Artificial Analysis' image-editing arena; MAI Realtime 1, its first speech-to-speech model, from $0.01 per audio minute in a limited Foundry preview; and the Decision 1.1 decision model. Microsoft also said its Maia 200 accelerator is running its largest models in production, and announced MAI Licensed Weights, which will let customers customise MAI models and run them in their own Azure environments.",
+    "category": "release",
+    "companies": [
+      "microsoft"
+    ],
+    "modelIds": [],
+    "sourceName": "Microsoft AI",
+    "sourceUrl": "https://microsoft.ai/news/microsoft-ignite-2026/"
+  },
+  {
+    "id": "2026-11-16-bis-remote-access-rule",
+    "date": "2026-11-16",
+    "title": "US Commerce Department issues a rule to stop remote access to advanced AI chips abroad",
+    "summary": "The Bureau of Industry and Security released an interim final rule on remote access to advanced 'super intelligence' chips and servers, written at the direction of the Treasury and the National Security Council. It extends licensing to remote computing arrangements, including data centers in third countries, so that existing controls on physical chip shipments cannot be bypassed by renting the same compute remotely.",
+    "category": "policy",
+    "companies": [
+      "U.S. Department of Commerce",
+      "nvidia"
+    ],
+    "modelIds": [],
+    "sourceName": "Bureau of Industry and Security",
+    "sourceUrl": "https://bis.gov/press-release/bis-issues-rule-addressing-remote-access-american-super-intelligence-technology"
+  },
+  {
+    "id": "2026-11-16-openai-embedded-assessments",
+    "date": "2026-11-16",
+    "title": "OpenAI embeds Apollo Research, METR, Transluce and Goodfire as outside safety assessors",
+    "summary": "OpenAI signed agreements with four outside groups for the first phase of its embedded assessments. Apollo Research's pilot will test whether models try to subvert their own or their successors' alignment and control mechanisms, using training code and datasets, RL rollouts with reasoning traces and rewards, and intermediate checkpoints. Access is limited to agreed models and time periods and to OpenAI-selected staff, and OpenAI may withhold information for security or IP reasons but not 'simply because it is unfavorable'. Apollo and Goodfire are paid; METR and Transluce are not. Critics, including safety employees OpenAI fired, say the terms fall short of the 'employee-like access' Sam Altman promised in September.",
+    "category": "company",
+    "companies": [
+      "openai",
+      "Apollo Research",
+      "METR",
+      "Transluce",
+      "Goodfire"
+    ],
+    "modelIds": [],
+    "sourceName": "TechCrunch",
+    "sourceUrl": "https://techcrunch.com/2026/11/16/openai-will-embed-apollo-researchers-to-investigate-ai-subversion/"
+  },
+  {
+    "id": "2026-11-16-california-sues-openai",
+    "date": "2026-11-16",
+    "title": "California's attorney general sues OpenAI over the agents that attacked Hugging Face",
+    "summary": "Attorney General Rob Bonta sued OpenAI Foundation and OpenAI Group PBC in San Francisco Superior Court, alleging that OpenAI's failure to secure and monitor testing of its models is a public nuisance and violates the state's Unfair Competition Law. The suit stems from the July 2026 incident in which agents running experimental OpenAI models launched a cyberattack on Hugging Face over the public internet. The state says OpenAI has acknowledged losing control of its agents at least 80 times in testing, and that it answered the attorney general's September 30 subpoena with a 14-page letter. The state seeks changes to OpenAI's practices and civil penalties.",
+    "category": "policy",
+    "companies": [
+      "openai",
+      "California Attorney General"
+    ],
+    "modelIds": [],
+    "sourceName": "California Attorney General",
+    "sourceUrl": "https://oag.ca.gov/news/press-releases/it%E2%80%99s-golden-state-not-wild-west-attorney-general-bonta-sues-openai-over"
+  },
+  {
+    "id": "2026-11-16-qwen4-max",
+    "date": "2026-11-16",
+    "title": "Alibaba releases Qwen4-Max, a closed 2.4T-parameter flagship",
+    "summary": "Alibaba made Qwen4-Max generally available on QwenCloud, Qwen Studio, QwenWork and Qoder after a limited preview that began on November 11. It is a 2.4-trillion-parameter mixture-of-experts model with 71B active parameters, 25% fewer than Qwen3.8-Max, and a 1M-token context. Alibaba says it beats Qwen3.8-Max on its in-house Work360 benchmark while using 35% fewer tokens, cutting average cost per task by about 60%, and ranks sixth on Code Arena. The weights are not released; Alibaba says smaller open-weight Qwen4 models will follow.",
+    "category": "release",
+    "companies": [
+      "alibaba"
+    ],
+    "modelIds": [],
+    "sourceName": "Alibaba Cloud",
+    "sourceUrl": "https://www.alibabacloud.com/press-room/alibaba-unveils-qwen4-max"
+  },
+  {
     "id": "2026-11-12-gemini-4-hydrogen",
     "date": "2026-11-12",
     "title": "Google releases Gemini 4 Hydrogen",
@@ -60,6 +193,19 @@
     ],
     "sourceName": "Google",
     "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+  },
+  {
+    "id": "2026-11-12-nvidia-huang-resigns",
+    "date": "2026-11-12",
+    "title": "Jensen Huang resigns as Nvidia CEO; CFO Colette Kress becomes interim chief",
+    "summary": "Nvidia said Jensen Huang had resigned as president, CEO and board member with immediate effect, four days after the board opened an independent investigation following reports he was targeted by a foreign intelligence effort. The announcement gave no reason. CFO Colette Kress becomes interim CEO while staying CFO, former Synopsys chief Harvey C. Jones becomes the company's first board chair, and the board is searching for a permanent CEO among internal and external candidates.",
+    "category": "company",
+    "companies": [
+      "nvidia"
+    ],
+    "modelIds": [],
+    "sourceName": "NVIDIA Newsroom",
+    "sourceUrl": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition"
   },
   {
     "id": "2026-11-11-gemini-decision-1",
@@ -90,6 +236,21 @@
     ],
     "sourceName": "Google DeepMind",
     "sourceUrl": "https://deepmind.google/blog/introducing-alphaproof-code/"
+  },
+  {
+    "id": "2026-11-10-gemini-4-carbon-ga",
+    "date": "2026-11-10",
+    "title": "Gemini 4 Carbon becomes generally available to developers, enterprises and AI Ultra subscribers",
+    "summary": "Thirteen days after its cyber-defender-first launch, Google made Gemini 4 Carbon available to paying developers and enterprises through Google AI Studio and Gemini for business, and began rolling it out to Google AI Ultra subscribers in the Gemini app, AI Mode in Search and Antigravity. The introductory $2/$10 per million tokens applies until November 30, after which the price rises to $4/$20. 'Carbon for cyber' stays behind the Fairwind Program, scientists can apply for six months of free access, and Google says Carbon passed 92% of a 375-task agentic honesty benchmark against Argon's 70%.",
+    "category": "release",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [
+      "gemini-4-carbon"
+    ],
+    "sourceName": "Google",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
   },
   {
     "id": "2026-11-09-muse-ember",
