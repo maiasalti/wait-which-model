@@ -10831,5 +10831,69 @@
       "One day old at the time of writing with no independent hands-on reviews yet, so its behaviour claims are Google's own"
     ],
     "notes": "Google's third Gemini 4 tier, announced 2026-11-18 (blog.google) and described in the DeepMind model card as 'adapted from Gemini 4 Carbon'; Google places it between Carbon ('your hardest, long-horizon projects') and Hydrogen ('fast everyday execution') as the model that 'balances depth and efficiency', so it is filed in the balanced tier. Rolling out on launch day to the Gemini API paid tier in AI Studio and Android Studio, Gemini for business, Antigravity, and Google AI Pro and Ultra subscribers in the Gemini app; the Vertex model page lists gemini-4-neon as GA from 2026-11-18, and a 'Neon for cyber' variant goes to Fairwind Program defenders and isn't tracked separately. Pricing is $3/$15 per MTok with no introductory rate or long-context tier (implicit caching only, $0.15 cached input; batch and flex half price, priority 1.8x); there is no free tier. contextWindow is the 1,048,576-token window shared by input, thinking and output, and maxOutput is the same ceiling reachable only with background long decode — a synchronous response stops at 65,536 (model card: 'up to 64K default synchronous output tokens'). knowledgeCutoff is from the model card ('March 2026, though in some domains the model's knowledge may be less up to date'). Thinking levels are low, medium, high (default) and xhigh. Google's evaluation PDF (deepmind.google/models/evals-methodology/gemini-4-neon, highest thinking setting) uses only untracked suites: AA Index v5.0.1 61, Vals Index v2.2 70.9%, CursorBench 4.1 65.4%, Terminal-Bench 4.1 65.2% (not the tracked 2.1), FrontierCode 2.0 46.2% (high), SWE-sweep 39.0% provider harness / 12.8% mini-SWE, AutomationBench 56.3%, Agents' Last Exam v1.1 75.8%, RiemannBench 84.0%, Terminal-Bench-Science 0.1 70.5%, HLE-Diamond 71.3% (AA's subset, so hle stays null), MKA 56.5%, Chartography 73.5%, LVBench 89.0%, GraphWalks 256K–1M 95.2%, CWE-Bench v2 70.7%, SEC-bench Pro 90.5% and WebExploitBench v1.2 51.3%; the blog adds Agent Arena Index 1336 and Vending-Bench 2 $16,843. No GPQA Diamond, SWE-bench, ARC-AGI-2 or GDPval-AA v2 figure exists. LMArena Elo 1518 is the 'Gemini 4 Neon (High)' text-arena listing at rank 3 on the 2026-11-18 board (no CI or vote count shown). costPerTask and speed are Artificial Analysis' xhigh variant, the only one it prices ($6.44/task, Intelligence Index 61, 110 tok/s, 56.51 s to first answer token); high scores 60 (101 tok/s, 40.64 s), medium 55 (101 tok/s, 20.14 s) and low 44 (97 tok/s, 13.93 s), with no per-task cost shown for those. predecessorId is null: Google names no model it replaces; 9to5Google reports Neon taking Argon's slot in the Gemini app model picker, but that is not a replacement claim from Google."
+  },
+  {
+    "id": "microsoft-decision-1",
+    "name": "Microsoft-Decision-1",
+    "company": "microsoft",
+    "releaseDate": "2026-10-09",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "text",
+    "type": "system-one",
+    "contextWindow": 32768,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": 0.042,
+      "outputPerMTok": 0
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [
+      {
+        "provider": "microsoft-foundry",
+        "id": "Microsoft-Decision-1"
+      },
+      {
+        "provider": "openrouter",
+        "id": "microsoft/microsoft-decision-1"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Returns a calibrated probability for every fixed answer option in one pass instead of generating text, so yes/no, choice, rating and rubric checks come back in a predictable shape",
+      "Built for low-latency gating — Microsoft reports a median latency about 35x below GPT-6 Sol on its decision suite",
+      "Held its answers steady under paraphrased or reordered options in Microsoft's perturbation tests, flipping on about 1.3% of perturbed inputs overall"
+    ],
+    "weaknesses": [
+      "Text only, with a 32K-token input ceiling — images arrived only with Microsoft-Decision-1.1",
+      "Cannot write a rationale or answer anything outside the options you supply, and Foundry's card warns it adds no knowledge the input doesn't contain",
+      "Shipped as a Foundry preview that Microsoft said it would soon rebase on other models, so behavior is a moving target rather than a fixed release"
+    ],
+    "notes": "Not an LLM: Microsoft's first typed-decision model, Qwen3.5-9B post-trained for single-pass decision scoring, which returns calibrated probabilities over fixed answer options rather than text, so none of this site's benchmarks apply and every cell is null by design; filed under the fast tier with the other decision models. Introduced on 2026-10-09 (commandline.microsoft.com, \"Microsoft-Decision-1\") in Microsoft Foundry, where the catalog lists it as Preview with text-only input and a 32,768-token context, and on OpenRouter, hence availability general; the OpenRouter id is the path Microsoft's post links to. $0.042 per M input tokens, output free. Microsoft's accuracy, latency and perturbation figures come from its own 36-benchmark comparison. No Artificial Analysis cost or speed entry and no knowledge cutoff published."
   }
 ]

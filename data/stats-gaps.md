@@ -1340,3 +1340,5 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | gemini-4-neon | terminalBench | 2026-11-19 | only Terminal-Bench 4.1 published (65.2%, AA-sourced), not the tracked 2.1 |
 | gemini-4-neon | gdpvalAA | 2026-11-19 | no GDPval-AA v2 figure from Google or on AA's model page |
 | gemini-4-neon | mmluPro / aime | 2026-11-19 | retired; not in Google's table |
+| microsoft-decision-1 | all benchmarks | 2026-11-19 | not applicable, not merely unpublished: typed-decision model that cannot generate text; Microsoft reports only its own 36-benchmark decision-format comparison |
+| microsoft-decision-1 | costPerTask / knowledgeCutoff / maxOutput | 2026-11-19 | decision model with no output tokens; no AA Intelligence Index cost; launch post and Foundry catalog publish no cutoff |
