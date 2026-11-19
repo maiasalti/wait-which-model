@@ -389,7 +389,6 @@ d1-ultra · apiIds (liquid) · 2026-10-28 · OpenRouter liquid/d1-ultra verified
 d1-ultra · speed · 2026-10-28 · Decision model; AA covers it only in the Decision Index, no tok/s figure. Left null.
 d1-ultra · retirementDate · 2026-10-28 · No lifecycle notice. Left null.
 gemini-4-carbon · predecessorId · 2026-10-29 · Google's launch blog says Carbon "builds on" Gemini 4 Argon (lineage); the blog and evaluation PDF name no model it replaces, and Argon stays on sale. Left null.
-gemini-4-carbon · apiIds · 2026-10-29 · Restricted Fairwind rollout; no Gemini API or Vertex model page and no official model string (the only "gemini-4-carbon" id seen is in a third-party code snippet). Left [].
 gemini-4-carbon · speed.timeToFirstTokenSec · 2026-10-29 · AA's FAQ gives "Time to First Token 103.13s" on Google's API, but its Time To First Answer Token chart shows no value for Carbon (High), so the answer-token figure is unconfirmed. outputTokensPerSec 99.8 recorded. Left null.
 gemini-4-carbon · retirementDate · 2026-10-29 · No lifecycle notice. Left null.
 gpt-6-cyber · predecessorId · 2026-11-06 · OpenAI's announcement calls it "a major step up from GPT-5.6 Cyber" and the system card describes it as a cyber-specialised variant of GPT-6 Astra; neither states a replacement, and GPT-5.6 Cyber is being widened to all Daybreak Red customers. Left null.
@@ -434,3 +433,5 @@ mai-code-2-flash · speed · 2026-11-18 · Not measured by Artificial Analysis a
 mai-code-2-flash · apiIds · 2026-11-18 · Foundry limited-access preview publishes no model string; Copilot lists display name only. Left [].
 mai-code-2-flash · predecessorId · 2026-11-18 · Model card compares with MAI-Code-1.1-Flash (not tracked here) without a replacement claim. Left null.
 mai-code-2-flash · retirementDate · 2026-11-18 · No lifecycle notice. Left null.
+gemini-4-neon · predecessorId · 2026-11-19 · Launch blog, model card ('adapted from Gemini 4 Carbon', lineage) and AI Studio model page name no model it replaces; 9to5Google reports it taking Argon's Gemini app picker slot, a secondary consumer-UI report, not a replacement claim. Argon stays on sale. Left null.
+gemini-4-neon · retirementDate · 2026-11-19 · No lifecycle notice on the AI Studio or Vertex model pages. Left null.

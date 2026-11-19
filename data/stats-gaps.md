@@ -1234,7 +1234,6 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | gemini-4-carbon | terminalBench | 2026-10-29 | only Terminal-Bench 4.0 published (Google/AA 65.2%), not the tracked 2.1 |
 | gemini-4-carbon | gdpvalAA | 2026-10-29 | AA lists GDPval-AA v2.1 as an evaluation but no score shown; v2.1 is not the v2 scale this key records |
 | gemini-4-carbon | mmluPro / aime | 2026-10-29 | retired; not in Google's table |
-| gemini-4-carbon | contextWindow / maxOutput / knowledgeCutoff | 2026-10-29 | no Google model card (deepmind.google/models/model-cards/gemini-4-carbon 404) or Gemini API model page; AA's "1M" context is not official — re-check at wider rollout |
 | gpt-6-cyber | gpqaDiamond / sweBench / sweBenchPro / terminalBench / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-11-06 | OpenAI's announcement and system card (deploymentsafety.openai.com/gpt-6-cyber) report only cyber/safety evals (ExploitGym, SEC-Bench Pro, SRE-Bench, CyScenarioBench, FrontierCyber, ExpertSWE) — none map onto tracked keys; Daybreak Red gating means no arena.ai, AA or ARC Prize placement |
 | gpt-6-cyber | mmluPro / aime | 2026-11-06 | retired; not published |
 | gpt-6-cyber | costPerTask | 2026-11-06 | not indexed by Artificial Analysis; Daybreak Red-gated |
@@ -1337,3 +1336,7 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | mai-code-2 | costPerTask | 2026-11-18 | not on Artificial Analysis' leaderboard at launch; re-check |
 | mai-code-2-flash | gpqaDiamond / sweBench / sweBenchPro / hle / lmarenaElo / gdpvalAA / arcAgi2 / mmluPro / aime | 2026-11-18 | same model card as mai-code-2 — only DeepSWE 1.1, Terminal-Bench 2.1 and SWE Atlas reported; not on AA, arena changelog or arcprize.org |
 | mai-code-2-flash | costPerTask | 2026-11-18 | not on Artificial Analysis' leaderboard at launch; re-check |
+| gemini-4-neon | gpqaDiamond / sweBench / sweBenchPro / hle / arcAgi2 | 2026-11-19 | not in Google's evaluation PDF or blog (only HLE-Diamond 71.3%, AA's subset); AA's model page shows no per-eval scores; no arcprize.org result at launch — re-check |
+| gemini-4-neon | terminalBench | 2026-11-19 | only Terminal-Bench 4.1 published (65.2%, AA-sourced), not the tracked 2.1 |
+| gemini-4-neon | gdpvalAA | 2026-11-19 | no GDPval-AA v2 figure from Google or on AA's model page |
+| gemini-4-neon | mmluPro / aime | 2026-11-19 | retired; not in Google's table |

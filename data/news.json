@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-11-18-gemini-4-neon",
+    "date": "2026-11-18",
+    "title": "Google releases Gemini 4 Neon",
+    "summary": "Google released Gemini 4 Neon, a model adapted from Gemini 4 Carbon that sits between Carbon and Hydrogen in the Gemini 4 family, rolling out to the Gemini API, AI Studio, Gemini for business, Antigravity and AI Pro and Ultra subscribers in the Gemini app with a 1M-token context window at $3/$15 per million tokens. Artificial Analysis scores it 61 on its Intelligence Index at xhigh, and Google reports 65.2% on Terminal-Bench 4.1.",
+    "category": "release",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [
+      "gemini-4-neon"
+    ],
+    "sourceName": "Google",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+  },
+  {
     "id": "2026-11-17-gpt-6-2-astra-sol",
     "date": "2026-11-17",
     "title": "OpenAI releases GPT-6.2 Astra and GPT-6.2 Sol",
