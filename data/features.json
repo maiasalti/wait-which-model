@@ -1,5 +1,64 @@
 [
   {
+    "id": "chatgpt-wallet",
+    "name": "ChatGPT Wallet",
+    "company": "openai",
+    "launchDate": "2026-11-13",
+    "description": "Lets your dot complete purchases on your behalf with a saved card: each purchase uses a payment token instead of the card number, and you review and approve it with biometrics.",
+    "strengths": [
+      "Merchant never sees the real card number",
+      "Biometric approval of every purchase",
+      "Card networks and issuers on board: American Express, Chase, Mastercard, Visa"
+    ],
+    "weaknesses": [
+      "US Pro subscribers 18+ only, gradual rollout",
+      "Eligible US-issued credit cards only; no debit or virtual cards",
+      "Some sites may block agent purchases; no fully delegated spending limits yet"
+    ],
+    "links": {
+      "official": "https://openai.com/index/introducing-chatgpt-wallet/",
+      "docs": "https://help.openai.com/en/articles/20001654-making-purchases-with-chatgpt-wallet"
+    },
+    "notes": "Launched in dots (release notes 2026-11-13). Fraud partners Forter, Riskified, Sardine and Signifyd; payment providers Adyen, Checkout.com and Stripe. Fully delegated purchases with preset limits described as a future goal. No model named. openai.com blocks direct fetch; page text retrieved via a reader proxy.",
+    "surface": "app",
+    "availability": "region-limited",
+    "plans": [
+      "Pro"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "claude-meetings",
+    "name": "Claude Meetings",
+    "company": "anthropic",
+    "launchDate": "2026-11-12",
+    "description": "Claude joins a Google Meet call as a visible participant: it follows the conversation, answers questions in the call chat, builds docs, whiteboards and slides with teammates, and writes notes, action items and a recap.",
+    "strengths": [
+      "Saves a transcript, summary and screen descriptions, not audio",
+      "Asks for approval before using connected tools; confirms who is speaking when asked aloud",
+      "Notes, transcripts and tool-free answers free on Team and Enterprise during the beta"
+    ],
+    "weaknesses": [
+      "Google Meet only for now",
+      "Team and Enterprise only; unavailable with ZDR, HIPAA-ready or CMEK configurations during the beta",
+      "Stays out of calls with outside guests by default on Enterprise"
+    ],
+    "links": {
+      "official": "https://claude.com/resources/articles/claude-meetings",
+      "docs": "https://support.claude.com/en/articles/18325154"
+    },
+    "notes": "Announced as 'coming soon' with Claude Sheets and Whiteboards 2026-11-10; release notes and the announcement date the beta 2026-11-12. On by default on Team (an owner can turn it off); Enterprise owners turn it on for all or part of the organization. Works in Claude and Claude Desktop; stays up to eight hours. Docs and whiteboards made in meetings are free through 2027-02-10; answers that use connected tools count toward usage. Gong, Attention, Granola, Fireflies.ai, Otter and Plaud named as coming transcript integrations. No model named.",
+    "surface": "app",
+    "availability": "beta",
+    "plans": [
+      "Team",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
     "id": "claude-sheets",
     "name": "Claude Sheets",
     "company": "anthropic",
@@ -19,7 +78,7 @@
       "official": "https://claude.com/resources/articles/sheets-whiteboards-data",
       "docs": "https://support.claude.com/en/articles/18324300-get-started-with-claude-sheets"
     },
-    "notes": "Launched in beta 2026-11-10 alongside Claude Whiteboards and the Claude Data rename. The launch article says 'simple spreadsheet functionality' for now and points full-Excel work to .xlsx export or Claude for Excel. On by default on Team; Enterprise owners enable it under Organization settings > Artifacts. Not available with HIPAA, CMEK or ZDR. Launch article and help page name no model. The same-day announcement says Claude Meetings (Claude joining a call to take notes) is 'coming soon', so it has no entry yet; TechCrunch reported it as a Team/Enterprise beta on Google Meet, which Anthropic's own pages don't confirm.",
+    "notes": "Launched in beta 2026-11-10 alongside Claude Whiteboards and the Claude Data rename. The launch article says 'simple spreadsheet functionality' for now and points full-Excel work to .xlsx export or Claude for Excel. On by default on Team; Enterprise owners enable it under Organization settings > Artifacts. Not available with HIPAA, CMEK or ZDR. Launch article and help page name no model. The same-day announcement called Claude Meetings 'coming soon'; it shipped in beta 2026-11-12 (separate entry, claude-meetings).",
     "surface": "app",
     "availability": "beta",
     "plans": [
@@ -66,6 +125,116 @@
     "retiredDate": null
   },
   {
+    "id": "chatgpt-business-hub",
+    "name": "Businesses in ChatGPT (Business Hub)",
+    "company": "openai",
+    "launchDate": "2026-11-10",
+    "description": "Business owners claim and verify their business's profile in ChatGPT through Business Hub, keep its details and product feed current, see aggregated insights, and, if eligible, publish a Business Agent that customers can chat with.",
+    "strengths": [
+      "Profile and Business Agent reachable from ChatGPT answers",
+      "Aggregated insights: mentions, website clicks, discovery topics",
+      "User and Business Agent chats not shared with businesses"
+    ],
+    "weaknesses": [
+      "Beta",
+      "Business Agents limited to eligible US ecommerce and online service businesses",
+      "Persona identity verification needed before publishing, insights or an agent"
+    ],
+    "links": {
+      "official": "https://openai.com/index/introducing-businesses-chatgpt/",
+      "docs": "https://help.openai.com/en/articles/20001635-setting-up-your-business-on-chatgpt"
+    },
+    "notes": "Release notes 2026-11-10. Profiles can be claimed by eligible businesses in ChatGPT's service regions; Business Agents US-only. Business Agents can be sponsored as ChatGPT Ads destinations. Claiming carries no ranking guarantee. Not tied to a ChatGPT plan. No model named. openai.com blocks direct fetch; page text retrieved via a reader proxy.",
+    "surface": "app",
+    "availability": "beta",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "muse-spaces",
+    "name": "Spaces (Muse)",
+    "company": "meta",
+    "launchDate": "2026-11-06",
+    "description": "Custom experiences you create inside the Muse app by describing an idea; Muse builds the space, you keep adjusting it, pin it to the sidebar or tabs, and it can update in the background from connected apps.",
+    "strengths": [
+      "Built from a description, editable over time",
+      "Background updates from connected apps",
+      "Schedule when a space appears"
+    ],
+    "weaknesses": [
+      "No sharing with others yet",
+      "Only where Muse is available"
+    ],
+    "links": {
+      "official": "https://about.fb.com/news/2026/11/introducing-spaces-customize-muse-app/",
+      "docs": null
+    },
+    "notes": "'Starting today, spaces are available everywhere Muse is available' (US, Canada, Singapore, Australia as of 2026-11-17). Runs on 'specialized versions' of Meta's models trained with learnings from Muse Wonder; no specific model named. Plans not stated.",
+    "surface": "app",
+    "availability": "region-limited",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "claude-personal-finance",
+    "name": "Personal Finance (Claude)",
+    "company": "anthropic",
+    "launchDate": "2026-11-05",
+    "description": "Links bank, card, loan and investment accounts through Plaid so Claude can show balances and spending on one page and answer questions about them: categorising spending, flagging duplicate charges or rising bills, estimating upcoming payments and interest costs.",
+    "strengths": [
+      "Read-only: can't move, manage or invest money",
+      "Up to 16 banks and 24 months of transactions",
+      "Hub chats not used for training and kept out of memory and chat search"
+    ],
+    "weaknesses": [
+      "US only; Pro, Max and Ultra only",
+      "Not available in Claude Duet, scheduled tasks, Cowork or Claude Code",
+      "Reads only balances and credit limits for investment, loan and card accounts"
+    ],
+    "links": {
+      "official": "https://claude.com/resources/articles/introducing-personal-finance-in-claude",
+      "docs": "https://support.claude.com/en/articles/18185620-use-personal-finance-in-claude"
+    },
+    "notes": "Beta rolling out gradually from 2026-11-05 (release notes). Web, Claude Desktop, iOS and Android. Not designed to give investment advice; no ads or sponsored recommendations. No model named.",
+    "surface": "app",
+    "availability": "beta",
+    "plans": [
+      "Pro",
+      "Max",
+      "Ultra"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
+    "id": "muse-voice-and-avatars",
+    "name": "Muse voice and expressive avatars",
+    "company": "meta",
+    "launchDate": "2026-11-05",
+    "description": "Real-time voice conversations with your Muse, shown as voice only, an animated avatar beside the chat, or full screen; you can interrupt it mid-answer.",
+    "strengths": [
+      "Hundreds of voice styles",
+      "Mobile, web and Mac",
+      "Invisible watermark on generated avatar video"
+    ],
+    "weaknesses": [
+      "US first (Canada added later)",
+      "Not yet on AI glasses or Muse Charm"
+    ],
+    "links": {
+      "official": "https://about.fb.com/news/2026/11/introducing-muse-ai-voice-expressive-avatars/",
+      "docs": "https://www.meta.com/help/superintelligence/1331373868832401/"
+    },
+    "notes": "Built on Meta's Muse Realtime Voice and Muse Realtime Avatar (no models.json ids). Meta's 2026-11-18 Loblaw post says Voice is rolling out in Canada on mobile, web and Mac. Plans not stated.",
+    "surface": "app",
+    "availability": "region-limited",
+    "plans": [],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
     "id": "claude-duet",
     "name": "Claude Duet",
     "company": "anthropic",
@@ -78,7 +247,7 @@
       "iOS, Android and claude.ai"
     ],
     "weaknesses": [
-      "US Pro and Max only, by waitlist; no Team or Enterprise yet",
+      "US Pro, Max and Ultra only, by waitlist; no Team or Enterprise yet",
       "No model choice, and its cloud browser can’t be watched or taken over",
       "Background checks and the morning brief count toward plan usage limits"
     ],
@@ -86,12 +255,13 @@
       "official": "https://claude.com/resources/articles/claude-duet",
       "docs": "https://support.claude.com/en/articles/17631495-get-started-with-claude-duet"
     },
-    "notes": "Research preview, invitations in waves. Also US-only (region-limited); availability recorded as waitlist. Runs on Claude Opus 5.5, which picks its own effort. Admitted users get one full limit reset, usable until 2026-11-30. Microsoft 365 connector not available yet; 1Password sign-in and a Shopify storefront editor listed as coming soon. Can’t make phone calls or send texts.",
+    "notes": "Research preview, invitations in waves. Also US-only (region-limited); availability recorded as waitlist. Runs on Claude Opus 5.5, which picks its own effort. Admitted users get one full limit reset; the help article (checked 2026-11-19) says unused resets expire 2026-12-15 (launch-time figure was 2026-11-30). Microsoft 365 connector not available yet; 1Password sign-in and a Shopify storefront editor listed as coming soon. Can’t make phone calls or send texts. As of 2026-11-19 the help article still describes a US-only waitlist research preview, with Ultra added to Pro and Max.",
     "surface": "app",
     "availability": "waitlist",
     "plans": [
       "Pro",
-      "Max"
+      "Max",
+      "Ultra"
     ],
     "modelIds": [
       "claude-opus-5-5"
@@ -118,7 +288,7 @@
       "official": "https://claude.com/resources/articles/dashboards-and-motion",
       "docs": "https://support.claude.com/en/articles/17454700-get-started-with-claude-data"
     },
-    "notes": "Launched as Claude Dashboards in beta on paid plans 2026-10-08 (launchDate kept). Renamed Claude Data and made generally available 2026-11-10 (https://claude.com/resources/articles/sheets-whiteboards-data); existing dashboards keep working and the id is unchanged. Certified queries and live sharing remain beta. On by default on Team; on Enterprise it turns on by default 2026-11-19 unless an owner has saved a setting. Availability and plans reflect the GA state; the help article names Pro, Max, Ultra, Team and Enterprise. No model named.",
+    "notes": "Launched as Claude Dashboards in beta on paid plans 2026-10-08 (launchDate kept). Renamed Claude Data and made generally available 2026-11-10 (https://claude.com/resources/articles/sheets-whiteboards-data); existing dashboards keep working and the id is unchanged. Certified queries and live sharing remain beta. On by default on Team; on Enterprise it turns on by default 2026-11-20 (launch article and help page) unless an owner has saved a setting. Availability and plans reflect the GA state; the help article names Pro, Max, Ultra, Team and Enterprise. No model named.",
     "surface": "app",
     "availability": "ga",
     "plans": [
@@ -261,7 +431,7 @@
       "official": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
       "docs": "https://help.openai.com/en/articles/20001549-getting-started-with-space-in-chatgpt"
     },
-    "notes": "Space replaces Library for accounts with access; Projects remain separate. Facts from the ChatGPT release notes (2026-09-29).",
+    "notes": "Space replaces Library for accounts with access; Projects remain separate. Facts from the ChatGPT release notes (2026-09-29). Slides (presentations in Space, export to PowerPoint, PDF or Google Slides) added 2026-10-16 for eligible Pro, Business and Enterprise users.",
     "surface": "app",
     "availability": "ga",
     "plans": [
@@ -292,7 +462,7 @@
       "official": "https://openai.com/index/introducing-dots/",
       "docs": "https://help.openai.com/en/articles/20001530-getting-started-with-your-dot"
     },
-    "notes": "Blog: rolling out across Pro, Business Premium and Enterprise in eligible markets. Release notes: Pro and Business Premium users 18+; Enterprise beta off by default. Create a dot on desktop app or desktop web. openai.com blocks direct fetch; page text retrieved via a reader proxy.",
+    "notes": "Blog: rolling out across Pro, Business Premium and Enterprise in eligible markets. Release notes: Pro and Business Premium users 18+; Enterprise beta off by default. Create a dot on desktop app or desktop web. openai.com blocks direct fetch; page text retrieved via a reader proxy. Texting your dot via iMessage or RCS in beta for US Pro users from 2026-10-28 (third-party provider Linq). ChatGPT Wallet (2026-11-13, separate entry) lets dots make purchases.",
     "surface": "app",
     "availability": "region-limited",
     "plans": [
@@ -406,7 +576,7 @@
       "official": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
       "docs": "https://ai.meta.com/muse/"
     },
-    "notes": "iOS, Android and muse.ai. Free for most use with subscription plans; the fetched Meta page names no tiers (third-party reports of 'Power' $20 and 'Maximum' $100 were not verified). Connect 2026 (2026-09-24) added more shopping connectors and announced Muse on AI glasses and a Muse Charm device, neither launched yet. Muse Wonder models to power Muse soon (2026-10-12).",
+    "notes": "iOS, Android and muse.ai. Free for most use with subscription plans; the fetched Meta page names no tiers (third-party reports of 'Power' $20 and 'Maximum' $100 were not verified). Connect 2026 (2026-09-24) added more shopping connectors and announced Muse on AI glasses and a Muse Charm device, neither launched yet. Muse Wonder models to power Muse soon (2026-10-12). Available in Singapore from 2026-10-27 and Australia from 2026-11-17 (Meta newsroom). Voice and avatars (2026-11-05) and Spaces (2026-11-06) are separate entries.",
     "surface": "app",
     "availability": "region-limited",
     "plans": [],
@@ -426,20 +596,24 @@
       "Separate usage from Grok/Cursor plans"
     ],
     "weaknesses": [
-      "Beta",
-      "Enterprise on a waitlist at launch"
+      "Meetings only on Team, Enterprise and Ultra plans"
     ],
     "links": {
       "official": "https://x.ai/news/introducing-grok-bot",
       "docs": "https://docs.x.ai/grok-bot/get-started"
     },
-    "notes": "Desktop and iOS. Also available to Cursor Pro, Pro+, Ultra and Cursor Teams Standard/Premium subscribers. A later 'Grok Bot for Enterprise' post (listed on x.ai/news, date not captured) opened it to enterprises.",
+    "notes": "Launched in beta 2026-08-11 on SuperGrok tiers, desktop and iOS. Grok Bot for Enterprise 2026-09-03 (https://x.ai/news/grok-bot-for-enterprise). Grok Bot 1.0 (2026-11-11, https://x.ai/news/grok-bot-1-0): 'Since introducing Grok Bot in beta… Grok Bot 1.0 is available starting today', adding shared bots in Slack and Microsoft Teams, meeting attendance (Google Meet, Zoom, Teams) and proactive follow-ups; the get-started docs no longer call it beta, so availability is recorded as ga (the post doesn't use the word). Docs (checked 2026-11-19): included in Premium, Super and Ultra on The X Subscription (2026-10-12), legacy SuperGrok tiers and X Premium+ by linking, self-serve Grok Business seats and paid Cursor plans; macOS, Windows, Linux, iOS and Android.",
     "surface": "app",
-    "availability": "beta",
+    "availability": "ga",
     "plans": [
+      "Premium",
+      "Super",
+      "Ultra",
       "SuperGrok",
       "SuperGrok Plus",
-      "SuperGrok Heavy"
+      "SuperGrok Heavy",
+      "X Premium+",
+      "Grok Business"
     ],
     "modelIds": [],
     "retiredDate": null
@@ -716,26 +890,28 @@
   },
   {
     "id": "gemini-spark",
-    "name": "Gemini Spark",
+    "name": "Tasks in Gemini (formerly Gemini Spark)",
     "company": "google",
     "launchDate": "2026-05-19",
-    "description": "A 24/7 personal AI agent in the Gemini app that works on tasks on your behalf; the macOS version can organise folders and use local files.",
+    "description": "A personal AI agent in the Gemini app, switched on with a Chat/Task toggle, that runs multi-step projects and recurring routines in the background on a dedicated virtual machine and pauses for confirmation before critical steps.",
     "strengths": [
-      "Works across Google Workspace",
-      "macOS app can use local files (2026-06-30)"
+      "Free in six countries since 2026-11-17",
+      "Google Pay checkout with a spending cap; can call US businesses",
+      "Start tasks by text message or by forwarding an email to gemini@google.com"
     ],
     "weaknesses": [
-      "Google AI Ultra subscribers 18+ only",
-      "US only at launch"
+      "Free tier limited to 18+ users in the US, Canada, Australia, India, Japan and Korea",
+      "Texting, email and calling features US-only"
     ],
     "links": {
-      "official": "https://gemini.google/release-notes/",
-      "docs": null
+      "official": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/",
+      "docs": "https://support.google.com/gemini/answer/17094196"
     },
-    "notes": "Trusted testers at launch, beta for US Ultra subscribers 'in the coming weeks'. macOS availability 2026-06-30 in supported countries.",
+    "notes": "Launched as Gemini Spark 2026-05-19 (release notes): trusted testers, then beta for US Ultra subscribers 18+; macOS 2026-06-30. Renamed Tasks in Gemini: Google's former Spark page (https://gemini.google/overview/agent/spark/) now describes Tasks in Gemini; the 2026-11-17 Google blog post does not mention the old name. From 2026-11-17 Tasks is free for 18+ users in the US, Canada, Australia, India, Japan and Korea, running on Gemini 4 Hydrogen; Pro and Ultra subscribers get it in 'select countries' (plans list the paid tiers; free access noted here). Same day: Google Pay checkout via AP2, texting via Google Messages or iMessage, forwarding email, calling businesses (not in IN, LA, MN, MT or NE). Gemini 4 Neon post (2026-11-18): Tasks can now run on Neon. Launch post named no model, so modelIds stays empty.",
     "surface": "app",
-    "availability": "beta",
+    "availability": "region-limited",
     "plans": [
+      "Google AI Pro",
       "Google AI Ultra"
     ],
     "modelIds": [],
@@ -960,6 +1136,39 @@
     "retiredDate": null
   },
   {
+    "id": "claude-interactive-connectors",
+    "name": "Interactive connectors (Claude)",
+    "company": "anthropic",
+    "launchDate": "2026-01-26",
+    "description": "Connected apps built on MCP Apps render as interactive tools inside a Claude conversation; since 2026-11-10, where a connector supports it, the tool can open beside the chat or full screen and Claude can make changes in it.",
+    "strengths": [
+      "Built on the open MCP Apps extension",
+      "All plans, including Free; also in Cowork",
+      "On by default once the connector is enabled"
+    ],
+    "weaknesses": [
+      "Only connectors that support it; a small group of tools at first",
+      "Open-beside-chat mode is web and desktop only"
+    ],
+    "links": {
+      "official": "https://claude.com/blog/interactive-tools-in-claude",
+      "docs": "https://support.claude.com/en/articles/13454812-using-interactive-connectors-in-claude"
+    },
+    "notes": "Launch partners 2026-01-26: Amplitude, Asana, Box, Canva, Clay, Figma, Hex, monday.com and Slack. Expanded 2026-11-10 (https://claude.com/blog/interactive-connectors-full-tool): tools open beside the conversation or full screen on web and desktop, all plans, staged rollout; the developer-side MCP Apps capabilities for this are in public preview. Team and Enterprise owners can disable the tool calls that render them. The Claude release notes list an interactive-connectors entry dated 2026-03-25; launchDate follows the launch post. Missed by earlier runs (backfill). No model named.",
+    "surface": "app",
+    "availability": "ga",
+    "plans": [
+      "Free",
+      "Pro",
+      "Max",
+      "Ultra",
+      "Team",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
     "id": "gemini-personal-intelligence",
     "name": "Personal Intelligence",
     "company": "google",
@@ -1028,16 +1237,16 @@
       "Connect medical records and wellness apps"
     ],
     "weaknesses": [
-      "Waitlist and small early group at launch",
-      "Excludes EEA, Switzerland and UK; medical records US only"
+      "US users 18+ only since the July 2026 rollout",
+      "Not intended for diagnosis or treatment"
     ],
     "links": {
       "official": "https://openai.com/index/introducing-chatgpt-health/",
       "docs": "https://help.openai.com/en/articles/20001036-what-is-chatgpt-health"
     },
-    "notes": "Web and iOS at launch, Android coming. openai.com blocks direct fetch; page text retrieved via a reader proxy.",
+    "notes": "Waitlist and small early group at launch (2026-01-07); web and iOS at launch, Android coming. Release notes 2026-07-23: 'starting to roll out a new health experience' to logged-in Free, Go, Plus and Pro users in the US aged 18+, with health records and Apple Health; availability moved from waitlist to region-limited on that basis. Health data summaries added 2026-09-28. openai.com blocks direct fetch; page text retrieved via a reader proxy.",
     "surface": "app",
-    "availability": "waitlist",
+    "availability": "region-limited",
     "plans": [
       "Free",
       "Go",

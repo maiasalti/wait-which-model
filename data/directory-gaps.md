@@ -91,6 +91,14 @@ lovable · pricing.plan · 2026-10-28 · lovable.dev FAQ/billing: credits (Pro 1
 
 muse-for-small-business · links.docs · 2026-10-30 · search for Meta help-center setup/connector pages: only third-party guides (eesel, smartscope, parix); no Meta help article surfaced; WebFetch unavailable
 claude-sheets · modelIds · 2026-11-12 · claude.com sheets-whiteboards-data article, support.claude.com Sheets guide: no model named (same for claude-whiteboards)
+claude-meetings · modelIds · 2026-11-19 · claude.com claude-meetings article, support.claude.com 18325154, release notes 2026-11-12: no model named
+claude-personal-finance · modelIds · 2026-11-19 · claude.com launch article, support.claude.com 18185620: no model named
+claude-interactive-connectors · modelIds · 2026-11-19 · claude.com interactive-tools-in-claude and interactive-connectors-full-tool posts: no model named
+chatgpt-wallet · modelIds · 2026-11-19 · openai.com introducing-chatgpt-wallet (reader proxy), help article 20001654, release notes: no model named
+chatgpt-business-hub · modelIds, plans · 2026-11-19 · openai.com introducing-businesses-chatgpt (reader proxy), help article 20001635: no model named, not tied to a ChatGPT plan
+muse-voice-and-avatars · plans, modelIds · 2026-11-19 · about.fb.com launch and Loblaw posts, Muse getting-started help page: no plans; models are Muse Realtime Voice/Avatar (no models.json ids)
+muse-spaces · links.docs, plans, modelIds · 2026-11-19 · about.fb.com Spaces post, Meta Muse help-centre search: no Spaces help page, plans or named model
+meta-muse · plans · 2026-11-19 · meta.com Muse subscriptions help page (reader proxy): no plan names or prices, 'may vary by region and account'
 
 ## voice-models
 
