@@ -11084,5 +11084,71 @@
       "No independent hands-on testing at launch — the accuracy, speed and Decision Index figures all come from Microsoft"
     ],
     "notes": "Not an LLM: Microsoft's second typed-decision model, now post-trained from Gemma 4 26B A4B rather than Decision-1's Qwen3.5-9B, which answers Noul, Choice and Score questions with calibrated probabilities instead of text, so none of this site's benchmarks apply and every cell is null by design; filed under the fast tier with the other decision models. Generally available on 2026-11-17 (commandline.microsoft.com, Microsoft-Decision-1.1 GA post) in Microsoft Foundry, OpenRouter and Vercel; the Ignite keynote calls it Decision 1.1. Context is the Foundry catalog's 32,767 tokens (Vercel's description says 32,768); text and image input, up to 8 images per call. Pricing is $0.042 per M input tokens with free output, from Vercel AI Gateway's listing and Microsoft's statement that it costs the same as Decision-1. Microsoft reports 68 on Artificial Analysis' Decision Index v2.1, six points above Decision-1, and the highest average accuracy of eight decision models across its own 102-benchmark suite. predecessorId is null — Microsoft compares it with \"our first model\" but does not say it replaces Decision-1. No Artificial Analysis cost or speed entry and no knowledge cutoff published."
+  },
+  {
+    "id": "hy4-flash",
+    "name": "Hy4 flash",
+    "company": "tencent",
+    "releaseDate": "2026-11-16",
+    "status": "unknown",
+    "tier": "fast",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1048576,
+    "maxOutput": 64000,
+    "pricing": {
+      "inputPerMTok": 0.07,
+      "outputPerMTok": 0.28
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": null,
+      "name": "Tencent Hy License 1.0",
+      "kind": "restricted",
+      "url": "https://huggingface.co/tencent/Hy4-flash/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "tencent-cloud",
+        "id": "hy4-flash"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Image input finally reaches the open-weight Hy line — Hy3 and the Hy4 preview were text-only",
+      "Ships a public pretrained base checkpoint alongside the instruct build, letting a team fine-tune from a clean slate instead of the RLHF'd release",
+      "Priced and sized for high-volume everyday workflows rather than frontier reasoning, with a far smaller active-parameter footprint than full Hy4"
+    ],
+    "weaknesses": [
+      "Trails full Hy4 across Tencent's own benchmark chart — a flash tier traded for cost, not capability",
+      "Days old at the time of writing — Artificial Analysis had not measured it, so every public number is vendor-reported or third-party",
+      "The open licence carries a revenue/MAU threshold (Tencent Hy License 1.0) rather than a clean Apache 2.0 like Hy3 — commercial-at-scale use needs separate written permission"
+    ],
+    "notes": "Flash tier of the Hy4 family: a 220B-total/12B-active MoE (reports also describe a 64B-parameter Engram lookup block), released alongside a Hy4-flash-base pretrained checkpoint and an FP8 build. Hosted launch 2026-11-16 on Tencent Cloud TokenHub and Tencent apps (WorkBuddy, Yuanbao); open weights (instruct/FP8/base, huggingface.co/tencent/Hy4-flash) followed within days under the Tencent Hy License 1.0 — coverage splits between 2026-11-17 and 2026-11-19 for that date. contextWindow/maxOutput are Tencent Cloud TokenHub's documented 1,048,576/64,000; some aggregators instead report a 960K max-input cap for the same listing. Pricing converts TokenHub's CNY rate (~$0.07/$0.28 per Mtok); OpenRouter lists a temporary ~50%-off promotional rate ($0.035/$0.1405) through 2026-11-30. No figure here maps cleanly to this site's tracked benchmark keys — Tencent's own chart reports DeepSWE 64.6 (vs 74.9 for full Hy4), OSWorld 2.1 at 68.1, Terminal-Bench 4.0 (not the 2.1 version this site tracks) at 15.2%, MMLU 88.7 and SuperGPQA 57.8; vision is given as MMMU-Pro 52.0 (base model, 4-shot) by one source and 75.8 by another, uncorroborated. Artificial Analysis had not listed the model as of launch week. predecessorId left null — no primary source states this replaces Hy3 or the Hy4 preview; it is a new, cheaper tier of the same generation."
   }
 ]

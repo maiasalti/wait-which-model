@@ -184,6 +184,21 @@
     "sourceUrl": "https://oag.ca.gov/news/press-releases/it%E2%80%99s-golden-state-not-wild-west-attorney-general-bonta-sues-openai-over"
   },
   {
+    "id": "2026-11-16-hy4-flash",
+    "date": "2026-11-16",
+    "title": "Tencent launches Hy4 flash, the cheap end of the Hy4 family",
+    "summary": "Tencent launched Hy4 flash, a 220B-total/12B-active multimodal MoE priced around $0.07/$0.28 per million tokens with a 1M-token context, on Tencent Cloud TokenHub and its WorkBuddy and Yuanbao apps. Open weights for the instruct, FP8 and base checkpoints followed within days under the Tencent Hy License 1.0, which requires separate permission above $50M in annual revenue or 100M monthly active users.",
+    "category": "release",
+    "companies": [
+      "tencent"
+    ],
+    "modelIds": [
+      "hy4-flash"
+    ],
+    "sourceName": "Tencent",
+    "sourceUrl": "https://huggingface.co/tencent/Hy4-flash"
+  },
+  {
     "id": "2026-11-16-qwen4-max",
     "date": "2026-11-16",
     "title": "Alibaba releases Qwen4-Max, a closed 2.4T-parameter flagship",
