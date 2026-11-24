@@ -1351,3 +1351,6 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | mai-cyber-2-flash | maxOutput / knowledgeCutoff / costPerTask | 2026-11-19 | no model card for this version (model page links the MAI-Cyber-1-Flash card); not on Artificial Analysis |
 | microsoft-decision-1-1 | all benchmarks | 2026-11-19 | not applicable, not merely unpublished: typed-decision model that cannot generate text; Microsoft reports AA Decision Index v2.1 68 and its own 102-benchmark decision suite only |
 | microsoft-decision-1-1 | costPerTask / knowledgeCutoff / maxOutput | 2026-11-19 | decision model with no output tokens; no AA Intelligence Index cost; GA post and Foundry catalog publish no cutoff |
+| glm-5-4 | all benchmarks | 2026-11-24 | Z.ai published no benchmark scores at launch (docs.z.ai/guides/llm/glm-5.4 shows only a win-rate chart and 30B ablations); no API, so not on AA, arena.ai or arcprize.org |
+| glm-5-4 | pricing / costPerTask | 2026-11-24 | no Model API yet (after a security assessment); Coding Plan subscription only |
+| glm-5-4 | knowledgeCutoff | 2026-11-24 | not stated in Z.ai's docs or launch coverage |
