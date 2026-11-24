@@ -855,16 +855,16 @@
     "company": "google",
     "releaseDate": "2026-10-27",
     "notable": true,
-    "description": "Google DeepMind's real-time interactive world model, which generates explorable worlds from text and image prompts with native audio and lets users steer the scene mid-simulation in natural language; it now powers Project Genie for eligible Google AI Ultra subscribers.",
+    "description": "Google DeepMind's real-time interactive world model, which generates explorable 720p, 24 fps worlds with native audio from text and image prompts and lets users steer the scene mid-simulation; it powers Project Genie for Google AI Ultra subscribers and is available to developers through the Gemini API and Google AI Studio.",
     "strengths": [
-      "Native real-time audio: ambient sound, music and interactive dialogue",
+      "Native real-time audio: 48 kHz stereo ambient sound, music and dialogue",
       "Mid-simulation steering by text, e.g. changing the weather, moving the camera or adding characters",
-      "Available in Project Genie to eligible Google AI Ultra subscribers (18+) since 2026-11-18",
+      "Gemini API and AI Studio access since 2026-11-19 (stable model id genie-4), plus Project Genie for Google AI Ultra",
       "Demonstrated as a simulator for Gemini-driven agents and robots (e.g. Apptronik Apollo)"
     ],
     "weaknesses": [
-      "Requires Google AI Ultra (Google AI Pro is waitlist-only); no API or published price",
-      "Google says it supports around a minute of continuous interaction, with visual drift in longer sessions",
+      "About $0.10 per second on the API (~$6.05 a minute); paid-tier key only, no free tier",
+      "Sessions capped at 120 s, with coherence strongest in the first 45–90 s",
       "Unreliable text rendering and imperfect simulation of real-world locations"
     ],
     "interactive": true,
@@ -874,21 +874,26 @@
       "actions"
     ],
     "output": "video-stream",
-    "maxSessionSec": 60,
-    "maxResolution": null,
-    "fps": null,
-    "access": "research-preview",
+    "maxSessionSec": 120,
+    "maxResolution": "1280x720",
+    "fps": 24,
+    "access": "ga",
     "openWeights": false,
     "license": null,
-    "apiIds": [],
+    "apiIds": [
+      {
+        "provider": "google-gemini-api",
+        "id": "genie-4"
+      }
+    ],
     "pricing": {
-      "notes": "Included with Google AI Ultra in Project Genie (18+); Google AI Pro members can join a waitlist. Google's plans page lists Project Genie under Ultra only; no standalone or API price is published."
+      "notes": "Gemini API (paid tier only): $1.50 per 1M input tokens (text / reference image), $9.00 per 1M output text tokens, $17.50 per 1M output video tokens (audio included); 240 video tokens per frame (5,760 tokens/s), which Google puts at about $0.10 per second (~$6.05 per minute). No free tier, Batch, Flex or Priority inference. Consumer access is included with Google AI Ultra in Project Genie (18+), with Google AI Pro on a waitlist; no standalone consumer price."
     },
     "links": {
       "official": "https://deepmind.google/models/genie/",
-      "docs": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/"
+      "docs": "https://aistudio.google.com/docs/models/genie-4"
     },
-    "notes": "Announced 2026-10-27 (DeepMind blog) as a research preview for trusted testers; rolled out in Project Genie to eligible Google AI Ultra subscribers on 2026-11-18 (Google blog 'Genie 4 is now available'), and labs.google/projectgenie now says Project Genie is powered by Genie 4. access stays 'research-preview' on the same basis as Genie 3: the Project Genie page still calls it 'an experimental research prototype' and the 2026-11-18 post says Genie 3 and Genie 4 'remain world models in the frontier research space'. Neither page names countries; the Project Genie page says 18+. The Oct 27 blog also promised access for early-access partners of the Gemini API and Google AI Studio; the Nov 18 post does not mention it and no model id is published, so apiIds is empty. maxSessionSec 60 = the DeepMind model page's 'around a minute of continuous interaction' (approximate; a model limitation, not a stated Project Genie cap; the Oct blog said only 'short sessions' and TechCrunch had reported 'up to two minutes'). No resolution or fps is published for Genie 4 (the 720p/24 fps figures in search results are Genie 3's). Robotics demos pair it with Gemini 3.8 Flash as a guiding agent and Gemini 4 Argon. All output carries SynthID. openWeights false = none mentioned. Successor to Genie 3, which keeps its own entry. Notable: frontier-lab clause (google)."
+    "notes": "Announced 2026-10-27 (DeepMind blog) as a research preview for trusted testers; rolled out in Project Genie to eligible Google AI Ultra subscribers on 2026-11-18 (Google blog 'Genie 4 is now available'); opened to developers through the Gemini API (Interactions API) and Google AI Studio on 2026-11-19 (Google developers blog post, blog.google genie-4-in-gemini-api). access changed from research-preview to ga on 2026-11-24: the launch post gives no label, but the Gemini API model page lists 'Stable: genie-4' (latest update November 2026) with published paid-tier pricing; Project Genie itself is still called 'an experimental research prototype'. Specs from the Gemini API model page: 1280x720 (720p, 16:9) at 24 fps, 48 kHz stereo audio, up to 120 s per session (stability 'may degrade past 60-90 seconds' per the Genie docs), one 16:9 reference image, WASD/arrow-key user_action controls; served from the US, Western Europe and Japan. maxSessionSec was 60 from the DeepMind model page's 'around a minute of continuous interaction'; now 120 = the API's stated per-session cap. Robotics demos pair it with Gemini 3.8 Flash as a guiding agent and Gemini 4 Argon. All output carries SynthID. openWeights false = none mentioned. Successor to Genie 3, which keeps its own entry. Notable: frontier-lab clause (google); since 2026-11-19 it also meets the world-models public-access clause (access ga)."
   },
   {
     "id": "hy-nomas",

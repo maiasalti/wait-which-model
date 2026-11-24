@@ -170,6 +170,12 @@
       "google"
     ],
     "modelIds": [],
+    "refs": [
+      {
+        "type": "feature",
+        "id": "gemini-computer-use-mac"
+      }
+    ],
     "sourceName": "Google",
     "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/"
   },

@@ -31,6 +31,37 @@
     "retiredDate": null
   },
   {
+    "id": "gemini-computer-use-mac",
+    "name": "Computer use in the Gemini app for Mac",
+    "company": "google",
+    "launchDate": "2026-11-19",
+    "description": "Lets Gemini in the Mac app carry out multi-step tasks across local files, desktop apps and the web, working in an isolated background window with a live preview in the chat so the user's own screen and cursor stay free.",
+    "strengths": [
+      "Runs in an isolated background window, leaving the main screen and cursor free",
+      "User picks which apps Gemini can access",
+      "Pause at any time; key actions need approval first"
+    ],
+    "weaknesses": [
+      "English in the US only, personal accounts 18+",
+      "Apple Silicon Mac with macOS Sequoia 15.0+ required",
+      "Paid plans only (Google AI Plus, Pro, Ultra)"
+    ],
+    "links": {
+      "official": "https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/",
+      "docs": null
+    },
+    "notes": "Launched 2026-11-19 (Google blog 'Let Gemini tackle repetitive chores on your Mac'): 'rolling out in English in the U.S.', for personal Google accounts 18+ on Google AI Plus, Pro and Ultra. The post presents it as a new capability of the Gemini Mac app and does not tie it to Gemini Agent, Agent mode or Tasks in Gemini, so it has its own entry rather than updating gemini-agent; no preview or beta label is given, so availability is region-limited. No model is named, so modelIds is empty. No help-centre article found (support.google.com Mac app page has no computer-use section; release notes end 2026-11-17), so links.docs is null.",
+    "surface": "app",
+    "availability": "region-limited",
+    "plans": [
+      "Google AI Plus",
+      "Google AI Pro",
+      "Google AI Ultra"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
     "id": "chatgpt-wallet",
     "name": "ChatGPT Wallet",
     "company": "openai",
@@ -1076,7 +1107,7 @@
       "official": "https://gemini.google/release-notes/",
       "docs": null
     },
-    "notes": "Mac 2026-04-15; Windows 10+ 2026-09-10; voice dictation anywhere on macOS 2026-07-29.",
+    "notes": "Mac 2026-04-15; Windows 10+ 2026-09-10; voice dictation anywhere on macOS 2026-07-29. Computer use in the Mac app (2026-11-19, paid plans, US English) has its own entry, gemini-computer-use-mac.",
     "surface": "app",
     "availability": "ga",
     "plans": [],
