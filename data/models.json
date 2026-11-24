@@ -11084,5 +11084,60 @@
       "No independent hands-on testing at launch — the accuracy, speed and Decision Index figures all come from Microsoft"
     ],
     "notes": "Not an LLM: Microsoft's second typed-decision model, now post-trained from Gemma 4 26B A4B rather than Decision-1's Qwen3.5-9B, which answers Noul, Choice and Score questions with calibrated probabilities instead of text, so none of this site's benchmarks apply and every cell is null by design; filed under the fast tier with the other decision models. Generally available on 2026-11-17 (commandline.microsoft.com, Microsoft-Decision-1.1 GA post) in Microsoft Foundry, OpenRouter and Vercel; the Ignite keynote calls it Decision 1.1. Context is the Foundry catalog's 32,767 tokens (Vercel's description says 32,768); text and image input, up to 8 images per call. Pricing is $0.042 per M input tokens with free output, from Vercel AI Gateway's listing and Microsoft's statement that it costs the same as Decision-1. Microsoft reports 68 on Artificial Analysis' Decision Index v2.1, six points above Decision-1, and the highest average accuracy of eight decision models across its own 102-benchmark suite. predecessorId is null — Microsoft compares it with \"our first model\" but does not say it replaces Decision-1. No Artificial Analysis cost or speed entry and no knowledge cutoff published."
+  },
+  {
+    "id": "glm-5-4",
+    "name": "GLM-5.4",
+    "company": "zhipu",
+    "releaseDate": "2026-11-23",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "restricted",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Gets extra reasoning depth by running the GLM-5 base's layers twice rather than adding parameters — Z.ai claims 2T–3T-class intelligence at its existing 750B-scale serving cost",
+      "First GLM flagship to take image and video input natively, so screenshots and rendered output can go straight into a coding session",
+      "Answers more tersely than a single-pass model of the same size — Z.ai's looped ablations cut average output length 10–14% on reasoning tasks"
+    ],
+    "weaknesses": [
+      "Z.ai itself warns it can get caught in overly long \"marathon thinking\" loops — runs need a thinking budget or a watchful eye",
+      "Only usable through the GLM Coding Plan subscription, ZCode and Z.ai Chat for now — no API to build on and no weights to self-host",
+      "Too new to characterise — no independent testing or published benchmark scores yet, so every capability claim is Z.ai's own"
+    ],
+    "notes": "Z.ai published no benchmark scores at launch, only a win-rate chart and ablations, so every benchmark cell is null; its claim of intelligence 'comparable to 2T-3T parameter models' is unverified. No total parameter count is published — Z.ai's docs refer only to deployment 'at the 750B scale', and the widely repeated ~750B figure is secondary-source. The Loop Transformer reuses 28 layers of the GLM-5 base across two passes, with per-token gates on the second pass's updates and a hybrid KV cache (first-pass sparse KV shared, plus a sliding window for the second pass) to keep 1M-context serving cheap; it was adapted from the pretrained base by continued training, not trained from scratch. Availability is restricted: live for GLM Coding Plan subscribers (1.5x the GLM-5.3 weekly quota), ZCode and Z.ai Chat; Z.ai says the Model API follows a security assessment and that weights will be open-sourced after safety hardening, with no date for either — so pricing, apiIds, license and speed are null. Z.ai's own throughput claim is up to 200 tok/s off-peak and 70–80 tok/s at peak. predecessorId is null: Z.ai calls it its 'latest flagship' and keeps GLM-5.3 available, without saying it replaces it."
   }
 ]

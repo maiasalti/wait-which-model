@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-11-23-glm-5-4",
+    "date": "2026-11-23",
+    "title": "Z.ai releases GLM-5.4, its first flagship built on a Loop Transformer",
+    "summary": "Z.ai's GLM-5.4 runs 28 layers of the GLM-5 base twice to add reasoning depth without adding parameters, takes image and video input for the first time in a GLM flagship, and has a 1M-token context window. It is live for GLM Coding Plan subscribers, ZCode and Z.ai Chat with no benchmark scores published; Z.ai says the API follows a security assessment and the weights will be open-sourced after safety hardening.",
+    "category": "release",
+    "companies": [
+      "zhipu"
+    ],
+    "modelIds": [
+      "glm-5-4"
+    ],
+    "sourceName": "Z.ai",
+    "sourceUrl": "https://docs.z.ai/guides/llm/glm-5.4"
+  },
+  {
     "id": "2026-11-18-gemini-4-neon",
     "date": "2026-11-18",
     "title": "Google releases Gemini 4 Neon",

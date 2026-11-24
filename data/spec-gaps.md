@@ -447,3 +447,8 @@ mai-cyber-2-flash · retirementDate · 2026-11-19 · No lifecycle notice. Left n
 microsoft-decision-1-1 · predecessorId · 2026-11-19 · GA post (commandline.microsoft.com/microsoft-decision-model-ga) compares it with "our first model" (faster, six Decision Index points higher, same cost) but has no replace/successor/supersede wording, and Microsoft-Decision-1 is still in the Foundry catalog. Left null.
 microsoft-decision-1-1 · speed · 2026-11-19 · Decision model with no output tokens; no Artificial Analysis speed entry. Left null.
 microsoft-decision-1-1 · retirementDate · 2026-11-19 · No lifecycle notice. Left null.
+glm-5-4 · predecessorId · 2026-11-24 · docs.z.ai/guides/llm/glm-5.4 calls it Z.ai's "latest flagship" and sets its Coding Plan quota relative to GLM-5.3, but has no replace/successor wording; GLM-5.3 stays available (coverage recommends A/B testing the two). Left null.
+glm-5-4 · license · 2026-11-24 · Not applicable — weights unreleased (huggingface.co/zai-org/GLM-5.4 not public); Z.ai says they will be open-sourced after safety hardening, no date. Re-check once published.
+glm-5-4 · apiIds · 2026-11-24 · No Model API yet ("will be made available upon completion of the security assessment"). Coding Plan tools use "glm-5.4" / "glm-5.4[1m]" (Claude Code) per Zixuan Li's X post as relayed by TestingCatalog — a subscription setting, not an API model id. Left [].
+glm-5-4 · speed · 2026-11-24 · Not on Artificial Analysis (no API). Z.ai's own claim (up to 200 tok/s off-peak, 70–80 at peak) is in notes. Left null.
+glm-5-4 · retirementDate · 2026-11-24 · No lifecycle notice. Left null.
