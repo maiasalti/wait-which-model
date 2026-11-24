@@ -11150,5 +11150,60 @@
       "The open licence carries a revenue/MAU threshold (Tencent Hy License 1.0) rather than a clean Apache 2.0 like Hy3 — commercial-at-scale use needs separate written permission"
     ],
     "notes": "Flash tier of the Hy4 family: a 220B-total/12B-active MoE (reports also describe a 64B-parameter Engram lookup block), released alongside a Hy4-flash-base pretrained checkpoint and an FP8 build. Hosted launch 2026-11-16 on Tencent Cloud TokenHub and Tencent apps (WorkBuddy, Yuanbao); open weights (instruct/FP8/base, huggingface.co/tencent/Hy4-flash) followed within days under the Tencent Hy License 1.0 — coverage splits between 2026-11-17 and 2026-11-19 for that date. contextWindow/maxOutput are Tencent Cloud TokenHub's documented 1,048,576/64,000; some aggregators instead report a 960K max-input cap for the same listing. Pricing converts TokenHub's CNY rate (~$0.07/$0.28 per Mtok); OpenRouter lists a temporary ~50%-off promotional rate ($0.035/$0.1405) through 2026-11-30. No figure here maps cleanly to this site's tracked benchmark keys — Tencent's own chart reports DeepSWE 64.6 (vs 74.9 for full Hy4), OSWorld 2.1 at 68.1, Terminal-Bench 4.0 (not the 2.1 version this site tracks) at 15.2%, MMLU 88.7 and SuperGPQA 57.8; vision is given as MMMU-Pro 52.0 (base model, 4-shot) by one source and 75.8 by another, uncorroborated. Artificial Analysis had not listed the model as of launch week. predecessorId left null — no primary source states this replaces Hy3 or the Hy4 preview; it is a new, cheaper tier of the same generation."
+  },
+  {
+    "id": "glm-5-4",
+    "name": "GLM-5.4",
+    "company": "zhipu",
+    "releaseDate": "2026-11-23",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1000000,
+    "maxOutput": 128000,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": false,
+    "availability": "restricted",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": null,
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Gets extra reasoning depth by running the GLM-5 base's layers twice rather than adding parameters — Z.ai claims 2T–3T-class intelligence at its existing 750B-scale serving cost",
+      "First GLM flagship to take image and video input natively, so screenshots and rendered output can go straight into a coding session",
+      "Answers more tersely than a single-pass model of the same size — Z.ai's looped ablations cut average output length 10–14% on reasoning tasks"
+    ],
+    "weaknesses": [
+      "Z.ai itself warns it can get caught in overly long \"marathon thinking\" loops — runs need a thinking budget or a watchful eye",
+      "Only usable through the GLM Coding Plan subscription, ZCode and Z.ai Chat for now — no API to build on and no weights to self-host",
+      "Too new to characterise — no independent testing or published benchmark scores yet, so every capability claim is Z.ai's own"
+    ],
+    "notes": "Z.ai published no benchmark scores at launch, only a win-rate chart and ablations, so every benchmark cell is null; its claim of intelligence 'comparable to 2T-3T parameter models' is unverified. No total parameter count is published — Z.ai's docs refer only to deployment 'at the 750B scale', and the widely repeated ~750B figure is secondary-source. The Loop Transformer reuses 28 layers of the GLM-5 base across two passes, with per-token gates on the second pass's updates and a hybrid KV cache (first-pass sparse KV shared, plus a sliding window for the second pass) to keep 1M-context serving cheap; it was adapted from the pretrained base by continued training, not trained from scratch. Availability is restricted: live for GLM Coding Plan subscribers (1.5x the GLM-5.3 weekly quota), ZCode and Z.ai Chat; Z.ai says the Model API follows a security assessment and that weights will be open-sourced after safety hardening, with no date for either — so pricing, apiIds, license and speed are null. Z.ai's own throughput claim is up to 200 tok/s off-peak and 70–80 tok/s at peak. predecessorId is null: Z.ai calls it its 'latest flagship' and keeps GLM-5.3 available, without saying it replaces it."
   }
 ]

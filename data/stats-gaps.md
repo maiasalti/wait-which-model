@@ -1354,3 +1354,6 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | hy4-flash | mmluPro / gpqaDiamond / sweBench / sweBenchPro / aime / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-11-22 | no primary-source figure maps to this site's tracked keys at launch — Tencent's own chart reports DeepSWE, OSWorld 2.1, Terminal-Bench 4.0 (not 2.1), MMLU and SuperGPQA instead; Artificial Analysis had not listed the model (model page 404 at launch week); no arena.ai text-board or arcprize.org entry found |
 | hy4-flash | terminalBench | 2026-11-22 | only Terminal-Bench 4.0 (15.2%, Tencent's chart) published; the 2.1 version this site tracks has no run |
 | hy4-flash | costPerTask / knowledgeCutoff | 2026-11-22 | not on Artificial Analysis at launch week; no knowledge cutoff published in any coverage found |
+| glm-5-4 | all benchmarks | 2026-11-24 | Z.ai published no benchmark scores at launch (docs.z.ai/guides/llm/glm-5.4 shows only a win-rate chart and 30B ablations); no API, so not on AA, arena.ai or arcprize.org |
+| glm-5-4 | pricing / costPerTask | 2026-11-24 | no Model API yet (after a security assessment); Coding Plan subscription only |
+| glm-5-4 | knowledgeCutoff | 2026-11-24 | not stated in Z.ai's docs or launch coverage |

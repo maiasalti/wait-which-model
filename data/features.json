@@ -1,5 +1,36 @@
 [
   {
+    "id": "claude-ship",
+    "name": "Claude Ship",
+    "company": "anthropic",
+    "launchDate": "2026-11-23",
+    "description": "Three agents for GitHub pull requests: Code Review finds problems, PR Steward pushes fixes for failing checks, merge conflicts and review comments, and Claude Approvals applies a team-written policy that decides who still has to approve and where Claude may approve.",
+    "strengths": [
+      "Approval policy as a repo file (.claude/approvals.yml) with an observe mode",
+      "Quick, Standard or Deep review level per repository",
+      "PR Steward designed never to approve or merge",
+      "/ship command in Claude Code for a developer's own pull request"
+    ],
+    "weaknesses": [
+      "Team and Enterprise only; unavailable with ZDR, HIPAA configuration or CMEK",
+      "GitHub only",
+      "Billed on tokens outside plan usage, including in observe mode"
+    ],
+    "links": {
+      "official": "https://claude.com/resources/articles/introducing-claude-ship",
+      "docs": "https://code.claude.com/docs/en/claude-ship"
+    },
+    "notes": "Announcement dated 2026-11-23. Code Review (already generally available) is GA; PR Steward and Claude Approvals are public beta, and the product page calls Claude Ship as a whole a beta. Billed on tokens through the organization's usage credits; admins can set spend limits for Code Review and PR Steward; Approvals has no base charge but bills classifier runs and the Code Reviews a policy asks for. Approvals works on github.com including GitHub Enterprise Cloud and can't be started with FERPA or Access Transparency settings. /ship needs Claude Code v2.1.330+, runs from the CLI only (not cloud sessions) and counts as normal Claude Code usage. Eligible Enterprise organizations can claim $10,000 to $50,000 in promotional credits (by Claude Code seats) until 2027-01-15, usable for 30 days. Anthropic says it may miss bugs or security issues. No model named.",
+    "surface": "dev-tool",
+    "availability": "beta",
+    "plans": [
+      "Team",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
     "id": "chatgpt-wallet",
     "name": "ChatGPT Wallet",
     "company": "openai",
