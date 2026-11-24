@@ -99,6 +99,7 @@ chatgpt-business-hub · modelIds, plans · 2026-11-19 · openai.com introducing-
 muse-voice-and-avatars · plans, modelIds · 2026-11-19 · about.fb.com launch and Loblaw posts, Muse getting-started help page: no plans; models are Muse Realtime Voice/Avatar (no models.json ids)
 muse-spaces · links.docs, plans, modelIds · 2026-11-19 · about.fb.com Spaces post, Meta Muse help-centre search: no Spaces help page, plans or named model
 meta-muse · plans · 2026-11-19 · meta.com Muse subscriptions help page (reader proxy): no plan names or prices, 'may vary by region and account'
+claude-ship · modelIds · 2026-11-24 · claude.com introducing-claude-ship article, claude.com product page, code.claude.com claude-ship, approvals and ship-command docs: no model named
 
 ## voice-models
 
