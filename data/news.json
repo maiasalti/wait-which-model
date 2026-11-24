@@ -4039,5 +4039,24 @@
     ],
     "sourceName": "Google",
     "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/"
+  },
+  {
+    "id": "2026-11-23-claude-ship",
+    "date": "2026-11-23",
+    "title": "Anthropic launches Claude Ship, agents that review, fix and approve GitHub pull requests",
+    "summary": "Anthropic launched Claude Ship for Team and Enterprise plans on GitHub, built around three agents: Code Review, already generally available, which finds problems in a pull request; PR Steward, in beta, which pushes fixes for failing checks, merge conflicts and review comments but is designed not to approve or merge; and Claude Approvals, in beta, which applies a policy file the team writes to decide how many people must approve a change and where Claude may approve routine ones. Usage is billed on tokens separately from plan usage, and Anthropic recommends starting Approvals in observe mode. Developers can also run a new /ship command in Claude Code on their own pull requests. Claude Ship isn't available to organizations using Zero Data Retention, the HIPAA configuration or customer-managed encryption keys, and eligible Enterprise organizations can claim at least $10,000 in credits until 2027-01-15.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "refs": [
+      {
+        "type": "feature",
+        "id": "claude-ship"
+      }
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://claude.com/resources/articles/introducing-claude-ship"
   }
 ]
