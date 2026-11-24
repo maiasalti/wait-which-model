@@ -58,6 +58,7 @@ genie-4 · maxSessionSec · 2026-11-19 · resolved: deepmind.google/models/genie
 genie-4 · maxResolution, fps · 2026-11-19 · re-checked deepmind.google/models/genie, 2026-11-18 "Genie 4 is now available" post, labs.google/projectgenie: still not stated
 genie-4 · apiIds · 2026-11-19 · Oct 27 DeepMind blog promises Gemini API/AI Studio early-access partners; Nov 18 post + model page silent; no model id found
 genie-4 · pricing (USD) · 2026-11-19 · one.google.com/about/google-ai-plans showed no US figure ("From /mo"), gemini.google/subscriptions showed SGD only; footnote ties Project Genie to an Ultra ("20x") plan
+genie-4 · maxResolution, fps, apiIds, maxSessionSec, pricing · 2026-11-24 · resolved: aistudio.google.com/docs/models/genie-4 (Stable: genie-4) gives 1280x720 at 24 fps, up to 120 s per session, paid-tier token prices (~$0.10/s) → filled; consumer Project Genie price still unpublished
 hy-nomas · interactive · 2026-10-28 · GitHub README + HF card: multi-turn steering during generation, no real-time claim; speed "depends on hardware…"; only community port reports (slower than real time)
 hy-nomas · maxSessionSec · 2026-10-28 · GitHub README + HF card: segment-chained generation with history, no maximum length stated
 pixverse-r2 · maxSessionSec · 2026-10-28 · pixverse.ai launch post, model page, technical post: "far longer sessions", no figure
@@ -100,6 +101,8 @@ muse-voice-and-avatars · plans, modelIds · 2026-11-19 · about.fb.com launch a
 muse-spaces · links.docs, plans, modelIds · 2026-11-19 · about.fb.com Spaces post, Meta Muse help-centre search: no Spaces help page, plans or named model
 meta-muse · plans · 2026-11-19 · meta.com Muse subscriptions help page (reader proxy): no plan names or prices, 'may vary by region and account'
 claude-ship · modelIds · 2026-11-24 · claude.com introducing-claude-ship article, claude.com product page, code.claude.com claude-ship, approvals and ship-command docs: no model named
+gemini-computer-use-mac · modelIds · 2026-11-24 · blog.google computer-use-mac post, gemini.google release notes (newest entry 2026-11-17): no model named
+gemini-computer-use-mac · links.docs · 2026-11-24 · support.google.com/gemini 17011627 (Mac app, no computer-use section) and search for a help article: none found
 
 ## voice-models
 
