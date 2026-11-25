@@ -1,5 +1,24 @@
 [
   {
+    "id": "2026-11-24-claude-install-as-app",
+    "date": "2026-11-24",
+    "title": "Anthropic lets Claude artifacts install as Mac and Windows apps",
+    "summary": "Anthropic began a beta that turns an artifact into a desktop app in Claude for Mac and Windows, chosen from the Share menu as \"Install as app\". The installed app gets its own icon and window, can use Claude and the user's connectors, and changes when the artifact is edited. By default it can do only what it could in a browser. With per-app permission it can send notifications, respond to global keyboard shortcuts, float over other windows or add a menu bar or system tray item. Full computer access is limited to apps the user built, or on Team and Enterprise plans to apps built inside their organization. Anthropic doesn't review apps before they are installed. The beta covers Free, Pro, Max, Ultra, Team and Enterprise plans, needs Claude for Mac or Windows 6.28899.0 or later, and isn't available to HIPAA-ready organizations.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "refs": [
+      {
+        "type": "feature",
+        "id": "claude-install-as-app"
+      }
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://claude.com/resources/articles/install-as-app"
+  },
+  {
     "id": "2026-11-23-glm-5-4",
     "date": "2026-11-23",
     "title": "Z.ai releases GLM-5.4, its first flagship built on a Loop Transformer",

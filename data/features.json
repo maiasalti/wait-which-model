@@ -1,5 +1,40 @@
 [
   {
+    "id": "claude-install-as-app",
+    "name": "Install as app",
+    "company": "anthropic",
+    "launchDate": "2026-11-24",
+    "description": "Installs a Claude artifact as an app on a Mac or Windows computer, with its own icon and window, that can use Claude and your connectors and, with your permission, interact with the computer.",
+    "strengths": [
+      "No packaging, signing or API key; runs on your Claude account",
+      "Per-app permissions for notifications, global shortcuts, always-on-top windows and a menu bar or tray item",
+      "Edits to the artifact carry through to the installed app",
+      "Free, Pro, Max, Ultra, Team and Enterprise"
+    ],
+    "weaknesses": [
+      "Anthropic doesn't review apps before install",
+      "Mac and Windows only; must be online and signed in to open an app",
+      "Not available to HIPAA-ready organizations or hybrid deployments"
+    ],
+    "links": {
+      "official": "https://claude.com/resources/articles/install-as-app",
+      "docs": "https://support.claude.com/en/articles/18516354-install-an-artifact-as-an-app"
+    },
+    "notes": "Kept separate from claude-artifacts (2024-06-21): that entry is the in-chat artifact window, while this one turns an artifact into a standalone desktop app with operating-system permissions, a separate launch on its own date. Announcement and release notes dated 2026-11-24. Install from the Share menu, the artifact's title menu or a right-click; needs Claude for Mac or Windows 6.28899.0 or later (help center). By default an app can do only what it could do in a browser; app permissions are granted per app and per version, so Claude asks again after any update, including your own edits. Full computer access (run programs, read, change or delete files without asking) is limited to apps you made, or on Team and Enterprise apps made by people in your organization. On by default for Team with full access off; off on Enterprise until an owner turns it on. App requests to Claude count toward plan usage limits. Can't install Docs, Slides or Sheets template artifacts, legacy artifacts or live Cowork artifacts; full access isn't available in Claude for Teachers or K-12 organizations. Uninstall from File > Apps. No model named.",
+    "surface": "app",
+    "availability": "beta",
+    "plans": [
+      "Free",
+      "Pro",
+      "Max",
+      "Ultra",
+      "Team",
+      "Enterprise"
+    ],
+    "modelIds": [],
+    "retiredDate": null
+  },
+  {
     "id": "claude-ship",
     "name": "Claude Ship",
     "company": "anthropic",
