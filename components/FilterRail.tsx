@@ -89,7 +89,7 @@ export function FilterRail({
               onClick={() => setFilters({ ...filters, companies: [] })}
               className="mono px-2 py-1 text-[11px] text-ink-3 underline hover:text-ink"
             >
-              clear
+              show all
             </button>
           )}
         </div>

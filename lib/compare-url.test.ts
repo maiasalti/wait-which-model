@@ -80,3 +80,17 @@ test("a retired benchmark in a shared link falls back to the default", () => {
     assert.equal(s.filters.benchmark, DEFAULT_COMPARE_STATE.filters.benchmark);
   }
 });
+
+test("companies default to the frontier labs; an empty co param means all", () => {
+  assert.deepEqual(queryToState(new URLSearchParams("")).filters.companies, DEFAULT_COMPARE_STATE.filters.companies);
+  assert.deepEqual(queryToState(new URLSearchParams("co=")).filters.companies, []);
+  const all = { ...DEFAULT_COMPARE_STATE, filters: { ...DEFAULT_COMPARE_STATE.filters, companies: [] } };
+  assert.equal(stateToQuery(all), "co=");
+  assert.deepEqual(queryToState(new URLSearchParams(stateToQuery(all))), all);
+});
+
+test("the default labs in a different order are still omitted", () => {
+  const reordered = [...DEFAULT_COMPARE_STATE.filters.companies].reverse();
+  const q = stateToQuery({ ...DEFAULT_COMPARE_STATE, filters: { ...DEFAULT_COMPARE_STATE.filters, companies: reordered } });
+  assert.equal(q, "");
+});

@@ -17,9 +17,14 @@ const WINDOW_MONTHS: Record<Exclude<TimeWindow, "all">, number> = {
   "3y": 36,
 };
 
+/** The five frontier labs (the same set the Frontier Features directory is
+ *  limited to). Compare opens with only these selected; an empty `companies`
+ *  list still means "every company". */
+export const FRONTIER_LABS = ["anthropic", "openai", "google", "xai", "meta"];
+
 export const DEFAULT_FILTERS: Filters = {
   window: "all",
-  companies: [],
+  companies: FRONTIER_LABS,
   openWeightsOnly: false,
   frontierOnly: false,
   benchmark: "sweBench",

@@ -28,7 +28,7 @@ export default function CompareClient() {
   // No fallback here — DEFAULT_PICKS in lib/compare-url.ts is the single
   // source of truth, so an untouched page serialises to a bare URL.
   const [picks, setPicks] = useState<string[]>(initial.picks);
-  const [showLabels, setShowLabels] = useState(true);
+  const [showLabels, setShowLabels] = useState(false);
   const [now] = useState(() => new Date());
   const [diffBaseline, setDiffBaseline] = useState<string | null>(initial.diffBaseline);
   const [diffOthers, setDiffOthers] = useState<string[]>(initial.diffOthers);

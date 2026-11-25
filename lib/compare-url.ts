@@ -29,6 +29,11 @@ export const DEFAULT_COMPARE_STATE: CompareState = {
 const sameList = (a: string[], b: string[]) =>
   a.length === b.length && a.every((v, i) => v === b[i]);
 
+/** Order-insensitive: the rail appends companies in click order, so the default
+ *  five re-selected in another order is still the default. */
+const sameSet = (a: string[], b: string[]) =>
+  a.length === b.length && a.every((v) => b.includes(v));
+
 const WINDOWS: TimeWindow[] = ["3m", "6m", "1y", "2y", "3y", "all"];
 /** Mirrors the non-retired keys in data/benchmarks.json (a test pins the two
  *  together). Kept literal because this module runs under `node --test`, which
@@ -57,7 +62,9 @@ export function stateToQuery(state: CompareState): string {
   const d = DEFAULT_FILTERS;
 
   if (f.window !== d.window) p.set("window", f.window);
-  if (f.companies.length) p.set("co", f.companies.join(","));
+  // An empty `co=` is meaningful: the user cleared the default labs to see
+  // every company, and a shared link must keep that.
+  if (!sameSet(f.companies, d.companies)) p.set("co", f.companies.join(","));
   if (f.openWeightsOnly) p.set("open", "1");
   if (f.frontierOnly) p.set("frontier", "1");
   if (f.benchmark !== d.benchmark) p.set("bench", f.benchmark);
@@ -82,7 +89,8 @@ export function queryToState(params: URLSearchParams): CompareState {
       window: WINDOWS.includes(window as TimeWindow)
         ? (window as TimeWindow)
         : DEFAULT_FILTERS.window,
-      companies: list(params.get("co")),
+      // Same `has` rule as picks: absent = default labs, `co=` = all companies.
+      companies: params.has("co") ? list(params.get("co")) : DEFAULT_FILTERS.companies,
       openWeightsOnly: params.get("open") === "1",
       frontierOnly: params.get("frontier") === "1",
       benchmark: BENCHMARKS.includes(bench as BenchmarkKey)
