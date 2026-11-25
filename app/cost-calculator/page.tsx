@@ -5,6 +5,7 @@ import Link from "next/link";
 import { models } from "@/lib/data";
 import { rankByCost, positionToTasks, tasksToPosition } from "@/lib/cost-calc";
 import { CompanyLogo } from "@/components/CompanyLogo";
+import { ModelPicker } from "@/components/ModelPicker";
 
 const usd = (v: number) =>
   v >= 100 ? `$${Math.round(v).toLocaleString()}` : `$${v.toFixed(2)}`;
@@ -146,22 +147,14 @@ export default function CostCalculatorPage() {
           <h2 className="mono text-xs font-semibold uppercase tracking-widest text-ink">
             {pick ? "Cheaper than your pick" : "Monthly cost"}
           </h2>
-          <select
-            aria-label="Model you are currently using"
-            value={pickId ?? ""}
-            onChange={(e) => {
-              setPickId(e.target.value || null);
+          <ModelPicker
+            models={included.map((r) => r.model)}
+            value={pickId}
+            onChange={(id) => {
+              setPickId(id);
               setShowAll(false);
             }}
-            className="mono rounded border border-line bg-surface px-2 py-1 text-xs text-ink-2"
-          >
-            <option value="">Compare against a model…</option>
-            {included.map((r) => (
-              <option key={r.model.id} value={r.model.id}>
-                {r.model.name}
-              </option>
-            ))}
-          </select>
+          />
         </div>
 
         {pick && (

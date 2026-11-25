@@ -55,3 +55,20 @@ export function tasksToPosition(tasks: number): number {
   const t = Math.min(VOLUME_MAX, Math.max(VOLUME_MIN, tasks));
   return (100 * Math.log(t / VOLUME_MIN)) / Math.log(VOLUME_MAX / VOLUME_MIN);
 }
+
+/** Options for the "compare against a model" picker: alphabetical by name
+ *  (numeric-aware, so "GPT-5.10" sorts after "GPT-5.9"), narrowed by a
+ *  case-insensitive match on the name or the company id. Every word typed must
+ *  match somewhere, so "gpt sol" finds "GPT-6 Sol". */
+export function pickerOptions<T extends { name: string; company: string }>(
+  all: T[],
+  query: string
+): T[] {
+  const words = query.toLowerCase().split(/\s+/).filter(Boolean);
+  return all
+    .filter((m) => {
+      const hay = `${m.name} ${m.company}`.toLowerCase();
+      return words.every((w) => hay.includes(w));
+    })
+    .sort((a, b) => a.name.localeCompare(b.name, "en", { numeric: true, sensitivity: "base" }));
+}

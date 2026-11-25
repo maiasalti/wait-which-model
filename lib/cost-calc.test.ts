@@ -6,6 +6,7 @@ import {
   DAYS_PER_MONTH,
   positionToTasks,
   tasksToPosition,
+  pickerOptions,
   VOLUME_MIN,
   VOLUME_MAX,
 } from "./cost-calc.ts";
@@ -71,4 +72,27 @@ test("out-of-range input is clamped, not wrapped", () => {
   assert.equal(positionToTasks(999), VOLUME_MAX);
   assert.equal(tasksToPosition(1), 0);
   assert.equal(tasksToPosition(9_999_999), 100);
+});
+
+test("pickerOptions sorts alphabetically, numbers in numeric order", () => {
+  const ms = [
+    { name: "GPT-5.10", company: "openai" },
+    { name: "claude Haiku 4.5", company: "anthropic" },
+    { name: "GPT-5.9", company: "openai" },
+    { name: "Gemini 3.1 Pro", company: "google" },
+  ];
+  assert.deepEqual(pickerOptions(ms, "").map((m) => m.name), [
+    "claude Haiku 4.5", "Gemini 3.1 Pro", "GPT-5.9", "GPT-5.10",
+  ]);
+});
+
+test("pickerOptions matches every typed word against name or company", () => {
+  const ms = [
+    { name: "GPT-6 Sol", company: "openai" },
+    { name: "GPT-6 Luna", company: "openai" },
+    { name: "Claude Opus 5.5", company: "anthropic" },
+  ];
+  assert.deepEqual(pickerOptions(ms, "gpt SOL").map((m) => m.name), ["GPT-6 Sol"]);
+  assert.deepEqual(pickerOptions(ms, "anthropic").map((m) => m.name), ["Claude Opus 5.5"]);
+  assert.deepEqual(pickerOptions(ms, "nothing"), []);
 });
