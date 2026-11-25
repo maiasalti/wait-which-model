@@ -1,5 +1,54 @@
 [
   {
+    "id": "2026-11-23-kolibri-1-1",
+    "date": "2026-11-23",
+    "title": "Aleph Alpha releases Kolibri 1.1, a faster long-context successor to its English-German open-weight model",
+    "summary": "Aleph Alpha released Kolibri 1.1 on 2026-11-23 as Apache 2.0 weights on Hugging Face, seven weeks after Kolibri 1: a 75B-parameter mixture-of-experts model with 3.44B active per token, continued from a Kolibri 1 checkpoint and adding sparse attention that Aleph Alpha says gives up to 14 times Kolibri 1's decode throughput at a 1M-token context, though it is slower than Kolibri 1 on short prompts. Aleph Alpha reports GPQA Diamond 87.1%, SWE-bench Verified 70.4% and Terminal-Bench 2.1 35.6% at highest reasoning effort, an overall score of 73.2 against Kolibri 1's 66.6, 41% fewer output tokens per task and much stronger prompt-injection resistance. There is still no public hosted API; it is self-hosted through Aleph Alpha's vLLM plugin or official GGUF builds.",
+    "category": "release",
+    "companies": [
+      "aleph-alpha"
+    ],
+    "modelIds": [
+      "kolibri-1-1"
+    ],
+    "sourceName": "Aleph Alpha",
+    "sourceUrl": "https://aleph-alpha.com/en/blog/kolibri-1-1/"
+  },
+  {
+    "id": "2026-11-04-hy4",
+    "date": "2026-11-04",
+    "title": "Tencent releases Hy4, adding vision and computer use to its open flagship",
+    "summary": "Hy4 is the general release of the 770B-total/49B-active MoE that Tencent previewed in August. It now reads images and drives command-line and graphical interfaces, keeps the preview's $0.834/$2.501 per-million-token price and 1M-token context, and launched on Tencent Cloud TokenHub, WorkBuddy, CodeBuddy and Yuanbao. Tencent reports DeepSWE 74.9 against the preview's 64.3. Open weights and a system card followed on 2026-11-20 under the Tencent Hy License 1.0 rather than the preview's Apache 2.0.",
+    "category": "release",
+    "companies": [
+      "tencent"
+    ],
+    "modelIds": [
+      "hy4"
+    ],
+    "sourceName": "Tencent",
+    "sourceUrl": "https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/"
+  },
+  {
+    "id": "2026-11-24-claude-install-as-app",
+    "date": "2026-11-24",
+    "title": "Anthropic lets Claude artifacts install as Mac and Windows apps",
+    "summary": "Anthropic began a beta that turns an artifact into a desktop app in Claude for Mac and Windows, chosen from the Share menu as \"Install as app\". The installed app gets its own icon and window, can use Claude and the user's connectors, and changes when the artifact is edited. By default it can do only what it could in a browser. With per-app permission it can send notifications, respond to global keyboard shortcuts, float over other windows or add a menu bar or system tray item. Full computer access is limited to apps the user built, or on Team and Enterprise plans to apps built inside their organization. Anthropic doesn't review apps before they are installed. The beta covers Free, Pro, Max, Ultra, Team and Enterprise plans, needs Claude for Mac or Windows 6.28899.0 or later, and isn't available to HIPAA-ready organizations.",
+    "category": "release",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "refs": [
+      {
+        "type": "feature",
+        "id": "claude-install-as-app"
+      }
+    ],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://claude.com/resources/articles/install-as-app"
+  },
+  {
     "id": "2026-11-23-glm-5-4",
     "date": "2026-11-23",
     "title": "Z.ai releases GLM-5.4, its first flagship built on a Loop Transformer",
@@ -375,6 +424,21 @@
     "modelIds": [],
     "sourceName": "California Attorney General",
     "sourceUrl": "https://oag.ca.gov/news/press-releases/it%E2%80%99s-golden-state-not-wild-west-attorney-general-bonta-sues-openai-over"
+  },
+  {
+    "id": "2026-11-16-hy4-flash",
+    "date": "2026-11-16",
+    "title": "Tencent launches Hy4 flash, the cheap end of the Hy4 family",
+    "summary": "Tencent launched Hy4 flash, a 220B-total/12B-active multimodal MoE priced around $0.07/$0.28 per million tokens with a 1M-token context, on Tencent Cloud TokenHub and its WorkBuddy and Yuanbao apps. Open weights for the instruct, FP8 and base checkpoints followed within days under the Tencent Hy License 1.0, which requires separate permission above $50M in annual revenue or 100M monthly active users.",
+    "category": "release",
+    "companies": [
+      "tencent"
+    ],
+    "modelIds": [
+      "hy4-flash"
+    ],
+    "sourceName": "Tencent",
+    "sourceUrl": "https://huggingface.co/tencent/Hy4-flash"
   },
   {
     "id": "2026-11-16-qwen4-max",

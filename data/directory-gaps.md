@@ -92,6 +92,7 @@ lovable · pricing.plan · 2026-10-28 · lovable.dev FAQ/billing: credits (Pro 1
 
 muse-for-small-business · links.docs · 2026-10-30 · search for Meta help-center setup/connector pages: only third-party guides (eesel, smartscope, parix); no Meta help article surfaced; WebFetch unavailable
 claude-sheets · modelIds · 2026-11-12 · claude.com sheets-whiteboards-data article, support.claude.com Sheets guide: no model named (same for claude-whiteboards)
+claude-install-as-app · modelIds · 2026-11-25 · claude.com install-as-app article, support.claude.com 18516354, release notes 2026-11-24: no model named
 claude-meetings · modelIds · 2026-11-19 · claude.com claude-meetings article, support.claude.com 18325154, release notes 2026-11-12: no model named
 claude-personal-finance · modelIds · 2026-11-19 · claude.com launch article, support.claude.com 18185620: no model named
 claude-interactive-connectors · modelIds · 2026-11-19 · claude.com interactive-tools-in-claude and interactive-connectors-full-tool posts: no model named

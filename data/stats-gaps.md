@@ -1351,6 +1351,21 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | mai-cyber-2-flash | maxOutput / knowledgeCutoff / costPerTask | 2026-11-19 | no model card for this version (model page links the MAI-Cyber-1-Flash card); not on Artificial Analysis |
 | microsoft-decision-1-1 | all benchmarks | 2026-11-19 | not applicable, not merely unpublished: typed-decision model that cannot generate text; Microsoft reports AA Decision Index v2.1 68 and its own 102-benchmark decision suite only |
 | microsoft-decision-1-1 | costPerTask / knowledgeCutoff / maxOutput | 2026-11-19 | decision model with no output tokens; no AA Intelligence Index cost; GA post and Foundry catalog publish no cutoff |
+| hy4-flash | mmluPro / gpqaDiamond / sweBench / sweBenchPro / aime / hle / lmarenaElo / gdpvalAA / arcAgi2 | 2026-11-22 | no primary-source figure maps to this site's tracked keys at launch — Tencent's own chart reports DeepSWE, OSWorld 2.1, Terminal-Bench 4.0 (not 2.1), MMLU and SuperGPQA instead; Artificial Analysis had not listed the model (model page 404 at launch week); no arena.ai text-board or arcprize.org entry found |
+| hy4-flash | terminalBench | 2026-11-22 | only Terminal-Bench 4.0 (15.2%, Tencent's chart) published; the 2.1 version this site tracks has no run |
+| hy4-flash | costPerTask / knowledgeCutoff | 2026-11-22 | not on Artificial Analysis at launch week; no knowledge cutoff published in any coverage found |
 | glm-5-4 | all benchmarks | 2026-11-24 | Z.ai published no benchmark scores at launch (docs.z.ai/guides/llm/glm-5.4 shows only a win-rate chart and 30B ablations); no API, so not on AA, arena.ai or arcprize.org |
 | glm-5-4 | pricing / costPerTask | 2026-11-24 | no Model API yet (after a security assessment); Coding Plan subscription only |
 | glm-5-4 | knowledgeCutoff | 2026-11-24 | not stated in Z.ai's docs or launch coverage |
+| hy4 | mmluPro / gpqaDiamond / sweBench / sweBenchPro / aime / arcAgi2 | 2026-11-25 | Tencent's Hy4 charts (benchmark.jpg, benchmark-limitations.jpg, benchmark-appendix.jpg on huggingface.co/tencent/Hy4, read directly) have no row for these on the instruct model; the only MMLU-Pro figure (73.9) is the pretrained Hy4 *base* few-shot score — rejected; not on Artificial Analysis or arcprize.org |
+| hy4 | terminalBench | 2026-11-25 | only Terminal-Bench 4.0 (44.4) and Terminal-Bench Science 0.1 (19.8) published; no 2.1 run |
+| hy4 | hle | 2026-11-25 | Tencent reports HLE-Full with tools 59.1 only; no no-tools figure in the appendix or the HF eval results |
+| hy4 | lmarenaElo / gdpvalAA | 2026-11-25 | arena.ai lists hy4 on the Agent Arena only (index 1,170, #19 of 65), not the text leaderboard; Artificial Analysis model page 404 so no GDPval-AA rating |
+| hy4 | costPerTask / knowledgeCutoff | 2026-11-25 | artificialanalysis.ai/models/hy4 returns 404; no cutoff on the HF card, Tencent Cloud docs or launch coverage, and the system card PDF (hy.tencent.ai/Hy4_system_card.pdf) serves a JS shell to automated fetches, so it could not be read |
+| kolibri-1-1 | hle | 2026-11-25 | the card's only English HLE row is "Humanity's Last Exam Diamond (EN)" 10.5 (DE 22.1), an undefined subset that rescores Kolibri 1 at 6.5 vs 21.5 on its own card — not comparable; in notes |
+| kolibri-1-1 | mmluPro | 2026-11-25 | only in the base-model pre-training table; not in the post-training results |
+| kolibri-1-1 | sweBenchPro, gdpvalAA, arcAgi2 | 2026-11-25 | not in the Hugging Face model card or the launch post; no third-party run found |
+| kolibri-1-1 | lmarenaElo | 2026-11-25 | no hosted endpoint, not on the arena.ai text board two days after release; re-check |
+| kolibri-1-1 | costPerTask | 2026-11-25 | no Artificial Analysis model page (404); re-check |
+| kolibri-1-1 | pricing | 2026-11-25 | open weights only; no inference provider on Hugging Face, no OpenRouter listing, Aleph Alpha Inference API is contact-sales with no public price |
+| kolibri-1-1 | maxOutput | 2026-11-25 | unpublished on the model card and launch post; the card's max_tokens=1024 is a pre-training eval setting, not an output limit |
