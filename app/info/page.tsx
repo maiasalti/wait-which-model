@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { benchmarks, formatDate, methodology } from "@/lib/data";
 import { ReignChart } from "@/components/ReignChart";
 import { BenchmarkCoverage } from "@/components/BenchmarkCoverage";
@@ -7,6 +8,8 @@ export const metadata: Metadata = {
   title: "Info",
   description: "How this site defines \"frontier,\" what the benchmarks mean, and how the data stays current.",
 };
+
+const LINKEDIN_URL = "https://www.linkedin.com/in/maia-salti/";
 
 export default function InfoPage() {
   return (
@@ -20,6 +23,28 @@ export default function InfoPage() {
           What &ldquo;frontier&rdquo; means here, why some figures are blank, and how the data
           stays up to date.
         </p>
+        <div className="mt-6 flex items-center gap-4 rounded border border-line p-3">
+          <Image
+            src="/maia-salti.jpg"
+            alt="Maia Salti"
+            width={56}
+            height={56}
+            className="h-14 w-14 shrink-0 rounded-full object-cover"
+          />
+          <div className="text-sm">
+            <p className="text-ink">
+              Created by <span className="font-semibold">Maia Salti</span>
+            </p>
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mono mt-1 inline-flex items-center gap-1 text-xs text-ink-2 underline hover:text-ink"
+            >
+              Connect on LinkedIn ↗
+            </a>
+          </div>
+        </div>
       </section>
 
       <section className="mb-10">
