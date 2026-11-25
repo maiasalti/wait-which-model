@@ -78,10 +78,10 @@ export default function NewsPage() {
               key={c.key}
               onClick={() => setCategory(c.key)}
               aria-pressed={category === c.key}
-              className={`mono rounded px-2.5 py-1 text-xs ${
+              className={`mono rounded border px-3 py-1.5 text-sm text-ink ${
                 category === c.key
-                  ? "bg-accent/20 text-accent"
-                  : "border border-line text-ink-2 hover:text-ink"
+                  ? "border-accent/50 bg-accent/20"
+                  : "border-line hover:bg-wash/5"
               }`}
             >
               {c.label}
