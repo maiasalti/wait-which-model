@@ -56,10 +56,13 @@ const list = (raw: string | null): string[] =>
 
 /** Only non-default values are emitted, so an untouched Compare page keeps a
  *  clean bare URL and a shared link shows exactly what was changed. */
-export function stateToQuery(state: CompareState): string {
+export function stateToQuery(
+  state: CompareState,
+  defaults: CompareState = DEFAULT_COMPARE_STATE
+): string {
   const p = new URLSearchParams();
   const f = state.filters;
-  const d = DEFAULT_FILTERS;
+  const d = defaults.filters;
 
   if (f.window !== d.window) p.set("window", f.window);
   // An empty `co=` is meaningful: the user cleared the default labs to see
@@ -71,7 +74,7 @@ export function stateToQuery(state: CompareState): string {
   if (f.minScore != null) p.set("min", String(f.minScore));
   if (f.maxInputPrice != null) p.set("max", String(f.maxInputPrice));
   if (f.search) p.set("q", f.search);
-  if (!sameList(state.picks, DEFAULT_PICKS)) p.set("picks", state.picks.join(","));
+  if (!sameList(state.picks, defaults.picks)) p.set("picks", state.picks.join(","));
   if (state.diffBaseline) p.set("base", state.diffBaseline);
   if (state.diffOthers.length) p.set("vs", state.diffOthers.join(","));
 
@@ -80,7 +83,13 @@ export function stateToQuery(state: CompareState): string {
 
 /** Unrecognised values fall back to defaults rather than throwing — a shared
  *  link must never break the page, however mangled it arrives. */
-export function queryToState(params: URLSearchParams): CompareState {
+/** `defaults` lets the page pass in a data-derived default (the benchmark is
+ *  chosen from the data, which this module cannot import under `node --test`). */
+export function queryToState(
+  params: URLSearchParams,
+  defaults: CompareState = DEFAULT_COMPARE_STATE
+): CompareState {
+  const d = defaults.filters;
   const window = params.get("window");
   const bench = params.get("bench");
 
@@ -88,14 +97,14 @@ export function queryToState(params: URLSearchParams): CompareState {
     filters: {
       window: WINDOWS.includes(window as TimeWindow)
         ? (window as TimeWindow)
-        : DEFAULT_FILTERS.window,
+        : d.window,
       // Same `has` rule as picks: absent = default labs, `co=` = all companies.
-      companies: params.has("co") ? list(params.get("co")) : DEFAULT_FILTERS.companies,
+      companies: params.has("co") ? list(params.get("co")) : d.companies,
       openWeightsOnly: params.get("open") === "1",
       frontierOnly: params.get("frontier") === "1",
       benchmark: BENCHMARKS.includes(bench as BenchmarkKey)
         ? (bench as BenchmarkKey)
-        : DEFAULT_FILTERS.benchmark,
+        : d.benchmark,
       minScore: num(params.get("min")),
       maxInputPrice: num(params.get("max")),
       search: params.get("q") ?? "",
@@ -103,7 +112,7 @@ export function queryToState(params: URLSearchParams): CompareState {
     // `has` not `get`: an absent param means "untouched, use defaults", while
     // an explicitly empty `picks=` means the user deselected everything and
     // wants that shared.
-    picks: params.has("picks") ? list(params.get("picks")) : DEFAULT_PICKS,
+    picks: params.has("picks") ? list(params.get("picks")) : defaults.picks,
     diffBaseline: params.get("base"),
     diffOthers: list(params.get("vs")),
   };

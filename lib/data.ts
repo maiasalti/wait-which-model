@@ -4,6 +4,7 @@ import benchmarksJson from "@/data/benchmarks.json";
 import newsJson from "@/data/news.json";
 import methodologyJson from "@/data/methodology.json";
 import reignsJson from "@/data/frontier-reigns.json";
+import { mostReportedBenchmark } from "@/lib/filter";
 import imageModelsJson from "@/data/image-models.json";
 import videoModelsJson from "@/data/video-models.json";
 import worldModelsJson from "@/data/world-models.json";
@@ -85,6 +86,13 @@ export const benchmarks = benchmarksJson as BenchmarkMeta[];
  *  models' drawers and the coverage table still show them) but are dropped from
  *  Compare's picker, the head-to-head chart and the URL allowlist. */
 export const activeBenchmarks = benchmarks.filter((b) => !b.retired);
+
+/** Compare's opening benchmark: the active one most reported by models
+ *  released in the last 3 months of data (see `mostReportedBenchmark`). */
+export const defaultBenchmark = mostReportedBenchmark(
+  models,
+  activeBenchmarks.map((b) => b.key)
+);
 
 export const methodology = methodologyJson as Methodology;
 

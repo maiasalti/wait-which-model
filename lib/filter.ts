@@ -1,4 +1,4 @@
-import type { Filters, Highlight, Model, TimeWindow } from "./types";
+import type { BenchmarkKey, Filters, Highlight, Model, TimeWindow } from "./types";
 
 export const WINDOW_LABELS: Record<TimeWindow, string> = {
   "3m": "3 months",
@@ -74,4 +74,33 @@ export function isHighlighted(m: Model, h: Highlight): boolean {
 
 export function hasActiveHighlight(h: Highlight): boolean {
   return h.kind !== "none" && (h.kind !== "models" || h.ids.length > 0);
+}
+
+/** The benchmark Compare opens on: whichever of `keys` (the non-retired ones,
+ *  in benchmarks.json order) has a score on the most models released in the
+ *  `months` before the NEWEST release in the data. Anchored to the data rather
+ *  than today's date so the server render and the browser always agree, and so
+ *  the choice only moves when the data does. Ties go to the earlier key; with
+ *  no scores at all it falls back to the first key. */
+export function mostReportedBenchmark(
+  all: Pick<Model, "releaseDate" | "benchmarks">[],
+  keys: BenchmarkKey[],
+  months = 3
+): BenchmarkKey {
+  if (all.length === 0 || keys.length === 0) return keys[0] ?? DEFAULT_FILTERS.benchmark;
+  const newest = all.reduce((a, m) => (m.releaseDate > a ? m.releaseDate : a), all[0].releaseDate);
+  const cutoff = new Date(`${newest}T00:00:00Z`);
+  cutoff.setUTCMonth(cutoff.getUTCMonth() - months);
+  const from = cutoff.toISOString().slice(0, 10);
+  const recent = all.filter((m) => m.releaseDate >= from);
+  let best = keys[0];
+  let bestCount = -1;
+  for (const k of keys) {
+    const n = recent.filter((m) => m.benchmarks[k] != null).length;
+    if (n > bestCount) {
+      best = k;
+      bestCount = n;
+    }
+  }
+  return best;
 }

@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import { models } from "@/lib/data";
+import { defaultBenchmark, models } from "@/lib/data";
 import { applyFilters } from "@/lib/filter";
 import { DEFAULT_COMPARE_STATE, queryToState, stateToQuery } from "@/lib/compare-url";
 import type { Filters, Highlight } from "@/lib/types";
@@ -12,11 +12,18 @@ import { SpecDiff } from "@/components/SpecDiff";
 
 const MAX_PICKS = 5;
 
+/** The URL defaults with the data-derived benchmark swapped in, so an untouched
+ *  page still serialises to a bare /compare. */
+const COMPARE_DEFAULTS = {
+  ...DEFAULT_COMPARE_STATE,
+  filters: { ...DEFAULT_COMPARE_STATE.filters, benchmark: defaultBenchmark },
+};
+
 export default function CompareClient() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const initial = useMemo(
-    () => queryToState(new URLSearchParams(searchParams.toString())),
+    () => queryToState(new URLSearchParams(searchParams.toString()), COMPARE_DEFAULTS),
     // Seed once on mount; later updates flow outward to the URL, not back in,
     // so the user's typing is never fought by a re-parse.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -45,7 +52,7 @@ export default function CompareClient() {
   // `replace`, not `push`: filtering is not navigation, and every keystroke in
   // the search box would otherwise become a back-button entry.
   useEffect(() => {
-    const q = stateToQuery({ ...DEFAULT_COMPARE_STATE, filters, picks, diffBaseline, diffOthers });
+    const q = stateToQuery({ ...COMPARE_DEFAULTS, filters, picks, diffBaseline, diffOthers }, COMPARE_DEFAULTS);
     router.replace(q ? `?${q}` : "/compare", { scroll: false });
   }, [filters, picks, diffBaseline, diffOthers, router]);
 
