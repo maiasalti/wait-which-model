@@ -11275,5 +11275,67 @@
       "Weeks old with no independent measurement — every published figure is Tencent's own, run in Tencent's choice of harness, and hands-on reception beyond launch coverage is thin"
     ],
     "notes": "General release of the Hy4 line: a 770B-total/49B-active MoE (256 routed + 1 shared expert, top-8, 78 layers) with a 1.23B ViT that adds image and video understanding, plus a built-in 3.3B DFly2 drafter for speculative decoding. Hosted launch 2026-11-04 on Tencent Cloud TokenHub, WorkBuddy, CodeBuddy, Yuanbao and ima; open weights (instruct, FP8 and a pretrained base, huggingface.co/tencent/Hy4) and the system card followed on 2026-11-20. Tencent Cloud's docs give a 1M window with a 960K max-input and 64K max-output cap; OpenRouter lists 65,536 max completion tokens. Pricing is Tencent Cloud's USD list rate ($0.042 cached), unchanged from the preview, with a 50%-off TokenHub promotion through 2026-12-31 (OpenRouter's Tencent Cloud route shows the discounted $0.417/$1.251); CNY list is 6/18 (0.3 cached). Tencent's charts use none of this site's tracked keys except HLE-Full with tools at 59.1 (no-tools HLE unpublished, so the cell is null); they report DeepSWE v1.1 74.9, Terminal-Bench 4.0 (not 2.1) 44.4, OSWorld 2.1 78.9, APEX-Agents v1.1 75.2, MMMU-Pro 78.6 and Terminal-Bench Science 0.1 19.8, all Tencent-run at the highest reasoning setting. Artificial Analysis had no model page and arena.ai lists it only on the Agent Arena (index 1,170), not the text board. predecessorId is left null: Tencent Cloud calls this 'the official release of Hy4' and marks hy4-preview 'to be discontinued' but never says it replaces the preview."
+  },
+  {
+    "id": "kolibri-1-1",
+    "name": "Kolibri 1.1",
+    "company": "aleph-alpha",
+    "releaseDate": "2026-11-23",
+    "status": "superseded",
+    "tier": "fast",
+    "modality": "text",
+    "type": "llm",
+    "contextWindow": 1048576,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "self-host",
+    "knowledgeCutoff": "2026-06",
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1.1",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": "kolibri-1",
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 87.1,
+      "sweBench": 70.4,
+      "sweBenchPro": null,
+      "terminalBench": 35.6,
+      "aime": 98.3,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Long documents get far cheaper to serve than on Kolibri 1 — sparse attention has each token read only a selected slice of the history, so near-1M-token jobs decode many times faster on the same GPUs",
+      "Thinks less wordily than Kolibri 1 for the same work, with the biggest token saving at low reasoning effort, which cuts both wait and GPU time per task",
+      "Much harder to hijack through instructions planted in documents or tool output than Kolibri 1, by Aleph Alpha's own prompt-injection tests — the property that matters for agents reading untrusted content",
+      "More willing to abstain than guess and follows citation instructions more reliably than Kolibri 1, keeping the original's focus on document work where a wrong answer costs more than none"
+    ],
+    "weaknesses": [
+      "Slower than Kolibri 1 on short prompts — the sparse-attention gain only appears on long inputs, so chat-length requests decode more slowly than before",
+      "Still self-host only and fiddly to run — vLLM needs Aleph Alpha's plugin, and the official GGUF builds need llama.cpp compiled from an unmerged pull request",
+      "Too new to characterise — every evaluation so far is Aleph Alpha's own, and the model card itself warns quality may drop past the 262K native window"
+    ],
+    "notes": "Aleph Alpha's update to Kolibri 1, released on Hugging Face on 2026-11-23 (some coverage dates it 24 November): a sparse MoE with 75.1B total and 3.44B active parameters (384 routed experts per layer, 6 active, 1 shared), continued from a Kolibri 1 mid-training checkpoint and adding sparse attention (each query attends to 2,048 selected keys, with KV shared across layers) from mid-training on. Context is 262,144 tokens natively, extended to 1,048,576 by extrapolation; the card recommends staying within 262,144 for complex tasks. Every score is Aleph Alpha's own, at highest reasoning effort, with SWE-bench and Terminal-Bench run in the Harbor harness: GPQA Diamond 87.1 (82.1 in German), AIME 2025 98.3 (AIME 2026 95.8, the figure the blog leads with), SWE-bench Verified 70.4, Terminal-Bench 2.1 35.6, plus LiveCodeBench v6 93.0, tau2-Bench Telecom 93.0, BFCL v4 62.7, BrowseComp 34.8 and an overall aggregate of 73.2 against Kolibri 1's 66.6 (the mean of the English 72.2 and German 74.2 averages). HLE is left null: the card's row is labelled \"Humanity's Last Exam Diamond (EN)\" at 10.5 (German 22.1), an undefined subset on which it rescores Kolibri 1 at 6.5 against the 21.5 on Kolibri 1's own card, so it is not comparable; MMLU-Pro appears only in the base-model pre-training table. The same table rescores Kolibri 1 below its launch figures (GPQA 84.7, SWE-bench 64.0, Terminal-Bench 25.8), so the Kolibri-1 entry keeps its launch-card numbers. Availability is self-host: the Hugging Face card says no inference provider deploys it, there is no OpenRouter listing and no Artificial Analysis page as of 2026-11-24, and the only hosted route is a sales-gated Aleph Alpha Inference API with no public price. Serving needs the aleph-alpha-inference (v2+) vLLM plugin on at least two H100s or one B200 for the ~77.6 GB checkpoint; official GGUF quantisations run from 16.6 GB to 80 GB but need llama.cpp built from PR #32891. Knowledge cutoff is 18 June 2026, unchanged from Kolibri 1, and the model is still text-only. predecessorId is kolibri-1: the Hugging Face card states \"Kolibri 1.1 is the successor to Kolibri 1\", and the Kolibri-1 card now carries \"A newer version of this model is available: Aleph-Alpha/Kolibri-1.1\"."
   }
 ]

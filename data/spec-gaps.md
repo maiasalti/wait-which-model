@@ -456,3 +456,6 @@ hy4 · predecessorId · 2026-11-25 · Tencent Cloud's Hy API guide (tencentcloud
 hy4 · speed · 2026-11-25 · Not on Artificial Analysis (artificialanalysis.ai/models/hy4 404). Left null.
 hy4 · retirementDate · 2026-11-25 · No lifecycle notice for hy4. Left null.
 hy4-preview · retirementDate · 2026-11-25 · Tencent Cloud pricing (1300/78937) and API guide (1300/80695) mark it "To Be Discontinued" / "(to be discontinued soon)" with no date. Still null.
+kolibri-1-1 · speed · 2026-11-25 · No Artificial Analysis page (artificialanalysis.ai/models/kolibri-1-1 returns 404); self-host only. Aleph Alpha's own throughput multiples versus Kolibri 1 are vendor figures, not AA measurements. Left null.
+kolibri-1-1 · apiIds · 2026-11-25 · No hosted API: the Hugging Face card says no inference provider deploys it, no OpenRouter listing, no Bedrock or Vertex listing found; Aleph Alpha's Inference API is contact-sales with no published model string. Weights only at Aleph-Alpha/Kolibri-1.1 (and -GGUF). Left [].
+kolibri-1-1 · retirementDate · 2026-11-25 · No lifecycle notice on the model card or launch post. Left null.

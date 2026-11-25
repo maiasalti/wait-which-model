@@ -1362,3 +1362,10 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | hy4 | hle | 2026-11-25 | Tencent reports HLE-Full with tools 59.1 only; no no-tools figure in the appendix or the HF eval results |
 | hy4 | lmarenaElo / gdpvalAA | 2026-11-25 | arena.ai lists hy4 on the Agent Arena only (index 1,170, #19 of 65), not the text leaderboard; Artificial Analysis model page 404 so no GDPval-AA rating |
 | hy4 | costPerTask / knowledgeCutoff | 2026-11-25 | artificialanalysis.ai/models/hy4 returns 404; no cutoff on the HF card, Tencent Cloud docs or launch coverage, and the system card PDF (hy.tencent.ai/Hy4_system_card.pdf) serves a JS shell to automated fetches, so it could not be read |
+| kolibri-1-1 | hle | 2026-11-25 | the card's only English HLE row is "Humanity's Last Exam Diamond (EN)" 10.5 (DE 22.1), an undefined subset that rescores Kolibri 1 at 6.5 vs 21.5 on its own card — not comparable; in notes |
+| kolibri-1-1 | mmluPro | 2026-11-25 | only in the base-model pre-training table; not in the post-training results |
+| kolibri-1-1 | sweBenchPro, gdpvalAA, arcAgi2 | 2026-11-25 | not in the Hugging Face model card or the launch post; no third-party run found |
+| kolibri-1-1 | lmarenaElo | 2026-11-25 | no hosted endpoint, not on the arena.ai text board two days after release; re-check |
+| kolibri-1-1 | costPerTask | 2026-11-25 | no Artificial Analysis model page (404); re-check |
+| kolibri-1-1 | pricing | 2026-11-25 | open weights only; no inference provider on Hugging Face, no OpenRouter listing, Aleph Alpha Inference API is contact-sales with no public price |
+| kolibri-1-1 | maxOutput | 2026-11-25 | unpublished on the model card and launch post; the card's max_tokens=1024 is a pre-training eval setting, not an output limit |

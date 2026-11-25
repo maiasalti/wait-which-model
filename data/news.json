@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-11-23-kolibri-1-1",
+    "date": "2026-11-23",
+    "title": "Aleph Alpha releases Kolibri 1.1, a faster long-context successor to its English-German open-weight model",
+    "summary": "Aleph Alpha released Kolibri 1.1 on 2026-11-23 as Apache 2.0 weights on Hugging Face, seven weeks after Kolibri 1: a 75B-parameter mixture-of-experts model with 3.44B active per token, continued from a Kolibri 1 checkpoint and adding sparse attention that Aleph Alpha says gives up to 14 times Kolibri 1's decode throughput at a 1M-token context, though it is slower than Kolibri 1 on short prompts. Aleph Alpha reports GPQA Diamond 87.1%, SWE-bench Verified 70.4% and Terminal-Bench 2.1 35.6% at highest reasoning effort, an overall score of 73.2 against Kolibri 1's 66.6, 41% fewer output tokens per task and much stronger prompt-injection resistance. There is still no public hosted API; it is self-hosted through Aleph Alpha's vLLM plugin or official GGUF builds.",
+    "category": "release",
+    "companies": [
+      "aleph-alpha"
+    ],
+    "modelIds": [
+      "kolibri-1-1"
+    ],
+    "sourceName": "Aleph Alpha",
+    "sourceUrl": "https://aleph-alpha.com/en/blog/kolibri-1-1/"
+  },
+  {
     "id": "2026-11-04-hy4",
     "date": "2026-11-04",
     "title": "Tencent releases Hy4, adding vision and computer use to its open flagship",
