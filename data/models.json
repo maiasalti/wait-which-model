@@ -6296,7 +6296,7 @@
       "Text-only: image input is rejected outright, with vision deferred to the full Hy4 release",
       "Practically unrunnable at home — a 4-bit build is still around half a terabyte, so despite the open weights it is a rent-not-run model"
     ],
-    "notes": "Tencent's first 770B-total/49B-active MoE (256 routed + 1 shared expert, top-8), open-sourced 2026-08-28. GPQA Diamond 92.3 and Terminal-Bench 2.1 85.4 are Tencent's own chart figures, published as an image and transcribed by launch coverage — Artificial Analysis has not yet listed the model, so no independent run exists. HLE is left null: the with-tools figure (55.4%, text-only) is corroborated across trackers but the no-tools figure (43.4%) traces to a single transcription set. Tencent's chart does not report SWE-bench Verified; it reports SWE-bench Pro 65.7%, SWE-bench Multilingual 82.9%, DeepSWE 64.3%, and a 163-expert blind evaluation at 2.99/4 vs GLM-5.3 2.92 and Kimi K3 2.94. MMLU-Pro, AIME and ARC-AGI-2 were not published; the model is on arena.ai's Code Arena but not the text leaderboard. Pricing is Tencent's first-party TokenHub rate ($0.042 cache read), matched by OpenRouter; maxOutput 64K and a 960K max-input cap are from Tencent Cloud's docs. predecessorId is left null — Tencent extended free Hy3 access to 2026-09-30 alongside this launch and states no replacement."
+    "notes": "Tencent's first 770B-total/49B-active MoE (256 routed + 1 shared expert, top-8), open-sourced 2026-08-28. GPQA Diamond 92.3 and Terminal-Bench 2.1 85.4 are Tencent's own chart figures, published as an image and transcribed by launch coverage — Artificial Analysis has not yet listed the model, so no independent run exists. HLE is left null: the with-tools figure (55.4%, text-only) is corroborated across trackers but the no-tools figure (43.4%) traces to a single transcription set. Tencent's chart does not report SWE-bench Verified; it reports SWE-bench Pro 65.7%, SWE-bench Multilingual 82.9%, DeepSWE 64.3%, and a 163-expert blind evaluation at 2.99/4 vs GLM-5.3 2.92 and Kimi K3 2.94. MMLU-Pro, AIME and ARC-AGI-2 were not published; the model is on arena.ai's Code Arena but not the text leaderboard. Pricing is Tencent's first-party TokenHub rate ($0.042 cache read), matched by OpenRouter; maxOutput 64K and a 960K max-input cap are from Tencent Cloud's docs. predecessorId is left null — Tencent extended free Hy3 access to 2026-09-30 alongside this launch and states no replacement. Tencent Cloud marked hy4-preview 'to be discontinued' when full Hy4 shipped on 2026-11-04, with no date given."
   },
   {
     "id": "deepseek-v4-pro-0813",
@@ -11098,7 +11098,7 @@
     "maxOutput": 64000,
     "pricing": {
       "inputPerMTok": 0.07,
-      "outputPerMTok": 0.28
+      "outputPerMTok": 0.281
     },
     "costPerTask": {
       "usd": null,
@@ -11149,7 +11149,7 @@
       "Days old at the time of writing — Artificial Analysis had not measured it, so every public number is vendor-reported or third-party",
       "The open licence carries a revenue/MAU threshold (Tencent Hy License 1.0) rather than a clean Apache 2.0 like Hy3 — commercial-at-scale use needs separate written permission"
     ],
-    "notes": "Flash tier of the Hy4 family: a 220B-total/12B-active MoE (reports also describe a 64B-parameter Engram lookup block), released alongside a Hy4-flash-base pretrained checkpoint and an FP8 build. Hosted launch 2026-11-16 on Tencent Cloud TokenHub and Tencent apps (WorkBuddy, Yuanbao); open weights (instruct/FP8/base, huggingface.co/tencent/Hy4-flash) followed within days under the Tencent Hy License 1.0 — coverage splits between 2026-11-17 and 2026-11-19 for that date. contextWindow/maxOutput are Tencent Cloud TokenHub's documented 1,048,576/64,000; some aggregators instead report a 960K max-input cap for the same listing. Pricing converts TokenHub's CNY rate (~$0.07/$0.28 per Mtok); OpenRouter lists a temporary ~50%-off promotional rate ($0.035/$0.1405) through 2026-11-30. No figure here maps cleanly to this site's tracked benchmark keys — Tencent's own chart reports DeepSWE 64.6 (vs 74.9 for full Hy4), OSWorld 2.1 at 68.1, Terminal-Bench 4.0 (not the 2.1 version this site tracks) at 15.2%, MMLU 88.7 and SuperGPQA 57.8; vision is given as MMMU-Pro 52.0 (base model, 4-shot) by one source and 75.8 by another, uncorroborated. Artificial Analysis had not listed the model as of launch week. predecessorId left null — no primary source states this replaces Hy3 or the Hy4 preview; it is a new, cheaper tier of the same generation."
+    "notes": "Flash tier of the Hy4 family: a 220B-total/12B-active MoE (reports also describe a 64B-parameter Engram lookup block), released alongside a Hy4-flash-base pretrained checkpoint and an FP8 build. Hosted launch 2026-11-16 on Tencent Cloud TokenHub and Tencent apps (WorkBuddy, Yuanbao); open weights (instruct/FP8/base, huggingface.co/tencent/Hy4-flash) followed within days under the Tencent Hy License 1.0 — coverage splits between 2026-11-17 and 2026-11-19 for that date. contextWindow/maxOutput are Tencent Cloud TokenHub's documented 1,048,576/64,000; some aggregators instead report a 960K max-input cap for the same listing. Pricing is Tencent Cloud TokenHub's USD list rate ($0.003 cached); TokenHub itself bills 50% of list until 2026-11-30, and OpenRouter mirrors that promotional rate ($0.035/$0.1405). No figure here maps cleanly to this site's tracked benchmark keys — Tencent's own chart reports DeepSWE 64.6 (vs 74.9 for the full Hy4 release of 2026-11-04), OSWorld 2.1 at 68.1, Terminal-Bench 4.0 (not the 2.1 version this site tracks) at 15.2%, MMLU 88.7 and SuperGPQA 57.8; vision is given as MMMU-Pro 52.0 (base model, 4-shot) by one source and 75.8 by another, uncorroborated. Artificial Analysis had not listed the model as of launch week. predecessorId left null — no primary source states this replaces Hy3 or the Hy4 preview; it is a new, cheaper tier of the same generation."
   },
   {
     "id": "glm-5-4",
@@ -11205,5 +11205,75 @@
       "Too new to characterise — no independent testing or published benchmark scores yet, so every capability claim is Z.ai's own"
     ],
     "notes": "Z.ai published no benchmark scores at launch, only a win-rate chart and ablations, so every benchmark cell is null; its claim of intelligence 'comparable to 2T-3T parameter models' is unverified. No total parameter count is published — Z.ai's docs refer only to deployment 'at the 750B scale', and the widely repeated ~750B figure is secondary-source. The Loop Transformer reuses 28 layers of the GLM-5 base across two passes, with per-token gates on the second pass's updates and a hybrid KV cache (first-pass sparse KV shared, plus a sliding window for the second pass) to keep 1M-context serving cheap; it was adapted from the pretrained base by continued training, not trained from scratch. Availability is restricted: live for GLM Coding Plan subscribers (1.5x the GLM-5.3 weekly quota), ZCode and Z.ai Chat; Z.ai says the Model API follows a security assessment and that weights will be open-sourced after safety hardening, with no date for either — so pricing, apiIds, license and speed are null. Z.ai's own throughput claim is up to 200 tok/s off-peak and 70–80 tok/s at peak. predecessorId is null: Z.ai calls it its 'latest flagship' and keeps GLM-5.3 available, without saying it replaces it."
+  },
+  {
+    "id": "hy4",
+    "name": "Hy4",
+    "company": "tencent",
+    "releaseDate": "2026-11-04",
+    "status": "unknown",
+    "tier": "flagship",
+    "modality": "multimodal",
+    "type": "llm",
+    "contextWindow": 1048576,
+    "maxOutput": 64000,
+    "pricing": {
+      "inputPerMTok": 0.834,
+      "outputPerMTok": 2.501
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "general",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": null,
+      "name": "Tencent Hy License 1.0",
+      "kind": "restricted",
+      "url": "https://huggingface.co/tencent/Hy4/blob/main/LICENSE",
+      "commercialUse": true
+    },
+    "apiIds": [
+      {
+        "provider": "tencent-cloud",
+        "id": "hy4"
+      },
+      {
+        "provider": "openrouter",
+        "id": "tencent/hy4"
+      }
+    ],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": null,
+      "sweBench": null,
+      "sweBenchPro": null,
+      "terminalBench": null,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Sees and acts where the preview could only read — it interprets charts, documents and multi-image sets and drives both command-line and graphical interfaces, with targeted training on Blender, CAD and workflows that span several applications",
+      "Search was reworked for finance and office work around time-sensitive retrieval and cross-checking sources, and Tencent's internal tests show it inventing facts far less often than the preview did",
+      "A two-position reasoning switch — deep chain-of-thought by default, with a no_think mode for direct answers when latency matters more than depth"
+    ],
+    "weaknesses": [
+      "Tencent's own card concedes a clear gap to the top closed models on research-level maths, long-horizon coding and advanced visual question answering — it is pitched as the strongest open model, not a frontier-closing one",
+      "The open licence moved from the preview's Apache 2.0 to the Tencent Hy License 1.0 — model-as-a-service operators above $50M annual revenue or 100M monthly users need separate written permission",
+      "Weeks old with no independent measurement — every published figure is Tencent's own, run in Tencent's choice of harness, and hands-on reception beyond launch coverage is thin"
+    ],
+    "notes": "General release of the Hy4 line: a 770B-total/49B-active MoE (256 routed + 1 shared expert, top-8, 78 layers) with a 1.23B ViT that adds image and video understanding, plus a built-in 3.3B DFly2 drafter for speculative decoding. Hosted launch 2026-11-04 on Tencent Cloud TokenHub, WorkBuddy, CodeBuddy, Yuanbao and ima; open weights (instruct, FP8 and a pretrained base, huggingface.co/tencent/Hy4) and the system card followed on 2026-11-20. Tencent Cloud's docs give a 1M window with a 960K max-input and 64K max-output cap; OpenRouter lists 65,536 max completion tokens. Pricing is Tencent Cloud's USD list rate ($0.042 cached), unchanged from the preview, with a 50%-off TokenHub promotion through 2026-12-31 (OpenRouter's Tencent Cloud route shows the discounted $0.417/$1.251); CNY list is 6/18 (0.3 cached). Tencent's charts use none of this site's tracked keys except HLE-Full with tools at 59.1 (no-tools HLE unpublished, so the cell is null); they report DeepSWE v1.1 74.9, Terminal-Bench 4.0 (not 2.1) 44.4, OSWorld 2.1 78.9, APEX-Agents v1.1 75.2, MMMU-Pro 78.6 and Terminal-Bench Science 0.1 19.8, all Tencent-run at the highest reasoning setting. Artificial Analysis had no model page and arena.ai lists it only on the Agent Arena (index 1,170), not the text board. predecessorId is left null: Tencent Cloud calls this 'the official release of Hy4' and marks hy4-preview 'to be discontinued' but never says it replaces the preview."
   }
 ]

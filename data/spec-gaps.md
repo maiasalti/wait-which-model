@@ -452,3 +452,7 @@ glm-5-4 · license · 2026-11-24 · Not applicable — weights unreleased (huggi
 glm-5-4 · apiIds · 2026-11-24 · No Model API yet ("will be made available upon completion of the security assessment"). Coding Plan tools use "glm-5.4" / "glm-5.4[1m]" (Claude Code) per Zixuan Li's X post as relayed by TestingCatalog — a subscription setting, not an API model id. Left [].
 glm-5-4 · speed · 2026-11-24 · Not on Artificial Analysis (no API). Z.ai's own claim (up to 200 tok/s off-peak, 70–80 at peak) is in notes. Left null.
 glm-5-4 · retirementDate · 2026-11-24 · No lifecycle notice. Left null.
+hy4 · predecessorId · 2026-11-25 · Tencent Cloud's Hy API guide (tencentcloud.com/document/product/1300/80695) calls it "The official release of Hy4" with "comprehensive and substantial improvements over Hy4 Preview" and marks hy4-preview "(to be discontinued soon)"; the HF card says only "Compared with Hy4 preview, Hy4 substantially scales up…". No explicit replace/successor wording, so left null.
+hy4 · speed · 2026-11-25 · Not on Artificial Analysis (artificialanalysis.ai/models/hy4 404). Left null.
+hy4 · retirementDate · 2026-11-25 · No lifecycle notice for hy4. Left null.
+hy4-preview · retirementDate · 2026-11-25 · Tencent Cloud pricing (1300/78937) and API guide (1300/80695) mark it "To Be Discontinued" / "(to be discontinued soon)" with no date. Still null.

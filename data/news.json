@@ -1,5 +1,20 @@
 [
   {
+    "id": "2026-11-04-hy4",
+    "date": "2026-11-04",
+    "title": "Tencent releases Hy4, adding vision and computer use to its open flagship",
+    "summary": "Hy4 is the general release of the 770B-total/49B-active MoE that Tencent previewed in August. It now reads images and drives command-line and graphical interfaces, keeps the preview's $0.834/$2.501 per-million-token price and 1M-token context, and launched on Tencent Cloud TokenHub, WorkBuddy, CodeBuddy and Yuanbao. Tencent reports DeepSWE 74.9 against the preview's 64.3. Open weights and a system card followed on 2026-11-20 under the Tencent Hy License 1.0 rather than the preview's Apache 2.0.",
+    "category": "release",
+    "companies": [
+      "tencent"
+    ],
+    "modelIds": [
+      "hy4"
+    ],
+    "sourceName": "Tencent",
+    "sourceUrl": "https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/"
+  },
+  {
     "id": "2026-11-24-claude-install-as-app",
     "date": "2026-11-24",
     "title": "Anthropic lets Claude artifacts install as Mac and Windows apps",

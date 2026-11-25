@@ -1357,3 +1357,8 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | glm-5-4 | all benchmarks | 2026-11-24 | Z.ai published no benchmark scores at launch (docs.z.ai/guides/llm/glm-5.4 shows only a win-rate chart and 30B ablations); no API, so not on AA, arena.ai or arcprize.org |
 | glm-5-4 | pricing / costPerTask | 2026-11-24 | no Model API yet (after a security assessment); Coding Plan subscription only |
 | glm-5-4 | knowledgeCutoff | 2026-11-24 | not stated in Z.ai's docs or launch coverage |
+| hy4 | mmluPro / gpqaDiamond / sweBench / sweBenchPro / aime / arcAgi2 | 2026-11-25 | Tencent's Hy4 charts (benchmark.jpg, benchmark-limitations.jpg, benchmark-appendix.jpg on huggingface.co/tencent/Hy4, read directly) have no row for these on the instruct model; the only MMLU-Pro figure (73.9) is the pretrained Hy4 *base* few-shot score — rejected; not on Artificial Analysis or arcprize.org |
+| hy4 | terminalBench | 2026-11-25 | only Terminal-Bench 4.0 (44.4) and Terminal-Bench Science 0.1 (19.8) published; no 2.1 run |
+| hy4 | hle | 2026-11-25 | Tencent reports HLE-Full with tools 59.1 only; no no-tools figure in the appendix or the HF eval results |
+| hy4 | lmarenaElo / gdpvalAA | 2026-11-25 | arena.ai lists hy4 on the Agent Arena only (index 1,170, #19 of 65), not the text leaderboard; Artificial Analysis model page 404 so no GDPval-AA rating |
+| hy4 | costPerTask / knowledgeCutoff | 2026-11-25 | artificialanalysis.ai/models/hy4 returns 404; no cutoff on the HF card, Tencent Cloud docs or launch coverage, and the system card PDF (hy.tencent.ai/Hy4_system_card.pdf) serves a JS shell to automated fetches, so it could not be read |
