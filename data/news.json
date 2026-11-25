@@ -15,6 +15,171 @@
     "sourceUrl": "https://docs.z.ai/guides/llm/glm-5.4"
   },
   {
+    "id": "2026-11-23-nvidia-huang-reinstated",
+    "date": "2026-11-23",
+    "title": "Nvidia's board reinstates Jensen Huang as CEO eleven days after his resignation",
+    "summary": "Nvidia's board unanimously reinstated Jensen Huang as president, CEO and board member with immediate effect, saying it was satisfied with his candor and had input from senior US government officials that his return poses no national security risk. Colette Kress returns to the CFO role after serving as interim CEO. The independent directors' investigation into reports that Huang was targeted by a foreign intelligence effort will continue, alongside a new National Security and Export Control Committee and a search for a chief compliance officer. Shares opened about 30% higher.",
+    "category": "company",
+    "companies": [
+      "nvidia"
+    ],
+    "modelIds": [],
+    "sourceName": "NVIDIA Newsroom",
+    "sourceUrl": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director"
+  },
+  {
+    "id": "2026-11-23-amazon-decart",
+    "date": "2026-11-23",
+    "title": "Amazon agrees to buy Decart's inference optimization technology and hire its founders",
+    "summary": "Amazon agreed to acquire the technology behind the Decart Optimization Stack, which makes AI models run more efficiently on Nvidia, Amazon and Google chips, and to bring on Decart co-founders Dean Leitersdorf, Moshe Shalev and Orian Leitersdorf with their team of researchers and engineers. Amazon says the deal is meant to improve its inference and custom-silicon performance as it prepares to sell Trainium chips to customers. Bloomberg put the price at $7.5 billion; the announcement does not say what happens to Decart's Oasis world models. Closing is subject to regulatory clearance.",
+    "category": "company",
+    "companies": [
+      "amazon",
+      "decart"
+    ],
+    "modelIds": [],
+    "sourceName": "Amazon",
+    "sourceUrl": "https://www.aboutamazon.com/news/company-news/amazon-decart-ai-optimization"
+  },
+  {
+    "id": "2026-11-23-states-sue-spacex-grok",
+    "date": "2026-11-23",
+    "title": "Oregon and Virginia sue SpaceX over Grok deepfakes, the first state suits over the chatbot",
+    "summary": "The attorneys general of Oregon and Virginia sued SpaceX, which owns xAI and X, alleging it failed to stop Grok and X users from creating and sharing harmful deepfakes, including alleged AI-generated child sexual abuse material, and misrepresented the products as safe in breach of state consumer-protection law. The suits, filed in Multnomah County and Richmond circuit courts, seek injunctions, civil penalties, disgorgement and stricter guardrails; Virginia also seeks restitution. SpaceX already faces Grok-related probes in the UK, Spain, Ireland, France and California.",
+    "category": "policy",
+    "companies": [
+      "xai",
+      "Oregon Attorney General",
+      "Virginia Attorney General"
+    ],
+    "modelIds": [],
+    "sourceName": "CNBC",
+    "sourceUrl": "https://www.cnbc.com/2026/11/23/oregon-virginia-spacex-grok-deepfake-lawsuits.html"
+  },
+  {
+    "id": "2026-11-23-deepmind-quantum-algorithms",
+    "date": "2026-11-23",
+    "title": "Google DeepMind uses teams of Gemini 4 agents and Lean proofs to make quantum algorithms cheaper",
+    "summary": "Google DeepMind had teams of Gemini 4 agents, sharing ideas in a common notebook every four hours, propose improvements to quantum algorithms, with every change checked by the Lean theorem prover. Results include an 11.8x cheaper circuit for an inertial-confinement fusion simulation (error-corrected qubits cut from 5,650 to 4,338), an 8x cheaper simulation of a light-sensitive molecule, a 2.5x gain for the drug-metabolising enzyme cytochrome P450 (481 to 333 qubits) and a 290x faster arcsin routine. DeepMind released an open-source Lean library for quantum algorithms and says the savings are not yet enough for full-scale simulations on the first error-corrected machines.",
+    "category": "research",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [],
+    "sourceName": "Google DeepMind",
+    "sourceUrl": "https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/"
+  },
+  {
+    "id": "2026-11-23-openai-cisco-shirudo",
+    "date": "2026-11-23",
+    "title": "OpenAI and Cisco release Shirudo, an open-source runtime that shields Linux systems until a patch lands",
+    "summary": "OpenAI and Cisco released Shirudo, a BSD-licensed open-source runtime that uses eBPF to load temporary, cryptographically signed \"shields\" blocking the behaviour behind a vulnerability on a running Linux system, without a restart, while a patch is tested and deployed; a TPM keeps a verifiable record of shields loaded or removed. In a controlled test, a Codex-generated shield blocked a Java4Shell exploit against a live Elasticsearch service.",
+    "category": "company",
+    "companies": [
+      "openai",
+      "Cisco"
+    ],
+    "modelIds": [],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/introducing-shirudo/"
+  },
+  {
+    "id": "2026-11-22-openai-perplexity-limits",
+    "date": "2026-11-22",
+    "title": "OpenAI's chief scientist proposes pretraining perplexity as a shared limit labs agree not to cross",
+    "summary": "OpenAI chief scientist Jakub Pachocki argued that pretraining perplexity (how well a model predicts held-out data) should be a common metric for comparing developers and setting safety standards, and published OpenAI's internal figures: log-perplexity of about 0.99 for GPT-3.5, 0.91 for GPT-4, below 0.8 for recent models and about 0.76 for the model behind its recent maths results. He expects transformative capabilities around 0.68-0.7, warned that AI-driven pretraining research could cause a sudden acceleration as early as 2027, and proposed developers agree on perplexity limits they won't cross until monitoring of AI behaviour reaches a set milestone.",
+    "category": "research",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/perplexity-and-intelligence/"
+  },
+  {
+    "id": "2026-11-20-anthropic-ipo-closes",
+    "date": "2026-11-20",
+    "title": "Anthropic closes its IPO at $93.5B after underwriters take the full overallotment",
+    "summary": "Anthropic closed its Nasdaq IPO of 1.127 billion Class A shares at $83, after underwriters fully exercised their option on 147 million additional shares, for gross proceeds of about $93.5 billion, of which about $91.6 billion went to Anthropic. A concurrent private placement of 313 million Class N shares to seven strategic investors raised about $26.0 billion, bringing combined gross proceeds to about $119.5 billion. The shares began trading on November 19 under the ticker ANT.",
+    "category": "company",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic",
+    "sourceUrl": "https://www.anthropic.com/news/ipo-close"
+  },
+  {
+    "id": "2026-11-20-medchembench",
+    "date": "2026-11-20",
+    "title": "OpenAI releases MedChemBench, a medicinal chemistry benchmark led by GPT-6.2 Astra at 84.5%",
+    "summary": "OpenAI released MedChemBench, 99 problems drawn from 117 published papers and patents covering 761 molecular structures, graded on reconstructing structures, scientific reasoning, ranking and selecting compounds, and predicting numerical properties. At xhigh reasoning GPT-6.2 Astra scored 84.5%, GPT-6 Astra 83.3%, GPT-6.1 Sol 82.0%, GPT-6.1 Terra 75.1% and GPT-5.6 Sol 58.2%; models did well on structure reconstruction but earned only about half the credit on compound selection and property prediction. OpenAI notes the results don't show models can discover drugs and that models may have seen the source papers.",
+    "category": "benchmark",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-6-2-astra",
+      "gpt-6-astra",
+      "gpt-6-1-sol",
+      "gpt-6-1-terra",
+      "gpt-5-6-sol"
+    ],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/introducing-medchembench/"
+  },
+  {
+    "id": "2026-11-20-riemann-hypothesis-claude",
+    "date": "2026-11-20",
+    "title": "An Anthropic mathematician says he and Claude proved the Riemann hypothesis in Lean",
+    "summary": "Levent Alpöge, a mathematician employed by Anthropic, published a note saying that, working with Claude, he had found a proof of the Riemann hypothesis that extends to the Generalized Riemann hypothesis, and released it only as Lean code rather than a written paper. Several mathematicians, including MIT's Andrew Sutherland, said the Lean code compiles, but the argument is not yet understood by the community or peer reviewed; Alpöge says he will work toward a human-readable account. The same day, Stanford's Ravi Vakil posted a separate, entirely human claimed proof of the Generalized Riemann hypothesis by postdoc Alessandro Masullo, which has not been formalised.",
+    "category": "research",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "sourceName": "TechCrunch",
+    "sourceUrl": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/"
+  },
+  {
+    "id": "2026-11-19-genie-4-gemini-api",
+    "date": "2026-11-19",
+    "title": "Google opens Genie 4 to developers through the Gemini API and AI Studio",
+    "summary": "A day after opening Genie 4 to Google AI Ultra subscribers, Google made the world model available to developers through the Gemini API's Interactions API and Google AI Studio, generating continuous 720p worlds at 24fps with synchronised native audio from a text prompt, a reference image or both. The post does not give pricing in the announcement or label the release preview or generally available.",
+    "category": "release",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [],
+    "refs": [
+      {
+        "type": "world-model",
+        "id": "genie-4"
+      }
+    ],
+    "sourceName": "Google",
+    "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/"
+  },
+  {
+    "id": "2026-11-19-gemini-mac-computer-use",
+    "date": "2026-11-19",
+    "title": "Google brings computer use to the Gemini app on Mac",
+    "summary": "Google added computer use to the Gemini app for Mac, letting Gemini operate local files, desktop apps and the web in an isolated background window with a live preview, so the user's screen and cursor stay free. Users pick which apps it can access, can pause it at any time and approve key actions. It is available in English in the US to personal accounts 18+ on Google AI Plus, Pro and Ultra, on Apple Silicon Macs running macOS Sequoia 15 or later; Google does not name the underlying model.",
+    "category": "release",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [],
+    "refs": [
+      {
+        "type": "feature",
+        "id": "gemini-computer-use-mac"
+      }
+    ],
+    "sourceName": "Google",
+    "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/"
+  },
+  {
     "id": "2026-11-18-gemini-4-neon",
     "date": "2026-11-18",
     "title": "Google releases Gemini 4 Neon",
@@ -77,6 +242,19 @@
     "modelIds": [],
     "sourceName": "CNBC",
     "sourceUrl": "https://www.cnbc.com/2026/11/18/anthropic-ipo-ai-offering-price.html"
+  },
+  {
+    "id": "2026-11-18-openai-managing-frontier-risk",
+    "date": "2026-11-18",
+    "title": "OpenAI sets out how it manages frontier-model risk from training to deployment and commits to pause when evidence falls short",
+    "summary": "OpenAI published its framework for managing frontier AI risk across research, internal and external deployment: four defensive layers (alignment, security and sandboxing, blocking safeguards, monitoring), frontier training runs without live internet access, monitoring of all frontier inference, and a Control Room system that can halt model output within 35 seconds. Models need alignment and monitorability testing before unsandboxed internal use, and any employee can flag an incident for public disclosure. OpenAI committed to pause training or withhold release again when safety evidence falls short, citing its earlier holdback of GPT-6.1 Astra.",
+    "category": "company",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/managing-frontier-ai-risk/"
   },
   {
     "id": "2026-11-17-gpt-6-2-astra-sol",
