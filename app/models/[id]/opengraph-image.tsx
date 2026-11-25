@@ -1,4 +1,5 @@
 import { MODEL_TYPE_LABEL } from "@/lib/types";
+import { STATUS_LABEL, showsStatus } from "@/lib/format";
 import { ImageResponse } from "next/og";
 import {
   companyHex,
@@ -148,7 +149,7 @@ export default async function Image({
                 textTransform: "uppercase",
               }}
             >
-              {model.status}
+              {showsStatus(model) ? STATUS_LABEL[model.status] : MODEL_TYPE_LABEL[model.type]}
             </div>
           </div>
 

@@ -1,6 +1,32 @@
 /** Pure formatters with no data imports, so they are testable under
  *  `node --test` (which cannot resolve the `@/` path alias). */
 
+import type { Model } from "./types";
+
+/** Display names for `status`. The stored value stays "unknown" (the frontier
+ *  status script and the URL filter use it); only the wording shown to readers
+ *  changes, because a yellow "UNKNOWN" read as a data error rather than "not
+ *  enough published scores to judge yet". */
+export const STATUS_LABEL: Record<Model["status"], string> = {
+  frontier: "Frontier",
+  superseded: "Superseded",
+  unknown: "Not yet rated",
+  deprecated: "Deprecated",
+};
+
+export const STATUS_HINT: Record<Model["status"], string> = {
+  frontier: "Near the top of its tier on recent benchmark scores",
+  superseded: "No longer near the top of its tier",
+  unknown: "Not enough published benchmark scores to judge yet",
+  deprecated: "Retired by the lab that made it",
+};
+
+/** System One and world models have no generative benchmarks, so a rating can
+ *  never arrive; showing "Not yet rated" on them would promise one. */
+export function showsStatus(model: Pick<Model, "type">): boolean {
+  return model.type === "llm";
+}
+
 /** "first answer token", not "first token": for a model with a thinking phase
  *  the measurement starts counting after reasoning completes, so at max effort
  *  it reaches minutes. "202s to first token" would read as broken inference.

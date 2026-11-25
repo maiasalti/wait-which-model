@@ -4,13 +4,7 @@ import Link from "next/link";
 import { MODEL_TYPE_LABEL, type Model } from "@/lib/types";
 import { companyName, formatContext, formatCostPerTask, formatDate } from "@/lib/data";
 import { CompanyLogo } from "./CompanyLogo";
-
-const STATUS_LABEL: Record<Model["status"], string> = {
-  frontier: "Frontier",
-  superseded: "Superseded",
-  unknown: "Unknown",
-  deprecated: "Deprecated",
-};
+import { STATUS_HINT, STATUS_LABEL, showsStatus } from "@/lib/format";
 
 // A real <Link> rather than a button: it gives the card its own URL, and makes
 // it right-clickable and open-in-new-tab-able. Navigating from the directory is
@@ -32,17 +26,20 @@ export function ModelCard({ model }: { model: Model }) {
           <h3 className="mt-1 text-base font-semibold leading-tight">{model.name}</h3>
         </div>
         <div className="flex flex-col items-end gap-1">
-          <span
-            className={`mono rounded px-1.5 py-0.5 text-[10px] uppercase tracking-wider ${
-              model.status === "frontier"
-                ? "bg-accent/15 text-accent"
-                : model.status === "unknown"
-                  ? "bg-warn/15 text-warn"
-                  : "bg-wash/5 text-ink-3"
-            }`}
-          >
-            {STATUS_LABEL[model.status]}
-          </span>
+          {showsStatus(model) && (
+            <span
+              title={STATUS_HINT[model.status]}
+              className={`mono rounded px-1.5 py-0.5 text-[10px] uppercase tracking-wider ${
+                model.status === "frontier"
+                  ? "bg-accent/15 text-accent"
+                  : model.status === "unknown"
+                    ? "border border-dashed border-line text-ink-3"
+                    : "bg-wash/5 text-ink-3"
+              }`}
+            >
+              {STATUS_LABEL[model.status]}
+            </span>
+          )}
           {model.type !== "llm" && (
             <span className="mono rounded border border-line px-1.5 py-0.5 text-[10px] uppercase tracking-wider text-ink-2">
               {MODEL_TYPE_LABEL[model.type]}

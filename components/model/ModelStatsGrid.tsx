@@ -1,4 +1,5 @@
 import { MODEL_TYPE_LABEL, type Model } from "@/lib/types";
+import { STATUS_LABEL, showsStatus } from "@/lib/format";
 import {
   companyById,
   formatContext,
@@ -25,7 +26,7 @@ export function ModelStatsGrid({
   // `status` and `modality` are the only cells this class existed for.
   const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
   const cells: [string, string][] = [
-    ["Status", capitalize(model.status)],
+    ["Status", showsStatus(model) ? STATUS_LABEL[model.status] : "Not rated (no benchmarks apply)"],
     ["Location", company?.country ?? "Unknown"],
     ["Type", MODEL_TYPE_LABEL[model.type]],
     ["Modality", capitalize(model.modality)],
