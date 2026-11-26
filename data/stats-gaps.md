@@ -1369,3 +1369,8 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | kolibri-1-1 | costPerTask | 2026-11-25 | no Artificial Analysis model page (404); re-check |
 | kolibri-1-1 | pricing | 2026-11-25 | open weights only; no inference provider on Hugging Face, no OpenRouter listing, Aleph Alpha Inference API is contact-sales with no public price |
 | kolibri-1-1 | maxOutput | 2026-11-25 | unpublished on the model card and launch post; the card's max_tokens=1024 is a pre-training eval setting, not an output limit |
+| mellum2-1-instruct | aime | 2026-11-26 | JetBrains reports only a pooled AIME 2025+2026 score (61.1, avg@8, 60 questions) on the HF card — not a single exam; in notes |
+| mellum2-1-instruct | mmluPro / hle / arcAgi2 | 2026-11-26 | not on the HF model card or the launch post (card has MMLU-Redux 82.8, MixEval-Hard 31.7 instead); no third-party run found |
+| mellum2-1-instruct | lmarenaElo / gdpvalAA / costPerTask | 2026-11-26 | no hosted endpoint; artificialanalysis.ai/models/mellum2-1-instruct 404, not on arena.ai; re-check |
+| mellum2-1-instruct | pricing | 2026-11-26 | open weights only; no HF inference provider, no OpenRouter listing (checked openrouter.ai/api/v1/models), no JetBrains API price |
+| mellum2-1-instruct | maxOutput / knowledgeCutoff | 2026-11-26 | neither stated on the HF card or blog; quickstart max_tokens=81920 is an example setting, not a limit |

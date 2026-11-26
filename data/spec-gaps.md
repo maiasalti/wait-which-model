@@ -459,3 +459,7 @@ hy4-preview · retirementDate · 2026-11-25 · Tencent Cloud pricing (1300/78937
 kolibri-1-1 · speed · 2026-11-25 · No Artificial Analysis page (artificialanalysis.ai/models/kolibri-1-1 returns 404); self-host only. Aleph Alpha's own throughput multiples versus Kolibri 1 are vendor figures, not AA measurements. Left null.
 kolibri-1-1 · apiIds · 2026-11-25 · No hosted API: the Hugging Face card says no inference provider deploys it, no OpenRouter listing, no Bedrock or Vertex listing found; Aleph Alpha's Inference API is contact-sales with no published model string. Weights only at Aleph-Alpha/Kolibri-1.1 (and -GGUF). Left [].
 kolibri-1-1 · retirementDate · 2026-11-25 · No lifecycle notice on the model card or launch post. Left null.
+mellum2-1-instruct · predecessorId · 2026-11-26 · HF card (huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Instruct) states "Mellum2.1 Instruct is the next version of Mellum2 Instruct" — explicit, but Mellum2 Instruct is not in models.json. Set it if Mellum2 Instruct is ever backfilled. Left null.
+mellum2-1-instruct · speed · 2026-11-26 · Not on Artificial Analysis (404); self-host only. JetBrains' own MTP speed-up claims (up to 1.8x) are vendor figures. Left null.
+mellum2-1-instruct · apiIds · 2026-11-26 · No hosted API: HF lists no inference provider, no OpenRouter, Bedrock or Vertex listing found. Weights at JetBrains/Mellum2.1-12B-A2.5B-Instruct (plus -MTP, -GGUF). Left [].
+mellum2-1-instruct · retirementDate · 2026-11-26 · No lifecycle notice. Left null.

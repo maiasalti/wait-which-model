@@ -23,6 +23,11 @@ minimax-h3-image · scores.lmarenaImageElo · 2026-11-12 · arena.ai text-to-ima
 mai-image-2-7 · pricing.perImageUsd · 2026-11-19 · Azure Foundry Models pricing page (no 2.7 row), ai.azure.com catalog page (no figures), Learn how-to; microsoft.ai gives only "~$35 per 1,000 images" with no size
 mai-image-2-7-flash · pricing.perImageUsd · 2026-11-19 · Azure Foundry Models pricing page (no 2.7 row), ai.azure.com catalog page (no figures), Learn how-to; microsoft.ai gives only "~$10 per 1,000 images" with no size
 mai-image-2-7-flash · scores.lmarenaImageElo · 2026-11-19 · arena.ai text-to-image board (Nov 16 update): not listed
+sensenova-u1-6 · pricing.perImageUsd · 2026-11-26 · sensetime.com U1.6 post (Token Plan "free for a limited time", no price), sensenova.cn/u1-6-lite page (no price), web search for Token Plan image pricing: nothing published
+sensenova-u1-6 · maxResolution · 2026-11-26 · Hugging Face model card (no stated maximum), GitHub examples README (1m–16m pixel budgets, but the size table names the U1.5 checkpoint), sensetime.com post: none stated for U1.6
+sensenova-u1-6 · apiIds · 2026-11-26 · sensenova.cn/u1-6-lite page, sensetime.com post, web search for "sensenova-u1.6-lite": no API model id published
+sensenova-u1-6 · scores.aaImageArenaElo · 2026-11-26 · artificialanalysis.ai text-to-image page: not listed (arena table did not render)
+sensenova-u1-6 · scores.lmarenaImageElo · 2026-11-26 · arena.ai text-to-image board (Nov 21 update, 87 models): not listed
 
 ## video-models
 

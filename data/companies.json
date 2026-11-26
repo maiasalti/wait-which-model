@@ -808,5 +808,15 @@
     "color": null,
     "notable": false,
     "order": 81
+  },
+  {
+    "id": "sensetime",
+    "name": "SenseTime",
+    "country": "China",
+    "founded": 2014,
+    "website": "https://www.sensetime.com",
+    "color": null,
+    "notable": false,
+    "order": 82
   }
 ]

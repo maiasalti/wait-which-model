@@ -6501,7 +6501,7 @@
     "name": "Qwen3.8-Flash-Next",
     "company": "alibaba",
     "releaseDate": "2026-08-26",
-    "status": "superseded",
+    "status": "frontier",
     "tier": "fast",
     "modality": "multimodal",
     "type": "llm",
@@ -11337,5 +11337,67 @@
       "Too new to characterise — every evaluation so far is Aleph Alpha's own, and the model card itself warns quality may drop past the 262K native window"
     ],
     "notes": "Aleph Alpha's update to Kolibri 1, released on Hugging Face on 2026-11-23 (some coverage dates it 24 November): a sparse MoE with 75.1B total and 3.44B active parameters (384 routed experts per layer, 6 active, 1 shared), continued from a Kolibri 1 mid-training checkpoint and adding sparse attention (each query attends to 2,048 selected keys, with KV shared across layers) from mid-training on. Context is 262,144 tokens natively, extended to 1,048,576 by extrapolation; the card recommends staying within 262,144 for complex tasks. Every score is Aleph Alpha's own, at highest reasoning effort, with SWE-bench and Terminal-Bench run in the Harbor harness: GPQA Diamond 87.1 (82.1 in German), AIME 2025 98.3 (AIME 2026 95.8, the figure the blog leads with), SWE-bench Verified 70.4, Terminal-Bench 2.1 35.6, plus LiveCodeBench v6 93.0, tau2-Bench Telecom 93.0, BFCL v4 62.7, BrowseComp 34.8 and an overall aggregate of 73.2 against Kolibri 1's 66.6 (the mean of the English 72.2 and German 74.2 averages). HLE is left null: the card's row is labelled \"Humanity's Last Exam Diamond (EN)\" at 10.5 (German 22.1), an undefined subset on which it rescores Kolibri 1 at 6.5 against the 21.5 on Kolibri 1's own card, so it is not comparable; MMLU-Pro appears only in the base-model pre-training table. The same table rescores Kolibri 1 below its launch figures (GPQA 84.7, SWE-bench 64.0, Terminal-Bench 25.8), so the Kolibri-1 entry keeps its launch-card numbers. Availability is self-host: the Hugging Face card says no inference provider deploys it, there is no OpenRouter listing and no Artificial Analysis page as of 2026-11-24, and the only hosted route is a sales-gated Aleph Alpha Inference API with no public price. Serving needs the aleph-alpha-inference (v2+) vLLM plugin on at least two H100s or one B200 for the ~77.6 GB checkpoint; official GGUF quantisations run from 16.6 GB to 80 GB but need llama.cpp built from PR #32891. Knowledge cutoff is 18 June 2026, unchanged from Kolibri 1, and the model is still text-only. predecessorId is kolibri-1: the Hugging Face card states \"Kolibri 1.1 is the successor to Kolibri 1\", and the Kolibri-1 card now carries \"A newer version of this model is available: Aleph-Alpha/Kolibri-1.1\"."
+  },
+  {
+    "id": "mellum2-1-instruct",
+    "name": "Mellum2.1 Instruct",
+    "company": "jetbrains",
+    "releaseDate": "2026-11-25",
+    "status": "superseded",
+    "tier": "fast",
+    "modality": "text",
+    "type": "llm",
+    "contextWindow": 131072,
+    "maxOutput": null,
+    "pricing": {
+      "inputPerMTok": null,
+      "outputPerMTok": null
+    },
+    "costPerTask": {
+      "usd": null,
+      "effort": null
+    },
+    "openWeights": true,
+    "availability": "self-host",
+    "knowledgeCutoff": null,
+    "speed": {
+      "outputTokensPerSec": null,
+      "timeToFirstTokenSec": null,
+      "effort": null
+    },
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/JetBrains/Mellum2.1-12B-A2.5B-Instruct",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "retirementDate": null,
+    "predecessorId": null,
+    "benchmarks": {
+      "mmluPro": null,
+      "gpqaDiamond": 48.6,
+      "sweBench": 40.4,
+      "sweBenchPro": 20,
+      "terminalBench": 8.2,
+      "aime": null,
+      "hle": null,
+      "lmarenaElo": null,
+      "gdpvalAA": null,
+      "arcAgi2": null
+    },
+    "strengths": [
+      "Answers straight away with no chain of thought, so it spends roughly half the tokens of its Thinking sibling on agentic coding tasks — built to be the quick worker in sub-agents and tool loops",
+      "Trained to keep answers short, a response to local-inference users who found the Thinking model too wordy",
+      "Small enough to run locally — only 2.5B parameters are active per token, and JetBrains ships GGUF builds plus a multi-token-prediction head for faster generation",
+      "Tool calling works through vLLM's standard hermes parser, so it drops into existing agent stacks without a custom adapter"
+    ],
+    "weaknesses": [
+      "Without a reasoning phase it falls well behind Mellum2.1 Thinking on hard algorithmic and math problems — JetBrains itself says to use Thinking for those",
+      "Self-host only — no hosted API, no inference provider on Hugging Face and no OpenRouter listing at launch",
+      "Too new to characterise — every evaluation so far is JetBrains' own, with no independent runs or hands-on reviews yet"
+    ],
+    "notes": "Released on 2026-11-25 as an Apache 2.0 Hugging Face checkpoint (with MTP-head and GGUF repos), the non-reasoning sibling of Mellum2.1 Thinking from October: a 12B-total, 2.5B-active MoE (64 experts, 8 active) on the unchanged Mellum2 architecture, text-only, 131,072-token context; the model card states no output limit (its quickstart's max_tokens=81920 is an example setting) and no knowledge cutoff. All scores are JetBrains' own from the model card, with agentic benchmarks run in the Pi v0.73.1 harness (shell and file tools, 114K context, up to 16K tokens per turn): SWE-bench Verified 40.4, SWE-bench Pro 20.0, Terminal-Bench 2.1 8.2, GPQA Diamond 48.6, plus LiveCodeBench v6 53.7, HumanEval+ 89.1, MBPP+ 74.3, MultiPL-E 73.7, GSM-Plus 86.7, BFCL v4 46.5, WorkBench 38.0, ToolHop 51.4, IFEval 87.2, MMLU-Redux 82.8 and MixEval-Hard 31.7. AIME is left null because JetBrains reports a pooled AIME 2025 + 2026 score (61.1, avg@8) rather than a single exam. JetBrains re-scored Mellum2 Instruct in the same pipeline (SWE-bench Verified 20.2), so those figures differ from Mellum2's original card. JetBrains says it uses about 45% fewer tokens per agentic task than Mellum2.1 Thinking (about 5.6K vs 10.1K including tool calls). The model card calls it \"the next version of Mellum2 Instruct\", but predecessorId stays null because Mellum2 Instruct is not tracked on this site."
   }
 ]
