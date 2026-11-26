@@ -1,5 +1,52 @@
 [
   {
+    "id": "sensenova-u1-6",
+    "name": "SenseNova U1.6",
+    "company": "sensetime",
+    "releaseDate": "2026-11-24",
+    "notable": false,
+    "description": "SenseTime's open-weight 8B unified model for image generation and editing, which can draft an image, check its text against the prompt and redraw a corrected version in one pass.",
+    "strengths": [
+      "Native self-correction of in-image text (drafts, critiques against the prompt, redraws)",
+      "Open weights under Apache 2.0",
+      "4-step and 8-step distilled LoRAs",
+      "Native ComfyUI support, including self-correction"
+    ],
+    "weaknesses": [
+      "Model card flags edits with long text or several reference images as a limitation",
+      "Headline benchmark gains are reported for the hosted U1.6 Lite, not the open checkpoint"
+    ],
+    "links": {
+      "official": "https://www.sensetime.com/cn/news/sensenova-u1-6-open-source-20261124-1152",
+      "docs": "https://github.com/OpenSenseNova/SenseNova-U1"
+    },
+    "pricing": {
+      "perImageUsd": null,
+      "notes": "Open weights, free to self-host. The hosted version, U1.6 Lite, is on the SenseNova Token Plan, which SenseTime says registered users can try free for a limited time; no per-image price is published."
+    },
+    "maxResolution": null,
+    "capabilities": [
+      "text-to-image",
+      "editing",
+      "text-rendering",
+      "reference-images"
+    ],
+    "openWeights": true,
+    "license": {
+      "spdx": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "kind": "permissive",
+      "url": "https://huggingface.co/sensenova/SenseNova-U1.6-8B-MoT",
+      "commercialUse": true
+    },
+    "apiIds": [],
+    "scores": {
+      "aaImageArenaElo": null,
+      "lmarenaImageElo": null
+    },
+    "notes": "Released 2026-11-24 per SenseTime's Chinese newsroom post and the GitHub README news line. Checkpoint SenseNova-U1.6-8B-MoT on Hugging Face (repo created 2026-11-16, published with the announcement), Apache 2.0 per the model card and repo; SenseTime's post itself states no licence. Parameters: the name and SenseTime's post say 8B, but the Hugging Face safetensors metadata totals about 17.5B (BF16); the MoT design likely accounts for the difference, but no source says so. SenseTime's benchmark figures are for U1.6 Lite, its hosted version: UltraTextBench dense infographics 86.04 single pass to 92.28 with self-correction (about 7% relative), and an aesthetic score about 10% above U1.5 Lite in internal user testing. SenseTime has used 'Lite' for the open 8B checkpoints before (U1 Lite, April 2026), but the U1.6 post does not say the Lite API and the open checkpoint are the same weights. The repo's CLI takes output budgets up to 16 megapixels (4096x4096 square), but its size table names the U1.5 checkpoint, so maxResolution is left null. Reference-images capability is from the editing script accepting a list of reference images and the model card's limitations note on several reference images. Languages: English and Chinese (Hugging Face tags). Not Notable: not listed on the LMArena text-to-image board (Nov 21 update) or Artificial Analysis' text-to-image pages, checked 2026-11-26, and SenseTime is not a frontier lab."
+  },
+  {
     "id": "mai-image-2-7",
     "name": "MAI-Image-2.7",
     "company": "microsoft",

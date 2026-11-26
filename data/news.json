@@ -1,5 +1,52 @@
 [
   {
+    "id": "2026-11-25-mellum2-1-instruct",
+    "date": "2026-11-25",
+    "title": "JetBrains releases Mellum2.1 Instruct, a non-reasoning open-weight model for fast coding agents",
+    "summary": "JetBrains released Mellum2.1 Instruct on 2026-11-25 as Apache 2.0 weights on Hugging Face: a 12B-parameter mixture-of-experts model with 2.5B active per token that answers without a chain of thought, for sub-agents, tool loops and chat. JetBrains reports SWE-bench Verified 40.4%, about double Mellum2 Instruct's, against 47.0% for its reasoning sibling Mellum2.1 Thinking, while using about 45% fewer tokens per agentic task. There is no hosted API; it runs locally through vLLM, SGLang, Transformers or the official GGUF builds.",
+    "category": "release",
+    "companies": [
+      "jetbrains"
+    ],
+    "modelIds": [
+      "mellum2-1-instruct"
+    ],
+    "sourceName": "JetBrains",
+    "sourceUrl": "https://blog.jetbrains.com/ai/2026/11/mellum2-1-instruct-is-out-bringing-faster-answers-for-coding-agents/"
+  },
+  {
+    "id": "2026-11-24-swe-2-1",
+    "date": "2026-11-24",
+    "title": "Cognition releases SWE-2.1, its Kimi K3-based coding model for Devin",
+    "summary": "Cognition released SWE-2.1, a reinforcement-learning upgrade to SWE-2 that, like SWE-2, is trained on Moonshot's Kimi K3. It is available only inside Devin Desktop and CLI, and as a preview in Devin Cloud, and is free on Desktop and CLI until 8 December. Cognition's own tests put it at 50.0% on Terminal-Bench 4.1 (up from SWE-2's 24.2%) and 80.0 on ExploitBench (up from 36.1), still behind Claude Opus 5.5 and GPT-6.2 Sol on most of its tables. A Cerebras-served SWE-2.1 Ultrafast runs the same model about ten times faster, and a SWE-2.1 Cyber variant is going to Devin Security.",
+    "category": "release",
+    "companies": [
+      "cognition"
+    ],
+    "modelIds": [],
+    "sourceName": "Cognition",
+    "sourceUrl": "https://cognition.com/blog/swe-2-1"
+  },
+  {
+    "id": "2026-11-24-sensenova-u1-6",
+    "date": "2026-11-24",
+    "title": "SenseTime open-sources SenseNova U1.6, an 8B image model that corrects its own text",
+    "summary": "SenseTime released SenseNova U1.6, an open-weight 8B model for image generation and editing under Apache 2.0, with 4-step and 8-step distilled variants and native ComfyUI support. Its new self-correction mode drafts an image, checks it against the prompt and redraws it, aimed mainly at text in infographics. SenseTime says its hosted version, U1.6 Lite, rises from 86.04 to 92.28 on its own UltraTextBench dense-infographic test with self-correction on, and scores about 10% higher than U1.5 Lite on aesthetics in internal user testing. U1.6 Lite is on the SenseNova Token Plan, free for registered users for a limited time.",
+    "category": "release",
+    "companies": [
+      "sensetime"
+    ],
+    "modelIds": [],
+    "refs": [
+      {
+        "type": "image-model",
+        "id": "sensenova-u1-6"
+      }
+    ],
+    "sourceName": "SenseTime",
+    "sourceUrl": "https://www.sensetime.com/cn/news/sensenova-u1-6-open-source-20261124-1152"
+  },
+  {
     "id": "2026-11-23-kolibri-1-1",
     "date": "2026-11-23",
     "title": "Aleph Alpha releases Kolibri 1.1, a faster long-context successor to its English-German open-weight model",
