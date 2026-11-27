@@ -8,7 +8,7 @@ const base = () => ({
     { id: "anthropic", color: "#D97757", notable: true },
     { id: "tiny-lab", color: null, notable: false },
   ],
-  models: [{ id: "m1", company: "anthropic", releaseDate: "2026-01-01", openWeights: false, license: null, predecessorId: null, retirementDate: null }],
+  models: [{ id: "m1", company: "anthropic", releaseDate: "2026-01-01", openWeights: false, license: null, predecessorId: null, retirementDate: null, pricing: {}, costPerTask: {}, speed: {}, benchmarks: {} }],
   news: [{ id: "n1", modelIds: ["m1"] }],
   reigns: [],
   directory: {},
@@ -33,6 +33,14 @@ test("the existing model rules still hold", () => {
   const errs = checkData(d).join("\n");
   for (const s of ["duplicate model id m1", "unknown company nope", "self-predecessor m3", "closed model with license m4", "retirement before release m5"])
     assert.match(errs, new RegExp(s));
+});
+
+test("a null pricing/costPerTask/speed/benchmarks object is caught", () => {
+  const d = base();
+  d.models[0] = { ...d.models[0], pricing: null, speed: undefined };
+  const errs = checkData(d).join("\n");
+  assert.match(errs, /pricing must be an object on m1/);
+  assert.match(errs, /speed must be an object on m1/);
 });
 
 test("predecessor cycles are caught", () => {
