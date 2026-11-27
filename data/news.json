@@ -1,5 +1,115 @@
 [
   {
+    "id": "2026-11-25-anthropic-messages-api-rust",
+    "date": "2026-11-25",
+    "title": "Anthropic says Claude wrote most of the Rust rewrite of its Messages API",
+    "summary": "Anthropic's engineering team described moving the Messages API, the main way customers and its own apps reach Claude, from Python to Rust. Claude wrote the first version of the core Rust request path in about a week, and by May 2026 was writing more than 80% of the code Anthropic merged. The team used the live Python service as a reference, replaying the same model output through both versions on shadowed production traffic; matching went from about 24% of inputs in late April to 99.6% by August, with humans reviewing fixes before release. Public traffic moved to Rust in September, cutting CPU per request by about 70%, memory per request by more than 80% and median time to first token by about 20%.",
+    "category": "research",
+    "companies": [
+      "anthropic"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic Engineering",
+    "sourceUrl": "https://www.anthropic.com/research/migrating-api-to-rust"
+  },
+  {
+    "id": "2026-11-24-nemotron-labs-image",
+    "date": "2026-11-24",
+    "title": "NVIDIA releases Nemotron-Labs-Image-30B-A3B, an open-weight text-to-image model under a non-commercial licence",
+    "summary": "NVIDIA published the weights of Nemotron-Labs-Image-30B-A3B on Hugging Face: an autoregressive text-to-image model with 30B total and 3B active parameters, initialised from Nemotron 3 Nano and paired with a new visual tokenizer. It is the image-generation part of Nemotron-Labs-VisualCreation, described in an arXiv paper of 2026-11-23, which handles raster images as visual tokens and charts, vector graphics and webpages as code. The paper reports results competitive with GPT Image 2 and Nano Banana Pro on most benchmarks it compares, including 86.0 on BizGenEval against GPT Image 2's 83.2, while trailing on GenEval2 (65.4 against 81.0). The licence allows non-commercial research and evaluation only.",
+    "category": "release",
+    "companies": [
+      "nvidia"
+    ],
+    "modelIds": [],
+    "sourceName": "NVIDIA (Hugging Face)",
+    "sourceUrl": "https://huggingface.co/nvidia/Nemotron-Labs-Image-30B-A3B"
+  },
+  {
+    "id": "2026-11-24-humanitys-first-exam",
+    "date": "2026-11-24",
+    "title": "Google DeepMind launches Humanity's First Exam, a benchmark of everyday questions models must answer reliably",
+    "summary": "Google DeepMind released Humanity's First Exam on Kaggle: 544 elementary text and image prompts across 20 basic capabilities, scored on whether a model answers each task and slight variations of it correctly every time rather than once. It comes with a live leaderboard, a technical report, and a three-week Kaggle competition, running to December 15, asking people to submit everyday questions that current models still get wrong. DeepMind says frontier models have improved substantially on the benchmark over the past six months but published no model scores in its announcement.",
+    "category": "benchmark",
+    "companies": [
+      "google"
+    ],
+    "modelIds": [],
+    "sourceName": "Google",
+    "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/humanitys-first-exam/"
+  },
+  {
+    "id": "2026-11-24-openai-protein-design",
+    "date": "2026-11-24",
+    "title": "OpenAI reports GPT-6.2 and an internal model can design proteins that bind in the lab",
+    "summary": "OpenAI published a preprint on protein design by its general-purpose models, with lab work by Onava. In one experiment 35 of 322 minibinders designed with a pre-release GPT-6.2 (10.9%) bound their targets, and redesigned antibody loops bound in 66-70% of cases. On computational tasks an unnamed internal model reached 43.7% on 30 MotifBench motif-scaffolding challenges against 27.8% for RFdiffusion, and 96-97% on small-molecule docking sets where DiffDock-style tools scored 50-60%. OpenAI notes specialised structure-prediction models were still used to filter designs, that predicting full structures from sequence remains far behind ESMFold2, and that binding is only an early step towards a usable protein.",
+    "category": "research",
+    "companies": [
+      "openai",
+      "Onava"
+    ],
+    "modelIds": [],
+    "sourceName": "OpenAI",
+    "sourceUrl": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/"
+  },
+  {
+    "id": "2026-11-24-openai-math-smale-ninth",
+    "date": "2026-11-24",
+    "title": "OpenAI posts nine more model-written maths manuscripts, claiming Smale's ninth problem and ω = 9/4",
+    "summary": "OpenAI added nine manuscripts in two result families, with Lean formalizations of selected results, to the public repository of work produced by an unreleased internal model. One gives a deterministic strongly polynomial algorithm for linear programming, which would answer Smale's ninth problem; another disproves the polynomial Hirsch conjecture for bounded simple rational polytopes. A seven-paper family on the geometry of tensors includes 'The matrix multiplication exponent is nine fourths', new circuit lower bounds for the Hamiltonian cycle polynomial and the permanent that subsume its VP ≠ VNP manuscript of the day before, and an exponential bound for sunflowers. OpenAI describes the collection as raw research data at different stages of verification and defers to mathematicians on correctness and credit.",
+    "category": "research",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [],
+    "sourceName": "OpenAI (GitHub)",
+    "sourceUrl": "https://github.com/openai/math/blob/main/history.md"
+  },
+  {
+    "id": "2026-11-23-gpt-6-2-chat-tab",
+    "date": "2026-11-23",
+    "title": "OpenAI brings a chat-tuned GPT-6.2 Sol to ChatGPT's Chat tab",
+    "summary": "OpenAI began rolling out a version of GPT-6.2 Sol tuned for everyday conversation to ChatGPT's Chat tab for Plus, Pro, Business and Enterprise users, six days after GPT-6.2 reached Work, Codex and the API; the models behind Work and Codex are unchanged. Against GPT-6, OpenAI reports image understanding in the Chat tab up from 47.4% to 71.7%, instruction following on especially hard prompts up from 62.5% to 78.1%, and an internal BrowseComp score of 64.5% versus 54.4% at its highest reasoning setting.",
+    "category": "release",
+    "companies": [
+      "openai"
+    ],
+    "modelIds": [
+      "gpt-6-2-sol"
+    ],
+    "sourceName": "OpenAI Help Center",
+    "sourceUrl": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+  },
+  {
+    "id": "2026-11-23-vp-vnp-anthropic-openai",
+    "date": "2026-11-23",
+    "title": "Anthropic and OpenAI each publish an AI-generated proof that VP ≠ VNP, hours apart",
+    "summary": "Anthropic posted a paper titled 'VP ≠ VNP over every field', credited to an internal research Claude model, with a Lean 4 formalization to its formal-math GitHub repository on 2026-11-23. It claims circuit lower bounds for the Hamiltonian cycle polynomial, and for the permanent outside characteristic 2, that separate the algebraic complexity classes VP and VNP, the 1979 conjecture by Leslie Valiant often described as an algebraic analogue of P vs NP. Anthropic says the paper and proof were written by AI and no human mathematician has checked them, and that the result does not settle P vs NP. A few hours later OpenAI added its own manuscript, 'VP and VNP are different', with Lean code to its math repository, saying an unreleased internal model had obtained the result on 2026-11-06. Neither proof has been independently reviewed.",
+    "category": "research",
+    "companies": [
+      "anthropic",
+      "openai"
+    ],
+    "modelIds": [],
+    "sourceName": "Anthropic (GitHub)",
+    "sourceUrl": "https://github.com/anthropics/formal-math/tree/main/vp-vnp"
+  },
+  {
+    "id": "2026-11-11-ernie-5-5-flash-preview",
+    "date": "2026-11-11",
+    "title": "Baidu releases ERNIE 5.5 Flash Preview, an open-weight 280B MoE with a 1M-token context",
+    "summary": "Baidu released ERNIE 5.5 Flash Preview on 2026-11-11 through its Qianfan API: an intermediate post-training checkpoint of a 280B-parameter mixture-of-experts model with 14B active per token and a 1M-token context, aimed at coding, 3D modelling and office work. Baidu reports 46.5% on Terminal-Bench 4.0 in its own tests. The weights followed on Hugging Face under Apache 2.0 on 2026-11-23.",
+    "category": "release",
+    "companies": [
+      "baidu"
+    ],
+    "modelIds": [
+      "ernie-5-5-flash-preview"
+    ],
+    "sourceName": "Baidu ERNIE Blog",
+    "sourceUrl": "https://ernie.baidu.com/release/ernie-5-5-flash-preview/"
+  },
+  {
     "id": "2026-11-25-mellum2-1-instruct",
     "date": "2026-11-25",
     "title": "JetBrains releases Mellum2.1 Instruct, a non-reasoning open-weight model for fast coding agents",
