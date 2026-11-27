@@ -313,6 +313,9 @@ function dateTicks(min: number, max: number): number[] {
   return ticks;
 }
 
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const STACK_STEP = 19; // px per stacked release, a little more than a logo mark
+
 function ReleaseTooltip({ active, payload }: { active?: boolean; payload?: Array<{ payload: Point }> }) {
   if (!active || !payload?.length) return null;
   const p = payload[0].payload;
@@ -323,15 +326,15 @@ function ReleaseTooltip({ active, payload }: { active?: boolean; payload?: Array
         <CompanyLogo companyId={m.company} size={12} />
         {m.name}
       </p>
-      <p className="mono mt-1 text-ink-2">Release #{p.y} in view</p>
-      <p className="mono text-ink-3">{formatDate(m.releaseDate)}</p>
+      <p className="mono mt-1 text-ink-2">{formatDate(m.releaseDate)}</p>
       <p className="mono text-ink-3">{companyName(m.company)}</p>
     </div>
   );
 }
 
-/** Model releases over time: x = release date, y = running count of releases among the
- * models in view (so the filter rail still applies), one company logo per release. */
+/** Model releases per month: one column per month, one company logo per release stacked
+ *  upward in release order, so every release has its own slot and none overlap. Taller
+ *  columns = busier months. Reads the models in view, so the filter rail still applies. */
 export function ReleasesTimeline({
   shown,
   highlight,
@@ -344,35 +347,57 @@ export function ReleasesTimeline({
   const order = [...shown].sort(
     (a, b) => a.releaseDate.localeCompare(b.releaseDate) || a.name.localeCompare(b.name)
   );
-  const count = new Map(order.map((m, i) => [m.id, i + 1]));
+  const slot = new Map<string, { x: number; y: number }>();
+  const perMonth = new Map<string, number>();
+  for (const m of order) {
+    const [yr, mo] = m.releaseDate.split("-").map(Number);
+    const key = `${yr}-${mo}`;
+    const n = (perMonth.get(key) ?? 0) + 1;
+    perMonth.set(key, n);
+    slot.set(m.id, { x: Date.UTC(yr, mo - 1, 15), y: n });
+  }
   const series = buildSeries(
     shown,
     highlight,
-    (m) => new Date(m.releaseDate).getTime(),
-    (m) => count.get(m.id) ?? null
+    (m) => slot.get(m.id)?.x ?? null,
+    (m) => slot.get(m.id)?.y ?? null
   );
   const dimming = hasActiveHighlight(highlight);
   const all = series.flatMap((s) => s.points);
   if (all.length === 0) return <EmptyChart label="No models in view." />;
   const minX = Math.min(...all.map((p) => p.x));
   const maxX = Math.max(...all.map((p) => p.x));
+  const tallest = Math.max(...perMonth.values());
+  const MARGIN_Y = 24 + 4 + 30; // chart margins + x-axis
+  const height = Math.max(300, tallest * STACK_STEP + MARGIN_Y + STACK_STEP);
+  const yStep = [1, 2, 5, 10, 20].find((st) => tallest / st <= 6) ?? 50;
+  const yTicks = Array.from({ length: Math.floor(tallest / yStep) }, (_, i) => (i + 1) * yStep);
+  const spanMonths = (maxX - minX) / (YEAR_MS / 12);
+  const ticks =
+    spanMonths <= 18
+      ? Array.from(perMonth.keys()).map((k) => {
+          const [yr, mo] = k.split("-").map(Number);
+          return Date.UTC(yr, mo - 1, 15);
+        })
+      : dateTicks(minX, maxX);
 
   return (
     <figure>
       <figcaption className="mb-1 text-sm font-semibold">
-        Model releases over time
-        <span className="ml-2 font-normal text-ink-3">release date × running total</span>
+        Model releases per month
+        <span className="ml-2 font-normal text-ink-3">one mark per release, stacked in release order</span>
       </figcaption>
-      <ResponsiveContainer width="100%" height={340}>
+      <ResponsiveContainer width="100%" height={height}>
         <ScatterChart margin={{ top: 24, right: 56, bottom: 4, left: -8 }}>
           <CartesianGrid strokeDasharray="2 4" vertical={false} />
           <XAxis
             type="number"
             dataKey="x"
             domain={[minX - YEAR_MS / 24, maxX + YEAR_MS / 24]}
-            ticks={dateTicks(minX, maxX)}
+            ticks={ticks}
             tickFormatter={(t) => {
               const d = new Date(t);
+              if (spanMonths <= 18) return `${MONTHS[d.getUTCMonth()]} '${String(d.getUTCFullYear()).slice(2)}`;
               return d.getMonth() === 0
                 ? String(d.getFullYear())
                 : `Jul '${String(d.getFullYear()).slice(2)}`;
@@ -383,16 +408,13 @@ export function ReleasesTimeline({
           <YAxis
             type="number"
             dataKey="y"
-            domain={[0, "auto"]}
-            allowDecimals={false}
+            domain={[0.4, tallest + 0.6]}
+            ticks={yTicks}
             tickLine={false}
             axisLine={false}
             width={52}
           />
-          <Tooltip
-            cursor={{ strokeDasharray: "3 3", stroke: "var(--line-strong)" }}
-            content={<ReleaseTooltip />}
-          />
+          <Tooltip cursor={false} content={<ReleaseTooltip />} />
           {series.map((s) => (
             <Scatter
               key={s.company.id}
