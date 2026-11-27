@@ -1380,3 +1380,1050 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | ernie-5-5-flash-preview | lmarenaElo | 2026-11-27 | not on arena.ai's text leaderboard (checked 2026-11-27); only an unconfirmed third-party claim of a Code Arena WebDev score (1668), which is a different board; re-check |
 | ernie-5-5-flash-preview | gdpvalAA / costPerTask | 2026-11-27 | artificialanalysis.ai/models/ernie-5-5-flash-preview returns 404; re-check |
 | ernie-5-5-flash-preview | maxOutput / knowledgeCutoff | 2026-11-27 | neither on the HF card, the launch blog or Qianfan's pricing page; OpenRouter's max_completion_tokens 921,600 is a router setting, not a Baidu figure |
+
+| palm | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| palm | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| palm | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| palm | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| palm | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| palm | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| palm | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| palm | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| palm | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| palm | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| palm | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| palm | maxOutput | 2026-11-27 | not published separately at launch |
+| palm | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| palm | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| opt-175b | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| opt-175b | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| opt-175b | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| opt-175b | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| opt-175b | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| opt-175b | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| opt-175b | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| opt-175b | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| opt-175b | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| opt-175b | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| opt-175b | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| opt-175b | maxOutput | 2026-11-27 | not published separately at launch |
+| opt-175b | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| opt-175b | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| bloom | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| bloom | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| bloom | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| bloom | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| bloom | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| bloom | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| bloom | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| bloom | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| bloom | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| bloom | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| bloom | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| bloom | maxOutput | 2026-11-27 | not published separately at launch |
+| bloom | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| bloom | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| glm-130b | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| glm-130b | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| glm-130b | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| glm-130b | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| glm-130b | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| glm-130b | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| glm-130b | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| glm-130b | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| glm-130b | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| glm-130b | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| glm-130b | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| glm-130b | maxOutput | 2026-11-27 | not published separately at launch |
+| glm-130b | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| glm-130b | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| galactica | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| galactica | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| galactica | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| galactica | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| galactica | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| galactica | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| galactica | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| galactica | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| galactica | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| galactica | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| galactica | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| galactica | maxOutput | 2026-11-27 | not published separately at launch |
+| galactica | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| galactica | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| text-davinci-003 | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| text-davinci-003 | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| text-davinci-003 | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| text-davinci-003 | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| text-davinci-003 | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| text-davinci-003 | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| text-davinci-003 | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| text-davinci-003 | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| text-davinci-003 | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| text-davinci-003 | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| text-davinci-003 | contextWindow | 2026-11-27 | not published in lab announcement, paper or docs found |
+| text-davinci-003 | maxOutput | 2026-11-27 | not published separately at launch |
+| text-davinci-003 | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| llama | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| llama | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| llama | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| llama | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| llama | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| llama | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| llama | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| llama | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| llama | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| llama | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| llama | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| llama | maxOutput | 2026-11-27 | not published separately at launch |
+| llama | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| llama | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| gpt-3-5-turbo | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| gpt-3-5-turbo | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| gpt-3-5-turbo | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| gpt-3-5-turbo | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| gpt-3-5-turbo | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| gpt-3-5-turbo | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| gpt-3-5-turbo | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| gpt-3-5-turbo | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| gpt-3-5-turbo | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| gpt-3-5-turbo | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| gpt-3-5-turbo | maxOutput | 2026-11-27 | not published separately at launch |
+| gpt-3-5-turbo | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| jurassic-2 | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| jurassic-2 | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| jurassic-2 | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| jurassic-2 | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| jurassic-2 | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| jurassic-2 | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| jurassic-2 | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| jurassic-2 | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| jurassic-2 | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| jurassic-2 | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| jurassic-2 | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| jurassic-2 | contextWindow | 2026-11-27 | not published in lab announcement, paper or docs found |
+| jurassic-2 | maxOutput | 2026-11-27 | not published separately at launch |
+| jurassic-2 | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| jurassic-2 | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| claude-1 | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| claude-1 | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| claude-1 | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| claude-1 | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| claude-1 | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| claude-1 | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| claude-1 | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| claude-1 | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| claude-1 | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| claude-1 | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| claude-1 | contextWindow | 2026-11-27 | not published in lab announcement, paper or docs found |
+| claude-1 | maxOutput | 2026-11-27 | not published separately at launch |
+| claude-1 | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| claude-1 | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| claude-instant | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| claude-instant | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| claude-instant | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| claude-instant | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| claude-instant | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| claude-instant | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| claude-instant | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| claude-instant | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| claude-instant | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| claude-instant | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| claude-instant | contextWindow | 2026-11-27 | not published in lab announcement, paper or docs found |
+| claude-instant | maxOutput | 2026-11-27 | not published separately at launch |
+| claude-instant | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| claude-instant | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| chatglm-6b | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| chatglm-6b | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| chatglm-6b | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| chatglm-6b | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| chatglm-6b | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| chatglm-6b | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| chatglm-6b | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| chatglm-6b | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| chatglm-6b | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| chatglm-6b | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| chatglm-6b | maxOutput | 2026-11-27 | not published separately at launch |
+| chatglm-6b | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| chatglm-6b | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| ernie-bot | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| ernie-bot | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| ernie-bot | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| ernie-bot | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| ernie-bot | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| ernie-bot | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| ernie-bot | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| ernie-bot | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| ernie-bot | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| ernie-bot | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| ernie-bot | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| ernie-bot | contextWindow | 2026-11-27 | not published in lab announcement, paper or docs found |
+| ernie-bot | maxOutput | 2026-11-27 | not published separately at launch |
+| ernie-bot | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| ernie-bot | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| palm-2 | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| palm-2 | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| palm-2 | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| palm-2 | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| palm-2 | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| palm-2 | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| palm-2 | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| palm-2 | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| palm-2 | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| palm-2 | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| palm-2 | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| falcon-40b | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| falcon-40b | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| falcon-40b | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| falcon-40b | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| falcon-40b | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| falcon-40b | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| falcon-40b | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| falcon-40b | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| falcon-40b | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| falcon-40b | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| falcon-40b | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| falcon-40b | maxOutput | 2026-11-27 | not published separately at launch |
+| falcon-40b | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| falcon-40b | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| inflection-1 | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| inflection-1 | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| inflection-1 | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| inflection-1 | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| inflection-1 | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| inflection-1 | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| inflection-1 | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| inflection-1 | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| inflection-1 | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| inflection-1 | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| inflection-1 | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| inflection-1 | contextWindow | 2026-11-27 | not published in lab announcement, paper or docs found |
+| inflection-1 | maxOutput | 2026-11-27 | not published separately at launch |
+| inflection-1 | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| inflection-1 | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| claude-2 | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| claude-2 | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| claude-2 | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| claude-2 | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| claude-2 | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| claude-2 | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| claude-2 | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| claude-2 | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| claude-2 | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| claude-2 | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| claude-2 | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| claude-2 | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| llama-2 | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| llama-2 | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| llama-2 | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| llama-2 | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| llama-2 | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| llama-2 | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| llama-2 | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| llama-2 | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| llama-2 | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| llama-2 | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| llama-2 | maxOutput | 2026-11-27 | not published separately at launch |
+| llama-2 | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| qwen-7b | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| qwen-7b | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| qwen-7b | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| qwen-7b | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| qwen-7b | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| qwen-7b | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| qwen-7b | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| qwen-7b | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| qwen-7b | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| qwen-7b | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| qwen-7b | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| qwen-7b | maxOutput | 2026-11-27 | not published separately at launch |
+| qwen-7b | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| qwen-7b | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| code-llama | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| code-llama | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| code-llama | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| code-llama | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| code-llama | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| code-llama | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| code-llama | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| code-llama | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| code-llama | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| code-llama | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| code-llama | maxOutput | 2026-11-27 | not published separately at launch |
+| code-llama | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| code-llama | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| falcon-180b | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| falcon-180b | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| falcon-180b | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| falcon-180b | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| falcon-180b | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| falcon-180b | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| falcon-180b | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| falcon-180b | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| falcon-180b | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| falcon-180b | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| falcon-180b | maxOutput | 2026-11-27 | not published separately at launch |
+| falcon-180b | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| falcon-180b | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| mistral-7b | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| mistral-7b | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| mistral-7b | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| mistral-7b | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| mistral-7b | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| mistral-7b | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| mistral-7b | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| mistral-7b | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| mistral-7b | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| mistral-7b | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| mistral-7b | maxOutput | 2026-11-27 | not published separately at launch |
+| mistral-7b | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| mistral-7b | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| ernie-4-0 | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| ernie-4-0 | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| ernie-4-0 | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| ernie-4-0 | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| ernie-4-0 | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| ernie-4-0 | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| ernie-4-0 | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| ernie-4-0 | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| ernie-4-0 | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| ernie-4-0 | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| ernie-4-0 | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| ernie-4-0 | contextWindow | 2026-11-27 | not published in lab announcement, paper or docs found |
+| ernie-4-0 | maxOutput | 2026-11-27 | not published separately at launch |
+| ernie-4-0 | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| ernie-4-0 | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| deepseek-coder | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| deepseek-coder | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| deepseek-coder | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| deepseek-coder | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| deepseek-coder | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| deepseek-coder | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| deepseek-coder | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| deepseek-coder | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| deepseek-coder | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| deepseek-coder | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| deepseek-coder | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| deepseek-coder | maxOutput | 2026-11-27 | not published separately at launch |
+| deepseek-coder | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| deepseek-coder | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| grok-1 | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| grok-1 | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| grok-1 | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| grok-1 | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| grok-1 | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| grok-1 | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| grok-1 | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| grok-1 | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| grok-1 | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| grok-1 | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| grok-1 | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| grok-1 | maxOutput | 2026-11-27 | not published separately at launch |
+| grok-1 | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| grok-1 | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| yi-34b | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| yi-34b | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| yi-34b | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| yi-34b | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| yi-34b | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| yi-34b | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| yi-34b | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| yi-34b | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| yi-34b | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| yi-34b | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| yi-34b | maxOutput | 2026-11-27 | not published separately at launch |
+| yi-34b | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| claude-2-1 | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| claude-2-1 | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| claude-2-1 | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| claude-2-1 | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| claude-2-1 | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| claude-2-1 | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| claude-2-1 | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| claude-2-1 | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| claude-2-1 | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| claude-2-1 | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| claude-2-1 | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| claude-2-1 | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| inflection-2 | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| inflection-2 | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| inflection-2 | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| inflection-2 | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| inflection-2 | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| inflection-2 | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| inflection-2 | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| inflection-2 | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| inflection-2 | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| inflection-2 | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| inflection-2 | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| inflection-2 | contextWindow | 2026-11-27 | not published in lab announcement, paper or docs found |
+| inflection-2 | maxOutput | 2026-11-27 | not published separately at launch |
+| inflection-2 | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| inflection-2 | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| deepseek-llm-67b | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| deepseek-llm-67b | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| deepseek-llm-67b | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| deepseek-llm-67b | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| deepseek-llm-67b | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| deepseek-llm-67b | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| deepseek-llm-67b | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| deepseek-llm-67b | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| deepseek-llm-67b | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| deepseek-llm-67b | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| deepseek-llm-67b | maxOutput | 2026-11-27 | not published separately at launch |
+| deepseek-llm-67b | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| deepseek-llm-67b | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| qwen-72b | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| qwen-72b | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| qwen-72b | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| qwen-72b | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| qwen-72b | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| qwen-72b | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| qwen-72b | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| qwen-72b | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| qwen-72b | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| qwen-72b | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| qwen-72b | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| qwen-72b | maxOutput | 2026-11-27 | not published separately at launch |
+| qwen-72b | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| qwen-72b | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| gemini-1-0-ultra | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| gemini-1-0-ultra | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| gemini-1-0-ultra | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| gemini-1-0-ultra | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| gemini-1-0-ultra | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| gemini-1-0-ultra | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| gemini-1-0-ultra | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| gemini-1-0-ultra | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| gemini-1-0-ultra | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| gemini-1-0-ultra | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| gemini-1-0-ultra | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| gemini-1-0-ultra | maxOutput | 2026-11-27 | not published separately at launch |
+| gemini-1-0-ultra | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| gemini-1-0-ultra | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| gemini-1-0-pro | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| gemini-1-0-pro | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| gemini-1-0-pro | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| gemini-1-0-pro | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| gemini-1-0-pro | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| gemini-1-0-pro | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| gemini-1-0-pro | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| gemini-1-0-pro | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| gemini-1-0-pro | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| gemini-1-0-pro | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| gemini-1-0-pro | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| gemini-1-0-pro | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| gemini-1-0-nano | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| gemini-1-0-nano | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| gemini-1-0-nano | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| gemini-1-0-nano | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| gemini-1-0-nano | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| gemini-1-0-nano | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| gemini-1-0-nano | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| gemini-1-0-nano | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| gemini-1-0-nano | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| gemini-1-0-nano | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| gemini-1-0-nano | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| gemini-1-0-nano | contextWindow | 2026-11-27 | not published in lab announcement, paper or docs found |
+| gemini-1-0-nano | maxOutput | 2026-11-27 | not published separately at launch |
+| gemini-1-0-nano | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| gemini-1-0-nano | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| mixtral-8x7b | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| mixtral-8x7b | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| mixtral-8x7b | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| mixtral-8x7b | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| mixtral-8x7b | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| mixtral-8x7b | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| mixtral-8x7b | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| mixtral-8x7b | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| mixtral-8x7b | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| mixtral-8x7b | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| mixtral-8x7b | maxOutput | 2026-11-27 | not published separately at launch |
+| mixtral-8x7b | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| mixtral-8x7b | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| mistral-medium | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| mistral-medium | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| mistral-medium | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| mistral-medium | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| mistral-medium | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| mistral-medium | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| mistral-medium | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| mistral-medium | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| mistral-medium | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| mistral-medium | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| mistral-medium | maxOutput | 2026-11-27 | not published separately at launch |
+| mistral-medium | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| mistral-medium | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| phi-2 | mmluPro | 2026-11-27 | MMLU-Pro (May 2024) postdates model; lab never reported it |
+| phi-2 | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond (benchmark published Nov 2023) |
+| phi-2 | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| phi-2 | sweBenchPro | 2026-11-27 | predates benchmark; never evaluated by the lab |
+| phi-2 | terminalBench | 2026-11-27 | predates Terminal-Bench 2.1; never evaluated |
+| phi-2 | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| phi-2 | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| phi-2 | lmarenaElo | 2026-11-27 | no matching entry in LMArena text leaderboard (HF lmarena-ai/leaderboard-dataset, latest snapshot 2026-11-22) |
+| phi-2 | gdpvalAA | 2026-11-27 | predates GDPval-AA; never evaluated |
+| phi-2 | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); not on ARC-AGI-2 leaderboards |
+| phi-2 | pricing | 2026-11-27 | no USD per-token launch price in a primary source (no public API, per-character, EUR or CNY billing) |
+| phi-2 | contextWindow | 2026-11-27 | not published in lab announcement, paper or docs found |
+| phi-2 | maxOutput | 2026-11-27 | not published separately at launch |
+| phi-2 | knowledgeCutoff | 2026-11-27 | no month-precise cutoff published |
+| phi-2 | costPerTask | 2026-11-27 | predates Artificial Analysis Intelligence Index coverage |
+| glm-4 | pricing | 2026-11-27 | no public API price at launch found in a primary source |
+| glm-4 | mmluPro | 2026-11-27 | not in TIGER-Lab MMLU-Pro paper table; lab did not report |
+| glm-4 | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond |
+| glm-4 | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| glm-4 | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| glm-4 | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| glm-4 | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| glm-4 | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| glm-4 | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| glm-4 | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| glm-4 | lmarenaElo | 2026-11-27 | arena.ai lists only GLM-4 (0520), a later checkpoint |
+| qwen1-5-72b | pricing | 2026-11-27 | no first-party API price at launch found (open weights; hosted prices vary) |
+| qwen1-5-72b | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond |
+| qwen1-5-72b | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| qwen1-5-72b | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| qwen1-5-72b | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| qwen1-5-72b | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| qwen1-5-72b | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| qwen1-5-72b | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| qwen1-5-72b | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| qwen1-5-72b | lmarenaElo | 2026-11-27 | arena.ai lists the model by rank only; score not shown in the public page on 2026-11-27 |
+| gemma-7b | pricing | 2026-11-27 | no first-party API price at launch found (open weights; hosted prices vary) |
+| gemma-7b | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond |
+| gemma-7b | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| gemma-7b | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| gemma-7b | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| gemma-7b | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| gemma-7b | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| gemma-7b | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| gemma-7b | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| gemma-7b | lmarenaElo | 2026-11-27 | arena.ai lists the model by rank only; score not shown in the public page on 2026-11-27 |
+| mistral-large | mmluPro | 2026-11-27 | not in TIGER-Lab MMLU-Pro paper table; lab did not report |
+| mistral-large | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond |
+| mistral-large | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| mistral-large | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| mistral-large | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| mistral-large | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| mistral-large | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| mistral-large | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| mistral-large | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| mistral-large | lmarenaElo | 2026-11-27 | arena.ai lists the model by rank only; score not shown in the public page on 2026-11-27 |
+| claude-3-sonnet | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| claude-3-sonnet | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| claude-3-sonnet | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| claude-3-sonnet | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| claude-3-sonnet | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| claude-3-sonnet | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| claude-3-sonnet | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| claude-3-sonnet | lmarenaElo | 2026-11-27 | arena.ai lists the model by rank only; score not shown in the public page on 2026-11-27 |
+| inflection-2-5 | contextWindow | 2026-11-27 | not published in a primary source found |
+| inflection-2-5 | pricing | 2026-11-27 | no public API price at launch found in a primary source |
+| inflection-2-5 | mmluPro | 2026-11-27 | not in TIGER-Lab MMLU-Pro paper table; lab did not report |
+| inflection-2-5 | gpqaDiamond | 2026-11-27 | Inflection's GPQA Diamond figure is only in a chart image, not text |
+| inflection-2-5 | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| inflection-2-5 | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| inflection-2-5 | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| inflection-2-5 | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| inflection-2-5 | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| inflection-2-5 | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| inflection-2-5 | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| inflection-2-5 | lmarenaElo | 2026-11-27 | not on arena.ai text leaderboard |
+| command-r | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond |
+| command-r | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| command-r | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| command-r | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| command-r | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| command-r | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| command-r | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| command-r | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| command-r | lmarenaElo | 2026-11-27 | arena.ai lists the model by rank only; score not shown in the public page on 2026-11-27 |
+| claude-3-haiku | mmluPro | 2026-11-27 | not in TIGER-Lab MMLU-Pro paper table; lab did not report |
+| claude-3-haiku | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| claude-3-haiku | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| claude-3-haiku | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| claude-3-haiku | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| claude-3-haiku | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| claude-3-haiku | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| claude-3-haiku | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| claude-3-haiku | lmarenaElo | 2026-11-27 | arena.ai lists the model by rank only; score not shown in the public page on 2026-11-27 |
+| dbrx | pricing | 2026-11-27 | no first-party API price at launch found (open weights; hosted prices vary) |
+| dbrx | mmluPro | 2026-11-27 | not in TIGER-Lab MMLU-Pro paper table; lab did not report |
+| dbrx | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond |
+| dbrx | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| dbrx | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| dbrx | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| dbrx | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| dbrx | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| dbrx | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| dbrx | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| dbrx | lmarenaElo | 2026-11-27 | arena.ai lists the model by rank only; score not shown in the public page on 2026-11-27 |
+| grok-1-5 | pricing | 2026-11-27 | no public API price at launch found in a primary source |
+| grok-1-5 | mmluPro | 2026-11-27 | not in TIGER-Lab MMLU-Pro paper table; lab did not report |
+| grok-1-5 | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond |
+| grok-1-5 | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| grok-1-5 | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| grok-1-5 | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| grok-1-5 | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| grok-1-5 | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| grok-1-5 | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| grok-1-5 | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| grok-1-5 | lmarenaElo | 2026-11-27 | not on arena.ai text leaderboard |
+| jamba | pricing | 2026-11-27 | no first-party API price at launch found (open weights; hosted prices vary) |
+| jamba | mmluPro | 2026-11-27 | not in TIGER-Lab MMLU-Pro paper table; lab did not report |
+| jamba | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond |
+| jamba | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| jamba | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| jamba | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| jamba | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| jamba | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| jamba | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| jamba | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| jamba | lmarenaElo | 2026-11-27 | base model; not on arena.ai |
+| command-r-plus | mmluPro | 2026-11-27 | not in TIGER-Lab MMLU-Pro paper table; lab did not report |
+| command-r-plus | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond |
+| command-r-plus | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| command-r-plus | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| command-r-plus | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| command-r-plus | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| command-r-plus | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| command-r-plus | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| command-r-plus | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| command-r-plus | lmarenaElo | 2026-11-27 | arena.ai lists the model by rank only; score not shown in the public page on 2026-11-27 |
+| reka-core | mmluPro | 2026-11-27 | not in TIGER-Lab MMLU-Pro paper table; lab did not report |
+| reka-core | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond |
+| reka-core | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| reka-core | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| reka-core | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| reka-core | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| reka-core | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| reka-core | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| reka-core | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| reka-core | lmarenaElo | 2026-11-27 | arena.ai lists only Reka Core (20240904), a later checkpoint |
+| mixtral-8x22b | mmluPro | 2026-11-27 | not in TIGER-Lab MMLU-Pro paper table; lab did not report |
+| mixtral-8x22b | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond |
+| mixtral-8x22b | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| mixtral-8x22b | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| mixtral-8x22b | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| mixtral-8x22b | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| mixtral-8x22b | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| mixtral-8x22b | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| mixtral-8x22b | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| mixtral-8x22b | lmarenaElo | 2026-11-27 | arena.ai lists the model by rank only; score not shown in the public page on 2026-11-27 |
+| llama-3-8b | pricing | 2026-11-27 | no first-party API price at launch found (open weights; hosted prices vary) |
+| llama-3-8b | gpqaDiamond | 2026-11-27 | Meta reported GPQA 0-shot without naming the split |
+| llama-3-8b | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| llama-3-8b | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| llama-3-8b | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| llama-3-8b | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| llama-3-8b | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| llama-3-8b | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| llama-3-8b | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| llama-3-8b | lmarenaElo | 2026-11-27 | arena.ai lists the model by rank only; score not shown in the public page on 2026-11-27 |
+| llama-3-70b | pricing | 2026-11-27 | no first-party API price at launch found (open weights; hosted prices vary) |
+| llama-3-70b | gpqaDiamond | 2026-11-27 | Meta reported GPQA 0-shot without naming the split |
+| llama-3-70b | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| llama-3-70b | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| llama-3-70b | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| llama-3-70b | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| llama-3-70b | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| llama-3-70b | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| llama-3-70b | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| llama-3-70b | lmarenaElo | 2026-11-27 | arena.ai lists the model by rank only; score not shown in the public page on 2026-11-27 |
+| phi-3-mini | pricing | 2026-11-27 | no first-party API price at launch found (open weights; hosted prices vary) |
+| phi-3-mini | gpqaDiamond | 2026-11-27 | Microsoft reported GPQA without naming the split |
+| phi-3-mini | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| phi-3-mini | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| phi-3-mini | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| phi-3-mini | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| phi-3-mini | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| phi-3-mini | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| phi-3-mini | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| phi-3-mini | lmarenaElo | 2026-11-27 | arena.ai lists the model by rank only; score not shown in the public page on 2026-11-27 |
+| snowflake-arctic | pricing | 2026-11-27 | no first-party API price at launch found (open weights; hosted prices vary) |
+| snowflake-arctic | mmluPro | 2026-11-27 | not in TIGER-Lab MMLU-Pro paper table; lab did not report |
+| snowflake-arctic | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond |
+| snowflake-arctic | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| snowflake-arctic | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| snowflake-arctic | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| snowflake-arctic | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| snowflake-arctic | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| snowflake-arctic | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| snowflake-arctic | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| snowflake-arctic | lmarenaElo | 2026-11-27 | arena.ai lists the model by rank only; score not shown in the public page on 2026-11-27 |
+| deepseek-v2 | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond |
+| deepseek-v2 | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| deepseek-v2 | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| deepseek-v2 | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| deepseek-v2 | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| deepseek-v2 | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| deepseek-v2 | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| deepseek-v2 | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| deepseek-v2 | lmarenaElo | 2026-11-27 | only DeepSeek-V2.5 variants listed |
+| yi-large | contextWindow | 2026-11-27 | not published in a primary source found |
+| yi-large | pricing | 2026-11-27 | no public API price at launch found in a primary source |
+| yi-large | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond |
+| yi-large | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| yi-large | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| yi-large | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| yi-large | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| yi-large | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| yi-large | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| yi-large | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| yi-large | lmarenaElo | 2026-11-27 | not on arena.ai text leaderboard |
+| gemini-1-5-flash | gpqaDiamond | 2026-11-27 | Google reported GPQA 39.5% 0-shot without naming the split |
+| gemini-1-5-flash | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| gemini-1-5-flash | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| gemini-1-5-flash | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| gemini-1-5-flash | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| gemini-1-5-flash | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| gemini-1-5-flash | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| gemini-1-5-flash | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| gemini-1-5-flash | lmarenaElo | 2026-11-27 | arena.ai lists the model by rank only; score not shown in the public page on 2026-11-27 |
+| phi-3-medium | pricing | 2026-11-27 | no first-party API price at launch found (open weights; hosted prices vary) |
+| phi-3-medium | gpqaDiamond | 2026-11-27 | Microsoft reported GPQA without naming the split |
+| phi-3-medium | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| phi-3-medium | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| phi-3-medium | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| phi-3-medium | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| phi-3-medium | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| phi-3-medium | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| phi-3-medium | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| phi-3-medium | lmarenaElo | 2026-11-27 | arena.ai lists the model by rank only; score not shown in the public page on 2026-11-27 |
+| codestral | mmluPro | 2026-11-27 | not in TIGER-Lab MMLU-Pro paper table; lab did not report |
+| codestral | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond |
+| codestral | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| codestral | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| codestral | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| codestral | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| codestral | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| codestral | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| codestral | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| codestral | lmarenaElo | 2026-11-27 | not on arena.ai text leaderboard |
+| qwen2-72b | pricing | 2026-11-27 | no first-party API price at launch found (open weights; hosted prices vary) |
+| qwen2-72b | gpqaDiamond | 2026-11-27 | Qwen reported GPQA 42.4 without naming the split |
+| qwen2-72b | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| qwen2-72b | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| qwen2-72b | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| qwen2-72b | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| qwen2-72b | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| qwen2-72b | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| qwen2-72b | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| qwen2-72b | lmarenaElo | 2026-11-27 | arena.ai lists the model by rank only; score not shown in the public page on 2026-11-27 |
+| nemotron-4-340b | pricing | 2026-11-27 | no first-party API price at launch found (open weights; hosted prices vary) |
+| nemotron-4-340b | mmluPro | 2026-11-27 | not in TIGER-Lab MMLU-Pro paper table; lab did not report |
+| nemotron-4-340b | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond |
+| nemotron-4-340b | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| nemotron-4-340b | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| nemotron-4-340b | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| nemotron-4-340b | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| nemotron-4-340b | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| nemotron-4-340b | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| nemotron-4-340b | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| nemotron-4-340b | lmarenaElo | 2026-11-27 | arena.ai lists the model by rank only; score not shown in the public page on 2026-11-27 |
+| deepseek-coder-v2 | mmluPro | 2026-11-27 | not in TIGER-Lab MMLU-Pro paper table; lab did not report |
+| deepseek-coder-v2 | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond |
+| deepseek-coder-v2 | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| deepseek-coder-v2 | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| deepseek-coder-v2 | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| deepseek-coder-v2 | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| deepseek-coder-v2 | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| deepseek-coder-v2 | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| deepseek-coder-v2 | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| deepseek-coder-v2 | lmarenaElo | 2026-11-27 | arena.ai lists the model by rank only; score not shown in the public page on 2026-11-27 |
+| gemma-2-27b | pricing | 2026-11-27 | no first-party API price at launch found (open weights; hosted prices vary) |
+| gemma-2-27b | mmluPro | 2026-11-27 | not in TIGER-Lab MMLU-Pro paper table; lab did not report |
+| gemma-2-27b | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond |
+| gemma-2-27b | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| gemma-2-27b | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| gemma-2-27b | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| gemma-2-27b | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| gemma-2-27b | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| gemma-2-27b | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| gemma-2-27b | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| gemma-2-27b | lmarenaElo | 2026-11-27 | arena.ai lists the model by rank only; score not shown in the public page on 2026-11-27 |
+| gemma-2-9b | pricing | 2026-11-27 | no first-party API price at launch found (open weights; hosted prices vary) |
+| gemma-2-9b | mmluPro | 2026-11-27 | not in TIGER-Lab MMLU-Pro paper table; lab did not report |
+| gemma-2-9b | gpqaDiamond | 2026-11-27 | lab did not report GPQA Diamond |
+| gemma-2-9b | sweBench | 2026-11-27 | predates SWE-bench Verified (Aug 2024); no comparable lab figure |
+| gemma-2-9b | aime | 2026-11-27 | never publicly evaluated on AIME by the lab |
+| gemma-2-9b | hle | 2026-11-27 | predates benchmark (HLE Jan 2025); never evaluated |
+| gemma-2-9b | arcAgi2 | 2026-11-27 | predates benchmark (Mar 2025); never evaluated |
+| gemma-2-9b | sweBenchPro | 2026-11-27 | predates benchmark; lab never reported SWE-bench Pro |
+| gemma-2-9b | terminalBench | 2026-11-27 | predates Terminal-Bench (all versions); never evaluated |
+| gemma-2-9b | gdpvalAA | 2026-11-27 | predates GDPval-AA; never rated |
+| gemma-2-9b | lmarenaElo | 2026-11-27 | arena.ai lists the model by rank only; score not shown in the public page on 2026-11-27 |
+| gpt-4o-mini | lmarenaElo | 2026-11-27 | arena.ai text leaderboard lists GPT-4o mini (2024-07-18) only as rank 277 in its "not plotted" list; no score visible to fetch (Cloudflare blocks raw page) |
+| gpt-4o-mini | mmluPro / sweBench / aime / hle | 2026-11-27 | OpenAI's launch post and simple-evals report MMLU/GPQA/MATH/HumanEval only; no first-party figure for these keys |
+| mistral-nemo | mmluPro / gpqaDiamond / lmarenaElo | 2026-11-27 | Mistral's launch post carries benchmarks only as images; not on arena.ai text leaderboard |
+| mistral-nemo | maxOutput / knowledgeCutoff | 2026-11-27 | not stated in the launch post or Mistral docs overview |
+| llama-3-1-70b | sweBench / aime / hle | 2026-11-27 | Meta's 3.1 and 3.3 model cards report HumanEval/MBPP/MATH, not these keys |
+| llama-3-1-70b | maxOutput / pricing | 2026-11-27 | Meta publishes no max-output figure and ran no first-party API |
+| llama-3-1-70b | lmarenaElo | 2026-11-27 | arena.ai lists Llama 3.1 70B Instruct at rank 300 with no visible score |
+| llama-3-1-8b | maxOutput / pricing / lmarenaElo | 2026-11-27 | no Meta figure or API; arena.ai rank 354, score not visible |
+| grok-2 | gpqaDiamond | 2026-11-27 | xAI's launch table says "GPQA 56.0%" without naming the split |
+| grok-2 | contextWindow / maxOutput / pricing / knowledgeCutoff | 2026-11-27 | not in the 2024-08-13 launch post; launch API was an enterprise preview with no public price (grok-2-1212 later $2/$10) |
+| grok-2 | lmarenaElo | 2026-11-27 | arena.ai lists Grok 2 (2024-08-13) at rank 250, score not visible |
+| grok-2-mini | gpqaDiamond / contextWindow / pricing / lmarenaElo | 2026-11-27 | xAI's "GPQA 51.0%" split unnamed; no public price or context at launch; arena.ai rank 287, score not visible |
+| jamba-1-5-large | gpqaDiamond | 2026-11-27 | AI21's card reports "GPQA 36.9" without naming the split |
+| jamba-1-5-large | pricing / maxOutput / lmarenaElo | 2026-11-27 | AI21 launch post and HF card give no price or max output; arena.ai rank 303, score not visible |
+| deepseek-v2-5 | mmluPro | 2026-11-27 | HF card's 65.83 sits in auto-generated evaluation metadata, not DeepSeek's own table; not recorded |
+| deepseek-v2-5 | gpqaDiamond / aime | 2026-11-27 | DeepSeek's card and release note report neither |
+| deepseek-v2-5 | contextWindow / pricing / lmarenaElo | 2026-11-27 | release note and card state no context or price (served via rolling deepseek-chat alias); arena.ai rank 288, score not visible |
+| o1-preview | mmluPro / sweBench / hle / lmarenaElo | 2026-11-27 | OpenAI's o1-preview posts report AIME/GPQA/MMLU/MATH/Codeforces only; arena.ai rank 188, score not visible |
+| o1-mini | mmluPro / sweBench / hle / lmarenaElo | 2026-11-27 | not in OpenAI's o1-mini post; arena.ai rank 248, score not visible |
+| pixtral-12b | mmluPro / gpqaDiamond / maxOutput | 2026-11-27 | Mistral's post reports multimodal benchmarks only |
+| mistral-small-24-09 | benchmarks (all) / maxOutput | 2026-11-27 | Mistral's 2024-09-17 post gives no benchmark figures in text |
+| qwen2-5-72b | gpqaDiamond | 2026-11-27 | Qwen's blog reports "GPQA 49.0" without naming the split |
+| qwen2-5-72b | pricing / knowledgeCutoff / lmarenaElo | 2026-11-27 | open model not sold under its own name on Alibaba's API at launch; arena.ai rank 296, score not visible |
+| gemini-1-5-pro-002 | mmluPro / aime / lmarenaElo | 2026-11-27 | Google's 2024-09-24 post gives only relative gains (~7% MMLU-Pro); exact table is an image; Gemini 2.5 report uses AIME 2025, not a launch figure; arena.ai rank 228, score not visible |
+| llama-3-2-90b-vision | gpqaDiamond / mmluPro | 2026-11-27 | Meta's card reports GPQA main set (46.7) and no MMLU-Pro |
+| llama-3-2-90b-vision | maxOutput / pricing | 2026-11-27 | no Meta figure or first-party API |
+| llama-3-2-3b | gpqaDiamond / mmluPro / lmarenaElo | 2026-11-27 | Meta's card reports GPQA main set (32.8) only; arena.ai rank 380, score not visible |
+| gemini-1-5-flash-8b | contextWindow / maxOutput / knowledgeCutoff | 2026-11-27 | GA post states only the 128K pricing tier; model spec page no longer published; forum posts are not official |
+| gemini-1-5-flash-8b | benchmarks (all) | 2026-11-27 | Google published Flash-8B benchmarks only as a chart image |
+| llama-3-1-nemotron-70b-instruct | mmluPro | 2026-11-27 | HF card's 62.78 is auto-generated evaluation metadata, not NVIDIA's own table; not recorded |
+| llama-3-1-nemotron-70b-instruct | lmarenaElo | 2026-11-27 | card quotes Elo 1267 as of 2024-10-24 (a snapshot, not the current board); arena.ai rank 298, score not visible |
+| ministral-8b | benchmarks (all) / maxOutput | 2026-11-27 | Mistral's post carries Ministral benchmarks only as images; arena.ai rank 337, score not visible |
+| claude-3-5-haiku | hle / lmarenaElo | 2026-11-27 | not in Anthropic's addendum; arena.ai rank 263, score not visible |
+| hunyuan-large | mmluPro | 2026-11-27 | HF card's 60.2 is the pretrained model, not the instruct model |
+| hunyuan-large | pricing / maxOutput / knowledgeCutoff | 2026-11-27 | GitHub README and HF card list none |
+| qwen2-5-coder-32b | sweBench / gpqaDiamond / mmluPro / pricing | 2026-11-27 | Qwen's blog gives only Aider/McEval/MdEval figures in text |
+| pixtral-large | pricing | 2026-11-27 | Mistral's own price page not found; only aggregators ($2/$6) |
+| pixtral-large | mmluPro / gpqaDiamond / maxOutput | 2026-11-27 | Mistral reports multimodal benchmarks only |
+| qwq-32b-preview | gpqaDiamond | 2026-11-27 | Qwen's blog says "GPQA 65.2%" without naming the split |
+| qwq-32b-preview | pricing / maxOutput / lmarenaElo | 2026-11-27 | no API price published; arena.ai rank 384, score not visible |
+| nova-pro | gpqaDiamond | 2026-11-27 | Amazon's Nova technical report uses the GPQA main set (46.9) |
+| nova-pro | knowledgeCutoff / lmarenaElo | 2026-11-27 | not in the report or Bedrock docs; arena.ai rank 301, score not visible |
+| nova-lite | gpqaDiamond / knowledgeCutoff | 2026-11-27 | report uses GPQA main set (42.0); no cutoff published |
+| nova-micro | gpqaDiamond / knowledgeCutoff | 2026-11-27 | report uses GPQA main set (40.0); no cutoff published |
+| llama-3-3-70b | maxOutput / pricing / lmarenaElo | 2026-11-27 | no Meta figure or first-party API; arena.ai rank 274, score not visible |
+| phi-4 | pricing / maxOutput / lmarenaElo | 2026-11-27 | Azure Foundry price not found in a primary source; arena.ai rank 331, score not visible |
+| command-r7b | benchmarks (all) / maxOutput | 2026-11-27 | Cohere publishes only normalised Open LLM Leaderboard scores; not comparable |
+| model-id | field | checked | reason |
+|---|---|---|---|
+| minimax-text-01 | lmarenaElo | 2026-11-27 | not found on arena.ai text leaderboard; no lab-published launch Elo |
+| minimax-text-01 | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| minimax-text-01 | sweBench | 2026-11-27 | not reported in lab announcement/model card |
+| minimax-text-01 | hle | 2026-11-27 | not reported by lab (HLE published 2025-01-23, after/around launch) |
+| kimi-k1-5 | lmarenaElo | 2026-11-27 | not found on arena.ai text leaderboard; no lab-published launch Elo |
+| kimi-k1-5 | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| kimi-k1-5 | gpqaDiamond | 2026-11-27 | not in Moonshot technical report tables |
+| kimi-k1-5 | sweBench | 2026-11-27 | not reported in lab announcement/model card |
+| kimi-k1-5 | hle | 2026-11-27 | not reported by lab (HLE published 2025-01-23, after/around launch) |
+| kimi-k1-5 | pricing | 2026-11-27 | no public USD API price found at launch |
+| doubao-1-5-pro | lmarenaElo | 2026-11-27 | not found on arena.ai text leaderboard; no lab-published launch Elo |
+| doubao-1-5-pro | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| doubao-1-5-pro | gpqaDiamond | 2026-11-27 | lab published scores only as chart images; no text/table figure found |
+| doubao-1-5-pro | sweBench | 2026-11-27 | lab published scores only as chart images; no text/table figure found |
+| doubao-1-5-pro | hle | 2026-11-27 | not reported by lab (HLE published 2025-01-23, after/around launch) |
+| doubao-1-5-pro | pricing | 2026-11-27 | launch API pricing published in RMB only (no USD list price) |
+| qwen2-5-max | lmarenaElo | 2026-11-27 | arena.ai text leaderboard lists it among unplotted/deprecated models by rank only, no score shown |
+| qwen2-5-max | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| qwen2-5-max | gpqaDiamond | 2026-11-27 | lab published scores only as chart images; no text/table figure found |
+| qwen2-5-max | sweBench | 2026-11-27 | lab published scores only as chart images; no text/table figure found |
+| qwen2-5-max | hle | 2026-11-27 | not reported by lab (HLE published 2025-01-23, after/around launch) |
+| qwen2-5-max | pricing | 2026-11-27 | no public USD API price found at launch |
+| mistral-small-3 | lmarenaElo | 2026-11-27 | arena.ai text leaderboard lists it among unplotted/deprecated models by rank only, no score shown |
+| mistral-small-3 | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| mistral-small-3 | gpqaDiamond | 2026-11-27 | model card reports GPQA Main (5-shot CoT), not Diamond |
+| mistral-small-3 | sweBench | 2026-11-27 | not reported in lab announcement/model card |
+| mistral-small-3 | hle | 2026-11-27 | not reported by lab (HLE published 2025-01-23, after/around launch) |
+| mistral-small-3 | pricing | 2026-11-27 | mistral-small-2501 launch price not found (archived pricing pages from Feb 2025 render without prices) |
+| o3-mini | lmarenaElo | 2026-11-27 | arena.ai text leaderboard lists it among unplotted/deprecated models by rank only, no score shown |
+| gemini-2-0-flash-lite | lmarenaElo | 2026-11-27 | arena.ai text leaderboard lists it among unplotted/deprecated models by rank only, no score shown |
+| gemini-2-0-flash-lite | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| gemini-2-0-flash-lite | sweBench | 2026-11-27 | not reported in lab announcement/model card |
+| gemini-2-0-flash-lite | hle | 2026-11-27 | not reported in lab announcement/model card |
+| gemini-2-0-pro | lmarenaElo | 2026-11-27 | not found on arena.ai text leaderboard; no lab-published launch Elo |
+| gemini-2-0-pro | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| gemini-2-0-pro | sweBench | 2026-11-27 | not reported in lab announcement/model card |
+| gemini-2-0-pro | hle | 2026-11-27 | not reported in lab announcement/model card |
+| gemini-2-0-pro | pricing | 2026-11-27 | experimental only; never priced |
+| grok-3-mini | lmarenaElo | 2026-11-27 | arena.ai text leaderboard lists it among unplotted/deprecated models by rank only, no score shown |
+| grok-3-mini | gpqaDiamond | 2026-11-27 | xAI reported GPQA only for non-reasoning mini beta (66.2%); Think figure only in chart |
+| grok-3-mini | sweBench | 2026-11-27 | not reported in lab announcement/model card |
+| grok-3-mini | hle | 2026-11-27 | not reported in lab announcement/model card |
+| mercury-coder | lmarenaElo | 2026-11-27 | not found on arena.ai text leaderboard; no lab-published launch Elo |
+| mercury-coder | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| mercury-coder | gpqaDiamond | 2026-11-27 | lab published scores only as chart images; no text/table figure found |
+| mercury-coder | sweBench | 2026-11-27 | lab published scores only as chart images; no text/table figure found |
+| mercury-coder | hle | 2026-11-27 | lab published scores only as chart images; no text/table figure found |
+| mercury-coder | pricing | 2026-11-27 | no public USD API price found at launch |
+| gpt-4-5 | lmarenaElo | 2026-11-27 | arena.ai text leaderboard lists it among unplotted/deprecated models by rank only, no score shown |
+| qwq-32b | lmarenaElo | 2026-11-27 | arena.ai text leaderboard lists it among unplotted/deprecated models by rank only, no score shown |
+| qwq-32b | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| qwq-32b | sweBench | 2026-11-27 | not reported in lab announcement/model card |
+| qwq-32b | hle | 2026-11-27 | not reported in lab announcement/model card |
+| qwq-32b | pricing | 2026-11-27 | open-weights release; no first-party USD API price found at launch |
+| gemma-3 | lmarenaElo | 2026-11-27 | arena.ai text leaderboard lists it among unplotted/deprecated models by rank only, no score shown |
+| gemma-3 | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| gemma-3 | sweBench | 2026-11-27 | not reported in lab announcement/model card |
+| gemma-3 | hle | 2026-11-27 | not reported in lab announcement/model card |
+| gemma-3 | pricing | 2026-11-27 | open-weights release; no first-party USD API price found at launch |
+| ernie-4-5 | lmarenaElo | 2026-11-27 | not found on arena.ai text leaderboard; no lab-published launch Elo |
+| ernie-4-5 | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| ernie-4-5 | gpqaDiamond | 2026-11-27 | lab published scores only as chart images; no text/table figure found |
+| ernie-4-5 | sweBench | 2026-11-27 | lab published scores only as chart images; no text/table figure found |
+| ernie-4-5 | hle | 2026-11-27 | lab published scores only as chart images; no text/table figure found |
+| ernie-4-5 | pricing | 2026-11-27 | launch API pricing published in RMB only (no USD list price) |
+| ernie-x1 | lmarenaElo | 2026-11-27 | not found on arena.ai text leaderboard; no lab-published launch Elo |
+| ernie-x1 | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| ernie-x1 | gpqaDiamond | 2026-11-27 | lab published scores only as chart images; no text/table figure found |
+| ernie-x1 | sweBench | 2026-11-27 | lab published scores only as chart images; no text/table figure found |
+| ernie-x1 | hle | 2026-11-27 | lab published scores only as chart images; no text/table figure found |
+| ernie-x1 | pricing | 2026-11-27 | launch API pricing published in RMB only (no USD list price) |
+| mistral-small-3-1 | lmarenaElo | 2026-11-27 | arena.ai text leaderboard lists it among unplotted/deprecated models by rank only, no score shown |
+| mistral-small-3-1 | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| mistral-small-3-1 | sweBench | 2026-11-27 | not reported in lab announcement/model card |
+| mistral-small-3-1 | hle | 2026-11-27 | not reported in lab announcement/model card |
+| hunyuan-t1 | lmarenaElo | 2026-11-27 | not found on arena.ai text leaderboard; no lab-published launch Elo |
+| hunyuan-t1 | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| hunyuan-t1 | sweBench | 2026-11-27 | not reported in lab announcement/model card |
+| hunyuan-t1 | hle | 2026-11-27 | not reported in lab announcement/model card |
+| hunyuan-t1 | pricing | 2026-11-27 | launch API pricing published in RMB only (no USD list price) |
+| deepseek-v3-0324 | lmarenaElo | 2026-11-27 | arena.ai text leaderboard lists it among unplotted/deprecated models by rank only, no score shown |
+| deepseek-v3-0324 | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| deepseek-v3-0324 | sweBench | 2026-11-27 | not reported in lab announcement/model card |
+| deepseek-v3-0324 | hle | 2026-11-27 | not reported in lab announcement/model card |
+| llama-4-scout | lmarenaElo | 2026-11-27 | arena.ai text leaderboard lists it among unplotted/deprecated models by rank only, no score shown |
+| llama-4-scout | sweBench | 2026-11-27 | not reported in lab announcement/model card |
+| llama-4-scout | hle | 2026-11-27 | not reported in lab announcement/model card |
+| llama-4-scout | pricing | 2026-11-27 | open-weights release; no first-party USD API price found at launch |
+| llama-3-1-nemotron-ultra-253b | lmarenaElo | 2026-11-27 | arena.ai text leaderboard lists it among unplotted/deprecated models by rank only, no score shown |
+| llama-3-1-nemotron-ultra-253b | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| llama-3-1-nemotron-ultra-253b | sweBench | 2026-11-27 | not reported in lab announcement/model card |
+| llama-3-1-nemotron-ultra-253b | hle | 2026-11-27 | not reported in lab announcement/model card |
+| llama-3-1-nemotron-ultra-253b | pricing | 2026-11-27 | open-weights release; no first-party USD API price found at launch |
+| seed-thinking-v1-5 | lmarenaElo | 2026-11-27 | not found on arena.ai text leaderboard; no lab-published launch Elo |
+| seed-thinking-v1-5 | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| seed-thinking-v1-5 | hle | 2026-11-27 | not reported in lab announcement/model card |
+| seed-thinking-v1-5 | pricing | 2026-11-27 | launch API pricing published in RMB only (no USD list price) |
+| glm-4-32b-0414 | lmarenaElo | 2026-11-27 | not found on arena.ai text leaderboard; no lab-published launch Elo |
+| glm-4-32b-0414 | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| glm-4-32b-0414 | gpqaDiamond | 2026-11-27 | not reported in lab announcement/model card |
+| glm-4-32b-0414 | hle | 2026-11-27 | not reported in lab announcement/model card |
+| glm-4-32b-0414 | pricing | 2026-11-27 | open-weights release; no first-party USD API price found at launch |
+| gpt-4-1-mini | lmarenaElo | 2026-11-27 | arena.ai text leaderboard lists it among unplotted/deprecated models by rank only, no score shown |
+| gpt-4-1-mini | hle | 2026-11-27 | not reported in lab announcement/model card |
+| gpt-4-1-nano | lmarenaElo | 2026-11-27 | arena.ai text leaderboard lists it among unplotted/deprecated models by rank only, no score shown |
+| gpt-4-1-nano | sweBench | 2026-11-27 | OpenAI reported no SWE-bench Verified figure for nano |
+| gpt-4-1-nano | hle | 2026-11-27 | not reported in lab announcement/model card |
+| o4-mini | lmarenaElo | 2026-11-27 | arena.ai text leaderboard lists it among unplotted/deprecated models by rank only, no score shown |
+| gemini-2-5-flash | lmarenaElo | 2026-11-27 | arena.ai text leaderboard lists it among unplotted/deprecated models by rank only, no score shown |
+| gemini-2-5-flash | sweBench | 2026-11-27 | not in 04-17 launch table; GA table column mapping ambiguous in archived text |
+| qwen3-30b-a3b | lmarenaElo | 2026-11-27 | arena.ai text leaderboard lists it among unplotted/deprecated models by rank only, no score shown |
+| qwen3-30b-a3b | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| qwen3-30b-a3b | sweBench | 2026-11-27 | not reported in lab announcement/model card |
+| qwen3-30b-a3b | hle | 2026-11-27 | not reported in lab announcement/model card |
+| qwen3-30b-a3b | pricing | 2026-11-27 | open-weights release; no first-party USD API price found at launch |
+| mimo-7b | lmarenaElo | 2026-11-27 | not found on arena.ai text leaderboard; no lab-published launch Elo |
+| mimo-7b | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| mimo-7b | sweBench | 2026-11-27 | not reported in lab announcement/model card |
+| mimo-7b | hle | 2026-11-27 | not reported in lab announcement/model card |
+| mimo-7b | pricing | 2026-11-27 | open-weights release; no first-party USD API price found at launch |
+| phi-4-reasoning | lmarenaElo | 2026-11-27 | not found on arena.ai text leaderboard; no lab-published launch Elo |
+| phi-4-reasoning | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| phi-4-reasoning | sweBench | 2026-11-27 | not reported in lab announcement/model card |
+| phi-4-reasoning | hle | 2026-11-27 | not reported in lab announcement/model card |
+| phi-4-reasoning | pricing | 2026-11-27 | open-weights release; no first-party USD API price found at launch |
+| devstral | lmarenaElo | 2026-11-27 | not found on arena.ai text leaderboard; no lab-published launch Elo |
+| devstral | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| devstral | gpqaDiamond | 2026-11-27 | not reported in lab announcement/model card |
+| devstral | hle | 2026-11-27 | not reported in lab announcement/model card |
+| deepseek-r1-0528 | lmarenaElo | 2026-11-27 | arena.ai text leaderboard lists it among unplotted/deprecated models by rank only, no score shown |
+| magistral-medium | lmarenaElo | 2026-11-27 | arena.ai text leaderboard lists it among unplotted/deprecated models by rank only, no score shown |
+| magistral-medium | sweBench | 2026-11-27 | not reported in lab announcement/model card |
+| magistral-medium | hle | 2026-11-27 | not reported in lab announcement/model card |
+| magistral-small | lmarenaElo | 2026-11-27 | not found on arena.ai text leaderboard; no lab-published launch Elo |
+| magistral-small | sweBench | 2026-11-27 | not reported in lab announcement/model card |
+| magistral-small | hle | 2026-11-27 | not reported in lab announcement/model card |
+| o3-pro | lmarenaElo | 2026-11-27 | not found on arena.ai text leaderboard; no lab-published launch Elo |
+| o3-pro | gpqaDiamond | 2026-11-27 | lab published scores only as chart images; no text/table figure found |
+| o3-pro | sweBench | 2026-11-27 | lab published scores only as chart images; no text/table figure found |
+| o3-pro | hle | 2026-11-27 | lab published scores only as chart images; no text/table figure found |
+| minimax-m1 | lmarenaElo | 2026-11-27 | arena.ai text leaderboard lists it among unplotted/deprecated models by rank only, no score shown |
+| minimax-m1 | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| gemini-2-5-flash-lite | lmarenaElo | 2026-11-27 | arena.ai text leaderboard lists it among unplotted/deprecated models by rank only, no score shown |
+| gemini-2-5-flash-lite | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| hunyuan-a13b | lmarenaElo | 2026-11-27 | not found on arena.ai text leaderboard; no lab-published launch Elo |
+| hunyuan-a13b | arcAgi2 | 2026-11-27 | not in ARC Prize evaluations data (arcprize.org/media/data/evaluations.json) |
+| hunyuan-a13b | sweBench | 2026-11-27 | not reported in lab announcement/model card |
+| hunyuan-a13b | hle | 2026-11-27 | not reported in lab announcement/model card |
+| hunyuan-a13b | pricing | 2026-11-27 | open-weights release; no first-party USD API price found at launch |
+| devstral-medium | contextWindow | 2026-11-27 | not stated in Mistral's devstral-2507 announcement |
+| qwen3-coder-480b | pricing | 2026-11-27 | hosted qwen3-coder-plus is tier-priced on Model Studio; launch blog gives no price |
+| step-3 | gpqaDiamond | 2026-11-27 | StepFun's benchmark table is published only as an image on the HF card |
+| step-3 | mmluPro | 2026-11-27 | StepFun's benchmark table is published only as an image on the HF card |
+| step-3 | aime | 2026-11-27 | StepFun's benchmark table is published only as an image on the HF card |
+| step-3 | pricing | 2026-11-27 | HF card points to platform.stepfun.com; no price found |
+| glm-4-5 | aime | 2026-11-27 | technical report gives AIME 2024 only (91.0) |
+| glm-4-5-air | aime | 2026-11-27 | technical report gives AIME 2024 only (89.4) |
+| deepseek-v3-1 | pricing | 2026-11-27 | official price table is an image; secondary sources conflict ($1.68 vs $1.12 output) |
+| deepseek-v3-1 | maxOutput | 2026-11-27 | not stated in DeepSeek's V3.1 news post or HF card |
+| command-a-reasoning | pricing | 2026-11-27 | Cohere blog lists no API price |
+| command-a-reasoning | gpqaDiamond | 2026-11-27 | only an unattributed 66.67 in the HF card's eval widget; no Cohere-stated figure |
+| grok-code-fast-1 | contextWindow | 2026-11-27 | not in xAI's announcement; docs page gone (404); aggregators say 256K |
+| mai-1-preview | lmarenaElo | 2026-11-27 | debuted on LMArena but no archived score found from a primary source |
+| longcat-flash-chat | pricing | 2026-11-27 | no first-party API price found |
+| longcat-flash-chat | hle | 2026-11-27 | not in the HF card's evaluation table |
+| ernie-x1-1 | gpqaDiamond | 2026-11-27 | Baidu published only relative improvements, no benchmark scores |
+| ernie-x1-1 | pricing | 2026-11-27 | pricing unclear at launch per reviewers; not on Baidu's announcement |
+| qwen3-next-80b-a3b | hle | 2026-11-27 | not on the Thinking model card |
+| qwen3-next-80b-a3b | pricing | 2026-11-27 | Model Studio price not verified |
+| gpt-5-codex | gpqaDiamond | 2026-11-27 | OpenAI published coding results only |
+| glm-4-6 | gpqaDiamond | 2026-11-27 | Z.ai's GLM-4.6 figures are image-only; trackers disagree (e.g. AIME 93.9 vs 98.6) |
+| glm-4-6 | aime | 2026-11-27 | Z.ai's GLM-4.6 figures are image-only; trackers disagree |
+| glm-4-6 | hle | 2026-11-27 | Z.ai's GLM-4.6 figures are image-only; 30.4 with tools only via a secondary source |
+| ling-1t | pricing | 2026-11-27 | only third-party OpenRouter rate found ($0.57/$2.28) |
+| ling-1t | gpqaDiamond | 2026-11-27 | HF card benchmarks are chart images; press release gives AIME only |
+| composer-1 | pricing | 2026-11-27 | Cursor's announcement gives no price; current Cursor docs list only Composer 2.5 |
+| swe-1-5 | sweBenchPro | 2026-11-27 | Cognition says "near-frontier" with no number |
+| swe-1-5 | pricing | 2026-11-27 | not listed in Cognition's announcement |
+| grok-4-1-fast | gpqaDiamond | 2026-11-27 | xAI's announcement gives tool-use evals only |
+| deepseek-v3-2-speciale | sweBench | 2026-11-27 | technical report gives no SWE-bench figure for Speciale (no tool use) |
+| nova-2-lite | pricing | 2026-11-27 | Bedrock model card defers to AWS pricing page; aggregators say $0.30/$2.50 |
+| nova-2-lite | gpqaDiamond | 2026-11-27 | Nova 2 technical report PDF could not be retrieved; Amazon blog gives win counts only |
+| hy-2-0 | gpqaDiamond | 2026-11-27 | Tencent published no numeric scores at launch |
+| hy-2-0 | pricing | 2026-11-27 | Tencent Cloud price not found |
+| devstral-2 | terminalBench | 2026-11-27 | Mistral reports Terminal Bench 2 (32.6), not 2.1 |
+| minimax-m2-1 | pricing | 2026-11-27 | official MiniMax pay-as-you-go page 404; aggregators say $0.30/$1.20 |
+| minimax-m2-1 | contextWindow | 2026-11-27 | not stated on the M2.1 model card or announcement |
+| seed-1-8 | pricing | 2026-11-27 | not in ByteDance's announcement or model card |
+| seed-1-8 | contextWindow | 2026-11-27 | not in ByteDance's announcement or model card |
+| gpt-5-2-codex | sweBenchPro | 2026-11-27 | OpenAI claims SOTA without a number in the announcement text |
+| gemini-3-flash | knowledgeCutoff | 2026-11-27 | model card defers to Gemini 3 Pro's; not stated directly |
+| glm-4-7-flash | contextWindow | 2026-11-27 | HF model card states only a 131,072 max-new-token setting, no context length; docs.z.ai not checked for this model |
+| qwen3-max-thinking | hle | 2026-11-27 | Alibaba published only HLE 49.8 with web search; no lab no-tools figure (Artificial Analysis' 26% is its own run) |
+| qwen3-max-thinking | maxOutput | 2026-11-27 | no official max-output figure found; qwen.ai blog unreadable, Model Studio page doesn't list it |
+| trinity-large-preview | pricing | 2026-11-27 | no first-party price; only served via OpenRouter at launch |
+| trinity-large-preview | contextWindow | 2026-11-27 | card says pretrained 8,192 and extended to 512K; no served limit stated |
+| claude-opus-4-6 | terminalBench | 2026-11-27 | only Terminal-Bench 2.0 (65.4) published at launch |
+| claude-opus-4-6 | gdpvalAA | 2026-11-27 | launch GDPval-AA 1606 predates GDPval-AA v2 |
+| gpt-5-3-codex | gpqaDiamond | 2026-11-27 | launch post reports no GPQA, HLE or SWE-bench Verified |
+| gpt-5-3-codex-spark | pricing | 2026-11-27 | no API price published; design-partner API only; developers.openai.com model page 404 |
+| gpt-5-3-codex-spark | sweBenchPro | 2026-11-27 | launch post names SWE-Bench Pro and Terminal-Bench 2.0 but gives no numbers |
+| grok-4-20 | gpqaDiamond | 2026-11-27 | xAI published no benchmark table; only third-party (Artificial Analysis/OpenRouter) figures exist |
+| grok-4-20 | maxOutput | 2026-11-27 | xAI model page lists no max output |
+| gpt-5-3-instant | gpqaDiamond | 2026-11-27 | OpenAI published no standard benchmarks, only internal hallucination evals |
+| gemini-3-1-flash-lite | knowledgeCutoff | 2026-11-27 | not listed on Google's model pages (preview or stable) |
+| gemini-3-1-flash-lite | hle | 2026-11-27 | launch table is an image; only GPQA, MMMU-Pro and Arena Elo appear in text |
+| sarvam-105b | pricing | 2026-11-27 | blog and docs read give no per-token price |
+| minimax-m2-7 | maxOutput | 2026-11-27 | aggregators disagree (131,072 on Pi); MiniMax's current pricing/docs no longer list M2.7 |
+| mimo-v2-pro | gpqaDiamond | 2026-11-27 | Xiaomi published only PinchBench and ClawEval at launch |
+| qwen3-6-plus | pricing | 2026-11-27 | no first-party USD price found (Model Studio models page doesn't list it); OpenRouter $0.325/$1.95, Bailian ¥2/¥12 |
+| qwen3-6-plus | terminalBench | 2026-11-27 | Alibaba reported Terminal-Bench 2.0 61.6 only; AA's 2.1 figure is third-party |
+| claude-mythos-preview | contextWindow | 2026-11-27 | not published for the Preview; not listed on Anthropic's models overview |
+| claude-opus-4-7 | terminalBench | 2026-11-27 | only Terminal-Bench 2.0 (69.4) published |
+| claude-opus-4-7 | arcAgi2 | 2026-11-27 | not in Anthropic's launch table as reproduced; ARC Prize page not checked |
+| mimo-v2-5-pro | gpqaDiamond | 2026-11-27 | model card gives only base-model few-shot GPQA (66.7) |
+| laguna-m-1 | pricing | 2026-11-27 | free for a limited time on poolside API/OpenRouter at launch; no list price |
+| mistral-medium-3-5 | maxOutput | 2026-11-27 | Mistral docs page doesn't state it |
+| step-3-7-flash | gpqaDiamond | 2026-11-27 | model card reports only HLE (with tools), SWE-bench Pro and Terminal-Bench 2.1 |
+| mai-thinking-1 | pricing | 2026-11-27 | Microsoft published no per-token price (private then public preview on Foundry) |
+| mai-thinking-1 | sweBenchPro | 2026-11-27 | Microsoft says 'toe-to-toe with Claude Opus 4.6' without a number; tables not in page text |
+| mai-code-1-flash | contextWindow | 2026-11-27 | announcement gives no context, parameters or price; Copilot-only |
+| kimi-k2-7-code | sweBenchPro | 2026-11-27 | Moonshot's card reports only in-house and MCP benchmarks |
+| fugu-ultra | knowledgeCutoff | 2026-11-27 | orchestrator over an undisclosed model pool; no cutoff published |
+| ornith-1-0-397b | gpqaDiamond | 2026-11-27 | model card reports no GPQA or HLE |

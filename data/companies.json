@@ -818,5 +818,115 @@
     "color": null,
     "notable": false,
     "order": 82
+  },
+  {
+    "id": "01-ai",
+    "name": "01.AI",
+    "country": "China",
+    "founded": null,
+    "website": "https://www.01.ai",
+    "color": null,
+    "notable": false,
+    "order": 83
+  },
+  {
+    "id": "ai21",
+    "name": "AI21 Labs",
+    "country": "Israel",
+    "founded": null,
+    "website": "https://www.ai21.com",
+    "color": null,
+    "notable": false,
+    "order": 84
+  },
+  {
+    "id": "inflection",
+    "name": "Inflection AI",
+    "country": "United States",
+    "founded": null,
+    "website": "https://inflection.ai",
+    "color": null,
+    "notable": false,
+    "order": 85
+  },
+  {
+    "id": "tii",
+    "name": "Technology Innovation Institute",
+    "country": "United Arab Emirates",
+    "founded": null,
+    "website": "https://www.tii.ae",
+    "color": null,
+    "notable": false,
+    "order": 86
+  },
+  {
+    "id": "bigscience",
+    "name": "BigScience",
+    "country": "France",
+    "founded": null,
+    "website": "https://bigscience.huggingface.co",
+    "color": null,
+    "notable": false,
+    "order": 87
+  },
+  {
+    "id": "databricks",
+    "name": "Databricks",
+    "country": "United States",
+    "founded": null,
+    "website": "https://www.databricks.com",
+    "color": null,
+    "notable": false,
+    "order": 88
+  },
+  {
+    "id": "reka",
+    "name": "Reka",
+    "country": "United States",
+    "founded": null,
+    "website": "https://www.reka.ai",
+    "color": null,
+    "notable": false,
+    "order": 89
+  },
+  {
+    "id": "snowflake",
+    "name": "Snowflake",
+    "country": "United States",
+    "founded": null,
+    "website": "https://www.snowflake.com",
+    "color": null,
+    "notable": false,
+    "order": 90
+  },
+  {
+    "id": "ai2",
+    "name": "Ai2 (Allen Institute for AI)",
+    "country": "United States",
+    "founded": null,
+    "website": "https://allenai.org",
+    "color": null,
+    "notable": false,
+    "order": 91
+  },
+  {
+    "id": "arcee-ai",
+    "name": "Arcee AI",
+    "country": null,
+    "founded": null,
+    "website": "https://www.arcee.ai",
+    "color": null,
+    "notable": false,
+    "order": 92
+  },
+  {
+    "id": "sarvam",
+    "name": "Sarvam AI",
+    "country": "India",
+    "founded": null,
+    "website": "https://www.sarvam.ai",
+    "color": null,
+    "notable": false,
+    "order": 93
   }
 ]

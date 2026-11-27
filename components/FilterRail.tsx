@@ -105,7 +105,7 @@ export function FilterRail({
                 }`}
               >
                 <CompanyLogo companyId={c.id} size={12} />
-                {c.name.replace(" DeepMind", "").replace(" AI", "").replace(" (Qwen)", "")}
+                {c.name.replace(" DeepMind", "").replace(/ AI$/, "").replace(" (Qwen)", "")}
               </button>
             );
           })}

@@ -43,6 +43,9 @@ function checkData({ models, news, companies, reigns, directory = {} }) {
     }
     if (!m.openWeights && m.license) err(`closed model with license ${m.id}`);
     if (m.retirementDate && m.retirementDate < m.releaseDate) err(`retirement before release ${m.id}`);
+    // pages read these as objects; an unknown value is a null field inside, never a null object
+    for (const k of ["pricing", "costPerTask", "speed", "benchmarks"])
+      if (m[k] == null || typeof m[k] !== "object") err(`${k} must be an object on ${m.id}`);
   }
   const byId = new Map(models.map((m) => [m.id, m]));
   // Same walk as the old one-liner: follow predecessors until one repeats.
