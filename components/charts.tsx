@@ -4,6 +4,7 @@ import {
   Bar,
   BarChart,
   CartesianGrid,
+  DefaultZIndexes,
   Legend,
   ReferenceLine,
   ResponsiveContainer,
@@ -12,6 +13,7 @@ import {
   Tooltip,
   XAxis,
   YAxis,
+  ZIndexLayer,
   usePlotArea,
   useXAxisInverseScale,
   useXAxisScale,
@@ -20,7 +22,7 @@ import {
 import { activeBenchmarks, benchmarkByKey, companyColor, modelCompanies, companyName, formatCostPerTask, formatDate } from "@/lib/data";
 import { hasActiveHighlight, isHighlighted } from "@/lib/filter";
 import { doublingMonths, evalFit, fitExponential, monthlyCounts, type ExpFit } from "@/lib/projection";
-import { useState } from "react";
+import { useId, useState } from "react";
 import { LOGO_PATHS } from "@/lib/logos";
 import { CompanyLogo } from "./CompanyLogo";
 import type { BenchmarkKey, Highlight, Model } from "@/lib/types";
@@ -37,7 +39,12 @@ const HIT = 12; // hover target radius in px, independent of the mark's own geom
  * tooltip misses between letter strokes. The transparent circle underneath gives every mark
  * one solid, predictable hit area. It needs fill="transparent" rather than fill="none":
  * "none" is not hit-tested. */
-function logoShape(color: string, logo: (typeof LOGO_PATHS)[string] | undefined, dimming: boolean) {
+function logoShape(
+  color: string,
+  logo: (typeof LOGO_PATHS)[string] | undefined,
+  dimming: boolean,
+  size: number = MARK
+) {
   return function LogoMark(props: unknown) {
     const { cx, cy, payload } = props as { cx?: number; cy?: number; payload?: Point };
     if (cx == null || cy == null) return <g />;
@@ -54,10 +61,10 @@ function logoShape(color: string, logo: (typeof LOGO_PATHS)[string] | undefined,
       <g>
         {hitArea}
         <svg
-          x={cx - MARK / 2}
-          y={cy - MARK / 2}
-          width={MARK}
-          height={MARK}
+          x={cx - size / 2}
+          y={cy - size / 2}
+          width={size}
+          height={size}
           viewBox={logo.viewBox ?? "0 0 24 24"}
           opacity={opacity}
           overflow="visible"
@@ -317,7 +324,9 @@ function dateTicks(min: number, max: number): number[] {
 }
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-const STACK_STEP = 19; // px per stacked release, a little more than a logo mark
+const STACK_STEP = 19; // px per stacked release at full logo size
+const PROJ_HEADROOM = 1.25;
+const MAX_RELEASES_HEIGHT = 460; // keeps the chart within one screen, projection or not
 
 function ReleaseTooltip({ active, payload }: { active?: boolean; payload?: Array<{ payload: Point }> }) {
   if (!active || !payload?.length) return null;
@@ -354,6 +363,7 @@ function ProjectionCurve({ fit, firstIdx, lastOff }: { fit: ExpFit; firstIdx: nu
   const xInverse = useXAxisInverseScale();
   const plot = usePlotArea();
   const [hoverOff, setHoverOff] = useState<number | null>(null);
+  const clipId = useId();
   if (!xScale || !yScale || !xInverse || !plot) return null;
   const end = lastOff + HORIZON;
   const path = (from: number, to: number) => {
@@ -392,7 +402,7 @@ function ProjectionCurve({ fit, firstIdx, lastOff }: { fit: ExpFit; firstIdx: nu
     const value = evalFit(fit, month);
     const px = xScale(monthTs(firstIdx, month));
     const py = yScale(value);
-    if (px != null && py != null) {
+    if (px != null && py != null && py >= plot.y) {
       const projected = month > lastOff;
       const line1 = `${MONTHS[idx % 12]} ${Math.floor(idx / 12)}`;
       const line2 = `${projected ? "projected" : "fit"} ≈ ${value.toFixed(1)} releases`;
@@ -423,7 +433,13 @@ function ProjectionCurve({ fit, firstIdx, lastOff }: { fit: ExpFit; firstIdx: nu
 
   return (
     <g>
-      <path d={path(0, lastOff)} fill="none" stroke="var(--accent)" strokeWidth={1.5} opacity={0.8} pointerEvents="none" />
+      <defs>
+        <clipPath id={clipId}>
+          <rect x={plot.x} y={plot.y} width={plot.width} height={plot.height} />
+        </clipPath>
+      </defs>
+      <g clipPath={`url(#${clipId})`}>
+        <path d={path(0, lastOff)} fill="none" stroke="var(--accent)" strokeWidth={1.5} opacity={0.8} pointerEvents="none" />
       <path
         d={path(lastOff, end)}
         fill="none"
@@ -445,7 +461,8 @@ function ProjectionCurve({ fit, firstIdx, lastOff }: { fit: ExpFit; firstIdx: nu
         onMouseMove={onMove}
         onMouseLeave={() => setHoverOff(null)}
       />
-      {hover}
+      </g>
+      {hover && <ZIndexLayer zIndex={DefaultZIndexes.label}>{hover}</ZIndexLayer>}
     </g>
   );
 }
@@ -532,9 +549,18 @@ export function ReleasesTimeline({
   }
 
   const maxX = proj ? monthTs(proj.firstIdx, proj.lastOff + HORIZON) : dataMaxX;
-  const top = Math.max(tallest, proj ? Math.ceil(proj.endValue) : 0);
+  // The projection may lift the axis to at most PROJ_HEADROOM × the busiest real month;
+  // beyond that the dashed curve runs off the top (clipped) so the logos stay legible.
+  const top = Math.max(
+    tallest,
+    proj ? Math.min(Math.ceil(proj.endValue), Math.ceil(tallest * PROJ_HEADROOM)) : 0
+  );
   const MARGIN_Y = 24 + 4 + 30; // chart margins + x-axis
-  const height = Math.max(300, Math.min(top, 40) * STACK_STEP + MARGIN_Y + STACK_STEP);
+  // Height grows with the tallest stack up to a cap; past it, the logos shrink so each
+  // release still gets its own slot (busy views and the projection use smaller marks).
+  const height = Math.max(300, Math.min(MAX_RELEASES_HEIGHT, (top + 1) * STACK_STEP + MARGIN_Y));
+  const pxPerRelease = (height - MARGIN_Y) / (top + 1);
+  const markSize = Math.max(6, Math.min(MARK, Math.floor(pxPerRelease * 0.85)));
   const yStep = [1, 2, 5, 10, 20, 50, 100].find((st) => top / st <= 6) ?? 200;
   const yTicks = Array.from({ length: Math.floor(top / yStep) }, (_, i) => (i + 1) * yStep);
   const spanMonths = (maxX - minX) / (YEAR_MS / 12);
@@ -598,7 +624,7 @@ export function ReleasesTimeline({
               name={s.company.name}
               data={s.points}
               isAnimationActive={false}
-              shape={logoShape(companyColor(s.company.id), LOGO_PATHS[s.company.id], dimming)}
+              shape={logoShape(companyColor(s.company.id), LOGO_PATHS[s.company.id], dimming, markSize)}
             />
           ))}
           {showLabels && <LabelLayer points={all} dimming={dimming} />}
