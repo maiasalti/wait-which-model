@@ -1374,3 +1374,9 @@ New-model-release sweep on 2026-10-27 (daily sweep, unattended), scoped to `nanb
 | mellum2-1-instruct | lmarenaElo / gdpvalAA / costPerTask | 2026-11-26 | no hosted endpoint; artificialanalysis.ai/models/mellum2-1-instruct 404, not on arena.ai; re-check |
 | mellum2-1-instruct | pricing | 2026-11-26 | open weights only; no HF inference provider, no OpenRouter listing (checked openrouter.ai/api/v1/models), no JetBrains API price |
 | mellum2-1-instruct | maxOutput / knowledgeCutoff | 2026-11-26 | neither stated on the HF card or blog; quickstart max_tokens=81920 is an example setting, not a limit |
+| ernie-5-5-flash-preview | terminalBench | 2026-11-27 | Baidu's HF card reports Terminal-Bench 4.0 (46.5, own eval) only, not the tracked 2.1; no Vals AI or other TB 2.1 run found; in notes |
+| ernie-5-5-flash-preview | hle | 2026-11-27 | Baidu's 46.4 is the text-only HLE subset (marked † on the HF card), not the full set; no third-party full-set run; in notes |
+| ernie-5-5-flash-preview | gpqaDiamond / sweBench / sweBenchPro / arcAgi2 / mmluPro / aime | 2026-11-27 | not in Baidu's 20-row HF evaluation table or the launch blog (which carries benchmarks only as images); no third-party run found |
+| ernie-5-5-flash-preview | lmarenaElo | 2026-11-27 | not on arena.ai's text leaderboard (checked 2026-11-27); only an unconfirmed third-party claim of a Code Arena WebDev score (1668), which is a different board; re-check |
+| ernie-5-5-flash-preview | gdpvalAA / costPerTask | 2026-11-27 | artificialanalysis.ai/models/ernie-5-5-flash-preview returns 404; re-check |
+| ernie-5-5-flash-preview | maxOutput / knowledgeCutoff | 2026-11-27 | neither on the HF card, the launch blog or Qianfan's pricing page; OpenRouter's max_completion_tokens 921,600 is a router setting, not a Baidu figure |

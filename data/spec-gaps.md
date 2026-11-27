@@ -463,3 +463,7 @@ mellum2-1-instruct · predecessorId · 2026-11-26 · HF card (huggingface.co/Jet
 mellum2-1-instruct · speed · 2026-11-26 · Not on Artificial Analysis (404); self-host only. JetBrains' own MTP speed-up claims (up to 1.8x) are vendor figures. Left null.
 mellum2-1-instruct · apiIds · 2026-11-26 · No hosted API: HF lists no inference provider, no OpenRouter, Bedrock or Vertex listing found. Weights at JetBrains/Mellum2.1-12B-A2.5B-Instruct (plus -MTP, -GGUF). Left [].
 mellum2-1-instruct · retirementDate · 2026-11-26 · No lifecycle notice. Left null.
+ernie-5-5-flash-preview · predecessorId · 2026-11-27 · Baidu's blog and HF card call it "the first post-trained model built on ERNIE 5.5 Flash Base" (lineage, and Base is not tracked here); no statement that it replaces ERNIE 5.0, 5.1 or any other model. Left null.
+ernie-5-5-flash-preview · speed · 2026-11-27 · Not on Artificial Analysis (404). Baidu's "over 200 tokens per second" is a vendor figure. Left null.
+ernie-5-5-flash-preview · apiIds · 2026-11-27 · Qianfan's pricing page (cloud.baidu.com/doc/qianfan/s/wmh4sv6ya) shows only the display/version name "ERNIE-5.5-Flash-Preview", not the API model string, so no baidu-qianfan id recorded. OpenRouter id recorded as baidu/ernie-5.5-flash-preview:free (the route Baidu's blog links; the paid baidu/ernie-5.5-flash-preview slug lists no endpoints).
+ernie-5-5-flash-preview · retirementDate · 2026-11-27 · No lifecycle notice; Baidu says an official release will follow but gives no date or shutdown plan for the Preview. Left null.
