@@ -13,6 +13,7 @@ import {
   XAxis,
   YAxis,
   usePlotArea,
+  useXAxisInverseScale,
   useXAxisScale,
   useYAxisScale,
 } from "recharts";
@@ -345,11 +346,16 @@ function monthTs(firstIdx: number, off: number): number {
   return t0 + (t1 - t0) * (off - Math.floor(off));
 }
 
-/** Draws the fitted curve: solid across the months fitted, dashed for the projection. */
+/** Draws the fitted curve: solid across the months fitted, dashed for the projection.
+ *  Hovering the dashed part shows the projected value for that month. */
 function ProjectionCurve({ fit, firstIdx, lastOff }: { fit: ExpFit; firstIdx: number; lastOff: number }) {
   const xScale = useXAxisScale();
   const yScale = useYAxisScale();
-  if (!xScale || !yScale) return null;
+  const xInverse = useXAxisInverseScale();
+  const plot = usePlotArea();
+  const [hoverOff, setHoverOff] = useState<number | null>(null);
+  if (!xScale || !yScale || !xInverse || !plot) return null;
+  const end = lastOff + HORIZON;
   const path = (from: number, to: number) => {
     const pts: string[] = [];
     for (let off = from; off <= to + 1e-9; off += 0.25) {
@@ -359,17 +365,87 @@ function ProjectionCurve({ fit, firstIdx, lastOff }: { fit: ExpFit; firstIdx: nu
     }
     return pts.length ? `M${pts.join("L")}` : "";
   };
+
+  // pixel x → month offset, inverting monthTs one month at a time
+  const offAt = (px: number): number => {
+    const ts = Number(xInverse(px));
+    let i = Math.floor((ts - monthTs(firstIdx, 0)) / (YEAR_MS / 12));
+    i = Math.max(0, Math.min(Math.ceil(end), i));
+    while (i > 0 && monthTs(firstIdx, i) > ts) i--;
+    while (i < end && monthTs(firstIdx, i + 1) <= ts) i++;
+    const t0 = monthTs(firstIdx, i);
+    const t1 = monthTs(firstIdx, i + 1);
+    return Math.max(lastOff, Math.min(end, i + (ts - t0) / (t1 - t0)));
+  };
+  const onMove = (e: React.MouseEvent<SVGPathElement>) => {
+    const svg = e.currentTarget.ownerSVGElement;
+    const ctm = svg?.getScreenCTM();
+    if (!svg || !ctm) return;
+    const pt = new DOMPoint(e.clientX, e.clientY).matrixTransform(ctm.inverse());
+    setHoverOff(offAt(pt.x));
+  };
+
+  let hover: React.ReactNode = null;
+  if (hoverOff != null) {
+    const month = Math.round(hoverOff);
+    const idx = firstIdx + month;
+    const value = evalFit(fit, month);
+    const px = xScale(monthTs(firstIdx, month));
+    const py = yScale(value);
+    if (px != null && py != null) {
+      const projected = month > lastOff;
+      const line1 = `${MONTHS[idx % 12]} ${Math.floor(idx / 12)}`;
+      const line2 = `${projected ? "projected" : "fit"} ≈ ${value.toFixed(1)} releases`;
+      const w = Math.max(line1.length, line2.length) * 6.8 + 18;
+      const h = 36;
+      const bx = px + 10 + w > plot.x + plot.width ? px - 10 - w : px + 10;
+      const by = Math.max(plot.y, Math.min(plot.y + plot.height - h, py - h - 6));
+      hover = (
+        <g pointerEvents="none">
+          <circle cx={px} cy={py} r={4} fill="var(--accent)" />
+          <rect x={bx} y={by} width={w} height={h} rx={3} fill="var(--surface-2)" stroke="var(--line-strong)" />
+          <text x={bx + 8} y={by + 15} fontSize={11} fontWeight={600} fill="var(--ink)">
+            {line1}
+          </text>
+          <text
+            x={bx + 8}
+            y={by + 29}
+            fontSize={10.5}
+            fontFamily="var(--font-plex-mono), ui-monospace, monospace"
+            fill="var(--ink-2)"
+          >
+            {line2}
+          </text>
+        </g>
+      );
+    }
+  }
+
   return (
-    <g pointerEvents="none">
-      <path d={path(0, lastOff)} fill="none" stroke="var(--accent)" strokeWidth={1.5} opacity={0.8} />
+    <g>
+      <path d={path(0, lastOff)} fill="none" stroke="var(--accent)" strokeWidth={1.5} opacity={0.8} pointerEvents="none" />
       <path
-        d={path(lastOff, lastOff + HORIZON)}
+        d={path(lastOff, end)}
         fill="none"
         stroke="var(--accent)"
         strokeWidth={1.5}
         strokeDasharray="5 4"
         opacity={0.8}
+        pointerEvents="none"
       />
+      {/* wide invisible hit area along the projected (dashed) part only, so it never
+          sits over a company logo and steals that logo's tooltip */}
+      <path
+        d={path(lastOff, end)}
+        fill="none"
+        stroke="transparent"
+        strokeWidth={16}
+        pointerEvents="stroke"
+        style={{ cursor: "crosshair" }}
+        onMouseMove={onMove}
+        onMouseLeave={() => setHoverOff(null)}
+      />
+      {hover}
     </g>
   );
 }
@@ -516,7 +592,6 @@ export function ReleasesTimeline({
             width={52}
           />
           <Tooltip cursor={false} content={<ReleaseTooltip />} />
-          {proj && <ProjectionCurve fit={proj.fit} firstIdx={proj.firstIdx} lastOff={proj.lastOff} />}
           {series.map((s) => (
             <Scatter
               key={s.company.id}
@@ -527,6 +602,7 @@ export function ReleasesTimeline({
             />
           ))}
           {showLabels && <LabelLayer points={all} dimming={dimming} />}
+          {proj && <ProjectionCurve fit={proj.fit} firstIdx={proj.firstIdx} lastOff={proj.lastOff} />}
         </ScatterChart>
       </ResponsiveContainer>
       {projecting && (
