@@ -70,7 +70,7 @@ export function FilterRail({
   ];
 
   return (
-    <aside className="flex flex-col gap-5 rounded-lg border border-line p-4">
+    <aside className="flex flex-col gap-5 lg:w-[26rem] lg:shrink-0 xl:w-[30rem]">
       <section>
         <h3 className={HEADING}>Companies</h3>
         <div className="mt-2 flex flex-wrap items-center gap-1.5" role="group" aria-label="Quick company selection">
@@ -112,7 +112,7 @@ export function FilterRail({
         </div>
       </section>
 
-      <div className="grid gap-5 border-t border-line pt-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-5 border-t border-line pt-4 sm:grid-cols-2">
         <section>
           <h3 className={HEADING}>Released within</h3>
           <div className="mt-2 flex flex-wrap gap-1" role="group" aria-label="Release window">

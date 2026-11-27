@@ -63,7 +63,9 @@ export default function CompareClient() {
   };
 
   return (
-    <div>
+    // Full-bleed: break out of the layout's max-w-7xl so the filter column and the
+    // charts share the whole screen width side by side.
+    <div className="ml-[calc(50%-50vw)] w-screen px-4 sm:px-6 lg:px-8">
       <section className="pt-10 pb-8">
         <p className="mono text-xs uppercase tracking-[0.25em] text-ink-3">
           Visual comparison
@@ -78,8 +80,8 @@ export default function CompareClient() {
         </p>
       </section>
 
-      <div className="flex flex-col gap-8">
-        <div>
+      <div className="flex flex-col gap-8 lg:flex-row lg:items-start">
+        <div className="lg:sticky lg:top-20 lg:max-h-[calc(100vh-5.5rem)] lg:overflow-y-auto lg:pb-4 lg:pr-2">
           <FilterRail
             filters={filters}
             setFilters={setFilters}

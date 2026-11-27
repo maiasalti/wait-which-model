@@ -79,7 +79,7 @@ gtag('js', new Date());
 gtag('config', 'G-GJFVT58K8P');`}
         </Script>
       </head>
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col overflow-x-clip">
         <Nav />
         <main className="mx-auto w-full max-w-7xl flex-1 px-4 pb-24 sm:px-6">
           {children}
