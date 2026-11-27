@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { companyById, companyColor, modelCompanies, models } from "@/lib/data";
 import type { Model, ModelStatus } from "@/lib/types";
+import { countriesOf } from "@/lib/format";
 import { ModelCard } from "@/components/ModelCard";
 import { CompanyLogo } from "@/components/CompanyLogo";
 import { CompanySelect } from "@/components/CompanySelect";
@@ -29,11 +30,9 @@ const SORTS: { key: SortKey; label: string }[] = [
   { key: "hle", label: "Best HLE" },
 ];
 
-// A company can span countries ("United States / United Kingdom") — filter on each part.
-const countriesOf = (country: string) => country.split("/").map((s) => s.trim());
 
 const LOCATIONS = Array.from(
-  new Set(modelCompanies.flatMap((c) => countriesOf(c.country ?? "")))
+  new Set(modelCompanies.flatMap((c) => countriesOf(c.country)))
 ).sort();
 
 export default function DirectoryPage() {
@@ -51,7 +50,7 @@ export default function DirectoryPage() {
       if (status !== "all" && m.status !== status) return false;
       if (
         location !== "all" &&
-        !countriesOf(companyById.get(m.company)?.country ?? "").includes(location)
+        !countriesOf(companyById.get(m.company)?.country).includes(location)
       )
         return false;
       if (openOnly && !m.openWeights) return false;

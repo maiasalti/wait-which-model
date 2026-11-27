@@ -58,3 +58,8 @@ export const NEUTRAL_COMPANY_COLOR = "#8A93A6";
 export function resolveColor(color: string | null | undefined): string {
   return color ?? NEUTRAL_COMPANY_COLOR;
 }
+
+/** A company can span countries ("United States / United Kingdom"): every part counts. */
+export function countriesOf(country: string | null | undefined): string[] {
+  return (country ?? "").split("/").map((s) => s.trim()).filter(Boolean);
+}

@@ -12,7 +12,7 @@ test("round-trips a fully populated state", () => {
     filters: {
       window: "1y" as const,
       companies: ["openai", "anthropic"],
-      openWeightsOnly: true,
+      weights: "closed" as const,
       frontierOnly: true,
       benchmark: "hle" as const,
       minScore: 40,
@@ -93,4 +93,12 @@ test("the default labs in a different order are still omitted", () => {
   const reordered = [...DEFAULT_COMPARE_STATE.filters.companies].reverse();
   const q = stateToQuery({ ...DEFAULT_COMPARE_STATE, filters: { ...DEFAULT_COMPARE_STATE.filters, companies: reordered } });
   assert.equal(q, "");
+});
+
+test("legacy open=1 links still mean open weights only", () => {
+  assert.equal(queryToState(new URLSearchParams("open=1")).filters.weights, "open");
+});
+
+test("an unknown weights value falls back to all", () => {
+  assert.equal(queryToState(new URLSearchParams("weights=banana")).filters.weights, "all");
 });

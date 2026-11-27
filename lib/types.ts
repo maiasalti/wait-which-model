@@ -184,10 +184,12 @@ export interface NewsRef {
 
 export type TimeWindow = "3m" | "6m" | "1y" | "2y" | "3y" | "all";
 
+export type WeightsFilter = "all" | "open" | "closed";
+
 export interface Filters {
   window: TimeWindow;
   companies: string[]; // empty = all
-  openWeightsOnly: boolean;
+  weights: WeightsFilter;
   frontierOnly: boolean;
   benchmark: BenchmarkKey;
   minScore: number | null;

@@ -74,12 +74,12 @@ export default function CompareClient() {
         <p className="mt-3 max-w-2xl text-sm text-ink-2">
           Customizable model analytics. Filter by time, company, price and
           score; highlight a model, a group, or a whole lab. Every chart
-          reads from the same filter rail.
+          reads from the same filters.
         </p>
       </section>
 
-      <div className="flex flex-col gap-8 lg:flex-row lg:items-start">
-        <div className="lg:sticky lg:top-20 lg:max-h-[calc(100vh-5.5rem)] lg:overflow-y-auto lg:pb-4">
+      <div className="flex flex-col gap-8">
+        <div>
           <FilterRail
             filters={filters}
             setFilters={setFilters}

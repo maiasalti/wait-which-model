@@ -25,7 +25,7 @@ export const FRONTIER_LABS = ["anthropic", "openai", "google", "xai", "meta"];
 export const DEFAULT_FILTERS: Filters = {
   window: "all",
   companies: FRONTIER_LABS,
-  openWeightsOnly: false,
+  weights: "all",
   frontierOnly: false,
   benchmark: "sweBench",
   minScore: null,
@@ -46,7 +46,8 @@ export function applyFilters(all: Model[], f: Filters, now: Date): Model[] {
   return all.filter((m) => {
     if (cutoff && new Date(m.releaseDate) < cutoff) return false;
     if (f.companies.length > 0 && !f.companies.includes(m.company)) return false;
-    if (f.openWeightsOnly && !m.openWeights) return false;
+    if (f.weights === "open" && !m.openWeights) return false;
+    if (f.weights === "closed" && m.openWeights) return false;
     if (f.frontierOnly && m.status !== "frontier") return false;
     if (f.minScore != null) {
       const score = m.benchmarks[f.benchmark];

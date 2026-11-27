@@ -18,6 +18,8 @@ import {
 } from "recharts";
 import { activeBenchmarks, benchmarkByKey, companyColor, modelCompanies, companyName, formatCostPerTask, formatDate } from "@/lib/data";
 import { hasActiveHighlight, isHighlighted } from "@/lib/filter";
+import { doublingMonths, evalFit, fitExponential, monthlyCounts, type ExpFit } from "@/lib/projection";
+import { useState } from "react";
 import { LOGO_PATHS } from "@/lib/logos";
 import { CompanyLogo } from "./CompanyLogo";
 import type { BenchmarkKey, Highlight, Model } from "@/lib/types";
@@ -332,9 +334,55 @@ function ReleaseTooltip({ active, payload }: { active?: boolean; payload?: Array
   );
 }
 
+const HORIZON = 6; // months the projection extends past the last month in view
+
+/** Month offset (fractional) since the fit's first month → x timestamp, matching the
+ *  15th-of-month placement of the stacked marks. */
+function monthTs(firstIdx: number, off: number): number {
+  const i = firstIdx + Math.floor(off);
+  const t0 = Date.UTC(Math.floor(i / 12), i % 12, 15);
+  const t1 = Date.UTC(Math.floor((i + 1) / 12), (i + 1) % 12, 15);
+  return t0 + (t1 - t0) * (off - Math.floor(off));
+}
+
+/** Draws the fitted curve: solid across the months fitted, dashed for the projection. */
+function ProjectionCurve({ fit, firstIdx, lastOff }: { fit: ExpFit; firstIdx: number; lastOff: number }) {
+  const xScale = useXAxisScale();
+  const yScale = useYAxisScale();
+  if (!xScale || !yScale) return null;
+  const path = (from: number, to: number) => {
+    const pts: string[] = [];
+    for (let off = from; off <= to + 1e-9; off += 0.25) {
+      const px = xScale(monthTs(firstIdx, off));
+      const py = yScale(evalFit(fit, off));
+      if (px != null && py != null) pts.push(`${px.toFixed(1)},${py.toFixed(1)}`);
+    }
+    return pts.length ? `M${pts.join("L")}` : "";
+  };
+  return (
+    <g pointerEvents="none">
+      <path d={path(0, lastOff)} fill="none" stroke="var(--accent)" strokeWidth={1.5} opacity={0.8} />
+      <path
+        d={path(lastOff, lastOff + HORIZON)}
+        fill="none"
+        stroke="var(--accent)"
+        strokeWidth={1.5}
+        strokeDasharray="5 4"
+        opacity={0.8}
+      />
+    </g>
+  );
+}
+
+const monthLabel = (key: string) => {
+  const [y, m] = key.split("-").map(Number);
+  return `${MONTHS[m - 1]} '${String(y).slice(2)}`;
+};
+
 /** Model releases per month: one column per month, one company logo per release stacked
  *  upward in release order, so every release has its own slot and none overlap. Taller
- *  columns = busier months. Reads the models in view, so the filter rail still applies. */
+ *  columns = busier months. Reads the models in view, so the filter rail still applies.
+ *  "Show projection" overlays an exponential fit y = k·e^(ax) and extends it HORIZON months. */
 export function ReleasesTimeline({
   shown,
   highlight,
@@ -344,6 +392,7 @@ export function ReleasesTimeline({
   highlight: Highlight;
   showLabels?: boolean;
 }) {
+  const [projecting, setProjecting] = useState(false);
   const order = [...shown].sort(
     (a, b) => a.releaseDate.localeCompare(b.releaseDate) || a.name.localeCompare(b.name)
   );
@@ -366,26 +415,77 @@ export function ReleasesTimeline({
   const all = series.flatMap((s) => s.points);
   if (all.length === 0) return <EmptyChart label="No models in view." />;
   const minX = Math.min(...all.map((p) => p.x));
-  const maxX = Math.max(...all.map((p) => p.x));
+  const dataMaxX = Math.max(...all.map((p) => p.x));
   const tallest = Math.max(...perMonth.values());
+
+  // Projection: fit on zero-filled monthly counts, leaving out the current month
+  // because it is still incomplete and would drag the curve down.
+  let proj: null | {
+    fit: ExpFit;
+    firstIdx: number;
+    lastOff: number;
+    first: string;
+    last: string;
+    excluded: string | null;
+    endKey: string;
+    endValue: number;
+  } = null;
+  if (projecting) {
+    const now = new Date();
+    const current = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
+    const dates = order.map((m) => m.releaseDate);
+    const counts = monthlyCounts(dates, current);
+    const fit = counts.length ? fitExponential(counts) : null;
+    if (fit) {
+      const [fy, fm] = dates[0].split("-").map(Number);
+      const firstIdx = fy * 12 + fm - 1;
+      const [ly, lm] = dates[dates.length - 1].split("-").map(Number);
+      const lastOff = ly * 12 + lm - 1 - firstIdx;
+      const endIdx = firstIdx + lastOff + HORIZON;
+      proj = {
+        fit,
+        firstIdx,
+        lastOff,
+        first: counts[0].key,
+        last: counts[counts.length - 1].key,
+        excluded: dates.some((d) => d.startsWith(current)) ? current : null,
+        endKey: `${Math.floor(endIdx / 12)}-${String((endIdx % 12) + 1).padStart(2, "0")}`,
+        endValue: evalFit(fit, lastOff + HORIZON),
+      };
+    }
+  }
+
+  const maxX = proj ? monthTs(proj.firstIdx, proj.lastOff + HORIZON) : dataMaxX;
+  const top = Math.max(tallest, proj ? Math.ceil(proj.endValue) : 0);
   const MARGIN_Y = 24 + 4 + 30; // chart margins + x-axis
-  const height = Math.max(300, tallest * STACK_STEP + MARGIN_Y + STACK_STEP);
-  const yStep = [1, 2, 5, 10, 20].find((st) => tallest / st <= 6) ?? 50;
-  const yTicks = Array.from({ length: Math.floor(tallest / yStep) }, (_, i) => (i + 1) * yStep);
+  const height = Math.max(300, Math.min(top, 40) * STACK_STEP + MARGIN_Y + STACK_STEP);
+  const yStep = [1, 2, 5, 10, 20, 50, 100].find((st) => top / st <= 6) ?? 200;
+  const yTicks = Array.from({ length: Math.floor(top / yStep) }, (_, i) => (i + 1) * yStep);
   const spanMonths = (maxX - minX) / (YEAR_MS / 12);
   const ticks =
     spanMonths <= 18
-      ? Array.from(perMonth.keys()).map((k) => {
-          const [yr, mo] = k.split("-").map(Number);
-          return Date.UTC(yr, mo - 1, 15);
+      ? Array.from({ length: Math.round(spanMonths) + 1 }, (_, i) => {
+          const d = new Date(minX);
+          return Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + i, 15);
         })
       : dateTicks(minX, maxX);
 
   return (
     <figure>
-      <figcaption className="mb-1 text-sm font-semibold">
+      <figcaption className="mb-1 flex flex-wrap items-baseline gap-x-2 text-sm font-semibold">
         Model releases per month
-        <span className="ml-2 font-normal text-ink-3">one mark per release, stacked in release order</span>
+        <span className="font-normal text-ink-3">one mark per release, stacked in release order</span>
+        <button
+          onClick={() => setProjecting((v) => !v)}
+          aria-pressed={projecting}
+          className={`mono ml-auto rounded border px-2.5 py-1 text-[11px] font-normal uppercase tracking-wider transition-colors ${
+            projecting
+              ? "border-accent/60 bg-accent/15 text-ink"
+              : "border-line text-ink-2 hover:text-ink"
+          }`}
+        >
+          {projecting ? "Hide projection" : "Show projection"}
+        </button>
       </figcaption>
       <ResponsiveContainer width="100%" height={height}>
         <ScatterChart margin={{ top: 24, right: 56, bottom: 4, left: -8 }}>
@@ -408,13 +508,15 @@ export function ReleasesTimeline({
           <YAxis
             type="number"
             dataKey="y"
-            domain={[0.4, tallest + 0.6]}
+            domain={[0.4, top + 0.6]}
+            allowDataOverflow
             ticks={yTicks}
             tickLine={false}
             axisLine={false}
             width={52}
           />
           <Tooltip cursor={false} content={<ReleaseTooltip />} />
+          {proj && <ProjectionCurve fit={proj.fit} firstIdx={proj.firstIdx} lastOff={proj.lastOff} />}
           {series.map((s) => (
             <Scatter
               key={s.company.id}
@@ -427,6 +529,27 @@ export function ReleasesTimeline({
           {showLabels && <LabelLayer points={all} dimming={dimming} />}
         </ScatterChart>
       </ResponsiveContainer>
+      {projecting && (
+        <p className="mono px-1 pt-1 text-[11px] leading-relaxed text-ink-3">
+          {proj ? (
+            <>
+              <span className="text-ink-2">
+                y = {proj.fit.k.toPrecision(3)} · e^({proj.fit.a.toFixed(3)}x)
+              </span>
+              , x = months since {monthLabel(proj.first)}
+              {doublingMonths(proj.fit) != null &&
+                ` · doubles every ${doublingMonths(proj.fit)!.toFixed(1)} months`}
+              {` · projected ${monthLabel(proj.endKey)}: ~${Math.round(proj.endValue)} releases/month`}
+              . Fitted to {monthLabel(proj.first)}–{monthLabel(proj.last)}, months with no releases
+              included
+              {proj.excluded && `; ${monthLabel(proj.excluded)} left out as still incomplete`}. Solid =
+              fit, dashed = projection. Counts only the models in view and tracked on this site.
+            </>
+          ) : (
+            "Not enough months in view to fit a curve."
+          )}
+        </p>
+      )}
       <CompanyLegend shown={shown} />
     </figure>
   );

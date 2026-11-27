@@ -1,4 +1,4 @@
-import type { BenchmarkKey, Filters, TimeWindow } from "./types";
+import type { BenchmarkKey, Filters, TimeWindow, WeightsFilter } from "./types";
 import { DEFAULT_FILTERS } from "./filter.ts";
 
 export interface CompareState {
@@ -68,7 +68,7 @@ export function stateToQuery(
   // An empty `co=` is meaningful: the user cleared the default labs to see
   // every company, and a shared link must keep that.
   if (!sameSet(f.companies, d.companies)) p.set("co", f.companies.join(","));
-  if (f.openWeightsOnly) p.set("open", "1");
+  if (f.weights !== "all") p.set("weights", f.weights);
   if (f.frontierOnly) p.set("frontier", "1");
   if (f.benchmark !== d.benchmark) p.set("bench", f.benchmark);
   if (f.minScore != null) p.set("min", String(f.minScore));
@@ -100,7 +100,12 @@ export function queryToState(
         : d.window,
       // Same `has` rule as picks: absent = default labs, `co=` = all companies.
       companies: params.has("co") ? list(params.get("co")) : d.companies,
-      openWeightsOnly: params.get("open") === "1",
+      // `open=1` is the pre-November-2026 form of `weights=open`; old shared links keep working.
+      weights: (["open", "closed"] as WeightsFilter[]).includes(params.get("weights") as WeightsFilter)
+        ? (params.get("weights") as WeightsFilter)
+        : params.get("open") === "1"
+          ? "open"
+          : "all",
       frontierOnly: params.get("frontier") === "1",
       benchmark: BENCHMARKS.includes(bench as BenchmarkKey)
         ? (bench as BenchmarkKey)
