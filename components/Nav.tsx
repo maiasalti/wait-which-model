@@ -137,7 +137,7 @@ export function Nav() {
         </nav>
         <div className="ml-auto flex items-center gap-3">
           <span className="mono hidden text-[10px] uppercase tracking-widest text-ink-3 lg:block">
-            SWE-bench frontier →
+            Model releases →
           </span>
           <FrontierSparkline />
         </div>
