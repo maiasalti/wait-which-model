@@ -39,7 +39,9 @@ export function CompanyLogo({
       aria-label={companyName(companyId)}
       className={className}
     >
-      {logo.stroke ? (
+      {logo.parts ? (
+        logo.parts.map((part) => <path key={part.path} d={part.path} fill={part.color} />)
+      ) : logo.stroke ? (
         <path
           d={logo.path}
           fill="none"
