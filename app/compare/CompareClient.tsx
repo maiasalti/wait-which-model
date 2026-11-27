@@ -7,7 +7,7 @@ import { applyFilters } from "@/lib/filter";
 import { DEFAULT_COMPARE_STATE, queryToState, stateToQuery } from "@/lib/compare-url";
 import type { Filters, Highlight } from "@/lib/types";
 import { FilterRail } from "@/components/FilterRail";
-import { CostPerfScatter, HeadToHead, TimelineScatter } from "@/components/charts";
+import { CostPerfScatter, HeadToHead, ReleasesTimeline } from "@/components/charts";
 import { SpecDiff } from "@/components/SpecDiff";
 
 const MAX_PICKS = 5;
@@ -101,9 +101,8 @@ export default function CompareClient() {
           >
             {showLabels ? "Turn off labels" : "Turn on labels"}
           </button>
-          <TimelineScatter
+          <ReleasesTimeline
             shown={shown}
-            benchmark={filters.benchmark}
             highlight={highlight}
             showLabels={showLabels}
           />

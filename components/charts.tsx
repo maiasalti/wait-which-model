@@ -5,6 +5,7 @@ import {
   BarChart,
   CartesianGrid,
   Legend,
+  ReferenceLine,
   ResponsiveContainer,
   Scatter,
   ScatterChart,
@@ -15,7 +16,7 @@ import {
   useXAxisScale,
   useYAxisScale,
 } from "recharts";
-import { activeBenchmarks, benchmarkByKey, companyColor, modelCompanies, companyName, formatDate, formatPrice } from "@/lib/data";
+import { activeBenchmarks, benchmarkByKey, companyColor, modelCompanies, companyName, formatCostPerTask, formatDate } from "@/lib/data";
 import { hasActiveHighlight, isHighlighted } from "@/lib/filter";
 import { LOGO_PATHS } from "@/lib/logos";
 import { CompanyLogo } from "./CompanyLogo";
@@ -277,7 +278,7 @@ function ChartTooltip({
       <p className="mono text-ink-3">
         {xLabel === "date"
           ? formatDate(m.releaseDate)
-          : `${formatPrice(m.pricing.inputPerMTok)}/MTok input · ${formatDate(m.releaseDate)}`}
+          : `${formatCostPerTask(m.costPerTask?.usd)}/task · ${formatDate(m.releaseDate)}`}
       </p>
       <p className="mono text-ink-3">{companyName(m.company)}</p>
     </div>
@@ -312,36 +313,55 @@ function dateTicks(min: number, max: number): number[] {
   return ticks;
 }
 
-export function TimelineScatter({
+function ReleaseTooltip({ active, payload }: { active?: boolean; payload?: Array<{ payload: Point }> }) {
+  if (!active || !payload?.length) return null;
+  const p = payload[0].payload;
+  const m = p.model;
+  return (
+    <div className="rounded border border-line-strong bg-surface-2 p-3 text-xs shadow-xl">
+      <p className="flex items-center gap-1.5 font-semibold text-ink">
+        <CompanyLogo companyId={m.company} size={12} />
+        {m.name}
+      </p>
+      <p className="mono mt-1 text-ink-2">Release #{p.y} in view</p>
+      <p className="mono text-ink-3">{formatDate(m.releaseDate)}</p>
+      <p className="mono text-ink-3">{companyName(m.company)}</p>
+    </div>
+  );
+}
+
+/** Model releases over time: x = release date, y = running count of releases among the
+ * models in view (so the filter rail still applies), one company logo per release. */
+export function ReleasesTimeline({
   shown,
-  benchmark,
   highlight,
   showLabels = false,
 }: {
   shown: Model[];
-  benchmark: BenchmarkKey;
   highlight: Highlight;
   showLabels?: boolean;
 }) {
-  const meta = benchmarkByKey.get(benchmark);
+  const order = [...shown].sort(
+    (a, b) => a.releaseDate.localeCompare(b.releaseDate) || a.name.localeCompare(b.name)
+  );
+  const count = new Map(order.map((m, i) => [m.id, i + 1]));
   const series = buildSeries(
     shown,
     highlight,
     (m) => new Date(m.releaseDate).getTime(),
-    (m) => m.benchmarks[benchmark] ?? null
+    (m) => count.get(m.id) ?? null
   );
   const dimming = hasActiveHighlight(highlight);
   const all = series.flatMap((s) => s.points);
-  if (all.length === 0)
-    return <EmptyChart label={`No models in view report ${meta?.name}.`} />;
+  if (all.length === 0) return <EmptyChart label="No models in view." />;
   const minX = Math.min(...all.map((p) => p.x));
   const maxX = Math.max(...all.map((p) => p.x));
 
   return (
     <figure>
       <figcaption className="mb-1 text-sm font-semibold">
-        {meta?.name} over time
-        <span className="ml-2 font-normal text-ink-3">release date × score</span>
+        Model releases over time
+        <span className="ml-2 font-normal text-ink-3">release date × running total</span>
       </figcaption>
       <ResponsiveContainer width="100%" height={340}>
         <ScatterChart margin={{ top: 24, right: 56, bottom: 4, left: -8 }}>
@@ -363,15 +383,15 @@ export function TimelineScatter({
           <YAxis
             type="number"
             dataKey="y"
-            unit={meta?.unit === "%" ? "%" : undefined}
-            domain={meta?.unit === "Elo" ? ["auto", "auto"] : [0, 100]}
+            domain={[0, "auto"]}
+            allowDecimals={false}
             tickLine={false}
             axisLine={false}
             width={52}
           />
           <Tooltip
             cursor={{ strokeDasharray: "3 3", stroke: "var(--line-strong)" }}
-            content={<ChartTooltip benchmark={benchmark} xLabel="date" />}
+            content={<ReleaseTooltip />}
           />
           {series.map((s) => (
             <Scatter
@@ -390,6 +410,61 @@ export function TimelineScatter({
   );
 }
 
+function median(vals: number[]): number {
+  const v = [...vals].sort((a, b) => a - b);
+  const mid = v.length >> 1;
+  return v.length % 2 ? v[mid] : (v[mid - 1] + v[mid]) / 2;
+}
+
+/** Log-axis ticks at 1-3-10 steps covering [min, max]. */
+function logTicks(min: number, max: number): number[] {
+  const ticks: number[] = [];
+  for (let e = Math.floor(Math.log10(min)) - 1; e <= Math.ceil(Math.log10(max)); e++) {
+    for (const m of [1, 3]) {
+      const t = Number((m * 10 ** e).toPrecision(2));
+      if (t >= min / 1.5 && t <= max * 1.5) ticks.push(t);
+    }
+  }
+  return ticks;
+}
+
+/** Names each of the four quadrants in its outer corner. Rendered inside the chart so
+ *  it can read the plot area; sits under the marks so it never hides a model. */
+function QuadrantLabels() {
+  const plot = usePlotArea();
+  if (!plot) return null;
+  const PAD = 8;
+  const left = plot.x + PAD;
+  const right = plot.x + plot.width - PAD;
+  const top = plot.y + PAD + 9;
+  const bottom = plot.y + plot.height - PAD;
+  const style = {
+    fontSize: 10,
+    fontFamily: "var(--font-plex-mono), ui-monospace, monospace",
+    letterSpacing: "0.08em",
+    fill: "var(--ink-3)",
+  } as const;
+  return (
+    <g aria-hidden>
+      <text x={left} y={top} textAnchor="start" style={{ ...style, fill: "var(--good)" }}>
+        CHEAPER · STRONGER
+      </text>
+      <text x={right} y={top} textAnchor="end" style={style}>
+        PRICIER · STRONGER
+      </text>
+      <text x={left} y={bottom} textAnchor="start" style={style}>
+        CHEAPER · WEAKER
+      </text>
+      <text x={right} y={bottom} textAnchor="end" style={{ ...style, fill: "var(--bad)" }}>
+        PRICIER · WEAKER
+      </text>
+    </g>
+  );
+}
+
+/** Cost vs intelligence as a four-quadrant chart: x = Artificial Analysis cost per task
+ *  (log), y = the selected benchmark, split at the median of each among the models in
+ *  view. Top-left is the best value. */
 export function CostPerfScatter({
   shown,
   benchmark,
@@ -405,33 +480,40 @@ export function CostPerfScatter({
   const series = buildSeries(
     shown,
     highlight,
-    (m) => m.pricing.inputPerMTok,
+    (m) => m.costPerTask?.usd ?? null,
     (m) => m.benchmarks[benchmark] ?? null
   );
   const dimming = hasActiveHighlight(highlight);
   const all = series.flatMap((s) => s.points);
   if (all.length === 0)
     return (
-      <EmptyChart label={`No models in view report both pricing and ${meta?.name}.`} />
+      <EmptyChart label={`No models in view have both a cost per task and ${meta?.name}.`} />
     );
+  const xs = all.map((p) => p.x);
+  const minX = Math.min(...xs);
+  const maxX = Math.max(...xs);
+  const midX = median(xs);
+  const midY = median(all.map((p) => p.y));
+  const ticks = logTicks(minX, maxX);
 
   return (
     <figure>
       <figcaption className="mb-1 text-sm font-semibold">
         Cost vs {meta?.name}
         <span className="ml-2 font-normal text-ink-3">
-          input $/MTok (log) × score — up and left is the frontier
+          cost per task (log) × score — split at the median of each; top left is best value
         </span>
       </figcaption>
-      <ResponsiveContainer width="100%" height={340}>
+      <ResponsiveContainer width="100%" height={380}>
         <ScatterChart margin={{ top: 24, right: 56, bottom: 4, left: -8 }}>
           <CartesianGrid strokeDasharray="2 4" vertical={false} />
           <XAxis
             type="number"
             dataKey="x"
             scale="log"
-            domain={["auto", "auto"]}
-            ticks={[0.1, 0.3, 1, 3, 10, 30]}
+            domain={[minX / 1.4, maxX * 1.4]}
+            allowDataOverflow
+            ticks={ticks}
             tickFormatter={(v) => `$${v}`}
             tickLine={false}
             axisLine={{ stroke: "var(--line-strong)" }}
@@ -445,6 +527,9 @@ export function CostPerfScatter({
             axisLine={false}
             width={52}
           />
+          <QuadrantLabels />
+          <ReferenceLine x={midX} stroke="var(--line-strong)" strokeDasharray="4 3" />
+          <ReferenceLine y={midY} stroke="var(--line-strong)" strokeDasharray="4 3" />
           <Tooltip
             cursor={{ strokeDasharray: "3 3", stroke: "var(--line-strong)" }}
             content={<ChartTooltip benchmark={benchmark} xLabel="price" />}
@@ -461,7 +546,11 @@ export function CostPerfScatter({
           {showLabels && <LabelLayer points={all} dimming={dimming} />}
         </ScatterChart>
       </ResponsiveContainer>
-      <CompanyLegend shown={shown} />
+      <p className="mono px-1 pt-1 text-[11px] text-ink-3">
+        Dashed lines: median cost {formatCostPerTask(midX)}/task · median score {midY}
+        {meta?.unit === "%" ? "%" : ""}. Only models Artificial Analysis has priced per task appear.
+      </p>
+      <CompanyLegend shown={all.map((p) => p.model)} />
     </figure>
   );
 }
